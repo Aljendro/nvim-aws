@@ -1,5 +1,4 @@
 import os
-import pytest
 from src.extract_services import AwsModelParser
 
 

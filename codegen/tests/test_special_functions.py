@@ -1,6 +1,4 @@
-import pytest
 import io
-from unittest.mock import patch
 from src.extract_services import AwsModelParser
 
 
