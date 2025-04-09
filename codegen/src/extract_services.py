@@ -35,6 +35,7 @@ class AwsModelParser:
 
         # Get operations
         operations = []
+        # Get direct operations from service shape operations
         for op_ref in service_shape.get("operations", []):
             op_target = op_ref.get("target", "")
             if op_target:
@@ -42,6 +43,9 @@ class AwsModelParser:
                 op_shape = shapes.get(op_target)
                 if op_shape:
                     operations.append((op_name, op_shape))
+
+        # Get operations from resources
+        operations.extend(self._extract_resource_operations(service_shape, shapes))
 
         # Generate Lua code
         self._generate_lua_file(operations, shapes)
@@ -53,6 +57,41 @@ class AwsModelParser:
             if shape.get("type") == "service":
                 return shape
         return None
+
+    def _extract_resource_operations(self, service_shape, shapes):
+        """Extract operations from resources defined in the service shape"""
+        operations = []
+
+        # Process resources defined in the service shape
+        for resource_ref in service_shape.get("resources", []):
+            resource_target = resource_ref.get("target", "")
+            if not resource_target:
+                continue
+
+            resource_shape = shapes.get(resource_target)
+            if not resource_shape:
+                continue
+
+            # Extract lifecycle operations (create, put, read, update, delete, list)
+            for op_type in ["create", "put", "read", "update", "delete", "list"]:
+                if op_type in resource_shape:
+                    op_target = resource_shape[op_type].get("target", "")
+                    if op_target:
+                        op_name = op_target.split("#")[-1]
+                        op_shape = shapes.get(op_target)
+                        if op_shape:
+                            operations.append((op_name, op_shape))
+
+            # Extract operations from the operations array
+            for op_ref in resource_shape.get("operations", []):
+                op_target = op_ref.get("target", "")
+                if op_target:
+                    op_name = op_target.split("#")[-1]
+                    op_shape = shapes.get(op_target)
+                    if op_shape:
+                        operations.append((op_name, op_shape))
+
+        return operations
 
     def _generate_lua_file(self, operations: List[tuple], shapes: Dict):
         """Generate the Lua wrapper file"""
