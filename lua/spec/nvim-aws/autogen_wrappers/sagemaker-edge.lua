@@ -3,21 +3,21 @@
 -- AWS Service: sagemaker-edge
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sagemaker-edge")
 
 describe("AWS sagemaker-edge service testing", function()
-	it("should generate a cli skeleton for get-deployments", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-edge", "get-deployments" })
+	it("should generate a cli skeleton with get_deployments", function()
+		local result = service.get_deployments()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-device-registration", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-edge", "get-device-registration" })
+	it("should generate a cli skeleton with get_device_registration", function()
+		local result = service.get_device_registration()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for send-heartbeat", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-edge", "send-heartbeat" })
+	it("should generate a cli skeleton with send_heartbeat", function()
+		local result = service.send_heartbeat()
 		assert.is_true(result.success)
 	end)
 

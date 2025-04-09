@@ -3,36 +3,36 @@
 -- AWS Service: lex-runtime-v2
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.lexv2-runtime")
 
 describe("AWS lex-runtime-v2 service testing", function()
-	it("should generate a cli skeleton for delete-session", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "delete-session" })
+	it("should generate a cli skeleton with delete_session", function()
+		local result = service.delete_session()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-session", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "get-session" })
+	it("should generate a cli skeleton with get_session", function()
+		local result = service.get_session()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-session", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "put-session" })
+	it("should generate a cli skeleton with put_session", function()
+		local result = service.put_session()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for recognize-text", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "recognize-text" })
+	it("should generate a cli skeleton with recognize_text", function()
+		local result = service.recognize_text()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for recognize-utterance", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "recognize-utterance" })
+	it("should generate a cli skeleton with recognize_utterance", function()
+		local result = service.recognize_utterance()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-conversation", function()
-		local result = common.execute_aws_command_with_input({ "lexv2-runtime", "start-conversation" })
+	it("should generate a cli skeleton with start_conversation", function()
+		local result = service.start_conversation()
 		assert.is_true(result.success)
 	end)
 

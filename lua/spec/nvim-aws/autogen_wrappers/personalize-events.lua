@@ -3,31 +3,31 @@
 -- AWS Service: personalize-events
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.personalize-events")
 
 describe("AWS personalize-events service testing", function()
-	it("should generate a cli skeleton for put-action-interactions", function()
-		local result = common.execute_aws_command_with_input({ "personalize-events", "put-action-interactions" })
+	it("should generate a cli skeleton with put_action_interactions", function()
+		local result = service.put_action_interactions()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-actions", function()
-		local result = common.execute_aws_command_with_input({ "personalize-events", "put-actions" })
+	it("should generate a cli skeleton with put_actions", function()
+		local result = service.put_actions()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-events", function()
-		local result = common.execute_aws_command_with_input({ "personalize-events", "put-events" })
+	it("should generate a cli skeleton with put_events", function()
+		local result = service.put_events()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-items", function()
-		local result = common.execute_aws_command_with_input({ "personalize-events", "put-items" })
+	it("should generate a cli skeleton with put_items", function()
+		local result = service.put_items()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-users", function()
-		local result = common.execute_aws_command_with_input({ "personalize-events", "put-users" })
+	it("should generate a cli skeleton with put_users", function()
+		local result = service.put_users()
 		assert.is_true(result.success)
 	end)
 

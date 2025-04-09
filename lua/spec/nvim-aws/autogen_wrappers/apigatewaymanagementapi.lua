@@ -3,21 +3,21 @@
 -- AWS Service: apigatewaymanagementapi
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.apigatewaymanagementapi")
 
 describe("AWS apigatewaymanagementapi service testing", function()
-	it("should generate a cli skeleton for delete-connection", function()
-		local result = common.execute_aws_command_with_input({ "apigatewaymanagementapi", "delete-connection" })
+	it("should generate a cli skeleton with delete_connection", function()
+		local result = service.delete_connection()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-connection", function()
-		local result = common.execute_aws_command_with_input({ "apigatewaymanagementapi", "get-connection" })
+	it("should generate a cli skeleton with get_connection", function()
+		local result = service.get_connection()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for post-to-connection", function()
-		local result = common.execute_aws_command_with_input({ "apigatewaymanagementapi", "post-to-connection" })
+	it("should generate a cli skeleton with post_to_connection", function()
+		local result = service.post_to_connection()
 		assert.is_true(result.success)
 	end)
 

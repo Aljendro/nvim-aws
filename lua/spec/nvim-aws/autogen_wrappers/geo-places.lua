@@ -3,41 +3,41 @@
 -- AWS Service: geo-places
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.geo-places")
 
 describe("AWS geo-places service testing", function()
-	it("should generate a cli skeleton for autocomplete", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "autocomplete" })
+	it("should generate a cli skeleton with autocomplete", function()
+		local result = service.autocomplete()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for geocode", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "geocode" })
+	it("should generate a cli skeleton with geocode", function()
+		local result = service.geocode()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-place", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "get-place" })
+	it("should generate a cli skeleton with get_place", function()
+		local result = service.get_place()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for reverse-geocode", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "reverse-geocode" })
+	it("should generate a cli skeleton with reverse_geocode", function()
+		local result = service.reverse_geocode()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for search-nearby", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "search-nearby" })
+	it("should generate a cli skeleton with search_nearby", function()
+		local result = service.search_nearby()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for search-text", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "search-text" })
+	it("should generate a cli skeleton with search_text", function()
+		local result = service.search_text()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for suggest", function()
-		local result = common.execute_aws_command_with_input({ "geo-places", "suggest" })
+	it("should generate a cli skeleton with suggest", function()
+		local result = service.suggest()
 		assert.is_true(result.success)
 	end)
 

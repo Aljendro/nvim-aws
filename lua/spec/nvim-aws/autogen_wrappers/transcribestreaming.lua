@@ -3,31 +3,31 @@
 -- AWS Service: transcribe-streaming
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.transcribestreaming")
 
 describe("AWS transcribe-streaming service testing", function()
-	it("should generate a cli skeleton for get-medical-scribe-stream", function()
-		local result = common.execute_aws_command_with_input({ "transcribestreaming", "get-medical-scribe-stream" })
+	it("should generate a cli skeleton with get_medical_scribe_stream", function()
+		local result = service.get_medical_scribe_stream()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-call-analytics-stream-transcription", function()
-		local result = common.execute_aws_command_with_input({ "transcribestreaming", "start-call-analytics-stream-transcription" })
+	it("should generate a cli skeleton with start_call_analytics_stream_transcription", function()
+		local result = service.start_call_analytics_stream_transcription()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-medical-scribe-stream", function()
-		local result = common.execute_aws_command_with_input({ "transcribestreaming", "start-medical-scribe-stream" })
+	it("should generate a cli skeleton with start_medical_scribe_stream", function()
+		local result = service.start_medical_scribe_stream()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-medical-stream-transcription", function()
-		local result = common.execute_aws_command_with_input({ "transcribestreaming", "start-medical-stream-transcription" })
+	it("should generate a cli skeleton with start_medical_stream_transcription", function()
+		local result = service.start_medical_stream_transcription()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-stream-transcription", function()
-		local result = common.execute_aws_command_with_input({ "transcribestreaming", "start-stream-transcription" })
+	it("should generate a cli skeleton with start_stream_transcription", function()
+		local result = service.start_stream_transcription()
 		assert.is_true(result.success)
 	end)
 

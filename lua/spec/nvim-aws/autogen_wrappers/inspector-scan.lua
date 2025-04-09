@@ -3,11 +3,11 @@
 -- AWS Service: inspector-scan
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.inspector-scan")
 
 describe("AWS inspector-scan service testing", function()
-	it("should generate a cli skeleton for scan-sbom", function()
-		local result = common.execute_aws_command_with_input({ "inspector-scan", "scan-sbom" })
+	it("should generate a cli skeleton with scan_sbom", function()
+		local result = service.scan_sbom()
 		assert.is_true(result.success)
 	end)
 

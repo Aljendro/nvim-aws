@@ -3,36 +3,36 @@
 -- AWS Service: auto-scaling-plans
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.autoscaling-plans")
 
 describe("AWS auto-scaling-plans service testing", function()
-	it("should generate a cli skeleton for create-scaling-plan", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "create-scaling-plan" })
+	it("should generate a cli skeleton with create_scaling_plan", function()
+		local result = service.create_scaling_plan()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-scaling-plan", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "delete-scaling-plan" })
+	it("should generate a cli skeleton with delete_scaling_plan", function()
+		local result = service.delete_scaling_plan()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-scaling-plan-resources", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "describe-scaling-plan-resources" })
+	it("should generate a cli skeleton with describe_scaling_plan_resources", function()
+		local result = service.describe_scaling_plan_resources()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-scaling-plans", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "describe-scaling-plans" })
+	it("should generate a cli skeleton with describe_scaling_plans", function()
+		local result = service.describe_scaling_plans()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-scaling-plan-resource-forecast-data", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "get-scaling-plan-resource-forecast-data" })
+	it("should generate a cli skeleton with get_scaling_plan_resource_forecast_data", function()
+		local result = service.get_scaling_plan_resource_forecast_data()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-scaling-plan", function()
-		local result = common.execute_aws_command_with_input({ "autoscaling-plans", "update-scaling-plan" })
+	it("should generate a cli skeleton with update_scaling_plan", function()
+		local result = service.update_scaling_plan()
 		assert.is_true(result.success)
 	end)
 

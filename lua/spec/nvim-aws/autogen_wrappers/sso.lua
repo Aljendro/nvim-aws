@@ -3,26 +3,26 @@
 -- AWS Service: sso
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sso")
 
 describe("AWS sso service testing", function()
-	it("should generate a cli skeleton for get-role-credentials", function()
-		local result = common.execute_aws_command_with_input({ "sso", "get-role-credentials" })
+	it("should generate a cli skeleton with get_role_credentials", function()
+		local result = service.get_role_credentials()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-account-roles", function()
-		local result = common.execute_aws_command_with_input({ "sso", "list-account-roles" })
+	it("should generate a cli skeleton with list_account_roles", function()
+		local result = service.list_account_roles()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-accounts", function()
-		local result = common.execute_aws_command_with_input({ "sso", "list-accounts" })
+	it("should generate a cli skeleton with list_accounts", function()
+		local result = service.list_accounts()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for logout", function()
-		local result = common.execute_aws_command_with_input({ "sso", "logout" })
+	it("should generate a cli skeleton with logout", function()
+		local result = service.logout()
 		assert.is_true(result.success)
 	end)
 

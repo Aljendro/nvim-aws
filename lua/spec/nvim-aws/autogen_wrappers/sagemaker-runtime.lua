@@ -3,21 +3,21 @@
 -- AWS Service: sagemaker-runtime
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sagemaker-runtime")
 
 describe("AWS sagemaker-runtime service testing", function()
-	it("should generate a cli skeleton for invoke-endpoint", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint" })
+	it("should generate a cli skeleton with invoke_endpoint", function()
+		local result = service.invoke_endpoint()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for invoke-endpoint-async", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-async" })
+	it("should generate a cli skeleton with invoke_endpoint_async", function()
+		local result = service.invoke_endpoint_async()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for invoke-endpoint-with-response-stream", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-with-response-stream" })
+	it("should generate a cli skeleton with invoke_endpoint_with_response_stream", function()
+		local result = service.invoke_endpoint_with_response_stream()
 		assert.is_true(result.success)
 	end)
 

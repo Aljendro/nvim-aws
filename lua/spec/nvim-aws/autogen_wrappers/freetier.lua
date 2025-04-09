@@ -3,11 +3,11 @@
 -- AWS Service: freetier
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.freetier")
 
 describe("AWS freetier service testing", function()
-	it("should generate a cli skeleton for get-free-tier-usage", function()
-		local result = common.execute_aws_command_with_input({ "freetier", "get-free-tier-usage" })
+	it("should generate a cli skeleton with get_free_tier_usage", function()
+		local result = service.get_free_tier_usage()
 		assert.is_true(result.success)
 	end)
 

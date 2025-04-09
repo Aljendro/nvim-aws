@@ -3,16 +3,16 @@
 -- AWS Service: ec2-instance-connect
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.ec2-instance-connect")
 
 describe("AWS ec2-instance-connect service testing", function()
-	it("should generate a cli skeleton for send-ssh-public-key", function()
-		local result = common.execute_aws_command_with_input({ "ec2-instance-connect", "send-ssh-public-key" })
+	it("should generate a cli skeleton with send_ssh_public_key", function()
+		local result = service.send_ssh_public_key()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for send-serial-console-ssh-public-key", function()
-		local result = common.execute_aws_command_with_input({ "ec2-instance-connect", "send-serial-console-ssh-public-key" })
+	it("should generate a cli skeleton with send_serial_console_ssh_public_key", function()
+		local result = service.send_serial_console_ssh_public_key()
 		assert.is_true(result.success)
 	end)
 

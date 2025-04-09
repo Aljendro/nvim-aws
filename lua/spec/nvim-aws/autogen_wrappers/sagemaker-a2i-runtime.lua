@@ -3,31 +3,31 @@
 -- AWS Service: sagemaker-a2i-runtime
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sagemaker-a2i-runtime")
 
 describe("AWS sagemaker-a2i-runtime service testing", function()
-	it("should generate a cli skeleton for delete-human-loop", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "delete-human-loop" })
+	it("should generate a cli skeleton with delete_human_loop", function()
+		local result = service.delete_human_loop()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-human-loop", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "describe-human-loop" })
+	it("should generate a cli skeleton with describe_human_loop", function()
+		local result = service.describe_human_loop()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-human-loops", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "list-human-loops" })
+	it("should generate a cli skeleton with list_human_loops", function()
+		local result = service.list_human_loops()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-human-loop", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "start-human-loop" })
+	it("should generate a cli skeleton with start_human_loop", function()
+		local result = service.start_human_loop()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for stop-human-loop", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "stop-human-loop" })
+	it("should generate a cli skeleton with stop_human_loop", function()
+		local result = service.stop_human_loop()
 		assert.is_true(result.success)
 	end)
 

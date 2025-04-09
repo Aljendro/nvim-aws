@@ -3,26 +3,26 @@
 -- AWS Service: migrationhub-config
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.migrationhub-config")
 
 describe("AWS migrationhub-config service testing", function()
-	it("should generate a cli skeleton for create-home-region-control", function()
-		local result = common.execute_aws_command_with_input({ "migrationhub-config", "create-home-region-control" })
+	it("should generate a cli skeleton with create_home_region_control", function()
+		local result = service.create_home_region_control()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-home-region-control", function()
-		local result = common.execute_aws_command_with_input({ "migrationhub-config", "delete-home-region-control" })
+	it("should generate a cli skeleton with delete_home_region_control", function()
+		local result = service.delete_home_region_control()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-home-region-controls", function()
-		local result = common.execute_aws_command_with_input({ "migrationhub-config", "describe-home-region-controls" })
+	it("should generate a cli skeleton with describe_home_region_controls", function()
+		local result = service.describe_home_region_controls()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-home-region", function()
-		local result = common.execute_aws_command_with_input({ "migrationhub-config", "get-home-region" })
+	it("should generate a cli skeleton with get_home_region", function()
+		local result = service.get_home_region()
 		assert.is_true(result.success)
 	end)
 

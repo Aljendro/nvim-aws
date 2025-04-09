@@ -3,36 +3,36 @@
 -- AWS Service: kinesis-video-archived-media
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.kinesis-video-archived-media")
 
 describe("AWS kinesis-video-archived-media service testing", function()
-	it("should generate a cli skeleton for get-clip", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-clip" })
+	it("should generate a cli skeleton with get_clip", function()
+		local result = service.get_clip()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-dash-streaming-session-url", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-dash-streaming-session-url" })
+	it("should generate a cli skeleton with get_dash_streaming_session_url", function()
+		local result = service.get_dash_streaming_session_url()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-hls-streaming-session-url", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-hls-streaming-session-url" })
+	it("should generate a cli skeleton with get_hls_streaming_session_url", function()
+		local result = service.get_hls_streaming_session_url()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-images", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-images" })
+	it("should generate a cli skeleton with get_images", function()
+		local result = service.get_images()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-media-for-fragment-list", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-media-for-fragment-list" })
+	it("should generate a cli skeleton with get_media_for_fragment_list", function()
+		local result = service.get_media_for_fragment_list()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-fragments", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-archived-media", "list-fragments" })
+	it("should generate a cli skeleton with list_fragments", function()
+		local result = service.list_fragments()
 		assert.is_true(result.success)
 	end)
 

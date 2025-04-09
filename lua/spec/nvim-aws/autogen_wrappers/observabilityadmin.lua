@@ -3,46 +3,46 @@
 -- AWS Service: observabilityadmin
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.observabilityadmin")
 
 describe("AWS observabilityadmin service testing", function()
-	it("should generate a cli skeleton for get-telemetry-evaluation-status", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "get-telemetry-evaluation-status" })
+	it("should generate a cli skeleton with get_telemetry_evaluation_status", function()
+		local result = service.get_telemetry_evaluation_status()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-telemetry-evaluation-status-for-organization", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" })
+	it("should generate a cli skeleton with get_telemetry_evaluation_status_for_organization", function()
+		local result = service.get_telemetry_evaluation_status_for_organization()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-resource-telemetry", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "list-resource-telemetry" })
+	it("should generate a cli skeleton with list_resource_telemetry", function()
+		local result = service.list_resource_telemetry()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-resource-telemetry-for-organization", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "list-resource-telemetry-for-organization" })
+	it("should generate a cli skeleton with list_resource_telemetry_for_organization", function()
+		local result = service.list_resource_telemetry_for_organization()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-telemetry-evaluation", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "start-telemetry-evaluation" })
+	it("should generate a cli skeleton with start_telemetry_evaluation", function()
+		local result = service.start_telemetry_evaluation()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-telemetry-evaluation-for-organization", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "start-telemetry-evaluation-for-organization" })
+	it("should generate a cli skeleton with start_telemetry_evaluation_for_organization", function()
+		local result = service.start_telemetry_evaluation_for_organization()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for stop-telemetry-evaluation", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "stop-telemetry-evaluation" })
+	it("should generate a cli skeleton with stop_telemetry_evaluation", function()
+		local result = service.stop_telemetry_evaluation()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for stop-telemetry-evaluation-for-organization", function()
-		local result = common.execute_aws_command_with_input({ "observabilityadmin", "stop-telemetry-evaluation-for-organization" })
+	it("should generate a cli skeleton with stop_telemetry_evaluation_for_organization", function()
+		local result = service.stop_telemetry_evaluation_for_organization()
 		assert.is_true(result.success)
 	end)
 

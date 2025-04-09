@@ -3,26 +3,26 @@
 -- AWS Service: dynamodb-streams
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.dynamodbstreams")
 
 describe("AWS dynamodb-streams service testing", function()
-	it("should generate a cli skeleton for describe-stream", function()
-		local result = common.execute_aws_command_with_input({ "dynamodbstreams", "describe-stream" })
+	it("should generate a cli skeleton with describe_stream", function()
+		local result = service.describe_stream()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-records", function()
-		local result = common.execute_aws_command_with_input({ "dynamodbstreams", "get-records" })
+	it("should generate a cli skeleton with get_records", function()
+		local result = service.get_records()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-shard-iterator", function()
-		local result = common.execute_aws_command_with_input({ "dynamodbstreams", "get-shard-iterator" })
+	it("should generate a cli skeleton with get_shard_iterator", function()
+		local result = service.get_shard_iterator()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-streams", function()
-		local result = common.execute_aws_command_with_input({ "dynamodbstreams", "list-streams" })
+	it("should generate a cli skeleton with list_streams", function()
+		local result = service.list_streams()
 		assert.is_true(result.success)
 	end)
 

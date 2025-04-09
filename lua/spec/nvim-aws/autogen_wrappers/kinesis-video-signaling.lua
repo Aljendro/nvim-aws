@@ -3,16 +3,16 @@
 -- AWS Service: kinesis-video-signaling
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.kinesis-video-signaling")
 
 describe("AWS kinesis-video-signaling service testing", function()
-	it("should generate a cli skeleton for get-ice-server-config", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-signaling", "get-ice-server-config" })
+	it("should generate a cli skeleton with get_ice_server_config", function()
+		local result = service.get_ice_server_config()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for send-alexa-offer-to-master", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-signaling", "send-alexa-offer-to-master" })
+	it("should generate a cli skeleton with send_alexa_offer_to_master", function()
+		local result = service.send_alexa_offer_to_master()
 		assert.is_true(result.success)
 	end)
 

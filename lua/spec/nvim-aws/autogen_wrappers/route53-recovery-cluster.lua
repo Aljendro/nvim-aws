@@ -3,26 +3,26 @@
 -- AWS Service: route53-recovery-cluster
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.route53-recovery-cluster")
 
 describe("AWS route53-recovery-cluster service testing", function()
-	it("should generate a cli skeleton for get-routing-control-state", function()
-		local result = common.execute_aws_command_with_input({ "route53-recovery-cluster", "get-routing-control-state" })
+	it("should generate a cli skeleton with get_routing_control_state", function()
+		local result = service.get_routing_control_state()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-routing-controls", function()
-		local result = common.execute_aws_command_with_input({ "route53-recovery-cluster", "list-routing-controls" })
+	it("should generate a cli skeleton with list_routing_controls", function()
+		local result = service.list_routing_controls()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-routing-control-state", function()
-		local result = common.execute_aws_command_with_input({ "route53-recovery-cluster", "update-routing-control-state" })
+	it("should generate a cli skeleton with update_routing_control_state", function()
+		local result = service.update_routing_control_state()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-routing-control-states", function()
-		local result = common.execute_aws_command_with_input({ "route53-recovery-cluster", "update-routing-control-states" })
+	it("should generate a cli skeleton with update_routing_control_states", function()
+		local result = service.update_routing_control_states()
 		assert.is_true(result.success)
 	end)
 

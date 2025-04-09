@@ -3,21 +3,21 @@
 -- AWS Service: marketplace-agreement
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.marketplace-agreement")
 
 describe("AWS marketplace-agreement service testing", function()
-	it("should generate a cli skeleton for describe-agreement", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-agreement", "describe-agreement" })
+	it("should generate a cli skeleton with describe_agreement", function()
+		local result = service.describe_agreement()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-agreement-terms", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-agreement", "get-agreement-terms" })
+	it("should generate a cli skeleton with get_agreement_terms", function()
+		local result = service.get_agreement_terms()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for search-agreements", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-agreement", "search-agreements" })
+	it("should generate a cli skeleton with search_agreements", function()
+		local result = service.search_agreements()
 		assert.is_true(result.success)
 	end)
 

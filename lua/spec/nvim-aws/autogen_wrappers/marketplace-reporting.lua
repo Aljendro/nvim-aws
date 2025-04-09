@@ -3,11 +3,11 @@
 -- AWS Service: marketplace-reporting
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.marketplace-reporting")
 
 describe("AWS marketplace-reporting service testing", function()
-	it("should generate a cli skeleton for get-buyer-dashboard", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-reporting", "get-buyer-dashboard" })
+	it("should generate a cli skeleton with get_buyer_dashboard", function()
+		local result = service.get_buyer_dashboard()
 		assert.is_true(result.success)
 	end)
 

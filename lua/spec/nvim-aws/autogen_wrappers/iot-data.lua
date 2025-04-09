@@ -3,41 +3,41 @@
 -- AWS Service: iot-data-plane
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.iot-data")
 
 describe("AWS iot-data-plane service testing", function()
-	it("should generate a cli skeleton for delete-thing-shadow", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "delete-thing-shadow" })
+	it("should generate a cli skeleton with delete_thing_shadow", function()
+		local result = service.delete_thing_shadow()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-retained-message", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "get-retained-message" })
+	it("should generate a cli skeleton with get_retained_message", function()
+		local result = service.get_retained_message()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-thing-shadow", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "get-thing-shadow" })
+	it("should generate a cli skeleton with get_thing_shadow", function()
+		local result = service.get_thing_shadow()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-named-shadows-for-thing", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "list-named-shadows-for-thing" })
+	it("should generate a cli skeleton with list_named_shadows_for_thing", function()
+		local result = service.list_named_shadows_for_thing()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-retained-messages", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "list-retained-messages" })
+	it("should generate a cli skeleton with list_retained_messages", function()
+		local result = service.list_retained_messages()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for publish", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "publish" })
+	it("should generate a cli skeleton with publish", function()
+		local result = service.publish()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-thing-shadow", function()
-		local result = common.execute_aws_command_with_input({ "iot-data", "update-thing-shadow" })
+	it("should generate a cli skeleton with update_thing_shadow", function()
+		local result = service.update_thing_shadow()
 		assert.is_true(result.success)
 	end)
 

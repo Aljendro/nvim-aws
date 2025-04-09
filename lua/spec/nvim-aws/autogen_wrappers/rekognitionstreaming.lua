@@ -3,11 +3,11 @@
 -- AWS Service: rekognitionstreaming
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.rekognitionstreaming")
 
 describe("AWS rekognitionstreaming service testing", function()
-	it("should generate a cli skeleton for start-face-liveness-session", function()
-		local result = common.execute_aws_command_with_input({ "rekognitionstreaming", "start-face-liveness-session" })
+	it("should generate a cli skeleton with start_face_liveness_session", function()
+		local result = service.start_face_liveness_session()
 		assert.is_true(result.success)
 	end)
 

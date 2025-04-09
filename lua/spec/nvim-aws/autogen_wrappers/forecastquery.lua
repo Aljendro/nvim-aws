@@ -3,16 +3,16 @@
 -- AWS Service: forecastquery
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.forecastquery")
 
 describe("AWS forecastquery service testing", function()
-	it("should generate a cli skeleton for query-forecast", function()
-		local result = common.execute_aws_command_with_input({ "forecastquery", "query-forecast" })
+	it("should generate a cli skeleton with query_forecast", function()
+		local result = service.query_forecast()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for query-what-if-forecast", function()
-		local result = common.execute_aws_command_with_input({ "forecastquery", "query-what-if-forecast" })
+	it("should generate a cli skeleton with query_what_if_forecast", function()
+		local result = service.query_what_if_forecast()
 		assert.is_true(result.success)
 	end)
 

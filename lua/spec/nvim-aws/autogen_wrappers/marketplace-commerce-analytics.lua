@@ -3,16 +3,16 @@
 -- AWS Service: marketplace-commerce-analytics
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.marketplace-commerce-analytics")
 
 describe("AWS marketplace-commerce-analytics service testing", function()
-	it("should generate a cli skeleton for generate-data-set", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-commerce-analytics", "generate-data-set" })
+	it("should generate a cli skeleton with generate_data_set", function()
+		local result = service.generate_data_set()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-support-data-export", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-commerce-analytics", "start-support-data-export" })
+	it("should generate a cli skeleton with start_support_data_export", function()
+		local result = service.start_support_data_export()
 		assert.is_true(result.success)
 	end)
 

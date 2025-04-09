@@ -3,46 +3,46 @@
 -- AWS Service: cloudcontrol
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.cloudcontrol")
 
 describe("AWS cloudcontrol service testing", function()
-	it("should generate a cli skeleton for cancel-resource-request", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "cancel-resource-request" })
+	it("should generate a cli skeleton with cancel_resource_request", function()
+		local result = service.cancel_resource_request()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for create-resource", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "create-resource" })
+	it("should generate a cli skeleton with create_resource", function()
+		local result = service.create_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-resource", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "delete-resource" })
+	it("should generate a cli skeleton with delete_resource", function()
+		local result = service.delete_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-resource", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "get-resource" })
+	it("should generate a cli skeleton with get_resource", function()
+		local result = service.get_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-resource-request-status", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "get-resource-request-status" })
+	it("should generate a cli skeleton with get_resource_request_status", function()
+		local result = service.get_resource_request_status()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-resource-requests", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "list-resource-requests" })
+	it("should generate a cli skeleton with list_resource_requests", function()
+		local result = service.list_resource_requests()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-resources", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "list-resources" })
+	it("should generate a cli skeleton with list_resources", function()
+		local result = service.list_resources()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-resource", function()
-		local result = common.execute_aws_command_with_input({ "cloudcontrol", "update-resource" })
+	it("should generate a cli skeleton with update_resource", function()
+		local result = service.update_resource()
 		assert.is_true(result.success)
 	end)
 

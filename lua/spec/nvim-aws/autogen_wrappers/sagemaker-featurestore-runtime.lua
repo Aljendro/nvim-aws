@@ -3,26 +3,26 @@
 -- AWS Service: sagemaker-featurestore-runtime
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sagemaker-featurestore-runtime")
 
 describe("AWS sagemaker-featurestore-runtime service testing", function()
-	it("should generate a cli skeleton for batch-get-record", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "batch-get-record" })
+	it("should generate a cli skeleton with batch_get_record", function()
+		local result = service.batch_get_record()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-record", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "delete-record" })
+	it("should generate a cli skeleton with delete_record", function()
+		local result = service.delete_record()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-record", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "get-record" })
+	it("should generate a cli skeleton with get_record", function()
+		local result = service.get_record()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-record", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "put-record" })
+	it("should generate a cli skeleton with put_record", function()
+		local result = service.put_record()
 		assert.is_true(result.success)
 	end)
 

@@ -3,11 +3,11 @@
 -- AWS Service: kinesis-video-media
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.kinesis-video-media")
 
 describe("AWS kinesis-video-media service testing", function()
-	it("should generate a cli skeleton for get-media", function()
-		local result = common.execute_aws_command_with_input({ "kinesis-video-media", "get-media" })
+	it("should generate a cli skeleton with get_media", function()
+		local result = service.get_media()
 		assert.is_true(result.success)
 	end)
 

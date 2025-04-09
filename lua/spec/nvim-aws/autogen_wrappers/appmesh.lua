@@ -3,46 +3,46 @@
 -- AWS Service: app-mesh
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.appmesh")
 
 describe("AWS app-mesh service testing", function()
-	it("should generate a cli skeleton for create-mesh", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "create-mesh" })
+	it("should generate a cli skeleton with create_mesh", function()
+		local result = service.create_mesh()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-mesh", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "delete-mesh" })
+	it("should generate a cli skeleton with delete_mesh", function()
+		local result = service.delete_mesh()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-mesh", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "describe-mesh" })
+	it("should generate a cli skeleton with describe_mesh", function()
+		local result = service.describe_mesh()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-meshes", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "list-meshes" })
+	it("should generate a cli skeleton with list_meshes", function()
+		local result = service.list_meshes()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-mesh", function()
-		local result = common.execute_aws_command_with_input({ "appmesh", "update-mesh" })
+	it("should generate a cli skeleton with update_mesh", function()
+		local result = service.update_mesh()
 		assert.is_true(result.success)
 	end)
 

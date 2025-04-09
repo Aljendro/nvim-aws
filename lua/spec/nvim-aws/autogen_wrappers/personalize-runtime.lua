@@ -3,21 +3,21 @@
 -- AWS Service: personalize-runtime
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.personalize-runtime")
 
 describe("AWS personalize-runtime service testing", function()
-	it("should generate a cli skeleton for get-action-recommendations", function()
-		local result = common.execute_aws_command_with_input({ "personalize-runtime", "get-action-recommendations" })
+	it("should generate a cli skeleton with get_action_recommendations", function()
+		local result = service.get_action_recommendations()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-personalized-ranking", function()
-		local result = common.execute_aws_command_with_input({ "personalize-runtime", "get-personalized-ranking" })
+	it("should generate a cli skeleton with get_personalized_ranking", function()
+		local result = service.get_personalized_ranking()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-recommendations", function()
-		local result = common.execute_aws_command_with_input({ "personalize-runtime", "get-recommendations" })
+	it("should generate a cli skeleton with get_recommendations", function()
+		local result = service.get_recommendations()
 		assert.is_true(result.success)
 	end)
 

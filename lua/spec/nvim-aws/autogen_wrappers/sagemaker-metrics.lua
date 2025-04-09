@@ -3,16 +3,16 @@
 -- AWS Service: sagemaker-metrics
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sagemaker-metrics")
 
 describe("AWS sagemaker-metrics service testing", function()
-	it("should generate a cli skeleton for batch-get-metrics", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-get-metrics" })
+	it("should generate a cli skeleton with batch_get_metrics", function()
+		local result = service.batch_get_metrics()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for batch-put-metrics", function()
-		local result = common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-put-metrics" })
+	it("should generate a cli skeleton with batch_put_metrics", function()
+		local result = service.batch_put_metrics()
 		assert.is_true(result.success)
 	end)
 

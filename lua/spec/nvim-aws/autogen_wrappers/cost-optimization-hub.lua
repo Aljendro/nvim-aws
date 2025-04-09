@@ -3,41 +3,41 @@
 -- AWS Service: cost-optimization-hub
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.cost-optimization-hub")
 
 describe("AWS cost-optimization-hub service testing", function()
-	it("should generate a cli skeleton for get-preferences", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "get-preferences" })
+	it("should generate a cli skeleton with get_preferences", function()
+		local result = service.get_preferences()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-recommendation", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "get-recommendation" })
+	it("should generate a cli skeleton with get_recommendation", function()
+		local result = service.get_recommendation()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-enrollment-statuses", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "list-enrollment-statuses" })
+	it("should generate a cli skeleton with list_enrollment_statuses", function()
+		local result = service.list_enrollment_statuses()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-recommendation-summaries", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendation-summaries" })
+	it("should generate a cli skeleton with list_recommendation_summaries", function()
+		local result = service.list_recommendation_summaries()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-recommendations", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendations" })
+	it("should generate a cli skeleton with list_recommendations", function()
+		local result = service.list_recommendations()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-enrollment-status", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "update-enrollment-status" })
+	it("should generate a cli skeleton with update_enrollment_status", function()
+		local result = service.update_enrollment_status()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-preferences", function()
-		local result = common.execute_aws_command_with_input({ "cost-optimization-hub", "update-preferences" })
+	it("should generate a cli skeleton with update_preferences", function()
+		local result = service.update_preferences()
 		assert.is_true(result.success)
 	end)
 

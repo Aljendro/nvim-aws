@@ -3,46 +3,46 @@
 -- AWS Service: iotsecuretunneling
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.iotsecuretunneling")
 
 describe("AWS iotsecuretunneling service testing", function()
-	it("should generate a cli skeleton for close-tunnel", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "close-tunnel" })
+	it("should generate a cli skeleton with close_tunnel", function()
+		local result = service.close_tunnel()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-tunnel", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "describe-tunnel" })
+	it("should generate a cli skeleton with describe_tunnel", function()
+		local result = service.describe_tunnel()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tunnels", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "list-tunnels" })
+	it("should generate a cli skeleton with list_tunnels", function()
+		local result = service.list_tunnels()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for open-tunnel", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "open-tunnel" })
+	it("should generate a cli skeleton with open_tunnel", function()
+		local result = service.open_tunnel()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for rotate-tunnel-access-token", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "rotate-tunnel-access-token" })
+	it("should generate a cli skeleton with rotate_tunnel_access_token", function()
+		local result = service.rotate_tunnel_access_token()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotsecuretunneling", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 

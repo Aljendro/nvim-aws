@@ -3,31 +3,31 @@
 -- AWS Service: geo-routes
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.geo-routes")
 
 describe("AWS geo-routes service testing", function()
-	it("should generate a cli skeleton for calculate-isolines", function()
-		local result = common.execute_aws_command_with_input({ "geo-routes", "calculate-isolines" })
+	it("should generate a cli skeleton with calculate_isolines", function()
+		local result = service.calculate_isolines()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for calculate-route-matrix", function()
-		local result = common.execute_aws_command_with_input({ "geo-routes", "calculate-route-matrix" })
+	it("should generate a cli skeleton with calculate_route_matrix", function()
+		local result = service.calculate_route_matrix()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for calculate-routes", function()
-		local result = common.execute_aws_command_with_input({ "geo-routes", "calculate-routes" })
+	it("should generate a cli skeleton with calculate_routes", function()
+		local result = service.calculate_routes()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for optimize-waypoints", function()
-		local result = common.execute_aws_command_with_input({ "geo-routes", "optimize-waypoints" })
+	it("should generate a cli skeleton with optimize_waypoints", function()
+		local result = service.optimize_waypoints()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for snap-to-roads", function()
-		local result = common.execute_aws_command_with_input({ "geo-routes", "snap-to-roads" })
+	it("should generate a cli skeleton with snap_to_roads", function()
+		local result = service.snap_to_roads()
 		assert.is_true(result.success)
 	end)
 

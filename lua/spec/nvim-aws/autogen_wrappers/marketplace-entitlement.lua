@@ -3,11 +3,11 @@
 -- AWS Service: marketplace-entitlement-service
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.marketplace-entitlement")
 
 describe("AWS marketplace-entitlement-service service testing", function()
-	it("should generate a cli skeleton for get-entitlements", function()
-		local result = common.execute_aws_command_with_input({ "marketplace-entitlement", "get-entitlements" })
+	it("should generate a cli skeleton with get_entitlements", function()
+		local result = service.get_entitlements()
 		assert.is_true(result.success)
 	end)
 

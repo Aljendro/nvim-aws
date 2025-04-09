@@ -3,31 +3,31 @@
 -- AWS Service: iot-jobs-data-plane
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.iot-jobs-data")
 
 describe("AWS iot-jobs-data-plane service testing", function()
-	it("should generate a cli skeleton for describe-job-execution", function()
-		local result = common.execute_aws_command_with_input({ "iot-jobs-data", "describe-job-execution" })
+	it("should generate a cli skeleton with describe_job_execution", function()
+		local result = service.describe_job_execution()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-pending-job-executions", function()
-		local result = common.execute_aws_command_with_input({ "iot-jobs-data", "get-pending-job-executions" })
+	it("should generate a cli skeleton with get_pending_job_executions", function()
+		local result = service.get_pending_job_executions()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-command-execution", function()
-		local result = common.execute_aws_command_with_input({ "iot-jobs-data", "start-command-execution" })
+	it("should generate a cli skeleton with start_command_execution", function()
+		local result = service.start_command_execution()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-next-pending-job-execution", function()
-		local result = common.execute_aws_command_with_input({ "iot-jobs-data", "start-next-pending-job-execution" })
+	it("should generate a cli skeleton with start_next_pending_job_execution", function()
+		local result = service.start_next_pending_job_execution()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-job-execution", function()
-		local result = common.execute_aws_command_with_input({ "iot-jobs-data", "update-job-execution" })
+	it("should generate a cli skeleton with update_job_execution", function()
+		local result = service.update_job_execution()
 		assert.is_true(result.success)
 	end)
 

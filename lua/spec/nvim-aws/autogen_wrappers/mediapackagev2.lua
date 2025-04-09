@@ -3,46 +3,46 @@
 -- AWS Service: mediapackagev2
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.mediapackagev2")
 
 describe("AWS mediapackagev2 service testing", function()
-	it("should generate a cli skeleton for create-channel-group", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "create-channel-group" })
+	it("should generate a cli skeleton with create_channel_group", function()
+		local result = service.create_channel_group()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-channel-group", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "delete-channel-group" })
+	it("should generate a cli skeleton with delete_channel_group", function()
+		local result = service.delete_channel_group()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-channel-group", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "get-channel-group" })
+	it("should generate a cli skeleton with get_channel_group", function()
+		local result = service.get_channel_group()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-channel-groups", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "list-channel-groups" })
+	it("should generate a cli skeleton with list_channel_groups", function()
+		local result = service.list_channel_groups()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-channel-group", function()
-		local result = common.execute_aws_command_with_input({ "mediapackagev2", "update-channel-group" })
+	it("should generate a cli skeleton with update_channel_group", function()
+		local result = service.update_channel_group()
 		assert.is_true(result.success)
 	end)
 

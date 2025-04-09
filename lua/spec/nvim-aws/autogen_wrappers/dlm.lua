@@ -3,46 +3,46 @@
 -- AWS Service: dlm
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.dlm")
 
 describe("AWS dlm service testing", function()
-	it("should generate a cli skeleton for create-lifecycle-policy", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "create-lifecycle-policy" })
+	it("should generate a cli skeleton with create_lifecycle_policy", function()
+		local result = service.create_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-lifecycle-policy", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "delete-lifecycle-policy" })
+	it("should generate a cli skeleton with delete_lifecycle_policy", function()
+		local result = service.delete_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-lifecycle-policies", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policies" })
+	it("should generate a cli skeleton with get_lifecycle_policies", function()
+		local result = service.get_lifecycle_policies()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-lifecycle-policy", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policy" })
+	it("should generate a cli skeleton with get_lifecycle_policy", function()
+		local result = service.get_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-lifecycle-policy", function()
-		local result = common.execute_aws_command_with_input({ "dlm", "update-lifecycle-policy" })
+	it("should generate a cli skeleton with update_lifecycle_policy", function()
+		local result = service.update_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
 

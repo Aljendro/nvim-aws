@@ -3,11 +3,11 @@
 -- AWS Service: eks-auth
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.eks-auth")
 
 describe("AWS eks-auth service testing", function()
-	it("should generate a cli skeleton for assume-role-for-pod-identity", function()
-		local result = common.execute_aws_command_with_input({ "eks-auth", "assume-role-for-pod-identity" })
+	it("should generate a cli skeleton with assume_role_for_pod_identity", function()
+		local result = service.assume_role_for_pod_identity()
 		assert.is_true(result.success)
 	end)
 

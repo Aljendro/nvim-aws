@@ -3,21 +3,21 @@
 -- AWS Service: cloudsearch-domain
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.cloudsearchdomain")
 
 describe("AWS cloudsearch-domain service testing", function()
-	it("should generate a cli skeleton for search", function()
-		local result = common.execute_aws_command_with_input({ "cloudsearchdomain", "search" })
+	it("should generate a cli skeleton with search", function()
+		local result = service.search()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for suggest", function()
-		local result = common.execute_aws_command_with_input({ "cloudsearchdomain", "suggest" })
+	it("should generate a cli skeleton with suggest", function()
+		local result = service.suggest()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for upload-documents", function()
-		local result = common.execute_aws_command_with_input({ "cloudsearchdomain", "upload-documents" })
+	it("should generate a cli skeleton with upload_documents", function()
+		local result = service.upload_documents()
 		assert.is_true(result.success)
 	end)
 

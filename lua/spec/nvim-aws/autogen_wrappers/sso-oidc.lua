@@ -3,26 +3,26 @@
 -- AWS Service: sso-oidc
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.sso-oidc")
 
 describe("AWS sso-oidc service testing", function()
-	it("should generate a cli skeleton for create-token", function()
-		local result = common.execute_aws_command_with_input({ "sso-oidc", "create-token" })
+	it("should generate a cli skeleton with create_token", function()
+		local result = service.create_token()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for create-token-with-iam", function()
-		local result = common.execute_aws_command_with_input({ "sso-oidc", "create-token-with-iam" })
+	it("should generate a cli skeleton with create_token_with_iam", function()
+		local result = service.create_token_with_iam()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for register-client", function()
-		local result = common.execute_aws_command_with_input({ "sso-oidc", "register-client" })
+	it("should generate a cli skeleton with register_client", function()
+		local result = service.register_client()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-device-authorization", function()
-		local result = common.execute_aws_command_with_input({ "sso-oidc", "start-device-authorization" })
+	it("should generate a cli skeleton with start_device_authorization", function()
+		local result = service.start_device_authorization()
 		assert.is_true(result.success)
 	end)
 

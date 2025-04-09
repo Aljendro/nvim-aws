@@ -3,16 +3,16 @@
 -- AWS Service: workmailmessageflow
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.workmailmessageflow")
 
 describe("AWS workmailmessageflow service testing", function()
-	it("should generate a cli skeleton for get-raw-message-content", function()
-		local result = common.execute_aws_command_with_input({ "workmailmessageflow", "get-raw-message-content" })
+	it("should generate a cli skeleton with get_raw_message_content", function()
+		local result = service.get_raw_message_content()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-raw-message-content", function()
-		local result = common.execute_aws_command_with_input({ "workmailmessageflow", "put-raw-message-content" })
+	it("should generate a cli skeleton with put_raw_message_content", function()
+		local result = service.put_raw_message_content()
 		assert.is_true(result.success)
 	end)
 

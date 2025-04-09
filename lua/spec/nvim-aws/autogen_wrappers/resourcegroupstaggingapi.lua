@@ -3,46 +3,46 @@
 -- AWS Service: resource-groups-tagging-api
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.resourcegroupstaggingapi")
 
 describe("AWS resource-groups-tagging-api service testing", function()
-	it("should generate a cli skeleton for describe-report-creation", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "describe-report-creation" })
+	it("should generate a cli skeleton with describe_report_creation", function()
+		local result = service.describe_report_creation()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-compliance-summary", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-compliance-summary" })
+	it("should generate a cli skeleton with get_compliance_summary", function()
+		local result = service.get_compliance_summary()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-resources", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-resources" })
+	it("should generate a cli skeleton with get_resources", function()
+		local result = service.get_resources()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-tag-keys", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-tag-keys" })
+	it("should generate a cli skeleton with get_tag_keys", function()
+		local result = service.get_tag_keys()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-tag-values", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-tag-values" })
+	it("should generate a cli skeleton with get_tag_values", function()
+		local result = service.get_tag_values()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-report-creation", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "start-report-creation" })
+	it("should generate a cli skeleton with start_report_creation", function()
+		local result = service.start_report_creation()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resources", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "tag-resources" })
+	it("should generate a cli skeleton with tag_resources", function()
+		local result = service.tag_resources()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resources", function()
-		local result = common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "untag-resources" })
+	it("should generate a cli skeleton with untag_resources", function()
+		local result = service.untag_resources()
 		assert.is_true(result.success)
 	end)
 

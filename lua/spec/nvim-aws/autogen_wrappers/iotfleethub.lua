@@ -3,46 +3,46 @@
 -- AWS Service: iotfleethub
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.iotfleethub")
 
 describe("AWS iotfleethub service testing", function()
-	it("should generate a cli skeleton for create-application", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "create-application" })
+	it("should generate a cli skeleton with create_application", function()
+		local result = service.create_application()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-application", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "delete-application" })
+	it("should generate a cli skeleton with delete_application", function()
+		local result = service.delete_application()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-application", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "describe-application" })
+	it("should generate a cli skeleton with describe_application", function()
+		local result = service.describe_application()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-applications", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "list-applications" })
+	it("should generate a cli skeleton with list_applications", function()
+		local result = service.list_applications()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-application", function()
-		local result = common.execute_aws_command_with_input({ "iotfleethub", "update-application" })
+	it("should generate a cli skeleton with update_application", function()
+		local result = service.update_application()
 		assert.is_true(result.success)
 	end)
 

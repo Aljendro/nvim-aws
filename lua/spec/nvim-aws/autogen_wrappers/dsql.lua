@@ -3,46 +3,46 @@
 -- AWS Service: dsql
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.dsql")
 
 describe("AWS dsql service testing", function()
-	it("should generate a cli skeleton for create-cluster", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "create-cluster" })
+	it("should generate a cli skeleton with create_cluster", function()
+		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-cluster", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "delete-cluster" })
+	it("should generate a cli skeleton with delete_cluster", function()
+		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-cluster", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "get-cluster" })
+	it("should generate a cli skeleton with get_cluster", function()
+		local result = service.get_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-clusters", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "list-clusters" })
+	it("should generate a cli skeleton with list_clusters", function()
+		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for update-cluster", function()
-		local result = common.execute_aws_command_with_input({ "dsql", "update-cluster" })
+	it("should generate a cli skeleton with update_cluster", function()
+		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
 

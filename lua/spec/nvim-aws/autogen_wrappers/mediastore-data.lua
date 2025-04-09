@@ -3,31 +3,31 @@
 -- AWS Service: mediastore-data
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.mediastore-data")
 
 describe("AWS mediastore-data service testing", function()
-	it("should generate a cli skeleton for delete-object", function()
-		local result = common.execute_aws_command_with_input({ "mediastore-data", "delete-object" })
+	it("should generate a cli skeleton with delete_object", function()
+		local result = service.delete_object()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-object", function()
-		local result = common.execute_aws_command_with_input({ "mediastore-data", "describe-object" })
+	it("should generate a cli skeleton with describe_object", function()
+		local result = service.describe_object()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-object", function()
-		local result = common.execute_aws_command_with_input({ "mediastore-data", "get-object" })
+	it("should generate a cli skeleton with get_object", function()
+		local result = service.get_object()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-items", function()
-		local result = common.execute_aws_command_with_input({ "mediastore-data", "list-items" })
+	it("should generate a cli skeleton with list_items", function()
+		local result = service.list_items()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-object", function()
-		local result = common.execute_aws_command_with_input({ "mediastore-data", "put-object" })
+	it("should generate a cli skeleton with put_object", function()
+		local result = service.put_object()
 		assert.is_true(result.success)
 	end)
 

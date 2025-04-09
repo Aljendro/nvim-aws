@@ -3,31 +3,31 @@
 -- AWS Service: controlcatalog
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.controlcatalog")
 
 describe("AWS controlcatalog service testing", function()
-	it("should generate a cli skeleton for get-control", function()
-		local result = common.execute_aws_command_with_input({ "controlcatalog", "get-control" })
+	it("should generate a cli skeleton with get_control", function()
+		local result = service.get_control()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-common-controls", function()
-		local result = common.execute_aws_command_with_input({ "controlcatalog", "list-common-controls" })
+	it("should generate a cli skeleton with list_common_controls", function()
+		local result = service.list_common_controls()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-controls", function()
-		local result = common.execute_aws_command_with_input({ "controlcatalog", "list-controls" })
+	it("should generate a cli skeleton with list_controls", function()
+		local result = service.list_controls()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-domains", function()
-		local result = common.execute_aws_command_with_input({ "controlcatalog", "list-domains" })
+	it("should generate a cli skeleton with list_domains", function()
+		local result = service.list_domains()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-objectives", function()
-		local result = common.execute_aws_command_with_input({ "controlcatalog", "list-objectives" })
+	it("should generate a cli skeleton with list_objectives", function()
+		local result = service.list_objectives()
 		assert.is_true(result.success)
 	end)
 

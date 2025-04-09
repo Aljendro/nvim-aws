@@ -3,16 +3,16 @@
 -- AWS Service: appconfigdata
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.appconfigdata")
 
 describe("AWS appconfigdata service testing", function()
-	it("should generate a cli skeleton for get-latest-configuration", function()
-		local result = common.execute_aws_command_with_input({ "appconfigdata", "get-latest-configuration" })
+	it("should generate a cli skeleton with get_latest_configuration", function()
+		local result = service.get_latest_configuration()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for start-configuration-session", function()
-		local result = common.execute_aws_command_with_input({ "appconfigdata", "start-configuration-session" })
+	it("should generate a cli skeleton with start_configuration_session", function()
+		local result = service.start_configuration_session()
 		assert.is_true(result.success)
 	end)
 

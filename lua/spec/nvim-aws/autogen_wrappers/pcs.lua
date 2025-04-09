@@ -3,41 +3,41 @@
 -- AWS Service: pcs
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.pcs")
 
 describe("AWS pcs service testing", function()
-	it("should generate a cli skeleton for create-cluster", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "create-cluster" })
+	it("should generate a cli skeleton with create_cluster", function()
+		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for delete-cluster", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "delete-cluster" })
+	it("should generate a cli skeleton with delete_cluster", function()
+		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-cluster", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "get-cluster" })
+	it("should generate a cli skeleton with get_cluster", function()
+		local result = service.get_cluster()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for register-compute-node-group-instance", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "register-compute-node-group-instance" })
+	it("should generate a cli skeleton with register_compute_node_group_instance", function()
+		local result = service.register_compute_node_group_instance()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "pcs", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 

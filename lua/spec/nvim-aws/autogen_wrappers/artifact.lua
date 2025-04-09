@@ -3,41 +3,41 @@
 -- AWS Service: artifact
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.artifact")
 
 describe("AWS artifact service testing", function()
-	it("should generate a cli skeleton for get-account-settings", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "get-account-settings" })
+	it("should generate a cli skeleton with get_account_settings", function()
+		local result = service.get_account_settings()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-report", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "get-report" })
+	it("should generate a cli skeleton with get_report", function()
+		local result = service.get_report()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-report-metadata", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "get-report-metadata" })
+	it("should generate a cli skeleton with get_report_metadata", function()
+		local result = service.get_report_metadata()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-term-for-report", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "get-term-for-report" })
+	it("should generate a cli skeleton with get_term_for_report", function()
+		local result = service.get_term_for_report()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-customer-agreements", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "list-customer-agreements" })
+	it("should generate a cli skeleton with list_customer_agreements", function()
+		local result = service.list_customer_agreements()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-reports", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "list-reports" })
+	it("should generate a cli skeleton with list_reports", function()
+		local result = service.list_reports()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-account-settings", function()
-		local result = common.execute_aws_command_with_input({ "artifact", "put-account-settings" })
+	it("should generate a cli skeleton with put_account_settings", function()
+		local result = service.put_account_settings()
 		assert.is_true(result.success)
 	end)
 

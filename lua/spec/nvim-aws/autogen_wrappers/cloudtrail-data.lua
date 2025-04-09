@@ -3,11 +3,11 @@
 -- AWS Service: cloudtrail-data
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.cloudtrail-data")
 
 describe("AWS cloudtrail-data service testing", function()
-	it("should generate a cli skeleton for put-audit-events", function()
-		local result = common.execute_aws_command_with_input({ "cloudtrail-data", "put-audit-events" })
+	it("should generate a cli skeleton with put_audit_events", function()
+		local result = service.put_audit_events()
 		assert.is_true(result.success)
 	end)
 

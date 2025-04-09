@@ -3,41 +3,41 @@
 -- AWS Service: cost-and-usage-report-service
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.cur")
 
 describe("AWS cost-and-usage-report-service service testing", function()
-	it("should generate a cli skeleton for delete-report-definition", function()
-		local result = common.execute_aws_command_with_input({ "cur", "delete-report-definition" })
+	it("should generate a cli skeleton with delete_report_definition", function()
+		local result = service.delete_report_definition()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for describe-report-definitions", function()
-		local result = common.execute_aws_command_with_input({ "cur", "describe-report-definitions" })
+	it("should generate a cli skeleton with describe_report_definitions", function()
+		local result = service.describe_report_definitions()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for list-tags-for-resource", function()
-		local result = common.execute_aws_command_with_input({ "cur", "list-tags-for-resource" })
+	it("should generate a cli skeleton with list_tags_for_resource", function()
+		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for modify-report-definition", function()
-		local result = common.execute_aws_command_with_input({ "cur", "modify-report-definition" })
+	it("should generate a cli skeleton with modify_report_definition", function()
+		local result = service.modify_report_definition()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-report-definition", function()
-		local result = common.execute_aws_command_with_input({ "cur", "put-report-definition" })
+	it("should generate a cli skeleton with put_report_definition", function()
+		local result = service.put_report_definition()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for tag-resource", function()
-		local result = common.execute_aws_command_with_input({ "cur", "tag-resource" })
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for untag-resource", function()
-		local result = common.execute_aws_command_with_input({ "cur", "untag-resource" })
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 

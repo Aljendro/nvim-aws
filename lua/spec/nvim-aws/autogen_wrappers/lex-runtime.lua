@@ -3,31 +3,31 @@
 -- AWS Service: lex-runtime-service
 
 require("nvim-aws").setup()
-local common = require("nvim-aws.wrappers.common")
+local service = require("nvim-aws.autogen_wrappers.lex-runtime")
 
 describe("AWS lex-runtime-service service testing", function()
-	it("should generate a cli skeleton for delete-session", function()
-		local result = common.execute_aws_command_with_input({ "lex-runtime", "delete-session" })
+	it("should generate a cli skeleton with delete_session", function()
+		local result = service.delete_session()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for get-session", function()
-		local result = common.execute_aws_command_with_input({ "lex-runtime", "get-session" })
+	it("should generate a cli skeleton with get_session", function()
+		local result = service.get_session()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for post-content", function()
-		local result = common.execute_aws_command_with_input({ "lex-runtime", "post-content" })
+	it("should generate a cli skeleton with post_content", function()
+		local result = service.post_content()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for post-text", function()
-		local result = common.execute_aws_command_with_input({ "lex-runtime", "post-text" })
+	it("should generate a cli skeleton with post_text", function()
+		local result = service.post_text()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton for put-session", function()
-		local result = common.execute_aws_command_with_input({ "lex-runtime", "put-session" })
+	it("should generate a cli skeleton with put_session", function()
+		local result = service.put_session()
 		assert.is_true(result.success)
 	end)
 
