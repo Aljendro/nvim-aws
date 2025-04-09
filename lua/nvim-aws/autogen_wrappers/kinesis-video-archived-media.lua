@@ -8,42 +8,42 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Downloads an MP4 file (clip) containing the archived, on-demand media from the specified video stream over the specified time range
---- @param input table The input table for the get_clip command
+--- @param input table|nil The input table for the get_clip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_clip(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-clip" }, input)
 end
 
 --- Retrieves an MPEG Dynamic Adaptive Streaming over HTTP (DASH) URL for the stream
---- @param input table The input table for the get_dash_streaming_session_url command
+--- @param input table|nil The input table for the get_dash_streaming_session_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dash_streaming_session_url(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-dash-streaming-session-url" }, input)
 end
 
 --- Retrieves an HTTP Live Streaming (HLS) URL for the stream
---- @param input table The input table for the get_hls_streaming_session_url command
+--- @param input table|nil The input table for the get_hls_streaming_session_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_hls_streaming_session_url(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-hls-streaming-session-url" }, input)
 end
 
 --- Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image format configuration
---- @param input table The input table for the get_images command
+--- @param input table|nil The input table for the get_images command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_images(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-images" }, input)
 end
 
 --- Gets media for a list of fragments (specified by fragment number) from the archived data in an Amazon Kinesis video stream
---- @param input table The input table for the get_media_for_fragment_list command
+--- @param input table|nil The input table for the get_media_for_fragment_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_media_for_fragment_list(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-media-for-fragment-list" }, input)
 end
 
 --- Returns a list of Fragment objects from the specified stream and timestamp range within the archived data
---- @param input table The input table for the list_fragments command
+--- @param input table|nil The input table for the list_fragments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fragments(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "list-fragments" }, input)

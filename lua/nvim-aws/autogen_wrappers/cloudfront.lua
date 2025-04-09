@@ -8,854 +8,854 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates an alias (also known as a CNAME or an alternate domain name) with a CloudFront distribution
---- @param input table The input table for the associate_alias command
+--- @param input table|nil The input table for the associate_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_alias(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "associate-alias" }, input)
 end
 
 --- Creates a staging distribution using the configuration of the provided primary distribution
---- @param input table The input table for the copy_distribution command
+--- @param input table|nil The input table for the copy_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "copy-distribution" }, input)
 end
 
 --- Creates an Anycast static IP list
---- @param input table The input table for the create_anycast_ip_list command
+--- @param input table|nil The input table for the create_anycast_ip_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_anycast_ip_list(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-anycast-ip-list" }, input)
 end
 
 --- Creates a cache policy
---- @param input table The input table for the create_cache_policy command
+--- @param input table|nil The input table for the create_cache_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cache_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-cache-policy" }, input)
 end
 
 --- Creates a new origin access identity
---- @param input table The input table for the create_cloud_front_origin_access_identity command
+--- @param input table|nil The input table for the create_cloud_front_origin_access_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cloud_front_origin_access_identity(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-cloud-front-origin-access-identity" }, input)
 end
 
 --- Creates a continuous deployment policy that distributes traffic for a custom domain name to two different CloudFront distributions
---- @param input table The input table for the create_continuous_deployment_policy command
+--- @param input table|nil The input table for the create_continuous_deployment_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_continuous_deployment_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-continuous-deployment-policy" }, input)
 end
 
 --- Creates a CloudFront distribution
---- @param input table The input table for the create_distribution command
+--- @param input table|nil The input table for the create_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-distribution" }, input)
 end
 
 --- Create a new distribution with tags
---- @param input table The input table for the create_distribution_with_tags command
+--- @param input table|nil The input table for the create_distribution_with_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_distribution_with_tags(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-distribution-with-tags" }, input)
 end
 
 --- Create a new field-level encryption configuration
---- @param input table The input table for the create_field_level_encryption_config command
+--- @param input table|nil The input table for the create_field_level_encryption_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_field_level_encryption_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-field-level-encryption-config" }, input)
 end
 
 --- Create a field-level encryption profile
---- @param input table The input table for the create_field_level_encryption_profile command
+--- @param input table|nil The input table for the create_field_level_encryption_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_field_level_encryption_profile(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-field-level-encryption-profile" }, input)
 end
 
 --- Creates a CloudFront function
---- @param input table The input table for the create_function command
+--- @param input table|nil The input table for the create_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-function" }, input)
 end
 
 --- Create a new invalidation
---- @param input table The input table for the create_invalidation command
+--- @param input table|nil The input table for the create_invalidation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_invalidation(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-invalidation" }, input)
 end
 
 --- Creates a key group that you can use with CloudFront signed URLs and signed cookies
---- @param input table The input table for the create_key_group command
+--- @param input table|nil The input table for the create_key_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_key_group(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-key-group" }, input)
 end
 
 --- Specifies the key value store resource to add to your account
---- @param input table The input table for the create_key_value_store command
+--- @param input table|nil The input table for the create_key_value_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_key_value_store(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-key-value-store" }, input)
 end
 
 --- Enables or disables additional Amazon CloudWatch metrics for the specified CloudFront distribution
---- @param input table The input table for the create_monitoring_subscription command
+--- @param input table|nil The input table for the create_monitoring_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_monitoring_subscription(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-monitoring-subscription" }, input)
 end
 
 --- Creates a new origin access control in CloudFront
---- @param input table The input table for the create_origin_access_control command
+--- @param input table|nil The input table for the create_origin_access_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_origin_access_control(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-origin-access-control" }, input)
 end
 
 --- Creates an origin request policy
---- @param input table The input table for the create_origin_request_policy command
+--- @param input table|nil The input table for the create_origin_request_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_origin_request_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-origin-request-policy" }, input)
 end
 
 --- Uploads a public key to CloudFront that you can use with signed URLs and signed cookies, or with field-level encryption
---- @param input table The input table for the create_public_key command
+--- @param input table|nil The input table for the create_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_public_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-public-key" }, input)
 end
 
 --- Creates a real-time log configuration
---- @param input table The input table for the create_realtime_log_config command
+--- @param input table|nil The input table for the create_realtime_log_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_realtime_log_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-realtime-log-config" }, input)
 end
 
 --- Creates a response headers policy
---- @param input table The input table for the create_response_headers_policy command
+--- @param input table|nil The input table for the create_response_headers_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_response_headers_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-response-headers-policy" }, input)
 end
 
 --- This API is deprecated
---- @param input table The input table for the create_streaming_distribution command
+--- @param input table|nil The input table for the create_streaming_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_streaming_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-streaming-distribution" }, input)
 end
 
 --- This API is deprecated
---- @param input table The input table for the create_streaming_distribution_with_tags command
+--- @param input table|nil The input table for the create_streaming_distribution_with_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_streaming_distribution_with_tags(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-streaming-distribution-with-tags" }, input)
 end
 
 --- Create an Amazon CloudFront VPC origin
---- @param input table The input table for the create_vpc_origin command
+--- @param input table|nil The input table for the create_vpc_origin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_origin(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "create-vpc-origin" }, input)
 end
 
 --- Deletes an Anycast static IP list
---- @param input table The input table for the delete_anycast_ip_list command
+--- @param input table|nil The input table for the delete_anycast_ip_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_anycast_ip_list(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-anycast-ip-list" }, input)
 end
 
 --- Deletes a cache policy
---- @param input table The input table for the delete_cache_policy command
+--- @param input table|nil The input table for the delete_cache_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cache_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-cache-policy" }, input)
 end
 
 --- Delete an origin access identity
---- @param input table The input table for the delete_cloud_front_origin_access_identity command
+--- @param input table|nil The input table for the delete_cloud_front_origin_access_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cloud_front_origin_access_identity(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-cloud-front-origin-access-identity" }, input)
 end
 
 --- Deletes a continuous deployment policy
---- @param input table The input table for the delete_continuous_deployment_policy command
+--- @param input table|nil The input table for the delete_continuous_deployment_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_continuous_deployment_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-continuous-deployment-policy" }, input)
 end
 
 --- Delete a distribution
---- @param input table The input table for the delete_distribution command
+--- @param input table|nil The input table for the delete_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-distribution" }, input)
 end
 
 --- Remove a field-level encryption configuration
---- @param input table The input table for the delete_field_level_encryption_config command
+--- @param input table|nil The input table for the delete_field_level_encryption_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_field_level_encryption_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-field-level-encryption-config" }, input)
 end
 
 --- Remove a field-level encryption profile
---- @param input table The input table for the delete_field_level_encryption_profile command
+--- @param input table|nil The input table for the delete_field_level_encryption_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_field_level_encryption_profile(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-field-level-encryption-profile" }, input)
 end
 
 --- Deletes a CloudFront function
---- @param input table The input table for the delete_function command
+--- @param input table|nil The input table for the delete_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-function" }, input)
 end
 
 --- Deletes a key group
---- @param input table The input table for the delete_key_group command
+--- @param input table|nil The input table for the delete_key_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_key_group(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-key-group" }, input)
 end
 
 --- Specifies the key value store to delete
---- @param input table The input table for the delete_key_value_store command
+--- @param input table|nil The input table for the delete_key_value_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_key_value_store(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-key-value-store" }, input)
 end
 
 --- Disables additional CloudWatch metrics for the specified CloudFront distribution
---- @param input table The input table for the delete_monitoring_subscription command
+--- @param input table|nil The input table for the delete_monitoring_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_monitoring_subscription(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-monitoring-subscription" }, input)
 end
 
 --- Deletes a CloudFront origin access control
---- @param input table The input table for the delete_origin_access_control command
+--- @param input table|nil The input table for the delete_origin_access_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_origin_access_control(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-origin-access-control" }, input)
 end
 
 --- Deletes an origin request policy
---- @param input table The input table for the delete_origin_request_policy command
+--- @param input table|nil The input table for the delete_origin_request_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_origin_request_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-origin-request-policy" }, input)
 end
 
 --- Remove a public key you previously added to CloudFront
---- @param input table The input table for the delete_public_key command
+--- @param input table|nil The input table for the delete_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_public_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-public-key" }, input)
 end
 
 --- Deletes a real-time log configuration
---- @param input table The input table for the delete_realtime_log_config command
+--- @param input table|nil The input table for the delete_realtime_log_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_realtime_log_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-realtime-log-config" }, input)
 end
 
 --- Deletes a response headers policy
---- @param input table The input table for the delete_response_headers_policy command
+--- @param input table|nil The input table for the delete_response_headers_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_response_headers_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-response-headers-policy" }, input)
 end
 
 --- Delete a streaming distribution
---- @param input table The input table for the delete_streaming_distribution command
+--- @param input table|nil The input table for the delete_streaming_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_streaming_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-streaming-distribution" }, input)
 end
 
 --- Delete an Amazon CloudFront VPC origin
---- @param input table The input table for the delete_vpc_origin command
+--- @param input table|nil The input table for the delete_vpc_origin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_origin(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "delete-vpc-origin" }, input)
 end
 
 --- Gets configuration information and metadata about a CloudFront function, but not the function's code
---- @param input table The input table for the describe_function command
+--- @param input table|nil The input table for the describe_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "describe-function" }, input)
 end
 
 --- Specifies the key value store and its configuration
---- @param input table The input table for the describe_key_value_store command
+--- @param input table|nil The input table for the describe_key_value_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_key_value_store(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "describe-key-value-store" }, input)
 end
 
 --- Gets an Anycast static IP list
---- @param input table The input table for the get_anycast_ip_list command
+--- @param input table|nil The input table for the get_anycast_ip_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_anycast_ip_list(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-anycast-ip-list" }, input)
 end
 
 --- Gets a cache policy, including the following metadata: The policy's identifier
---- @param input table The input table for the get_cache_policy command
+--- @param input table|nil The input table for the get_cache_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cache_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-cache-policy" }, input)
 end
 
 --- Gets a cache policy configuration
---- @param input table The input table for the get_cache_policy_config command
+--- @param input table|nil The input table for the get_cache_policy_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cache_policy_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-cache-policy-config" }, input)
 end
 
 --- Get the information about an origin access identity
---- @param input table The input table for the get_cloud_front_origin_access_identity command
+--- @param input table|nil The input table for the get_cloud_front_origin_access_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cloud_front_origin_access_identity(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-cloud-front-origin-access-identity" }, input)
 end
 
 --- Get the configuration information about an origin access identity
---- @param input table The input table for the get_cloud_front_origin_access_identity_config command
+--- @param input table|nil The input table for the get_cloud_front_origin_access_identity_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cloud_front_origin_access_identity_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-cloud-front-origin-access-identity-config" }, input)
 end
 
 --- Gets a continuous deployment policy, including metadata (the policy's identifier and the date and time when the policy was last modified)
---- @param input table The input table for the get_continuous_deployment_policy command
+--- @param input table|nil The input table for the get_continuous_deployment_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_continuous_deployment_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-continuous-deployment-policy" }, input)
 end
 
 --- Gets configuration information about a continuous deployment policy
---- @param input table The input table for the get_continuous_deployment_policy_config command
+--- @param input table|nil The input table for the get_continuous_deployment_policy_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_continuous_deployment_policy_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-continuous-deployment-policy-config" }, input)
 end
 
 --- Get the information about a distribution
---- @param input table The input table for the get_distribution command
+--- @param input table|nil The input table for the get_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-distribution" }, input)
 end
 
 --- Get the configuration information about a distribution
---- @param input table The input table for the get_distribution_config command
+--- @param input table|nil The input table for the get_distribution_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-distribution-config" }, input)
 end
 
 --- Get the field-level encryption configuration information
---- @param input table The input table for the get_field_level_encryption command
+--- @param input table|nil The input table for the get_field_level_encryption command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_field_level_encryption(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption" }, input)
 end
 
 --- Get the field-level encryption configuration information
---- @param input table The input table for the get_field_level_encryption_config command
+--- @param input table|nil The input table for the get_field_level_encryption_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_field_level_encryption_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-config" }, input)
 end
 
 --- Get the field-level encryption profile information
---- @param input table The input table for the get_field_level_encryption_profile command
+--- @param input table|nil The input table for the get_field_level_encryption_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_field_level_encryption_profile(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-profile" }, input)
 end
 
 --- Get the field-level encryption profile configuration information
---- @param input table The input table for the get_field_level_encryption_profile_config command
+--- @param input table|nil The input table for the get_field_level_encryption_profile_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_field_level_encryption_profile_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-profile-config" }, input)
 end
 
 --- Gets the code of a CloudFront function
---- @param input table The input table for the get_function command
+--- @param input table|nil The input table for the get_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-function" }, input)
 end
 
 --- Get the information about an invalidation
---- @param input table The input table for the get_invalidation command
+--- @param input table|nil The input table for the get_invalidation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_invalidation(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-invalidation" }, input)
 end
 
 --- Gets a key group, including the date and time when the key group was last modified
---- @param input table The input table for the get_key_group command
+--- @param input table|nil The input table for the get_key_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key_group(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-key-group" }, input)
 end
 
 --- Gets a key group configuration
---- @param input table The input table for the get_key_group_config command
+--- @param input table|nil The input table for the get_key_group_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key_group_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-key-group-config" }, input)
 end
 
 --- Gets information about whether additional CloudWatch metrics are enabled for the specified CloudFront distribution
---- @param input table The input table for the get_monitoring_subscription command
+--- @param input table|nil The input table for the get_monitoring_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_monitoring_subscription(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-monitoring-subscription" }, input)
 end
 
 --- Gets a CloudFront origin access control, including its unique identifier
---- @param input table The input table for the get_origin_access_control command
+--- @param input table|nil The input table for the get_origin_access_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_origin_access_control(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-access-control" }, input)
 end
 
 --- Gets a CloudFront origin access control configuration
---- @param input table The input table for the get_origin_access_control_config command
+--- @param input table|nil The input table for the get_origin_access_control_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_origin_access_control_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-access-control-config" }, input)
 end
 
 --- Gets an origin request policy, including the following metadata: The policy's identifier
---- @param input table The input table for the get_origin_request_policy command
+--- @param input table|nil The input table for the get_origin_request_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_origin_request_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-request-policy" }, input)
 end
 
 --- Gets an origin request policy configuration
---- @param input table The input table for the get_origin_request_policy_config command
+--- @param input table|nil The input table for the get_origin_request_policy_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_origin_request_policy_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-request-policy-config" }, input)
 end
 
 --- Gets a public key
---- @param input table The input table for the get_public_key command
+--- @param input table|nil The input table for the get_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_public_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-public-key" }, input)
 end
 
 --- Gets a public key configuration
---- @param input table The input table for the get_public_key_config command
+--- @param input table|nil The input table for the get_public_key_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_public_key_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-public-key-config" }, input)
 end
 
 --- Gets a real-time log configuration
---- @param input table The input table for the get_realtime_log_config command
+--- @param input table|nil The input table for the get_realtime_log_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_realtime_log_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-realtime-log-config" }, input)
 end
 
 --- Gets a response headers policy, including metadata (the policy's identifier and the date and time when the policy was last modified)
---- @param input table The input table for the get_response_headers_policy command
+--- @param input table|nil The input table for the get_response_headers_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_response_headers_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-response-headers-policy" }, input)
 end
 
 --- Gets a response headers policy configuration
---- @param input table The input table for the get_response_headers_policy_config command
+--- @param input table|nil The input table for the get_response_headers_policy_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_response_headers_policy_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-response-headers-policy-config" }, input)
 end
 
 --- Gets information about a specified RTMP distribution, including the distribution configuration
---- @param input table The input table for the get_streaming_distribution command
+--- @param input table|nil The input table for the get_streaming_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_streaming_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-streaming-distribution" }, input)
 end
 
 --- Get the configuration information about a streaming distribution
---- @param input table The input table for the get_streaming_distribution_config command
+--- @param input table|nil The input table for the get_streaming_distribution_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_streaming_distribution_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-streaming-distribution-config" }, input)
 end
 
 --- Get the details of an Amazon CloudFront VPC origin
---- @param input table The input table for the get_vpc_origin command
+--- @param input table|nil The input table for the get_vpc_origin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vpc_origin(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "get-vpc-origin" }, input)
 end
 
 --- Lists your Anycast static IP lists
---- @param input table The input table for the list_anycast_ip_lists command
+--- @param input table|nil The input table for the list_anycast_ip_lists command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anycast_ip_lists(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-anycast-ip-lists" }, input)
 end
 
 --- Gets a list of cache policies
---- @param input table The input table for the list_cache_policies command
+--- @param input table|nil The input table for the list_cache_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cache_policies(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-cache-policies" }, input)
 end
 
 --- Lists origin access identities
---- @param input table The input table for the list_cloud_front_origin_access_identities command
+--- @param input table|nil The input table for the list_cloud_front_origin_access_identities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cloud_front_origin_access_identities(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-cloud-front-origin-access-identities" }, input)
 end
 
 --- Gets a list of aliases (also called CNAMEs or alternate domain names) that conflict or overlap with the provided alias, and the associated CloudFront distributions and Amazon Web Services accounts for each conflicting alias
---- @param input table The input table for the list_conflicting_aliases command
+--- @param input table|nil The input table for the list_conflicting_aliases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_conflicting_aliases(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-conflicting-aliases" }, input)
 end
 
 --- Gets a list of the continuous deployment policies in your Amazon Web Services account
---- @param input table The input table for the list_continuous_deployment_policies command
+--- @param input table|nil The input table for the list_continuous_deployment_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_continuous_deployment_policies(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-continuous-deployment-policies" }, input)
 end
 
 --- List CloudFront distributions
---- @param input table The input table for the list_distributions command
+--- @param input table|nil The input table for the list_distributions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions" }, input)
 end
 
 --- Lists the distributions in your account that are associated with the specified AnycastIpListId
---- @param input table The input table for the list_distributions_by_anycast_ip_list_id command
+--- @param input table|nil The input table for the list_distributions_by_anycast_ip_list_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_anycast_ip_list_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-anycast-ip-list-id" }, input)
 end
 
 --- Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified cache policy
---- @param input table The input table for the list_distributions_by_cache_policy_id command
+--- @param input table|nil The input table for the list_distributions_by_cache_policy_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_cache_policy_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-cache-policy-id" }, input)
 end
 
 --- Gets a list of distribution IDs for distributions that have a cache behavior that references the specified key group
---- @param input table The input table for the list_distributions_by_key_group command
+--- @param input table|nil The input table for the list_distributions_by_key_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_key_group(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-key-group" }, input)
 end
 
 --- Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified origin request policy
---- @param input table The input table for the list_distributions_by_origin_request_policy_id command
+--- @param input table|nil The input table for the list_distributions_by_origin_request_policy_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_origin_request_policy_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-origin-request-policy-id" }, input)
 end
 
 --- Gets a list of distributions that have a cache behavior that's associated with the specified real-time log configuration
---- @param input table The input table for the list_distributions_by_realtime_log_config command
+--- @param input table|nil The input table for the list_distributions_by_realtime_log_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_realtime_log_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-realtime-log-config" }, input)
 end
 
 --- Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified response headers policy
---- @param input table The input table for the list_distributions_by_response_headers_policy_id command
+--- @param input table|nil The input table for the list_distributions_by_response_headers_policy_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_response_headers_policy_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-response-headers-policy-id" }, input)
 end
 
 --- List CloudFront distributions by their VPC origin ID
---- @param input table The input table for the list_distributions_by_vpc_origin_id command
+--- @param input table|nil The input table for the list_distributions_by_vpc_origin_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_vpc_origin_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-vpc-origin-id" }, input)
 end
 
 --- List the distributions that are associated with a specified WAF web ACL
---- @param input table The input table for the list_distributions_by_web_acl_id command
+--- @param input table|nil The input table for the list_distributions_by_web_acl_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributions_by_web_acl_id(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-web-acl-id" }, input)
 end
 
 --- List all field-level encryption configurations that have been created in CloudFront for this account
---- @param input table The input table for the list_field_level_encryption_configs command
+--- @param input table|nil The input table for the list_field_level_encryption_configs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_field_level_encryption_configs(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-field-level-encryption-configs" }, input)
 end
 
 --- Request a list of field-level encryption profiles that have been created in CloudFront for this account
---- @param input table The input table for the list_field_level_encryption_profiles command
+--- @param input table|nil The input table for the list_field_level_encryption_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_field_level_encryption_profiles(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-field-level-encryption-profiles" }, input)
 end
 
 --- Gets a list of all CloudFront functions in your Amazon Web Services account
---- @param input table The input table for the list_functions command
+--- @param input table|nil The input table for the list_functions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_functions(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-functions" }, input)
 end
 
 --- Lists invalidation batches
---- @param input table The input table for the list_invalidations command
+--- @param input table|nil The input table for the list_invalidations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_invalidations(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-invalidations" }, input)
 end
 
 --- Gets a list of key groups
---- @param input table The input table for the list_key_groups command
+--- @param input table|nil The input table for the list_key_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_key_groups(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-key-groups" }, input)
 end
 
 --- Specifies the key value stores to list
---- @param input table The input table for the list_key_value_stores command
+--- @param input table|nil The input table for the list_key_value_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_key_value_stores(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-key-value-stores" }, input)
 end
 
 --- Gets the list of CloudFront origin access controls (OACs) in this Amazon Web Services account
---- @param input table The input table for the list_origin_access_controls command
+--- @param input table|nil The input table for the list_origin_access_controls command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_origin_access_controls(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-origin-access-controls" }, input)
 end
 
 --- Gets a list of origin request policies
---- @param input table The input table for the list_origin_request_policies command
+--- @param input table|nil The input table for the list_origin_request_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_origin_request_policies(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-origin-request-policies" }, input)
 end
 
 --- List all public keys that have been added to CloudFront for this account
---- @param input table The input table for the list_public_keys command
+--- @param input table|nil The input table for the list_public_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_public_keys(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-public-keys" }, input)
 end
 
 --- Gets a list of real-time log configurations
---- @param input table The input table for the list_realtime_log_configs command
+--- @param input table|nil The input table for the list_realtime_log_configs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_realtime_log_configs(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-realtime-log-configs" }, input)
 end
 
 --- Gets a list of response headers policies
---- @param input table The input table for the list_response_headers_policies command
+--- @param input table|nil The input table for the list_response_headers_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_response_headers_policies(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-response-headers-policies" }, input)
 end
 
 --- List streaming distributions
---- @param input table The input table for the list_streaming_distributions command
+--- @param input table|nil The input table for the list_streaming_distributions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_streaming_distributions(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-streaming-distributions" }, input)
 end
 
 --- List tags for a CloudFront resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-tags-for-resource" }, input)
 end
 
 --- List the CloudFront VPC origins in your account
---- @param input table The input table for the list_vpc_origins command
+--- @param input table|nil The input table for the list_vpc_origins command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vpc_origins(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "list-vpc-origins" }, input)
 end
 
 --- Publishes a CloudFront function by copying the function code from the DEVELOPMENT stage to LIVE
---- @param input table The input table for the publish_function command
+--- @param input table|nil The input table for the publish_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "publish-function" }, input)
 end
 
 --- Add tags to a CloudFront resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "tag-resource" }, input)
 end
 
 --- Tests a CloudFront function
---- @param input table The input table for the test_function command
+--- @param input table|nil The input table for the test_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "test-function" }, input)
 end
 
 --- Remove tags from a CloudFront resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "untag-resource" }, input)
 end
 
 --- Updates a cache policy configuration
---- @param input table The input table for the update_cache_policy command
+--- @param input table|nil The input table for the update_cache_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cache_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-cache-policy" }, input)
 end
 
 --- Update an origin access identity
---- @param input table The input table for the update_cloud_front_origin_access_identity command
+--- @param input table|nil The input table for the update_cloud_front_origin_access_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cloud_front_origin_access_identity(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-cloud-front-origin-access-identity" }, input)
 end
 
 --- Updates a continuous deployment policy
---- @param input table The input table for the update_continuous_deployment_policy command
+--- @param input table|nil The input table for the update_continuous_deployment_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_continuous_deployment_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-continuous-deployment-policy" }, input)
 end
 
 --- Updates the configuration for a CloudFront distribution
---- @param input table The input table for the update_distribution command
+--- @param input table|nil The input table for the update_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-distribution" }, input)
 end
 
 --- Copies the staging distribution's configuration to its corresponding primary distribution
---- @param input table The input table for the update_distribution_with_staging_config command
+--- @param input table|nil The input table for the update_distribution_with_staging_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_distribution_with_staging_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-distribution-with-staging-config" }, input)
 end
 
 --- Update a field-level encryption configuration
---- @param input table The input table for the update_field_level_encryption_config command
+--- @param input table|nil The input table for the update_field_level_encryption_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_field_level_encryption_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-field-level-encryption-config" }, input)
 end
 
 --- Update a field-level encryption profile
---- @param input table The input table for the update_field_level_encryption_profile command
+--- @param input table|nil The input table for the update_field_level_encryption_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_field_level_encryption_profile(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-field-level-encryption-profile" }, input)
 end
 
 --- Updates a CloudFront function
---- @param input table The input table for the update_function command
+--- @param input table|nil The input table for the update_function command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-function" }, input)
 end
 
 --- Updates a key group
---- @param input table The input table for the update_key_group command
+--- @param input table|nil The input table for the update_key_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_key_group(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-key-group" }, input)
 end
 
 --- Specifies the key value store to update
---- @param input table The input table for the update_key_value_store command
+--- @param input table|nil The input table for the update_key_value_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_key_value_store(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-key-value-store" }, input)
 end
 
 --- Updates a CloudFront origin access control
---- @param input table The input table for the update_origin_access_control command
+--- @param input table|nil The input table for the update_origin_access_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_origin_access_control(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-origin-access-control" }, input)
 end
 
 --- Updates an origin request policy configuration
---- @param input table The input table for the update_origin_request_policy command
+--- @param input table|nil The input table for the update_origin_request_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_origin_request_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-origin-request-policy" }, input)
 end
 
 --- Update public key information
---- @param input table The input table for the update_public_key command
+--- @param input table|nil The input table for the update_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_public_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-public-key" }, input)
 end
 
 --- Updates a real-time log configuration
---- @param input table The input table for the update_realtime_log_config command
+--- @param input table|nil The input table for the update_realtime_log_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_realtime_log_config(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-realtime-log-config" }, input)
 end
 
 --- Updates a response headers policy
---- @param input table The input table for the update_response_headers_policy command
+--- @param input table|nil The input table for the update_response_headers_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_response_headers_policy(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-response-headers-policy" }, input)
 end
 
 --- Update a streaming distribution
---- @param input table The input table for the update_streaming_distribution command
+--- @param input table|nil The input table for the update_streaming_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_streaming_distribution(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-streaming-distribution" }, input)
 end
 
 --- Update an Amazon CloudFront VPC origin in your account
---- @param input table The input table for the update_vpc_origin command
+--- @param input table|nil The input table for the update_vpc_origin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vpc_origin(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-vpc-origin" }, input)

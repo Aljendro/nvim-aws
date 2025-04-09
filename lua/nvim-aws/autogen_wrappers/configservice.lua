@@ -8,679 +8,679 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds all resource types specified in the ResourceTypes list to the RecordingGroup of specified configuration recorder and includes those resource types when recording
---- @param input table The input table for the associate_resource_types command
+--- @param input table|nil The input table for the associate_resource_types command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_resource_types(input)
 	return common.execute_aws_command_with_input({ "configservice", "associate-resource-types" }, input)
 end
 
 --- Returns the current configuration items for resources that are present in your Config aggregator
---- @param input table The input table for the batch_get_aggregate_resource_config command
+--- @param input table|nil The input table for the batch_get_aggregate_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_aggregate_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "batch-get-aggregate-resource-config" }, input)
 end
 
 --- Returns the BaseConfigurationItem for one or more requested resources
---- @param input table The input table for the batch_get_resource_config command
+--- @param input table|nil The input table for the batch_get_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "batch-get-resource-config" }, input)
 end
 
 --- Deletes the authorization granted to the specified configuration aggregator account in a specified region
---- @param input table The input table for the delete_aggregation_authorization command
+--- @param input table|nil The input table for the delete_aggregation_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_aggregation_authorization(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-aggregation-authorization" }, input)
 end
 
 --- Deletes the specified Config rule and all of its evaluation results
---- @param input table The input table for the delete_config_rule command
+--- @param input table|nil The input table for the delete_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-config-rule" }, input)
 end
 
 --- Deletes the specified configuration aggregator and the aggregated data associated with the aggregator
---- @param input table The input table for the delete_configuration_aggregator command
+--- @param input table|nil The input table for the delete_configuration_aggregator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_aggregator(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-configuration-aggregator" }, input)
 end
 
 --- Deletes the customer managed configuration recorder
---- @param input table The input table for the delete_configuration_recorder command
+--- @param input table|nil The input table for the delete_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-configuration-recorder" }, input)
 end
 
 --- Deletes the specified conformance pack and all the Config rules, remediation actions, and all evaluation results within that conformance pack
---- @param input table The input table for the delete_conformance_pack command
+--- @param input table|nil The input table for the delete_conformance_pack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_conformance_pack(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-conformance-pack" }, input)
 end
 
 --- Deletes the delivery channel
---- @param input table The input table for the delete_delivery_channel command
+--- @param input table|nil The input table for the delete_delivery_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_delivery_channel(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-delivery-channel" }, input)
 end
 
 --- Deletes the evaluation results for the specified Config rule
---- @param input table The input table for the delete_evaluation_results command
+--- @param input table|nil The input table for the delete_evaluation_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_evaluation_results(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-evaluation-results" }, input)
 end
 
 --- Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that organization
---- @param input table The input table for the delete_organization_config_rule command
+--- @param input table|nil The input table for the delete_organization_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_organization_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-organization-config-rule" }, input)
 end
 
 --- Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all member accounts in that organization
---- @param input table The input table for the delete_organization_conformance_pack command
+--- @param input table|nil The input table for the delete_organization_conformance_pack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_organization_conformance_pack(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-organization-conformance-pack" }, input)
 end
 
 --- Deletes pending authorization requests for a specified aggregator account in a specified region
---- @param input table The input table for the delete_pending_aggregation_request command
+--- @param input table|nil The input table for the delete_pending_aggregation_request command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pending_aggregation_request(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-pending-aggregation-request" }, input)
 end
 
 --- Deletes the remediation configuration
---- @param input table The input table for the delete_remediation_configuration command
+--- @param input table|nil The input table for the delete_remediation_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_remediation_configuration(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-remediation-configuration" }, input)
 end
 
 --- Deletes one or more remediation exceptions mentioned in the resource keys
---- @param input table The input table for the delete_remediation_exceptions command
+--- @param input table|nil The input table for the delete_remediation_exceptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_remediation_exceptions(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-remediation-exceptions" }, input)
 end
 
 --- Records the configuration state for a custom resource that has been deleted
---- @param input table The input table for the delete_resource_config command
+--- @param input table|nil The input table for the delete_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-resource-config" }, input)
 end
 
 --- Deletes the retention configuration
---- @param input table The input table for the delete_retention_configuration command
+--- @param input table|nil The input table for the delete_retention_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_retention_configuration(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-retention-configuration" }, input)
 end
 
 --- Deletes an existing service-linked configuration recorder
---- @param input table The input table for the delete_service_linked_configuration_recorder command
+--- @param input table|nil The input table for the delete_service_linked_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service_linked_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-service-linked-configuration-recorder" }, input)
 end
 
 --- Deletes the stored query for a single Amazon Web Services account and a single Amazon Web Services Region
---- @param input table The input table for the delete_stored_query command
+--- @param input table|nil The input table for the delete_stored_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stored_query(input)
 	return common.execute_aws_command_with_input({ "configservice", "delete-stored-query" }, input)
 end
 
 --- Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel
---- @param input table The input table for the deliver_config_snapshot command
+--- @param input table|nil The input table for the deliver_config_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deliver_config_snapshot(input)
 	return common.execute_aws_command_with_input({ "configservice", "deliver-config-snapshot" }, input)
 end
 
 --- Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules
---- @param input table The input table for the describe_aggregate_compliance_by_config_rules command
+--- @param input table|nil The input table for the describe_aggregate_compliance_by_config_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_aggregate_compliance_by_config_rules(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-aggregate-compliance-by-config-rules" }, input)
 end
 
 --- Returns a list of the existing and deleted conformance packs and their associated compliance status with the count of compliant and noncompliant Config rules within each conformance pack
---- @param input table The input table for the describe_aggregate_compliance_by_conformance_packs command
+--- @param input table|nil The input table for the describe_aggregate_compliance_by_conformance_packs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_aggregate_compliance_by_conformance_packs(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-aggregate-compliance-by-conformance-packs" }, input)
 end
 
 --- Returns a list of authorizations granted to various aggregator accounts and regions
---- @param input table The input table for the describe_aggregation_authorizations command
+--- @param input table|nil The input table for the describe_aggregation_authorizations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_aggregation_authorizations(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-aggregation-authorizations" }, input)
 end
 
 --- Indicates whether the specified Config rules are compliant
---- @param input table The input table for the describe_compliance_by_config_rule command
+--- @param input table|nil The input table for the describe_compliance_by_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_compliance_by_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-compliance-by-config-rule" }, input)
 end
 
 --- Indicates whether the specified Amazon Web Services resources are compliant
---- @param input table The input table for the describe_compliance_by_resource command
+--- @param input table|nil The input table for the describe_compliance_by_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_compliance_by_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-compliance-by-resource" }, input)
 end
 
 --- Returns status information for each of your Config managed rules
---- @param input table The input table for the describe_config_rule_evaluation_status command
+--- @param input table|nil The input table for the describe_config_rule_evaluation_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_config_rule_evaluation_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-config-rule-evaluation-status" }, input)
 end
 
 --- Returns details about your Config rules
---- @param input table The input table for the describe_config_rules command
+--- @param input table|nil The input table for the describe_config_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_config_rules(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-config-rules" }, input)
 end
 
 --- Returns status information for sources within an aggregator
---- @param input table The input table for the describe_configuration_aggregator_sources_status command
+--- @param input table|nil The input table for the describe_configuration_aggregator_sources_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_aggregator_sources_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-aggregator-sources-status" }, input)
 end
 
 --- Returns the details of one or more configuration aggregators
---- @param input table The input table for the describe_configuration_aggregators command
+--- @param input table|nil The input table for the describe_configuration_aggregators command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_aggregators(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-aggregators" }, input)
 end
 
 --- Returns the current status of the configuration recorder you specify as well as the status of the last recording event for the configuration recorders
---- @param input table The input table for the describe_configuration_recorder_status command
+--- @param input table|nil The input table for the describe_configuration_recorder_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_recorder_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-recorder-status" }, input)
 end
 
 --- Returns details for the configuration recorder you specify
---- @param input table The input table for the describe_configuration_recorders command
+--- @param input table|nil The input table for the describe_configuration_recorders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_recorders(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-recorders" }, input)
 end
 
 --- Returns compliance details for each rule in that conformance pack
---- @param input table The input table for the describe_conformance_pack_compliance command
+--- @param input table|nil The input table for the describe_conformance_pack_compliance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_conformance_pack_compliance(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-pack-compliance" }, input)
 end
 
 --- Provides one or more conformance packs deployment status
---- @param input table The input table for the describe_conformance_pack_status command
+--- @param input table|nil The input table for the describe_conformance_pack_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_conformance_pack_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-pack-status" }, input)
 end
 
 --- Returns a list of one or more conformance packs
---- @param input table The input table for the describe_conformance_packs command
+--- @param input table|nil The input table for the describe_conformance_packs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_conformance_packs(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-packs" }, input)
 end
 
 --- Returns the current status of the specified delivery channel
---- @param input table The input table for the describe_delivery_channel_status command
+--- @param input table|nil The input table for the describe_delivery_channel_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_delivery_channel_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-delivery-channel-status" }, input)
 end
 
 --- Returns details about the specified delivery channel
---- @param input table The input table for the describe_delivery_channels command
+--- @param input table|nil The input table for the describe_delivery_channels command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_delivery_channels(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-delivery-channels" }, input)
 end
 
 --- Provides organization Config rule deployment status for an organization
---- @param input table The input table for the describe_organization_config_rule_statuses command
+--- @param input table|nil The input table for the describe_organization_config_rule_statuses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_config_rule_statuses(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-organization-config-rule-statuses" }, input)
 end
 
 --- Returns a list of organization Config rules
---- @param input table The input table for the describe_organization_config_rules command
+--- @param input table|nil The input table for the describe_organization_config_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_config_rules(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-organization-config-rules" }, input)
 end
 
 --- Provides organization conformance pack deployment status for an organization
---- @param input table The input table for the describe_organization_conformance_pack_statuses command
+--- @param input table|nil The input table for the describe_organization_conformance_pack_statuses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_conformance_pack_statuses(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-organization-conformance-pack-statuses" }, input)
 end
 
 --- Returns a list of organization conformance packs
---- @param input table The input table for the describe_organization_conformance_packs command
+--- @param input table|nil The input table for the describe_organization_conformance_packs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_conformance_packs(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-organization-conformance-packs" }, input)
 end
 
 --- Returns a list of all pending aggregation requests
---- @param input table The input table for the describe_pending_aggregation_requests command
+--- @param input table|nil The input table for the describe_pending_aggregation_requests command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pending_aggregation_requests(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-pending-aggregation-requests" }, input)
 end
 
 --- Returns the details of one or more remediation configurations
---- @param input table The input table for the describe_remediation_configurations command
+--- @param input table|nil The input table for the describe_remediation_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_remediation_configurations(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-configurations" }, input)
 end
 
 --- Returns the details of one or more remediation exceptions
---- @param input table The input table for the describe_remediation_exceptions command
+--- @param input table|nil The input table for the describe_remediation_exceptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_remediation_exceptions(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-exceptions" }, input)
 end
 
 --- Provides a detailed view of a Remediation Execution for a set of resources including state, timestamps for when steps for the remediation execution occur, and any error messages for steps that have failed
---- @param input table The input table for the describe_remediation_execution_status command
+--- @param input table|nil The input table for the describe_remediation_execution_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_remediation_execution_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-execution-status" }, input)
 end
 
 --- Returns the details of one or more retention configurations
---- @param input table The input table for the describe_retention_configurations command
+--- @param input table|nil The input table for the describe_retention_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_retention_configurations(input)
 	return common.execute_aws_command_with_input({ "configservice", "describe-retention-configurations" }, input)
 end
 
 --- Removes all resource types specified in the ResourceTypes list from the RecordingGroup of configuration recorder and excludes these resource types when recording
---- @param input table The input table for the disassociate_resource_types command
+--- @param input table|nil The input table for the disassociate_resource_types command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_resource_types(input)
 	return common.execute_aws_command_with_input({ "configservice", "disassociate-resource-types" }, input)
 end
 
 --- Returns the evaluation results for the specified Config rule for a specific resource in a rule
---- @param input table The input table for the get_aggregate_compliance_details_by_config_rule command
+--- @param input table|nil The input table for the get_aggregate_compliance_details_by_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aggregate_compliance_details_by_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-compliance-details-by-config-rule" }, input)
 end
 
 --- Returns the number of compliant and noncompliant rules for one or more accounts and regions in an aggregator
---- @param input table The input table for the get_aggregate_config_rule_compliance_summary command
+--- @param input table|nil The input table for the get_aggregate_config_rule_compliance_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aggregate_config_rule_compliance_summary(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-config-rule-compliance-summary" }, input)
 end
 
 --- Returns the count of compliant and noncompliant conformance packs across all Amazon Web Services accounts and Amazon Web Services Regions in an aggregator
---- @param input table The input table for the get_aggregate_conformance_pack_compliance_summary command
+--- @param input table|nil The input table for the get_aggregate_conformance_pack_compliance_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aggregate_conformance_pack_compliance_summary(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-conformance-pack-compliance-summary" }, input)
 end
 
 --- Returns the resource counts across accounts and regions that are present in your Config aggregator
---- @param input table The input table for the get_aggregate_discovered_resource_counts command
+--- @param input table|nil The input table for the get_aggregate_discovered_resource_counts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aggregate_discovered_resource_counts(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-discovered-resource-counts" }, input)
 end
 
 --- Returns configuration item that is aggregated for your specific resource in a specific source account and region
---- @param input table The input table for the get_aggregate_resource_config command
+--- @param input table|nil The input table for the get_aggregate_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aggregate_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-resource-config" }, input)
 end
 
 --- Returns the evaluation results for the specified Config rule
---- @param input table The input table for the get_compliance_details_by_config_rule command
+--- @param input table|nil The input table for the get_compliance_details_by_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compliance_details_by_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-compliance-details-by-config-rule" }, input)
 end
 
 --- Returns the evaluation results for the specified Amazon Web Services resource
---- @param input table The input table for the get_compliance_details_by_resource command
+--- @param input table|nil The input table for the get_compliance_details_by_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compliance_details_by_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-compliance-details-by-resource" }, input)
 end
 
 --- Returns the number of Config rules that are compliant and noncompliant, up to a maximum of 25 for each
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compliance_summary_by_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-compliance-summary-by-config-rule" }, input)
 end
 
 --- Returns the number of resources that are compliant and the number that are noncompliant
---- @param input table The input table for the get_compliance_summary_by_resource_type command
+--- @param input table|nil The input table for the get_compliance_summary_by_resource_type command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compliance_summary_by_resource_type(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-compliance-summary-by-resource-type" }, input)
 end
 
 --- Returns compliance details of a conformance pack for all Amazon Web Services resources that are monitered by conformance pack
---- @param input table The input table for the get_conformance_pack_compliance_details command
+--- @param input table|nil The input table for the get_conformance_pack_compliance_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_conformance_pack_compliance_details(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-conformance-pack-compliance-details" }, input)
 end
 
 --- Returns compliance details for the conformance pack based on the cumulative compliance results of all the rules in that conformance pack
---- @param input table The input table for the get_conformance_pack_compliance_summary command
+--- @param input table|nil The input table for the get_conformance_pack_compliance_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_conformance_pack_compliance_summary(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-conformance-pack-compliance-summary" }, input)
 end
 
 --- Returns the policy definition containing the logic for your Config Custom Policy rule
---- @param input table The input table for the get_custom_rule_policy command
+--- @param input table|nil The input table for the get_custom_rule_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_custom_rule_policy(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-custom-rule-policy" }, input)
 end
 
 --- Returns the resource types, the number of each resource type, and the total number of resources that Config is recording in this region for your Amazon Web Services account
---- @param input table The input table for the get_discovered_resource_counts command
+--- @param input table|nil The input table for the get_discovered_resource_counts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_discovered_resource_counts(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-discovered-resource-counts" }, input)
 end
 
 --- Returns detailed status for each member account within an organization for a given organization Config rule
---- @param input table The input table for the get_organization_config_rule_detailed_status command
+--- @param input table|nil The input table for the get_organization_config_rule_detailed_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_config_rule_detailed_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-organization-config-rule-detailed-status" }, input)
 end
 
 --- Returns detailed status for each member account within an organization for a given organization conformance pack
---- @param input table The input table for the get_organization_conformance_pack_detailed_status command
+--- @param input table|nil The input table for the get_organization_conformance_pack_detailed_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_conformance_pack_detailed_status(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-organization-conformance-pack-detailed-status" }, input)
 end
 
 --- Returns the policy definition containing the logic for your organization Config Custom Policy rule
---- @param input table The input table for the get_organization_custom_rule_policy command
+--- @param input table|nil The input table for the get_organization_custom_rule_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_custom_rule_policy(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-organization-custom-rule-policy" }, input)
 end
 
 --- For accurate reporting on the compliance status, you must record the AWS::Config::ResourceCompliance resource type
---- @param input table The input table for the get_resource_config_history command
+--- @param input table|nil The input table for the get_resource_config_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_config_history(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-resource-config-history" }, input)
 end
 
 --- Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that were run
---- @param input table The input table for the get_resource_evaluation_summary command
+--- @param input table|nil The input table for the get_resource_evaluation_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_evaluation_summary(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-resource-evaluation-summary" }, input)
 end
 
 --- Returns the details of a specific stored query
---- @param input table The input table for the get_stored_query command
+--- @param input table|nil The input table for the get_stored_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stored_query(input)
 	return common.execute_aws_command_with_input({ "configservice", "get-stored-query" }, input)
 end
 
 --- Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type across accounts and regions
---- @param input table The input table for the list_aggregate_discovered_resources command
+--- @param input table|nil The input table for the list_aggregate_discovered_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_aggregate_discovered_resources(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-aggregate-discovered-resources" }, input)
 end
 
 --- Returns a list of configuration recorders depending on the filters you specify
---- @param input table The input table for the list_configuration_recorders command
+--- @param input table|nil The input table for the list_configuration_recorders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_recorders(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-configuration-recorders" }, input)
 end
 
 --- Returns a list of conformance pack compliance scores
---- @param input table The input table for the list_conformance_pack_compliance_scores command
+--- @param input table|nil The input table for the list_conformance_pack_compliance_scores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_conformance_pack_compliance_scores(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-conformance-pack-compliance-scores" }, input)
 end
 
 --- Accepts a resource type and returns a list of resource identifiers for the resources of that type
---- @param input table The input table for the list_discovered_resources command
+--- @param input table|nil The input table for the list_discovered_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_discovered_resources(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-discovered-resources" }, input)
 end
 
 --- Returns a list of proactive resource evaluations
---- @param input table The input table for the list_resource_evaluations command
+--- @param input table|nil The input table for the list_resource_evaluations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_evaluations(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-resource-evaluations" }, input)
 end
 
 --- Lists the stored queries for a single Amazon Web Services account and a single Amazon Web Services Region
---- @param input table The input table for the list_stored_queries command
+--- @param input table|nil The input table for the list_stored_queries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stored_queries(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-stored-queries" }, input)
 end
 
 --- List the tags for Config resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "list-tags-for-resource" }, input)
 end
 
 --- Authorizes the aggregator account and region to collect data from the source account and region
---- @param input table The input table for the put_aggregation_authorization command
+--- @param input table|nil The input table for the put_aggregation_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_aggregation_authorization(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-aggregation-authorization" }, input)
 end
 
 --- Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired configurations
---- @param input table The input table for the put_config_rule command
+--- @param input table|nil The input table for the put_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-config-rule" }, input)
 end
 
 --- Creates and updates the configuration aggregator with the selected source accounts and regions
---- @param input table The input table for the put_configuration_aggregator command
+--- @param input table|nil The input table for the put_configuration_aggregator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_aggregator(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-configuration-aggregator" }, input)
 end
 
 --- Creates or updates the customer managed configuration recorder
---- @param input table The input table for the put_configuration_recorder command
+--- @param input table|nil The input table for the put_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-configuration-recorder" }, input)
 end
 
 --- Creates or updates a conformance pack
---- @param input table The input table for the put_conformance_pack command
+--- @param input table|nil The input table for the put_conformance_pack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_conformance_pack(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-conformance-pack" }, input)
 end
 
 --- Creates or updates a delivery channel to deliver configuration information and other compliance information
---- @param input table The input table for the put_delivery_channel command
+--- @param input table|nil The input table for the put_delivery_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_delivery_channel(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-delivery-channel" }, input)
 end
 
 --- Used by an Lambda function to deliver evaluation results to Config
---- @param input table The input table for the put_evaluations command
+--- @param input table|nil The input table for the put_evaluations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_evaluations(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-evaluations" }, input)
 end
 
 --- Add or updates the evaluations for process checks
---- @param input table The input table for the put_external_evaluation command
+--- @param input table|nil The input table for the put_external_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_external_evaluation(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-external-evaluation" }, input)
 end
 
 --- Adds or updates an Config rule for your entire organization to evaluate if your Amazon Web Services resources comply with your desired configurations
---- @param input table The input table for the put_organization_config_rule command
+--- @param input table|nil The input table for the put_organization_config_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_organization_config_rule(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-organization-config-rule" }, input)
 end
 
 --- Deploys conformance packs across member accounts in an Amazon Web Services Organization
---- @param input table The input table for the put_organization_conformance_pack command
+--- @param input table|nil The input table for the put_organization_conformance_pack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_organization_conformance_pack(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-organization-conformance-pack" }, input)
 end
 
 --- Adds or updates the remediation configuration with a specific Config rule with the selected target or action
---- @param input table The input table for the put_remediation_configurations command
+--- @param input table|nil The input table for the put_remediation_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_remediation_configurations(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-remediation-configurations" }, input)
 end
 
 --- A remediation exception is when a specified resource is no longer considered for auto-remediation
---- @param input table The input table for the put_remediation_exceptions command
+--- @param input table|nil The input table for the put_remediation_exceptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_remediation_exceptions(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-remediation-exceptions" }, input)
 end
 
 --- Records the configuration state for the resource provided in the request
---- @param input table The input table for the put_resource_config command
+--- @param input table|nil The input table for the put_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-resource-config" }, input)
 end
 
 --- Creates and updates the retention configuration with details about retention period (number of days) that Config stores your historical information
---- @param input table The input table for the put_retention_configuration command
+--- @param input table|nil The input table for the put_retention_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_retention_configuration(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-retention-configuration" }, input)
 end
 
 --- Creates a service-linked configuration recorder that is linked to a specific Amazon Web Services service based on the ServicePrincipal you specify
---- @param input table The input table for the put_service_linked_configuration_recorder command
+--- @param input table|nil The input table for the put_service_linked_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_service_linked_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-service-linked-configuration-recorder" }, input)
 end
 
 --- Saves a new query or updates an existing saved query
---- @param input table The input table for the put_stored_query command
+--- @param input table|nil The input table for the put_stored_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_stored_query(input)
 	return common.execute_aws_command_with_input({ "configservice", "put-stored-query" }, input)
 end
 
 --- Accepts a structured query language (SQL) SELECT command and an aggregator to query configuration state of Amazon Web Services resources across multiple accounts and regions, performs the corresponding search, and returns resource configurations matching the properties
---- @param input table The input table for the select_aggregate_resource_config command
+--- @param input table|nil The input table for the select_aggregate_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.select_aggregate_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "select-aggregate-resource-config" }, input)
 end
 
 --- Accepts a structured query language (SQL) SELECT command, performs the corresponding search, and returns resource configurations matching the properties
---- @param input table The input table for the select_resource_config command
+--- @param input table|nil The input table for the select_resource_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.select_resource_config(input)
 	return common.execute_aws_command_with_input({ "configservice", "select-resource-config" }, input)
 end
 
 --- Runs an on-demand evaluation for the specified Config rules against the last known configuration state of the resources
---- @param input table The input table for the start_config_rules_evaluation command
+--- @param input table|nil The input table for the start_config_rules_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_config_rules_evaluation(input)
 	return common.execute_aws_command_with_input({ "configservice", "start-config-rules-evaluation" }, input)
 end
 
 --- Starts the customer managed configuration recorder
---- @param input table The input table for the start_configuration_recorder command
+--- @param input table|nil The input table for the start_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "start-configuration-recorder" }, input)
 end
 
 --- Runs an on-demand remediation for the specified Config rules against the last known remediation configuration
---- @param input table The input table for the start_remediation_execution command
+--- @param input table|nil The input table for the start_remediation_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_remediation_execution(input)
 	return common.execute_aws_command_with_input({ "configservice", "start-remediation-execution" }, input)
 end
 
 --- Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply with configured Config rules
---- @param input table The input table for the start_resource_evaluation command
+--- @param input table|nil The input table for the start_resource_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_resource_evaluation(input)
 	return common.execute_aws_command_with_input({ "configservice", "start-resource-evaluation" }, input)
 end
 
 --- Stops the customer managed configuration recorder
---- @param input table The input table for the stop_configuration_recorder command
+--- @param input table|nil The input table for the stop_configuration_recorder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_configuration_recorder(input)
 	return common.execute_aws_command_with_input({ "configservice", "stop-configuration-recorder" }, input)
 end
 
 --- Associates the specified tags to a resource with the specified ResourceArn
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "tag-resource" }, input)
 end
 
 --- Deletes specified tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "untag-resource" }, input)

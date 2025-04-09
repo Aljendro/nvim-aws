@@ -8,63 +8,63 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Gets the token balance for a batch of tokens by using the BatchGetTokenBalance action for every token in the request
---- @param input table The input table for the batch_get_token_balance command
+--- @param input table|nil The input table for the batch_get_token_balance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_token_balance(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "batch-get-token-balance" }, input)
 end
 
 --- Gets the information about a specific contract deployed on the blockchain
---- @param input table The input table for the get_asset_contract command
+--- @param input table|nil The input table for the get_asset_contract command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_asset_contract(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "get-asset-contract" }, input)
 end
 
 --- Gets the balance of a specific token, including native tokens, for a given address (wallet or contract) on the blockchain
---- @param input table The input table for the get_token_balance command
+--- @param input table|nil The input table for the get_token_balance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_token_balance(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "get-token-balance" }, input)
 end
 
 --- Gets the details of a transaction
---- @param input table The input table for the get_transaction command
+--- @param input table|nil The input table for the get_transaction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_transaction(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "get-transaction" }, input)
 end
 
 --- Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet address)
---- @param input table The input table for the list_asset_contracts command
+--- @param input table|nil The input table for the list_asset_contracts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_asset_contracts(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "list-asset-contracts" }, input)
 end
 
 --- Lists all the transaction events for an address on the blockchain
---- @param input table The input table for the list_filtered_transaction_events command
+--- @param input table|nil The input table for the list_filtered_transaction_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_filtered_transaction_events(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "list-filtered-transaction-events" }, input)
 end
 
 --- This action returns the following for a given blockchain network: Lists all token balances owned by an address (either a contract address or a wallet address)
---- @param input table The input table for the list_token_balances command
+--- @param input table|nil The input table for the list_token_balances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_token_balances(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "list-token-balances" }, input)
 end
 
 --- Lists all the transaction events for a transaction This action will return transaction details for all transactions that are confirmed on the blockchain, even if they have not reached finality
---- @param input table The input table for the list_transaction_events command
+--- @param input table|nil The input table for the list_transaction_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_transaction_events(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "list-transaction-events" }, input)
 end
 
 --- Lists all the transaction events for a transaction
---- @param input table The input table for the list_transactions command
+--- @param input table|nil The input table for the list_transactions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_transactions(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "list-transactions" }, input)

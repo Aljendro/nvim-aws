@@ -8,392 +8,392 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associate a virtual private cloud (VPC) subnet endpoint with your custom routing accelerator
---- @param input table The input table for the add_custom_routing_endpoints command
+--- @param input table|nil The input table for the add_custom_routing_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_custom_routing_endpoints(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "add-custom-routing-endpoints" }, input)
 end
 
 --- Add endpoints to an endpoint group
---- @param input table The input table for the add_endpoints command
+--- @param input table|nil The input table for the add_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_endpoints(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "add-endpoints" }, input)
 end
 
 --- Advertises an IPv4 address range that is provisioned for use with your Amazon Web Services resources through bring your own IP addresses (BYOIP)
---- @param input table The input table for the advertise_byoip_cidr command
+--- @param input table|nil The input table for the advertise_byoip_cidr command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.advertise_byoip_cidr(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "advertise-byoip-cidr" }, input)
 end
 
 --- Specify the Amazon EC2 instance (destination) IP addresses and ports for a VPC subnet endpoint that can receive traffic for a custom routing accelerator
---- @param input table The input table for the allow_custom_routing_traffic command
+--- @param input table|nil The input table for the allow_custom_routing_traffic command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allow_custom_routing_traffic(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "allow-custom-routing-traffic" }, input)
 end
 
 --- Create an accelerator
---- @param input table The input table for the create_accelerator command
+--- @param input table|nil The input table for the create_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-accelerator" }, input)
 end
 
 --- Create a cross-account attachment in Global Accelerator
---- @param input table The input table for the create_cross_account_attachment command
+--- @param input table|nil The input table for the create_cross_account_attachment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cross_account_attachment(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-cross-account-attachment" }, input)
 end
 
 --- Create a custom routing accelerator
---- @param input table The input table for the create_custom_routing_accelerator command
+--- @param input table|nil The input table for the create_custom_routing_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_routing_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-accelerator" }, input)
 end
 
 --- Create an endpoint group for the specified listener for a custom routing accelerator
---- @param input table The input table for the create_custom_routing_endpoint_group command
+--- @param input table|nil The input table for the create_custom_routing_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_routing_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-endpoint-group" }, input)
 end
 
 --- Create a listener to process inbound connections from clients to a custom routing accelerator
---- @param input table The input table for the create_custom_routing_listener command
+--- @param input table|nil The input table for the create_custom_routing_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_routing_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-listener" }, input)
 end
 
 --- Create an endpoint group for the specified listener
---- @param input table The input table for the create_endpoint_group command
+--- @param input table|nil The input table for the create_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-endpoint-group" }, input)
 end
 
 --- Create a listener to process inbound connections from clients to an accelerator
---- @param input table The input table for the create_listener command
+--- @param input table|nil The input table for the create_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "create-listener" }, input)
 end
 
 --- Delete an accelerator
---- @param input table The input table for the delete_accelerator command
+--- @param input table|nil The input table for the delete_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-accelerator" }, input)
 end
 
 --- Delete a cross-account attachment
---- @param input table The input table for the delete_cross_account_attachment command
+--- @param input table|nil The input table for the delete_cross_account_attachment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cross_account_attachment(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-cross-account-attachment" }, input)
 end
 
 --- Delete a custom routing accelerator
---- @param input table The input table for the delete_custom_routing_accelerator command
+--- @param input table|nil The input table for the delete_custom_routing_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_routing_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-accelerator" }, input)
 end
 
 --- Delete an endpoint group from a listener for a custom routing accelerator
---- @param input table The input table for the delete_custom_routing_endpoint_group command
+--- @param input table|nil The input table for the delete_custom_routing_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_routing_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-endpoint-group" }, input)
 end
 
 --- Delete a listener for a custom routing accelerator
---- @param input table The input table for the delete_custom_routing_listener command
+--- @param input table|nil The input table for the delete_custom_routing_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_routing_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-listener" }, input)
 end
 
 --- Delete an endpoint group from a listener
---- @param input table The input table for the delete_endpoint_group command
+--- @param input table|nil The input table for the delete_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-endpoint-group" }, input)
 end
 
 --- Delete a listener from an accelerator
---- @param input table The input table for the delete_listener command
+--- @param input table|nil The input table for the delete_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-listener" }, input)
 end
 
 --- Specify the Amazon EC2 instance (destination) IP addresses and ports for a VPC subnet endpoint that cannot receive traffic for a custom routing accelerator
---- @param input table The input table for the deny_custom_routing_traffic command
+--- @param input table|nil The input table for the deny_custom_routing_traffic command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deny_custom_routing_traffic(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "deny-custom-routing-traffic" }, input)
 end
 
 --- Releases the specified address range that you provisioned to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and deletes the corresponding address pool
---- @param input table The input table for the deprovision_byoip_cidr command
+--- @param input table|nil The input table for the deprovision_byoip_cidr command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deprovision_byoip_cidr(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "deprovision-byoip-cidr" }, input)
 end
 
 --- Describe an accelerator
---- @param input table The input table for the describe_accelerator command
+--- @param input table|nil The input table for the describe_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-accelerator" }, input)
 end
 
 --- Describe the attributes of an accelerator
---- @param input table The input table for the describe_accelerator_attributes command
+--- @param input table|nil The input table for the describe_accelerator_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_accelerator_attributes(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-accelerator-attributes" }, input)
 end
 
 --- Gets configuration information about a cross-account attachment
---- @param input table The input table for the describe_cross_account_attachment command
+--- @param input table|nil The input table for the describe_cross_account_attachment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cross_account_attachment(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-cross-account-attachment" }, input)
 end
 
 --- Describe a custom routing accelerator
---- @param input table The input table for the describe_custom_routing_accelerator command
+--- @param input table|nil The input table for the describe_custom_routing_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_routing_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-accelerator" }, input)
 end
 
 --- Describe the attributes of a custom routing accelerator
---- @param input table The input table for the describe_custom_routing_accelerator_attributes command
+--- @param input table|nil The input table for the describe_custom_routing_accelerator_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_routing_accelerator_attributes(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-accelerator-attributes" }, input)
 end
 
 --- Describe an endpoint group for a custom routing accelerator
---- @param input table The input table for the describe_custom_routing_endpoint_group command
+--- @param input table|nil The input table for the describe_custom_routing_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_routing_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-endpoint-group" }, input)
 end
 
 --- The description of a listener for a custom routing accelerator
---- @param input table The input table for the describe_custom_routing_listener command
+--- @param input table|nil The input table for the describe_custom_routing_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_routing_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-listener" }, input)
 end
 
 --- Describe an endpoint group
---- @param input table The input table for the describe_endpoint_group command
+--- @param input table|nil The input table for the describe_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-endpoint-group" }, input)
 end
 
 --- Describe a listener
---- @param input table The input table for the describe_listener command
+--- @param input table|nil The input table for the describe_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-listener" }, input)
 end
 
 --- List the accelerators for an Amazon Web Services account
---- @param input table The input table for the list_accelerators command
+--- @param input table|nil The input table for the list_accelerators command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_accelerators(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-accelerators" }, input)
 end
 
 --- Lists the IP address ranges that were specified in calls to ProvisionByoipCidr, including the current state and a history of state changes
---- @param input table The input table for the list_byoip_cidrs command
+--- @param input table|nil The input table for the list_byoip_cidrs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_byoip_cidrs(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-byoip-cidrs" }, input)
 end
 
 --- List the cross-account attachments that have been created in Global Accelerator
---- @param input table The input table for the list_cross_account_attachments command
+--- @param input table|nil The input table for the list_cross_account_attachments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cross_account_attachments(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-attachments" }, input)
 end
 
 --- List the accounts that have cross-account resources
---- @param input table The input table for the list_cross_account_resource_accounts command
+--- @param input table|nil The input table for the list_cross_account_resource_accounts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cross_account_resource_accounts(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-resource-accounts" }, input)
 end
 
 --- List the cross-account resources available to work with
---- @param input table The input table for the list_cross_account_resources command
+--- @param input table|nil The input table for the list_cross_account_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cross_account_resources(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-resources" }, input)
 end
 
 --- List the custom routing accelerators for an Amazon Web Services account
---- @param input table The input table for the list_custom_routing_accelerators command
+--- @param input table|nil The input table for the list_custom_routing_accelerators command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_routing_accelerators(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-accelerators" }, input)
 end
 
 --- List the endpoint groups that are associated with a listener for a custom routing accelerator
---- @param input table The input table for the list_custom_routing_endpoint_groups command
+--- @param input table|nil The input table for the list_custom_routing_endpoint_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_routing_endpoint_groups(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-endpoint-groups" }, input)
 end
 
 --- List the listeners for a custom routing accelerator
---- @param input table The input table for the list_custom_routing_listeners command
+--- @param input table|nil The input table for the list_custom_routing_listeners command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_routing_listeners(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-listeners" }, input)
 end
 
 --- Provides a complete mapping from the public accelerator IP address and port to destination EC2 instance IP addresses and ports in the virtual public cloud (VPC) subnet endpoint for a custom routing accelerator
---- @param input table The input table for the list_custom_routing_port_mappings command
+--- @param input table|nil The input table for the list_custom_routing_port_mappings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_routing_port_mappings(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-port-mappings" }, input)
 end
 
 --- List the port mappings for a specific EC2 instance (destination) in a VPC subnet endpoint
---- @param input table The input table for the list_custom_routing_port_mappings_by_destination command
+--- @param input table|nil The input table for the list_custom_routing_port_mappings_by_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_routing_port_mappings_by_destination(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-port-mappings-by-destination" }, input)
 end
 
 --- List the endpoint groups that are associated with a listener
---- @param input table The input table for the list_endpoint_groups command
+--- @param input table|nil The input table for the list_endpoint_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_endpoint_groups(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-endpoint-groups" }, input)
 end
 
 --- List the listeners for an accelerator
---- @param input table The input table for the list_listeners command
+--- @param input table|nil The input table for the list_listeners command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_listeners(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-listeners" }, input)
 end
 
 --- List all tags for an accelerator
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "list-tags-for-resource" }, input)
 end
 
 --- Provisions an IP address range to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and creates a corresponding address pool
---- @param input table The input table for the provision_byoip_cidr command
+--- @param input table|nil The input table for the provision_byoip_cidr command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.provision_byoip_cidr(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "provision-byoip-cidr" }, input)
 end
 
 --- Remove endpoints from a custom routing accelerator
---- @param input table The input table for the remove_custom_routing_endpoints command
+--- @param input table|nil The input table for the remove_custom_routing_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_custom_routing_endpoints(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "remove-custom-routing-endpoints" }, input)
 end
 
 --- Remove endpoints from an endpoint group
---- @param input table The input table for the remove_endpoints command
+--- @param input table|nil The input table for the remove_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_endpoints(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "remove-endpoints" }, input)
 end
 
 --- Add tags to an accelerator resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "tag-resource" }, input)
 end
 
 --- Remove tags from a Global Accelerator resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "untag-resource" }, input)
 end
 
 --- Update an accelerator to make changes, such as the following: Change the name of the accelerator
---- @param input table The input table for the update_accelerator command
+--- @param input table|nil The input table for the update_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-accelerator" }, input)
 end
 
 --- Update the attributes for an accelerator
---- @param input table The input table for the update_accelerator_attributes command
+--- @param input table|nil The input table for the update_accelerator_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_accelerator_attributes(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-accelerator-attributes" }, input)
 end
 
 --- Update a cross-account attachment to add or remove principals or resources
---- @param input table The input table for the update_cross_account_attachment command
+--- @param input table|nil The input table for the update_cross_account_attachment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cross_account_attachment(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-cross-account-attachment" }, input)
 end
 
 --- Update a custom routing accelerator
---- @param input table The input table for the update_custom_routing_accelerator command
+--- @param input table|nil The input table for the update_custom_routing_accelerator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_custom_routing_accelerator(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-accelerator" }, input)
 end
 
 --- Update the attributes for a custom routing accelerator
---- @param input table The input table for the update_custom_routing_accelerator_attributes command
+--- @param input table|nil The input table for the update_custom_routing_accelerator_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_custom_routing_accelerator_attributes(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-accelerator-attributes" }, input)
 end
 
 --- Update a listener for a custom routing accelerator
---- @param input table The input table for the update_custom_routing_listener command
+--- @param input table|nil The input table for the update_custom_routing_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_custom_routing_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-listener" }, input)
 end
 
 --- Update an endpoint group
---- @param input table The input table for the update_endpoint_group command
+--- @param input table|nil The input table for the update_endpoint_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_endpoint_group(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-endpoint-group" }, input)
 end
 
 --- Update a listener
---- @param input table The input table for the update_listener command
+--- @param input table|nil The input table for the update_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "update-listener" }, input)
 end
 
 --- Stops advertising an address range that is provisioned as an address pool
---- @param input table The input table for the withdraw_byoip_cidr command
+--- @param input table|nil The input table for the withdraw_byoip_cidr command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.withdraw_byoip_cidr(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "withdraw-byoip-cidr" }, input)

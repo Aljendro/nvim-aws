@@ -8,56 +8,56 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Create a channel group to group your channels and origin endpoints
---- @param input table The input table for the create_channel_group command
+--- @param input table|nil The input table for the create_channel_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "create-channel-group" }, input)
 end
 
 --- Delete a channel group
---- @param input table The input table for the delete_channel_group command
+--- @param input table|nil The input table for the delete_channel_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-channel-group" }, input)
 end
 
 --- Retrieves the specified channel group that's configured in AWS Elemental MediaPackage, including the channels and origin endpoints that are associated with it
---- @param input table The input table for the get_channel_group command
+--- @param input table|nil The input table for the get_channel_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "get-channel-group" }, input)
 end
 
 --- Retrieves all channel groups that are configured in Elemental MediaPackage
---- @param input table The input table for the list_channel_groups command
+--- @param input table|nil The input table for the list_channel_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_channel_groups(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "list-channel-groups" }, input)
 end
 
 --- Lists the tags assigned to a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "list-tags-for-resource" }, input)
 end
 
 --- Assigns one of more tags (key-value pairs) to the specified MediaPackage resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "tag-resource" }, input)
 end
 
 --- Removes one or more tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "untag-resource" }, input)
 end
 
 --- Update the specified channel group
---- @param input table The input table for the update_channel_group command
+--- @param input table|nil The input table for the update_channel_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "update-channel-group" }, input)

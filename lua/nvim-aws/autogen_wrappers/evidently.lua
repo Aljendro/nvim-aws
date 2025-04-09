@@ -8,126 +8,126 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This operation assigns feature variation to user sessions
---- @param input table The input table for the batch_evaluate_feature command
+--- @param input table|nil The input table for the batch_evaluate_feature command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_evaluate_feature(input)
 	return common.execute_aws_command_with_input({ "evidently", "batch-evaluate-feature" }, input)
 end
 
 --- Creates a project, which is the logical object in Evidently that can contain features, launches, and experiments
---- @param input table The input table for the create_project command
+--- @param input table|nil The input table for the create_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "evidently", "create-project" }, input)
 end
 
 --- Use this operation to define a segment of your audience
---- @param input table The input table for the create_segment command
+--- @param input table|nil The input table for the create_segment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_segment(input)
 	return common.execute_aws_command_with_input({ "evidently", "create-segment" }, input)
 end
 
 --- Deletes an Evidently project
---- @param input table The input table for the delete_project command
+--- @param input table|nil The input table for the delete_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "evidently", "delete-project" }, input)
 end
 
 --- Deletes a segment
---- @param input table The input table for the delete_segment command
+--- @param input table|nil The input table for the delete_segment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_segment(input)
 	return common.execute_aws_command_with_input({ "evidently", "delete-segment" }, input)
 end
 
 --- This operation assigns a feature variation to one given user session
---- @param input table The input table for the evaluate_feature command
+--- @param input table|nil The input table for the evaluate_feature command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.evaluate_feature(input)
 	return common.execute_aws_command_with_input({ "evidently", "evaluate-feature" }, input)
 end
 
 --- Returns the details about one launch
---- @param input table The input table for the get_project command
+--- @param input table|nil The input table for the get_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_project(input)
 	return common.execute_aws_command_with_input({ "evidently", "get-project" }, input)
 end
 
 --- Returns information about the specified segment
---- @param input table The input table for the get_segment command
+--- @param input table|nil The input table for the get_segment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_segment(input)
 	return common.execute_aws_command_with_input({ "evidently", "get-segment" }, input)
 end
 
 --- Returns configuration details about all the projects in the current Region in your account
---- @param input table The input table for the list_projects command
+--- @param input table|nil The input table for the list_projects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_projects(input)
 	return common.execute_aws_command_with_input({ "evidently", "list-projects" }, input)
 end
 
 --- Use this operation to find which experiments or launches are using a specified segment
---- @param input table The input table for the list_segment_references command
+--- @param input table|nil The input table for the list_segment_references command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_segment_references(input)
 	return common.execute_aws_command_with_input({ "evidently", "list-segment-references" }, input)
 end
 
 --- Returns a list of audience segments that you have created in your account in this Region
---- @param input table The input table for the list_segments command
+--- @param input table|nil The input table for the list_segments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_segments(input)
 	return common.execute_aws_command_with_input({ "evidently", "list-segments" }, input)
 end
 
 --- Displays the tags associated with an Evidently resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "evidently", "list-tags-for-resource" }, input)
 end
 
 --- Sends performance events to Evidently
---- @param input table The input table for the put_project_events command
+--- @param input table|nil The input table for the put_project_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_project_events(input)
 	return common.execute_aws_command_with_input({ "evidently", "put-project-events" }, input)
 end
 
 --- Assigns one or more tags (key-value pairs) to the specified CloudWatch Evidently resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "evidently", "tag-resource" }, input)
 end
 
 --- Use this operation to test a rules pattern that you plan to use to create an audience segment
---- @param input table The input table for the test_segment_pattern command
+--- @param input table|nil The input table for the test_segment_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_segment_pattern(input)
 	return common.execute_aws_command_with_input({ "evidently", "test-segment-pattern" }, input)
 end
 
 --- Removes one or more tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "evidently", "untag-resource" }, input)
 end
 
 --- Updates the description of an existing project
---- @param input table The input table for the update_project command
+--- @param input table|nil The input table for the update_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project(input)
 	return common.execute_aws_command_with_input({ "evidently", "update-project" }, input)
 end
 
 --- Updates the data storage options for this project
---- @param input table The input table for the update_project_data_delivery command
+--- @param input table|nil The input table for the update_project_data_delivery command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project_data_delivery(input)
 	return common.execute_aws_command_with_input({ "evidently", "update-project-data-delivery" }, input)

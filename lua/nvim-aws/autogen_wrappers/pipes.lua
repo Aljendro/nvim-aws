@@ -8,70 +8,70 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Create a pipe
---- @param input table The input table for the create_pipe command
+--- @param input table|nil The input table for the create_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "create-pipe" }, input)
 end
 
 --- Delete an existing pipe
---- @param input table The input table for the delete_pipe command
+--- @param input table|nil The input table for the delete_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "delete-pipe" }, input)
 end
 
 --- Get the information about an existing pipe
---- @param input table The input table for the describe_pipe command
+--- @param input table|nil The input table for the describe_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "describe-pipe" }, input)
 end
 
 --- Get the pipes associated with this account
---- @param input table The input table for the list_pipes command
+--- @param input table|nil The input table for the list_pipes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pipes(input)
 	return common.execute_aws_command_with_input({ "pipes", "list-pipes" }, input)
 end
 
 --- Displays the tags associated with a pipe
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pipes", "list-tags-for-resource" }, input)
 end
 
 --- Start an existing pipe
---- @param input table The input table for the start_pipe command
+--- @param input table|nil The input table for the start_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "start-pipe" }, input)
 end
 
 --- Stop an existing pipe
---- @param input table The input table for the stop_pipe command
+--- @param input table|nil The input table for the stop_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "stop-pipe" }, input)
 end
 
 --- Assigns one or more tags (key-value pairs) to the specified pipe
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pipes", "tag-resource" }, input)
 end
 
 --- Removes one or more tags from the specified pipes
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pipes", "untag-resource" }, input)
 end
 
 --- Update an existing pipe
---- @param input table The input table for the update_pipe command
+--- @param input table|nil The input table for the update_pipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pipe(input)
 	return common.execute_aws_command_with_input({ "pipes", "update-pipe" }, input)

@@ -8,119 +8,119 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds an existing user, group, or computer as a group member
---- @param input table The input table for the add_group_member command
+--- @param input table|nil The input table for the add_group_member command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_group_member(input)
 	return common.execute_aws_command_with_input({ "ds-data", "add-group-member" }, input)
 end
 
 --- Creates a new group
---- @param input table The input table for the create_group command
+--- @param input table|nil The input table for the create_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "ds-data", "create-group" }, input)
 end
 
 --- Creates a new user
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "ds-data", "create-user" }, input)
 end
 
 --- Deletes a group
---- @param input table The input table for the delete_group command
+--- @param input table|nil The input table for the delete_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "ds-data", "delete-group" }, input)
 end
 
 --- Deletes a user
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "ds-data", "delete-user" }, input)
 end
 
 --- Returns information about a specific group
---- @param input table The input table for the describe_group command
+--- @param input table|nil The input table for the describe_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group(input)
 	return common.execute_aws_command_with_input({ "ds-data", "describe-group" }, input)
 end
 
 --- Returns information about a specific user
---- @param input table The input table for the describe_user command
+--- @param input table|nil The input table for the describe_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "ds-data", "describe-user" }, input)
 end
 
 --- Deactivates an active user account
---- @param input table The input table for the disable_user command
+--- @param input table|nil The input table for the disable_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_user(input)
 	return common.execute_aws_command_with_input({ "ds-data", "disable-user" }, input)
 end
 
 --- Returns member information for the specified group
---- @param input table The input table for the list_group_members command
+--- @param input table|nil The input table for the list_group_members command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_members(input)
 	return common.execute_aws_command_with_input({ "ds-data", "list-group-members" }, input)
 end
 
 --- Returns group information for the specified directory
---- @param input table The input table for the list_groups command
+--- @param input table|nil The input table for the list_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "ds-data", "list-groups" }, input)
 end
 
 --- Returns group information for the specified member
---- @param input table The input table for the list_groups_for_member command
+--- @param input table|nil The input table for the list_groups_for_member command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups_for_member(input)
 	return common.execute_aws_command_with_input({ "ds-data", "list-groups-for-member" }, input)
 end
 
 --- Returns user information for the specified directory
---- @param input table The input table for the list_users command
+--- @param input table|nil The input table for the list_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "ds-data", "list-users" }, input)
 end
 
 --- Removes a member from a group
---- @param input table The input table for the remove_group_member command
+--- @param input table|nil The input table for the remove_group_member command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_group_member(input)
 	return common.execute_aws_command_with_input({ "ds-data", "remove-group-member" }, input)
 end
 
 --- Searches the specified directory for a group
---- @param input table The input table for the search_groups command
+--- @param input table|nil The input table for the search_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_groups(input)
 	return common.execute_aws_command_with_input({ "ds-data", "search-groups" }, input)
 end
 
 --- Searches the specified directory for a user
---- @param input table The input table for the search_users command
+--- @param input table|nil The input table for the search_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_users(input)
 	return common.execute_aws_command_with_input({ "ds-data", "search-users" }, input)
 end
 
 --- Updates group information
---- @param input table The input table for the update_group command
+--- @param input table|nil The input table for the update_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group(input)
 	return common.execute_aws_command_with_input({ "ds-data", "update-group" }, input)
 end
 
 --- Updates user information
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "ds-data", "update-user" }, input)

@@ -8,868 +8,868 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Create an ApiKey resource
---- @param input table The input table for the create_api_key command
+--- @param input table|nil The input table for the create_api_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_api_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-api-key" }, input)
 end
 
 --- Adds a new Authorizer resource to an existing RestApi resource
---- @param input table The input table for the create_authorizer command
+--- @param input table|nil The input table for the create_authorizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-authorizer" }, input)
 end
 
 --- Creates a new BasePathMapping resource
---- @param input table The input table for the create_base_path_mapping command
+--- @param input table|nil The input table for the create_base_path_mapping command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_base_path_mapping(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-base-path-mapping" }, input)
 end
 
 --- Creates a Deployment resource, which makes a specified RestApi callable over the internet
---- @param input table The input table for the create_deployment command
+--- @param input table|nil The input table for the create_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-deployment" }, input)
 end
 
 --- Creates a documentation part
---- @param input table The input table for the create_documentation_part command
+--- @param input table|nil The input table for the create_documentation_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_documentation_part(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-documentation-part" }, input)
 end
 
 --- Creates a documentation version
---- @param input table The input table for the create_documentation_version command
+--- @param input table|nil The input table for the create_documentation_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_documentation_version(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-documentation-version" }, input)
 end
 
 --- Creates a new domain name
---- @param input table The input table for the create_domain_name command
+--- @param input table|nil The input table for the create_domain_name command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-domain-name" }, input)
 end
 
 --- Creates a domain name access association resource between an access association source and a private custom domain name
---- @param input table The input table for the create_domain_name_access_association command
+--- @param input table|nil The input table for the create_domain_name_access_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain_name_access_association(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-domain-name-access-association" }, input)
 end
 
 --- Adds a new Model resource to an existing RestApi resource
---- @param input table The input table for the create_model command
+--- @param input table|nil The input table for the create_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-model" }, input)
 end
 
 --- Creates a RequestValidator of a given RestApi
---- @param input table The input table for the create_request_validator command
+--- @param input table|nil The input table for the create_request_validator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_request_validator(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-request-validator" }, input)
 end
 
 --- Creates a Resource resource
---- @param input table The input table for the create_resource command
+--- @param input table|nil The input table for the create_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-resource" }, input)
 end
 
 --- Creates a new RestApi resource
---- @param input table The input table for the create_rest_api command
+--- @param input table|nil The input table for the create_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-rest-api" }, input)
 end
 
 --- Creates a new Stage resource that references a pre-existing Deployment for the API
---- @param input table The input table for the create_stage command
+--- @param input table|nil The input table for the create_stage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-stage" }, input)
 end
 
 --- Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload
---- @param input table The input table for the create_usage_plan command
+--- @param input table|nil The input table for the create_usage_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_usage_plan(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-usage-plan" }, input)
 end
 
 --- Creates a usage plan key for adding an existing API key to a usage plan
---- @param input table The input table for the create_usage_plan_key command
+--- @param input table|nil The input table for the create_usage_plan_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_usage_plan_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-usage-plan-key" }, input)
 end
 
 --- Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational
---- @param input table The input table for the create_vpc_link command
+--- @param input table|nil The input table for the create_vpc_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigateway", "create-vpc-link" }, input)
 end
 
 --- Deletes the ApiKey resource
---- @param input table The input table for the delete_api_key command
+--- @param input table|nil The input table for the delete_api_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_api_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-api-key" }, input)
 end
 
 --- Deletes an existing Authorizer resource
---- @param input table The input table for the delete_authorizer command
+--- @param input table|nil The input table for the delete_authorizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-authorizer" }, input)
 end
 
 --- Deletes the BasePathMapping resource
---- @param input table The input table for the delete_base_path_mapping command
+--- @param input table|nil The input table for the delete_base_path_mapping command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_base_path_mapping(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-base-path-mapping" }, input)
 end
 
 --- Deletes the ClientCertificate resource
---- @param input table The input table for the delete_client_certificate command
+--- @param input table|nil The input table for the delete_client_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_client_certificate(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-client-certificate" }, input)
 end
 
 --- Deletes a Deployment resource
---- @param input table The input table for the delete_deployment command
+--- @param input table|nil The input table for the delete_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_deployment(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-deployment" }, input)
 end
 
 --- Deletes a documentation part
---- @param input table The input table for the delete_documentation_part command
+--- @param input table|nil The input table for the delete_documentation_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_documentation_part(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-documentation-part" }, input)
 end
 
 --- Deletes a documentation version
---- @param input table The input table for the delete_documentation_version command
+--- @param input table|nil The input table for the delete_documentation_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_documentation_version(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-documentation-version" }, input)
 end
 
 --- Deletes the DomainName resource
---- @param input table The input table for the delete_domain_name command
+--- @param input table|nil The input table for the delete_domain_name command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-domain-name" }, input)
 end
 
 --- Deletes the DomainNameAccessAssociation resource
---- @param input table The input table for the delete_domain_name_access_association command
+--- @param input table|nil The input table for the delete_domain_name_access_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain_name_access_association(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-domain-name-access-association" }, input)
 end
 
 --- Clears any customization of a GatewayResponse of a specified response type on the given RestApi and resets it with the default settings
---- @param input table The input table for the delete_gateway_response command
+--- @param input table|nil The input table for the delete_gateway_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_gateway_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-gateway-response" }, input)
 end
 
 --- Represents a delete integration
---- @param input table The input table for the delete_integration command
+--- @param input table|nil The input table for the delete_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-integration" }, input)
 end
 
 --- Represents a delete integration response
---- @param input table The input table for the delete_integration_response command
+--- @param input table|nil The input table for the delete_integration_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-integration-response" }, input)
 end
 
 --- Deletes an existing Method resource
---- @param input table The input table for the delete_method command
+--- @param input table|nil The input table for the delete_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_method(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-method" }, input)
 end
 
 --- Deletes an existing MethodResponse resource
---- @param input table The input table for the delete_method_response command
+--- @param input table|nil The input table for the delete_method_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_method_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-method-response" }, input)
 end
 
 --- Deletes a model
---- @param input table The input table for the delete_model command
+--- @param input table|nil The input table for the delete_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_model(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-model" }, input)
 end
 
 --- Deletes a RequestValidator of a given RestApi
---- @param input table The input table for the delete_request_validator command
+--- @param input table|nil The input table for the delete_request_validator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_request_validator(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-request-validator" }, input)
 end
 
 --- Deletes a Resource resource
---- @param input table The input table for the delete_resource command
+--- @param input table|nil The input table for the delete_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-resource" }, input)
 end
 
 --- Deletes the specified API
---- @param input table The input table for the delete_rest_api command
+--- @param input table|nil The input table for the delete_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-rest-api" }, input)
 end
 
 --- Deletes a Stage resource
---- @param input table The input table for the delete_stage command
+--- @param input table|nil The input table for the delete_stage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-stage" }, input)
 end
 
 --- Deletes a usage plan of a given plan Id
---- @param input table The input table for the delete_usage_plan command
+--- @param input table|nil The input table for the delete_usage_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_usage_plan(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-usage-plan" }, input)
 end
 
 --- Deletes a usage plan key and remove the underlying API key from the associated usage plan
---- @param input table The input table for the delete_usage_plan_key command
+--- @param input table|nil The input table for the delete_usage_plan_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_usage_plan_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-usage-plan-key" }, input)
 end
 
 --- Deletes an existing VpcLink of a specified identifier
---- @param input table The input table for the delete_vpc_link command
+--- @param input table|nil The input table for the delete_vpc_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigateway", "delete-vpc-link" }, input)
 end
 
 --- Flushes all authorizer cache entries on a stage
---- @param input table The input table for the flush_stage_authorizers_cache command
+--- @param input table|nil The input table for the flush_stage_authorizers_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.flush_stage_authorizers_cache(input)
 	return common.execute_aws_command_with_input({ "apigateway", "flush-stage-authorizers-cache" }, input)
 end
 
 --- Flushes a stage's cache
---- @param input table The input table for the flush_stage_cache command
+--- @param input table|nil The input table for the flush_stage_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.flush_stage_cache(input)
 	return common.execute_aws_command_with_input({ "apigateway", "flush-stage-cache" }, input)
 end
 
 --- Generates a ClientCertificate resource
---- @param input table The input table for the generate_client_certificate command
+--- @param input table|nil The input table for the generate_client_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_client_certificate(input)
 	return common.execute_aws_command_with_input({ "apigateway", "generate-client-certificate" }, input)
 end
 
 --- Gets information about the current Account resource
---- @param input table The input table for the get_account command
+--- @param input table|nil The input table for the get_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-account" }, input)
 end
 
 --- Gets information about the current ApiKey resource
---- @param input table The input table for the get_api_key command
+--- @param input table|nil The input table for the get_api_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_api_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-api-key" }, input)
 end
 
 --- Gets information about the current ApiKeys resource
---- @param input table The input table for the get_api_keys command
+--- @param input table|nil The input table for the get_api_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_api_keys(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-api-keys" }, input)
 end
 
 --- Describe an existing Authorizer resource
---- @param input table The input table for the get_authorizer command
+--- @param input table|nil The input table for the get_authorizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-authorizer" }, input)
 end
 
 --- Describe an existing Authorizers resource
---- @param input table The input table for the get_authorizers command
+--- @param input table|nil The input table for the get_authorizers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorizers(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-authorizers" }, input)
 end
 
 --- Describe a BasePathMapping resource
---- @param input table The input table for the get_base_path_mapping command
+--- @param input table|nil The input table for the get_base_path_mapping command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_base_path_mapping(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-base-path-mapping" }, input)
 end
 
 --- Represents a collection of BasePathMapping resources
---- @param input table The input table for the get_base_path_mappings command
+--- @param input table|nil The input table for the get_base_path_mappings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_base_path_mappings(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-base-path-mappings" }, input)
 end
 
 --- Gets information about the current ClientCertificate resource
---- @param input table The input table for the get_client_certificate command
+--- @param input table|nil The input table for the get_client_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_client_certificate(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-client-certificate" }, input)
 end
 
 --- Gets a collection of ClientCertificate resources
---- @param input table The input table for the get_client_certificates command
+--- @param input table|nil The input table for the get_client_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_client_certificates(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-client-certificates" }, input)
 end
 
 --- Gets information about a Deployment resource
---- @param input table The input table for the get_deployment command
+--- @param input table|nil The input table for the get_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-deployment" }, input)
 end
 
 --- Gets information about a Deployments collection
---- @param input table The input table for the get_deployments command
+--- @param input table|nil The input table for the get_deployments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployments(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-deployments" }, input)
 end
 
 --- Gets a documentation part
---- @param input table The input table for the get_documentation_part command
+--- @param input table|nil The input table for the get_documentation_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_documentation_part(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-documentation-part" }, input)
 end
 
 --- Gets documentation parts
---- @param input table The input table for the get_documentation_parts command
+--- @param input table|nil The input table for the get_documentation_parts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_documentation_parts(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-documentation-parts" }, input)
 end
 
 --- Gets a documentation version
---- @param input table The input table for the get_documentation_version command
+--- @param input table|nil The input table for the get_documentation_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_documentation_version(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-documentation-version" }, input)
 end
 
 --- Gets documentation versions
---- @param input table The input table for the get_documentation_versions command
+--- @param input table|nil The input table for the get_documentation_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_documentation_versions(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-documentation-versions" }, input)
 end
 
 --- Represents a domain name that is contained in a simpler, more intuitive URL that can be called
---- @param input table The input table for the get_domain_name command
+--- @param input table|nil The input table for the get_domain_name command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-domain-name" }, input)
 end
 
 --- Represents a collection on DomainNameAccessAssociations resources
---- @param input table The input table for the get_domain_name_access_associations command
+--- @param input table|nil The input table for the get_domain_name_access_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_name_access_associations(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-domain-name-access-associations" }, input)
 end
 
 --- Represents a collection of DomainName resources
---- @param input table The input table for the get_domain_names command
+--- @param input table|nil The input table for the get_domain_names command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_names(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-domain-names" }, input)
 end
 
 --- Exports a deployed version of a RestApi in a specified format
---- @param input table The input table for the get_export command
+--- @param input table|nil The input table for the get_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_export(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-export" }, input)
 end
 
 --- Gets a GatewayResponse of a specified response type on the given RestApi
---- @param input table The input table for the get_gateway_response command
+--- @param input table|nil The input table for the get_gateway_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_gateway_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-gateway-response" }, input)
 end
 
 --- Gets the GatewayResponses collection on the given RestApi
---- @param input table The input table for the get_gateway_responses command
+--- @param input table|nil The input table for the get_gateway_responses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_gateway_responses(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-gateway-responses" }, input)
 end
 
 --- Get the integration settings
---- @param input table The input table for the get_integration command
+--- @param input table|nil The input table for the get_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-integration" }, input)
 end
 
 --- Represents a get integration response
---- @param input table The input table for the get_integration_response command
+--- @param input table|nil The input table for the get_integration_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-integration-response" }, input)
 end
 
 --- Describe an existing Method resource
---- @param input table The input table for the get_method command
+--- @param input table|nil The input table for the get_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_method(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-method" }, input)
 end
 
 --- Describes a MethodResponse resource
---- @param input table The input table for the get_method_response command
+--- @param input table|nil The input table for the get_method_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_method_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-method-response" }, input)
 end
 
 --- Describes an existing model defined for a RestApi resource
---- @param input table The input table for the get_model command
+--- @param input table|nil The input table for the get_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-model" }, input)
 end
 
 --- Generates a sample mapping template that can be used to transform a payload into the structure of a model
---- @param input table The input table for the get_model_template command
+--- @param input table|nil The input table for the get_model_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_template(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-model-template" }, input)
 end
 
 --- Describes existing Models defined for a RestApi resource
---- @param input table The input table for the get_models command
+--- @param input table|nil The input table for the get_models command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_models(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-models" }, input)
 end
 
 --- Gets a RequestValidator of a given RestApi
---- @param input table The input table for the get_request_validator command
+--- @param input table|nil The input table for the get_request_validator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_request_validator(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-request-validator" }, input)
 end
 
 --- Gets the RequestValidators collection of a given RestApi
---- @param input table The input table for the get_request_validators command
+--- @param input table|nil The input table for the get_request_validators command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_request_validators(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-request-validators" }, input)
 end
 
 --- Lists information about a resource
---- @param input table The input table for the get_resource command
+--- @param input table|nil The input table for the get_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-resource" }, input)
 end
 
 --- Lists information about a collection of Resource resources
---- @param input table The input table for the get_resources command
+--- @param input table|nil The input table for the get_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resources(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-resources" }, input)
 end
 
 --- Lists the RestApi resource in the collection
---- @param input table The input table for the get_rest_api command
+--- @param input table|nil The input table for the get_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-rest-api" }, input)
 end
 
 --- Lists the RestApis resources for your collection
---- @param input table The input table for the get_rest_apis command
+--- @param input table|nil The input table for the get_rest_apis command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_rest_apis(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-rest-apis" }, input)
 end
 
 --- Generates a client SDK for a RestApi and Stage
---- @param input table The input table for the get_sdk command
+--- @param input table|nil The input table for the get_sdk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sdk(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-sdk" }, input)
 end
 
 --- Gets an SDK type
---- @param input table The input table for the get_sdk_type command
+--- @param input table|nil The input table for the get_sdk_type command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sdk_type(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-sdk-type" }, input)
 end
 
 --- Gets SDK types
---- @param input table The input table for the get_sdk_types command
+--- @param input table|nil The input table for the get_sdk_types command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sdk_types(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-sdk-types" }, input)
 end
 
 --- Gets information about a Stage resource
---- @param input table The input table for the get_stage command
+--- @param input table|nil The input table for the get_stage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-stage" }, input)
 end
 
 --- Gets information about one or more Stage resources
---- @param input table The input table for the get_stages command
+--- @param input table|nil The input table for the get_stages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stages(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-stages" }, input)
 end
 
 --- Gets the Tags collection for a given resource
---- @param input table The input table for the get_tags command
+--- @param input table|nil The input table for the get_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_tags(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-tags" }, input)
 end
 
 --- Gets the usage data of a usage plan in a specified time interval
---- @param input table The input table for the get_usage command
+--- @param input table|nil The input table for the get_usage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-usage" }, input)
 end
 
 --- Gets a usage plan of a given plan identifier
---- @param input table The input table for the get_usage_plan command
+--- @param input table|nil The input table for the get_usage_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_plan(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-usage-plan" }, input)
 end
 
 --- Gets a usage plan key of a given key identifier
---- @param input table The input table for the get_usage_plan_key command
+--- @param input table|nil The input table for the get_usage_plan_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_plan_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-usage-plan-key" }, input)
 end
 
 --- Gets all the usage plan keys representing the API keys added to a specified usage plan
---- @param input table The input table for the get_usage_plan_keys command
+--- @param input table|nil The input table for the get_usage_plan_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_plan_keys(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-usage-plan-keys" }, input)
 end
 
 --- Gets all the usage plans of the caller's account
---- @param input table The input table for the get_usage_plans command
+--- @param input table|nil The input table for the get_usage_plans command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_plans(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-usage-plans" }, input)
 end
 
 --- Gets a specified VPC link under the caller's account in a region
---- @param input table The input table for the get_vpc_link command
+--- @param input table|nil The input table for the get_vpc_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-vpc-link" }, input)
 end
 
 --- Gets the VpcLinks collection under the caller's account in a selected region
---- @param input table The input table for the get_vpc_links command
+--- @param input table|nil The input table for the get_vpc_links command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vpc_links(input)
 	return common.execute_aws_command_with_input({ "apigateway", "get-vpc-links" }, input)
 end
 
 --- Import API keys from an external source, such as a CSV-formatted file
---- @param input table The input table for the import_api_keys command
+--- @param input table|nil The input table for the import_api_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_api_keys(input)
 	return common.execute_aws_command_with_input({ "apigateway", "import-api-keys" }, input)
 end
 
 --- Imports documentation parts
---- @param input table The input table for the import_documentation_parts command
+--- @param input table|nil The input table for the import_documentation_parts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_documentation_parts(input)
 	return common.execute_aws_command_with_input({ "apigateway", "import-documentation-parts" }, input)
 end
 
 --- A feature of the API Gateway control service for creating a new API from an external API definition file
---- @param input table The input table for the import_rest_api command
+--- @param input table|nil The input table for the import_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "import-rest-api" }, input)
 end
 
 --- Creates a customization of a GatewayResponse of a specified response type and status code on the given RestApi
---- @param input table The input table for the put_gateway_response command
+--- @param input table|nil The input table for the put_gateway_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_gateway_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-gateway-response" }, input)
 end
 
 --- Sets up a method's integration
---- @param input table The input table for the put_integration command
+--- @param input table|nil The input table for the put_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_integration(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-integration" }, input)
 end
 
 --- Represents a put integration
---- @param input table The input table for the put_integration_response command
+--- @param input table|nil The input table for the put_integration_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-integration-response" }, input)
 end
 
 --- Add a method to an existing Resource resource
---- @param input table The input table for the put_method command
+--- @param input table|nil The input table for the put_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_method(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-method" }, input)
 end
 
 --- Adds a MethodResponse to an existing Method resource
---- @param input table The input table for the put_method_response command
+--- @param input table|nil The input table for the put_method_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_method_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-method-response" }, input)
 end
 
 --- A feature of the API Gateway control service for updating an existing API with an input of external API definitions
---- @param input table The input table for the put_rest_api command
+--- @param input table|nil The input table for the put_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "put-rest-api" }, input)
 end
 
 --- Rejects a domain name access association with a private custom domain name
---- @param input table The input table for the reject_domain_name_access_association command
+--- @param input table|nil The input table for the reject_domain_name_access_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_domain_name_access_association(input)
 	return common.execute_aws_command_with_input({ "apigateway", "reject-domain-name-access-association" }, input)
 end
 
 --- Adds or updates a tag on a given resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "tag-resource" }, input)
 end
 
 --- Simulate the execution of an Authorizer in your RestApi with headers, parameters, and an incoming request body
---- @param input table The input table for the test_invoke_authorizer command
+--- @param input table|nil The input table for the test_invoke_authorizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_invoke_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigateway", "test-invoke-authorizer" }, input)
 end
 
 --- Simulate the invocation of a Method in your RestApi with headers, parameters, and an incoming request body
---- @param input table The input table for the test_invoke_method command
+--- @param input table|nil The input table for the test_invoke_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_invoke_method(input)
 	return common.execute_aws_command_with_input({ "apigateway", "test-invoke-method" }, input)
 end
 
 --- Removes a tag from a given resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "untag-resource" }, input)
 end
 
 --- Changes information about the current Account resource
---- @param input table The input table for the update_account command
+--- @param input table|nil The input table for the update_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-account" }, input)
 end
 
 --- Changes information about an ApiKey resource
---- @param input table The input table for the update_api_key command
+--- @param input table|nil The input table for the update_api_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_api_key(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-api-key" }, input)
 end
 
 --- Updates an existing Authorizer resource
---- @param input table The input table for the update_authorizer command
+--- @param input table|nil The input table for the update_authorizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-authorizer" }, input)
 end
 
 --- Changes information about the BasePathMapping resource
---- @param input table The input table for the update_base_path_mapping command
+--- @param input table|nil The input table for the update_base_path_mapping command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_base_path_mapping(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-base-path-mapping" }, input)
 end
 
 --- Changes information about an ClientCertificate resource
---- @param input table The input table for the update_client_certificate command
+--- @param input table|nil The input table for the update_client_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_client_certificate(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-client-certificate" }, input)
 end
 
 --- Changes information about a Deployment resource
---- @param input table The input table for the update_deployment command
+--- @param input table|nil The input table for the update_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_deployment(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-deployment" }, input)
 end
 
 --- Updates a documentation part
---- @param input table The input table for the update_documentation_part command
+--- @param input table|nil The input table for the update_documentation_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_documentation_part(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-documentation-part" }, input)
 end
 
 --- Updates a documentation version
---- @param input table The input table for the update_documentation_version command
+--- @param input table|nil The input table for the update_documentation_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_documentation_version(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-documentation-version" }, input)
 end
 
 --- Changes information about the DomainName resource
---- @param input table The input table for the update_domain_name command
+--- @param input table|nil The input table for the update_domain_name command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-domain-name" }, input)
 end
 
 --- Updates a GatewayResponse of a specified response type on the given RestApi
---- @param input table The input table for the update_gateway_response command
+--- @param input table|nil The input table for the update_gateway_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_gateway_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-gateway-response" }, input)
 end
 
 --- Represents an update integration
---- @param input table The input table for the update_integration command
+--- @param input table|nil The input table for the update_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-integration" }, input)
 end
 
 --- Represents an update integration response
---- @param input table The input table for the update_integration_response command
+--- @param input table|nil The input table for the update_integration_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-integration-response" }, input)
 end
 
 --- Updates an existing Method resource
---- @param input table The input table for the update_method command
+--- @param input table|nil The input table for the update_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_method(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-method" }, input)
 end
 
 --- Updates an existing MethodResponse resource
---- @param input table The input table for the update_method_response command
+--- @param input table|nil The input table for the update_method_response command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_method_response(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-method-response" }, input)
 end
 
 --- Changes information about a model
---- @param input table The input table for the update_model command
+--- @param input table|nil The input table for the update_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_model(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-model" }, input)
 end
 
 --- Updates a RequestValidator of a given RestApi
---- @param input table The input table for the update_request_validator command
+--- @param input table|nil The input table for the update_request_validator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_request_validator(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-request-validator" }, input)
 end
 
 --- Changes information about a Resource resource
---- @param input table The input table for the update_resource command
+--- @param input table|nil The input table for the update_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-resource" }, input)
 end
 
 --- Changes information about the specified API
---- @param input table The input table for the update_rest_api command
+--- @param input table|nil The input table for the update_rest_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rest_api(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-rest-api" }, input)
 end
 
 --- Changes information about a Stage resource
---- @param input table The input table for the update_stage command
+--- @param input table|nil The input table for the update_stage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-stage" }, input)
 end
 
 --- Grants a temporary extension to the remaining quota of a usage plan associated with a specified API key
---- @param input table The input table for the update_usage command
+--- @param input table|nil The input table for the update_usage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_usage(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-usage" }, input)
 end
 
 --- Updates a usage plan of a given plan Id
---- @param input table The input table for the update_usage_plan command
+--- @param input table|nil The input table for the update_usage_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_usage_plan(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-usage-plan" }, input)
 end
 
 --- Updates an existing VpcLink of a specified identifier
---- @param input table The input table for the update_vpc_link command
+--- @param input table|nil The input table for the update_vpc_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-vpc-link" }, input)

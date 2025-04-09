@@ -8,420 +8,420 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates an Add On instance for the subscription indicated in the request
---- @param input table The input table for the create_addon_instance command
+--- @param input table|nil The input table for the create_addon_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_addon_instance(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-addon-instance" }, input)
 end
 
 --- Creates a subscription for an Add On representing the acceptance of its terms of use and additional pricing
---- @param input table The input table for the create_addon_subscription command
+--- @param input table|nil The input table for the create_addon_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_addon_subscription(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-addon-subscription" }, input)
 end
 
 --- Creates a new address list
---- @param input table The input table for the create_address_list command
+--- @param input table|nil The input table for the create_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-address-list" }, input)
 end
 
 --- Creates an import job for an address list
---- @param input table The input table for the create_address_list_import_job command
+--- @param input table|nil The input table for the create_address_list_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_address_list_import_job(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-address-list-import-job" }, input)
 end
 
 --- Creates a new email archive resource for storing and retaining emails
---- @param input table The input table for the create_archive command
+--- @param input table|nil The input table for the create_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_archive(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-archive" }, input)
 end
 
 --- Provision a new ingress endpoint resource
---- @param input table The input table for the create_ingress_point command
+--- @param input table|nil The input table for the create_ingress_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ingress_point(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-ingress-point" }, input)
 end
 
 --- Creates a relay resource which can be used in rules to relay incoming emails to defined relay destinations
---- @param input table The input table for the create_relay command
+--- @param input table|nil The input table for the create_relay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_relay(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-relay" }, input)
 end
 
 --- Provision a new rule set
---- @param input table The input table for the create_rule_set command
+--- @param input table|nil The input table for the create_rule_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rule_set(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-rule-set" }, input)
 end
 
 --- Provision a new traffic policy resource
---- @param input table The input table for the create_traffic_policy command
+--- @param input table|nil The input table for the create_traffic_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_traffic_policy(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "create-traffic-policy" }, input)
 end
 
 --- Deletes an Add On instance
---- @param input table The input table for the delete_addon_instance command
+--- @param input table|nil The input table for the delete_addon_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_addon_instance(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-addon-instance" }, input)
 end
 
 --- Deletes an Add On subscription
---- @param input table The input table for the delete_addon_subscription command
+--- @param input table|nil The input table for the delete_addon_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_addon_subscription(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-addon-subscription" }, input)
 end
 
 --- Deletes an address list
---- @param input table The input table for the delete_address_list command
+--- @param input table|nil The input table for the delete_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-address-list" }, input)
 end
 
 --- Initiates deletion of an email archive
---- @param input table The input table for the delete_archive command
+--- @param input table|nil The input table for the delete_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_archive(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-archive" }, input)
 end
 
 --- Delete an ingress endpoint resource
---- @param input table The input table for the delete_ingress_point command
+--- @param input table|nil The input table for the delete_ingress_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ingress_point(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-ingress-point" }, input)
 end
 
 --- Deletes an existing relay resource
---- @param input table The input table for the delete_relay command
+--- @param input table|nil The input table for the delete_relay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_relay(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-relay" }, input)
 end
 
 --- Delete a rule set
---- @param input table The input table for the delete_rule_set command
+--- @param input table|nil The input table for the delete_rule_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule_set(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-rule-set" }, input)
 end
 
 --- Delete a traffic policy resource
---- @param input table The input table for the delete_traffic_policy command
+--- @param input table|nil The input table for the delete_traffic_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_traffic_policy(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "delete-traffic-policy" }, input)
 end
 
 --- Removes a member from an address list
---- @param input table The input table for the deregister_member_from_address_list command
+--- @param input table|nil The input table for the deregister_member_from_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_member_from_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "deregister-member-from-address-list" }, input)
 end
 
 --- Gets detailed information about an Add On instance
---- @param input table The input table for the get_addon_instance command
+--- @param input table|nil The input table for the get_addon_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_addon_instance(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-addon-instance" }, input)
 end
 
 --- Gets detailed information about an Add On subscription
---- @param input table The input table for the get_addon_subscription command
+--- @param input table|nil The input table for the get_addon_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_addon_subscription(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-addon-subscription" }, input)
 end
 
 --- Fetch attributes of an address list
---- @param input table The input table for the get_address_list command
+--- @param input table|nil The input table for the get_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-address-list" }, input)
 end
 
 --- Fetch attributes of an import job
---- @param input table The input table for the get_address_list_import_job command
+--- @param input table|nil The input table for the get_address_list_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_address_list_import_job(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-address-list-import-job" }, input)
 end
 
 --- Retrieves the full details and current state of a specified email archive
---- @param input table The input table for the get_archive command
+--- @param input table|nil The input table for the get_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive" }, input)
 end
 
 --- Retrieves the details and current status of a specific email archive export job
---- @param input table The input table for the get_archive_export command
+--- @param input table|nil The input table for the get_archive_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive_export(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive-export" }, input)
 end
 
 --- Returns a pre-signed URL that provides temporary download access to the specific email message stored in the archive
---- @param input table The input table for the get_archive_message command
+--- @param input table|nil The input table for the get_archive_message command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive_message(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive-message" }, input)
 end
 
 --- Returns the textual content of a specific email message stored in the archive
---- @param input table The input table for the get_archive_message_content command
+--- @param input table|nil The input table for the get_archive_message_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive_message_content(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive-message-content" }, input)
 end
 
 --- Retrieves the details and current status of a specific email archive search job
---- @param input table The input table for the get_archive_search command
+--- @param input table|nil The input table for the get_archive_search command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive_search(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive-search" }, input)
 end
 
 --- Returns the results of a completed email archive search job
---- @param input table The input table for the get_archive_search_results command
+--- @param input table|nil The input table for the get_archive_search_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_archive_search_results(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-archive-search-results" }, input)
 end
 
 --- Fetch ingress endpoint resource attributes
---- @param input table The input table for the get_ingress_point command
+--- @param input table|nil The input table for the get_ingress_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ingress_point(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-ingress-point" }, input)
 end
 
 --- Fetch attributes of a member in an address list
---- @param input table The input table for the get_member_of_address_list command
+--- @param input table|nil The input table for the get_member_of_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_member_of_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-member-of-address-list" }, input)
 end
 
 --- Fetch the relay resource and it's attributes
---- @param input table The input table for the get_relay command
+--- @param input table|nil The input table for the get_relay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relay(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-relay" }, input)
 end
 
 --- Fetch attributes of a rule set
---- @param input table The input table for the get_rule_set command
+--- @param input table|nil The input table for the get_rule_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_rule_set(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-rule-set" }, input)
 end
 
 --- Fetch attributes of a traffic policy resource
---- @param input table The input table for the get_traffic_policy command
+--- @param input table|nil The input table for the get_traffic_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_traffic_policy(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "get-traffic-policy" }, input)
 end
 
 --- Lists all Add On instances in your account
---- @param input table The input table for the list_addon_instances command
+--- @param input table|nil The input table for the list_addon_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_addon_instances(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-addon-instances" }, input)
 end
 
 --- Lists all Add On subscriptions in your account
---- @param input table The input table for the list_addon_subscriptions command
+--- @param input table|nil The input table for the list_addon_subscriptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_addon_subscriptions(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-addon-subscriptions" }, input)
 end
 
 --- Lists jobs for an address list
---- @param input table The input table for the list_address_list_import_jobs command
+--- @param input table|nil The input table for the list_address_list_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_address_list_import_jobs(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-address-list-import-jobs" }, input)
 end
 
 --- Lists address lists for this account
---- @param input table The input table for the list_address_lists command
+--- @param input table|nil The input table for the list_address_lists command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_address_lists(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-address-lists" }, input)
 end
 
 --- Returns a list of email archive export jobs
---- @param input table The input table for the list_archive_exports command
+--- @param input table|nil The input table for the list_archive_exports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_archive_exports(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-archive-exports" }, input)
 end
 
 --- Returns a list of email archive search jobs
---- @param input table The input table for the list_archive_searches command
+--- @param input table|nil The input table for the list_archive_searches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_archive_searches(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-archive-searches" }, input)
 end
 
 --- Returns a list of all email archives in your account
---- @param input table The input table for the list_archives command
+--- @param input table|nil The input table for the list_archives command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_archives(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-archives" }, input)
 end
 
 --- List all ingress endpoint resources
---- @param input table The input table for the list_ingress_points command
+--- @param input table|nil The input table for the list_ingress_points command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingress_points(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-ingress-points" }, input)
 end
 
 --- Lists members of an address list
---- @param input table The input table for the list_members_of_address_list command
+--- @param input table|nil The input table for the list_members_of_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_members_of_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-members-of-address-list" }, input)
 end
 
 --- Lists all the existing relay resources
---- @param input table The input table for the list_relays command
+--- @param input table|nil The input table for the list_relays command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_relays(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-relays" }, input)
 end
 
 --- List rule sets for this account
---- @param input table The input table for the list_rule_sets command
+--- @param input table|nil The input table for the list_rule_sets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rule_sets(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-rule-sets" }, input)
 end
 
 --- Retrieves the list of tags (keys and values) assigned to the resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-tags-for-resource" }, input)
 end
 
 --- List traffic policy resources
---- @param input table The input table for the list_traffic_policies command
+--- @param input table|nil The input table for the list_traffic_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_traffic_policies(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "list-traffic-policies" }, input)
 end
 
 --- Adds a member to an address list
---- @param input table The input table for the register_member_to_address_list command
+--- @param input table|nil The input table for the register_member_to_address_list command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_member_to_address_list(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "register-member-to-address-list" }, input)
 end
 
 --- Starts an import job for an address list
---- @param input table The input table for the start_address_list_import_job command
+--- @param input table|nil The input table for the start_address_list_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_address_list_import_job(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "start-address-list-import-job" }, input)
 end
 
 --- Initiates an export of emails from the specified archive
---- @param input table The input table for the start_archive_export command
+--- @param input table|nil The input table for the start_archive_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_archive_export(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "start-archive-export" }, input)
 end
 
 --- Initiates a search across emails in the specified archive
---- @param input table The input table for the start_archive_search command
+--- @param input table|nil The input table for the start_archive_search command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_archive_search(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "start-archive-search" }, input)
 end
 
 --- Stops an ongoing import job for an address list
---- @param input table The input table for the stop_address_list_import_job command
+--- @param input table|nil The input table for the stop_address_list_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_address_list_import_job(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "stop-address-list-import-job" }, input)
 end
 
 --- Stops an in-progress export of emails from an archive
---- @param input table The input table for the stop_archive_export command
+--- @param input table|nil The input table for the stop_archive_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_archive_export(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "stop-archive-export" }, input)
 end
 
 --- Stops an in-progress archive search job
---- @param input table The input table for the stop_archive_search command
+--- @param input table|nil The input table for the stop_archive_search command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_archive_search(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "stop-archive-search" }, input)
 end
 
 --- Adds one or more tags (keys and values) to a specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "tag-resource" }, input)
 end
 
 --- Remove one or more tags (keys and values) from a specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "untag-resource" }, input)
 end
 
 --- Updates the attributes of an existing email archive
---- @param input table The input table for the update_archive command
+--- @param input table|nil The input table for the update_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_archive(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "update-archive" }, input)
 end
 
 --- Update attributes of a provisioned ingress endpoint resource
---- @param input table The input table for the update_ingress_point command
+--- @param input table|nil The input table for the update_ingress_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ingress_point(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "update-ingress-point" }, input)
 end
 
 --- Updates the attributes of an existing relay resource
---- @param input table The input table for the update_relay command
+--- @param input table|nil The input table for the update_relay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_relay(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "update-relay" }, input)
 end
 
 --- Update attributes of an already provisioned rule set
---- @param input table The input table for the update_rule_set command
+--- @param input table|nil The input table for the update_rule_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rule_set(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "update-rule-set" }, input)
 end
 
 --- Update attributes of an already provisioned traffic policy resource
---- @param input table The input table for the update_traffic_policy command
+--- @param input table|nil The input table for the update_traffic_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_traffic_policy(input)
 	return common.execute_aws_command_with_input({ "mailmanager", "update-traffic-policy" }, input)

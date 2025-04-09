@@ -8,49 +8,49 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Get the account settings for Artifact
---- @param input table The input table for the get_account_settings command
+--- @param input table|nil The input table for the get_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-account-settings" }, input)
 end
 
 --- Get the content for a single report
---- @param input table The input table for the get_report command
+--- @param input table|nil The input table for the get_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-report" }, input)
 end
 
 --- Get the metadata for a single report
---- @param input table The input table for the get_report_metadata command
+--- @param input table|nil The input table for the get_report_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report_metadata(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-report-metadata" }, input)
 end
 
 --- Get the Term content associated with a single report
---- @param input table The input table for the get_term_for_report command
+--- @param input table|nil The input table for the get_term_for_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_term_for_report(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-term-for-report" }, input)
 end
 
 --- List active customer-agreements applicable to calling identity
---- @param input table The input table for the list_customer_agreements command
+--- @param input table|nil The input table for the list_customer_agreements command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_customer_agreements(input)
 	return common.execute_aws_command_with_input({ "artifact", "list-customer-agreements" }, input)
 end
 
 --- List available reports
---- @param input table The input table for the list_reports command
+--- @param input table|nil The input table for the list_reports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reports(input)
 	return common.execute_aws_command_with_input({ "artifact", "list-reports" }, input)
 end
 
 --- Put the account settings for Artifact
---- @param input table The input table for the put_account_settings command
+--- @param input table|nil The input table for the put_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_settings(input)
 	return common.execute_aws_command_with_input({ "artifact", "put-account-settings" }, input)

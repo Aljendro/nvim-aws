@@ -8,413 +8,413 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Deletes one or more builds
---- @param input table The input table for the batch_delete_builds command
+--- @param input table|nil The input table for the batch_delete_builds command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_builds(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-delete-builds" }, input)
 end
 
 --- Retrieves information about one or more batch builds
---- @param input table The input table for the batch_get_build_batches command
+--- @param input table|nil The input table for the batch_get_build_batches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_build_batches(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-build-batches" }, input)
 end
 
 --- Gets information about one or more builds
---- @param input table The input table for the batch_get_builds command
+--- @param input table|nil The input table for the batch_get_builds command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_builds(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-builds" }, input)
 end
 
 --- Gets information about the command executions
---- @param input table The input table for the batch_get_command_executions command
+--- @param input table|nil The input table for the batch_get_command_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_command_executions(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-command-executions" }, input)
 end
 
 --- Gets information about one or more compute fleets
---- @param input table The input table for the batch_get_fleets command
+--- @param input table|nil The input table for the batch_get_fleets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_fleets(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-fleets" }, input)
 end
 
 --- Gets information about one or more build projects
---- @param input table The input table for the batch_get_projects command
+--- @param input table|nil The input table for the batch_get_projects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_projects(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-projects" }, input)
 end
 
 --- Returns an array of report groups
---- @param input table The input table for the batch_get_report_groups command
+--- @param input table|nil The input table for the batch_get_report_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_report_groups(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-report-groups" }, input)
 end
 
 --- Returns an array of reports
---- @param input table The input table for the batch_get_reports command
+--- @param input table|nil The input table for the batch_get_reports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_reports(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-reports" }, input)
 end
 
 --- Gets information about the sandbox status
---- @param input table The input table for the batch_get_sandboxes command
+--- @param input table|nil The input table for the batch_get_sandboxes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_sandboxes(input)
 	return common.execute_aws_command_with_input({ "codebuild", "batch-get-sandboxes" }, input)
 end
 
 --- Creates a compute fleet
---- @param input table The input table for the create_fleet command
+--- @param input table|nil The input table for the create_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fleet(input)
 	return common.execute_aws_command_with_input({ "codebuild", "create-fleet" }, input)
 end
 
 --- Creates a build project
---- @param input table The input table for the create_project command
+--- @param input table|nil The input table for the create_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "create-project" }, input)
 end
 
 --- Creates a report group
---- @param input table The input table for the create_report_group command
+--- @param input table|nil The input table for the create_report_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_report_group(input)
 	return common.execute_aws_command_with_input({ "codebuild", "create-report-group" }, input)
 end
 
 --- For an existing CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, enables CodeBuild to start rebuilding the source code every time a code change is pushed to the repository
---- @param input table The input table for the create_webhook command
+--- @param input table|nil The input table for the create_webhook command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_webhook(input)
 	return common.execute_aws_command_with_input({ "codebuild", "create-webhook" }, input)
 end
 
 --- Deletes a batch build
---- @param input table The input table for the delete_build_batch command
+--- @param input table|nil The input table for the delete_build_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_build_batch(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-build-batch" }, input)
 end
 
 --- Deletes a compute fleet
---- @param input table The input table for the delete_fleet command
+--- @param input table|nil The input table for the delete_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fleet(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-fleet" }, input)
 end
 
 --- Deletes a build project
---- @param input table The input table for the delete_project command
+--- @param input table|nil The input table for the delete_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-project" }, input)
 end
 
 --- Deletes a report
---- @param input table The input table for the delete_report command
+--- @param input table|nil The input table for the delete_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_report(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-report" }, input)
 end
 
 --- Deletes a report group
---- @param input table The input table for the delete_report_group command
+--- @param input table|nil The input table for the delete_report_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_report_group(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-report-group" }, input)
 end
 
 --- Deletes a resource policy that is identified by its resource ARN
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-resource-policy" }, input)
 end
 
 --- Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source credentials
---- @param input table The input table for the delete_source_credentials command
+--- @param input table|nil The input table for the delete_source_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_source_credentials(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-source-credentials" }, input)
 end
 
 --- For an existing CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, stops CodeBuild from rebuilding the source code every time a code change is pushed to the repository
---- @param input table The input table for the delete_webhook command
+--- @param input table|nil The input table for the delete_webhook command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_webhook(input)
 	return common.execute_aws_command_with_input({ "codebuild", "delete-webhook" }, input)
 end
 
 --- Retrieves one or more code coverage reports
---- @param input table The input table for the describe_code_coverages command
+--- @param input table|nil The input table for the describe_code_coverages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_code_coverages(input)
 	return common.execute_aws_command_with_input({ "codebuild", "describe-code-coverages" }, input)
 end
 
 --- Returns a list of details about test cases for a report
---- @param input table The input table for the describe_test_cases command
+--- @param input table|nil The input table for the describe_test_cases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_test_cases(input)
 	return common.execute_aws_command_with_input({ "codebuild", "describe-test-cases" }, input)
 end
 
 --- Analyzes and accumulates test report values for the specified test reports
---- @param input table The input table for the get_report_group_trend command
+--- @param input table|nil The input table for the get_report_group_trend command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report_group_trend(input)
 	return common.execute_aws_command_with_input({ "codebuild", "get-report-group-trend" }, input)
 end
 
 --- Gets a resource policy that is identified by its resource ARN
---- @param input table The input table for the get_resource_policy command
+--- @param input table|nil The input table for the get_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "codebuild", "get-resource-policy" }, input)
 end
 
 --- Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository
---- @param input table The input table for the import_source_credentials command
+--- @param input table|nil The input table for the import_source_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_source_credentials(input)
 	return common.execute_aws_command_with_input({ "codebuild", "import-source-credentials" }, input)
 end
 
 --- Resets the cache for a project
---- @param input table The input table for the invalidate_project_cache command
+--- @param input table|nil The input table for the invalidate_project_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invalidate_project_cache(input)
 	return common.execute_aws_command_with_input({ "codebuild", "invalidate-project-cache" }, input)
 end
 
 --- Retrieves the identifiers of your build batches in the current region
---- @param input table The input table for the list_build_batches command
+--- @param input table|nil The input table for the list_build_batches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_build_batches(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-build-batches" }, input)
 end
 
 --- Retrieves the identifiers of the build batches for a specific project
---- @param input table The input table for the list_build_batches_for_project command
+--- @param input table|nil The input table for the list_build_batches_for_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_build_batches_for_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-build-batches-for-project" }, input)
 end
 
 --- Gets a list of build IDs, with each build ID representing a single build
---- @param input table The input table for the list_builds command
+--- @param input table|nil The input table for the list_builds command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_builds(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-builds" }, input)
 end
 
 --- Gets a list of build identifiers for the specified build project, with each build identifier representing a single build
---- @param input table The input table for the list_builds_for_project command
+--- @param input table|nil The input table for the list_builds_for_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_builds_for_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-builds-for-project" }, input)
 end
 
 --- Gets a list of command executions for a sandbox
---- @param input table The input table for the list_command_executions_for_sandbox command
+--- @param input table|nil The input table for the list_command_executions_for_sandbox command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_command_executions_for_sandbox(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-command-executions-for-sandbox" }, input)
 end
 
 --- Gets information about Docker images that are managed by CodeBuild
---- @param input table The input table for the list_curated_environment_images command
+--- @param input table|nil The input table for the list_curated_environment_images command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_curated_environment_images(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-curated-environment-images" }, input)
 end
 
 --- Gets a list of compute fleet names with each compute fleet name representing a single compute fleet
---- @param input table The input table for the list_fleets command
+--- @param input table|nil The input table for the list_fleets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fleets(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-fleets" }, input)
 end
 
 --- Gets a list of build project names, with each build project name representing a single build project
---- @param input table The input table for the list_projects command
+--- @param input table|nil The input table for the list_projects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_projects(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-projects" }, input)
 end
 
 --- Gets a list ARNs for the report groups in the current Amazon Web Services account
---- @param input table The input table for the list_report_groups command
+--- @param input table|nil The input table for the list_report_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_report_groups(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-report-groups" }, input)
 end
 
 --- Returns a list of ARNs for the reports in the current Amazon Web Services account
---- @param input table The input table for the list_reports command
+--- @param input table|nil The input table for the list_reports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reports(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-reports" }, input)
 end
 
 --- Returns a list of ARNs for the reports that belong to a ReportGroup
---- @param input table The input table for the list_reports_for_report_group command
+--- @param input table|nil The input table for the list_reports_for_report_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reports_for_report_group(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-reports-for-report-group" }, input)
 end
 
 --- Gets a list of sandboxes
---- @param input table The input table for the list_sandboxes command
+--- @param input table|nil The input table for the list_sandboxes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sandboxes(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-sandboxes" }, input)
 end
 
 --- Gets a list of sandboxes for a given project
---- @param input table The input table for the list_sandboxes_for_project command
+--- @param input table|nil The input table for the list_sandboxes_for_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sandboxes_for_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-sandboxes-for-project" }, input)
 end
 
 --- Gets a list of projects that are shared with other Amazon Web Services accounts or users
---- @param input table The input table for the list_shared_projects command
+--- @param input table|nil The input table for the list_shared_projects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_shared_projects(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-shared-projects" }, input)
 end
 
 --- Gets a list of report groups that are shared with other Amazon Web Services accounts or users
---- @param input table The input table for the list_shared_report_groups command
+--- @param input table|nil The input table for the list_shared_report_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_shared_report_groups(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-shared-report-groups" }, input)
 end
 
 --- Returns a list of SourceCredentialsInfo objects
---- @param input table The input table for the list_source_credentials command
+--- @param input table|nil The input table for the list_source_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_source_credentials(input)
 	return common.execute_aws_command_with_input({ "codebuild", "list-source-credentials" }, input)
 end
 
 --- Stores a resource policy for the ARN of a Project or ReportGroup object
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "codebuild", "put-resource-policy" }, input)
 end
 
 --- Restarts a build
---- @param input table The input table for the retry_build command
+--- @param input table|nil The input table for the retry_build command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retry_build(input)
 	return common.execute_aws_command_with_input({ "codebuild", "retry-build" }, input)
 end
 
 --- Restarts a failed batch build
---- @param input table The input table for the retry_build_batch command
+--- @param input table|nil The input table for the retry_build_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retry_build_batch(input)
 	return common.execute_aws_command_with_input({ "codebuild", "retry-build-batch" }, input)
 end
 
 --- Starts running a build with the settings defined in the project
---- @param input table The input table for the start_build command
+--- @param input table|nil The input table for the start_build command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_build(input)
 	return common.execute_aws_command_with_input({ "codebuild", "start-build" }, input)
 end
 
 --- Starts a batch build for a project
---- @param input table The input table for the start_build_batch command
+--- @param input table|nil The input table for the start_build_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_build_batch(input)
 	return common.execute_aws_command_with_input({ "codebuild", "start-build-batch" }, input)
 end
 
 --- Starts a command execution
---- @param input table The input table for the start_command_execution command
+--- @param input table|nil The input table for the start_command_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_command_execution(input)
 	return common.execute_aws_command_with_input({ "codebuild", "start-command-execution" }, input)
 end
 
 --- Starts a sandbox
---- @param input table The input table for the start_sandbox command
+--- @param input table|nil The input table for the start_sandbox command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_sandbox(input)
 	return common.execute_aws_command_with_input({ "codebuild", "start-sandbox" }, input)
 end
 
 --- Starts a sandbox connection
---- @param input table The input table for the start_sandbox_connection command
+--- @param input table|nil The input table for the start_sandbox_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_sandbox_connection(input)
 	return common.execute_aws_command_with_input({ "codebuild", "start-sandbox-connection" }, input)
 end
 
 --- Attempts to stop running a build
---- @param input table The input table for the stop_build command
+--- @param input table|nil The input table for the stop_build command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_build(input)
 	return common.execute_aws_command_with_input({ "codebuild", "stop-build" }, input)
 end
 
 --- Stops a running batch build
---- @param input table The input table for the stop_build_batch command
+--- @param input table|nil The input table for the stop_build_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_build_batch(input)
 	return common.execute_aws_command_with_input({ "codebuild", "stop-build-batch" }, input)
 end
 
 --- Stops a sandbox
---- @param input table The input table for the stop_sandbox command
+--- @param input table|nil The input table for the stop_sandbox command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_sandbox(input)
 	return common.execute_aws_command_with_input({ "codebuild", "stop-sandbox" }, input)
 end
 
 --- Updates a compute fleet
---- @param input table The input table for the update_fleet command
+--- @param input table|nil The input table for the update_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_fleet(input)
 	return common.execute_aws_command_with_input({ "codebuild", "update-fleet" }, input)
 end
 
 --- Changes the settings of a build project
---- @param input table The input table for the update_project command
+--- @param input table|nil The input table for the update_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project(input)
 	return common.execute_aws_command_with_input({ "codebuild", "update-project" }, input)
 end
 
 --- Changes the public visibility for a project
---- @param input table The input table for the update_project_visibility command
+--- @param input table|nil The input table for the update_project_visibility command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project_visibility(input)
 	return common.execute_aws_command_with_input({ "codebuild", "update-project-visibility" }, input)
 end
 
 --- Updates a report group
---- @param input table The input table for the update_report_group command
+--- @param input table|nil The input table for the update_report_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_report_group(input)
 	return common.execute_aws_command_with_input({ "codebuild", "update-report-group" }, input)
 end
 
 --- Updates the webhook associated with an CodeBuild build project
---- @param input table The input table for the update_webhook command
+--- @param input table|nil The input table for the update_webhook command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_webhook(input)
 	return common.execute_aws_command_with_input({ "codebuild", "update-webhook" }, input)

@@ -8,14 +8,14 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Gets the Interactive Connectivity Establishment (ICE) server configuration information, including URIs, username, and password which can be used to configure the WebRTC connection
---- @param input table The input table for the get_ice_server_config command
+--- @param input table|nil The input table for the get_ice_server_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ice_server_config(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "get-ice-server-config" }, input)
 end
 
 --- This API allows you to connect WebRTC-enabled devices with Alexa display devices
---- @param input table The input table for the send_alexa_offer_to_master command
+--- @param input table|nil The input table for the send_alexa_offer_to_master command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_alexa_offer_to_master(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "send-alexa-offer-to-master" }, input)

@@ -8,231 +8,231 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Cancels a network operation
---- @param input table The input table for the cancel_sol_network_operation command
+--- @param input table|nil The input table for the cancel_sol_network_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_sol_network_operation(input)
 	return common.execute_aws_command_with_input({ "tnb", "cancel-sol-network-operation" }, input)
 end
 
 --- Creates a function package
---- @param input table The input table for the create_sol_function_package command
+--- @param input table|nil The input table for the create_sol_function_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sol_function_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "create-sol-function-package" }, input)
 end
 
 --- Creates a network instance
---- @param input table The input table for the create_sol_network_instance command
+--- @param input table|nil The input table for the create_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "create-sol-network-instance" }, input)
 end
 
 --- Creates a network package
---- @param input table The input table for the create_sol_network_package command
+--- @param input table|nil The input table for the create_sol_network_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sol_network_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "create-sol-network-package" }, input)
 end
 
 --- Deletes a function package
---- @param input table The input table for the delete_sol_function_package command
+--- @param input table|nil The input table for the delete_sol_function_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sol_function_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "delete-sol-function-package" }, input)
 end
 
 --- Deletes a network instance
---- @param input table The input table for the delete_sol_network_instance command
+--- @param input table|nil The input table for the delete_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "delete-sol-network-instance" }, input)
 end
 
 --- Deletes network package
---- @param input table The input table for the delete_sol_network_package command
+--- @param input table|nil The input table for the delete_sol_network_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sol_network_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "delete-sol-network-package" }, input)
 end
 
 --- Gets the details of a network function instance, including the instantiation state and metadata from the function package descriptor in the network function package
---- @param input table The input table for the get_sol_function_instance command
+--- @param input table|nil The input table for the get_sol_function_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_function_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-instance" }, input)
 end
 
 --- Gets the details of an individual function package, such as the operational state and whether the package is in use
---- @param input table The input table for the get_sol_function_package command
+--- @param input table|nil The input table for the get_sol_function_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_function_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-package" }, input)
 end
 
 --- Gets the contents of a function package
---- @param input table The input table for the get_sol_function_package_content command
+--- @param input table|nil The input table for the get_sol_function_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_function_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-package-content" }, input)
 end
 
 --- Gets a function package descriptor in a function package
---- @param input table The input table for the get_sol_function_package_descriptor command
+--- @param input table|nil The input table for the get_sol_function_package_descriptor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_function_package_descriptor(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-package-descriptor" }, input)
 end
 
 --- Gets the details of the network instance
---- @param input table The input table for the get_sol_network_instance command
+--- @param input table|nil The input table for the get_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-instance" }, input)
 end
 
 --- Gets the details of a network operation, including the tasks involved in the network operation and the status of the tasks
---- @param input table The input table for the get_sol_network_operation command
+--- @param input table|nil The input table for the get_sol_network_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_network_operation(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-operation" }, input)
 end
 
 --- Gets the details of a network package
---- @param input table The input table for the get_sol_network_package command
+--- @param input table|nil The input table for the get_sol_network_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_network_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-package" }, input)
 end
 
 --- Gets the contents of a network package
---- @param input table The input table for the get_sol_network_package_content command
+--- @param input table|nil The input table for the get_sol_network_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_network_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-package-content" }, input)
 end
 
 --- Gets the content of the network service descriptor
---- @param input table The input table for the get_sol_network_package_descriptor command
+--- @param input table|nil The input table for the get_sol_network_package_descriptor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sol_network_package_descriptor(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-package-descriptor" }, input)
 end
 
 --- Instantiates a network instance
---- @param input table The input table for the instantiate_sol_network_instance command
+--- @param input table|nil The input table for the instantiate_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.instantiate_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "instantiate-sol-network-instance" }, input)
 end
 
 --- Lists network function instances
---- @param input table The input table for the list_sol_function_instances command
+--- @param input table|nil The input table for the list_sol_function_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sol_function_instances(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-sol-function-instances" }, input)
 end
 
 --- Lists information about function packages
---- @param input table The input table for the list_sol_function_packages command
+--- @param input table|nil The input table for the list_sol_function_packages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sol_function_packages(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-sol-function-packages" }, input)
 end
 
 --- Lists your network instances
---- @param input table The input table for the list_sol_network_instances command
+--- @param input table|nil The input table for the list_sol_network_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sol_network_instances(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-instances" }, input)
 end
 
 --- Lists details for a network operation, including when the operation started and the status of the operation
---- @param input table The input table for the list_sol_network_operations command
+--- @param input table|nil The input table for the list_sol_network_operations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sol_network_operations(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-operations" }, input)
 end
 
 --- Lists network packages
---- @param input table The input table for the list_sol_network_packages command
+--- @param input table|nil The input table for the list_sol_network_packages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sol_network_packages(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-packages" }, input)
 end
 
 --- Lists tags for AWS TNB resources
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "tnb", "list-tags-for-resource" }, input)
 end
 
 --- Uploads the contents of a function package
---- @param input table The input table for the put_sol_function_package_content command
+--- @param input table|nil The input table for the put_sol_function_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_sol_function_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "put-sol-function-package-content" }, input)
 end
 
 --- Uploads the contents of a network package
---- @param input table The input table for the put_sol_network_package_content command
+--- @param input table|nil The input table for the put_sol_network_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_sol_network_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "put-sol-network-package-content" }, input)
 end
 
 --- Tags an AWS TNB resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "tnb", "tag-resource" }, input)
 end
 
 --- Terminates a network instance
---- @param input table The input table for the terminate_sol_network_instance command
+--- @param input table|nil The input table for the terminate_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "terminate-sol-network-instance" }, input)
 end
 
 --- Untags an AWS TNB resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "tnb", "untag-resource" }, input)
 end
 
 --- Updates the operational state of function package
---- @param input table The input table for the update_sol_function_package command
+--- @param input table|nil The input table for the update_sol_function_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sol_function_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "update-sol-function-package" }, input)
 end
 
 --- Update a network instance
---- @param input table The input table for the update_sol_network_instance command
+--- @param input table|nil The input table for the update_sol_network_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sol_network_instance(input)
 	return common.execute_aws_command_with_input({ "tnb", "update-sol-network-instance" }, input)
 end
 
 --- Updates the operational state of a network package
---- @param input table The input table for the update_sol_network_package command
+--- @param input table|nil The input table for the update_sol_network_package command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sol_network_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "update-sol-network-package" }, input)
 end
 
 --- Validates function package content
---- @param input table The input table for the validate_sol_function_package_content command
+--- @param input table|nil The input table for the validate_sol_function_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_sol_function_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "validate-sol-function-package-content" }, input)
 end
 
 --- Validates network package content
---- @param input table The input table for the validate_sol_network_package_content command
+--- @param input table|nil The input table for the validate_sol_network_package_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_sol_network_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "validate-sol-network-package-content" }, input)

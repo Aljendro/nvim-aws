@@ -8,357 +8,357 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds the specified SSL server certificate to the certificate list for the specified HTTPS or TLS listener
---- @param input table The input table for the add_listener_certificates command
+--- @param input table|nil The input table for the add_listener_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_listener_certificates(input)
 	return common.execute_aws_command_with_input({ "elbv2", "add-listener-certificates" }, input)
 end
 
 --- Adds the specified tags to the specified Elastic Load Balancing resource
---- @param input table The input table for the add_tags command
+--- @param input table|nil The input table for the add_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_tags(input)
 	return common.execute_aws_command_with_input({ "elbv2", "add-tags" }, input)
 end
 
 --- Adds the specified revocation file to the specified trust store
---- @param input table The input table for the add_trust_store_revocations command
+--- @param input table|nil The input table for the add_trust_store_revocations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_trust_store_revocations(input)
 	return common.execute_aws_command_with_input({ "elbv2", "add-trust-store-revocations" }, input)
 end
 
 --- Creates a listener for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the create_listener command
+--- @param input table|nil The input table for the create_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_listener(input)
 	return common.execute_aws_command_with_input({ "elbv2", "create-listener" }, input)
 end
 
 --- Creates an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the create_load_balancer command
+--- @param input table|nil The input table for the create_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_load_balancer(input)
 	return common.execute_aws_command_with_input({ "elbv2", "create-load-balancer" }, input)
 end
 
 --- Creates a rule for the specified listener
---- @param input table The input table for the create_rule command
+--- @param input table|nil The input table for the create_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rule(input)
 	return common.execute_aws_command_with_input({ "elbv2", "create-rule" }, input)
 end
 
 --- Creates a target group
---- @param input table The input table for the create_target_group command
+--- @param input table|nil The input table for the create_target_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_target_group(input)
 	return common.execute_aws_command_with_input({ "elbv2", "create-target-group" }, input)
 end
 
 --- Creates a trust store
---- @param input table The input table for the create_trust_store command
+--- @param input table|nil The input table for the create_trust_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_trust_store(input)
 	return common.execute_aws_command_with_input({ "elbv2", "create-trust-store" }, input)
 end
 
 --- Deletes the specified listener
---- @param input table The input table for the delete_listener command
+--- @param input table|nil The input table for the delete_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_listener(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-listener" }, input)
 end
 
 --- Deletes the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the delete_load_balancer command
+--- @param input table|nil The input table for the delete_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_load_balancer(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-load-balancer" }, input)
 end
 
 --- Deletes the specified rule
---- @param input table The input table for the delete_rule command
+--- @param input table|nil The input table for the delete_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-rule" }, input)
 end
 
 --- Deletes a shared trust store association
---- @param input table The input table for the delete_shared_trust_store_association command
+--- @param input table|nil The input table for the delete_shared_trust_store_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_shared_trust_store_association(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-shared-trust-store-association" }, input)
 end
 
 --- Deletes the specified target group
---- @param input table The input table for the delete_target_group command
+--- @param input table|nil The input table for the delete_target_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_target_group(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-target-group" }, input)
 end
 
 --- Deletes a trust store
---- @param input table The input table for the delete_trust_store command
+--- @param input table|nil The input table for the delete_trust_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_trust_store(input)
 	return common.execute_aws_command_with_input({ "elbv2", "delete-trust-store" }, input)
 end
 
 --- Deregisters the specified targets from the specified target group
---- @param input table The input table for the deregister_targets command
+--- @param input table|nil The input table for the deregister_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_targets(input)
 	return common.execute_aws_command_with_input({ "elbv2", "deregister-targets" }, input)
 end
 
 --- Describes the current Elastic Load Balancing resource limits for your Amazon Web Services account
---- @param input table The input table for the describe_account_limits command
+--- @param input table|nil The input table for the describe_account_limits command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_limits(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-account-limits" }, input)
 end
 
 --- Describes the capacity reservation status for the specified load balancer
---- @param input table The input table for the describe_capacity_reservation command
+--- @param input table|nil The input table for the describe_capacity_reservation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-capacity-reservation" }, input)
 end
 
 --- Describes the attributes for the specified listener
---- @param input table The input table for the describe_listener_attributes command
+--- @param input table|nil The input table for the describe_listener_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_listener_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-listener-attributes" }, input)
 end
 
 --- Describes the default certificate and the certificate list for the specified HTTPS or TLS listener
---- @param input table The input table for the describe_listener_certificates command
+--- @param input table|nil The input table for the describe_listener_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_listener_certificates(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-listener-certificates" }, input)
 end
 
 --- Describes the specified listeners or the listeners for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the describe_listeners command
+--- @param input table|nil The input table for the describe_listeners command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_listeners(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-listeners" }, input)
 end
 
 --- Describes the attributes for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the describe_load_balancer_attributes command
+--- @param input table|nil The input table for the describe_load_balancer_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_load_balancer_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-load-balancer-attributes" }, input)
 end
 
 --- Describes the specified load balancers or all of your load balancers
---- @param input table The input table for the describe_load_balancers command
+--- @param input table|nil The input table for the describe_load_balancers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_load_balancers(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-load-balancers" }, input)
 end
 
 --- Describes the specified rules or the rules for the specified listener
---- @param input table The input table for the describe_rules command
+--- @param input table|nil The input table for the describe_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rules(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-rules" }, input)
 end
 
 --- Describes the specified policies or all policies used for SSL negotiation
---- @param input table The input table for the describe_ssl_policies command
+--- @param input table|nil The input table for the describe_ssl_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ssl_policies(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-ssl-policies" }, input)
 end
 
 --- Describes the tags for the specified Elastic Load Balancing resources
---- @param input table The input table for the describe_tags command
+--- @param input table|nil The input table for the describe_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tags(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-tags" }, input)
 end
 
 --- Describes the attributes for the specified target group
---- @param input table The input table for the describe_target_group_attributes command
+--- @param input table|nil The input table for the describe_target_group_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_target_group_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-target-group-attributes" }, input)
 end
 
 --- Describes the specified target groups or all of your target groups
---- @param input table The input table for the describe_target_groups command
+--- @param input table|nil The input table for the describe_target_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_target_groups(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-target-groups" }, input)
 end
 
 --- Describes the health of the specified targets or all of your targets
---- @param input table The input table for the describe_target_health command
+--- @param input table|nil The input table for the describe_target_health command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_target_health(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-target-health" }, input)
 end
 
 --- Describes all resources associated with the specified trust store
---- @param input table The input table for the describe_trust_store_associations command
+--- @param input table|nil The input table for the describe_trust_store_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trust_store_associations(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-trust-store-associations" }, input)
 end
 
 --- Describes the revocation files in use by the specified trust store or revocation files
---- @param input table The input table for the describe_trust_store_revocations command
+--- @param input table|nil The input table for the describe_trust_store_revocations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trust_store_revocations(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-trust-store-revocations" }, input)
 end
 
 --- Describes all trust stores for the specified account
---- @param input table The input table for the describe_trust_stores command
+--- @param input table|nil The input table for the describe_trust_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trust_stores(input)
 	return common.execute_aws_command_with_input({ "elbv2", "describe-trust-stores" }, input)
 end
 
 --- Retrieves the resource policy for a specified resource
---- @param input table The input table for the get_resource_policy command
+--- @param input table|nil The input table for the get_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "elbv2", "get-resource-policy" }, input)
 end
 
 --- Retrieves the ca certificate bundle
---- @param input table The input table for the get_trust_store_ca_certificates_bundle command
+--- @param input table|nil The input table for the get_trust_store_ca_certificates_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trust_store_ca_certificates_bundle(input)
 	return common.execute_aws_command_with_input({ "elbv2", "get-trust-store-ca-certificates-bundle" }, input)
 end
 
 --- Retrieves the specified revocation file
---- @param input table The input table for the get_trust_store_revocation_content command
+--- @param input table|nil The input table for the get_trust_store_revocation_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trust_store_revocation_content(input)
 	return common.execute_aws_command_with_input({ "elbv2", "get-trust-store-revocation-content" }, input)
 end
 
 --- Modifies the capacity reservation of the specified load balancer
---- @param input table The input table for the modify_capacity_reservation command
+--- @param input table|nil The input table for the modify_capacity_reservation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-capacity-reservation" }, input)
 end
 
 --- [Application Load Balancers] Modify the IP pool associated to a load balancer
---- @param input table The input table for the modify_ip_pools command
+--- @param input table|nil The input table for the modify_ip_pools command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_ip_pools(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-ip-pools" }, input)
 end
 
 --- Replaces the specified properties of the specified listener
---- @param input table The input table for the modify_listener command
+--- @param input table|nil The input table for the modify_listener command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_listener(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-listener" }, input)
 end
 
 --- Modifies the specified attributes of the specified listener
---- @param input table The input table for the modify_listener_attributes command
+--- @param input table|nil The input table for the modify_listener_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_listener_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-listener-attributes" }, input)
 end
 
 --- Modifies the specified attributes of the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer
---- @param input table The input table for the modify_load_balancer_attributes command
+--- @param input table|nil The input table for the modify_load_balancer_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_load_balancer_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-load-balancer-attributes" }, input)
 end
 
 --- Replaces the specified properties of the specified rule
---- @param input table The input table for the modify_rule command
+--- @param input table|nil The input table for the modify_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_rule(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-rule" }, input)
 end
 
 --- Modifies the health checks used when evaluating the health state of the targets in the specified target group
---- @param input table The input table for the modify_target_group command
+--- @param input table|nil The input table for the modify_target_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_target_group(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-target-group" }, input)
 end
 
 --- Modifies the specified attributes of the specified target group
---- @param input table The input table for the modify_target_group_attributes command
+--- @param input table|nil The input table for the modify_target_group_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_target_group_attributes(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-target-group-attributes" }, input)
 end
 
 --- Update the ca certificate bundle for the specified trust store
---- @param input table The input table for the modify_trust_store command
+--- @param input table|nil The input table for the modify_trust_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_trust_store(input)
 	return common.execute_aws_command_with_input({ "elbv2", "modify-trust-store" }, input)
 end
 
 --- Registers the specified targets with the specified target group
---- @param input table The input table for the register_targets command
+--- @param input table|nil The input table for the register_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_targets(input)
 	return common.execute_aws_command_with_input({ "elbv2", "register-targets" }, input)
 end
 
 --- Removes the specified certificate from the certificate list for the specified HTTPS or TLS listener
---- @param input table The input table for the remove_listener_certificates command
+--- @param input table|nil The input table for the remove_listener_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_listener_certificates(input)
 	return common.execute_aws_command_with_input({ "elbv2", "remove-listener-certificates" }, input)
 end
 
 --- Removes the specified tags from the specified Elastic Load Balancing resources
---- @param input table The input table for the remove_tags command
+--- @param input table|nil The input table for the remove_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_tags(input)
 	return common.execute_aws_command_with_input({ "elbv2", "remove-tags" }, input)
 end
 
 --- Removes the specified revocation file from the specified trust store
---- @param input table The input table for the remove_trust_store_revocations command
+--- @param input table|nil The input table for the remove_trust_store_revocations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_trust_store_revocations(input)
 	return common.execute_aws_command_with_input({ "elbv2", "remove-trust-store-revocations" }, input)
 end
 
 --- Sets the type of IP addresses used by the subnets of the specified load balancer
---- @param input table The input table for the set_ip_address_type command
+--- @param input table|nil The input table for the set_ip_address_type command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_ip_address_type(input)
 	return common.execute_aws_command_with_input({ "elbv2", "set-ip-address-type" }, input)
 end
 
 --- Sets the priorities of the specified rules
---- @param input table The input table for the set_rule_priorities command
+--- @param input table|nil The input table for the set_rule_priorities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_rule_priorities(input)
 	return common.execute_aws_command_with_input({ "elbv2", "set-rule-priorities" }, input)
 end
 
 --- Associates the specified security groups with the specified Application Load Balancer or Network Load Balancer
---- @param input table The input table for the set_security_groups command
+--- @param input table|nil The input table for the set_security_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_security_groups(input)
 	return common.execute_aws_command_with_input({ "elbv2", "set-security-groups" }, input)
 end
 
 --- Enables the Availability Zones for the specified public subnets for the specified Application Load Balancer, Network Load Balancer or Gateway Load Balancer
---- @param input table The input table for the set_subnets command
+--- @param input table|nil The input table for the set_subnets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_subnets(input)
 	return common.execute_aws_command_with_input({ "elbv2", "set-subnets" }, input)

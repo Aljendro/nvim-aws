@@ -8,434 +8,434 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates an evidence folder to an assessment report in an Audit Manager assessment
---- @param input table The input table for the associate_assessment_report_evidence_folder command
+--- @param input table|nil The input table for the associate_assessment_report_evidence_folder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_assessment_report_evidence_folder(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "associate-assessment-report-evidence-folder" }, input)
 end
 
 --- Associates a list of evidence to an assessment report in an Audit Manager assessment
---- @param input table The input table for the batch_associate_assessment_report_evidence command
+--- @param input table|nil The input table for the batch_associate_assessment_report_evidence command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_assessment_report_evidence(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "batch-associate-assessment-report-evidence" }, input)
 end
 
 --- Creates a batch of delegations for an assessment in Audit Manager
---- @param input table The input table for the batch_create_delegation_by_assessment command
+--- @param input table|nil The input table for the batch_create_delegation_by_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_create_delegation_by_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "batch-create-delegation-by-assessment" }, input)
 end
 
 --- Deletes a batch of delegations for an assessment in Audit Manager
---- @param input table The input table for the batch_delete_delegation_by_assessment command
+--- @param input table|nil The input table for the batch_delete_delegation_by_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_delegation_by_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "batch-delete-delegation-by-assessment" }, input)
 end
 
 --- Disassociates a list of evidence from an assessment report in Audit Manager
---- @param input table The input table for the batch_disassociate_assessment_report_evidence command
+--- @param input table|nil The input table for the batch_disassociate_assessment_report_evidence command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_assessment_report_evidence(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "batch-disassociate-assessment-report-evidence" }, input)
 end
 
 --- Adds one or more pieces of evidence to a control in an Audit Manager assessment
---- @param input table The input table for the batch_import_evidence_to_assessment_control command
+--- @param input table|nil The input table for the batch_import_evidence_to_assessment_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_import_evidence_to_assessment_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "batch-import-evidence-to-assessment-control" }, input)
 end
 
 --- Creates an assessment in Audit Manager
---- @param input table The input table for the create_assessment command
+--- @param input table|nil The input table for the create_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "create-assessment" }, input)
 end
 
 --- Creates a custom framework in Audit Manager
---- @param input table The input table for the create_assessment_framework command
+--- @param input table|nil The input table for the create_assessment_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_assessment_framework(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "create-assessment-framework" }, input)
 end
 
 --- Creates an assessment report for the specified assessment
---- @param input table The input table for the create_assessment_report command
+--- @param input table|nil The input table for the create_assessment_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_assessment_report(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "create-assessment-report" }, input)
 end
 
 --- Creates a new custom control in Audit Manager
---- @param input table The input table for the create_control command
+--- @param input table|nil The input table for the create_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "create-control" }, input)
 end
 
 --- Deletes an assessment in Audit Manager
---- @param input table The input table for the delete_assessment command
+--- @param input table|nil The input table for the delete_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "delete-assessment" }, input)
 end
 
 --- Deletes a custom framework in Audit Manager
---- @param input table The input table for the delete_assessment_framework command
+--- @param input table|nil The input table for the delete_assessment_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assessment_framework(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "delete-assessment-framework" }, input)
 end
 
 --- Deletes a share request for a custom framework in Audit Manager
---- @param input table The input table for the delete_assessment_framework_share command
+--- @param input table|nil The input table for the delete_assessment_framework_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assessment_framework_share(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "delete-assessment-framework-share" }, input)
 end
 
 --- Deletes an assessment report in Audit Manager
---- @param input table The input table for the delete_assessment_report command
+--- @param input table|nil The input table for the delete_assessment_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assessment_report(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "delete-assessment-report" }, input)
 end
 
 --- Deletes a custom control in Audit Manager
---- @param input table The input table for the delete_control command
+--- @param input table|nil The input table for the delete_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "delete-control" }, input)
 end
 
 --- Deregisters an account in Audit Manager
---- @param input table The input table for the deregister_account command
+--- @param input table|nil The input table for the deregister_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_account(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "deregister-account" }, input)
 end
 
 --- Removes the specified Amazon Web Services account as a delegated administrator for Audit Manager
---- @param input table The input table for the deregister_organization_admin_account command
+--- @param input table|nil The input table for the deregister_organization_admin_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "deregister-organization-admin-account" }, input)
 end
 
 --- Disassociates an evidence folder from the specified assessment report in Audit Manager
---- @param input table The input table for the disassociate_assessment_report_evidence_folder command
+--- @param input table|nil The input table for the disassociate_assessment_report_evidence_folder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_assessment_report_evidence_folder(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "disassociate-assessment-report-evidence-folder" }, input)
 end
 
 --- Gets the registration status of an account in Audit Manager
---- @param input table The input table for the get_account_status command
+--- @param input table|nil The input table for the get_account_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_status(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-account-status" }, input)
 end
 
 --- Gets information about a specified assessment
---- @param input table The input table for the get_assessment command
+--- @param input table|nil The input table for the get_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-assessment" }, input)
 end
 
 --- Gets information about a specified framework
---- @param input table The input table for the get_assessment_framework command
+--- @param input table|nil The input table for the get_assessment_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_assessment_framework(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-assessment-framework" }, input)
 end
 
 --- Gets the URL of an assessment report in Audit Manager
---- @param input table The input table for the get_assessment_report_url command
+--- @param input table|nil The input table for the get_assessment_report_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_assessment_report_url(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-assessment-report-url" }, input)
 end
 
 --- Gets a list of changelogs from Audit Manager
---- @param input table The input table for the get_change_logs command
+--- @param input table|nil The input table for the get_change_logs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_change_logs(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-change-logs" }, input)
 end
 
 --- Gets information about a specified control
---- @param input table The input table for the get_control command
+--- @param input table|nil The input table for the get_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-control" }, input)
 end
 
 --- Gets a list of delegations from an audit owner to a delegate
---- @param input table The input table for the get_delegations command
+--- @param input table|nil The input table for the get_delegations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_delegations(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-delegations" }, input)
 end
 
 --- Gets information about a specified evidence item
---- @param input table The input table for the get_evidence command
+--- @param input table|nil The input table for the get_evidence command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence" }, input)
 end
 
 --- Gets all evidence from a specified evidence folder in Audit Manager
---- @param input table The input table for the get_evidence_by_evidence_folder command
+--- @param input table|nil The input table for the get_evidence_by_evidence_folder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence_by_evidence_folder(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence-by-evidence-folder" }, input)
 end
 
 --- Creates a presigned Amazon S3 URL that can be used to upload a file as manual evidence
---- @param input table The input table for the get_evidence_file_upload_url command
+--- @param input table|nil The input table for the get_evidence_file_upload_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence_file_upload_url(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence-file-upload-url" }, input)
 end
 
 --- Gets an evidence folder from a specified assessment in Audit Manager
---- @param input table The input table for the get_evidence_folder command
+--- @param input table|nil The input table for the get_evidence_folder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence_folder(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence-folder" }, input)
 end
 
 --- Gets the evidence folders from a specified assessment in Audit Manager
---- @param input table The input table for the get_evidence_folders_by_assessment command
+--- @param input table|nil The input table for the get_evidence_folders_by_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence_folders_by_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence-folders-by-assessment" }, input)
 end
 
 --- Gets a list of evidence folders that are associated with a specified control in an Audit Manager assessment
---- @param input table The input table for the get_evidence_folders_by_assessment_control command
+--- @param input table|nil The input table for the get_evidence_folders_by_assessment_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evidence_folders_by_assessment_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-evidence-folders-by-assessment-control" }, input)
 end
 
 --- Gets the latest analytics data for all your current active assessments
---- @param input table The input table for the get_insights command
+--- @param input table|nil The input table for the get_insights command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_insights(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-insights" }, input)
 end
 
 --- Gets the latest analytics data for a specific active assessment
---- @param input table The input table for the get_insights_by_assessment command
+--- @param input table|nil The input table for the get_insights_by_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_insights_by_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-insights-by-assessment" }, input)
 end
 
 --- Gets the name of the delegated Amazon Web Services administrator account for a specified organization
---- @param input table The input table for the get_organization_admin_account command
+--- @param input table|nil The input table for the get_organization_admin_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-organization-admin-account" }, input)
 end
 
 --- Gets a list of the Amazon Web Services from which Audit Manager can collect evidence
---- @param input table The input table for the get_services_in_scope command
+--- @param input table|nil The input table for the get_services_in_scope command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_services_in_scope(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-services-in-scope" }, input)
 end
 
 --- Gets the settings for a specified Amazon Web Services account
---- @param input table The input table for the get_settings command
+--- @param input table|nil The input table for the get_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_settings(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-settings" }, input)
 end
 
 --- Lists the latest analytics data for controls within a specific control domain and a specific active assessment
---- @param input table The input table for the list_assessment_control_insights_by_control_domain command
+--- @param input table|nil The input table for the list_assessment_control_insights_by_control_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assessment_control_insights_by_control_domain(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-assessment-control-insights-by-control-domain" }, input)
 end
 
 --- Returns a list of sent or received share requests for custom frameworks in Audit Manager
---- @param input table The input table for the list_assessment_framework_share_requests command
+--- @param input table|nil The input table for the list_assessment_framework_share_requests command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assessment_framework_share_requests(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-assessment-framework-share-requests" }, input)
 end
 
 --- Returns a list of the frameworks that are available in the Audit Manager framework library
---- @param input table The input table for the list_assessment_frameworks command
+--- @param input table|nil The input table for the list_assessment_frameworks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assessment_frameworks(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-assessment-frameworks" }, input)
 end
 
 --- Returns a list of assessment reports created in Audit Manager
---- @param input table The input table for the list_assessment_reports command
+--- @param input table|nil The input table for the list_assessment_reports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assessment_reports(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-assessment-reports" }, input)
 end
 
 --- Returns a list of current and past assessments from Audit Manager
---- @param input table The input table for the list_assessments command
+--- @param input table|nil The input table for the list_assessments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assessments(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-assessments" }, input)
 end
 
 --- Lists the latest analytics data for control domains across all of your active assessments
---- @param input table The input table for the list_control_domain_insights command
+--- @param input table|nil The input table for the list_control_domain_insights command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_control_domain_insights(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-control-domain-insights" }, input)
 end
 
 --- Lists analytics data for control domains within a specified active assessment
---- @param input table The input table for the list_control_domain_insights_by_assessment command
+--- @param input table|nil The input table for the list_control_domain_insights_by_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_control_domain_insights_by_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-control-domain-insights-by-assessment" }, input)
 end
 
 --- Lists the latest analytics data for controls within a specific control domain across all active assessments
---- @param input table The input table for the list_control_insights_by_control_domain command
+--- @param input table|nil The input table for the list_control_insights_by_control_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_control_insights_by_control_domain(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-control-insights-by-control-domain" }, input)
 end
 
 --- Returns a list of controls from Audit Manager
---- @param input table The input table for the list_controls command
+--- @param input table|nil The input table for the list_controls command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_controls(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-controls" }, input)
 end
 
 --- Returns a list of keywords that are pre-mapped to the specified control data source
---- @param input table The input table for the list_keywords_for_data_source command
+--- @param input table|nil The input table for the list_keywords_for_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_keywords_for_data_source(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-keywords-for-data-source" }, input)
 end
 
 --- Returns a list of all Audit Manager notifications
---- @param input table The input table for the list_notifications command
+--- @param input table|nil The input table for the list_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notifications(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-notifications" }, input)
 end
 
 --- Returns a list of tags for the specified resource in Audit Manager
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "list-tags-for-resource" }, input)
 end
 
 --- Enables Audit Manager for the specified Amazon Web Services account
---- @param input table The input table for the register_account command
+--- @param input table|nil The input table for the register_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_account(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "register-account" }, input)
 end
 
 --- Enables an Amazon Web Services account within the organization as the delegated administrator for Audit Manager
---- @param input table The input table for the register_organization_admin_account command
+--- @param input table|nil The input table for the register_organization_admin_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "register-organization-admin-account" }, input)
 end
 
 --- Creates a share request for a custom framework in Audit Manager
---- @param input table The input table for the start_assessment_framework_share command
+--- @param input table|nil The input table for the start_assessment_framework_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_assessment_framework_share(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "start-assessment-framework-share" }, input)
 end
 
 --- Tags the specified resource in Audit Manager
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "tag-resource" }, input)
 end
 
 --- Removes a tag from a resource in Audit Manager
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "untag-resource" }, input)
 end
 
 --- Edits an Audit Manager assessment
---- @param input table The input table for the update_assessment command
+--- @param input table|nil The input table for the update_assessment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment" }, input)
 end
 
 --- Updates a control within an assessment in Audit Manager
---- @param input table The input table for the update_assessment_control command
+--- @param input table|nil The input table for the update_assessment_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment-control" }, input)
 end
 
 --- Updates the status of a control set in an Audit Manager assessment
---- @param input table The input table for the update_assessment_control_set_status command
+--- @param input table|nil The input table for the update_assessment_control_set_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment_control_set_status(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment-control-set-status" }, input)
 end
 
 --- Updates a custom framework in Audit Manager
---- @param input table The input table for the update_assessment_framework command
+--- @param input table|nil The input table for the update_assessment_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment_framework(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment-framework" }, input)
 end
 
 --- Updates a share request for a custom framework in Audit Manager
---- @param input table The input table for the update_assessment_framework_share command
+--- @param input table|nil The input table for the update_assessment_framework_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment_framework_share(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment-framework-share" }, input)
 end
 
 --- Updates the status of an assessment in Audit Manager
---- @param input table The input table for the update_assessment_status command
+--- @param input table|nil The input table for the update_assessment_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assessment_status(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-assessment-status" }, input)
 end
 
 --- Updates a custom control in Audit Manager
---- @param input table The input table for the update_control command
+--- @param input table|nil The input table for the update_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_control(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-control" }, input)
 end
 
 --- Updates Audit Manager settings for the current account
---- @param input table The input table for the update_settings command
+--- @param input table|nil The input table for the update_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_settings(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "update-settings" }, input)
 end
 
 --- Validates the integrity of an assessment report in Audit Manager
---- @param input table The input table for the validate_assessment_report_integrity command
+--- @param input table|nil The input table for the validate_assessment_report_integrity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_assessment_report_integrity(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "validate-assessment-report-integrity" }, input)

@@ -8,119 +8,119 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates the user to an EC2 instance to utilize user-based subscriptions
---- @param input table The input table for the associate_user command
+--- @param input table|nil The input table for the associate_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_user(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "associate-user" }, input)
 end
 
 --- Creates a network endpoint for the Remote Desktop Services (RDS) license server
---- @param input table The input table for the create_license_server_endpoint command
+--- @param input table|nil The input table for the create_license_server_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_server_endpoint(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "create-license-server-endpoint" }, input)
 end
 
 --- Deletes a LicenseServerEndpoint resource
---- @param input table The input table for the delete_license_server_endpoint command
+--- @param input table|nil The input table for the delete_license_server_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_license_server_endpoint(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "delete-license-server-endpoint" }, input)
 end
 
 --- Deregisters the Active Directory identity provider from License Manager user-based subscriptions
---- @param input table The input table for the deregister_identity_provider command
+--- @param input table|nil The input table for the deregister_identity_provider command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_identity_provider(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "deregister-identity-provider" }, input)
 end
 
 --- Disassociates the user from an EC2 instance providing user-based subscriptions
---- @param input table The input table for the disassociate_user command
+--- @param input table|nil The input table for the disassociate_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_user(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "disassociate-user" }, input)
 end
 
 --- Lists the Active Directory identity providers for user-based subscriptions
---- @param input table The input table for the list_identity_providers command
+--- @param input table|nil The input table for the list_identity_providers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_identity_providers(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-identity-providers" }, input)
 end
 
 --- Lists the EC2 instances providing user-based subscriptions
---- @param input table The input table for the list_instances command
+--- @param input table|nil The input table for the list_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_instances(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-instances" }, input)
 end
 
 --- List the Remote Desktop Services (RDS) License Server endpoints
---- @param input table The input table for the list_license_server_endpoints command
+--- @param input table|nil The input table for the list_license_server_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_server_endpoints(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-license-server-endpoints" }, input)
 end
 
 --- Lists the user-based subscription products available from an identity provider
---- @param input table The input table for the list_product_subscriptions command
+--- @param input table|nil The input table for the list_product_subscriptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_product_subscriptions(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-product-subscriptions" }, input)
 end
 
 --- Returns the list of tags for the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-tags-for-resource" }, input)
 end
 
 --- Lists user associations for an identity provider
---- @param input table The input table for the list_user_associations command
+--- @param input table|nil The input table for the list_user_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_user_associations(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-user-associations" }, input)
 end
 
 --- Registers an identity provider for user-based subscriptions
---- @param input table The input table for the register_identity_provider command
+--- @param input table|nil The input table for the register_identity_provider command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_identity_provider(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "register-identity-provider" }, input)
 end
 
 --- Starts a product subscription for a user with the specified identity provider
---- @param input table The input table for the start_product_subscription command
+--- @param input table|nil The input table for the start_product_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_product_subscription(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "start-product-subscription" }, input)
 end
 
 --- Stops a product subscription for a user with the specified identity provider
---- @param input table The input table for the stop_product_subscription command
+--- @param input table|nil The input table for the stop_product_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_product_subscription(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "stop-product-subscription" }, input)
 end
 
 --- Adds tags to a resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "tag-resource" }, input)
 end
 
 --- Removes tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "untag-resource" }, input)
 end
 
 --- Updates additional product configuration settings for the registered identity provider
---- @param input table The input table for the update_identity_provider_settings command
+--- @param input table|nil The input table for the update_identity_provider_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_identity_provider_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "update-identity-provider-settings" }, input)

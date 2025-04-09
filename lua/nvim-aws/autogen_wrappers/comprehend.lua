@@ -8,595 +8,595 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Determines the dominant language of the input text for a batch of documents
---- @param input table The input table for the batch_detect_dominant_language command
+--- @param input table|nil The input table for the batch_detect_dominant_language command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_dominant_language(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-dominant-language" }, input)
 end
 
 --- Inspects the text of a batch of documents for named entities and returns information about them
---- @param input table The input table for the batch_detect_entities command
+--- @param input table|nil The input table for the batch_detect_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_entities(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-entities" }, input)
 end
 
 --- Detects the key noun phrases found in a batch of documents
---- @param input table The input table for the batch_detect_key_phrases command
+--- @param input table|nil The input table for the batch_detect_key_phrases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_key_phrases(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-key-phrases" }, input)
 end
 
 --- Inspects a batch of documents and returns an inference of the prevailing sentiment, POSITIVE, NEUTRAL, MIXED, or NEGATIVE, in each one
---- @param input table The input table for the batch_detect_sentiment command
+--- @param input table|nil The input table for the batch_detect_sentiment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_sentiment(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-sentiment" }, input)
 end
 
 --- Inspects the text of a batch of documents for the syntax and part of speech of the words in the document and returns information about them
---- @param input table The input table for the batch_detect_syntax command
+--- @param input table|nil The input table for the batch_detect_syntax command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_syntax(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-syntax" }, input)
 end
 
 --- Inspects a batch of documents and returns a sentiment analysis for each entity identified in the documents
---- @param input table The input table for the batch_detect_targeted_sentiment command
+--- @param input table|nil The input table for the batch_detect_targeted_sentiment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_detect_targeted_sentiment(input)
 	return common.execute_aws_command_with_input({ "comprehend", "batch-detect-targeted-sentiment" }, input)
 end
 
 --- Creates a classification request to analyze a single document in real-time
---- @param input table The input table for the classify_document command
+--- @param input table|nil The input table for the classify_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.classify_document(input)
 	return common.execute_aws_command_with_input({ "comprehend", "classify-document" }, input)
 end
 
 --- Analyzes input text for the presence of personally identifiable information (PII) and returns the labels of identified PII entity types such as name, address, bank account number, or phone number
---- @param input table The input table for the contains_pii_entities command
+--- @param input table|nil The input table for the contains_pii_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.contains_pii_entities(input)
 	return common.execute_aws_command_with_input({ "comprehend", "contains-pii-entities" }, input)
 end
 
 --- Creates a dataset to upload training or test data for a model associated with a flywheel
---- @param input table The input table for the create_dataset command
+--- @param input table|nil The input table for the create_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "comprehend", "create-dataset" }, input)
 end
 
 --- Creates a new document classifier that you can use to categorize documents
---- @param input table The input table for the create_document_classifier command
+--- @param input table|nil The input table for the create_document_classifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_document_classifier(input)
 	return common.execute_aws_command_with_input({ "comprehend", "create-document-classifier" }, input)
 end
 
 --- Creates a model-specific endpoint for synchronous inference for a previously trained custom model For information about endpoints, see Managing endpoints
---- @param input table The input table for the create_endpoint command
+--- @param input table|nil The input table for the create_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_endpoint(input)
 	return common.execute_aws_command_with_input({ "comprehend", "create-endpoint" }, input)
 end
 
 --- Creates an entity recognizer using submitted files
---- @param input table The input table for the create_entity_recognizer command
+--- @param input table|nil The input table for the create_entity_recognizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_entity_recognizer(input)
 	return common.execute_aws_command_with_input({ "comprehend", "create-entity-recognizer" }, input)
 end
 
 --- A flywheel is an Amazon Web Services resource that orchestrates the ongoing training of a model for custom classification or custom entity recognition
---- @param input table The input table for the create_flywheel command
+--- @param input table|nil The input table for the create_flywheel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_flywheel(input)
 	return common.execute_aws_command_with_input({ "comprehend", "create-flywheel" }, input)
 end
 
 --- Deletes a previously created document classifier Only those classifiers that are in terminated states (IN_ERROR, TRAINED) will be deleted
---- @param input table The input table for the delete_document_classifier command
+--- @param input table|nil The input table for the delete_document_classifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_document_classifier(input)
 	return common.execute_aws_command_with_input({ "comprehend", "delete-document-classifier" }, input)
 end
 
 --- Deletes a model-specific endpoint for a previously-trained custom model
---- @param input table The input table for the delete_endpoint command
+--- @param input table|nil The input table for the delete_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_endpoint(input)
 	return common.execute_aws_command_with_input({ "comprehend", "delete-endpoint" }, input)
 end
 
 --- Deletes an entity recognizer
---- @param input table The input table for the delete_entity_recognizer command
+--- @param input table|nil The input table for the delete_entity_recognizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_entity_recognizer(input)
 	return common.execute_aws_command_with_input({ "comprehend", "delete-entity-recognizer" }, input)
 end
 
 --- Deletes a flywheel
---- @param input table The input table for the delete_flywheel command
+--- @param input table|nil The input table for the delete_flywheel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_flywheel(input)
 	return common.execute_aws_command_with_input({ "comprehend", "delete-flywheel" }, input)
 end
 
 --- Deletes a resource-based policy that is attached to a custom model
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "comprehend", "delete-resource-policy" }, input)
 end
 
 --- Returns information about the dataset that you specify
---- @param input table The input table for the describe_dataset command
+--- @param input table|nil The input table for the describe_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-dataset" }, input)
 end
 
 --- Gets the properties associated with a document classification job
---- @param input table The input table for the describe_document_classification_job command
+--- @param input table|nil The input table for the describe_document_classification_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_document_classification_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-document-classification-job" }, input)
 end
 
 --- Gets the properties associated with a document classifier
---- @param input table The input table for the describe_document_classifier command
+--- @param input table|nil The input table for the describe_document_classifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_document_classifier(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-document-classifier" }, input)
 end
 
 --- Gets the properties associated with a dominant language detection job
---- @param input table The input table for the describe_dominant_language_detection_job command
+--- @param input table|nil The input table for the describe_dominant_language_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dominant_language_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-dominant-language-detection-job" }, input)
 end
 
 --- Gets the properties associated with a specific endpoint
---- @param input table The input table for the describe_endpoint command
+--- @param input table|nil The input table for the describe_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoint(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-endpoint" }, input)
 end
 
 --- Gets the properties associated with an entities detection job
---- @param input table The input table for the describe_entities_detection_job command
+--- @param input table|nil The input table for the describe_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-entities-detection-job" }, input)
 end
 
 --- Provides details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata, metrics, and so on
---- @param input table The input table for the describe_entity_recognizer command
+--- @param input table|nil The input table for the describe_entity_recognizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity_recognizer(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-entity-recognizer" }, input)
 end
 
 --- Gets the status and details of an events detection job
---- @param input table The input table for the describe_events_detection_job command
+--- @param input table|nil The input table for the describe_events_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-events-detection-job" }, input)
 end
 
 --- Provides configuration information about the flywheel
---- @param input table The input table for the describe_flywheel command
+--- @param input table|nil The input table for the describe_flywheel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flywheel(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-flywheel" }, input)
 end
 
 --- Retrieve the configuration properties of a flywheel iteration
---- @param input table The input table for the describe_flywheel_iteration command
+--- @param input table|nil The input table for the describe_flywheel_iteration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flywheel_iteration(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-flywheel-iteration" }, input)
 end
 
 --- Gets the properties associated with a key phrases detection job
---- @param input table The input table for the describe_key_phrases_detection_job command
+--- @param input table|nil The input table for the describe_key_phrases_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_key_phrases_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-key-phrases-detection-job" }, input)
 end
 
 --- Gets the properties associated with a PII entities detection job
---- @param input table The input table for the describe_pii_entities_detection_job command
+--- @param input table|nil The input table for the describe_pii_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pii_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-pii-entities-detection-job" }, input)
 end
 
 --- Gets the details of a resource-based policy that is attached to a custom model, including the JSON body of the policy
---- @param input table The input table for the describe_resource_policy command
+--- @param input table|nil The input table for the describe_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource_policy(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-resource-policy" }, input)
 end
 
 --- Gets the properties associated with a sentiment detection job
---- @param input table The input table for the describe_sentiment_detection_job command
+--- @param input table|nil The input table for the describe_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-sentiment-detection-job" }, input)
 end
 
 --- Gets the properties associated with a targeted sentiment detection job
---- @param input table The input table for the describe_targeted_sentiment_detection_job command
+--- @param input table|nil The input table for the describe_targeted_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_targeted_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-targeted-sentiment-detection-job" }, input)
 end
 
 --- Gets the properties associated with a topic detection job
---- @param input table The input table for the describe_topics_detection_job command
+--- @param input table|nil The input table for the describe_topics_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_topics_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "describe-topics-detection-job" }, input)
 end
 
 --- Determines the dominant language of the input text
---- @param input table The input table for the detect_dominant_language command
+--- @param input table|nil The input table for the detect_dominant_language command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_dominant_language(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-dominant-language" }, input)
 end
 
 --- Detects named entities in input text when you use the pre-trained model
---- @param input table The input table for the detect_entities command
+--- @param input table|nil The input table for the detect_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_entities(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-entities" }, input)
 end
 
 --- Detects the key noun phrases found in the text
---- @param input table The input table for the detect_key_phrases command
+--- @param input table|nil The input table for the detect_key_phrases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_key_phrases(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-key-phrases" }, input)
 end
 
 --- Inspects the input text for entities that contain personally identifiable information (PII) and returns information about them
---- @param input table The input table for the detect_pii_entities command
+--- @param input table|nil The input table for the detect_pii_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_pii_entities(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-pii-entities" }, input)
 end
 
 --- Inspects text and returns an inference of the prevailing sentiment (POSITIVE, NEUTRAL, MIXED, or NEGATIVE)
---- @param input table The input table for the detect_sentiment command
+--- @param input table|nil The input table for the detect_sentiment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_sentiment(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-sentiment" }, input)
 end
 
 --- Inspects text for syntax and the part of speech of words in the document
---- @param input table The input table for the detect_syntax command
+--- @param input table|nil The input table for the detect_syntax command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_syntax(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-syntax" }, input)
 end
 
 --- Inspects the input text and returns a sentiment analysis for each entity identified in the text
---- @param input table The input table for the detect_targeted_sentiment command
+--- @param input table|nil The input table for the detect_targeted_sentiment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_targeted_sentiment(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-targeted-sentiment" }, input)
 end
 
 --- Performs toxicity analysis on the list of text strings that you provide as input
---- @param input table The input table for the detect_toxic_content command
+--- @param input table|nil The input table for the detect_toxic_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_toxic_content(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-toxic-content" }, input)
 end
 
 --- Creates a new custom model that replicates a source custom model that you import
---- @param input table The input table for the import_model command
+--- @param input table|nil The input table for the import_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_model(input)
 	return common.execute_aws_command_with_input({ "comprehend", "import-model" }, input)
 end
 
 --- List the datasets that you have configured in this Region
---- @param input table The input table for the list_datasets command
+--- @param input table|nil The input table for the list_datasets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-datasets" }, input)
 end
 
 --- Gets a list of the documentation classification jobs that you have submitted
---- @param input table The input table for the list_document_classification_jobs command
+--- @param input table|nil The input table for the list_document_classification_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_document_classification_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-document-classification-jobs" }, input)
 end
 
 --- Gets a list of summaries of the document classifiers that you have created
---- @param input table The input table for the list_document_classifier_summaries command
+--- @param input table|nil The input table for the list_document_classifier_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_document_classifier_summaries(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-document-classifier-summaries" }, input)
 end
 
 --- Gets a list of the document classifiers that you have created
---- @param input table The input table for the list_document_classifiers command
+--- @param input table|nil The input table for the list_document_classifiers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_document_classifiers(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-document-classifiers" }, input)
 end
 
 --- Gets a list of the dominant language detection jobs that you have submitted
---- @param input table The input table for the list_dominant_language_detection_jobs command
+--- @param input table|nil The input table for the list_dominant_language_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dominant_language_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-dominant-language-detection-jobs" }, input)
 end
 
 --- Gets a list of all existing endpoints that you've created
---- @param input table The input table for the list_endpoints command
+--- @param input table|nil The input table for the list_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_endpoints(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-endpoints" }, input)
 end
 
 --- Gets a list of the entity detection jobs that you have submitted
---- @param input table The input table for the list_entities_detection_jobs command
+--- @param input table|nil The input table for the list_entities_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entities_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-entities-detection-jobs" }, input)
 end
 
 --- Gets a list of summaries for the entity recognizers that you have created
---- @param input table The input table for the list_entity_recognizer_summaries command
+--- @param input table|nil The input table for the list_entity_recognizer_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entity_recognizer_summaries(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-entity-recognizer-summaries" }, input)
 end
 
 --- Gets a list of the properties of all entity recognizers that you created, including recognizers currently in training
---- @param input table The input table for the list_entity_recognizers command
+--- @param input table|nil The input table for the list_entity_recognizers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entity_recognizers(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-entity-recognizers" }, input)
 end
 
 --- Gets a list of the events detection jobs that you have submitted
---- @param input table The input table for the list_events_detection_jobs command
+--- @param input table|nil The input table for the list_events_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_events_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-events-detection-jobs" }, input)
 end
 
 --- Information about the history of a flywheel iteration
---- @param input table The input table for the list_flywheel_iteration_history command
+--- @param input table|nil The input table for the list_flywheel_iteration_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flywheel_iteration_history(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-flywheel-iteration-history" }, input)
 end
 
 --- Gets a list of the flywheels that you have created
---- @param input table The input table for the list_flywheels command
+--- @param input table|nil The input table for the list_flywheels command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flywheels(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-flywheels" }, input)
 end
 
 --- Get a list of key phrase detection jobs that you have submitted
---- @param input table The input table for the list_key_phrases_detection_jobs command
+--- @param input table|nil The input table for the list_key_phrases_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_key_phrases_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-key-phrases-detection-jobs" }, input)
 end
 
 --- Gets a list of the PII entity detection jobs that you have submitted
---- @param input table The input table for the list_pii_entities_detection_jobs command
+--- @param input table|nil The input table for the list_pii_entities_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pii_entities_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-pii-entities-detection-jobs" }, input)
 end
 
 --- Gets a list of sentiment detection jobs that you have submitted
---- @param input table The input table for the list_sentiment_detection_jobs command
+--- @param input table|nil The input table for the list_sentiment_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sentiment_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-sentiment-detection-jobs" }, input)
 end
 
 --- Lists all tags associated with a given Amazon Comprehend resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-tags-for-resource" }, input)
 end
 
 --- Gets a list of targeted sentiment detection jobs that you have submitted
---- @param input table The input table for the list_targeted_sentiment_detection_jobs command
+--- @param input table|nil The input table for the list_targeted_sentiment_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_targeted_sentiment_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-targeted-sentiment-detection-jobs" }, input)
 end
 
 --- Gets a list of the topic detection jobs that you have submitted
---- @param input table The input table for the list_topics_detection_jobs command
+--- @param input table|nil The input table for the list_topics_detection_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_topics_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehend", "list-topics-detection-jobs" }, input)
 end
 
 --- Attaches a resource-based policy to a custom model
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "comprehend", "put-resource-policy" }, input)
 end
 
 --- Starts an asynchronous document classification job using a custom classification model
---- @param input table The input table for the start_document_classification_job command
+--- @param input table|nil The input table for the start_document_classification_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_document_classification_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-document-classification-job" }, input)
 end
 
 --- Starts an asynchronous dominant language detection job for a collection of documents
---- @param input table The input table for the start_dominant_language_detection_job command
+--- @param input table|nil The input table for the start_dominant_language_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_dominant_language_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-dominant-language-detection-job" }, input)
 end
 
 --- Starts an asynchronous entity detection job for a collection of documents
---- @param input table The input table for the start_entities_detection_job command
+--- @param input table|nil The input table for the start_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-entities-detection-job" }, input)
 end
 
 --- Starts an asynchronous event detection job for a collection of documents
---- @param input table The input table for the start_events_detection_job command
+--- @param input table|nil The input table for the start_events_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_events_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-events-detection-job" }, input)
 end
 
 --- Start the flywheel iteration
---- @param input table The input table for the start_flywheel_iteration command
+--- @param input table|nil The input table for the start_flywheel_iteration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_flywheel_iteration(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-flywheel-iteration" }, input)
 end
 
 --- Starts an asynchronous key phrase detection job for a collection of documents
---- @param input table The input table for the start_key_phrases_detection_job command
+--- @param input table|nil The input table for the start_key_phrases_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_key_phrases_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-key-phrases-detection-job" }, input)
 end
 
 --- Starts an asynchronous PII entity detection job for a collection of documents
---- @param input table The input table for the start_pii_entities_detection_job command
+--- @param input table|nil The input table for the start_pii_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_pii_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-pii-entities-detection-job" }, input)
 end
 
 --- Starts an asynchronous sentiment detection job for a collection of documents
---- @param input table The input table for the start_sentiment_detection_job command
+--- @param input table|nil The input table for the start_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-sentiment-detection-job" }, input)
 end
 
 --- Starts an asynchronous targeted sentiment detection job for a collection of documents
---- @param input table The input table for the start_targeted_sentiment_detection_job command
+--- @param input table|nil The input table for the start_targeted_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_targeted_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-targeted-sentiment-detection-job" }, input)
 end
 
 --- Starts an asynchronous topic detection job
---- @param input table The input table for the start_topics_detection_job command
+--- @param input table|nil The input table for the start_topics_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_topics_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "start-topics-detection-job" }, input)
 end
 
 --- Stops a dominant language detection job in progress
---- @param input table The input table for the stop_dominant_language_detection_job command
+--- @param input table|nil The input table for the stop_dominant_language_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_dominant_language_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-dominant-language-detection-job" }, input)
 end
 
 --- Stops an entities detection job in progress
---- @param input table The input table for the stop_entities_detection_job command
+--- @param input table|nil The input table for the stop_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-entities-detection-job" }, input)
 end
 
 --- Stops an events detection job in progress
---- @param input table The input table for the stop_events_detection_job command
+--- @param input table|nil The input table for the stop_events_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_events_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-events-detection-job" }, input)
 end
 
 --- Stops a key phrases detection job in progress
---- @param input table The input table for the stop_key_phrases_detection_job command
+--- @param input table|nil The input table for the stop_key_phrases_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_key_phrases_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-key-phrases-detection-job" }, input)
 end
 
 --- Stops a PII entities detection job in progress
---- @param input table The input table for the stop_pii_entities_detection_job command
+--- @param input table|nil The input table for the stop_pii_entities_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_pii_entities_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-pii-entities-detection-job" }, input)
 end
 
 --- Stops a sentiment detection job in progress
---- @param input table The input table for the stop_sentiment_detection_job command
+--- @param input table|nil The input table for the stop_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-sentiment-detection-job" }, input)
 end
 
 --- Stops a targeted sentiment detection job in progress
---- @param input table The input table for the stop_targeted_sentiment_detection_job command
+--- @param input table|nil The input table for the stop_targeted_sentiment_detection_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_targeted_sentiment_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-targeted-sentiment-detection-job" }, input)
 end
 
 --- Stops a document classifier training job while in progress
---- @param input table The input table for the stop_training_document_classifier command
+--- @param input table|nil The input table for the stop_training_document_classifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_training_document_classifier(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-training-document-classifier" }, input)
 end
 
 --- Stops an entity recognizer training job while in progress
---- @param input table The input table for the stop_training_entity_recognizer command
+--- @param input table|nil The input table for the stop_training_entity_recognizer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_training_entity_recognizer(input)
 	return common.execute_aws_command_with_input({ "comprehend", "stop-training-entity-recognizer" }, input)
 end
 
 --- Associates a specific tag with an Amazon Comprehend resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "comprehend", "tag-resource" }, input)
 end
 
 --- Removes a specific tag associated with an Amazon Comprehend resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "comprehend", "untag-resource" }, input)
 end
 
 --- Updates information about the specified endpoint
---- @param input table The input table for the update_endpoint command
+--- @param input table|nil The input table for the update_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_endpoint(input)
 	return common.execute_aws_command_with_input({ "comprehend", "update-endpoint" }, input)
 end
 
 --- Update the configuration information for an existing flywheel
---- @param input table The input table for the update_flywheel command
+--- @param input table|nil The input table for the update_flywheel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flywheel(input)
 	return common.execute_aws_command_with_input({ "comprehend", "update-flywheel" }, input)

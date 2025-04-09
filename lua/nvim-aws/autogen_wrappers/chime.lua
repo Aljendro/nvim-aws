@@ -8,434 +8,434 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates a phone number with the specified Amazon Chime user
---- @param input table The input table for the associate_phone_number_with_user command
+--- @param input table|nil The input table for the associate_phone_number_with_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_phone_number_with_user(input)
 	return common.execute_aws_command_with_input({ "chime", "associate-phone-number-with-user" }, input)
 end
 
 --- Associates the specified sign-in delegate groups with the specified Amazon Chime account
---- @param input table The input table for the associate_signin_delegate_groups_with_account command
+--- @param input table|nil The input table for the associate_signin_delegate_groups_with_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_signin_delegate_groups_with_account(input)
 	return common.execute_aws_command_with_input({ "chime", "associate-signin-delegate-groups-with-account" }, input)
 end
 
 --- Adds up to 50 members to a chat room in an Amazon Chime Enterprise account
---- @param input table The input table for the batch_create_room_membership command
+--- @param input table|nil The input table for the batch_create_room_membership command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_create_room_membership(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-create-room-membership" }, input)
 end
 
 --- Moves phone numbers into the Deletion queue
---- @param input table The input table for the batch_delete_phone_number command
+--- @param input table|nil The input table for the batch_delete_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-delete-phone-number" }, input)
 end
 
 --- Suspends up to 50 users from a Team or EnterpriseLWA Amazon Chime account
---- @param input table The input table for the batch_suspend_user command
+--- @param input table|nil The input table for the batch_suspend_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_suspend_user(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-suspend-user" }, input)
 end
 
 --- Removes the suspension from up to 50 previously suspended users for the specified Amazon Chime EnterpriseLWA account
---- @param input table The input table for the batch_unsuspend_user command
+--- @param input table|nil The input table for the batch_unsuspend_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_unsuspend_user(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-unsuspend-user" }, input)
 end
 
 --- Updates phone number product types or calling names
---- @param input table The input table for the batch_update_phone_number command
+--- @param input table|nil The input table for the batch_update_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-update-phone-number" }, input)
 end
 
 --- Updates user details within the UpdateUserRequestItem object for up to 20 users for the specified Amazon Chime account
---- @param input table The input table for the batch_update_user command
+--- @param input table|nil The input table for the batch_update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_user(input)
 	return common.execute_aws_command_with_input({ "chime", "batch-update-user" }, input)
 end
 
 --- Creates an Amazon Chime account under the administrator's AWS account
---- @param input table The input table for the create_account command
+--- @param input table|nil The input table for the create_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_account(input)
 	return common.execute_aws_command_with_input({ "chime", "create-account" }, input)
 end
 
 --- Creates a bot for an Amazon Chime Enterprise account
---- @param input table The input table for the create_bot command
+--- @param input table|nil The input table for the create_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bot(input)
 	return common.execute_aws_command_with_input({ "chime", "create-bot" }, input)
 end
 
 --- Uses the join token and call metadata in a meeting request (From number, To number, and so forth) to initiate an outbound call to a public switched telephone network (PSTN) and join them into a Chime meeting
---- @param input table The input table for the create_meeting_dial_out command
+--- @param input table|nil The input table for the create_meeting_dial_out command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_meeting_dial_out(input)
 	return common.execute_aws_command_with_input({ "chime", "create-meeting-dial-out" }, input)
 end
 
 --- Creates an order for phone numbers to be provisioned
---- @param input table The input table for the create_phone_number_order command
+--- @param input table|nil The input table for the create_phone_number_order command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_phone_number_order(input)
 	return common.execute_aws_command_with_input({ "chime", "create-phone-number-order" }, input)
 end
 
 --- Creates a chat room for the specified Amazon Chime Enterprise account
---- @param input table The input table for the create_room command
+--- @param input table|nil The input table for the create_room command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_room(input)
 	return common.execute_aws_command_with_input({ "chime", "create-room" }, input)
 end
 
 --- Adds a member to a chat room in an Amazon Chime Enterprise account
---- @param input table The input table for the create_room_membership command
+--- @param input table|nil The input table for the create_room_membership command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_room_membership(input)
 	return common.execute_aws_command_with_input({ "chime", "create-room-membership" }, input)
 end
 
 --- Creates a user under the specified Amazon Chime account
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "chime", "create-user" }, input)
 end
 
 --- Deletes the specified Amazon Chime account
---- @param input table The input table for the delete_account command
+--- @param input table|nil The input table for the delete_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account(input)
 	return common.execute_aws_command_with_input({ "chime", "delete-account" }, input)
 end
 
 --- Deletes the events configuration that allows a bot to receive outgoing events
---- @param input table The input table for the delete_events_configuration command
+--- @param input table|nil The input table for the delete_events_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_events_configuration(input)
 	return common.execute_aws_command_with_input({ "chime", "delete-events-configuration" }, input)
 end
 
 --- Moves the specified phone number into the Deletion queue
---- @param input table The input table for the delete_phone_number command
+--- @param input table|nil The input table for the delete_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "delete-phone-number" }, input)
 end
 
 --- Deletes a chat room in an Amazon Chime Enterprise account
---- @param input table The input table for the delete_room command
+--- @param input table|nil The input table for the delete_room command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_room(input)
 	return common.execute_aws_command_with_input({ "chime", "delete-room" }, input)
 end
 
 --- Removes a member from a chat room in an Amazon Chime Enterprise account
---- @param input table The input table for the delete_room_membership command
+--- @param input table|nil The input table for the delete_room_membership command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_room_membership(input)
 	return common.execute_aws_command_with_input({ "chime", "delete-room-membership" }, input)
 end
 
 --- Disassociates the primary provisioned phone number from the specified Amazon Chime user
---- @param input table The input table for the disassociate_phone_number_from_user command
+--- @param input table|nil The input table for the disassociate_phone_number_from_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_phone_number_from_user(input)
 	return common.execute_aws_command_with_input({ "chime", "disassociate-phone-number-from-user" }, input)
 end
 
 --- Disassociates the specified sign-in delegate groups from the specified Amazon Chime account
---- @param input table The input table for the disassociate_signin_delegate_groups_from_account command
+--- @param input table|nil The input table for the disassociate_signin_delegate_groups_from_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_signin_delegate_groups_from_account(input)
 	return common.execute_aws_command_with_input({ "chime", "disassociate-signin-delegate-groups-from-account" }, input)
 end
 
 --- Retrieves details for the specified Amazon Chime account, such as account type and supported licenses
---- @param input table The input table for the get_account command
+--- @param input table|nil The input table for the get_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account(input)
 	return common.execute_aws_command_with_input({ "chime", "get-account" }, input)
 end
 
 --- Retrieves account settings for the specified Amazon Chime account ID, such as remote control and dialout settings
---- @param input table The input table for the get_account_settings command
+--- @param input table|nil The input table for the get_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-account-settings" }, input)
 end
 
 --- Retrieves details for the specified bot, such as bot email address, bot type, status, and display name
---- @param input table The input table for the get_bot command
+--- @param input table|nil The input table for the get_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bot(input)
 	return common.execute_aws_command_with_input({ "chime", "get-bot" }, input)
 end
 
 --- Gets details for an events configuration that allows a bot to receive outgoing events, such as an HTTPS endpoint or Lambda function ARN
---- @param input table The input table for the get_events_configuration command
+--- @param input table|nil The input table for the get_events_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_events_configuration(input)
 	return common.execute_aws_command_with_input({ "chime", "get-events-configuration" }, input)
 end
 
 --- Retrieves global settings for the administrator's AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_global_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-global-settings" }, input)
 end
 
 --- Retrieves details for the specified phone number ID, such as associations, capabilities, and product type
---- @param input table The input table for the get_phone_number command
+--- @param input table|nil The input table for the get_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "get-phone-number" }, input)
 end
 
 --- Retrieves details for the specified phone number order, such as the order creation timestamp, phone numbers in E
---- @param input table The input table for the get_phone_number_order command
+--- @param input table|nil The input table for the get_phone_number_order command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number_order(input)
 	return common.execute_aws_command_with_input({ "chime", "get-phone-number-order" }, input)
 end
 
 --- Retrieves the phone number settings for the administrator's AWS account, such as the default outbound calling name
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-phone-number-settings" }, input)
 end
 
 --- Gets the retention settings for the specified Amazon Chime Enterprise account
---- @param input table The input table for the get_retention_settings command
+--- @param input table|nil The input table for the get_retention_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_retention_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-retention-settings" }, input)
 end
 
 --- Retrieves room details, such as the room name, for a room in an Amazon Chime Enterprise account
---- @param input table The input table for the get_room command
+--- @param input table|nil The input table for the get_room command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_room(input)
 	return common.execute_aws_command_with_input({ "chime", "get-room" }, input)
 end
 
 --- Retrieves details for the specified user ID, such as primary email address, license type,and personal meeting PIN
---- @param input table The input table for the get_user command
+--- @param input table|nil The input table for the get_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user(input)
 	return common.execute_aws_command_with_input({ "chime", "get-user" }, input)
 end
 
 --- Retrieves settings for the specified user ID, such as any associated phone number settings
---- @param input table The input table for the get_user_settings command
+--- @param input table|nil The input table for the get_user_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-user-settings" }, input)
 end
 
 --- Sends email to a maximum of 50 users, inviting them to the specified Amazon Chime Team account
---- @param input table The input table for the invite_users command
+--- @param input table|nil The input table for the invite_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invite_users(input)
 	return common.execute_aws_command_with_input({ "chime", "invite-users" }, input)
 end
 
 --- Lists the Amazon Chime accounts under the administrator's AWS account
---- @param input table The input table for the list_accounts command
+--- @param input table|nil The input table for the list_accounts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_accounts(input)
 	return common.execute_aws_command_with_input({ "chime", "list-accounts" }, input)
 end
 
 --- Lists the bots associated with the administrator's Amazon Chime Enterprise account ID
---- @param input table The input table for the list_bots command
+--- @param input table|nil The input table for the list_bots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bots(input)
 	return common.execute_aws_command_with_input({ "chime", "list-bots" }, input)
 end
 
 --- Lists the phone number orders for the administrator's Amazon Chime account
---- @param input table The input table for the list_phone_number_orders command
+--- @param input table|nil The input table for the list_phone_number_orders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phone_number_orders(input)
 	return common.execute_aws_command_with_input({ "chime", "list-phone-number-orders" }, input)
 end
 
 --- Lists the phone numbers for the specified Amazon Chime account, Amazon Chime user, Amazon Chime Voice Connector, or Amazon Chime Voice Connector group
---- @param input table The input table for the list_phone_numbers command
+--- @param input table|nil The input table for the list_phone_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "chime", "list-phone-numbers" }, input)
 end
 
 --- Lists the membership details for the specified room in an Amazon Chime Enterprise account, such as the members' IDs, email addresses, and names
---- @param input table The input table for the list_room_memberships command
+--- @param input table|nil The input table for the list_room_memberships command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_room_memberships(input)
 	return common.execute_aws_command_with_input({ "chime", "list-room-memberships" }, input)
 end
 
 --- Lists the room details for the specified Amazon Chime Enterprise account
---- @param input table The input table for the list_rooms command
+--- @param input table|nil The input table for the list_rooms command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rooms(input)
 	return common.execute_aws_command_with_input({ "chime", "list-rooms" }, input)
 end
 
 --- Lists supported phone number countries
---- @param input table The input table for the list_supported_phone_number_countries command
+--- @param input table|nil The input table for the list_supported_phone_number_countries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_supported_phone_number_countries(input)
 	return common.execute_aws_command_with_input({ "chime", "list-supported-phone-number-countries" }, input)
 end
 
 --- Lists the users that belong to the specified Amazon Chime account
---- @param input table The input table for the list_users command
+--- @param input table|nil The input table for the list_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "chime", "list-users" }, input)
 end
 
 --- Logs out the specified user from all of the devices they are currently logged into
---- @param input table The input table for the logout_user command
+--- @param input table|nil The input table for the logout_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.logout_user(input)
 	return common.execute_aws_command_with_input({ "chime", "logout-user" }, input)
 end
 
 --- Creates an events configuration that allows a bot to receive outgoing events sent by Amazon Chime
---- @param input table The input table for the put_events_configuration command
+--- @param input table|nil The input table for the put_events_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_events_configuration(input)
 	return common.execute_aws_command_with_input({ "chime", "put-events-configuration" }, input)
 end
 
 --- Puts retention settings for the specified Amazon Chime Enterprise account
---- @param input table The input table for the put_retention_settings command
+--- @param input table|nil The input table for the put_retention_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_retention_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "put-retention-settings" }, input)
 end
 
 --- Redacts the specified message from the specified Amazon Chime conversation
---- @param input table The input table for the redact_conversation_message command
+--- @param input table|nil The input table for the redact_conversation_message command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.redact_conversation_message(input)
 	return common.execute_aws_command_with_input({ "chime", "redact-conversation-message" }, input)
 end
 
 --- Redacts the specified message from the specified Amazon Chime channel
---- @param input table The input table for the redact_room_message command
+--- @param input table|nil The input table for the redact_room_message command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.redact_room_message(input)
 	return common.execute_aws_command_with_input({ "chime", "redact-room-message" }, input)
 end
 
 --- Regenerates the security token for a bot
---- @param input table The input table for the regenerate_security_token command
+--- @param input table|nil The input table for the regenerate_security_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.regenerate_security_token(input)
 	return common.execute_aws_command_with_input({ "chime", "regenerate-security-token" }, input)
 end
 
 --- Resets the personal meeting PIN for the specified user on an Amazon Chime account
---- @param input table The input table for the reset_personal_pin command
+--- @param input table|nil The input table for the reset_personal_pin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_personal_pin(input)
 	return common.execute_aws_command_with_input({ "chime", "reset-personal-pin" }, input)
 end
 
 --- Moves a phone number from the Deletion queue back into the phone number Inventory
---- @param input table The input table for the restore_phone_number command
+--- @param input table|nil The input table for the restore_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "restore-phone-number" }, input)
 end
 
 --- Searches for phone numbers that can be ordered
---- @param input table The input table for the search_available_phone_numbers command
+--- @param input table|nil The input table for the search_available_phone_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_available_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "chime", "search-available-phone-numbers" }, input)
 end
 
 --- Updates account details for the specified Amazon Chime account
---- @param input table The input table for the update_account command
+--- @param input table|nil The input table for the update_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account(input)
 	return common.execute_aws_command_with_input({ "chime", "update-account" }, input)
 end
 
 --- Updates the settings for the specified Amazon Chime account
---- @param input table The input table for the update_account_settings command
+--- @param input table|nil The input table for the update_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "update-account-settings" }, input)
 end
 
 --- Updates the status of the specified bot, such as starting or stopping the bot from running in your Amazon Chime Enterprise account
---- @param input table The input table for the update_bot command
+--- @param input table|nil The input table for the update_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bot(input)
 	return common.execute_aws_command_with_input({ "chime", "update-bot" }, input)
 end
 
 --- Updates global settings for the administrator's AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings
---- @param input table The input table for the update_global_settings command
+--- @param input table|nil The input table for the update_global_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "update-global-settings" }, input)
 end
 
 --- Updates phone number details, such as product type or calling name, for the specified phone number ID
---- @param input table The input table for the update_phone_number command
+--- @param input table|nil The input table for the update_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime", "update-phone-number" }, input)
 end
 
 --- Updates the phone number settings for the administrator's AWS account, such as the default outbound calling name
---- @param input table The input table for the update_phone_number_settings command
+--- @param input table|nil The input table for the update_phone_number_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_phone_number_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "update-phone-number-settings" }, input)
 end
 
 --- Updates room details, such as the room name, for a room in an Amazon Chime Enterprise account
---- @param input table The input table for the update_room command
+--- @param input table|nil The input table for the update_room command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_room(input)
 	return common.execute_aws_command_with_input({ "chime", "update-room" }, input)
 end
 
 --- Updates room membership details, such as the member role, for a room in an Amazon Chime Enterprise account
---- @param input table The input table for the update_room_membership command
+--- @param input table|nil The input table for the update_room_membership command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_room_membership(input)
 	return common.execute_aws_command_with_input({ "chime", "update-room-membership" }, input)
 end
 
 --- Updates user details for a specified user ID
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "chime", "update-user" }, input)
 end
 
 --- Updates the settings for the specified user, such as phone number settings
---- @param input table The input table for the update_user_settings command
+--- @param input table|nil The input table for the update_user_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "update-user-settings" }, input)

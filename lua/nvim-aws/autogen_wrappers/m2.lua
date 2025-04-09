@@ -8,238 +8,238 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Cancels the running of a specific batch job execution
---- @param input table The input table for the cancel_batch_job_execution command
+--- @param input table|nil The input table for the cancel_batch_job_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_batch_job_execution(input)
 	return common.execute_aws_command_with_input({ "m2", "cancel-batch-job-execution" }, input)
 end
 
 --- Creates a new application with given parameters
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "m2", "create-application" }, input)
 end
 
 --- Starts a data set import task for a specific application
---- @param input table The input table for the create_data_set_import_task command
+--- @param input table|nil The input table for the create_data_set_import_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_set_import_task(input)
 	return common.execute_aws_command_with_input({ "m2", "create-data-set-import-task" }, input)
 end
 
 --- Creates and starts a deployment to deploy an application into a runtime environment
---- @param input table The input table for the create_deployment command
+--- @param input table|nil The input table for the create_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "m2", "create-deployment" }, input)
 end
 
 --- Creates a runtime environment for a given runtime engine
---- @param input table The input table for the create_environment command
+--- @param input table|nil The input table for the create_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment(input)
 	return common.execute_aws_command_with_input({ "m2", "create-environment" }, input)
 end
 
 --- Deletes a specific application
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "m2", "delete-application" }, input)
 end
 
 --- Deletes a specific application from the specific runtime environment where it was previously deployed
---- @param input table The input table for the delete_application_from_environment command
+--- @param input table|nil The input table for the delete_application_from_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_from_environment(input)
 	return common.execute_aws_command_with_input({ "m2", "delete-application-from-environment" }, input)
 end
 
 --- Deletes a specific runtime environment
---- @param input table The input table for the delete_environment command
+--- @param input table|nil The input table for the delete_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment(input)
 	return common.execute_aws_command_with_input({ "m2", "delete-environment" }, input)
 end
 
 --- Describes the details of a specific application
---- @param input table The input table for the get_application command
+--- @param input table|nil The input table for the get_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_application(input)
 	return common.execute_aws_command_with_input({ "m2", "get-application" }, input)
 end
 
 --- Returns details about a specific version of a specific application
---- @param input table The input table for the get_application_version command
+--- @param input table|nil The input table for the get_application_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_application_version(input)
 	return common.execute_aws_command_with_input({ "m2", "get-application-version" }, input)
 end
 
 --- Gets the details of a specific batch job execution for a specific application
---- @param input table The input table for the get_batch_job_execution command
+--- @param input table|nil The input table for the get_batch_job_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_batch_job_execution(input)
 	return common.execute_aws_command_with_input({ "m2", "get-batch-job-execution" }, input)
 end
 
 --- Gets the details of a specific data set
---- @param input table The input table for the get_data_set_details command
+--- @param input table|nil The input table for the get_data_set_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_set_details(input)
 	return common.execute_aws_command_with_input({ "m2", "get-data-set-details" }, input)
 end
 
 --- Gets the status of a data set import task initiated with the CreateDataSetImportTask operation
---- @param input table The input table for the get_data_set_import_task command
+--- @param input table|nil The input table for the get_data_set_import_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_set_import_task(input)
 	return common.execute_aws_command_with_input({ "m2", "get-data-set-import-task" }, input)
 end
 
 --- Gets details of a specific deployment with a given deployment identifier
---- @param input table The input table for the get_deployment command
+--- @param input table|nil The input table for the get_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment(input)
 	return common.execute_aws_command_with_input({ "m2", "get-deployment" }, input)
 end
 
 --- Describes a specific runtime environment
---- @param input table The input table for the get_environment command
+--- @param input table|nil The input table for the get_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment(input)
 	return common.execute_aws_command_with_input({ "m2", "get-environment" }, input)
 end
 
 --- Gets a single sign-on URL that can be used to connect to AWS Blu Insights
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_signed_bluinsights_url(input)
 	return common.execute_aws_command_with_input({ "m2", "get-signed-bluinsights-url" }, input)
 end
 
 --- Returns a list of the application versions for a specific application
---- @param input table The input table for the list_application_versions command
+--- @param input table|nil The input table for the list_application_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_application_versions(input)
 	return common.execute_aws_command_with_input({ "m2", "list-application-versions" }, input)
 end
 
 --- Lists the applications associated with a specific Amazon Web Services account
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "m2", "list-applications" }, input)
 end
 
 --- Lists all the available batch job definitions based on the batch job resources uploaded during the application creation
---- @param input table The input table for the list_batch_job_definitions command
+--- @param input table|nil The input table for the list_batch_job_definitions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_job_definitions(input)
 	return common.execute_aws_command_with_input({ "m2", "list-batch-job-definitions" }, input)
 end
 
 --- Lists historical, current, and scheduled batch job executions for a specific application
---- @param input table The input table for the list_batch_job_executions command
+--- @param input table|nil The input table for the list_batch_job_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_job_executions(input)
 	return common.execute_aws_command_with_input({ "m2", "list-batch-job-executions" }, input)
 end
 
 --- Lists all the job steps for a JCL file to restart a batch job
---- @param input table The input table for the list_batch_job_restart_points command
+--- @param input table|nil The input table for the list_batch_job_restart_points command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_job_restart_points(input)
 	return common.execute_aws_command_with_input({ "m2", "list-batch-job-restart-points" }, input)
 end
 
 --- Lists the data set imports for the specified application
---- @param input table The input table for the list_data_set_import_history command
+--- @param input table|nil The input table for the list_data_set_import_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_set_import_history(input)
 	return common.execute_aws_command_with_input({ "m2", "list-data-set-import-history" }, input)
 end
 
 --- Lists the data sets imported for a specific application
---- @param input table The input table for the list_data_sets command
+--- @param input table|nil The input table for the list_data_sets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sets(input)
 	return common.execute_aws_command_with_input({ "m2", "list-data-sets" }, input)
 end
 
 --- Returns a list of all deployments of a specific application
---- @param input table The input table for the list_deployments command
+--- @param input table|nil The input table for the list_deployments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_deployments(input)
 	return common.execute_aws_command_with_input({ "m2", "list-deployments" }, input)
 end
 
 --- Lists the available engine versions
---- @param input table The input table for the list_engine_versions command
+--- @param input table|nil The input table for the list_engine_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engine_versions(input)
 	return common.execute_aws_command_with_input({ "m2", "list-engine-versions" }, input)
 end
 
 --- Lists the runtime environments
---- @param input table The input table for the list_environments command
+--- @param input table|nil The input table for the list_environments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environments(input)
 	return common.execute_aws_command_with_input({ "m2", "list-environments" }, input)
 end
 
 --- Lists the tags for the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "m2", "list-tags-for-resource" }, input)
 end
 
 --- Starts an application that is currently stopped
---- @param input table The input table for the start_application command
+--- @param input table|nil The input table for the start_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_application(input)
 	return common.execute_aws_command_with_input({ "m2", "start-application" }, input)
 end
 
 --- Starts a batch job and returns the unique identifier of this execution of the batch job
---- @param input table The input table for the start_batch_job command
+--- @param input table|nil The input table for the start_batch_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_batch_job(input)
 	return common.execute_aws_command_with_input({ "m2", "start-batch-job" }, input)
 end
 
 --- Stops a running application
---- @param input table The input table for the stop_application command
+--- @param input table|nil The input table for the stop_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_application(input)
 	return common.execute_aws_command_with_input({ "m2", "stop-application" }, input)
 end
 
 --- Adds one or more tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "m2", "tag-resource" }, input)
 end
 
 --- Removes one or more tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "m2", "untag-resource" }, input)
 end
 
 --- Updates an application and creates a new version
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "m2", "update-application" }, input)
 end
 
 --- Updates the configuration details for a specific runtime environment
---- @param input table The input table for the update_environment command
+--- @param input table|nil The input table for the update_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment(input)
 	return common.execute_aws_command_with_input({ "m2", "update-environment" }, input)

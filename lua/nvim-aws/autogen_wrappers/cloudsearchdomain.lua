@@ -8,21 +8,21 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Retrieves a list of documents that match the specified search criteria
---- @param input table The input table for the search command
+--- @param input table|nil The input table for the search command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search(input)
 	return common.execute_aws_command_with_input({ "cloudsearchdomain", "search" }, input)
 end
 
 --- Retrieves autocomplete suggestions for a partial query string
---- @param input table The input table for the suggest command
+--- @param input table|nil The input table for the suggest command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.suggest(input)
 	return common.execute_aws_command_with_input({ "cloudsearchdomain", "suggest" }, input)
 end
 
 --- Posts a batch of documents to a search domain for indexing
---- @param input table The input table for the upload_documents command
+--- @param input table|nil The input table for the upload_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_documents(input)
 	return common.execute_aws_command_with_input({ "cloudsearchdomain", "upload-documents" }, input)

@@ -8,84 +8,84 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This operation retrieves metadata of a search job, including its progress
---- @param input table The input table for the get_search_job command
+--- @param input table|nil The input table for the get_search_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_search_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "get-search-job" }, input)
 end
 
 --- This operation retrieves the metadata of an export job
---- @param input table The input table for the get_search_result_export_job command
+--- @param input table|nil The input table for the get_search_result_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_search_result_export_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "get-search-result-export-job" }, input)
 end
 
 --- This operation returns a list of all backups (recovery points) in a paginated format that were included in the search job
---- @param input table The input table for the list_search_job_backups command
+--- @param input table|nil The input table for the list_search_job_backups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_search_job_backups(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "list-search-job-backups" }, input)
 end
 
 --- This operation returns a list of a specified search job
---- @param input table The input table for the list_search_job_results command
+--- @param input table|nil The input table for the list_search_job_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_search_job_results(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "list-search-job-results" }, input)
 end
 
 --- This operation returns a list of search jobs belonging to an account
---- @param input table The input table for the list_search_jobs command
+--- @param input table|nil The input table for the list_search_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_search_jobs(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "list-search-jobs" }, input)
 end
 
 --- This operation exports search results of a search job to a specified destination S3 bucket
---- @param input table The input table for the list_search_result_export_jobs command
+--- @param input table|nil The input table for the list_search_result_export_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_search_result_export_jobs(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "list-search-result-export-jobs" }, input)
 end
 
 --- This operation returns the tags for a resource type
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "list-tags-for-resource" }, input)
 end
 
 --- This operation creates a search job which returns recovery points filtered by SearchScope and items filtered by ItemFilters
---- @param input table The input table for the start_search_job command
+--- @param input table|nil The input table for the start_search_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_search_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "start-search-job" }, input)
 end
 
 --- This operations starts a job to export the results of search job to a designated S3 bucket
---- @param input table The input table for the start_search_result_export_job command
+--- @param input table|nil The input table for the start_search_result_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_search_result_export_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "start-search-result-export-job" }, input)
 end
 
 --- This operations ends a search job
---- @param input table The input table for the stop_search_job command
+--- @param input table|nil The input table for the stop_search_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_search_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "stop-search-job" }, input)
 end
 
 --- This operation puts tags on the resource you indicate
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "tag-resource" }, input)
 end
 
 --- This operation removes tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "untag-resource" }, input)

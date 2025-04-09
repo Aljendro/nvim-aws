@@ -8,63 +8,63 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Returns a set of temporary security credentials that you can use to access Amazon Web Services resources
---- @param input table The input table for the assume_role command
+--- @param input table|nil The input table for the assume_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_role(input)
 	return common.execute_aws_command_with_input({ "sts", "assume-role" }, input)
 end
 
 --- Returns a set of temporary security credentials for users who have been authenticated via a SAML authentication response
---- @param input table The input table for the assume_role_with_saml command
+--- @param input table|nil The input table for the assume_role_with_saml command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_role_with_saml(input)
 	return common.execute_aws_command_with_input({ "sts", "assume-role-with-saml" }, input)
 end
 
 --- Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application with a web identity provider
---- @param input table The input table for the assume_role_with_web_identity command
+--- @param input table|nil The input table for the assume_role_with_web_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_role_with_web_identity(input)
 	return common.execute_aws_command_with_input({ "sts", "assume-role-with-web-identity" }, input)
 end
 
 --- Returns a set of short term credentials you can use to perform privileged tasks on a member account in your organization
---- @param input table The input table for the assume_root command
+--- @param input table|nil The input table for the assume_root command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_root(input)
 	return common.execute_aws_command_with_input({ "sts", "assume-root" }, input)
 end
 
 --- Decodes additional information about the authorization status of a request from an encoded message returned in response to an Amazon Web Services request
---- @param input table The input table for the decode_authorization_message command
+--- @param input table|nil The input table for the decode_authorization_message command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decode_authorization_message(input)
 	return common.execute_aws_command_with_input({ "sts", "decode-authorization-message" }, input)
 end
 
 --- Returns the account identifier for the specified access key ID
---- @param input table The input table for the get_access_key_info command
+--- @param input table|nil The input table for the get_access_key_info command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_key_info(input)
 	return common.execute_aws_command_with_input({ "sts", "get-access-key-info" }, input)
 end
 
 --- Returns details about the IAM user or role whose credentials are used to call the operation
---- @param input table The input table for the get_caller_identity command
+--- @param input table|nil The input table for the get_caller_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_caller_identity(input)
 	return common.execute_aws_command_with_input({ "sts", "get-caller-identity" }, input)
 end
 
 --- Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security token) for a user
---- @param input table The input table for the get_federation_token command
+--- @param input table|nil The input table for the get_federation_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_federation_token(input)
 	return common.execute_aws_command_with_input({ "sts", "get-federation-token" }, input)
 end
 
 --- Returns a set of temporary credentials for an Amazon Web Services account or IAM user
---- @param input table The input table for the get_session_token command
+--- @param input table|nil The input table for the get_session_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_session_token(input)
 	return common.execute_aws_command_with_input({ "sts", "get-session-token" }, input)

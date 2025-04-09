@@ -8,196 +8,196 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds one or more tags to an object, up to a limit of 10
---- @param input table The input table for the add_tags command
+--- @param input table|nil The input table for the add_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_tags(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "add-tags" }, input)
 end
 
 --- Generates predictions for a group of observations
---- @param input table The input table for the create_batch_prediction command
+--- @param input table|nil The input table for the create_batch_prediction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_batch_prediction(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-batch-prediction" }, input)
 end
 
 --- Creates a DataSource object from an Amazon Relational Database Service (Amazon RDS)
---- @param input table The input table for the create_data_source_from_rds command
+--- @param input table|nil The input table for the create_data_source_from_rds command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source_from_rds(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-rds" }, input)
 end
 
 --- Creates a DataSource from a database hosted on an Amazon Redshift cluster
---- @param input table The input table for the create_data_source_from_redshift command
+--- @param input table|nil The input table for the create_data_source_from_redshift command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source_from_redshift(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-redshift" }, input)
 end
 
 --- Creates a DataSource object
---- @param input table The input table for the create_data_source_from_s3 command
+--- @param input table|nil The input table for the create_data_source_from_s3 command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source_from_s3(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-s3" }, input)
 end
 
 --- Creates a new Evaluation of an MLModel
---- @param input table The input table for the create_evaluation command
+--- @param input table|nil The input table for the create_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_evaluation(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-evaluation" }, input)
 end
 
 --- Creates a new MLModel using the DataSource and the recipe as information sources
---- @param input table The input table for the create_ml_model command
+--- @param input table|nil The input table for the create_ml_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-ml-model" }, input)
 end
 
 --- Creates a real-time endpoint for the MLModel
---- @param input table The input table for the create_realtime_endpoint command
+--- @param input table|nil The input table for the create_realtime_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_realtime_endpoint(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "create-realtime-endpoint" }, input)
 end
 
 --- Assigns the DELETED status to a BatchPrediction, rendering it unusable
---- @param input table The input table for the delete_batch_prediction command
+--- @param input table|nil The input table for the delete_batch_prediction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_batch_prediction(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-batch-prediction" }, input)
 end
 
 --- Assigns the DELETED status to a DataSource, rendering it unusable
---- @param input table The input table for the delete_data_source command
+--- @param input table|nil The input table for the delete_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_source(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-data-source" }, input)
 end
 
 --- Assigns the DELETED status to an Evaluation, rendering it unusable
---- @param input table The input table for the delete_evaluation command
+--- @param input table|nil The input table for the delete_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_evaluation(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-evaluation" }, input)
 end
 
 --- Assigns the DELETED status to an MLModel, rendering it unusable
---- @param input table The input table for the delete_ml_model command
+--- @param input table|nil The input table for the delete_ml_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-ml-model" }, input)
 end
 
 --- Deletes a real time endpoint of an MLModel
---- @param input table The input table for the delete_realtime_endpoint command
+--- @param input table|nil The input table for the delete_realtime_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_realtime_endpoint(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-realtime-endpoint" }, input)
 end
 
 --- Deletes the specified tags associated with an ML object
---- @param input table The input table for the delete_tags command
+--- @param input table|nil The input table for the delete_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "delete-tags" }, input)
 end
 
 --- Returns a list of BatchPrediction operations that match the search criteria in the request
---- @param input table The input table for the describe_batch_predictions command
+--- @param input table|nil The input table for the describe_batch_predictions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_batch_predictions(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "describe-batch-predictions" }, input)
 end
 
 --- Returns a list of DataSource that match the search criteria in the request
---- @param input table The input table for the describe_data_sources command
+--- @param input table|nil The input table for the describe_data_sources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_sources(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "describe-data-sources" }, input)
 end
 
 --- Returns a list of DescribeEvaluations that match the search criteria in the request
---- @param input table The input table for the describe_evaluations command
+--- @param input table|nil The input table for the describe_evaluations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_evaluations(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "describe-evaluations" }, input)
 end
 
 --- Returns a list of MLModel that match the search criteria in the request
---- @param input table The input table for the describe_ml_models command
+--- @param input table|nil The input table for the describe_ml_models command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ml_models(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "describe-ml-models" }, input)
 end
 
 --- Describes one or more of the tags for your Amazon ML object
---- @param input table The input table for the describe_tags command
+--- @param input table|nil The input table for the describe_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tags(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "describe-tags" }, input)
 end
 
 --- Returns a BatchPrediction that includes detailed metadata, status, and data file information for a Batch Prediction request
---- @param input table The input table for the get_batch_prediction command
+--- @param input table|nil The input table for the get_batch_prediction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_batch_prediction(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "get-batch-prediction" }, input)
 end
 
 --- Returns a DataSource that includes metadata and data file information, as well as the current status of the DataSource
---- @param input table The input table for the get_data_source command
+--- @param input table|nil The input table for the get_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_source(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "get-data-source" }, input)
 end
 
 --- Returns an Evaluation that includes metadata as well as the current status of the Evaluation
---- @param input table The input table for the get_evaluation command
+--- @param input table|nil The input table for the get_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evaluation(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "get-evaluation" }, input)
 end
 
 --- Returns an MLModel that includes detailed metadata, data source information, and the current status of the MLModel
---- @param input table The input table for the get_ml_model command
+--- @param input table|nil The input table for the get_ml_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "get-ml-model" }, input)
 end
 
 --- Generates a prediction for the observation using the specified ML Model
---- @param input table The input table for the predict command
+--- @param input table|nil The input table for the predict command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.predict(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "predict" }, input)
 end
 
 --- Updates the BatchPredictionName of a BatchPrediction
---- @param input table The input table for the update_batch_prediction command
+--- @param input table|nil The input table for the update_batch_prediction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_batch_prediction(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "update-batch-prediction" }, input)
 end
 
 --- Updates the DataSourceName of a DataSource
---- @param input table The input table for the update_data_source command
+--- @param input table|nil The input table for the update_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "update-data-source" }, input)
 end
 
 --- Updates the EvaluationName of an Evaluation
---- @param input table The input table for the update_evaluation command
+--- @param input table|nil The input table for the update_evaluation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_evaluation(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "update-evaluation" }, input)
 end
 
 --- Updates the MLModelName and the ScoreThreshold of an MLModel
---- @param input table The input table for the update_ml_model command
+--- @param input table|nil The input table for the update_ml_model command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "update-ml-model" }, input)

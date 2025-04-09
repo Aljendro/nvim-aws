@@ -8,98 +8,98 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Returns a list of accounts in the organization from Organizations that are affected by the provided event
---- @param input table The input table for the describe_affected_accounts_for_organization command
+--- @param input table|nil The input table for the describe_affected_accounts_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_affected_accounts_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-affected-accounts-for-organization" }, input)
 end
 
 --- Returns a list of entities that have been affected by the specified events, based on the specified filter criteria
---- @param input table The input table for the describe_affected_entities command
+--- @param input table|nil The input table for the describe_affected_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_affected_entities(input)
 	return common.execute_aws_command_with_input({ "health", "describe-affected-entities" }, input)
 end
 
 --- Returns a list of entities that have been affected by one or more events for one or more accounts in your organization in Organizations, based on the filter criteria
---- @param input table The input table for the describe_affected_entities_for_organization command
+--- @param input table|nil The input table for the describe_affected_entities_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_affected_entities_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-affected-entities-for-organization" }, input)
 end
 
 --- Returns the number of entities that are affected by each of the specified events
---- @param input table The input table for the describe_entity_aggregates command
+--- @param input table|nil The input table for the describe_entity_aggregates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity_aggregates(input)
 	return common.execute_aws_command_with_input({ "health", "describe-entity-aggregates" }, input)
 end
 
 --- Returns a list of entity aggregates for your Organizations that are affected by each of the specified events
---- @param input table The input table for the describe_entity_aggregates_for_organization command
+--- @param input table|nil The input table for the describe_entity_aggregates_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity_aggregates_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-entity-aggregates-for-organization" }, input)
 end
 
 --- Returns the number of events of each event type (issue, scheduled change, and account notification)
---- @param input table The input table for the describe_event_aggregates command
+--- @param input table|nil The input table for the describe_event_aggregates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_aggregates(input)
 	return common.execute_aws_command_with_input({ "health", "describe-event-aggregates" }, input)
 end
 
 --- Returns detailed information about one or more specified events
---- @param input table The input table for the describe_event_details command
+--- @param input table|nil The input table for the describe_event_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_details(input)
 	return common.execute_aws_command_with_input({ "health", "describe-event-details" }, input)
 end
 
 --- Returns detailed information about one or more specified events for one or more Amazon Web Services accounts in your organization
---- @param input table The input table for the describe_event_details_for_organization command
+--- @param input table|nil The input table for the describe_event_details_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_details_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-event-details-for-organization" }, input)
 end
 
 --- Returns the event types that meet the specified filter criteria
---- @param input table The input table for the describe_event_types command
+--- @param input table|nil The input table for the describe_event_types command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_types(input)
 	return common.execute_aws_command_with_input({ "health", "describe-event-types" }, input)
 end
 
 --- Returns information about events that meet the specified filter criteria
---- @param input table The input table for the describe_events command
+--- @param input table|nil The input table for the describe_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "health", "describe-events" }, input)
 end
 
 --- Returns information about events across your organization in Organizations
---- @param input table The input table for the describe_events_for_organization command
+--- @param input table|nil The input table for the describe_events_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-events-for-organization" }, input)
 end
 
 --- This operation provides status information on enabling or disabling Health to work with your organization
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_health_service_status_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "describe-health-service-status-for-organization" }, input)
 end
 
 --- Disables Health from working with Organizations
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_health_service_access_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "disable-health-service-access-for-organization" }, input)
 end
 
 --- Enables Health to work with Organizations
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_health_service_access_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "enable-health-service-access-for-organization" }, input)

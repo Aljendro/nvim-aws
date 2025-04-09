@@ -8,658 +8,658 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Removes the specified legal hold on a recovery point
---- @param input table The input table for the cancel_legal_hold command
+--- @param input table|nil The input table for the cancel_legal_hold command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_legal_hold(input)
 	return common.execute_aws_command_with_input({ "backup", "cancel-legal-hold" }, input)
 end
 
 --- Creates a backup plan using a backup plan name and backup rules
---- @param input table The input table for the create_backup_plan command
+--- @param input table|nil The input table for the create_backup_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backup_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "create-backup-plan" }, input)
 end
 
 --- Creates a JSON document that specifies a set of resources to assign to a backup plan
---- @param input table The input table for the create_backup_selection command
+--- @param input table|nil The input table for the create_backup_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backup_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "create-backup-selection" }, input)
 end
 
 --- Creates a logical container where backups are stored
---- @param input table The input table for the create_backup_vault command
+--- @param input table|nil The input table for the create_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "create-backup-vault" }, input)
 end
 
 --- Creates a framework with one or more controls
---- @param input table The input table for the create_framework command
+--- @param input table|nil The input table for the create_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_framework(input)
 	return common.execute_aws_command_with_input({ "backup", "create-framework" }, input)
 end
 
 --- Creates a legal hold on a recovery point (backup)
---- @param input table The input table for the create_legal_hold command
+--- @param input table|nil The input table for the create_legal_hold command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_legal_hold(input)
 	return common.execute_aws_command_with_input({ "backup", "create-legal-hold" }, input)
 end
 
 --- Creates a logical container to where backups may be copied
---- @param input table The input table for the create_logically_air_gapped_backup_vault command
+--- @param input table|nil The input table for the create_logically_air_gapped_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_logically_air_gapped_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "create-logically-air-gapped-backup-vault" }, input)
 end
 
 --- Creates a report plan
---- @param input table The input table for the create_report_plan command
+--- @param input table|nil The input table for the create_report_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_report_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "create-report-plan" }, input)
 end
 
 --- Creates a restore testing plan
---- @param input table The input table for the create_restore_testing_plan command
+--- @param input table|nil The input table for the create_restore_testing_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_restore_testing_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "create-restore-testing-plan" }, input)
 end
 
 --- This request can be sent after CreateRestoreTestingPlan request returns successfully
---- @param input table The input table for the create_restore_testing_selection command
+--- @param input table|nil The input table for the create_restore_testing_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_restore_testing_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "create-restore-testing-selection" }, input)
 end
 
 --- Deletes a backup plan
---- @param input table The input table for the delete_backup_plan command
+--- @param input table|nil The input table for the delete_backup_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-plan" }, input)
 end
 
 --- Deletes the resource selection associated with a backup plan that is specified by the SelectionId
---- @param input table The input table for the delete_backup_selection command
+--- @param input table|nil The input table for the delete_backup_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-selection" }, input)
 end
 
 --- Deletes the backup vault identified by its name
---- @param input table The input table for the delete_backup_vault command
+--- @param input table|nil The input table for the delete_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault" }, input)
 end
 
 --- Deletes the policy document that manages permissions on a backup vault
---- @param input table The input table for the delete_backup_vault_access_policy command
+--- @param input table|nil The input table for the delete_backup_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-access-policy" }, input)
 end
 
 --- Deletes Backup Vault Lock from a backup vault specified by a backup vault name
---- @param input table The input table for the delete_backup_vault_lock_configuration command
+--- @param input table|nil The input table for the delete_backup_vault_lock_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_vault_lock_configuration(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-lock-configuration" }, input)
 end
 
 --- Deletes event notifications for the specified backup vault
---- @param input table The input table for the delete_backup_vault_notifications command
+--- @param input table|nil The input table for the delete_backup_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-notifications" }, input)
 end
 
 --- Deletes the framework specified by a framework name
---- @param input table The input table for the delete_framework command
+--- @param input table|nil The input table for the delete_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_framework(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-framework" }, input)
 end
 
 --- Deletes the recovery point specified by a recovery point ID
---- @param input table The input table for the delete_recovery_point command
+--- @param input table|nil The input table for the delete_recovery_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recovery_point(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-recovery-point" }, input)
 end
 
 --- Deletes the report plan specified by a report plan name
---- @param input table The input table for the delete_report_plan command
+--- @param input table|nil The input table for the delete_report_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_report_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-report-plan" }, input)
 end
 
 --- This request deletes the specified restore testing plan
---- @param input table The input table for the delete_restore_testing_plan command
+--- @param input table|nil The input table for the delete_restore_testing_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_restore_testing_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-restore-testing-plan" }, input)
 end
 
 --- Input the Restore Testing Plan name and Restore Testing Selection name
---- @param input table The input table for the delete_restore_testing_selection command
+--- @param input table|nil The input table for the delete_restore_testing_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_restore_testing_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "delete-restore-testing-selection" }, input)
 end
 
 --- Returns backup job details for the specified BackupJobId
---- @param input table The input table for the describe_backup_job command
+--- @param input table|nil The input table for the describe_backup_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_backup_job(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-backup-job" }, input)
 end
 
 --- Returns metadata about a backup vault specified by its name
---- @param input table The input table for the describe_backup_vault command
+--- @param input table|nil The input table for the describe_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-backup-vault" }, input)
 end
 
 --- Returns metadata associated with creating a copy of a resource
---- @param input table The input table for the describe_copy_job command
+--- @param input table|nil The input table for the describe_copy_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_copy_job(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-copy-job" }, input)
 end
 
 --- Returns the framework details for the specified FrameworkName
---- @param input table The input table for the describe_framework command
+--- @param input table|nil The input table for the describe_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_framework(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-framework" }, input)
 end
 
 --- Describes whether the Amazon Web Services account is opted in to cross-account backup
---- @param input table The input table for the describe_global_settings command
+--- @param input table|nil The input table for the describe_global_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_global_settings(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-global-settings" }, input)
 end
 
 --- Returns information about a saved resource, including the last time it was backed up, its Amazon Resource Name (ARN), and the Amazon Web Services service type of the saved resource
---- @param input table The input table for the describe_protected_resource command
+--- @param input table|nil The input table for the describe_protected_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_protected_resource(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-protected-resource" }, input)
 end
 
 --- Returns metadata associated with a recovery point, including ID, status, encryption, and lifecycle
---- @param input table The input table for the describe_recovery_point command
+--- @param input table|nil The input table for the describe_recovery_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recovery_point(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-recovery-point" }, input)
 end
 
 --- Returns the current service opt-in settings for the Region
---- @param input table The input table for the describe_region_settings command
+--- @param input table|nil The input table for the describe_region_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_region_settings(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-region-settings" }, input)
 end
 
 --- Returns the details associated with creating a report as specified by its ReportJobId
---- @param input table The input table for the describe_report_job command
+--- @param input table|nil The input table for the describe_report_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_report_job(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-report-job" }, input)
 end
 
 --- Returns a list of all report plans for an Amazon Web Services account and Amazon Web Services Region
---- @param input table The input table for the describe_report_plan command
+--- @param input table|nil The input table for the describe_report_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_report_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-report-plan" }, input)
 end
 
 --- Returns metadata associated with a restore job that is specified by a job ID
---- @param input table The input table for the describe_restore_job command
+--- @param input table|nil The input table for the describe_restore_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_restore_job(input)
 	return common.execute_aws_command_with_input({ "backup", "describe-restore-job" }, input)
 end
 
 --- Deletes the specified continuous backup recovery point from Backup and releases control of that continuous backup to the source service, such as Amazon RDS
---- @param input table The input table for the disassociate_recovery_point command
+--- @param input table|nil The input table for the disassociate_recovery_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_recovery_point(input)
 	return common.execute_aws_command_with_input({ "backup", "disassociate-recovery-point" }, input)
 end
 
 --- This action to a specific child (nested) recovery point removes the relationship between the specified recovery point and its parent (composite) recovery point
---- @param input table The input table for the disassociate_recovery_point_from_parent command
+--- @param input table|nil The input table for the disassociate_recovery_point_from_parent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_recovery_point_from_parent(input)
 	return common.execute_aws_command_with_input({ "backup", "disassociate-recovery-point-from-parent" }, input)
 end
 
 --- Returns the backup plan that is specified by the plan ID as a backup template
---- @param input table The input table for the export_backup_plan_template command
+--- @param input table|nil The input table for the export_backup_plan_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_backup_plan_template(input)
 	return common.execute_aws_command_with_input({ "backup", "export-backup-plan-template" }, input)
 end
 
 --- Returns BackupPlan details for the specified BackupPlanId
---- @param input table The input table for the get_backup_plan command
+--- @param input table|nil The input table for the get_backup_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-plan" }, input)
 end
 
 --- Returns a valid JSON document specifying a backup plan or an error
---- @param input table The input table for the get_backup_plan_from_json command
+--- @param input table|nil The input table for the get_backup_plan_from_json command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_plan_from_json(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-plan-from-json" }, input)
 end
 
 --- Returns the template specified by its templateId as a backup plan
---- @param input table The input table for the get_backup_plan_from_template command
+--- @param input table|nil The input table for the get_backup_plan_from_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_plan_from_template(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-plan-from-template" }, input)
 end
 
 --- Returns selection metadata and a document in JSON format that specifies a list of resources that are associated with a backup plan
---- @param input table The input table for the get_backup_selection command
+--- @param input table|nil The input table for the get_backup_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-selection" }, input)
 end
 
 --- Returns the access policy document that is associated with the named backup vault
---- @param input table The input table for the get_backup_vault_access_policy command
+--- @param input table|nil The input table for the get_backup_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-vault-access-policy" }, input)
 end
 
 --- Returns event notifications for the specified backup vault
---- @param input table The input table for the get_backup_vault_notifications command
+--- @param input table|nil The input table for the get_backup_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backup_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "backup", "get-backup-vault-notifications" }, input)
 end
 
 --- This action returns details for a specified legal hold
---- @param input table The input table for the get_legal_hold command
+--- @param input table|nil The input table for the get_legal_hold command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_legal_hold(input)
 	return common.execute_aws_command_with_input({ "backup", "get-legal-hold" }, input)
 end
 
 --- This operation returns the metadata and details specific to the backup index associated with the specified recovery point
---- @param input table The input table for the get_recovery_point_index_details command
+--- @param input table|nil The input table for the get_recovery_point_index_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recovery_point_index_details(input)
 	return common.execute_aws_command_with_input({ "backup", "get-recovery-point-index-details" }, input)
 end
 
 --- Returns a set of metadata key-value pairs that were used to create the backup
---- @param input table The input table for the get_recovery_point_restore_metadata command
+--- @param input table|nil The input table for the get_recovery_point_restore_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recovery_point_restore_metadata(input)
 	return common.execute_aws_command_with_input({ "backup", "get-recovery-point-restore-metadata" }, input)
 end
 
 --- This request returns the metadata for the specified restore job
---- @param input table The input table for the get_restore_job_metadata command
+--- @param input table|nil The input table for the get_restore_job_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_restore_job_metadata(input)
 	return common.execute_aws_command_with_input({ "backup", "get-restore-job-metadata" }, input)
 end
 
 --- This request returns the minimal required set of metadata needed to start a restore job with secure default settings
---- @param input table The input table for the get_restore_testing_inferred_metadata command
+--- @param input table|nil The input table for the get_restore_testing_inferred_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_restore_testing_inferred_metadata(input)
 	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-inferred-metadata" }, input)
 end
 
 --- Returns RestoreTestingPlan details for the specified RestoreTestingPlanName
---- @param input table The input table for the get_restore_testing_plan command
+--- @param input table|nil The input table for the get_restore_testing_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_restore_testing_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-plan" }, input)
 end
 
 --- Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan
---- @param input table The input table for the get_restore_testing_selection command
+--- @param input table|nil The input table for the get_restore_testing_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_restore_testing_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-selection" }, input)
 end
 
 --- Returns the Amazon Web Services resource types supported by Backup
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_supported_resource_types(input)
 	return common.execute_aws_command_with_input({ "backup", "get-supported-resource-types" }, input)
 end
 
 --- This is a request for a summary of backup jobs created or running within the most recent 30 days
---- @param input table The input table for the list_backup_job_summaries command
+--- @param input table|nil The input table for the list_backup_job_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_job_summaries(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-job-summaries" }, input)
 end
 
 --- Returns a list of existing backup jobs for an authenticated account for the last 30 days
---- @param input table The input table for the list_backup_jobs command
+--- @param input table|nil The input table for the list_backup_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_jobs(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-jobs" }, input)
 end
 
 --- Lists the backup plan templates
---- @param input table The input table for the list_backup_plan_templates command
+--- @param input table|nil The input table for the list_backup_plan_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_plan_templates(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-plan-templates" }, input)
 end
 
 --- Returns version metadata of your backup plans, including Amazon Resource Names (ARNs), backup plan IDs, creation and deletion dates, plan names, and version IDs
---- @param input table The input table for the list_backup_plan_versions command
+--- @param input table|nil The input table for the list_backup_plan_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_plan_versions(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-plan-versions" }, input)
 end
 
 --- Lists the active backup plans for the account
---- @param input table The input table for the list_backup_plans command
+--- @param input table|nil The input table for the list_backup_plans command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_plans(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-plans" }, input)
 end
 
 --- Returns an array containing metadata of the resources associated with the target backup plan
---- @param input table The input table for the list_backup_selections command
+--- @param input table|nil The input table for the list_backup_selections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_selections(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-selections" }, input)
 end
 
 --- Returns a list of recovery point storage containers along with information about them
---- @param input table The input table for the list_backup_vaults command
+--- @param input table|nil The input table for the list_backup_vaults command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backup_vaults(input)
 	return common.execute_aws_command_with_input({ "backup", "list-backup-vaults" }, input)
 end
 
 --- This request obtains a list of copy jobs created or running within the the most recent 30 days
---- @param input table The input table for the list_copy_job_summaries command
+--- @param input table|nil The input table for the list_copy_job_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_copy_job_summaries(input)
 	return common.execute_aws_command_with_input({ "backup", "list-copy-job-summaries" }, input)
 end
 
 --- Returns metadata about your copy jobs
---- @param input table The input table for the list_copy_jobs command
+--- @param input table|nil The input table for the list_copy_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_copy_jobs(input)
 	return common.execute_aws_command_with_input({ "backup", "list-copy-jobs" }, input)
 end
 
 --- Returns a list of all frameworks for an Amazon Web Services account and Amazon Web Services Region
---- @param input table The input table for the list_frameworks command
+--- @param input table|nil The input table for the list_frameworks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_frameworks(input)
 	return common.execute_aws_command_with_input({ "backup", "list-frameworks" }, input)
 end
 
 --- This operation returns a list of recovery points that have an associated index, belonging to the specified account
---- @param input table The input table for the list_indexed_recovery_points command
+--- @param input table|nil The input table for the list_indexed_recovery_points command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_indexed_recovery_points(input)
 	return common.execute_aws_command_with_input({ "backup", "list-indexed-recovery-points" }, input)
 end
 
 --- This action returns metadata about active and previous legal holds
---- @param input table The input table for the list_legal_holds command
+--- @param input table|nil The input table for the list_legal_holds command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_legal_holds(input)
 	return common.execute_aws_command_with_input({ "backup", "list-legal-holds" }, input)
 end
 
 --- Returns an array of resources successfully backed up by Backup, including the time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a resource type
---- @param input table The input table for the list_protected_resources command
+--- @param input table|nil The input table for the list_protected_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protected_resources(input)
 	return common.execute_aws_command_with_input({ "backup", "list-protected-resources" }, input)
 end
 
 --- This request lists the protected resources corresponding to each backup vault
---- @param input table The input table for the list_protected_resources_by_backup_vault command
+--- @param input table|nil The input table for the list_protected_resources_by_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protected_resources_by_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "list-protected-resources-by-backup-vault" }, input)
 end
 
 --- Returns detailed information about the recovery points stored in a backup vault
---- @param input table The input table for the list_recovery_points_by_backup_vault command
+--- @param input table|nil The input table for the list_recovery_points_by_backup_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recovery_points_by_backup_vault(input)
 	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-backup-vault" }, input)
 end
 
 --- This action returns recovery point ARNs (Amazon Resource Names) of the specified legal hold
---- @param input table The input table for the list_recovery_points_by_legal_hold command
+--- @param input table|nil The input table for the list_recovery_points_by_legal_hold command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recovery_points_by_legal_hold(input)
 	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-legal-hold" }, input)
 end
 
 --- The information about the recovery points of the type specified by a resource Amazon Resource Name (ARN)
---- @param input table The input table for the list_recovery_points_by_resource command
+--- @param input table|nil The input table for the list_recovery_points_by_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recovery_points_by_resource(input)
 	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-resource" }, input)
 end
 
 --- Returns details about your report jobs
---- @param input table The input table for the list_report_jobs command
+--- @param input table|nil The input table for the list_report_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_report_jobs(input)
 	return common.execute_aws_command_with_input({ "backup", "list-report-jobs" }, input)
 end
 
 --- Returns a list of your report plans
---- @param input table The input table for the list_report_plans command
+--- @param input table|nil The input table for the list_report_plans command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_report_plans(input)
 	return common.execute_aws_command_with_input({ "backup", "list-report-plans" }, input)
 end
 
 --- This request obtains a summary of restore jobs created or running within the the most recent 30 days
---- @param input table The input table for the list_restore_job_summaries command
+--- @param input table|nil The input table for the list_restore_job_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_restore_job_summaries(input)
 	return common.execute_aws_command_with_input({ "backup", "list-restore-job-summaries" }, input)
 end
 
 --- Returns a list of jobs that Backup initiated to restore a saved resource, including details about the recovery process
---- @param input table The input table for the list_restore_jobs command
+--- @param input table|nil The input table for the list_restore_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_restore_jobs(input)
 	return common.execute_aws_command_with_input({ "backup", "list-restore-jobs" }, input)
 end
 
 --- This returns restore jobs that contain the specified protected resource
---- @param input table The input table for the list_restore_jobs_by_protected_resource command
+--- @param input table|nil The input table for the list_restore_jobs_by_protected_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_restore_jobs_by_protected_resource(input)
 	return common.execute_aws_command_with_input({ "backup", "list-restore-jobs-by-protected-resource" }, input)
 end
 
 --- Returns a list of restore testing plans
---- @param input table The input table for the list_restore_testing_plans command
+--- @param input table|nil The input table for the list_restore_testing_plans command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_restore_testing_plans(input)
 	return common.execute_aws_command_with_input({ "backup", "list-restore-testing-plans" }, input)
 end
 
 --- Returns a list of restore testing selections
---- @param input table The input table for the list_restore_testing_selections command
+--- @param input table|nil The input table for the list_restore_testing_selections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_restore_testing_selections(input)
 	return common.execute_aws_command_with_input({ "backup", "list-restore-testing-selections" }, input)
 end
 
 --- Returns the tags assigned to the resource, such as a target recovery point, backup plan, or backup vault
---- @param input table The input table for the list_tags command
+--- @param input table|nil The input table for the list_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "backup", "list-tags" }, input)
 end
 
 --- Sets a resource-based policy that is used to manage access permissions on the target backup vault
---- @param input table The input table for the put_backup_vault_access_policy command
+--- @param input table|nil The input table for the put_backup_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_backup_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-access-policy" }, input)
 end
 
 --- Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or created in a backup vault
---- @param input table The input table for the put_backup_vault_lock_configuration command
+--- @param input table|nil The input table for the put_backup_vault_lock_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_backup_vault_lock_configuration(input)
 	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-lock-configuration" }, input)
 end
 
 --- Turns on notifications on a backup vault for the specified topic and events
---- @param input table The input table for the put_backup_vault_notifications command
+--- @param input table|nil The input table for the put_backup_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_backup_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-notifications" }, input)
 end
 
 --- This request allows you to send your independent self-run restore test validation results
---- @param input table The input table for the put_restore_validation_result command
+--- @param input table|nil The input table for the put_restore_validation_result command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_restore_validation_result(input)
 	return common.execute_aws_command_with_input({ "backup", "put-restore-validation-result" }, input)
 end
 
 --- Starts an on-demand backup job for the specified resource
---- @param input table The input table for the start_backup_job command
+--- @param input table|nil The input table for the start_backup_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_backup_job(input)
 	return common.execute_aws_command_with_input({ "backup", "start-backup-job" }, input)
 end
 
 --- Starts a job to create a one-time copy of the specified resource
---- @param input table The input table for the start_copy_job command
+--- @param input table|nil The input table for the start_copy_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_copy_job(input)
 	return common.execute_aws_command_with_input({ "backup", "start-copy-job" }, input)
 end
 
 --- Starts an on-demand report job for the specified report plan
---- @param input table The input table for the start_report_job command
+--- @param input table|nil The input table for the start_report_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_report_job(input)
 	return common.execute_aws_command_with_input({ "backup", "start-report-job" }, input)
 end
 
 --- Recovers the saved resource identified by an Amazon Resource Name (ARN)
---- @param input table The input table for the start_restore_job command
+--- @param input table|nil The input table for the start_restore_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_restore_job(input)
 	return common.execute_aws_command_with_input({ "backup", "start-restore-job" }, input)
 end
 
 --- Attempts to cancel a job to create a one-time backup of a resource
---- @param input table The input table for the stop_backup_job command
+--- @param input table|nil The input table for the stop_backup_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_backup_job(input)
 	return common.execute_aws_command_with_input({ "backup", "stop-backup-job" }, input)
 end
 
 --- Assigns a set of key-value pairs to a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN)
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "backup", "tag-resource" }, input)
 end
 
 --- Removes a set of key-value pairs from a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN) This API is not supported for recovery points for resource types including Aurora, Amazon DocumentDB
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "backup", "untag-resource" }, input)
 end
 
 --- Updates the specified backup plan
---- @param input table The input table for the update_backup_plan command
+--- @param input table|nil The input table for the update_backup_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backup_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "update-backup-plan" }, input)
 end
 
 --- Updates the specified framework
---- @param input table The input table for the update_framework command
+--- @param input table|nil The input table for the update_framework command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_framework(input)
 	return common.execute_aws_command_with_input({ "backup", "update-framework" }, input)
 end
 
 --- Updates whether the Amazon Web Services account is opted in to cross-account backup
---- @param input table The input table for the update_global_settings command
+--- @param input table|nil The input table for the update_global_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_settings(input)
 	return common.execute_aws_command_with_input({ "backup", "update-global-settings" }, input)
 end
 
 --- This operation updates the settings of a recovery point index
---- @param input table The input table for the update_recovery_point_index_settings command
+--- @param input table|nil The input table for the update_recovery_point_index_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recovery_point_index_settings(input)
 	return common.execute_aws_command_with_input({ "backup", "update-recovery-point-index-settings" }, input)
 end
 
 --- Sets the transition lifecycle of a recovery point
---- @param input table The input table for the update_recovery_point_lifecycle command
+--- @param input table|nil The input table for the update_recovery_point_lifecycle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recovery_point_lifecycle(input)
 	return common.execute_aws_command_with_input({ "backup", "update-recovery-point-lifecycle" }, input)
 end
 
 --- Updates the current service opt-in settings for the Region
---- @param input table The input table for the update_region_settings command
+--- @param input table|nil The input table for the update_region_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_region_settings(input)
 	return common.execute_aws_command_with_input({ "backup", "update-region-settings" }, input)
 end
 
 --- Updates the specified report plan
---- @param input table The input table for the update_report_plan command
+--- @param input table|nil The input table for the update_report_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_report_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "update-report-plan" }, input)
 end
 
 --- This request will send changes to your specified restore testing plan
---- @param input table The input table for the update_restore_testing_plan command
+--- @param input table|nil The input table for the update_restore_testing_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_restore_testing_plan(input)
 	return common.execute_aws_command_with_input({ "backup", "update-restore-testing-plan" }, input)
 end
 
 --- Updates the specified restore testing selection
---- @param input table The input table for the update_restore_testing_selection command
+--- @param input table|nil The input table for the update_restore_testing_selection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_restore_testing_selection(input)
 	return common.execute_aws_command_with_input({ "backup", "update-restore-testing-selection" }, input)

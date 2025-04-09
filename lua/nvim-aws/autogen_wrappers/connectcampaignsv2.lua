@@ -8,231 +8,231 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a campaign for the specified Amazon Connect account
---- @param input table The input table for the create_campaign command
+--- @param input table|nil The input table for the create_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "create-campaign" }, input)
 end
 
 --- Deletes a campaign from the specified Amazon Connect account
---- @param input table The input table for the delete_campaign command
+--- @param input table|nil The input table for the delete_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign" }, input)
 end
 
 --- Deletes the channel subtype config of a campaign
---- @param input table The input table for the delete_campaign_channel_subtype_config command
+--- @param input table|nil The input table for the delete_campaign_channel_subtype_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_campaign_channel_subtype_config(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-channel-subtype-config" }, input)
 end
 
 --- Deletes the communication limits config for a campaign
---- @param input table The input table for the delete_campaign_communication_limits command
+--- @param input table|nil The input table for the delete_campaign_communication_limits command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_campaign_communication_limits(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-communication-limits" }, input)
 end
 
 --- Deletes the communication time config for a campaign
---- @param input table The input table for the delete_campaign_communication_time command
+--- @param input table|nil The input table for the delete_campaign_communication_time command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_campaign_communication_time(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-communication-time" }, input)
 end
 
 --- Deletes a connect instance config from the specified AWS account
---- @param input table The input table for the delete_connect_instance_config command
+--- @param input table|nil The input table for the delete_connect_instance_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connect_instance_config(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-connect-instance-config" }, input)
 end
 
 --- Delete the integration for the specified Amazon Connect instance
---- @param input table The input table for the delete_connect_instance_integration command
+--- @param input table|nil The input table for the delete_connect_instance_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connect_instance_integration(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-connect-instance-integration" }, input)
 end
 
 --- Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance
---- @param input table The input table for the delete_instance_onboarding_job command
+--- @param input table|nil The input table for the delete_instance_onboarding_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_instance_onboarding_job(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-instance-onboarding-job" }, input)
 end
 
 --- Describes the specific campaign
---- @param input table The input table for the describe_campaign command
+--- @param input table|nil The input table for the describe_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "describe-campaign" }, input)
 end
 
 --- Get state of a campaign for the specified Amazon Connect account
---- @param input table The input table for the get_campaign_state command
+--- @param input table|nil The input table for the get_campaign_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_campaign_state(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-campaign-state" }, input)
 end
 
 --- Get state of campaigns for the specified Amazon Connect account
---- @param input table The input table for the get_campaign_state_batch command
+--- @param input table|nil The input table for the get_campaign_state_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_campaign_state_batch(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-campaign-state-batch" }, input)
 end
 
 --- Get the specific Connect instance config
---- @param input table The input table for the get_connect_instance_config command
+--- @param input table|nil The input table for the get_connect_instance_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connect_instance_config(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-connect-instance-config" }, input)
 end
 
 --- Get the specific instance onboarding job status
---- @param input table The input table for the get_instance_onboarding_job_status command
+--- @param input table|nil The input table for the get_instance_onboarding_job_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_onboarding_job_status(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-instance-onboarding-job-status" }, input)
 end
 
 --- Provides summary information about the campaigns under the specified Amazon Connect account
---- @param input table The input table for the list_campaigns command
+--- @param input table|nil The input table for the list_campaigns command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_campaigns(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-campaigns" }, input)
 end
 
 --- Provides summary information about the integration under the specified Connect instance
---- @param input table The input table for the list_connect_instance_integrations command
+--- @param input table|nil The input table for the list_connect_instance_integrations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connect_instance_integrations(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-connect-instance-integrations" }, input)
 end
 
 --- List tags for a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-tags-for-resource" }, input)
 end
 
 --- Pauses a campaign for the specified Amazon Connect account
---- @param input table The input table for the pause_campaign command
+--- @param input table|nil The input table for the pause_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.pause_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "pause-campaign" }, input)
 end
 
 --- Put or update the integration for the specified Amazon Connect instance
---- @param input table The input table for the put_connect_instance_integration command
+--- @param input table|nil The input table for the put_connect_instance_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_connect_instance_integration(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-connect-instance-integration" }, input)
 end
 
 --- Creates outbound requests for the specified campaign Amazon Connect account
---- @param input table The input table for the put_outbound_request_batch command
+--- @param input table|nil The input table for the put_outbound_request_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_outbound_request_batch(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-outbound-request-batch" }, input)
 end
 
 --- Takes in a list of profile outbound requests to be placed as part of an outbound campaign
---- @param input table The input table for the put_profile_outbound_request_batch command
+--- @param input table|nil The input table for the put_profile_outbound_request_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_profile_outbound_request_batch(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-profile-outbound-request-batch" }, input)
 end
 
 --- Stops a campaign for the specified Amazon Connect account
---- @param input table The input table for the resume_campaign command
+--- @param input table|nil The input table for the resume_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "resume-campaign" }, input)
 end
 
 --- Starts a campaign for the specified Amazon Connect account
---- @param input table The input table for the start_campaign command
+--- @param input table|nil The input table for the start_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "start-campaign" }, input)
 end
 
 --- Onboard the specific Amazon Connect instance to Connect Campaigns
---- @param input table The input table for the start_instance_onboarding_job command
+--- @param input table|nil The input table for the start_instance_onboarding_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_instance_onboarding_job(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "start-instance-onboarding-job" }, input)
 end
 
 --- Stops a campaign for the specified Amazon Connect account
---- @param input table The input table for the stop_campaign command
+--- @param input table|nil The input table for the stop_campaign command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_campaign(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "stop-campaign" }, input)
 end
 
 --- Tag a resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "tag-resource" }, input)
 end
 
 --- Untag a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "untag-resource" }, input)
 end
 
 --- Updates the channel subtype config of a campaign
---- @param input table The input table for the update_campaign_channel_subtype_config command
+--- @param input table|nil The input table for the update_campaign_channel_subtype_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_channel_subtype_config(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-channel-subtype-config" }, input)
 end
 
 --- Updates the communication limits config for a campaign
---- @param input table The input table for the update_campaign_communication_limits command
+--- @param input table|nil The input table for the update_campaign_communication_limits command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_communication_limits(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-communication-limits" }, input)
 end
 
 --- Updates the communication time config for a campaign
---- @param input table The input table for the update_campaign_communication_time command
+--- @param input table|nil The input table for the update_campaign_communication_time command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_communication_time(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-communication-time" }, input)
 end
 
 --- Updates the campaign flow associated with a campaign
---- @param input table The input table for the update_campaign_flow_association command
+--- @param input table|nil The input table for the update_campaign_flow_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_flow_association(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-flow-association" }, input)
 end
 
 --- Updates the name of a campaign
---- @param input table The input table for the update_campaign_name command
+--- @param input table|nil The input table for the update_campaign_name command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_name(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-name" }, input)
 end
 
 --- Updates the schedule for a campaign
---- @param input table The input table for the update_campaign_schedule command
+--- @param input table|nil The input table for the update_campaign_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_schedule(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-schedule" }, input)
 end
 
 --- Updates the campaign source with a campaign
---- @param input table The input table for the update_campaign_source command
+--- @param input table|nil The input table for the update_campaign_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign_source(input)
 	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-source" }, input)

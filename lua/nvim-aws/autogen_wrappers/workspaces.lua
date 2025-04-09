@@ -8,623 +8,623 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Accepts the account link invitation
---- @param input table The input table for the accept_account_link_invitation command
+--- @param input table|nil The input table for the accept_account_link_invitation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_account_link_invitation(input)
 	return common.execute_aws_command_with_input({ "workspaces", "accept-account-link-invitation" }, input)
 end
 
 --- Associates the specified connection alias with the specified directory to enable cross-Region redirection
---- @param input table The input table for the associate_connection_alias command
+--- @param input table|nil The input table for the associate_connection_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_connection_alias(input)
 	return common.execute_aws_command_with_input({ "workspaces", "associate-connection-alias" }, input)
 end
 
 --- Associates the specified IP access control group with the specified directory
---- @param input table The input table for the associate_ip_groups command
+--- @param input table|nil The input table for the associate_ip_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_ip_groups(input)
 	return common.execute_aws_command_with_input({ "workspaces", "associate-ip-groups" }, input)
 end
 
 --- Associates the specified application to the specified WorkSpace
---- @param input table The input table for the associate_workspace_application command
+--- @param input table|nil The input table for the associate_workspace_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_workspace_application(input)
 	return common.execute_aws_command_with_input({ "workspaces", "associate-workspace-application" }, input)
 end
 
 --- Adds one or more rules to the specified IP access control group
---- @param input table The input table for the authorize_ip_rules command
+--- @param input table|nil The input table for the authorize_ip_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_ip_rules(input)
 	return common.execute_aws_command_with_input({ "workspaces", "authorize-ip-rules" }, input)
 end
 
 --- Copies the specified image from the specified Region to the current Region
---- @param input table The input table for the copy_workspace_image command
+--- @param input table|nil The input table for the copy_workspace_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_workspace_image(input)
 	return common.execute_aws_command_with_input({ "workspaces", "copy-workspace-image" }, input)
 end
 
 --- Creates the account link invitation
---- @param input table The input table for the create_account_link_invitation command
+--- @param input table|nil The input table for the create_account_link_invitation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_account_link_invitation(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-account-link-invitation" }, input)
 end
 
 --- Creates a client-add-in for Amazon Connect within a directory
---- @param input table The input table for the create_connect_client_add_in command
+--- @param input table|nil The input table for the create_connect_client_add_in command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connect_client_add_in(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-connect-client-add-in" }, input)
 end
 
 --- Creates the specified connection alias for use with cross-Region redirection
---- @param input table The input table for the create_connection_alias command
+--- @param input table|nil The input table for the create_connection_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection_alias(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-connection-alias" }, input)
 end
 
 --- Creates an IP access control group
---- @param input table The input table for the create_ip_group command
+--- @param input table|nil The input table for the create_ip_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ip_group(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-ip-group" }, input)
 end
 
 --- Creates a standby WorkSpace in a secondary Region
---- @param input table The input table for the create_standby_workspaces command
+--- @param input table|nil The input table for the create_standby_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_standby_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-standby-workspaces" }, input)
 end
 
 --- Creates the specified tags for the specified WorkSpaces resource
---- @param input table The input table for the create_tags command
+--- @param input table|nil The input table for the create_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_tags(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-tags" }, input)
 end
 
 --- Creates a new updated WorkSpace image based on the specified source image
---- @param input table The input table for the create_updated_workspace_image command
+--- @param input table|nil The input table for the create_updated_workspace_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_updated_workspace_image(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-updated-workspace-image" }, input)
 end
 
 --- Creates the specified WorkSpace bundle
---- @param input table The input table for the create_workspace_bundle command
+--- @param input table|nil The input table for the create_workspace_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspace_bundle(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-workspace-bundle" }, input)
 end
 
 --- Creates a new WorkSpace image from an existing WorkSpace
---- @param input table The input table for the create_workspace_image command
+--- @param input table|nil The input table for the create_workspace_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspace_image(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-workspace-image" }, input)
 end
 
 --- Creates one or more WorkSpaces
---- @param input table The input table for the create_workspaces command
+--- @param input table|nil The input table for the create_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-workspaces" }, input)
 end
 
 --- Creates a pool of WorkSpaces
---- @param input table The input table for the create_workspaces_pool command
+--- @param input table|nil The input table for the create_workspaces_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspaces_pool(input)
 	return common.execute_aws_command_with_input({ "workspaces", "create-workspaces-pool" }, input)
 end
 
 --- Deletes the account link invitation
---- @param input table The input table for the delete_account_link_invitation command
+--- @param input table|nil The input table for the delete_account_link_invitation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account_link_invitation(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-account-link-invitation" }, input)
 end
 
 --- Deletes customized client branding
---- @param input table The input table for the delete_client_branding command
+--- @param input table|nil The input table for the delete_client_branding command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_client_branding(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-client-branding" }, input)
 end
 
 --- Deletes a client-add-in for Amazon Connect that is configured within a directory
---- @param input table The input table for the delete_connect_client_add_in command
+--- @param input table|nil The input table for the delete_connect_client_add_in command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connect_client_add_in(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-connect-client-add-in" }, input)
 end
 
 --- Deletes the specified connection alias
---- @param input table The input table for the delete_connection_alias command
+--- @param input table|nil The input table for the delete_connection_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection_alias(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-connection-alias" }, input)
 end
 
 --- Deletes the specified IP access control group
---- @param input table The input table for the delete_ip_group command
+--- @param input table|nil The input table for the delete_ip_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ip_group(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-ip-group" }, input)
 end
 
 --- Deletes the specified tags from the specified WorkSpaces resource
---- @param input table The input table for the delete_tags command
+--- @param input table|nil The input table for the delete_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-tags" }, input)
 end
 
 --- Deletes the specified WorkSpace bundle
---- @param input table The input table for the delete_workspace_bundle command
+--- @param input table|nil The input table for the delete_workspace_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workspace_bundle(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-workspace-bundle" }, input)
 end
 
 --- Deletes the specified image from your account
---- @param input table The input table for the delete_workspace_image command
+--- @param input table|nil The input table for the delete_workspace_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workspace_image(input)
 	return common.execute_aws_command_with_input({ "workspaces", "delete-workspace-image" }, input)
 end
 
 --- Deploys associated applications to the specified WorkSpace
---- @param input table The input table for the deploy_workspace_applications command
+--- @param input table|nil The input table for the deploy_workspace_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deploy_workspace_applications(input)
 	return common.execute_aws_command_with_input({ "workspaces", "deploy-workspace-applications" }, input)
 end
 
 --- Deregisters the specified directory
---- @param input table The input table for the deregister_workspace_directory command
+--- @param input table|nil The input table for the deregister_workspace_directory command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_workspace_directory(input)
 	return common.execute_aws_command_with_input({ "workspaces", "deregister-workspace-directory" }, input)
 end
 
 --- Retrieves a list that describes the configuration of Bring Your Own License (BYOL) for the specified account
---- @param input table The input table for the describe_account command
+--- @param input table|nil The input table for the describe_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-account" }, input)
 end
 
 --- Retrieves a list that describes modifications to the configuration of Bring Your Own License (BYOL) for the specified account
---- @param input table The input table for the describe_account_modifications command
+--- @param input table|nil The input table for the describe_account_modifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_modifications(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-account-modifications" }, input)
 end
 
 --- Describes the associations between the application and the specified associated resources
---- @param input table The input table for the describe_application_associations command
+--- @param input table|nil The input table for the describe_application_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application_associations(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-application-associations" }, input)
 end
 
 --- Describes the specified applications by filtering based on their compute types, license availability, operating systems, and owners
---- @param input table The input table for the describe_applications command
+--- @param input table|nil The input table for the describe_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_applications(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-applications" }, input)
 end
 
 --- Describes the associations between the applications and the specified bundle
---- @param input table The input table for the describe_bundle_associations command
+--- @param input table|nil The input table for the describe_bundle_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_bundle_associations(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-bundle-associations" }, input)
 end
 
 --- Describes the specified client branding
---- @param input table The input table for the describe_client_branding command
+--- @param input table|nil The input table for the describe_client_branding command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_client_branding(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-client-branding" }, input)
 end
 
 --- Retrieves a list that describes one or more specified Amazon WorkSpaces clients
---- @param input table The input table for the describe_client_properties command
+--- @param input table|nil The input table for the describe_client_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_client_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-client-properties" }, input)
 end
 
 --- Retrieves a list of Amazon Connect client add-ins that have been created
---- @param input table The input table for the describe_connect_client_add_ins command
+--- @param input table|nil The input table for the describe_connect_client_add_ins command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connect_client_add_ins(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-connect-client-add-ins" }, input)
 end
 
 --- Describes the permissions that the owner of a connection alias has granted to another Amazon Web Services account for the specified connection alias
---- @param input table The input table for the describe_connection_alias_permissions command
+--- @param input table|nil The input table for the describe_connection_alias_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connection_alias_permissions(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-connection-alias-permissions" }, input)
 end
 
 --- Retrieves a list that describes the connection aliases used for cross-Region redirection
---- @param input table The input table for the describe_connection_aliases command
+--- @param input table|nil The input table for the describe_connection_aliases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connection_aliases(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-connection-aliases" }, input)
 end
 
 --- Describes the associations between the applications and the specified image
---- @param input table The input table for the describe_image_associations command
+--- @param input table|nil The input table for the describe_image_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_associations(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-image-associations" }, input)
 end
 
 --- Describes one or more of your IP access control groups
---- @param input table The input table for the describe_ip_groups command
+--- @param input table|nil The input table for the describe_ip_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ip_groups(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-ip-groups" }, input)
 end
 
 --- Describes the specified tags for the specified WorkSpaces resource
---- @param input table The input table for the describe_tags command
+--- @param input table|nil The input table for the describe_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tags(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-tags" }, input)
 end
 
 --- Describes the associations betweens applications and the specified WorkSpace
---- @param input table The input table for the describe_workspace_associations command
+--- @param input table|nil The input table for the describe_workspace_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_associations(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-associations" }, input)
 end
 
 --- Retrieves a list that describes the available WorkSpace bundles
---- @param input table The input table for the describe_workspace_bundles command
+--- @param input table|nil The input table for the describe_workspace_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_bundles(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-bundles" }, input)
 end
 
 --- Describes the available directories that are registered with Amazon WorkSpaces
---- @param input table The input table for the describe_workspace_directories command
+--- @param input table|nil The input table for the describe_workspace_directories command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_directories(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-directories" }, input)
 end
 
 --- Describes the permissions that the owner of an image has granted to other Amazon Web Services accounts for an image
---- @param input table The input table for the describe_workspace_image_permissions command
+--- @param input table|nil The input table for the describe_workspace_image_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_image_permissions(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-image-permissions" }, input)
 end
 
 --- Retrieves a list that describes one or more specified images, if the image identifiers are provided
---- @param input table The input table for the describe_workspace_images command
+--- @param input table|nil The input table for the describe_workspace_images command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_images(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-images" }, input)
 end
 
 --- Describes the snapshots for the specified WorkSpace
---- @param input table The input table for the describe_workspace_snapshots command
+--- @param input table|nil The input table for the describe_workspace_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace_snapshots(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-snapshots" }, input)
 end
 
 --- Describes the specified WorkSpaces
---- @param input table The input table for the describe_workspaces command
+--- @param input table|nil The input table for the describe_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces" }, input)
 end
 
 --- Describes the connection status of the specified WorkSpaces
---- @param input table The input table for the describe_workspaces_connection_status command
+--- @param input table|nil The input table for the describe_workspaces_connection_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspaces_connection_status(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-connection-status" }, input)
 end
 
 --- Retrieves a list that describes the streaming sessions for a specified pool
---- @param input table The input table for the describe_workspaces_pool_sessions command
+--- @param input table|nil The input table for the describe_workspaces_pool_sessions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspaces_pool_sessions(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-pool-sessions" }, input)
 end
 
 --- Describes the specified WorkSpaces Pools
---- @param input table The input table for the describe_workspaces_pools command
+--- @param input table|nil The input table for the describe_workspaces_pools command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspaces_pools(input)
 	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-pools" }, input)
 end
 
 --- Disassociates a connection alias from a directory
---- @param input table The input table for the disassociate_connection_alias command
+--- @param input table|nil The input table for the disassociate_connection_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_connection_alias(input)
 	return common.execute_aws_command_with_input({ "workspaces", "disassociate-connection-alias" }, input)
 end
 
 --- Disassociates the specified IP access control group from the specified directory
---- @param input table The input table for the disassociate_ip_groups command
+--- @param input table|nil The input table for the disassociate_ip_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_ip_groups(input)
 	return common.execute_aws_command_with_input({ "workspaces", "disassociate-ip-groups" }, input)
 end
 
 --- Disassociates the specified application from a WorkSpace
---- @param input table The input table for the disassociate_workspace_application command
+--- @param input table|nil The input table for the disassociate_workspace_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_workspace_application(input)
 	return common.execute_aws_command_with_input({ "workspaces", "disassociate-workspace-application" }, input)
 end
 
 --- Retrieves account link information
---- @param input table The input table for the get_account_link command
+--- @param input table|nil The input table for the get_account_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_link(input)
 	return common.execute_aws_command_with_input({ "workspaces", "get-account-link" }, input)
 end
 
 --- Imports client branding
---- @param input table The input table for the import_client_branding command
+--- @param input table|nil The input table for the import_client_branding command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_client_branding(input)
 	return common.execute_aws_command_with_input({ "workspaces", "import-client-branding" }, input)
 end
 
 --- Imports the specified Windows 10 or 11 Bring Your Own License (BYOL) image into Amazon WorkSpaces
---- @param input table The input table for the import_workspace_image command
+--- @param input table|nil The input table for the import_workspace_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_workspace_image(input)
 	return common.execute_aws_command_with_input({ "workspaces", "import-workspace-image" }, input)
 end
 
 --- Lists all account links
---- @param input table The input table for the list_account_links command
+--- @param input table|nil The input table for the list_account_links command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_account_links(input)
 	return common.execute_aws_command_with_input({ "workspaces", "list-account-links" }, input)
 end
 
 --- Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management interface when you enable Bring Your Own License (BYOL)
---- @param input table The input table for the list_available_management_cidr_ranges command
+--- @param input table|nil The input table for the list_available_management_cidr_ranges command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_available_management_cidr_ranges(input)
 	return common.execute_aws_command_with_input({ "workspaces", "list-available-management-cidr-ranges" }, input)
 end
 
 --- Migrates a WorkSpace from one operating system or bundle type to another, while retaining the data on the user volume
---- @param input table The input table for the migrate_workspace command
+--- @param input table|nil The input table for the migrate_workspace command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.migrate_workspace(input)
 	return common.execute_aws_command_with_input({ "workspaces", "migrate-workspace" }, input)
 end
 
 --- Modifies the configuration of Bring Your Own License (BYOL) for the specified account
---- @param input table The input table for the modify_account command
+--- @param input table|nil The input table for the modify_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_account(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-account" }, input)
 end
 
 --- Modifies the properties of the certificate-based authentication you want to use with your WorkSpaces
---- @param input table The input table for the modify_certificate_based_auth_properties command
+--- @param input table|nil The input table for the modify_certificate_based_auth_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_certificate_based_auth_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-certificate-based-auth-properties" }, input)
 end
 
 --- Modifies the properties of the specified Amazon WorkSpaces clients
---- @param input table The input table for the modify_client_properties command
+--- @param input table|nil The input table for the modify_client_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_client_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-client-properties" }, input)
 end
 
 --- Modifies the endpoint encryption mode that allows you to configure the specified directory between Standard TLS and FIPS 140-2 validated mode
---- @param input table The input table for the modify_endpoint_encryption_mode command
+--- @param input table|nil The input table for the modify_endpoint_encryption_mode command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_endpoint_encryption_mode(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-endpoint-encryption-mode" }, input)
 end
 
 --- Modifies multiple properties related to SAML 2
---- @param input table The input table for the modify_saml_properties command
+--- @param input table|nil The input table for the modify_saml_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_saml_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-saml-properties" }, input)
 end
 
 --- Modifies the self-service WorkSpace management capabilities for your users
---- @param input table The input table for the modify_selfservice_permissions command
+--- @param input table|nil The input table for the modify_selfservice_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_selfservice_permissions(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-selfservice-permissions" }, input)
 end
 
 --- Modifies the specified streaming properties
---- @param input table The input table for the modify_streaming_properties command
+--- @param input table|nil The input table for the modify_streaming_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_streaming_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-streaming-properties" }, input)
 end
 
 --- Specifies which devices and operating systems users can use to access their WorkSpaces
---- @param input table The input table for the modify_workspace_access_properties command
+--- @param input table|nil The input table for the modify_workspace_access_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_workspace_access_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-access-properties" }, input)
 end
 
 --- Modify the default properties used to create WorkSpaces
---- @param input table The input table for the modify_workspace_creation_properties command
+--- @param input table|nil The input table for the modify_workspace_creation_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_workspace_creation_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-creation-properties" }, input)
 end
 
 --- Modifies the specified WorkSpace properties
---- @param input table The input table for the modify_workspace_properties command
+--- @param input table|nil The input table for the modify_workspace_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_workspace_properties(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-properties" }, input)
 end
 
 --- Sets the state of the specified WorkSpace
---- @param input table The input table for the modify_workspace_state command
+--- @param input table|nil The input table for the modify_workspace_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_workspace_state(input)
 	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-state" }, input)
 end
 
 --- Reboots the specified WorkSpaces
---- @param input table The input table for the reboot_workspaces command
+--- @param input table|nil The input table for the reboot_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "reboot-workspaces" }, input)
 end
 
 --- Rebuilds the specified WorkSpace
---- @param input table The input table for the rebuild_workspaces command
+--- @param input table|nil The input table for the rebuild_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rebuild_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "rebuild-workspaces" }, input)
 end
 
 --- Registers the specified directory
---- @param input table The input table for the register_workspace_directory command
+--- @param input table|nil The input table for the register_workspace_directory command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_workspace_directory(input)
 	return common.execute_aws_command_with_input({ "workspaces", "register-workspace-directory" }, input)
 end
 
 --- Rejects the account link invitation
---- @param input table The input table for the reject_account_link_invitation command
+--- @param input table|nil The input table for the reject_account_link_invitation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_account_link_invitation(input)
 	return common.execute_aws_command_with_input({ "workspaces", "reject-account-link-invitation" }, input)
 end
 
 --- Restores the specified WorkSpace to its last known healthy state
---- @param input table The input table for the restore_workspace command
+--- @param input table|nil The input table for the restore_workspace command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_workspace(input)
 	return common.execute_aws_command_with_input({ "workspaces", "restore-workspace" }, input)
 end
 
 --- Removes one or more rules from the specified IP access control group
---- @param input table The input table for the revoke_ip_rules command
+--- @param input table|nil The input table for the revoke_ip_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_ip_rules(input)
 	return common.execute_aws_command_with_input({ "workspaces", "revoke-ip-rules" }, input)
 end
 
 --- Starts the specified WorkSpaces
---- @param input table The input table for the start_workspaces command
+--- @param input table|nil The input table for the start_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "start-workspaces" }, input)
 end
 
 --- Starts the specified pool
---- @param input table The input table for the start_workspaces_pool command
+--- @param input table|nil The input table for the start_workspaces_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_workspaces_pool(input)
 	return common.execute_aws_command_with_input({ "workspaces", "start-workspaces-pool" }, input)
 end
 
 --- Stops the specified WorkSpaces
---- @param input table The input table for the stop_workspaces command
+--- @param input table|nil The input table for the stop_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "stop-workspaces" }, input)
 end
 
 --- Stops the specified pool
---- @param input table The input table for the stop_workspaces_pool command
+--- @param input table|nil The input table for the stop_workspaces_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_workspaces_pool(input)
 	return common.execute_aws_command_with_input({ "workspaces", "stop-workspaces-pool" }, input)
 end
 
 --- Terminates the specified WorkSpaces
---- @param input table The input table for the terminate_workspaces command
+--- @param input table|nil The input table for the terminate_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_workspaces(input)
 	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces" }, input)
 end
 
 --- Terminates the specified pool
---- @param input table The input table for the terminate_workspaces_pool command
+--- @param input table|nil The input table for the terminate_workspaces_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_workspaces_pool(input)
 	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces-pool" }, input)
 end
 
 --- Terminates the pool session
---- @param input table The input table for the terminate_workspaces_pool_session command
+--- @param input table|nil The input table for the terminate_workspaces_pool_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_workspaces_pool_session(input)
 	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces-pool-session" }, input)
 end
 
 --- Updates a Amazon Connect client add-in
---- @param input table The input table for the update_connect_client_add_in command
+--- @param input table|nil The input table for the update_connect_client_add_in command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connect_client_add_in(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-connect-client-add-in" }, input)
 end
 
 --- Shares or unshares a connection alias with one account by specifying whether that account has permission to associate the connection alias with a directory
---- @param input table The input table for the update_connection_alias_permission command
+--- @param input table|nil The input table for the update_connection_alias_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connection_alias_permission(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-connection-alias-permission" }, input)
 end
 
 --- Replaces the current rules of the specified IP access control group with the specified rules
---- @param input table The input table for the update_rules_of_ip_group command
+--- @param input table|nil The input table for the update_rules_of_ip_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rules_of_ip_group(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-rules-of-ip-group" }, input)
 end
 
 --- Updates a WorkSpace bundle with a new image
---- @param input table The input table for the update_workspace_bundle command
+--- @param input table|nil The input table for the update_workspace_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workspace_bundle(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-workspace-bundle" }, input)
 end
 
 --- Shares or unshares an image with one account in the same Amazon Web Services Region by specifying whether that account has permission to copy the image
---- @param input table The input table for the update_workspace_image_permission command
+--- @param input table|nil The input table for the update_workspace_image_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workspace_image_permission(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-workspace-image-permission" }, input)
 end
 
 --- Updates the specified pool
---- @param input table The input table for the update_workspaces_pool command
+--- @param input table|nil The input table for the update_workspaces_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workspaces_pool(input)
 	return common.execute_aws_command_with_input({ "workspaces", "update-workspaces-pool" }, input)

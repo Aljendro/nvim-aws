@@ -8,644 +8,644 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds a member (user or group) to the resource's set of delegates
---- @param input table The input table for the associate_delegate_to_resource command
+--- @param input table|nil The input table for the associate_delegate_to_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_delegate_to_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "associate-delegate-to-resource" }, input)
 end
 
 --- Adds a member (user or group) to the group's set
---- @param input table The input table for the associate_member_to_group command
+--- @param input table|nil The input table for the associate_member_to_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_member_to_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "associate-member-to-group" }, input)
 end
 
 --- Assumes an impersonation role for the given WorkMail organization
---- @param input table The input table for the assume_impersonation_role command
+--- @param input table|nil The input table for the assume_impersonation_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_impersonation_role(input)
 	return common.execute_aws_command_with_input({ "workmail", "assume-impersonation-role" }, input)
 end
 
 --- Cancels a mailbox export job
---- @param input table The input table for the cancel_mailbox_export_job command
+--- @param input table|nil The input table for the cancel_mailbox_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_mailbox_export_job(input)
 	return common.execute_aws_command_with_input({ "workmail", "cancel-mailbox-export-job" }, input)
 end
 
 --- Adds an alias to the set of a given member (user or group) of WorkMail
---- @param input table The input table for the create_alias command
+--- @param input table|nil The input table for the create_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_alias(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-alias" }, input)
 end
 
 --- Creates an AvailabilityConfiguration for the given WorkMail organization and domain
---- @param input table The input table for the create_availability_configuration command
+--- @param input table|nil The input table for the create_availability_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_availability_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-availability-configuration" }, input)
 end
 
 --- Creates a group that can be used in WorkMail by calling the RegisterToWorkMail operation
---- @param input table The input table for the create_group command
+--- @param input table|nil The input table for the create_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-group" }, input)
 end
 
 --- Creates the WorkMail application in IAM Identity Center that can be used later in the WorkMail - IdC integration
---- @param input table The input table for the create_identity_center_application command
+--- @param input table|nil The input table for the create_identity_center_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_identity_center_application(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-identity-center-application" }, input)
 end
 
 --- Creates an impersonation role for the given WorkMail organization
---- @param input table The input table for the create_impersonation_role command
+--- @param input table|nil The input table for the create_impersonation_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_impersonation_role(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-impersonation-role" }, input)
 end
 
 --- Creates a new mobile device access rule for the specified WorkMail organization
---- @param input table The input table for the create_mobile_device_access_rule command
+--- @param input table|nil The input table for the create_mobile_device_access_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_mobile_device_access_rule(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-mobile-device-access-rule" }, input)
 end
 
 --- Creates a new WorkMail organization
---- @param input table The input table for the create_organization command
+--- @param input table|nil The input table for the create_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_organization(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-organization" }, input)
 end
 
 --- Creates a new WorkMail resource
---- @param input table The input table for the create_resource command
+--- @param input table|nil The input table for the create_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-resource" }, input)
 end
 
 --- Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "workmail", "create-user" }, input)
 end
 
 --- Deletes an access control rule for the specified WorkMail organization
---- @param input table The input table for the delete_access_control_rule command
+--- @param input table|nil The input table for the delete_access_control_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_control_rule(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-access-control-rule" }, input)
 end
 
 --- Remove one or more specified aliases from a set of aliases for a given user
---- @param input table The input table for the delete_alias command
+--- @param input table|nil The input table for the delete_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alias(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-alias" }, input)
 end
 
 --- Deletes the AvailabilityConfiguration for the given WorkMail organization and domain
---- @param input table The input table for the delete_availability_configuration command
+--- @param input table|nil The input table for the delete_availability_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_availability_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-availability-configuration" }, input)
 end
 
 --- Deletes the email monitoring configuration for a specified organization
---- @param input table The input table for the delete_email_monitoring_configuration command
+--- @param input table|nil The input table for the delete_email_monitoring_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_email_monitoring_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-email-monitoring-configuration" }, input)
 end
 
 --- Deletes a group from WorkMail
---- @param input table The input table for the delete_group command
+--- @param input table|nil The input table for the delete_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-group" }, input)
 end
 
 --- Deletes the IAM Identity Center application from WorkMail
---- @param input table The input table for the delete_identity_center_application command
+--- @param input table|nil The input table for the delete_identity_center_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_identity_center_application(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-identity-center-application" }, input)
 end
 
 --- Disables the integration between IdC and WorkMail
---- @param input table The input table for the delete_identity_provider_configuration command
+--- @param input table|nil The input table for the delete_identity_provider_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_identity_provider_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-identity-provider-configuration" }, input)
 end
 
 --- Deletes an impersonation role for the given WorkMail organization
---- @param input table The input table for the delete_impersonation_role command
+--- @param input table|nil The input table for the delete_impersonation_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_impersonation_role(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-impersonation-role" }, input)
 end
 
 --- Deletes permissions granted to a member (user or group)
---- @param input table The input table for the delete_mailbox_permissions command
+--- @param input table|nil The input table for the delete_mailbox_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_mailbox_permissions(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-mailbox-permissions" }, input)
 end
 
 --- Deletes the mobile device access override for the given WorkMail organization, user, and device
---- @param input table The input table for the delete_mobile_device_access_override command
+--- @param input table|nil The input table for the delete_mobile_device_access_override command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_mobile_device_access_override(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-mobile-device-access-override" }, input)
 end
 
 --- Deletes a mobile device access rule for the specified WorkMail organization
---- @param input table The input table for the delete_mobile_device_access_rule command
+--- @param input table|nil The input table for the delete_mobile_device_access_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_mobile_device_access_rule(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-mobile-device-access-rule" }, input)
 end
 
 --- Deletes an WorkMail organization and all underlying AWS resources managed by WorkMail as part of the organization
---- @param input table The input table for the delete_organization command
+--- @param input table|nil The input table for the delete_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_organization(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-organization" }, input)
 end
 
 --- Deletes the Personal Access Token from the provided WorkMail Organization
---- @param input table The input table for the delete_personal_access_token command
+--- @param input table|nil The input table for the delete_personal_access_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_personal_access_token(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-personal-access-token" }, input)
 end
 
 --- Deletes the specified resource
---- @param input table The input table for the delete_resource command
+--- @param input table|nil The input table for the delete_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-resource" }, input)
 end
 
 --- Deletes the specified retention policy from the specified organization
---- @param input table The input table for the delete_retention_policy command
+--- @param input table|nil The input table for the delete_retention_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_retention_policy(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-retention-policy" }, input)
 end
 
 --- Deletes a user from WorkMail and all subsequent systems
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "workmail", "delete-user" }, input)
 end
 
 --- Mark a user, group, or resource as no longer used in WorkMail
---- @param input table The input table for the deregister_from_work_mail command
+--- @param input table|nil The input table for the deregister_from_work_mail command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_from_work_mail(input)
 	return common.execute_aws_command_with_input({ "workmail", "deregister-from-work-mail" }, input)
 end
 
 --- Removes a domain from WorkMail, stops email routing to WorkMail, and removes the authorization allowing WorkMail use
---- @param input table The input table for the deregister_mail_domain command
+--- @param input table|nil The input table for the deregister_mail_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_mail_domain(input)
 	return common.execute_aws_command_with_input({ "workmail", "deregister-mail-domain" }, input)
 end
 
 --- Describes the current email monitoring configuration for a specified organization
---- @param input table The input table for the describe_email_monitoring_configuration command
+--- @param input table|nil The input table for the describe_email_monitoring_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_email_monitoring_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-email-monitoring-configuration" }, input)
 end
 
 --- Returns basic details about an entity in WorkMail
---- @param input table The input table for the describe_entity command
+--- @param input table|nil The input table for the describe_entity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-entity" }, input)
 end
 
 --- Returns the data available for the group
---- @param input table The input table for the describe_group command
+--- @param input table|nil The input table for the describe_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-group" }, input)
 end
 
 --- Returns detailed information on the current IdC setup for the WorkMail organization
---- @param input table The input table for the describe_identity_provider_configuration command
+--- @param input table|nil The input table for the describe_identity_provider_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_identity_provider_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-identity-provider-configuration" }, input)
 end
 
 --- Lists the settings in a DMARC policy for a specified organization
---- @param input table The input table for the describe_inbound_dmarc_settings command
+--- @param input table|nil The input table for the describe_inbound_dmarc_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_inbound_dmarc_settings(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-inbound-dmarc-settings" }, input)
 end
 
 --- Describes the current status of a mailbox export job
---- @param input table The input table for the describe_mailbox_export_job command
+--- @param input table|nil The input table for the describe_mailbox_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_mailbox_export_job(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-mailbox-export-job" }, input)
 end
 
 --- Provides more information regarding a given organization based on its identifier
---- @param input table The input table for the describe_organization command
+--- @param input table|nil The input table for the describe_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-organization" }, input)
 end
 
 --- Returns the data available for the resource
---- @param input table The input table for the describe_resource command
+--- @param input table|nil The input table for the describe_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-resource" }, input)
 end
 
 --- Provides information regarding the user
---- @param input table The input table for the describe_user command
+--- @param input table|nil The input table for the describe_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "workmail", "describe-user" }, input)
 end
 
 --- Removes a member from the resource's set of delegates
---- @param input table The input table for the disassociate_delegate_from_resource command
+--- @param input table|nil The input table for the disassociate_delegate_from_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_delegate_from_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "disassociate-delegate-from-resource" }, input)
 end
 
 --- Removes a member from a group
---- @param input table The input table for the disassociate_member_from_group command
+--- @param input table|nil The input table for the disassociate_member_from_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_member_from_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "disassociate-member-from-group" }, input)
 end
 
 --- Gets the effects of an organization's access control rules as they apply to a specified IPv4 address, access protocol action, and user ID or impersonation role ID
---- @param input table The input table for the get_access_control_effect command
+--- @param input table|nil The input table for the get_access_control_effect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_control_effect(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-access-control-effect" }, input)
 end
 
 --- Gets the default retention policy details for the specified organization
---- @param input table The input table for the get_default_retention_policy command
+--- @param input table|nil The input table for the get_default_retention_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_default_retention_policy(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-default-retention-policy" }, input)
 end
 
 --- Gets the impersonation role details for the given WorkMail organization
---- @param input table The input table for the get_impersonation_role command
+--- @param input table|nil The input table for the get_impersonation_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_impersonation_role(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-impersonation-role" }, input)
 end
 
 --- Tests whether the given impersonation role can impersonate a target user
---- @param input table The input table for the get_impersonation_role_effect command
+--- @param input table|nil The input table for the get_impersonation_role_effect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_impersonation_role_effect(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-impersonation-role-effect" }, input)
 end
 
 --- Gets details for a mail domain, including domain records required to configure your domain with recommended security
---- @param input table The input table for the get_mail_domain command
+--- @param input table|nil The input table for the get_mail_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_mail_domain(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-mail-domain" }, input)
 end
 
 --- Requests a user's mailbox details for a specified organization and user
---- @param input table The input table for the get_mailbox_details command
+--- @param input table|nil The input table for the get_mailbox_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_mailbox_details(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-mailbox-details" }, input)
 end
 
 --- Simulates the effect of the mobile device access rules for the given attributes of a sample access event
---- @param input table The input table for the get_mobile_device_access_effect command
+--- @param input table|nil The input table for the get_mobile_device_access_effect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_mobile_device_access_effect(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-mobile-device-access-effect" }, input)
 end
 
 --- Gets the mobile device access override for the given WorkMail organization, user, and device
---- @param input table The input table for the get_mobile_device_access_override command
+--- @param input table|nil The input table for the get_mobile_device_access_override command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_mobile_device_access_override(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-mobile-device-access-override" }, input)
 end
 
 --- Requests details of a specific Personal Access Token within the WorkMail organization
---- @param input table The input table for the get_personal_access_token_metadata command
+--- @param input table|nil The input table for the get_personal_access_token_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_personal_access_token_metadata(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-personal-access-token-metadata" }, input)
 end
 
 --- Lists the access control rules for the specified organization
---- @param input table The input table for the list_access_control_rules command
+--- @param input table|nil The input table for the list_access_control_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_control_rules(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-access-control-rules" }, input)
 end
 
 --- Creates a paginated call to list the aliases associated with a given entity
---- @param input table The input table for the list_aliases command
+--- @param input table|nil The input table for the list_aliases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_aliases(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-aliases" }, input)
 end
 
 --- List all the AvailabilityConfiguration's for the given WorkMail organization
---- @param input table The input table for the list_availability_configurations command
+--- @param input table|nil The input table for the list_availability_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_availability_configurations(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-availability-configurations" }, input)
 end
 
 --- Returns an overview of the members of a group
---- @param input table The input table for the list_group_members command
+--- @param input table|nil The input table for the list_group_members command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_members(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-group-members" }, input)
 end
 
 --- Returns summaries of the organization's groups
---- @param input table The input table for the list_groups command
+--- @param input table|nil The input table for the list_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-groups" }, input)
 end
 
 --- Returns all the groups to which an entity belongs
---- @param input table The input table for the list_groups_for_entity command
+--- @param input table|nil The input table for the list_groups_for_entity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups_for_entity(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-groups-for-entity" }, input)
 end
 
 --- Lists all the impersonation roles for the given WorkMail organization
---- @param input table The input table for the list_impersonation_roles command
+--- @param input table|nil The input table for the list_impersonation_roles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_impersonation_roles(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-impersonation-roles" }, input)
 end
 
 --- Lists the mail domains in a given WorkMail organization
---- @param input table The input table for the list_mail_domains command
+--- @param input table|nil The input table for the list_mail_domains command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_mail_domains(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-mail-domains" }, input)
 end
 
 --- Lists the mailbox export jobs started for the specified organization within the last seven days
---- @param input table The input table for the list_mailbox_export_jobs command
+--- @param input table|nil The input table for the list_mailbox_export_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_mailbox_export_jobs(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-mailbox-export-jobs" }, input)
 end
 
 --- Lists the mailbox permissions associated with a user, group, or resource mailbox
---- @param input table The input table for the list_mailbox_permissions command
+--- @param input table|nil The input table for the list_mailbox_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_mailbox_permissions(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-mailbox-permissions" }, input)
 end
 
 --- Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or device
---- @param input table The input table for the list_mobile_device_access_overrides command
+--- @param input table|nil The input table for the list_mobile_device_access_overrides command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_mobile_device_access_overrides(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-mobile-device-access-overrides" }, input)
 end
 
 --- Lists the mobile device access rules for the specified WorkMail organization
---- @param input table The input table for the list_mobile_device_access_rules command
+--- @param input table|nil The input table for the list_mobile_device_access_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_mobile_device_access_rules(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-mobile-device-access-rules" }, input)
 end
 
 --- Returns summaries of the customer's organizations
---- @param input table The input table for the list_organizations command
+--- @param input table|nil The input table for the list_organizations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organizations(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-organizations" }, input)
 end
 
 --- Returns a summary of your Personal Access Tokens
---- @param input table The input table for the list_personal_access_tokens command
+--- @param input table|nil The input table for the list_personal_access_tokens command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_personal_access_tokens(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-personal-access-tokens" }, input)
 end
 
 --- Lists the delegates associated with a resource
---- @param input table The input table for the list_resource_delegates command
+--- @param input table|nil The input table for the list_resource_delegates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_delegates(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-resource-delegates" }, input)
 end
 
 --- Returns summaries of the organization's resources
---- @param input table The input table for the list_resources command
+--- @param input table|nil The input table for the list_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resources(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-resources" }, input)
 end
 
 --- Lists the tags applied to an WorkMail organization resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-tags-for-resource" }, input)
 end
 
 --- Returns summaries of the organization's users
---- @param input table The input table for the list_users command
+--- @param input table|nil The input table for the list_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "workmail", "list-users" }, input)
 end
 
 --- Adds a new access control rule for the specified organization
---- @param input table The input table for the put_access_control_rule command
+--- @param input table|nil The input table for the put_access_control_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_control_rule(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-access-control-rule" }, input)
 end
 
 --- Creates or updates the email monitoring configuration for a specified organization
---- @param input table The input table for the put_email_monitoring_configuration command
+--- @param input table|nil The input table for the put_email_monitoring_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_email_monitoring_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-email-monitoring-configuration" }, input)
 end
 
 --- Enables integration between IAM Identity Center (IdC) and WorkMail to proxy authentication requests for mailbox users
---- @param input table The input table for the put_identity_provider_configuration command
+--- @param input table|nil The input table for the put_identity_provider_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_identity_provider_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-identity-provider-configuration" }, input)
 end
 
 --- Enables or disables a DMARC policy for a given organization
---- @param input table The input table for the put_inbound_dmarc_settings command
+--- @param input table|nil The input table for the put_inbound_dmarc_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_inbound_dmarc_settings(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-inbound-dmarc-settings" }, input)
 end
 
 --- Sets permissions for a user, group, or resource
---- @param input table The input table for the put_mailbox_permissions command
+--- @param input table|nil The input table for the put_mailbox_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_mailbox_permissions(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-mailbox-permissions" }, input)
 end
 
 --- Creates or updates a mobile device access override for the given WorkMail organization, user, and device
---- @param input table The input table for the put_mobile_device_access_override command
+--- @param input table|nil The input table for the put_mobile_device_access_override command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_mobile_device_access_override(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-mobile-device-access-override" }, input)
 end
 
 --- Puts a retention policy to the specified organization
---- @param input table The input table for the put_retention_policy command
+--- @param input table|nil The input table for the put_retention_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_retention_policy(input)
 	return common.execute_aws_command_with_input({ "workmail", "put-retention-policy" }, input)
 end
 
 --- Registers a new domain in WorkMail and SES, and configures it for use by WorkMail
---- @param input table The input table for the register_mail_domain command
+--- @param input table|nil The input table for the register_mail_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_mail_domain(input)
 	return common.execute_aws_command_with_input({ "workmail", "register-mail-domain" }, input)
 end
 
 --- Registers an existing and disabled user, group, or resource for WorkMail use by associating a mailbox and calendaring capabilities
---- @param input table The input table for the register_to_work_mail command
+--- @param input table|nil The input table for the register_to_work_mail command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_to_work_mail(input)
 	return common.execute_aws_command_with_input({ "workmail", "register-to-work-mail" }, input)
 end
 
 --- Allows the administrator to reset the password for a user
---- @param input table The input table for the reset_password command
+--- @param input table|nil The input table for the reset_password command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_password(input)
 	return common.execute_aws_command_with_input({ "workmail", "reset-password" }, input)
 end
 
 --- Starts a mailbox export job to export MIME-format email messages and calendar items from the specified mailbox to the specified Amazon Simple Storage Service (Amazon S3) bucket
---- @param input table The input table for the start_mailbox_export_job command
+--- @param input table|nil The input table for the start_mailbox_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_mailbox_export_job(input)
 	return common.execute_aws_command_with_input({ "workmail", "start-mailbox-export-job" }, input)
 end
 
 --- Applies the specified tags to the specified WorkMailorganization resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "tag-resource" }, input)
 end
 
 --- Performs a test on an availability provider to ensure that access is allowed
---- @param input table The input table for the test_availability_configuration command
+--- @param input table|nil The input table for the test_availability_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_availability_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "test-availability-configuration" }, input)
 end
 
 --- Untags the specified tags from the specified WorkMail organization resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "untag-resource" }, input)
 end
 
 --- Updates an existing AvailabilityConfiguration for the given WorkMail organization and domain
---- @param input table The input table for the update_availability_configuration command
+--- @param input table|nil The input table for the update_availability_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_availability_configuration(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-availability-configuration" }, input)
 end
 
 --- Updates the default mail domain for an organization
---- @param input table The input table for the update_default_mail_domain command
+--- @param input table|nil The input table for the update_default_mail_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_default_mail_domain(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-default-mail-domain" }, input)
 end
 
 --- Updates attributes in a group
---- @param input table The input table for the update_group command
+--- @param input table|nil The input table for the update_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-group" }, input)
 end
 
 --- Updates an impersonation role for the given WorkMail organization
---- @param input table The input table for the update_impersonation_role command
+--- @param input table|nil The input table for the update_impersonation_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_impersonation_role(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-impersonation-role" }, input)
 end
 
 --- Updates a user's current mailbox quota for a specified organization and user
---- @param input table The input table for the update_mailbox_quota command
+--- @param input table|nil The input table for the update_mailbox_quota command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_mailbox_quota(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-mailbox-quota" }, input)
 end
 
 --- Updates a mobile device access rule for the specified WorkMail organization
---- @param input table The input table for the update_mobile_device_access_rule command
+--- @param input table|nil The input table for the update_mobile_device_access_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_mobile_device_access_rule(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-mobile-device-access-rule" }, input)
 end
 
 --- Updates the primary email for a user, group, or resource
---- @param input table The input table for the update_primary_email_address command
+--- @param input table|nil The input table for the update_primary_email_address command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_primary_email_address(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-primary-email-address" }, input)
 end
 
 --- Updates data for the resource
---- @param input table The input table for the update_resource command
+--- @param input table|nil The input table for the update_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-resource" }, input)
 end
 
 --- Updates data for the user
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "workmail", "update-user" }, input)

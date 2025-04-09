@@ -8,35 +8,35 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Gets details of a job execution
---- @param input table The input table for the describe_job_execution command
+--- @param input table|nil The input table for the describe_job_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_execution(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "describe-job-execution" }, input)
 end
 
 --- Gets the list of all jobs for a thing that are not in a terminal status
---- @param input table The input table for the get_pending_job_executions command
+--- @param input table|nil The input table for the get_pending_job_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pending_job_executions(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "get-pending-job-executions" }, input)
 end
 
 --- Using the command created with the CreateCommand API, start a command execution on a specific device
---- @param input table The input table for the start_command_execution command
+--- @param input table|nil The input table for the start_command_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_command_execution(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "start-command-execution" }, input)
 end
 
 --- Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing
---- @param input table The input table for the start_next_pending_job_execution command
+--- @param input table|nil The input table for the start_next_pending_job_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_next_pending_job_execution(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "start-next-pending-job-execution" }, input)
 end
 
 --- Updates the status of a job execution
---- @param input table The input table for the update_job_execution command
+--- @param input table|nil The input table for the update_job_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job_execution(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "update-job-execution" }, input)

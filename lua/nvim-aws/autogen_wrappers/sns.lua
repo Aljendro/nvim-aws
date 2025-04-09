@@ -8,294 +8,294 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds a statement to a topic's access control policy, granting access for the specified Amazon Web Services accounts to the specified actions
---- @param input table The input table for the add_permission command
+--- @param input table|nil The input table for the add_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_permission(input)
 	return common.execute_aws_command_with_input({ "sns", "add-permission" }, input)
 end
 
 --- Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your Amazon Web Services account
---- @param input table The input table for the check_if_phone_number_is_opted_out command
+--- @param input table|nil The input table for the check_if_phone_number_is_opted_out command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_if_phone_number_is_opted_out(input)
 	return common.execute_aws_command_with_input({ "sns", "check-if-phone-number-is-opted-out" }, input)
 end
 
 --- Verifies an endpoint owner's intent to receive messages by validating the token sent to the endpoint by an earlier Subscribe action
---- @param input table The input table for the confirm_subscription command
+--- @param input table|nil The input table for the confirm_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_subscription(input)
 	return common.execute_aws_command_with_input({ "sns", "confirm-subscription" }, input)
 end
 
 --- Creates a platform application object for one of the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging), to which devices and mobile apps may register
---- @param input table The input table for the create_platform_application command
+--- @param input table|nil The input table for the create_platform_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_platform_application(input)
 	return common.execute_aws_command_with_input({ "sns", "create-platform-application" }, input)
 end
 
 --- Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS
---- @param input table The input table for the create_platform_endpoint command
+--- @param input table|nil The input table for the create_platform_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_platform_endpoint(input)
 	return common.execute_aws_command_with_input({ "sns", "create-platform-endpoint" }, input)
 end
 
 --- Adds a destination phone number to an Amazon Web Services account in the SMS sandbox and sends a one-time password (OTP) to that phone number
---- @param input table The input table for the create_sms_sandbox_phone_number command
+--- @param input table|nil The input table for the create_sms_sandbox_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sms_sandbox_phone_number(input)
 	return common.execute_aws_command_with_input({ "sns", "create-sms-sandbox-phone-number" }, input)
 end
 
 --- Creates a topic to which notifications can be published
---- @param input table The input table for the create_topic command
+--- @param input table|nil The input table for the create_topic command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_topic(input)
 	return common.execute_aws_command_with_input({ "sns", "create-topic" }, input)
 end
 
 --- Deletes the endpoint for a device and mobile app from Amazon SNS
---- @param input table The input table for the delete_endpoint command
+--- @param input table|nil The input table for the delete_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_endpoint(input)
 	return common.execute_aws_command_with_input({ "sns", "delete-endpoint" }, input)
 end
 
 --- Deletes a platform application object for one of the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging)
---- @param input table The input table for the delete_platform_application command
+--- @param input table|nil The input table for the delete_platform_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_platform_application(input)
 	return common.execute_aws_command_with_input({ "sns", "delete-platform-application" }, input)
 end
 
 --- Deletes an Amazon Web Services account's verified or pending phone number from the SMS sandbox
---- @param input table The input table for the delete_sms_sandbox_phone_number command
+--- @param input table|nil The input table for the delete_sms_sandbox_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sms_sandbox_phone_number(input)
 	return common.execute_aws_command_with_input({ "sns", "delete-sms-sandbox-phone-number" }, input)
 end
 
 --- Deletes a topic and all its subscriptions
---- @param input table The input table for the delete_topic command
+--- @param input table|nil The input table for the delete_topic command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_topic(input)
 	return common.execute_aws_command_with_input({ "sns", "delete-topic" }, input)
 end
 
 --- Retrieves the specified inline DataProtectionPolicy document that is stored in the specified Amazon SNS topic
---- @param input table The input table for the get_data_protection_policy command
+--- @param input table|nil The input table for the get_data_protection_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_protection_policy(input)
 	return common.execute_aws_command_with_input({ "sns", "get-data-protection-policy" }, input)
 end
 
 --- Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS
---- @param input table The input table for the get_endpoint_attributes command
+--- @param input table|nil The input table for the get_endpoint_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_endpoint_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "get-endpoint-attributes" }, input)
 end
 
 --- Retrieves the attributes of the platform application object for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging)
---- @param input table The input table for the get_platform_application_attributes command
+--- @param input table|nil The input table for the get_platform_application_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_platform_application_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "get-platform-application-attributes" }, input)
 end
 
 --- Returns the settings for sending SMS messages from your Amazon Web Services account
---- @param input table The input table for the get_sms_attributes command
+--- @param input table|nil The input table for the get_sms_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sms_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "get-sms-attributes" }, input)
 end
 
 --- Retrieves the SMS sandbox status for the calling Amazon Web Services account in the target Amazon Web Services Region
---- @param input table The input table for the get_sms_sandbox_account_status command
+--- @param input table|nil The input table for the get_sms_sandbox_account_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sms_sandbox_account_status(input)
 	return common.execute_aws_command_with_input({ "sns", "get-sms-sandbox-account-status" }, input)
 end
 
 --- Returns all of the properties of a subscription
---- @param input table The input table for the get_subscription_attributes command
+--- @param input table|nil The input table for the get_subscription_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "get-subscription-attributes" }, input)
 end
 
 --- Returns all of the properties of a topic
---- @param input table The input table for the get_topic_attributes command
+--- @param input table|nil The input table for the get_topic_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_topic_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "get-topic-attributes" }, input)
 end
 
 --- Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM (Firebase Cloud Messaging) and APNS
---- @param input table The input table for the list_endpoints_by_platform_application command
+--- @param input table|nil The input table for the list_endpoints_by_platform_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_endpoints_by_platform_application(input)
 	return common.execute_aws_command_with_input({ "sns", "list-endpoints-by-platform-application" }, input)
 end
 
 --- Lists the calling Amazon Web Services account's dedicated origination numbers and their metadata
---- @param input table The input table for the list_origination_numbers command
+--- @param input table|nil The input table for the list_origination_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_origination_numbers(input)
 	return common.execute_aws_command_with_input({ "sns", "list-origination-numbers" }, input)
 end
 
 --- Returns a list of phone numbers that are opted out, meaning you cannot send SMS messages to them
---- @param input table The input table for the list_phone_numbers_opted_out command
+--- @param input table|nil The input table for the list_phone_numbers_opted_out command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phone_numbers_opted_out(input)
 	return common.execute_aws_command_with_input({ "sns", "list-phone-numbers-opted-out" }, input)
 end
 
 --- Lists the platform application objects for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging)
---- @param input table The input table for the list_platform_applications command
+--- @param input table|nil The input table for the list_platform_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_platform_applications(input)
 	return common.execute_aws_command_with_input({ "sns", "list-platform-applications" }, input)
 end
 
 --- Lists the calling Amazon Web Services account's current verified and pending destination phone numbers in the SMS sandbox
---- @param input table The input table for the list_sms_sandbox_phone_numbers command
+--- @param input table|nil The input table for the list_sms_sandbox_phone_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sms_sandbox_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "sns", "list-sms-sandbox-phone-numbers" }, input)
 end
 
 --- Returns a list of the requester's subscriptions
---- @param input table The input table for the list_subscriptions command
+--- @param input table|nil The input table for the list_subscriptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscriptions(input)
 	return common.execute_aws_command_with_input({ "sns", "list-subscriptions" }, input)
 end
 
 --- Returns a list of the subscriptions to a specific topic
---- @param input table The input table for the list_subscriptions_by_topic command
+--- @param input table|nil The input table for the list_subscriptions_by_topic command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscriptions_by_topic(input)
 	return common.execute_aws_command_with_input({ "sns", "list-subscriptions-by-topic" }, input)
 end
 
 --- List all tags added to the specified Amazon SNS topic
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "sns", "list-tags-for-resource" }, input)
 end
 
 --- Returns a list of the requester's topics
---- @param input table The input table for the list_topics command
+--- @param input table|nil The input table for the list_topics command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_topics(input)
 	return common.execute_aws_command_with_input({ "sns", "list-topics" }, input)
 end
 
 --- Use this request to opt in a phone number that is opted out, which enables you to resume sending SMS messages to the number
---- @param input table The input table for the opt_in_phone_number command
+--- @param input table|nil The input table for the opt_in_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.opt_in_phone_number(input)
 	return common.execute_aws_command_with_input({ "sns", "opt-in-phone-number" }, input)
 end
 
 --- Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a mobile platform endpoint (when you specify the TargetArn)
---- @param input table The input table for the publish command
+--- @param input table|nil The input table for the publish command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish(input)
 	return common.execute_aws_command_with_input({ "sns", "publish" }, input)
 end
 
 --- Publishes up to ten messages to the specified topic
---- @param input table The input table for the publish_batch command
+--- @param input table|nil The input table for the publish_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish_batch(input)
 	return common.execute_aws_command_with_input({ "sns", "publish-batch" }, input)
 end
 
 --- Adds or updates an inline policy document that is stored in the specified Amazon SNS topic
---- @param input table The input table for the put_data_protection_policy command
+--- @param input table|nil The input table for the put_data_protection_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_data_protection_policy(input)
 	return common.execute_aws_command_with_input({ "sns", "put-data-protection-policy" }, input)
 end
 
 --- Removes a statement from a topic's access control policy
---- @param input table The input table for the remove_permission command
+--- @param input table|nil The input table for the remove_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_permission(input)
 	return common.execute_aws_command_with_input({ "sns", "remove-permission" }, input)
 end
 
 --- Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS
---- @param input table The input table for the set_endpoint_attributes command
+--- @param input table|nil The input table for the set_endpoint_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_endpoint_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "set-endpoint-attributes" }, input)
 end
 
 --- Sets the attributes of the platform application object for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging)
---- @param input table The input table for the set_platform_application_attributes command
+--- @param input table|nil The input table for the set_platform_application_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_platform_application_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "set-platform-application-attributes" }, input)
 end
 
 --- Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports
---- @param input table The input table for the set_sms_attributes command
+--- @param input table|nil The input table for the set_sms_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_sms_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "set-sms-attributes" }, input)
 end
 
 --- Allows a subscription owner to set an attribute of the subscription to a new value
---- @param input table The input table for the set_subscription_attributes command
+--- @param input table|nil The input table for the set_subscription_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_subscription_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "set-subscription-attributes" }, input)
 end
 
 --- Allows a topic owner to set an attribute of the topic to a new value
---- @param input table The input table for the set_topic_attributes command
+--- @param input table|nil The input table for the set_topic_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_topic_attributes(input)
 	return common.execute_aws_command_with_input({ "sns", "set-topic-attributes" }, input)
 end
 
 --- Subscribes an endpoint to an Amazon SNS topic
---- @param input table The input table for the subscribe command
+--- @param input table|nil The input table for the subscribe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.subscribe(input)
 	return common.execute_aws_command_with_input({ "sns", "subscribe" }, input)
 end
 
 --- Add tags to the specified Amazon SNS topic
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "sns", "tag-resource" }, input)
 end
 
 --- Deletes a subscription
---- @param input table The input table for the unsubscribe command
+--- @param input table|nil The input table for the unsubscribe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unsubscribe(input)
 	return common.execute_aws_command_with_input({ "sns", "unsubscribe" }, input)
 end
 
 --- Remove tags from the specified Amazon SNS topic
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "sns", "untag-resource" }, input)
 end
 
 --- Verifies a destination phone number with a one-time password (OTP) for the calling Amazon Web Services account
---- @param input table The input table for the verify_sms_sandbox_phone_number command
+--- @param input table|nil The input table for the verify_sms_sandbox_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_sms_sandbox_phone_number(input)
 	return common.execute_aws_command_with_input({ "sns", "verify-sms-sandbox-phone-number" }, input)

@@ -8,315 +8,315 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates a FirewallPolicy to a Firewall
---- @param input table The input table for the associate_firewall_policy command
+--- @param input table|nil The input table for the associate_firewall_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_firewall_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "associate-firewall-policy" }, input)
 end
 
 --- Associates the specified subnets in the Amazon VPC to the firewall
---- @param input table The input table for the associate_subnets command
+--- @param input table|nil The input table for the associate_subnets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_subnets(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "associate-subnets" }, input)
 end
 
 --- Creates an Network Firewall Firewall and accompanying FirewallStatus for a VPC
---- @param input table The input table for the create_firewall command
+--- @param input table|nil The input table for the create_firewall command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_firewall(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "create-firewall" }, input)
 end
 
 --- Creates the firewall policy for the firewall according to the specifications
---- @param input table The input table for the create_firewall_policy command
+--- @param input table|nil The input table for the create_firewall_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_firewall_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "create-firewall-policy" }, input)
 end
 
 --- Creates the specified stateless or stateful rule group, which includes the rules for network traffic inspection, a capacity setting, and tags
---- @param input table The input table for the create_rule_group command
+--- @param input table|nil The input table for the create_rule_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rule_group(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "create-rule-group" }, input)
 end
 
 --- Creates an Network Firewall TLS inspection configuration
---- @param input table The input table for the create_tls_inspection_configuration command
+--- @param input table|nil The input table for the create_tls_inspection_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_tls_inspection_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "create-tls-inspection-configuration" }, input)
 end
 
 --- Deletes the specified Firewall and its FirewallStatus
---- @param input table The input table for the delete_firewall command
+--- @param input table|nil The input table for the delete_firewall command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_firewall(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "delete-firewall" }, input)
 end
 
 --- Deletes the specified FirewallPolicy
---- @param input table The input table for the delete_firewall_policy command
+--- @param input table|nil The input table for the delete_firewall_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_firewall_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "delete-firewall-policy" }, input)
 end
 
 --- Deletes a resource policy that you created in a PutResourcePolicy request
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "delete-resource-policy" }, input)
 end
 
 --- Deletes the specified RuleGroup
---- @param input table The input table for the delete_rule_group command
+--- @param input table|nil The input table for the delete_rule_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule_group(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "delete-rule-group" }, input)
 end
 
 --- Deletes the specified TLSInspectionConfiguration
---- @param input table The input table for the delete_tls_inspection_configuration command
+--- @param input table|nil The input table for the delete_tls_inspection_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tls_inspection_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "delete-tls-inspection-configuration" }, input)
 end
 
 --- Returns the data objects for the specified firewall
---- @param input table The input table for the describe_firewall command
+--- @param input table|nil The input table for the describe_firewall command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_firewall(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-firewall" }, input)
 end
 
 --- Returns the data objects for the specified firewall policy
---- @param input table The input table for the describe_firewall_policy command
+--- @param input table|nil The input table for the describe_firewall_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_firewall_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-firewall-policy" }, input)
 end
 
 --- Returns key information about a specific flow operation
---- @param input table The input table for the describe_flow_operation command
+--- @param input table|nil The input table for the describe_flow_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flow_operation(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-flow-operation" }, input)
 end
 
 --- Returns the logging configuration for the specified firewall
---- @param input table The input table for the describe_logging_configuration command
+--- @param input table|nil The input table for the describe_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-logging-configuration" }, input)
 end
 
 --- Retrieves a resource policy that you created in a PutResourcePolicy request
---- @param input table The input table for the describe_resource_policy command
+--- @param input table|nil The input table for the describe_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-resource-policy" }, input)
 end
 
 --- Returns the data objects for the specified rule group
---- @param input table The input table for the describe_rule_group command
+--- @param input table|nil The input table for the describe_rule_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rule_group(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-rule-group" }, input)
 end
 
 --- High-level information about a rule group, returned by operations like create and describe
---- @param input table The input table for the describe_rule_group_metadata command
+--- @param input table|nil The input table for the describe_rule_group_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rule_group_metadata(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-rule-group-metadata" }, input)
 end
 
 --- Returns the data objects for the specified TLS inspection configuration
---- @param input table The input table for the describe_tls_inspection_configuration command
+--- @param input table|nil The input table for the describe_tls_inspection_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tls_inspection_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "describe-tls-inspection-configuration" }, input)
 end
 
 --- Removes the specified subnet associations from the firewall
---- @param input table The input table for the disassociate_subnets command
+--- @param input table|nil The input table for the disassociate_subnets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_subnets(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "disassociate-subnets" }, input)
 end
 
 --- The results of a COMPLETED analysis report generated with StartAnalysisReport
---- @param input table The input table for the get_analysis_report_results command
+--- @param input table|nil The input table for the get_analysis_report_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_analysis_report_results(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "get-analysis-report-results" }, input)
 end
 
 --- Returns a list of all traffic analysis reports generated within the last 30 days
---- @param input table The input table for the list_analysis_reports command
+--- @param input table|nil The input table for the list_analysis_reports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_analysis_reports(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-analysis-reports" }, input)
 end
 
 --- Retrieves the metadata for the firewall policies that you have defined
---- @param input table The input table for the list_firewall_policies command
+--- @param input table|nil The input table for the list_firewall_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_firewall_policies(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-firewall-policies" }, input)
 end
 
 --- Retrieves the metadata for the firewalls that you have defined
---- @param input table The input table for the list_firewalls command
+--- @param input table|nil The input table for the list_firewalls command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_firewalls(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-firewalls" }, input)
 end
 
 --- Returns the results of a specific flow operation
---- @param input table The input table for the list_flow_operation_results command
+--- @param input table|nil The input table for the list_flow_operation_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flow_operation_results(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-flow-operation-results" }, input)
 end
 
 --- Returns a list of all flow operations ran in a specific firewall
---- @param input table The input table for the list_flow_operations command
+--- @param input table|nil The input table for the list_flow_operations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flow_operations(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-flow-operations" }, input)
 end
 
 --- Retrieves the metadata for the rule groups that you have defined
---- @param input table The input table for the list_rule_groups command
+--- @param input table|nil The input table for the list_rule_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rule_groups(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-rule-groups" }, input)
 end
 
 --- Retrieves the metadata for the TLS inspection configurations that you have defined
---- @param input table The input table for the list_tls_inspection_configurations command
+--- @param input table|nil The input table for the list_tls_inspection_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tls_inspection_configurations(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-tls-inspection-configurations" }, input)
 end
 
 --- Retrieves the tags associated with the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "list-tags-for-resource" }, input)
 end
 
 --- Creates or updates an IAM policy for your rule group or firewall policy
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "put-resource-policy" }, input)
 end
 
 --- Generates a traffic analysis report for the timeframe and traffic type you specify
---- @param input table The input table for the start_analysis_report command
+--- @param input table|nil The input table for the start_analysis_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_analysis_report(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "start-analysis-report" }, input)
 end
 
 --- Begins capturing the flows in a firewall, according to the filters you define
---- @param input table The input table for the start_flow_capture command
+--- @param input table|nil The input table for the start_flow_capture command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_flow_capture(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "start-flow-capture" }, input)
 end
 
 --- Begins the flushing of traffic from the firewall, according to the filters you define
---- @param input table The input table for the start_flow_flush command
+--- @param input table|nil The input table for the start_flow_flush command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_flow_flush(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "start-flow-flush" }, input)
 end
 
 --- Adds the specified tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "tag-resource" }, input)
 end
 
 --- Removes the tags with the specified keys from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "untag-resource" }, input)
 end
 
 --- Enables specific types of firewall analysis on a specific firewall you define
---- @param input table The input table for the update_firewall_analysis_settings command
+--- @param input table|nil The input table for the update_firewall_analysis_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_analysis_settings(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-analysis-settings" }, input)
 end
 
 --- Modifies the flag, DeleteProtection, which indicates whether it is possible to delete the firewall
---- @param input table The input table for the update_firewall_delete_protection command
+--- @param input table|nil The input table for the update_firewall_delete_protection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_delete_protection(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-delete-protection" }, input)
 end
 
 --- Modifies the description for the specified firewall
---- @param input table The input table for the update_firewall_description command
+--- @param input table|nil The input table for the update_firewall_description command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_description(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-description" }, input)
 end
 
 --- A complex type that contains settings for encryption of your firewall resources
---- @param input table The input table for the update_firewall_encryption_configuration command
+--- @param input table|nil The input table for the update_firewall_encryption_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_encryption_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-encryption-configuration" }, input)
 end
 
 --- Updates the properties of the specified firewall policy
---- @param input table The input table for the update_firewall_policy command
+--- @param input table|nil The input table for the update_firewall_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_policy(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-policy" }, input)
 end
 
 --- Modifies the flag, ChangeProtection, which indicates whether it is possible to change the firewall
---- @param input table The input table for the update_firewall_policy_change_protection command
+--- @param input table|nil The input table for the update_firewall_policy_change_protection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_firewall_policy_change_protection(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-firewall-policy-change-protection" }, input)
 end
 
 --- Sets the logging configuration for the specified firewall
---- @param input table The input table for the update_logging_configuration command
+--- @param input table|nil The input table for the update_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-logging-configuration" }, input)
 end
 
 --- Updates the rule settings for the specified rule group
---- @param input table The input table for the update_rule_group command
+--- @param input table|nil The input table for the update_rule_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rule_group(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-rule-group" }, input)
 end
 
 --- 
---- @param input table The input table for the update_subnet_change_protection command
+--- @param input table|nil The input table for the update_subnet_change_protection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subnet_change_protection(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-subnet-change-protection" }, input)
 end
 
 --- Updates the TLS inspection configuration settings for the specified TLS inspection configuration
---- @param input table The input table for the update_tls_inspection_configuration command
+--- @param input table|nil The input table for the update_tls_inspection_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_tls_inspection_configuration(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "update-tls-inspection-configuration" }, input)

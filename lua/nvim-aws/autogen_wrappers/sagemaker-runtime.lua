@@ -8,21 +8,21 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API to get inferences from the model hosted at the specified endpoint
---- @param input table The input table for the invoke_endpoint command
+--- @param input table|nil The input table for the invoke_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invoke_endpoint(input)
 	return common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint" }, input)
 end
 
 --- After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API to get inferences from the model hosted at the specified endpoint in an asynchronous manner
---- @param input table The input table for the invoke_endpoint_async command
+--- @param input table|nil The input table for the invoke_endpoint_async command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invoke_endpoint_async(input)
 	return common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-async" }, input)
 end
 
 --- Invokes a model at the specified endpoint to return the inference response as a stream
---- @param input table The input table for the invoke_endpoint_with_response_stream command
+--- @param input table|nil The input table for the invoke_endpoint_with_response_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invoke_endpoint_with_response_stream(input)
 	return common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-with-response-stream" }, input)

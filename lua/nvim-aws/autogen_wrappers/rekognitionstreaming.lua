@@ -8,7 +8,7 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Starts a Face Liveness video stream and liveness detection process for a given session
---- @param input table The input table for the start_face_liveness_session command
+--- @param input table|nil The input table for the start_face_liveness_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_face_liveness_session(input)
 	return common.execute_aws_command_with_input({ "rekognitionstreaming", "start-face-liveness-session" }, input)

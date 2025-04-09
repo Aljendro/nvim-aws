@@ -8,119 +8,119 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Changes the packaging group's properities to configure log subscription
---- @param input table The input table for the configure_logs command
+--- @param input table|nil The input table for the configure_logs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.configure_logs(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "configure-logs" }, input)
 end
 
 --- Creates a new MediaPackage VOD Asset resource
---- @param input table The input table for the create_asset command
+--- @param input table|nil The input table for the create_asset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_asset(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-asset" }, input)
 end
 
 --- Creates a new MediaPackage VOD PackagingConfiguration resource
---- @param input table The input table for the create_packaging_configuration command
+--- @param input table|nil The input table for the create_packaging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_packaging_configuration(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-packaging-configuration" }, input)
 end
 
 --- Creates a new MediaPackage VOD PackagingGroup resource
---- @param input table The input table for the create_packaging_group command
+--- @param input table|nil The input table for the create_packaging_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_packaging_group(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-packaging-group" }, input)
 end
 
 --- Deletes an existing MediaPackage VOD Asset resource
---- @param input table The input table for the delete_asset command
+--- @param input table|nil The input table for the delete_asset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_asset(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-asset" }, input)
 end
 
 --- Deletes a MediaPackage VOD PackagingConfiguration resource
---- @param input table The input table for the delete_packaging_configuration command
+--- @param input table|nil The input table for the delete_packaging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_packaging_configuration(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-packaging-configuration" }, input)
 end
 
 --- Deletes a MediaPackage VOD PackagingGroup resource
---- @param input table The input table for the delete_packaging_group command
+--- @param input table|nil The input table for the delete_packaging_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_packaging_group(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-packaging-group" }, input)
 end
 
 --- Returns a description of a MediaPackage VOD Asset resource
---- @param input table The input table for the describe_asset command
+--- @param input table|nil The input table for the describe_asset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_asset(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-asset" }, input)
 end
 
 --- Returns a description of a MediaPackage VOD PackagingConfiguration resource
---- @param input table The input table for the describe_packaging_configuration command
+--- @param input table|nil The input table for the describe_packaging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_packaging_configuration(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-packaging-configuration" }, input)
 end
 
 --- Returns a description of a MediaPackage VOD PackagingGroup resource
---- @param input table The input table for the describe_packaging_group command
+--- @param input table|nil The input table for the describe_packaging_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_packaging_group(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-packaging-group" }, input)
 end
 
 --- Returns a collection of MediaPackage VOD Asset resources
---- @param input table The input table for the list_assets command
+--- @param input table|nil The input table for the list_assets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assets(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-assets" }, input)
 end
 
 --- Returns a collection of MediaPackage VOD PackagingConfiguration resources
---- @param input table The input table for the list_packaging_configurations command
+--- @param input table|nil The input table for the list_packaging_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_packaging_configurations(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-packaging-configurations" }, input)
 end
 
 --- Returns a collection of MediaPackage VOD PackagingGroup resources
---- @param input table The input table for the list_packaging_groups command
+--- @param input table|nil The input table for the list_packaging_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_packaging_groups(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-packaging-groups" }, input)
 end
 
 --- Returns a list of the tags assigned to the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-tags-for-resource" }, input)
 end
 
 --- Adds tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "tag-resource" }, input)
 end
 
 --- Removes tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "untag-resource" }, input)
 end
 
 --- Updates a specific packaging group
---- @param input table The input table for the update_packaging_group command
+--- @param input table|nil The input table for the update_packaging_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_packaging_group(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "update-packaging-group" }, input)

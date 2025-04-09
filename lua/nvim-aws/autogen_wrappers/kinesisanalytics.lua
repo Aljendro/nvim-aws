@@ -8,140 +8,140 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the add_application_cloud_watch_logging_option command
+--- @param input table|nil The input table for the add_application_cloud_watch_logging_option command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_application_cloud_watch_logging_option(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "add-application-cloud-watch-logging-option" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the add_application_input command
+--- @param input table|nil The input table for the add_application_input command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_application_input(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "add-application-input" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the add_application_input_processing_configuration command
+--- @param input table|nil The input table for the add_application_input_processing_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_application_input_processing_configuration(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "add-application-input-processing-configuration" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the add_application_output command
+--- @param input table|nil The input table for the add_application_output command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_application_output(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "add-application-output" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the add_application_reference_data_source command
+--- @param input table|nil The input table for the add_application_reference_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_application_reference_data_source(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "add-application-reference-data-source" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "create-application" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "delete-application" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the delete_application_cloud_watch_logging_option command
+--- @param input table|nil The input table for the delete_application_cloud_watch_logging_option command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_cloud_watch_logging_option(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "delete-application-cloud-watch-logging-option" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the delete_application_input_processing_configuration command
+--- @param input table|nil The input table for the delete_application_input_processing_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_input_processing_configuration(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "delete-application-input-processing-configuration" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the delete_application_output command
+--- @param input table|nil The input table for the delete_application_output command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_output(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "delete-application-output" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the delete_application_reference_data_source command
+--- @param input table|nil The input table for the delete_application_reference_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_reference_data_source(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "delete-application-reference-data-source" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the describe_application command
+--- @param input table|nil The input table for the describe_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "describe-application" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the discover_input_schema command
+--- @param input table|nil The input table for the discover_input_schema command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.discover_input_schema(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "discover-input-schema" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "list-applications" }, input)
 end
 
 --- Retrieves the list of key-value tags assigned to the application
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "list-tags-for-resource" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the start_application command
+--- @param input table|nil The input table for the start_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "start-application" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the stop_application command
+--- @param input table|nil The input table for the stop_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "stop-application" }, input)
 end
 
 --- Adds one or more key-value tags to a Kinesis Analytics application
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "tag-resource" }, input)
 end
 
 --- Removes one or more tags from a Kinesis Analytics application
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "untag-resource" }, input)
 end
 
 --- This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "update-application" }, input)

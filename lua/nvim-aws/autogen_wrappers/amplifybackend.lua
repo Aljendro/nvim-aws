@@ -8,217 +8,217 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This operation clones an existing backend
---- @param input table The input table for the clone_backend command
+--- @param input table|nil The input table for the clone_backend command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.clone_backend(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "clone-backend" }, input)
 end
 
 --- This operation creates a backend for an Amplify app
---- @param input table The input table for the create_backend command
+--- @param input table|nil The input table for the create_backend command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backend(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend" }, input)
 end
 
 --- Creates a new backend API resource
---- @param input table The input table for the create_backend_api command
+--- @param input table|nil The input table for the create_backend_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backend_api(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-api" }, input)
 end
 
 --- Creates a new backend authentication resource
---- @param input table The input table for the create_backend_auth command
+--- @param input table|nil The input table for the create_backend_auth command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backend_auth(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-auth" }, input)
 end
 
 --- Creates a config object for a backend
---- @param input table The input table for the create_backend_config command
+--- @param input table|nil The input table for the create_backend_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backend_config(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-config" }, input)
 end
 
 --- Creates a backend storage resource
---- @param input table The input table for the create_backend_storage command
+--- @param input table|nil The input table for the create_backend_storage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backend_storage(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-storage" }, input)
 end
 
 --- Generates a one-time challenge code to authenticate a user into your Amplify Admin UI
---- @param input table The input table for the create_token command
+--- @param input table|nil The input table for the create_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_token(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "create-token" }, input)
 end
 
 --- Removes an existing environment from your Amplify project
---- @param input table The input table for the delete_backend command
+--- @param input table|nil The input table for the delete_backend command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backend(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend" }, input)
 end
 
 --- Deletes an existing backend API resource
---- @param input table The input table for the delete_backend_api command
+--- @param input table|nil The input table for the delete_backend_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backend_api(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-api" }, input)
 end
 
 --- Deletes an existing backend authentication resource
---- @param input table The input table for the delete_backend_auth command
+--- @param input table|nil The input table for the delete_backend_auth command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backend_auth(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-auth" }, input)
 end
 
 --- Removes the specified backend storage resource
---- @param input table The input table for the delete_backend_storage command
+--- @param input table|nil The input table for the delete_backend_storage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backend_storage(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-storage" }, input)
 end
 
 --- Deletes the challenge token based on the given appId and sessionId
---- @param input table The input table for the delete_token command
+--- @param input table|nil The input table for the delete_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_token(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "delete-token" }, input)
 end
 
 --- Generates a model schema for an existing backend API resource
---- @param input table The input table for the generate_backend_api_models command
+--- @param input table|nil The input table for the generate_backend_api_models command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_backend_api_models(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "generate-backend-api-models" }, input)
 end
 
 --- Provides project-level details for your Amplify UI project
---- @param input table The input table for the get_backend command
+--- @param input table|nil The input table for the get_backend command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend" }, input)
 end
 
 --- Gets the details for a backend API
---- @param input table The input table for the get_backend_api command
+--- @param input table|nil The input table for the get_backend_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend_api(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-api" }, input)
 end
 
 --- Gets a model introspection schema for an existing backend API resource
---- @param input table The input table for the get_backend_api_models command
+--- @param input table|nil The input table for the get_backend_api_models command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend_api_models(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-api-models" }, input)
 end
 
 --- Gets a backend auth details
---- @param input table The input table for the get_backend_auth command
+--- @param input table|nil The input table for the get_backend_auth command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend_auth(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-auth" }, input)
 end
 
 --- Returns information about a specific job
---- @param input table The input table for the get_backend_job command
+--- @param input table|nil The input table for the get_backend_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend_job(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-job" }, input)
 end
 
 --- Gets details for a backend storage resource
---- @param input table The input table for the get_backend_storage command
+--- @param input table|nil The input table for the get_backend_storage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_backend_storage(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-storage" }, input)
 end
 
 --- Gets the challenge token based on the given appId and sessionId
---- @param input table The input table for the get_token command
+--- @param input table|nil The input table for the get_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_token(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-token" }, input)
 end
 
 --- Imports an existing backend authentication resource
---- @param input table The input table for the import_backend_auth command
+--- @param input table|nil The input table for the import_backend_auth command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_backend_auth(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "import-backend-auth" }, input)
 end
 
 --- Imports an existing backend storage resource
---- @param input table The input table for the import_backend_storage command
+--- @param input table|nil The input table for the import_backend_storage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_backend_storage(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "import-backend-storage" }, input)
 end
 
 --- Lists the jobs for the backend of an Amplify app
---- @param input table The input table for the list_backend_jobs command
+--- @param input table|nil The input table for the list_backend_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backend_jobs(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "list-backend-jobs" }, input)
 end
 
 --- The list of S3 buckets in your account
---- @param input table The input table for the list_s3_buckets command
+--- @param input table|nil The input table for the list_s3_buckets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_s3_buckets(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "list-s3-buckets" }, input)
 end
 
 --- Removes all backend environments from your Amplify project
---- @param input table The input table for the remove_all_backends command
+--- @param input table|nil The input table for the remove_all_backends command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_all_backends(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "remove-all-backends" }, input)
 end
 
 --- Removes the AWS resources required to access the Amplify Admin UI
---- @param input table The input table for the remove_backend_config command
+--- @param input table|nil The input table for the remove_backend_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_backend_config(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "remove-backend-config" }, input)
 end
 
 --- Updates an existing backend API resource
---- @param input table The input table for the update_backend_api command
+--- @param input table|nil The input table for the update_backend_api command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backend_api(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-api" }, input)
 end
 
 --- Updates an existing backend authentication resource
---- @param input table The input table for the update_backend_auth command
+--- @param input table|nil The input table for the update_backend_auth command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backend_auth(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-auth" }, input)
 end
 
 --- Updates the AWS resources required to access the Amplify Admin UI
---- @param input table The input table for the update_backend_config command
+--- @param input table|nil The input table for the update_backend_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backend_config(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-config" }, input)
 end
 
 --- Updates a specific job
---- @param input table The input table for the update_backend_job command
+--- @param input table|nil The input table for the update_backend_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backend_job(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-job" }, input)
 end
 
 --- Updates an existing backend storage resource
---- @param input table The input table for the update_backend_storage command
+--- @param input table|nil The input table for the update_backend_storage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_backend_storage(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-storage" }, input)

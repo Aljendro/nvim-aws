@@ -8,357 +8,357 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Activates a partner event source that has been deactivated
---- @param input table The input table for the activate_event_source command
+--- @param input table|nil The input table for the activate_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "activate-event-source" }, input)
 end
 
 --- Cancels the specified replay
---- @param input table The input table for the cancel_replay command
+--- @param input table|nil The input table for the cancel_replay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_replay(input)
 	return common.execute_aws_command_with_input({ "events", "cancel-replay" }, input)
 end
 
 --- Creates an API destination, which is an HTTP invocation endpoint configured as a target for events
---- @param input table The input table for the create_api_destination command
+--- @param input table|nil The input table for the create_api_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_api_destination(input)
 	return common.execute_aws_command_with_input({ "events", "create-api-destination" }, input)
 end
 
 --- Creates an archive of events with the specified settings
---- @param input table The input table for the create_archive command
+--- @param input table|nil The input table for the create_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_archive(input)
 	return common.execute_aws_command_with_input({ "events", "create-archive" }, input)
 end
 
 --- Creates a connection
---- @param input table The input table for the create_connection command
+--- @param input table|nil The input table for the create_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "events", "create-connection" }, input)
 end
 
 --- Creates a new event bus within your account
---- @param input table The input table for the create_event_bus command
+--- @param input table|nil The input table for the create_event_bus command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_bus(input)
 	return common.execute_aws_command_with_input({ "events", "create-event-bus" }, input)
 end
 
 --- Called by an SaaS partner to create a partner event source
---- @param input table The input table for the create_partner_event_source command
+--- @param input table|nil The input table for the create_partner_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_partner_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "create-partner-event-source" }, input)
 end
 
 --- You can use this operation to temporarily stop receiving events from the specified partner event source
---- @param input table The input table for the deactivate_event_source command
+--- @param input table|nil The input table for the deactivate_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deactivate_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "deactivate-event-source" }, input)
 end
 
 --- Removes all authorization parameters from the connection
---- @param input table The input table for the deauthorize_connection command
+--- @param input table|nil The input table for the deauthorize_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deauthorize_connection(input)
 	return common.execute_aws_command_with_input({ "events", "deauthorize-connection" }, input)
 end
 
 --- Deletes the specified API destination
---- @param input table The input table for the delete_api_destination command
+--- @param input table|nil The input table for the delete_api_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_api_destination(input)
 	return common.execute_aws_command_with_input({ "events", "delete-api-destination" }, input)
 end
 
 --- Deletes the specified archive
---- @param input table The input table for the delete_archive command
+--- @param input table|nil The input table for the delete_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_archive(input)
 	return common.execute_aws_command_with_input({ "events", "delete-archive" }, input)
 end
 
 --- Deletes a connection
---- @param input table The input table for the delete_connection command
+--- @param input table|nil The input table for the delete_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "events", "delete-connection" }, input)
 end
 
 --- Deletes the specified custom event bus or partner event bus
---- @param input table The input table for the delete_event_bus command
+--- @param input table|nil The input table for the delete_event_bus command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_bus(input)
 	return common.execute_aws_command_with_input({ "events", "delete-event-bus" }, input)
 end
 
 --- This operation is used by SaaS partners to delete a partner event source
---- @param input table The input table for the delete_partner_event_source command
+--- @param input table|nil The input table for the delete_partner_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_partner_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "delete-partner-event-source" }, input)
 end
 
 --- Deletes the specified rule
---- @param input table The input table for the delete_rule command
+--- @param input table|nil The input table for the delete_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule(input)
 	return common.execute_aws_command_with_input({ "events", "delete-rule" }, input)
 end
 
 --- Retrieves details about an API destination
---- @param input table The input table for the describe_api_destination command
+--- @param input table|nil The input table for the describe_api_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_api_destination(input)
 	return common.execute_aws_command_with_input({ "events", "describe-api-destination" }, input)
 end
 
 --- Retrieves details about an archive
---- @param input table The input table for the describe_archive command
+--- @param input table|nil The input table for the describe_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_archive(input)
 	return common.execute_aws_command_with_input({ "events", "describe-archive" }, input)
 end
 
 --- Retrieves details about a connection
---- @param input table The input table for the describe_connection command
+--- @param input table|nil The input table for the describe_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connection(input)
 	return common.execute_aws_command_with_input({ "events", "describe-connection" }, input)
 end
 
 --- Displays details about an event bus in your account
---- @param input table The input table for the describe_event_bus command
+--- @param input table|nil The input table for the describe_event_bus command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_bus(input)
 	return common.execute_aws_command_with_input({ "events", "describe-event-bus" }, input)
 end
 
 --- This operation lists details about a partner event source that is shared with your account
---- @param input table The input table for the describe_event_source command
+--- @param input table|nil The input table for the describe_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "describe-event-source" }, input)
 end
 
 --- An SaaS partner can use this operation to list details about a partner event source that they have created
---- @param input table The input table for the describe_partner_event_source command
+--- @param input table|nil The input table for the describe_partner_event_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_partner_event_source(input)
 	return common.execute_aws_command_with_input({ "events", "describe-partner-event-source" }, input)
 end
 
 --- Retrieves details about a replay
---- @param input table The input table for the describe_replay command
+--- @param input table|nil The input table for the describe_replay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_replay(input)
 	return common.execute_aws_command_with_input({ "events", "describe-replay" }, input)
 end
 
 --- Describes the specified rule
---- @param input table The input table for the describe_rule command
+--- @param input table|nil The input table for the describe_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rule(input)
 	return common.execute_aws_command_with_input({ "events", "describe-rule" }, input)
 end
 
 --- Disables the specified rule
---- @param input table The input table for the disable_rule command
+--- @param input table|nil The input table for the disable_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_rule(input)
 	return common.execute_aws_command_with_input({ "events", "disable-rule" }, input)
 end
 
 --- Enables the specified rule
---- @param input table The input table for the enable_rule command
+--- @param input table|nil The input table for the enable_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_rule(input)
 	return common.execute_aws_command_with_input({ "events", "enable-rule" }, input)
 end
 
 --- Retrieves a list of API destination in the account in the current Region
---- @param input table The input table for the list_api_destinations command
+--- @param input table|nil The input table for the list_api_destinations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_api_destinations(input)
 	return common.execute_aws_command_with_input({ "events", "list-api-destinations" }, input)
 end
 
 --- Lists your archives
---- @param input table The input table for the list_archives command
+--- @param input table|nil The input table for the list_archives command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_archives(input)
 	return common.execute_aws_command_with_input({ "events", "list-archives" }, input)
 end
 
 --- Retrieves a list of connections from the account
---- @param input table The input table for the list_connections command
+--- @param input table|nil The input table for the list_connections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connections(input)
 	return common.execute_aws_command_with_input({ "events", "list-connections" }, input)
 end
 
 --- Lists all the event buses in your account, including the default event bus, custom event buses, and partner event buses
---- @param input table The input table for the list_event_buses command
+--- @param input table|nil The input table for the list_event_buses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_buses(input)
 	return common.execute_aws_command_with_input({ "events", "list-event-buses" }, input)
 end
 
 --- You can use this to see all the partner event sources that have been shared with your Amazon Web Services account
---- @param input table The input table for the list_event_sources command
+--- @param input table|nil The input table for the list_event_sources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_sources(input)
 	return common.execute_aws_command_with_input({ "events", "list-event-sources" }, input)
 end
 
 --- An SaaS partner can use this operation to display the Amazon Web Services account ID that a particular partner event source name is associated with
---- @param input table The input table for the list_partner_event_source_accounts command
+--- @param input table|nil The input table for the list_partner_event_source_accounts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_partner_event_source_accounts(input)
 	return common.execute_aws_command_with_input({ "events", "list-partner-event-source-accounts" }, input)
 end
 
 --- An SaaS partner can use this operation to list all the partner event source names that they have created
---- @param input table The input table for the list_partner_event_sources command
+--- @param input table|nil The input table for the list_partner_event_sources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_partner_event_sources(input)
 	return common.execute_aws_command_with_input({ "events", "list-partner-event-sources" }, input)
 end
 
 --- Lists your replays
---- @param input table The input table for the list_replays command
+--- @param input table|nil The input table for the list_replays command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_replays(input)
 	return common.execute_aws_command_with_input({ "events", "list-replays" }, input)
 end
 
 --- Lists the rules for the specified target
---- @param input table The input table for the list_rule_names_by_target command
+--- @param input table|nil The input table for the list_rule_names_by_target command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rule_names_by_target(input)
 	return common.execute_aws_command_with_input({ "events", "list-rule-names-by-target" }, input)
 end
 
 --- Lists your Amazon EventBridge rules
---- @param input table The input table for the list_rules command
+--- @param input table|nil The input table for the list_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rules(input)
 	return common.execute_aws_command_with_input({ "events", "list-rules" }, input)
 end
 
 --- Displays the tags associated with an EventBridge resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "events", "list-tags-for-resource" }, input)
 end
 
 --- Lists the targets assigned to the specified rule
---- @param input table The input table for the list_targets_by_rule command
+--- @param input table|nil The input table for the list_targets_by_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_targets_by_rule(input)
 	return common.execute_aws_command_with_input({ "events", "list-targets-by-rule" }, input)
 end
 
 --- Sends custom events to Amazon EventBridge so that they can be matched to rules
---- @param input table The input table for the put_events command
+--- @param input table|nil The input table for the put_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_events(input)
 	return common.execute_aws_command_with_input({ "events", "put-events" }, input)
 end
 
 --- This is used by SaaS partners to write events to a customer's partner event bus
---- @param input table The input table for the put_partner_events command
+--- @param input table|nil The input table for the put_partner_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_partner_events(input)
 	return common.execute_aws_command_with_input({ "events", "put-partner-events" }, input)
 end
 
 --- Running PutPermission permits the specified Amazon Web Services account or Amazon Web Services organization to put events to the specified event bus
---- @param input table The input table for the put_permission command
+--- @param input table|nil The input table for the put_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_permission(input)
 	return common.execute_aws_command_with_input({ "events", "put-permission" }, input)
 end
 
 --- Creates or updates the specified rule
---- @param input table The input table for the put_rule command
+--- @param input table|nil The input table for the put_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_rule(input)
 	return common.execute_aws_command_with_input({ "events", "put-rule" }, input)
 end
 
 --- Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule
---- @param input table The input table for the put_targets command
+--- @param input table|nil The input table for the put_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_targets(input)
 	return common.execute_aws_command_with_input({ "events", "put-targets" }, input)
 end
 
 --- Revokes the permission of another Amazon Web Services account to be able to put events to the specified event bus
---- @param input table The input table for the remove_permission command
+--- @param input table|nil The input table for the remove_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_permission(input)
 	return common.execute_aws_command_with_input({ "events", "remove-permission" }, input)
 end
 
 --- Removes the specified targets from the specified rule
---- @param input table The input table for the remove_targets command
+--- @param input table|nil The input table for the remove_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_targets(input)
 	return common.execute_aws_command_with_input({ "events", "remove-targets" }, input)
 end
 
 --- Starts the specified replay
---- @param input table The input table for the start_replay command
+--- @param input table|nil The input table for the start_replay command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_replay(input)
 	return common.execute_aws_command_with_input({ "events", "start-replay" }, input)
 end
 
 --- Assigns one or more tags (key-value pairs) to the specified EventBridge resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "events", "tag-resource" }, input)
 end
 
 --- Tests whether the specified event pattern matches the provided event
---- @param input table The input table for the test_event_pattern command
+--- @param input table|nil The input table for the test_event_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_event_pattern(input)
 	return common.execute_aws_command_with_input({ "events", "test-event-pattern" }, input)
 end
 
 --- Removes one or more tags from the specified EventBridge resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "events", "untag-resource" }, input)
 end
 
 --- Updates an API destination
---- @param input table The input table for the update_api_destination command
+--- @param input table|nil The input table for the update_api_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_api_destination(input)
 	return common.execute_aws_command_with_input({ "events", "update-api-destination" }, input)
 end
 
 --- Updates the specified archive
---- @param input table The input table for the update_archive command
+--- @param input table|nil The input table for the update_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_archive(input)
 	return common.execute_aws_command_with_input({ "events", "update-archive" }, input)
 end
 
 --- Updates settings for a connection
---- @param input table The input table for the update_connection command
+--- @param input table|nil The input table for the update_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connection(input)
 	return common.execute_aws_command_with_input({ "events", "update-connection" }, input)

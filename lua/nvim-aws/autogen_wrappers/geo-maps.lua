@@ -8,35 +8,35 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- GetGlyphs returns the map's glyphs
---- @param input table The input table for the get_glyphs command
+--- @param input table|nil The input table for the get_glyphs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_glyphs(input)
 	return common.execute_aws_command_with_input({ "geo-maps", "get-glyphs" }, input)
 end
 
 --- GetSprites returns the map's sprites
---- @param input table The input table for the get_sprites command
+--- @param input table|nil The input table for the get_sprites command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sprites(input)
 	return common.execute_aws_command_with_input({ "geo-maps", "get-sprites" }, input)
 end
 
 --- GetStaticMap provides high-quality static map images with customizable options
---- @param input table The input table for the get_static_map command
+--- @param input table|nil The input table for the get_static_map command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_static_map(input)
 	return common.execute_aws_command_with_input({ "geo-maps", "get-static-map" }, input)
 end
 
 --- GetStyleDescriptor returns information about the style
---- @param input table The input table for the get_style_descriptor command
+--- @param input table|nil The input table for the get_style_descriptor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_style_descriptor(input)
 	return common.execute_aws_command_with_input({ "geo-maps", "get-style-descriptor" }, input)
 end
 
 --- GetTile returns a tile
---- @param input table The input table for the get_tile command
+--- @param input table|nil The input table for the get_tile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_tile(input)
 	return common.execute_aws_command_with_input({ "geo-maps", "get-tile" }, input)

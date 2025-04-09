@@ -8,35 +8,35 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Provides details about the specified Amazon Web Services HealthScribe streaming session
---- @param input table The input table for the get_medical_scribe_stream command
+--- @param input table|nil The input table for the get_medical_scribe_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_medical_scribe_stream(input)
 	return common.execute_aws_command_with_input({ "transcribestreaming", "get-medical-scribe-stream" }, input)
 end
 
 --- Starts a bidirectional HTTP/2 or WebSocket stream where audio is streamed to Amazon Transcribe and the transcription results are streamed to your application
---- @param input table The input table for the start_call_analytics_stream_transcription command
+--- @param input table|nil The input table for the start_call_analytics_stream_transcription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_call_analytics_stream_transcription(input)
 	return common.execute_aws_command_with_input({ "transcribestreaming", "start-call-analytics-stream-transcription" }, input)
 end
 
 --- Starts a bidirectional HTTP/2 stream, where audio is streamed to Amazon Web Services HealthScribe and the transcription results are streamed to your application
---- @param input table The input table for the start_medical_scribe_stream command
+--- @param input table|nil The input table for the start_medical_scribe_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_medical_scribe_stream(input)
 	return common.execute_aws_command_with_input({ "transcribestreaming", "start-medical-scribe-stream" }, input)
 end
 
 --- Starts a bidirectional HTTP/2 or WebSocket stream where audio is streamed to Amazon Transcribe Medical and the transcription results are streamed to your application
---- @param input table The input table for the start_medical_stream_transcription command
+--- @param input table|nil The input table for the start_medical_stream_transcription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_medical_stream_transcription(input)
 	return common.execute_aws_command_with_input({ "transcribestreaming", "start-medical-stream-transcription" }, input)
 end
 
 --- Starts a bidirectional HTTP/2 or WebSocket stream where audio is streamed to Amazon Transcribe and the transcription results are streamed to your application
---- @param input table The input table for the start_stream_transcription command
+--- @param input table|nil The input table for the start_stream_transcription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_stream_transcription(input)
 	return common.execute_aws_command_with_input({ "transcribestreaming", "start-stream-transcription" }, input)

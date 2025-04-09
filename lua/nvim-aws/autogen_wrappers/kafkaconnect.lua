@@ -8,126 +8,126 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a connector using the specified properties
---- @param input table The input table for the create_connector command
+--- @param input table|nil The input table for the create_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "create-connector" }, input)
 end
 
 --- Creates a custom plugin using the specified properties
---- @param input table The input table for the create_custom_plugin command
+--- @param input table|nil The input table for the create_custom_plugin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_plugin(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "create-custom-plugin" }, input)
 end
 
 --- Creates a worker configuration using the specified properties
---- @param input table The input table for the create_worker_configuration command
+--- @param input table|nil The input table for the create_worker_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_worker_configuration(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "create-worker-configuration" }, input)
 end
 
 --- Deletes the specified connector
---- @param input table The input table for the delete_connector command
+--- @param input table|nil The input table for the delete_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connector(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-connector" }, input)
 end
 
 --- Deletes a custom plugin
---- @param input table The input table for the delete_custom_plugin command
+--- @param input table|nil The input table for the delete_custom_plugin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_plugin(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-custom-plugin" }, input)
 end
 
 --- Deletes the specified worker configuration
---- @param input table The input table for the delete_worker_configuration command
+--- @param input table|nil The input table for the delete_worker_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_worker_configuration(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-worker-configuration" }, input)
 end
 
 --- Returns summary information about the connector
---- @param input table The input table for the describe_connector command
+--- @param input table|nil The input table for the describe_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connector(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-connector" }, input)
 end
 
 --- Returns information about the specified connector's operations
---- @param input table The input table for the describe_connector_operation command
+--- @param input table|nil The input table for the describe_connector_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connector_operation(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-connector-operation" }, input)
 end
 
 --- A summary description of the custom plugin
---- @param input table The input table for the describe_custom_plugin command
+--- @param input table|nil The input table for the describe_custom_plugin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_plugin(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-custom-plugin" }, input)
 end
 
 --- Returns information about a worker configuration
---- @param input table The input table for the describe_worker_configuration command
+--- @param input table|nil The input table for the describe_worker_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_worker_configuration(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-worker-configuration" }, input)
 end
 
 --- Lists information about a connector's operation(s)
---- @param input table The input table for the list_connector_operations command
+--- @param input table|nil The input table for the list_connector_operations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connector_operations(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "list-connector-operations" }, input)
 end
 
 --- Returns a list of all the connectors in this account and Region
---- @param input table The input table for the list_connectors command
+--- @param input table|nil The input table for the list_connectors command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connectors(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "list-connectors" }, input)
 end
 
 --- Returns a list of all of the custom plugins in this account and Region
---- @param input table The input table for the list_custom_plugins command
+--- @param input table|nil The input table for the list_custom_plugins command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_plugins(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "list-custom-plugins" }, input)
 end
 
 --- Lists all the tags attached to the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "list-tags-for-resource" }, input)
 end
 
 --- Returns a list of all of the worker configurations in this account and Region
---- @param input table The input table for the list_worker_configurations command
+--- @param input table|nil The input table for the list_worker_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_worker_configurations(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "list-worker-configurations" }, input)
 end
 
 --- Attaches tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "tag-resource" }, input)
 end
 
 --- Removes tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "untag-resource" }, input)
 end
 
 --- Updates the specified connector
---- @param input table The input table for the update_connector command
+--- @param input table|nil The input table for the update_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connector(input)
 	return common.execute_aws_command_with_input({ "kafkaconnect", "update-connector" }, input)

@@ -8,210 +8,210 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates an Amazon Chime SDK messaging AppInstance under an AWS account
---- @param input table The input table for the create_app_instance command
+--- @param input table|nil The input table for the create_app_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_instance(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "create-app-instance" }, input)
 end
 
 --- Promotes an AppInstanceUser or AppInstanceBot to an AppInstanceAdmin
---- @param input table The input table for the create_app_instance_admin command
+--- @param input table|nil The input table for the create_app_instance_admin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_instance_admin(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "create-app-instance-admin" }, input)
 end
 
 --- Creates a bot under an Amazon Chime AppInstance
---- @param input table The input table for the create_app_instance_bot command
+--- @param input table|nil The input table for the create_app_instance_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_instance_bot(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "create-app-instance-bot" }, input)
 end
 
 --- Creates a user under an Amazon Chime AppInstance
---- @param input table The input table for the create_app_instance_user command
+--- @param input table|nil The input table for the create_app_instance_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_instance_user(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "create-app-instance-user" }, input)
 end
 
 --- Deletes an AppInstance and all associated data asynchronously
---- @param input table The input table for the delete_app_instance command
+--- @param input table|nil The input table for the delete_app_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_instance(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "delete-app-instance" }, input)
 end
 
 --- Demotes an AppInstanceAdmin to an AppInstanceUser or AppInstanceBot
---- @param input table The input table for the delete_app_instance_admin command
+--- @param input table|nil The input table for the delete_app_instance_admin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_instance_admin(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "delete-app-instance-admin" }, input)
 end
 
 --- Deletes an AppInstanceBot
---- @param input table The input table for the delete_app_instance_bot command
+--- @param input table|nil The input table for the delete_app_instance_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_instance_bot(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "delete-app-instance-bot" }, input)
 end
 
 --- Deletes an AppInstanceUser
---- @param input table The input table for the delete_app_instance_user command
+--- @param input table|nil The input table for the delete_app_instance_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_instance_user(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "delete-app-instance-user" }, input)
 end
 
 --- Deregisters an AppInstanceUserEndpoint
---- @param input table The input table for the deregister_app_instance_user_endpoint command
+--- @param input table|nil The input table for the deregister_app_instance_user_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_app_instance_user_endpoint(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "deregister-app-instance-user-endpoint" }, input)
 end
 
 --- Returns the full details of an AppInstance
---- @param input table The input table for the describe_app_instance command
+--- @param input table|nil The input table for the describe_app_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_instance(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "describe-app-instance" }, input)
 end
 
 --- Returns the full details of an AppInstanceAdmin
---- @param input table The input table for the describe_app_instance_admin command
+--- @param input table|nil The input table for the describe_app_instance_admin command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_instance_admin(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "describe-app-instance-admin" }, input)
 end
 
 --- The AppInstanceBot's information
---- @param input table The input table for the describe_app_instance_bot command
+--- @param input table|nil The input table for the describe_app_instance_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_instance_bot(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "describe-app-instance-bot" }, input)
 end
 
 --- Returns the full details of an AppInstanceUser
---- @param input table The input table for the describe_app_instance_user command
+--- @param input table|nil The input table for the describe_app_instance_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_instance_user(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "describe-app-instance-user" }, input)
 end
 
 --- Returns the full details of an AppInstanceUserEndpoint
---- @param input table The input table for the describe_app_instance_user_endpoint command
+--- @param input table|nil The input table for the describe_app_instance_user_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_instance_user_endpoint(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "describe-app-instance-user-endpoint" }, input)
 end
 
 --- Gets the retention settings for an AppInstance
---- @param input table The input table for the get_app_instance_retention_settings command
+--- @param input table|nil The input table for the get_app_instance_retention_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_instance_retention_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "get-app-instance-retention-settings" }, input)
 end
 
 --- Returns a list of the administrators in the AppInstance
---- @param input table The input table for the list_app_instance_admins command
+--- @param input table|nil The input table for the list_app_instance_admins command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_instance_admins(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-app-instance-admins" }, input)
 end
 
 --- Lists all AppInstanceBots created under a single AppInstance
---- @param input table The input table for the list_app_instance_bots command
+--- @param input table|nil The input table for the list_app_instance_bots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_instance_bots(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-app-instance-bots" }, input)
 end
 
 --- Lists all the AppInstanceUserEndpoints created under a single AppInstanceUser
---- @param input table The input table for the list_app_instance_user_endpoints command
+--- @param input table|nil The input table for the list_app_instance_user_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_instance_user_endpoints(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-app-instance-user-endpoints" }, input)
 end
 
 --- List all AppInstanceUsers created under a single AppInstance
---- @param input table The input table for the list_app_instance_users command
+--- @param input table|nil The input table for the list_app_instance_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_instance_users(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-app-instance-users" }, input)
 end
 
 --- Lists all Amazon Chime AppInstances created under a single AWS account
---- @param input table The input table for the list_app_instances command
+--- @param input table|nil The input table for the list_app_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_instances(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-app-instances" }, input)
 end
 
 --- Lists the tags applied to an Amazon Chime SDK identity resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "list-tags-for-resource" }, input)
 end
 
 --- Sets the amount of time in days that a given AppInstance retains data
---- @param input table The input table for the put_app_instance_retention_settings command
+--- @param input table|nil The input table for the put_app_instance_retention_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_app_instance_retention_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "put-app-instance-retention-settings" }, input)
 end
 
 --- Sets the number of days before the AppInstanceUser is automatically deleted
---- @param input table The input table for the put_app_instance_user_expiration_settings command
+--- @param input table|nil The input table for the put_app_instance_user_expiration_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_app_instance_user_expiration_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "put-app-instance-user-expiration-settings" }, input)
 end
 
 --- Registers an endpoint under an Amazon Chime AppInstanceUser
---- @param input table The input table for the register_app_instance_user_endpoint command
+--- @param input table|nil The input table for the register_app_instance_user_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_app_instance_user_endpoint(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "register-app-instance-user-endpoint" }, input)
 end
 
 --- Applies the specified tags to the specified Amazon Chime SDK identity resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "tag-resource" }, input)
 end
 
 --- Removes the specified tags from the specified Amazon Chime SDK identity resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "untag-resource" }, input)
 end
 
 --- Updates AppInstance metadata
---- @param input table The input table for the update_app_instance command
+--- @param input table|nil The input table for the update_app_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_instance(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "update-app-instance" }, input)
 end
 
 --- Updates the name and metadata of an AppInstanceBot
---- @param input table The input table for the update_app_instance_bot command
+--- @param input table|nil The input table for the update_app_instance_bot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_instance_bot(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "update-app-instance-bot" }, input)
 end
 
 --- Updates the details of an AppInstanceUser
---- @param input table The input table for the update_app_instance_user command
+--- @param input table|nil The input table for the update_app_instance_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_instance_user(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "update-app-instance-user" }, input)
 end
 
 --- Updates the details of an AppInstanceUserEndpoint
---- @param input table The input table for the update_app_instance_user_endpoint command
+--- @param input table|nil The input table for the update_app_instance_user_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_instance_user_endpoint(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "update-app-instance-user-endpoint" }, input)

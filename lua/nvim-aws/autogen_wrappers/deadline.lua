@@ -8,329 +8,329 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Assigns a farm membership level to a member
---- @param input table The input table for the associate_member_to_farm command
+--- @param input table|nil The input table for the associate_member_to_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_member_to_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "associate-member-to-farm" }, input)
 end
 
 --- Creates a farm to allow space for queues and fleets
---- @param input table The input table for the create_farm command
+--- @param input table|nil The input table for the create_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-farm" }, input)
 end
 
 --- Creates a license endpoint to integrate your various licensed software used for rendering on Deadline Cloud
---- @param input table The input table for the create_license_endpoint command
+--- @param input table|nil The input table for the create_license_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_endpoint(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-license-endpoint" }, input)
 end
 
 --- Creates a limit that manages the distribution of shared resources, such as floating licenses
---- @param input table The input table for the create_limit command
+--- @param input table|nil The input table for the create_limit command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_limit(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-limit" }, input)
 end
 
 --- Creates an Amazon Web Services Deadline Cloud monitor that you can use to view your farms, queues, and fleets
---- @param input table The input table for the create_monitor command
+--- @param input table|nil The input table for the create_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_monitor(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-monitor" }, input)
 end
 
 --- Creates an association between a queue and a fleet
---- @param input table The input table for the create_queue_fleet_association command
+--- @param input table|nil The input table for the create_queue_fleet_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_queue_fleet_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-queue-fleet-association" }, input)
 end
 
 --- Associates a limit with a particular queue
---- @param input table The input table for the create_queue_limit_association command
+--- @param input table|nil The input table for the create_queue_limit_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_queue_limit_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-queue-limit-association" }, input)
 end
 
 --- Creates a storage profile that specifies the operating system, file type, and file location of resources used on a farm
---- @param input table The input table for the create_storage_profile command
+--- @param input table|nil The input table for the create_storage_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_storage_profile(input)
 	return common.execute_aws_command_with_input({ "deadline", "create-storage-profile" }, input)
 end
 
 --- Deletes a farm
---- @param input table The input table for the delete_farm command
+--- @param input table|nil The input table for the delete_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-farm" }, input)
 end
 
 --- Deletes a license endpoint
---- @param input table The input table for the delete_license_endpoint command
+--- @param input table|nil The input table for the delete_license_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_license_endpoint(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-license-endpoint" }, input)
 end
 
 --- Removes a limit from the specified farm
---- @param input table The input table for the delete_limit command
+--- @param input table|nil The input table for the delete_limit command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_limit(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-limit" }, input)
 end
 
 --- Removes a Deadline Cloud monitor
---- @param input table The input table for the delete_monitor command
+--- @param input table|nil The input table for the delete_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_monitor(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-monitor" }, input)
 end
 
 --- Deletes a queue-fleet association
---- @param input table The input table for the delete_queue_fleet_association command
+--- @param input table|nil The input table for the delete_queue_fleet_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_queue_fleet_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-queue-fleet-association" }, input)
 end
 
 --- Removes the association between a queue and a limit
---- @param input table The input table for the delete_queue_limit_association command
+--- @param input table|nil The input table for the delete_queue_limit_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_queue_limit_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-queue-limit-association" }, input)
 end
 
 --- Deletes a storage profile
---- @param input table The input table for the delete_storage_profile command
+--- @param input table|nil The input table for the delete_storage_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_storage_profile(input)
 	return common.execute_aws_command_with_input({ "deadline", "delete-storage-profile" }, input)
 end
 
 --- Disassociates a member from a farm
---- @param input table The input table for the disassociate_member_from_farm command
+--- @param input table|nil The input table for the disassociate_member_from_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_member_from_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "disassociate-member-from-farm" }, input)
 end
 
 --- Get a farm
---- @param input table The input table for the get_farm command
+--- @param input table|nil The input table for the get_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-farm" }, input)
 end
 
 --- Gets a licence endpoint
---- @param input table The input table for the get_license_endpoint command
+--- @param input table|nil The input table for the get_license_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license_endpoint(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-license-endpoint" }, input)
 end
 
 --- Gets information about a specific limit
---- @param input table The input table for the get_limit command
+--- @param input table|nil The input table for the get_limit command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_limit(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-limit" }, input)
 end
 
 --- Gets information about the specified monitor
---- @param input table The input table for the get_monitor command
+--- @param input table|nil The input table for the get_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_monitor(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-monitor" }, input)
 end
 
 --- Gets a queue-fleet association
---- @param input table The input table for the get_queue_fleet_association command
+--- @param input table|nil The input table for the get_queue_fleet_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_queue_fleet_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-queue-fleet-association" }, input)
 end
 
 --- Gets information about a specific association between a queue and a limit
---- @param input table The input table for the get_queue_limit_association command
+--- @param input table|nil The input table for the get_queue_limit_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_queue_limit_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-queue-limit-association" }, input)
 end
 
 --- Gets a set of statistics for queues or farms
---- @param input table The input table for the get_sessions_statistics_aggregation command
+--- @param input table|nil The input table for the get_sessions_statistics_aggregation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sessions_statistics_aggregation(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-sessions-statistics-aggregation" }, input)
 end
 
 --- Gets a storage profile
---- @param input table The input table for the get_storage_profile command
+--- @param input table|nil The input table for the get_storage_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_storage_profile(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-storage-profile" }, input)
 end
 
 --- A list of the available metered products
---- @param input table The input table for the list_available_metered_products command
+--- @param input table|nil The input table for the list_available_metered_products command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_available_metered_products(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-available-metered-products" }, input)
 end
 
 --- Lists the members of a farm
---- @param input table The input table for the list_farm_members command
+--- @param input table|nil The input table for the list_farm_members command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_farm_members(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-farm-members" }, input)
 end
 
 --- Lists farms
---- @param input table The input table for the list_farms command
+--- @param input table|nil The input table for the list_farms command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_farms(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-farms" }, input)
 end
 
 --- Lists license endpoints
---- @param input table The input table for the list_license_endpoints command
+--- @param input table|nil The input table for the list_license_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_endpoints(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-license-endpoints" }, input)
 end
 
 --- Gets a list of limits defined in the specified farm
---- @param input table The input table for the list_limits command
+--- @param input table|nil The input table for the list_limits command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_limits(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-limits" }, input)
 end
 
 --- Gets a list of your monitors in Deadline Cloud
---- @param input table The input table for the list_monitors command
+--- @param input table|nil The input table for the list_monitors command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitors(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-monitors" }, input)
 end
 
 --- Lists queue-fleet associations
---- @param input table The input table for the list_queue_fleet_associations command
+--- @param input table|nil The input table for the list_queue_fleet_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queue_fleet_associations(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-queue-fleet-associations" }, input)
 end
 
 --- Gets a list of the associations between queues and limits defined in a farm
---- @param input table The input table for the list_queue_limit_associations command
+--- @param input table|nil The input table for the list_queue_limit_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queue_limit_associations(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-queue-limit-associations" }, input)
 end
 
 --- Lists storage profiles
---- @param input table The input table for the list_storage_profiles command
+--- @param input table|nil The input table for the list_storage_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_storage_profiles(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-storage-profiles" }, input)
 end
 
 --- Lists tags for a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "deadline", "list-tags-for-resource" }, input)
 end
 
 --- Searches for jobs
---- @param input table The input table for the search_jobs command
+--- @param input table|nil The input table for the search_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_jobs(input)
 	return common.execute_aws_command_with_input({ "deadline", "search-jobs" }, input)
 end
 
 --- Searches for steps
---- @param input table The input table for the search_steps command
+--- @param input table|nil The input table for the search_steps command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_steps(input)
 	return common.execute_aws_command_with_input({ "deadline", "search-steps" }, input)
 end
 
 --- Searches for tasks
---- @param input table The input table for the search_tasks command
+--- @param input table|nil The input table for the search_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_tasks(input)
 	return common.execute_aws_command_with_input({ "deadline", "search-tasks" }, input)
 end
 
 --- Searches for workers
---- @param input table The input table for the search_workers command
+--- @param input table|nil The input table for the search_workers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_workers(input)
 	return common.execute_aws_command_with_input({ "deadline", "search-workers" }, input)
 end
 
 --- Starts an asynchronous request for getting aggregated statistics about queues and farms
---- @param input table The input table for the start_sessions_statistics_aggregation command
+--- @param input table|nil The input table for the start_sessions_statistics_aggregation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_sessions_statistics_aggregation(input)
 	return common.execute_aws_command_with_input({ "deadline", "start-sessions-statistics-aggregation" }, input)
 end
 
 --- Tags a resource using the resource's ARN and desired tags
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "deadline", "tag-resource" }, input)
 end
 
 --- Removes a tag from a resource using the resource's ARN and tag to remove
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "deadline", "untag-resource" }, input)
 end
 
 --- Updates a farm
---- @param input table The input table for the update_farm command
+--- @param input table|nil The input table for the update_farm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_farm(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-farm" }, input)
 end
 
 --- Updates the properties of the specified limit
---- @param input table The input table for the update_limit command
+--- @param input table|nil The input table for the update_limit command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_limit(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-limit" }, input)
 end
 
 --- Modifies the settings for a Deadline Cloud monitor
---- @param input table The input table for the update_monitor command
+--- @param input table|nil The input table for the update_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_monitor(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-monitor" }, input)
 end
 
 --- Updates a queue-fleet association
---- @param input table The input table for the update_queue_fleet_association command
+--- @param input table|nil The input table for the update_queue_fleet_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_queue_fleet_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-queue-fleet-association" }, input)
 end
 
 --- Updates the status of the queue
---- @param input table The input table for the update_queue_limit_association command
+--- @param input table|nil The input table for the update_queue_limit_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_queue_limit_association(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-queue-limit-association" }, input)
 end
 
 --- Updates a storage profile
---- @param input table The input table for the update_storage_profile command
+--- @param input table|nil The input table for the update_storage_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_storage_profile(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-storage-profile" }, input)

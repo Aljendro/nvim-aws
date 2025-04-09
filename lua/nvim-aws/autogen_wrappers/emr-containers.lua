@@ -8,161 +8,161 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Cancels a job run
---- @param input table The input table for the cancel_job_run command
+--- @param input table|nil The input table for the cancel_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_job_run(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "cancel-job-run" }, input)
 end
 
 --- Creates a job template
---- @param input table The input table for the create_job_template command
+--- @param input table|nil The input table for the create_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job_template(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "create-job-template" }, input)
 end
 
 --- Creates a managed endpoint
---- @param input table The input table for the create_managed_endpoint command
+--- @param input table|nil The input table for the create_managed_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_managed_endpoint(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "create-managed-endpoint" }, input)
 end
 
 --- Creates a security configuration
---- @param input table The input table for the create_security_configuration command
+--- @param input table|nil The input table for the create_security_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_security_configuration(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "create-security-configuration" }, input)
 end
 
 --- Creates a virtual cluster
---- @param input table The input table for the create_virtual_cluster command
+--- @param input table|nil The input table for the create_virtual_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_virtual_cluster(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "create-virtual-cluster" }, input)
 end
 
 --- Deletes a job template
---- @param input table The input table for the delete_job_template command
+--- @param input table|nil The input table for the delete_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job_template(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "delete-job-template" }, input)
 end
 
 --- Deletes a managed endpoint
---- @param input table The input table for the delete_managed_endpoint command
+--- @param input table|nil The input table for the delete_managed_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_managed_endpoint(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "delete-managed-endpoint" }, input)
 end
 
 --- Deletes a virtual cluster
---- @param input table The input table for the delete_virtual_cluster command
+--- @param input table|nil The input table for the delete_virtual_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_virtual_cluster(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "delete-virtual-cluster" }, input)
 end
 
 --- Displays detailed information about a job run
---- @param input table The input table for the describe_job_run command
+--- @param input table|nil The input table for the describe_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_run(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "describe-job-run" }, input)
 end
 
 --- Displays detailed information about a specified job template
---- @param input table The input table for the describe_job_template command
+--- @param input table|nil The input table for the describe_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_template(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "describe-job-template" }, input)
 end
 
 --- Displays detailed information about a managed endpoint
---- @param input table The input table for the describe_managed_endpoint command
+--- @param input table|nil The input table for the describe_managed_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_managed_endpoint(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "describe-managed-endpoint" }, input)
 end
 
 --- Displays detailed information about a specified security configuration
---- @param input table The input table for the describe_security_configuration command
+--- @param input table|nil The input table for the describe_security_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_security_configuration(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "describe-security-configuration" }, input)
 end
 
 --- Displays detailed information about a specified virtual cluster
---- @param input table The input table for the describe_virtual_cluster command
+--- @param input table|nil The input table for the describe_virtual_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_virtual_cluster(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "describe-virtual-cluster" }, input)
 end
 
 --- Generate a session token to connect to a managed endpoint
---- @param input table The input table for the get_managed_endpoint_session_credentials command
+--- @param input table|nil The input table for the get_managed_endpoint_session_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_managed_endpoint_session_credentials(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "get-managed-endpoint-session-credentials" }, input)
 end
 
 --- Lists job runs based on a set of parameters
---- @param input table The input table for the list_job_runs command
+--- @param input table|nil The input table for the list_job_runs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_job_runs(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-job-runs" }, input)
 end
 
 --- Lists job templates based on a set of parameters
---- @param input table The input table for the list_job_templates command
+--- @param input table|nil The input table for the list_job_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_job_templates(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-job-templates" }, input)
 end
 
 --- Lists managed endpoints based on a set of parameters
---- @param input table The input table for the list_managed_endpoints command
+--- @param input table|nil The input table for the list_managed_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_managed_endpoints(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-managed-endpoints" }, input)
 end
 
 --- Lists security configurations based on a set of parameters
---- @param input table The input table for the list_security_configurations command
+--- @param input table|nil The input table for the list_security_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_security_configurations(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-security-configurations" }, input)
 end
 
 --- Lists the tags assigned to the resources
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-tags-for-resource" }, input)
 end
 
 --- Lists information about the specified virtual cluster
---- @param input table The input table for the list_virtual_clusters command
+--- @param input table|nil The input table for the list_virtual_clusters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_virtual_clusters(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "list-virtual-clusters" }, input)
 end
 
 --- Starts a job run
---- @param input table The input table for the start_job_run command
+--- @param input table|nil The input table for the start_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_job_run(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "start-job-run" }, input)
 end
 
 --- Assigns tags to resources
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "tag-resource" }, input)
 end
 
 --- Removes tags from resources
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "untag-resource" }, input)

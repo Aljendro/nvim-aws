@@ -8,14 +8,14 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Given a data set type and data set publication date, asynchronously publishes the requested data set to the specified S3 bucket and notifies the specified SNS topic once the data is available
---- @param input table The input table for the generate_data_set command
+--- @param input table|nil The input table for the generate_data_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_data_set(input)
 	return common.execute_aws_command_with_input({ "marketplace-commerce-analytics", "generate-data-set" }, input)
 end
 
 --- This target has been deprecated
---- @param input table The input table for the start_support_data_export command
+--- @param input table|nil The input table for the start_support_data_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_support_data_export(input)
 	return common.execute_aws_command_with_input({ "marketplace-commerce-analytics", "start-support-data-export" }, input)

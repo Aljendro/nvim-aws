@@ -8,217 +8,217 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates an AWS Certificate Manager (ACM) Amazon Resource Name (ARN) with AWS Elemental MediaConvert
---- @param input table The input table for the associate_certificate command
+--- @param input table|nil The input table for the associate_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_certificate(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "associate-certificate" }, input)
 end
 
 --- Permanently cancel a job
---- @param input table The input table for the cancel_job command
+--- @param input table|nil The input table for the cancel_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_job(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "cancel-job" }, input)
 end
 
 --- Create a new transcoding job
---- @param input table The input table for the create_job command
+--- @param input table|nil The input table for the create_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "create-job" }, input)
 end
 
 --- Create a new job template
---- @param input table The input table for the create_job_template command
+--- @param input table|nil The input table for the create_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job_template(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "create-job-template" }, input)
 end
 
 --- Create a new preset
---- @param input table The input table for the create_preset command
+--- @param input table|nil The input table for the create_preset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_preset(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "create-preset" }, input)
 end
 
 --- Create a new transcoding queue
---- @param input table The input table for the create_queue command
+--- @param input table|nil The input table for the create_queue command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_queue(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "create-queue" }, input)
 end
 
 --- Permanently delete a job template you have created
---- @param input table The input table for the delete_job_template command
+--- @param input table|nil The input table for the delete_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job_template(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "delete-job-template" }, input)
 end
 
 --- Permanently delete a policy that you created
---- @param input table The input table for the delete_policy command
+--- @param input table|nil The input table for the delete_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_policy(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "delete-policy" }, input)
 end
 
 --- Permanently delete a preset you have created
---- @param input table The input table for the delete_preset command
+--- @param input table|nil The input table for the delete_preset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_preset(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "delete-preset" }, input)
 end
 
 --- Permanently delete a queue you have created
---- @param input table The input table for the delete_queue command
+--- @param input table|nil The input table for the delete_queue command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_queue(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "delete-queue" }, input)
 end
 
 --- Send a request with an empty body to the regional API endpoint to get your account API endpoint
---- @param input table The input table for the describe_endpoints command
+--- @param input table|nil The input table for the describe_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoints(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "describe-endpoints" }, input)
 end
 
 --- Removes an association between the Amazon Resource Name (ARN) of an AWS Certificate Manager (ACM) certificate and an AWS Elemental MediaConvert resource
---- @param input table The input table for the disassociate_certificate command
+--- @param input table|nil The input table for the disassociate_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_certificate(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "disassociate-certificate" }, input)
 end
 
 --- Retrieve the JSON for a specific transcoding job
---- @param input table The input table for the get_job command
+--- @param input table|nil The input table for the get_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-job" }, input)
 end
 
 --- Retrieve the JSON for a specific job template
---- @param input table The input table for the get_job_template command
+--- @param input table|nil The input table for the get_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_template(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-job-template" }, input)
 end
 
 --- Retrieve the JSON for your policy
---- @param input table The input table for the get_policy command
+--- @param input table|nil The input table for the get_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policy(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-policy" }, input)
 end
 
 --- Retrieve the JSON for a specific preset
---- @param input table The input table for the get_preset command
+--- @param input table|nil The input table for the get_preset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_preset(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-preset" }, input)
 end
 
 --- Retrieve the JSON for a specific queue
---- @param input table The input table for the get_queue command
+--- @param input table|nil The input table for the get_queue command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_queue(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-queue" }, input)
 end
 
 --- Retrieve a JSON array of up to twenty of your job templates
---- @param input table The input table for the list_job_templates command
+--- @param input table|nil The input table for the list_job_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_job_templates(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-job-templates" }, input)
 end
 
 --- Retrieve a JSON array of up to twenty of your most recently created jobs
---- @param input table The input table for the list_jobs command
+--- @param input table|nil The input table for the list_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-jobs" }, input)
 end
 
 --- Retrieve a JSON array of up to twenty of your presets
---- @param input table The input table for the list_presets command
+--- @param input table|nil The input table for the list_presets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_presets(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-presets" }, input)
 end
 
 --- Retrieve a JSON array of up to twenty of your queues
---- @param input table The input table for the list_queues command
+--- @param input table|nil The input table for the list_queues command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queues(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-queues" }, input)
 end
 
 --- Retrieve the tags for a MediaConvert resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-tags-for-resource" }, input)
 end
 
 --- Retrieve a JSON array of all available Job engine versions and the date they expire
---- @param input table The input table for the list_versions command
+--- @param input table|nil The input table for the list_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_versions(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "list-versions" }, input)
 end
 
 --- Use Probe to obtain detailed information about your input media files
---- @param input table The input table for the probe command
+--- @param input table|nil The input table for the probe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.probe(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "probe" }, input)
 end
 
 --- Create or change your policy
---- @param input table The input table for the put_policy command
+--- @param input table|nil The input table for the put_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_policy(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "put-policy" }, input)
 end
 
 --- Retrieve a JSON array that includes job details for up to twenty of your most recent jobs
---- @param input table The input table for the search_jobs command
+--- @param input table|nil The input table for the search_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_jobs(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "search-jobs" }, input)
 end
 
 --- Add tags to a MediaConvert queue, preset, or job template
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "tag-resource" }, input)
 end
 
 --- Remove tags from a MediaConvert queue, preset, or job template
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "untag-resource" }, input)
 end
 
 --- Modify one of your existing job templates
---- @param input table The input table for the update_job_template command
+--- @param input table|nil The input table for the update_job_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job_template(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "update-job-template" }, input)
 end
 
 --- Modify one of your existing presets
---- @param input table The input table for the update_preset command
+--- @param input table|nil The input table for the update_preset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_preset(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "update-preset" }, input)
 end
 
 --- Modify one of your existing queues
---- @param input table The input table for the update_queue command
+--- @param input table|nil The input table for the update_queue command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_queue(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "update-queue" }, input)

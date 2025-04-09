@@ -8,203 +8,203 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates a Greengrass service role with IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region
---- @param input table The input table for the associate_service_role_to_account command
+--- @param input table|nil The input table for the associate_service_role_to_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_service_role_to_account(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "associate-service-role-to-account" }, input)
 end
 
 --- Associates a list of client devices with a core device
---- @param input table The input table for the batch_associate_client_device_with_core_device command
+--- @param input table|nil The input table for the batch_associate_client_device_with_core_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_client_device_with_core_device(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "batch-associate-client-device-with-core-device" }, input)
 end
 
 --- Disassociates a list of client devices from a core device
---- @param input table The input table for the batch_disassociate_client_device_from_core_device command
+--- @param input table|nil The input table for the batch_disassociate_client_device_from_core_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_client_device_from_core_device(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "batch-disassociate-client-device-from-core-device" }, input)
 end
 
 --- Cancels a deployment
---- @param input table The input table for the cancel_deployment command
+--- @param input table|nil The input table for the cancel_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "cancel-deployment" }, input)
 end
 
 --- Creates a component
---- @param input table The input table for the create_component_version command
+--- @param input table|nil The input table for the create_component_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_component_version(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "create-component-version" }, input)
 end
 
 --- Creates a continuous deployment for a target, which is a Greengrass core device or group of core devices
---- @param input table The input table for the create_deployment command
+--- @param input table|nil The input table for the create_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "create-deployment" }, input)
 end
 
 --- Deletes a version of a component from IoT Greengrass
---- @param input table The input table for the delete_component command
+--- @param input table|nil The input table for the delete_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_component(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "delete-component" }, input)
 end
 
 --- Deletes a Greengrass core device, which is an IoT thing
---- @param input table The input table for the delete_core_device command
+--- @param input table|nil The input table for the delete_core_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_core_device(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "delete-core-device" }, input)
 end
 
 --- Deletes a deployment
---- @param input table The input table for the delete_deployment command
+--- @param input table|nil The input table for the delete_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "delete-deployment" }, input)
 end
 
 --- Retrieves metadata for a version of a component
---- @param input table The input table for the describe_component command
+--- @param input table|nil The input table for the describe_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_component(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "describe-component" }, input)
 end
 
 --- Disassociates the Greengrass service role from IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region
---- @param input table The input table for the disassociate_service_role_from_account command
+--- @param input table|nil The input table for the disassociate_service_role_from_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_service_role_from_account(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "disassociate-service-role-from-account" }, input)
 end
 
 --- Gets the recipe for a version of a component
---- @param input table The input table for the get_component command
+--- @param input table|nil The input table for the get_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-component" }, input)
 end
 
 --- Gets the pre-signed URL to download a public or a Lambda component artifact
---- @param input table The input table for the get_component_version_artifact command
+--- @param input table|nil The input table for the get_component_version_artifact command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component_version_artifact(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-component-version-artifact" }, input)
 end
 
 --- Retrieves connectivity information for a Greengrass core device
---- @param input table The input table for the get_connectivity_info command
+--- @param input table|nil The input table for the get_connectivity_info command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connectivity_info(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-connectivity-info" }, input)
 end
 
 --- Retrieves metadata for a Greengrass core device
---- @param input table The input table for the get_core_device command
+--- @param input table|nil The input table for the get_core_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_core_device(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-core-device" }, input)
 end
 
 --- Gets a deployment
---- @param input table The input table for the get_deployment command
+--- @param input table|nil The input table for the get_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-deployment" }, input)
 end
 
 --- Gets the service role associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region
---- @param input table The input table for the get_service_role_for_account command
+--- @param input table|nil The input table for the get_service_role_for_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_role_for_account(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-service-role-for-account" }, input)
 end
 
 --- Retrieves a paginated list of client devices that are associated with a core device
---- @param input table The input table for the list_client_devices_associated_with_core_device command
+--- @param input table|nil The input table for the list_client_devices_associated_with_core_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_client_devices_associated_with_core_device(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-client-devices-associated-with-core-device" }, input)
 end
 
 --- Retrieves a paginated list of all versions for a component
---- @param input table The input table for the list_component_versions command
+--- @param input table|nil The input table for the list_component_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_component_versions(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-component-versions" }, input)
 end
 
 --- Retrieves a paginated list of component summaries
---- @param input table The input table for the list_components command
+--- @param input table|nil The input table for the list_components command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_components(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-components" }, input)
 end
 
 --- Retrieves a paginated list of Greengrass core devices
---- @param input table The input table for the list_core_devices command
+--- @param input table|nil The input table for the list_core_devices command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_core_devices(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-core-devices" }, input)
 end
 
 --- Retrieves a paginated list of deployments
---- @param input table The input table for the list_deployments command
+--- @param input table|nil The input table for the list_deployments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_deployments(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-deployments" }, input)
 end
 
 --- Retrieves a paginated list of deployment jobs that IoT Greengrass sends to Greengrass core devices
---- @param input table The input table for the list_effective_deployments command
+--- @param input table|nil The input table for the list_effective_deployments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_effective_deployments(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-effective-deployments" }, input)
 end
 
 --- Retrieves a paginated list of the components that a Greengrass core device runs
---- @param input table The input table for the list_installed_components command
+--- @param input table|nil The input table for the list_installed_components command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_installed_components(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-installed-components" }, input)
 end
 
 --- Retrieves the list of tags for an IoT Greengrass resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "list-tags-for-resource" }, input)
 end
 
 --- Retrieves a list of components that meet the component, version, and platform requirements of a deployment
---- @param input table The input table for the resolve_component_candidates command
+--- @param input table|nil The input table for the resolve_component_candidates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resolve_component_candidates(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "resolve-component-candidates" }, input)
 end
 
 --- Adds tags to an IoT Greengrass resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "tag-resource" }, input)
 end
 
 --- Removes a tag from an IoT Greengrass resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "untag-resource" }, input)
 end
 
 --- Updates connectivity information for a Greengrass core device
---- @param input table The input table for the update_connectivity_info command
+--- @param input table|nil The input table for the update_connectivity_info command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connectivity_info(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "update-connectivity-info" }, input)

@@ -8,504 +8,504 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associate a lens to a workload
---- @param input table The input table for the associate_lenses command
+--- @param input table|nil The input table for the associate_lenses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_lenses(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "associate-lenses" }, input)
 end
 
 --- Associate a profile with a workload
---- @param input table The input table for the associate_profiles command
+--- @param input table|nil The input table for the associate_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_profiles(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "associate-profiles" }, input)
 end
 
 --- Create a lens share
---- @param input table The input table for the create_lens_share command
+--- @param input table|nil The input table for the create_lens_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lens_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-lens-share" }, input)
 end
 
 --- Create a new lens version
---- @param input table The input table for the create_lens_version command
+--- @param input table|nil The input table for the create_lens_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lens_version(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-lens-version" }, input)
 end
 
 --- Create a milestone for an existing workload
---- @param input table The input table for the create_milestone command
+--- @param input table|nil The input table for the create_milestone command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_milestone(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-milestone" }, input)
 end
 
 --- Create a profile
---- @param input table The input table for the create_profile command
+--- @param input table|nil The input table for the create_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-profile" }, input)
 end
 
 --- Create a profile share
---- @param input table The input table for the create_profile_share command
+--- @param input table|nil The input table for the create_profile_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-profile-share" }, input)
 end
 
 --- Create a review template
---- @param input table The input table for the create_review_template command
+--- @param input table|nil The input table for the create_review_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_review_template(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-review-template" }, input)
 end
 
 --- Create a review template share
---- @param input table The input table for the create_template_share command
+--- @param input table|nil The input table for the create_template_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-template-share" }, input)
 end
 
 --- Create a new workload
---- @param input table The input table for the create_workload command
+--- @param input table|nil The input table for the create_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workload(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-workload" }, input)
 end
 
 --- Create a workload share
---- @param input table The input table for the create_workload_share command
+--- @param input table|nil The input table for the create_workload_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workload_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "create-workload-share" }, input)
 end
 
 --- Delete an existing lens
---- @param input table The input table for the delete_lens command
+--- @param input table|nil The input table for the delete_lens command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lens(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-lens" }, input)
 end
 
 --- Delete a lens share
---- @param input table The input table for the delete_lens_share command
+--- @param input table|nil The input table for the delete_lens_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lens_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-lens-share" }, input)
 end
 
 --- Delete a profile
---- @param input table The input table for the delete_profile command
+--- @param input table|nil The input table for the delete_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_profile(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-profile" }, input)
 end
 
 --- Delete a profile share
---- @param input table The input table for the delete_profile_share command
+--- @param input table|nil The input table for the delete_profile_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_profile_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-profile-share" }, input)
 end
 
 --- Delete a review template
---- @param input table The input table for the delete_review_template command
+--- @param input table|nil The input table for the delete_review_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_review_template(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-review-template" }, input)
 end
 
 --- Delete a review template share
---- @param input table The input table for the delete_template_share command
+--- @param input table|nil The input table for the delete_template_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-template-share" }, input)
 end
 
 --- Delete an existing workload
---- @param input table The input table for the delete_workload command
+--- @param input table|nil The input table for the delete_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workload(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-workload" }, input)
 end
 
 --- Delete a workload share
---- @param input table The input table for the delete_workload_share command
+--- @param input table|nil The input table for the delete_workload_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workload_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "delete-workload-share" }, input)
 end
 
 --- Disassociate a lens from a workload
---- @param input table The input table for the disassociate_lenses command
+--- @param input table|nil The input table for the disassociate_lenses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_lenses(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "disassociate-lenses" }, input)
 end
 
 --- Disassociate a profile from a workload
---- @param input table The input table for the disassociate_profiles command
+--- @param input table|nil The input table for the disassociate_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_profiles(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "disassociate-profiles" }, input)
 end
 
 --- Export an existing lens
---- @param input table The input table for the export_lens command
+--- @param input table|nil The input table for the export_lens command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_lens(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "export-lens" }, input)
 end
 
 --- Get the answer to a specific question in a workload review
---- @param input table The input table for the get_answer command
+--- @param input table|nil The input table for the get_answer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_answer(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-answer" }, input)
 end
 
 --- Get a consolidated report of your workloads
---- @param input table The input table for the get_consolidated_report command
+--- @param input table|nil The input table for the get_consolidated_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_consolidated_report(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-consolidated-report" }, input)
 end
 
 --- Global settings for all workloads
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_global_settings(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-global-settings" }, input)
 end
 
 --- Get an existing lens
---- @param input table The input table for the get_lens command
+--- @param input table|nil The input table for the get_lens command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lens(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-lens" }, input)
 end
 
 --- Get lens review
---- @param input table The input table for the get_lens_review command
+--- @param input table|nil The input table for the get_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-lens-review" }, input)
 end
 
 --- Get lens review report
---- @param input table The input table for the get_lens_review_report command
+--- @param input table|nil The input table for the get_lens_review_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lens_review_report(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-lens-review-report" }, input)
 end
 
 --- Get lens version differences
---- @param input table The input table for the get_lens_version_difference command
+--- @param input table|nil The input table for the get_lens_version_difference command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lens_version_difference(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-lens-version-difference" }, input)
 end
 
 --- Get a milestone for an existing workload
---- @param input table The input table for the get_milestone command
+--- @param input table|nil The input table for the get_milestone command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_milestone(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-milestone" }, input)
 end
 
 --- Get profile information
---- @param input table The input table for the get_profile command
+--- @param input table|nil The input table for the get_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_profile(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-profile" }, input)
 end
 
 --- Get profile template
---- @param input table The input table for the get_profile_template command
+--- @param input table|nil The input table for the get_profile_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_profile_template(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-profile-template" }, input)
 end
 
 --- Get review template
---- @param input table The input table for the get_review_template command
+--- @param input table|nil The input table for the get_review_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_review_template(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-review-template" }, input)
 end
 
 --- Get review template answer
---- @param input table The input table for the get_review_template_answer command
+--- @param input table|nil The input table for the get_review_template_answer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_review_template_answer(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-review-template-answer" }, input)
 end
 
 --- Get a lens review associated with a review template
---- @param input table The input table for the get_review_template_lens_review command
+--- @param input table|nil The input table for the get_review_template_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_review_template_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-review-template-lens-review" }, input)
 end
 
 --- Get an existing workload
---- @param input table The input table for the get_workload command
+--- @param input table|nil The input table for the get_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workload(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-workload" }, input)
 end
 
 --- Import a new custom lens or update an existing custom lens
---- @param input table The input table for the import_lens command
+--- @param input table|nil The input table for the import_lens command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_lens(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "import-lens" }, input)
 end
 
 --- List of answers for a particular workload and lens
---- @param input table The input table for the list_answers command
+--- @param input table|nil The input table for the list_answers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_answers(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-answers" }, input)
 end
 
 --- List of Trusted Advisor check details by account related to the workload
---- @param input table The input table for the list_check_details command
+--- @param input table|nil The input table for the list_check_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_check_details(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-check-details" }, input)
 end
 
 --- List of Trusted Advisor checks summarized for all accounts related to the workload
---- @param input table The input table for the list_check_summaries command
+--- @param input table|nil The input table for the list_check_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_check_summaries(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-check-summaries" }, input)
 end
 
 --- List the improvements of a particular lens review
---- @param input table The input table for the list_lens_review_improvements command
+--- @param input table|nil The input table for the list_lens_review_improvements command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lens_review_improvements(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-lens-review-improvements" }, input)
 end
 
 --- List lens reviews for a particular workload
---- @param input table The input table for the list_lens_reviews command
+--- @param input table|nil The input table for the list_lens_reviews command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lens_reviews(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-lens-reviews" }, input)
 end
 
 --- List the lens shares associated with the lens
---- @param input table The input table for the list_lens_shares command
+--- @param input table|nil The input table for the list_lens_shares command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lens_shares(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-lens-shares" }, input)
 end
 
 --- List the available lenses
---- @param input table The input table for the list_lenses command
+--- @param input table|nil The input table for the list_lenses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lenses(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-lenses" }, input)
 end
 
 --- List all milestones for an existing workload
---- @param input table The input table for the list_milestones command
+--- @param input table|nil The input table for the list_milestones command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_milestones(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-milestones" }, input)
 end
 
 --- List lens notifications
---- @param input table The input table for the list_notifications command
+--- @param input table|nil The input table for the list_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notifications(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-notifications" }, input)
 end
 
 --- List profile notifications
---- @param input table The input table for the list_profile_notifications command
+--- @param input table|nil The input table for the list_profile_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profile_notifications(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-profile-notifications" }, input)
 end
 
 --- List profile shares
---- @param input table The input table for the list_profile_shares command
+--- @param input table|nil The input table for the list_profile_shares command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profile_shares(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-profile-shares" }, input)
 end
 
 --- List profiles
---- @param input table The input table for the list_profiles command
+--- @param input table|nil The input table for the list_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profiles(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-profiles" }, input)
 end
 
 --- List the answers of a review template
---- @param input table The input table for the list_review_template_answers command
+--- @param input table|nil The input table for the list_review_template_answers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_review_template_answers(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-review-template-answers" }, input)
 end
 
 --- List review templates
---- @param input table The input table for the list_review_templates command
+--- @param input table|nil The input table for the list_review_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_review_templates(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-review-templates" }, input)
 end
 
 --- List the share invitations
---- @param input table The input table for the list_share_invitations command
+--- @param input table|nil The input table for the list_share_invitations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_share_invitations(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-share-invitations" }, input)
 end
 
 --- List the tags for a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-tags-for-resource" }, input)
 end
 
 --- List review template shares
---- @param input table The input table for the list_template_shares command
+--- @param input table|nil The input table for the list_template_shares command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_template_shares(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-template-shares" }, input)
 end
 
 --- List the workload shares associated with the workload
---- @param input table The input table for the list_workload_shares command
+--- @param input table|nil The input table for the list_workload_shares command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workload_shares(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-workload-shares" }, input)
 end
 
 --- Paginated list of workloads
---- @param input table The input table for the list_workloads command
+--- @param input table|nil The input table for the list_workloads command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workloads(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "list-workloads" }, input)
 end
 
 --- Adds one or more tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "tag-resource" }, input)
 end
 
 --- Deletes specified tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "untag-resource" }, input)
 end
 
 --- Update the answer to a specific question in a workload review
---- @param input table The input table for the update_answer command
+--- @param input table|nil The input table for the update_answer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_answer(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-answer" }, input)
 end
 
 --- Update whether the Amazon Web Services account is opted into organization sharing and discovery integration features
---- @param input table The input table for the update_global_settings command
+--- @param input table|nil The input table for the update_global_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_settings(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-global-settings" }, input)
 end
 
 --- Update integration features
---- @param input table The input table for the update_integration command
+--- @param input table|nil The input table for the update_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-integration" }, input)
 end
 
 --- Update lens review for a particular workload
---- @param input table The input table for the update_lens_review command
+--- @param input table|nil The input table for the update_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-lens-review" }, input)
 end
 
 --- Update a profile
---- @param input table The input table for the update_profile command
+--- @param input table|nil The input table for the update_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_profile(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-profile" }, input)
 end
 
 --- Update a review template
---- @param input table The input table for the update_review_template command
+--- @param input table|nil The input table for the update_review_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_review_template(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-review-template" }, input)
 end
 
 --- Update a review template answer
---- @param input table The input table for the update_review_template_answer command
+--- @param input table|nil The input table for the update_review_template_answer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_review_template_answer(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-review-template-answer" }, input)
 end
 
 --- Update a lens review associated with a review template
---- @param input table The input table for the update_review_template_lens_review command
+--- @param input table|nil The input table for the update_review_template_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_review_template_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-review-template-lens-review" }, input)
 end
 
 --- Update a workload or custom lens share invitation
---- @param input table The input table for the update_share_invitation command
+--- @param input table|nil The input table for the update_share_invitation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_share_invitation(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-share-invitation" }, input)
 end
 
 --- Update an existing workload
---- @param input table The input table for the update_workload command
+--- @param input table|nil The input table for the update_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workload(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-workload" }, input)
 end
 
 --- Update a workload share
---- @param input table The input table for the update_workload_share command
+--- @param input table|nil The input table for the update_workload_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workload_share(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "update-workload-share" }, input)
 end
 
 --- Upgrade lens review for a particular workload
---- @param input table The input table for the upgrade_lens_review command
+--- @param input table|nil The input table for the upgrade_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upgrade_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "upgrade-lens-review" }, input)
 end
 
 --- Upgrade a profile
---- @param input table The input table for the upgrade_profile_version command
+--- @param input table|nil The input table for the upgrade_profile_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upgrade_profile_version(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "upgrade-profile-version" }, input)
 end
 
 --- Upgrade the lens review of a review template
---- @param input table The input table for the upgrade_review_template_lens_review command
+--- @param input table|nil The input table for the upgrade_review_template_lens_review command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upgrade_review_template_lens_review(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "upgrade-review-template-lens-review" }, input)

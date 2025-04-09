@@ -8,21 +8,21 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Deletes an object at the specified path
---- @param input table The input table for the delete_object command
+--- @param input table|nil The input table for the delete_object command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "delete-object" }, input)
 end
 
 --- Gets the headers for an object at the specified path
---- @param input table The input table for the describe_object command
+--- @param input table|nil The input table for the describe_object command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "describe-object" }, input)
 end
 
 --- Downloads the object at the specified path
---- @param input table The input table for the get_object command
+--- @param input table|nil The input table for the get_object command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_object(input)
 	-- NOTE: This command does not have a "skeleton" template, so we need to emulate the behavior
@@ -38,14 +38,14 @@ function M.get_object(input)
 end
 
 --- Provides a list of metadata entries about folders and objects in the specified folder
---- @param input table The input table for the list_items command
+--- @param input table|nil The input table for the list_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_items(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "list-items" }, input)
 end
 
 --- Uploads an object to the specified path
---- @param input table The input table for the put_object command
+--- @param input table|nil The input table for the put_object command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "put-object" }, input)

@@ -8,553 +8,553 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates the specified app block builder with the specified app block
---- @param input table The input table for the associate_app_block_builder_app_block command
+--- @param input table|nil The input table for the associate_app_block_builder_app_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_app_block_builder_app_block(input)
 	return common.execute_aws_command_with_input({ "appstream", "associate-app-block-builder-app-block" }, input)
 end
 
 --- Associates the specified application with the specified fleet
---- @param input table The input table for the associate_application_fleet command
+--- @param input table|nil The input table for the associate_application_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_application_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "associate-application-fleet" }, input)
 end
 
 --- Associates an application to entitle
---- @param input table The input table for the associate_application_to_entitlement command
+--- @param input table|nil The input table for the associate_application_to_entitlement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_application_to_entitlement(input)
 	return common.execute_aws_command_with_input({ "appstream", "associate-application-to-entitlement" }, input)
 end
 
 --- Associates the specified fleet with the specified stack
---- @param input table The input table for the associate_fleet command
+--- @param input table|nil The input table for the associate_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "associate-fleet" }, input)
 end
 
 --- Associates the specified users with the specified stacks
---- @param input table The input table for the batch_associate_user_stack command
+--- @param input table|nil The input table for the batch_associate_user_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_user_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "batch-associate-user-stack" }, input)
 end
 
 --- Disassociates the specified users from the specified stacks
---- @param input table The input table for the batch_disassociate_user_stack command
+--- @param input table|nil The input table for the batch_disassociate_user_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_user_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "batch-disassociate-user-stack" }, input)
 end
 
 --- Copies the image within the same region or to a new region within the same AWS account
---- @param input table The input table for the copy_image command
+--- @param input table|nil The input table for the copy_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_image(input)
 	return common.execute_aws_command_with_input({ "appstream", "copy-image" }, input)
 end
 
 --- Creates an app block
---- @param input table The input table for the create_app_block command
+--- @param input table|nil The input table for the create_app_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_block(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-app-block" }, input)
 end
 
 --- Creates an app block builder
---- @param input table The input table for the create_app_block_builder command
+--- @param input table|nil The input table for the create_app_block_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_block_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-app-block-builder" }, input)
 end
 
 --- Creates a URL to start a create app block builder streaming session
---- @param input table The input table for the create_app_block_builder_streaming_url command
+--- @param input table|nil The input table for the create_app_block_builder_streaming_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_block_builder_streaming_url(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-app-block-builder-streaming-url" }, input)
 end
 
 --- Creates an application
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-application" }, input)
 end
 
 --- Creates a Directory Config object in AppStream 2
---- @param input table The input table for the create_directory_config command
+--- @param input table|nil The input table for the create_directory_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_directory_config(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-directory-config" }, input)
 end
 
 --- Creates a new entitlement
---- @param input table The input table for the create_entitlement command
+--- @param input table|nil The input table for the create_entitlement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_entitlement(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-entitlement" }, input)
 end
 
 --- Creates a fleet
---- @param input table The input table for the create_fleet command
+--- @param input table|nil The input table for the create_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-fleet" }, input)
 end
 
 --- Creates an image builder
---- @param input table The input table for the create_image_builder command
+--- @param input table|nil The input table for the create_image_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_image_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-image-builder" }, input)
 end
 
 --- Creates a URL to start an image builder streaming session
---- @param input table The input table for the create_image_builder_streaming_url command
+--- @param input table|nil The input table for the create_image_builder_streaming_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_image_builder_streaming_url(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-image-builder-streaming-url" }, input)
 end
 
 --- Creates a stack to start streaming applications to users
---- @param input table The input table for the create_stack command
+--- @param input table|nil The input table for the create_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-stack" }, input)
 end
 
 --- Creates a temporary URL to start an AppStream 2
---- @param input table The input table for the create_streaming_url command
+--- @param input table|nil The input table for the create_streaming_url command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_streaming_url(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-streaming-url" }, input)
 end
 
 --- Creates custom branding that customizes the appearance of the streaming application catalog page
---- @param input table The input table for the create_theme_for_stack command
+--- @param input table|nil The input table for the create_theme_for_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_theme_for_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-theme-for-stack" }, input)
 end
 
 --- Creates a new image with the latest Windows operating system updates, driver updates, and AppStream 2
---- @param input table The input table for the create_updated_image command
+--- @param input table|nil The input table for the create_updated_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_updated_image(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-updated-image" }, input)
 end
 
 --- Creates a usage report subscription
---- @param input table The input table for the create_usage_report_subscription command
+--- @param input table|nil The input table for the create_usage_report_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_usage_report_subscription(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-usage-report-subscription" }, input)
 end
 
 --- Creates a new user in the user pool
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "appstream", "create-user" }, input)
 end
 
 --- Deletes an app block
---- @param input table The input table for the delete_app_block command
+--- @param input table|nil The input table for the delete_app_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_block(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-app-block" }, input)
 end
 
 --- Deletes an app block builder
---- @param input table The input table for the delete_app_block_builder command
+--- @param input table|nil The input table for the delete_app_block_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_block_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-app-block-builder" }, input)
 end
 
 --- Deletes an application
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-application" }, input)
 end
 
 --- Deletes the specified Directory Config object from AppStream 2
---- @param input table The input table for the delete_directory_config command
+--- @param input table|nil The input table for the delete_directory_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_directory_config(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-directory-config" }, input)
 end
 
 --- Deletes the specified entitlement
---- @param input table The input table for the delete_entitlement command
+--- @param input table|nil The input table for the delete_entitlement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_entitlement(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-entitlement" }, input)
 end
 
 --- Deletes the specified fleet
---- @param input table The input table for the delete_fleet command
+--- @param input table|nil The input table for the delete_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-fleet" }, input)
 end
 
 --- Deletes the specified image
---- @param input table The input table for the delete_image command
+--- @param input table|nil The input table for the delete_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-image" }, input)
 end
 
 --- Deletes the specified image builder and releases the capacity
---- @param input table The input table for the delete_image_builder command
+--- @param input table|nil The input table for the delete_image_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-image-builder" }, input)
 end
 
 --- Deletes permissions for the specified private image
---- @param input table The input table for the delete_image_permissions command
+--- @param input table|nil The input table for the delete_image_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image_permissions(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-image-permissions" }, input)
 end
 
 --- Deletes the specified stack
---- @param input table The input table for the delete_stack command
+--- @param input table|nil The input table for the delete_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-stack" }, input)
 end
 
 --- Deletes custom branding that customizes the appearance of the streaming application catalog page
---- @param input table The input table for the delete_theme_for_stack command
+--- @param input table|nil The input table for the delete_theme_for_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_theme_for_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-theme-for-stack" }, input)
 end
 
 --- Disables usage report generation
---- @param input table The input table for the delete_usage_report_subscription command
+--- @param input table|nil The input table for the delete_usage_report_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_usage_report_subscription(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-usage-report-subscription" }, input)
 end
 
 --- Deletes a user from the user pool
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "appstream", "delete-user" }, input)
 end
 
 --- Retrieves a list that describes one or more app block builder associations
---- @param input table The input table for the describe_app_block_builder_app_block_associations command
+--- @param input table|nil The input table for the describe_app_block_builder_app_block_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_block_builder_app_block_associations(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-app-block-builder-app-block-associations" }, input)
 end
 
 --- Retrieves a list that describes one or more app block builders
---- @param input table The input table for the describe_app_block_builders command
+--- @param input table|nil The input table for the describe_app_block_builders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_block_builders(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-app-block-builders" }, input)
 end
 
 --- Retrieves a list that describes one or more app blocks
---- @param input table The input table for the describe_app_blocks command
+--- @param input table|nil The input table for the describe_app_blocks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_app_blocks(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-app-blocks" }, input)
 end
 
 --- Retrieves a list that describes one or more application fleet associations
---- @param input table The input table for the describe_application_fleet_associations command
+--- @param input table|nil The input table for the describe_application_fleet_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application_fleet_associations(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-application-fleet-associations" }, input)
 end
 
 --- Retrieves a list that describes one or more applications
---- @param input table The input table for the describe_applications command
+--- @param input table|nil The input table for the describe_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_applications(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-applications" }, input)
 end
 
 --- Retrieves a list that describes one or more specified Directory Config objects for AppStream 2
---- @param input table The input table for the describe_directory_configs command
+--- @param input table|nil The input table for the describe_directory_configs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_directory_configs(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-directory-configs" }, input)
 end
 
 --- Retrieves a list that describes one of more entitlements
---- @param input table The input table for the describe_entitlements command
+--- @param input table|nil The input table for the describe_entitlements command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entitlements(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-entitlements" }, input)
 end
 
 --- Retrieves a list that describes one or more specified fleets, if the fleet names are provided
---- @param input table The input table for the describe_fleets command
+--- @param input table|nil The input table for the describe_fleets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleets(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-fleets" }, input)
 end
 
 --- Retrieves a list that describes one or more specified image builders, if the image builder names are provided
---- @param input table The input table for the describe_image_builders command
+--- @param input table|nil The input table for the describe_image_builders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_builders(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-image-builders" }, input)
 end
 
 --- Retrieves a list that describes the permissions for shared AWS account IDs on a private image that you own
---- @param input table The input table for the describe_image_permissions command
+--- @param input table|nil The input table for the describe_image_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_permissions(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-image-permissions" }, input)
 end
 
 --- Retrieves a list that describes one or more specified images, if the image names or image ARNs are provided
---- @param input table The input table for the describe_images command
+--- @param input table|nil The input table for the describe_images command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_images(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-images" }, input)
 end
 
 --- Retrieves a list that describes the streaming sessions for a specified stack and fleet
---- @param input table The input table for the describe_sessions command
+--- @param input table|nil The input table for the describe_sessions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_sessions(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-sessions" }, input)
 end
 
 --- Retrieves a list that describes one or more specified stacks, if the stack names are provided
---- @param input table The input table for the describe_stacks command
+--- @param input table|nil The input table for the describe_stacks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stacks(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-stacks" }, input)
 end
 
 --- Retrieves a list that describes the theme for a specified stack
---- @param input table The input table for the describe_theme_for_stack command
+--- @param input table|nil The input table for the describe_theme_for_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_theme_for_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-theme-for-stack" }, input)
 end
 
 --- Retrieves a list that describes one or more usage report subscriptions
---- @param input table The input table for the describe_usage_report_subscriptions command
+--- @param input table|nil The input table for the describe_usage_report_subscriptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_usage_report_subscriptions(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-usage-report-subscriptions" }, input)
 end
 
 --- Retrieves a list that describes the UserStackAssociation objects
---- @param input table The input table for the describe_user_stack_associations command
+--- @param input table|nil The input table for the describe_user_stack_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user_stack_associations(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-user-stack-associations" }, input)
 end
 
 --- Retrieves a list that describes one or more specified users in the user pool
---- @param input table The input table for the describe_users command
+--- @param input table|nil The input table for the describe_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_users(input)
 	return common.execute_aws_command_with_input({ "appstream", "describe-users" }, input)
 end
 
 --- Disables the specified user in the user pool
---- @param input table The input table for the disable_user command
+--- @param input table|nil The input table for the disable_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_user(input)
 	return common.execute_aws_command_with_input({ "appstream", "disable-user" }, input)
 end
 
 --- Disassociates a specified app block builder from a specified app block
---- @param input table The input table for the disassociate_app_block_builder_app_block command
+--- @param input table|nil The input table for the disassociate_app_block_builder_app_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_app_block_builder_app_block(input)
 	return common.execute_aws_command_with_input({ "appstream", "disassociate-app-block-builder-app-block" }, input)
 end
 
 --- Disassociates the specified application from the fleet
---- @param input table The input table for the disassociate_application_fleet command
+--- @param input table|nil The input table for the disassociate_application_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_application_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "disassociate-application-fleet" }, input)
 end
 
 --- Deletes the specified application from the specified entitlement
---- @param input table The input table for the disassociate_application_from_entitlement command
+--- @param input table|nil The input table for the disassociate_application_from_entitlement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_application_from_entitlement(input)
 	return common.execute_aws_command_with_input({ "appstream", "disassociate-application-from-entitlement" }, input)
 end
 
 --- Disassociates the specified fleet from the specified stack
---- @param input table The input table for the disassociate_fleet command
+--- @param input table|nil The input table for the disassociate_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "disassociate-fleet" }, input)
 end
 
 --- Enables a user in the user pool
---- @param input table The input table for the enable_user command
+--- @param input table|nil The input table for the enable_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_user(input)
 	return common.execute_aws_command_with_input({ "appstream", "enable-user" }, input)
 end
 
 --- Immediately stops the specified streaming session
---- @param input table The input table for the expire_session command
+--- @param input table|nil The input table for the expire_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.expire_session(input)
 	return common.execute_aws_command_with_input({ "appstream", "expire-session" }, input)
 end
 
 --- Retrieves the name of the fleet that is associated with the specified stack
---- @param input table The input table for the list_associated_fleets command
+--- @param input table|nil The input table for the list_associated_fleets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associated_fleets(input)
 	return common.execute_aws_command_with_input({ "appstream", "list-associated-fleets" }, input)
 end
 
 --- Retrieves the name of the stack with which the specified fleet is associated
---- @param input table The input table for the list_associated_stacks command
+--- @param input table|nil The input table for the list_associated_stacks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associated_stacks(input)
 	return common.execute_aws_command_with_input({ "appstream", "list-associated-stacks" }, input)
 end
 
 --- Retrieves a list of entitled applications
---- @param input table The input table for the list_entitled_applications command
+--- @param input table|nil The input table for the list_entitled_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entitled_applications(input)
 	return common.execute_aws_command_with_input({ "appstream", "list-entitled-applications" }, input)
 end
 
 --- Retrieves a list of all tags for the specified AppStream 2
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "appstream", "list-tags-for-resource" }, input)
 end
 
 --- Starts an app block builder
---- @param input table The input table for the start_app_block_builder command
+--- @param input table|nil The input table for the start_app_block_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_app_block_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "start-app-block-builder" }, input)
 end
 
 --- Starts the specified fleet
---- @param input table The input table for the start_fleet command
+--- @param input table|nil The input table for the start_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "start-fleet" }, input)
 end
 
 --- Starts the specified image builder
---- @param input table The input table for the start_image_builder command
+--- @param input table|nil The input table for the start_image_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_image_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "start-image-builder" }, input)
 end
 
 --- Stops an app block builder
---- @param input table The input table for the stop_app_block_builder command
+--- @param input table|nil The input table for the stop_app_block_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_app_block_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "stop-app-block-builder" }, input)
 end
 
 --- Stops the specified fleet
---- @param input table The input table for the stop_fleet command
+--- @param input table|nil The input table for the stop_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "stop-fleet" }, input)
 end
 
 --- Stops the specified image builder
---- @param input table The input table for the stop_image_builder command
+--- @param input table|nil The input table for the stop_image_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_image_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "stop-image-builder" }, input)
 end
 
 --- Adds or overwrites one or more tags for the specified AppStream 2
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "appstream", "tag-resource" }, input)
 end
 
 --- Disassociates one or more specified tags from the specified AppStream 2
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "appstream", "untag-resource" }, input)
 end
 
 --- Updates an app block builder
---- @param input table The input table for the update_app_block_builder command
+--- @param input table|nil The input table for the update_app_block_builder command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_block_builder(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-app-block-builder" }, input)
 end
 
 --- Updates the specified application
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-application" }, input)
 end
 
 --- Updates the specified Directory Config object in AppStream 2
---- @param input table The input table for the update_directory_config command
+--- @param input table|nil The input table for the update_directory_config command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_directory_config(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-directory-config" }, input)
 end
 
 --- Updates the specified entitlement
---- @param input table The input table for the update_entitlement command
+--- @param input table|nil The input table for the update_entitlement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_entitlement(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-entitlement" }, input)
 end
 
 --- Updates the specified fleet
---- @param input table The input table for the update_fleet command
+--- @param input table|nil The input table for the update_fleet command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_fleet(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-fleet" }, input)
 end
 
 --- Adds or updates permissions for the specified private image
---- @param input table The input table for the update_image_permissions command
+--- @param input table|nil The input table for the update_image_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_image_permissions(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-image-permissions" }, input)
 end
 
 --- Updates the specified fields for the specified stack
---- @param input table The input table for the update_stack command
+--- @param input table|nil The input table for the update_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-stack" }, input)
 end
 
 --- Updates custom branding that customizes the appearance of the streaming application catalog page
---- @param input table The input table for the update_theme_for_stack command
+--- @param input table|nil The input table for the update_theme_for_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_theme_for_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-theme-for-stack" }, input)

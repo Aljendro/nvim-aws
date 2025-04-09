@@ -8,84 +8,84 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a monitor between a source subnet and destination IP address
---- @param input table The input table for the create_monitor command
+--- @param input table|nil The input table for the create_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_monitor(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "create-monitor" }, input)
 end
 
 --- Create a probe within a monitor
---- @param input table The input table for the create_probe command
+--- @param input table|nil The input table for the create_probe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_probe(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "create-probe" }, input)
 end
 
 --- Deletes a specified monitor
---- @param input table The input table for the delete_monitor command
+--- @param input table|nil The input table for the delete_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_monitor(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "delete-monitor" }, input)
 end
 
 --- Deletes the specified probe
---- @param input table The input table for the delete_probe command
+--- @param input table|nil The input table for the delete_probe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_probe(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "delete-probe" }, input)
 end
 
 --- Returns details about a specific monitor
---- @param input table The input table for the get_monitor command
+--- @param input table|nil The input table for the get_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_monitor(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "get-monitor" }, input)
 end
 
 --- Returns the details about a probe
---- @param input table The input table for the get_probe command
+--- @param input table|nil The input table for the get_probe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_probe(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "get-probe" }, input)
 end
 
 --- Returns a list of all of your monitors
---- @param input table The input table for the list_monitors command
+--- @param input table|nil The input table for the list_monitors command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitors(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "list-monitors" }, input)
 end
 
 --- Lists the tags assigned to this resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "list-tags-for-resource" }, input)
 end
 
 --- Adds key-value pairs to a monitor or probe
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "tag-resource" }, input)
 end
 
 --- Removes a key-value pair from a monitor or probe
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "untag-resource" }, input)
 end
 
 --- Updates the aggregationPeriod for a monitor
---- @param input table The input table for the update_monitor command
+--- @param input table|nil The input table for the update_monitor command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_monitor(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "update-monitor" }, input)
 end
 
 --- Updates a monitor probe
---- @param input table The input table for the update_probe command
+--- @param input table|nil The input table for the update_probe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_probe(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "update-probe" }, input)

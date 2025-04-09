@@ -8,14 +8,14 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Before using this API, you must call the GetSignalingChannelEndpoint API to request the WEBRTC endpoint
---- @param input table The input table for the join_storage_session command
+--- @param input table|nil The input table for the join_storage_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.join_storage_session(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-webrtc-storage", "join-storage-session" }, input)
 end
 
 --- Join the ongoing one way-video and/or multi-way audio WebRTC session as a viewer for an input channel
---- @param input table The input table for the join_storage_session_as_viewer command
+--- @param input table|nil The input table for the join_storage_session_as_viewer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.join_storage_session_as_viewer(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-webrtc-storage", "join-storage-session-as-viewer" }, input)

@@ -8,35 +8,35 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Records action interaction event data
---- @param input table The input table for the put_action_interactions command
+--- @param input table|nil The input table for the put_action_interactions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_action_interactions(input)
 	return common.execute_aws_command_with_input({ "personalize-events", "put-action-interactions" }, input)
 end
 
 --- Adds one or more actions to an Actions dataset
---- @param input table The input table for the put_actions command
+--- @param input table|nil The input table for the put_actions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_actions(input)
 	return common.execute_aws_command_with_input({ "personalize-events", "put-actions" }, input)
 end
 
 --- Records item interaction event data
---- @param input table The input table for the put_events command
+--- @param input table|nil The input table for the put_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_events(input)
 	return common.execute_aws_command_with_input({ "personalize-events", "put-events" }, input)
 end
 
 --- Adds one or more items to an Items dataset
---- @param input table The input table for the put_items command
+--- @param input table|nil The input table for the put_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_items(input)
 	return common.execute_aws_command_with_input({ "personalize-events", "put-items" }, input)
 end
 
 --- Adds one or more users to a Users dataset
---- @param input table The input table for the put_users command
+--- @param input table|nil The input table for the put_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_users(input)
 	return common.execute_aws_command_with_input({ "personalize-events", "put-users" }, input)

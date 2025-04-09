@@ -8,28 +8,28 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Returns the STS short-term credentials for a given role name that is assigned to the user
---- @param input table The input table for the get_role_credentials command
+--- @param input table|nil The input table for the get_role_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_role_credentials(input)
 	return common.execute_aws_command_with_input({ "sso", "get-role-credentials" }, input)
 end
 
 --- Lists all roles that are assigned to the user for a given AWS account
---- @param input table The input table for the list_account_roles command
+--- @param input table|nil The input table for the list_account_roles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_account_roles(input)
 	return common.execute_aws_command_with_input({ "sso", "list-account-roles" }, input)
 end
 
 --- Lists all AWS accounts assigned to the user
---- @param input table The input table for the list_accounts command
+--- @param input table|nil The input table for the list_accounts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_accounts(input)
 	return common.execute_aws_command_with_input({ "sso", "list-accounts" }, input)
 end
 
 --- Removes the locally stored SSO tokens from the client-side cache and sends an API call to the IAM Identity Center service to invalidate the corresponding server-side IAM Identity Center sign in session
---- @param input table The input table for the logout command
+--- @param input table|nil The input table for the logout command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.logout(input)
 	return common.execute_aws_command_with_input({ "sso", "logout" }, input)

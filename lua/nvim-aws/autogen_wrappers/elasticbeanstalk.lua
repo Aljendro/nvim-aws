@@ -8,329 +8,329 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Cancels in-progress environment configuration update or application version deployment
---- @param input table The input table for the abort_environment_update command
+--- @param input table|nil The input table for the abort_environment_update command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.abort_environment_update(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "abort-environment-update" }, input)
 end
 
 --- Applies a scheduled managed action immediately
---- @param input table The input table for the apply_environment_managed_action command
+--- @param input table|nil The input table for the apply_environment_managed_action command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.apply_environment_managed_action(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "apply-environment-managed-action" }, input)
 end
 
 --- Add or change the operations role used by an environment
---- @param input table The input table for the associate_environment_operations_role command
+--- @param input table|nil The input table for the associate_environment_operations_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_environment_operations_role(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "associate-environment-operations-role" }, input)
 end
 
 --- Checks if the specified CNAME is available
---- @param input table The input table for the check_dns_availability command
+--- @param input table|nil The input table for the check_dns_availability command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_dns_availability(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "check-dns-availability" }, input)
 end
 
 --- Create or update a group of environments that each run a separate component of a single application
---- @param input table The input table for the compose_environments command
+--- @param input table|nil The input table for the compose_environments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.compose_environments(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "compose-environments" }, input)
 end
 
 --- Creates an application that has one configuration template named default and no application versions
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-application" }, input)
 end
 
 --- Creates an application version for the specified application
---- @param input table The input table for the create_application_version command
+--- @param input table|nil The input table for the create_application_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-application-version" }, input)
 end
 
 --- Creates an AWS Elastic Beanstalk configuration template, associated with a specific Elastic Beanstalk application
---- @param input table The input table for the create_configuration_template command
+--- @param input table|nil The input table for the create_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration_template(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-configuration-template" }, input)
 end
 
 --- Launches an AWS Elastic Beanstalk environment for the specified application using the specified configuration
---- @param input table The input table for the create_environment command
+--- @param input table|nil The input table for the create_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-environment" }, input)
 end
 
 --- Create a new version of your custom platform
---- @param input table The input table for the create_platform_version command
+--- @param input table|nil The input table for the create_platform_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_platform_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-platform-version" }, input)
 end
 
 --- Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk environments
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_storage_location(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-storage-location" }, input)
 end
 
 --- Deletes the specified application along with all associated versions and configurations
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-application" }, input)
 end
 
 --- Deletes the specified version from the specified application
---- @param input table The input table for the delete_application_version command
+--- @param input table|nil The input table for the delete_application_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-application-version" }, input)
 end
 
 --- Deletes the specified configuration template
---- @param input table The input table for the delete_configuration_template command
+--- @param input table|nil The input table for the delete_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_template(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-configuration-template" }, input)
 end
 
 --- Deletes the draft configuration associated with the running environment
---- @param input table The input table for the delete_environment_configuration command
+--- @param input table|nil The input table for the delete_environment_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_configuration(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-environment-configuration" }, input)
 end
 
 --- Deletes the specified version of a custom platform
---- @param input table The input table for the delete_platform_version command
+--- @param input table|nil The input table for the delete_platform_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_platform_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-platform-version" }, input)
 end
 
 --- Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS account
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_attributes(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-account-attributes" }, input)
 end
 
 --- Retrieve a list of application versions
---- @param input table The input table for the describe_application_versions command
+--- @param input table|nil The input table for the describe_application_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application_versions(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-application-versions" }, input)
 end
 
 --- Returns the descriptions of existing applications
---- @param input table The input table for the describe_applications command
+--- @param input table|nil The input table for the describe_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_applications(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-applications" }, input)
 end
 
 --- Describes the configuration options that are used in a particular configuration template or environment, or that a specified solution stack defines
---- @param input table The input table for the describe_configuration_options command
+--- @param input table|nil The input table for the describe_configuration_options command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_options(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-configuration-options" }, input)
 end
 
 --- Returns a description of the settings for the specified configuration set, that is, either a configuration template or the configuration set associated with a running environment
---- @param input table The input table for the describe_configuration_settings command
+--- @param input table|nil The input table for the describe_configuration_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_settings(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-configuration-settings" }, input)
 end
 
 --- Returns information about the overall health of the specified environment
---- @param input table The input table for the describe_environment_health command
+--- @param input table|nil The input table for the describe_environment_health command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_health(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-health" }, input)
 end
 
 --- Lists an environment's completed and failed managed actions
---- @param input table The input table for the describe_environment_managed_action_history command
+--- @param input table|nil The input table for the describe_environment_managed_action_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_managed_action_history(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-managed-action-history" }, input)
 end
 
 --- Lists an environment's upcoming and in-progress managed actions
---- @param input table The input table for the describe_environment_managed_actions command
+--- @param input table|nil The input table for the describe_environment_managed_actions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_managed_actions(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-managed-actions" }, input)
 end
 
 --- Returns AWS resources for this environment
---- @param input table The input table for the describe_environment_resources command
+--- @param input table|nil The input table for the describe_environment_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_resources(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-resources" }, input)
 end
 
 --- Returns descriptions for existing environments
---- @param input table The input table for the describe_environments command
+--- @param input table|nil The input table for the describe_environments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environments(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environments" }, input)
 end
 
 --- Returns list of event descriptions matching criteria up to the last 6 weeks
---- @param input table The input table for the describe_events command
+--- @param input table|nil The input table for the describe_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-events" }, input)
 end
 
 --- Retrieves detailed information about the health of instances in your AWS Elastic Beanstalk
---- @param input table The input table for the describe_instances_health command
+--- @param input table|nil The input table for the describe_instances_health command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instances_health(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-instances-health" }, input)
 end
 
 --- Describes a platform version
---- @param input table The input table for the describe_platform_version command
+--- @param input table|nil The input table for the describe_platform_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_platform_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-platform-version" }, input)
 end
 
 --- Disassociate the operations role from an environment
---- @param input table The input table for the disassociate_environment_operations_role command
+--- @param input table|nil The input table for the disassociate_environment_operations_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_environment_operations_role(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input)
 end
 
 --- Returns a list of the available solution stack names, with the public version first and then in reverse chronological order
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_available_solution_stacks(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-available-solution-stacks" }, input)
 end
 
 --- Lists the platform branches available for your account in an AWS Region
---- @param input table The input table for the list_platform_branches command
+--- @param input table|nil The input table for the list_platform_branches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_platform_branches(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-platform-branches" }, input)
 end
 
 --- Lists the platform versions available for your account in an AWS Region
---- @param input table The input table for the list_platform_versions command
+--- @param input table|nil The input table for the list_platform_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_platform_versions(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-platform-versions" }, input)
 end
 
 --- Return the tags applied to an AWS Elastic Beanstalk resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-tags-for-resource" }, input)
 end
 
 --- Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc
---- @param input table The input table for the rebuild_environment command
+--- @param input table|nil The input table for the rebuild_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rebuild_environment(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "rebuild-environment" }, input)
 end
 
 --- Initiates a request to compile the specified type of information of the deployed environment
---- @param input table The input table for the request_environment_info command
+--- @param input table|nil The input table for the request_environment_info command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.request_environment_info(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "request-environment-info" }, input)
 end
 
 --- Causes the environment to restart the application container server running on each Amazon EC2 instance
---- @param input table The input table for the restart_app_server command
+--- @param input table|nil The input table for the restart_app_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restart_app_server(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "restart-app-server" }, input)
 end
 
 --- Retrieves the compiled information from a RequestEnvironmentInfo request
---- @param input table The input table for the retrieve_environment_info command
+--- @param input table|nil The input table for the retrieve_environment_info command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retrieve_environment_info(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "retrieve-environment-info" }, input)
 end
 
 --- Swaps the CNAMEs of two environments
---- @param input table The input table for the swap_environment_cnam_es command
+--- @param input table|nil The input table for the swap_environment_cnam_es command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.swap_environment_cnam_es(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "swap-environment-cnam-es" }, input)
 end
 
 --- Terminates the specified environment
---- @param input table The input table for the terminate_environment command
+--- @param input table|nil The input table for the terminate_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_environment(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "terminate-environment" }, input)
 end
 
 --- Updates the specified application to have the specified properties
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application" }, input)
 end
 
 --- Modifies lifecycle settings for an application
---- @param input table The input table for the update_application_resource_lifecycle command
+--- @param input table|nil The input table for the update_application_resource_lifecycle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application_resource_lifecycle(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application-resource-lifecycle" }, input)
 end
 
 --- Updates the specified application version to have the specified properties
---- @param input table The input table for the update_application_version command
+--- @param input table|nil The input table for the update_application_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application_version(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application-version" }, input)
 end
 
 --- Updates the specified configuration template to have the specified properties or configuration option values
---- @param input table The input table for the update_configuration_template command
+--- @param input table|nil The input table for the update_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration_template(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-configuration-template" }, input)
 end
 
 --- Updates the environment description, deploys a new application version, updates the configuration settings to an entirely new configuration template, or updates select configuration option values in the running environment
---- @param input table The input table for the update_environment command
+--- @param input table|nil The input table for the update_environment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-environment" }, input)
 end
 
 --- Update the list of tags applied to an AWS Elastic Beanstalk resource
---- @param input table The input table for the update_tags_for_resource command
+--- @param input table|nil The input table for the update_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-tags-for-resource" }, input)
 end
 
 --- Takes a set of configuration settings and either a configuration template or environment, and determines whether those values are valid
---- @param input table The input table for the validate_configuration_settings command
+--- @param input table|nil The input table for the validate_configuration_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_configuration_settings(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "validate-configuration-settings" }, input)

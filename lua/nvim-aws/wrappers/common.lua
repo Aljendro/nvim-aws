@@ -14,20 +14,22 @@ local default_env = {
 	["PATH"] = os.getenv("PATH") or "",
 }
 
---- Generates a template for the AWS cli command at the specified path
---- @param command_path table the aws command path
---- @return table Generated input table
-function M.generate_skeleton(command_path)
-	return M.execute_aws_command(vim.list_extend(command_path, { "--generate-cli-skeleton" }))
-end
-
 --- Execute an AWS CLI command with an input and process the results
+--- If the input is not provided, it will generate a skeleton
 --- @param command_path table the aws command path
 --- @param input table|nil the input table
 --- @return table {success: boolean, data: table|nil, error: string|nil}
 function M.execute_aws_command_with_input(command_path, input)
-	local json_input = input and vim.fn.json_encode(input) or "{}"
-	return M.execute_aws_command(vim.list_extend(command_path, { "--cli-input-json", json_input }))
+	if not input then
+		return M.execute_aws_command(vim.list_extend(command_path, { "--generate-cli-skeleton" }))
+	else
+		if next(input) == nil then
+			return M.execute_aws_command(vim.list_extend(command_path, { "--cli-input-json", "{}" }))
+		else
+			local json_input = vim.fn.json_encode(input)
+			return M.execute_aws_command(vim.list_extend(command_path, { "--cli-input-json", json_input }))
+		end
+	end
 end
 
 --- Execute an AWS CLI command and process the results

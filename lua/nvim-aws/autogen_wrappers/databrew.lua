@@ -8,308 +8,308 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Deletes one or more versions of a recipe at a time
---- @param input table The input table for the batch_delete_recipe_version command
+--- @param input table|nil The input table for the batch_delete_recipe_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_recipe_version(input)
 	return common.execute_aws_command_with_input({ "databrew", "batch-delete-recipe-version" }, input)
 end
 
 --- Creates a new DataBrew dataset
---- @param input table The input table for the create_dataset command
+--- @param input table|nil The input table for the create_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-dataset" }, input)
 end
 
 --- Creates a new job to analyze a dataset and create its data profile
---- @param input table The input table for the create_profile_job command
+--- @param input table|nil The input table for the create_profile_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-profile-job" }, input)
 end
 
 --- Creates a new DataBrew project
---- @param input table The input table for the create_project command
+--- @param input table|nil The input table for the create_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-project" }, input)
 end
 
 --- Creates a new DataBrew recipe
---- @param input table The input table for the create_recipe command
+--- @param input table|nil The input table for the create_recipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_recipe(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-recipe" }, input)
 end
 
 --- Creates a new job to transform input data, using steps defined in an existing Glue DataBrew recipe
---- @param input table The input table for the create_recipe_job command
+--- @param input table|nil The input table for the create_recipe_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_recipe_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-recipe-job" }, input)
 end
 
 --- Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset
---- @param input table The input table for the create_ruleset command
+--- @param input table|nil The input table for the create_ruleset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ruleset(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-ruleset" }, input)
 end
 
 --- Creates a new schedule for one or more DataBrew jobs
---- @param input table The input table for the create_schedule command
+--- @param input table|nil The input table for the create_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schedule(input)
 	return common.execute_aws_command_with_input({ "databrew", "create-schedule" }, input)
 end
 
 --- Deletes a dataset from DataBrew
---- @param input table The input table for the delete_dataset command
+--- @param input table|nil The input table for the delete_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-dataset" }, input)
 end
 
 --- Deletes the specified DataBrew job
---- @param input table The input table for the delete_job command
+--- @param input table|nil The input table for the delete_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-job" }, input)
 end
 
 --- Deletes an existing DataBrew project
---- @param input table The input table for the delete_project command
+--- @param input table|nil The input table for the delete_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-project" }, input)
 end
 
 --- Deletes a single version of a DataBrew recipe
---- @param input table The input table for the delete_recipe_version command
+--- @param input table|nil The input table for the delete_recipe_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recipe_version(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-recipe-version" }, input)
 end
 
 --- Deletes a ruleset
---- @param input table The input table for the delete_ruleset command
+--- @param input table|nil The input table for the delete_ruleset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ruleset(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-ruleset" }, input)
 end
 
 --- Deletes the specified DataBrew schedule
---- @param input table The input table for the delete_schedule command
+--- @param input table|nil The input table for the delete_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schedule(input)
 	return common.execute_aws_command_with_input({ "databrew", "delete-schedule" }, input)
 end
 
 --- Returns the definition of a specific DataBrew dataset
---- @param input table The input table for the describe_dataset command
+--- @param input table|nil The input table for the describe_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-dataset" }, input)
 end
 
 --- Returns the definition of a specific DataBrew job
---- @param input table The input table for the describe_job command
+--- @param input table|nil The input table for the describe_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-job" }, input)
 end
 
 --- Represents one run of a DataBrew job
---- @param input table The input table for the describe_job_run command
+--- @param input table|nil The input table for the describe_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_run(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-job-run" }, input)
 end
 
 --- Returns the definition of a specific DataBrew project
---- @param input table The input table for the describe_project command
+--- @param input table|nil The input table for the describe_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_project(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-project" }, input)
 end
 
 --- Returns the definition of a specific DataBrew recipe corresponding to a particular version
---- @param input table The input table for the describe_recipe command
+--- @param input table|nil The input table for the describe_recipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recipe(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-recipe" }, input)
 end
 
 --- Retrieves detailed information about the ruleset
---- @param input table The input table for the describe_ruleset command
+--- @param input table|nil The input table for the describe_ruleset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ruleset(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-ruleset" }, input)
 end
 
 --- Returns the definition of a specific DataBrew schedule
---- @param input table The input table for the describe_schedule command
+--- @param input table|nil The input table for the describe_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_schedule(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-schedule" }, input)
 end
 
 --- Lists all of the DataBrew datasets
---- @param input table The input table for the list_datasets command
+--- @param input table|nil The input table for the list_datasets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-datasets" }, input)
 end
 
 --- Lists all of the previous runs of a particular DataBrew job
---- @param input table The input table for the list_job_runs command
+--- @param input table|nil The input table for the list_job_runs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_job_runs(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-job-runs" }, input)
 end
 
 --- Lists all of the DataBrew jobs that are defined
---- @param input table The input table for the list_jobs command
+--- @param input table|nil The input table for the list_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-jobs" }, input)
 end
 
 --- Lists all of the DataBrew projects that are defined
---- @param input table The input table for the list_projects command
+--- @param input table|nil The input table for the list_projects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_projects(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-projects" }, input)
 end
 
 --- Lists the versions of a particular DataBrew recipe, except for LATEST_WORKING
---- @param input table The input table for the list_recipe_versions command
+--- @param input table|nil The input table for the list_recipe_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recipe_versions(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-recipe-versions" }, input)
 end
 
 --- Lists all of the DataBrew recipes that are defined
---- @param input table The input table for the list_recipes command
+--- @param input table|nil The input table for the list_recipes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recipes(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-recipes" }, input)
 end
 
 --- List all rulesets available in the current account or rulesets associated with a specific resource (dataset)
---- @param input table The input table for the list_rulesets command
+--- @param input table|nil The input table for the list_rulesets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rulesets(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-rulesets" }, input)
 end
 
 --- Lists the DataBrew schedules that are defined
---- @param input table The input table for the list_schedules command
+--- @param input table|nil The input table for the list_schedules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schedules(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-schedules" }, input)
 end
 
 --- Lists all the tags for a DataBrew resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "databrew", "list-tags-for-resource" }, input)
 end
 
 --- Publishes a new version of a DataBrew recipe
---- @param input table The input table for the publish_recipe command
+--- @param input table|nil The input table for the publish_recipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish_recipe(input)
 	return common.execute_aws_command_with_input({ "databrew", "publish-recipe" }, input)
 end
 
 --- Performs a recipe step within an interactive DataBrew session that's currently open
---- @param input table The input table for the send_project_session_action command
+--- @param input table|nil The input table for the send_project_session_action command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_project_session_action(input)
 	return common.execute_aws_command_with_input({ "databrew", "send-project-session-action" }, input)
 end
 
 --- Runs a DataBrew job
---- @param input table The input table for the start_job_run command
+--- @param input table|nil The input table for the start_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_job_run(input)
 	return common.execute_aws_command_with_input({ "databrew", "start-job-run" }, input)
 end
 
 --- Creates an interactive session, enabling you to manipulate data in a DataBrew project
---- @param input table The input table for the start_project_session command
+--- @param input table|nil The input table for the start_project_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_project_session(input)
 	return common.execute_aws_command_with_input({ "databrew", "start-project-session" }, input)
 end
 
 --- Stops a particular run of a job
---- @param input table The input table for the stop_job_run command
+--- @param input table|nil The input table for the stop_job_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_job_run(input)
 	return common.execute_aws_command_with_input({ "databrew", "stop-job-run" }, input)
 end
 
 --- Adds metadata tags to a DataBrew resource, such as a dataset, project, recipe, job, or schedule
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "databrew", "tag-resource" }, input)
 end
 
 --- Removes metadata tags from a DataBrew resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "databrew", "untag-resource" }, input)
 end
 
 --- Modifies the definition of an existing DataBrew dataset
---- @param input table The input table for the update_dataset command
+--- @param input table|nil The input table for the update_dataset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-dataset" }, input)
 end
 
 --- Modifies the definition of an existing profile job
---- @param input table The input table for the update_profile_job command
+--- @param input table|nil The input table for the update_profile_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_profile_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-profile-job" }, input)
 end
 
 --- Modifies the definition of an existing DataBrew project
---- @param input table The input table for the update_project command
+--- @param input table|nil The input table for the update_project command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-project" }, input)
 end
 
 --- Modifies the definition of the LATEST_WORKING version of a DataBrew recipe
---- @param input table The input table for the update_recipe command
+--- @param input table|nil The input table for the update_recipe command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recipe(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-recipe" }, input)
 end
 
 --- Modifies the definition of an existing DataBrew recipe job
---- @param input table The input table for the update_recipe_job command
+--- @param input table|nil The input table for the update_recipe_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recipe_job(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-recipe-job" }, input)
 end
 
 --- Updates specified ruleset
---- @param input table The input table for the update_ruleset command
+--- @param input table|nil The input table for the update_ruleset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ruleset(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-ruleset" }, input)
 end
 
 --- Modifies the definition of an existing DataBrew schedule
---- @param input table The input table for the update_schedule command
+--- @param input table|nil The input table for the update_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_schedule(input)
 	return common.execute_aws_command_with_input({ "databrew", "update-schedule" }, input)

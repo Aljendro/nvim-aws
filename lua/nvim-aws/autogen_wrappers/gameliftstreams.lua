@@ -8,168 +8,168 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Add locations that can host stream sessions
---- @param input table The input table for the add_stream_group_locations command
+--- @param input table|nil The input table for the add_stream_group_locations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_stream_group_locations(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "add-stream-group-locations" }, input)
 end
 
 --- When you associate, or link, an application with a stream group, then Amazon GameLift Streams can launch the application using the stream group's allocated compute resources
---- @param input table The input table for the associate_applications command
+--- @param input table|nil The input table for the associate_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_applications(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "associate-applications" }, input)
 end
 
 --- Creates an application resource in Amazon GameLift Streams, which specifies the application content you want to stream, such as a game build or other software, and configures the settings to run it
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "create-application" }, input)
 end
 
 --- Manage how Amazon GameLift Streams streams your applications by using a stream group
---- @param input table The input table for the create_stream_group command
+--- @param input table|nil The input table for the create_stream_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stream_group(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "create-stream-group" }, input)
 end
 
 --- Allows clients to reconnect to a recently disconnected stream session without losing any data from the last session
---- @param input table The input table for the create_stream_session_connection command
+--- @param input table|nil The input table for the create_stream_session_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stream_session_connection(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "create-stream-session-connection" }, input)
 end
 
 --- Permanently deletes an Amazon GameLift Streams application resource
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "delete-application" }, input)
 end
 
 --- Permanently deletes all compute resources and information related to a stream group
---- @param input table The input table for the delete_stream_group command
+--- @param input table|nil The input table for the delete_stream_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stream_group(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "delete-stream-group" }, input)
 end
 
 --- When you disassociate, or unlink, an application from a stream group, you can no longer stream this application by using that stream group's allocated compute resources
---- @param input table The input table for the disassociate_applications command
+--- @param input table|nil The input table for the disassociate_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_applications(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "disassociate-applications" }, input)
 end
 
 --- Export the files that your application modifies or generates in a stream session, which can help you debug or verify your application
---- @param input table The input table for the export_stream_session_files command
+--- @param input table|nil The input table for the export_stream_session_files command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_stream_session_files(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "export-stream-session-files" }, input)
 end
 
 --- Retrieves properties for an Amazon GameLift Streams application resource
---- @param input table The input table for the get_application command
+--- @param input table|nil The input table for the get_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_application(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "get-application" }, input)
 end
 
 --- Retrieves properties for a Amazon GameLift Streams stream group resource
---- @param input table The input table for the get_stream_group command
+--- @param input table|nil The input table for the get_stream_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stream_group(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "get-stream-group" }, input)
 end
 
 --- Retrieves properties for a Amazon GameLift Streams stream session resource
---- @param input table The input table for the get_stream_session command
+--- @param input table|nil The input table for the get_stream_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stream_session(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "get-stream-session" }, input)
 end
 
 --- Retrieves a list of all Amazon GameLift Streams applications that are associated with the Amazon Web Services account in use
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "list-applications" }, input)
 end
 
 --- Retrieves a list of all Amazon GameLift Streams stream groups that are associated with the Amazon Web Services account in use
---- @param input table The input table for the list_stream_groups command
+--- @param input table|nil The input table for the list_stream_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_groups(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "list-stream-groups" }, input)
 end
 
 --- Retrieves a list of Amazon GameLift Streams stream sessions that a stream group is hosting
---- @param input table The input table for the list_stream_sessions command
+--- @param input table|nil The input table for the list_stream_sessions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_sessions(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "list-stream-sessions" }, input)
 end
 
 --- Retrieves a list of Amazon GameLift Streams stream sessions that this user account has access to
---- @param input table The input table for the list_stream_sessions_by_account command
+--- @param input table|nil The input table for the list_stream_sessions_by_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_sessions_by_account(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "list-stream-sessions-by-account" }, input)
 end
 
 --- Retrieves all tags assigned to a Amazon GameLift Streams resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "list-tags-for-resource" }, input)
 end
 
 --- Removes a set of remote locations from this stream group
---- @param input table The input table for the remove_stream_group_locations command
+--- @param input table|nil The input table for the remove_stream_group_locations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_stream_group_locations(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "remove-stream-group-locations" }, input)
 end
 
 --- This action initiates a new stream session and outputs connection information that clients can use to access the stream
---- @param input table The input table for the start_stream_session command
+--- @param input table|nil The input table for the start_stream_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_stream_session(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "start-stream-session" }, input)
 end
 
 --- Assigns one or more tags to a Amazon GameLift Streams resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "tag-resource" }, input)
 end
 
 --- Permanently terminates an active stream session
---- @param input table The input table for the terminate_stream_session command
+--- @param input table|nil The input table for the terminate_stream_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_stream_session(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "terminate-stream-session" }, input)
 end
 
 --- Removes one or more tags from a Amazon GameLift Streams resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "untag-resource" }, input)
 end
 
 --- Updates the mutable configuration settings for a Amazon GameLift Streams application resource
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "update-application" }, input)
 end
 
 --- Updates the configuration settings for an Amazon GameLift Streams stream group resource
---- @param input table The input table for the update_stream_group command
+--- @param input table|nil The input table for the update_stream_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stream_group(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "update-stream-group" }, input)

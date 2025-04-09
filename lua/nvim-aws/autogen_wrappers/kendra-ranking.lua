@@ -8,63 +8,63 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a rescore execution plan
---- @param input table The input table for the create_rescore_execution_plan command
+--- @param input table|nil The input table for the create_rescore_execution_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rescore_execution_plan(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "create-rescore-execution-plan" }, input)
 end
 
 --- Deletes a rescore execution plan
---- @param input table The input table for the delete_rescore_execution_plan command
+--- @param input table|nil The input table for the delete_rescore_execution_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rescore_execution_plan(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "delete-rescore-execution-plan" }, input)
 end
 
 --- Gets information about a rescore execution plan
---- @param input table The input table for the describe_rescore_execution_plan command
+--- @param input table|nil The input table for the describe_rescore_execution_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rescore_execution_plan(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "describe-rescore-execution-plan" }, input)
 end
 
 --- Lists your rescore execution plans
---- @param input table The input table for the list_rescore_execution_plans command
+--- @param input table|nil The input table for the list_rescore_execution_plans command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rescore_execution_plans(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "list-rescore-execution-plans" }, input)
 end
 
 --- Gets a list of tags associated with a specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "list-tags-for-resource" }, input)
 end
 
 --- Rescores or re-ranks search results from a search service such as OpenSearch (self managed)
---- @param input table The input table for the rescore command
+--- @param input table|nil The input table for the rescore command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rescore(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "rescore" }, input)
 end
 
 --- Adds a specified tag to a specified rescore execution plan
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "tag-resource" }, input)
 end
 
 --- Removes a tag from a rescore execution plan
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "untag-resource" }, input)
 end
 
 --- Updates a rescore execution plan
---- @param input table The input table for the update_rescore_execution_plan command
+--- @param input table|nil The input table for the update_rescore_execution_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rescore_execution_plan(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "update-rescore-execution-plan" }, input)

@@ -8,14 +8,14 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Retrieves the latest deployed configuration
---- @param input table The input table for the get_latest_configuration command
+--- @param input table|nil The input table for the get_latest_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_latest_configuration(input)
 	return common.execute_aws_command_with_input({ "appconfigdata", "get-latest-configuration" }, input)
 end
 
 --- Starts a configuration session used to retrieve a deployed configuration
---- @param input table The input table for the start_configuration_session command
+--- @param input table|nil The input table for the start_configuration_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_configuration_session(input)
 	return common.execute_aws_command_with_input({ "appconfigdata", "start-configuration-session" }, input)

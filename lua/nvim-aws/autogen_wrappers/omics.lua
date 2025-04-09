@@ -8,546 +8,546 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Stops a multipart upload
---- @param input table The input table for the abort_multipart_read_set_upload command
+--- @param input table|nil The input table for the abort_multipart_read_set_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.abort_multipart_read_set_upload(input)
 	return common.execute_aws_command_with_input({ "omics", "abort-multipart-read-set-upload" }, input)
 end
 
 --- Accept a resource share request
---- @param input table The input table for the accept_share command
+--- @param input table|nil The input table for the accept_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_share(input)
 	return common.execute_aws_command_with_input({ "omics", "accept-share" }, input)
 end
 
 --- Cancels an annotation import job
---- @param input table The input table for the cancel_annotation_import_job command
+--- @param input table|nil The input table for the cancel_annotation_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_annotation_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "cancel-annotation-import-job" }, input)
 end
 
 --- Cancels a run
---- @param input table The input table for the cancel_run command
+--- @param input table|nil The input table for the cancel_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_run(input)
 	return common.execute_aws_command_with_input({ "omics", "cancel-run" }, input)
 end
 
 --- Cancels a variant import job
---- @param input table The input table for the cancel_variant_import_job command
+--- @param input table|nil The input table for the cancel_variant_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_variant_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "cancel-variant-import-job" }, input)
 end
 
 --- Concludes a multipart upload once you have uploaded all the components
---- @param input table The input table for the complete_multipart_read_set_upload command
+--- @param input table|nil The input table for the complete_multipart_read_set_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_multipart_read_set_upload(input)
 	return common.execute_aws_command_with_input({ "omics", "complete-multipart-read-set-upload" }, input)
 end
 
 --- Creates an annotation store
---- @param input table The input table for the create_annotation_store command
+--- @param input table|nil The input table for the create_annotation_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_annotation_store(input)
 	return common.execute_aws_command_with_input({ "omics", "create-annotation-store" }, input)
 end
 
 --- Creates a new version of an annotation store
---- @param input table The input table for the create_annotation_store_version command
+--- @param input table|nil The input table for the create_annotation_store_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_annotation_store_version(input)
 	return common.execute_aws_command_with_input({ "omics", "create-annotation-store-version" }, input)
 end
 
 --- Begins a multipart read set upload
---- @param input table The input table for the create_multipart_read_set_upload command
+--- @param input table|nil The input table for the create_multipart_read_set_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_multipart_read_set_upload(input)
 	return common.execute_aws_command_with_input({ "omics", "create-multipart-read-set-upload" }, input)
 end
 
 --- Creates a reference store
---- @param input table The input table for the create_reference_store command
+--- @param input table|nil The input table for the create_reference_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_reference_store(input)
 	return common.execute_aws_command_with_input({ "omics", "create-reference-store" }, input)
 end
 
 --- You can create a run cache to save the task outputs from completed tasks in a run for a private workflow
---- @param input table The input table for the create_run_cache command
+--- @param input table|nil The input table for the create_run_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_run_cache(input)
 	return common.execute_aws_command_with_input({ "omics", "create-run-cache" }, input)
 end
 
 --- You can optionally create a run group to limit the compute resources for the runs that you add to the group
---- @param input table The input table for the create_run_group command
+--- @param input table|nil The input table for the create_run_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_run_group(input)
 	return common.execute_aws_command_with_input({ "omics", "create-run-group" }, input)
 end
 
 --- Creates a sequence store
---- @param input table The input table for the create_sequence_store command
+--- @param input table|nil The input table for the create_sequence_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sequence_store(input)
 	return common.execute_aws_command_with_input({ "omics", "create-sequence-store" }, input)
 end
 
 --- Creates a cross-account shared resource
---- @param input table The input table for the create_share command
+--- @param input table|nil The input table for the create_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_share(input)
 	return common.execute_aws_command_with_input({ "omics", "create-share" }, input)
 end
 
 --- Creates a variant store
---- @param input table The input table for the create_variant_store command
+--- @param input table|nil The input table for the create_variant_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_variant_store(input)
 	return common.execute_aws_command_with_input({ "omics", "create-variant-store" }, input)
 end
 
 --- Creates a workflow
---- @param input table The input table for the create_workflow command
+--- @param input table|nil The input table for the create_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workflow(input)
 	return common.execute_aws_command_with_input({ "omics", "create-workflow" }, input)
 end
 
 --- Deletes an annotation store
---- @param input table The input table for the delete_annotation_store command
+--- @param input table|nil The input table for the delete_annotation_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_annotation_store(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-annotation-store" }, input)
 end
 
 --- Deletes a genome reference store
---- @param input table The input table for the delete_reference_store command
+--- @param input table|nil The input table for the delete_reference_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_reference_store(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-reference-store" }, input)
 end
 
 --- Deletes a workflow run
---- @param input table The input table for the delete_run command
+--- @param input table|nil The input table for the delete_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_run(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-run" }, input)
 end
 
 --- Delete a run cache
---- @param input table The input table for the delete_run_cache command
+--- @param input table|nil The input table for the delete_run_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_run_cache(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-run-cache" }, input)
 end
 
 --- Deletes a workflow run group
---- @param input table The input table for the delete_run_group command
+--- @param input table|nil The input table for the delete_run_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_run_group(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-run-group" }, input)
 end
 
 --- Deletes an access policy for the specified store
---- @param input table The input table for the delete_s3_access_policy command
+--- @param input table|nil The input table for the delete_s3_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_s3_access_policy(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-s3-access-policy" }, input)
 end
 
 --- Deletes a sequence store
---- @param input table The input table for the delete_sequence_store command
+--- @param input table|nil The input table for the delete_sequence_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sequence_store(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-sequence-store" }, input)
 end
 
 --- Deletes a resource share
---- @param input table The input table for the delete_share command
+--- @param input table|nil The input table for the delete_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_share(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-share" }, input)
 end
 
 --- Deletes a variant store
---- @param input table The input table for the delete_variant_store command
+--- @param input table|nil The input table for the delete_variant_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_variant_store(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-variant-store" }, input)
 end
 
 --- Deletes a workflow
---- @param input table The input table for the delete_workflow command
+--- @param input table|nil The input table for the delete_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workflow(input)
 	return common.execute_aws_command_with_input({ "omics", "delete-workflow" }, input)
 end
 
 --- Gets information about an annotation import job
---- @param input table The input table for the get_annotation_import_job command
+--- @param input table|nil The input table for the get_annotation_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_annotation_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-annotation-import-job" }, input)
 end
 
 --- Gets information about an annotation store
---- @param input table The input table for the get_annotation_store command
+--- @param input table|nil The input table for the get_annotation_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_annotation_store(input)
 	return common.execute_aws_command_with_input({ "omics", "get-annotation-store" }, input)
 end
 
 --- Retrieves the metadata for an annotation store version
---- @param input table The input table for the get_annotation_store_version command
+--- @param input table|nil The input table for the get_annotation_store_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_annotation_store_version(input)
 	return common.execute_aws_command_with_input({ "omics", "get-annotation-store-version" }, input)
 end
 
 --- Gets information about a read set activation job
---- @param input table The input table for the get_read_set_activation_job command
+--- @param input table|nil The input table for the get_read_set_activation_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_read_set_activation_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-read-set-activation-job" }, input)
 end
 
 --- Gets information about a read set export job
---- @param input table The input table for the get_read_set_export_job command
+--- @param input table|nil The input table for the get_read_set_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_read_set_export_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-read-set-export-job" }, input)
 end
 
 --- Gets information about a read set import job
---- @param input table The input table for the get_read_set_import_job command
+--- @param input table|nil The input table for the get_read_set_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_read_set_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-read-set-import-job" }, input)
 end
 
 --- Gets information about a reference import job
---- @param input table The input table for the get_reference_import_job command
+--- @param input table|nil The input table for the get_reference_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_reference_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-reference-import-job" }, input)
 end
 
 --- Gets information about a reference store
---- @param input table The input table for the get_reference_store command
+--- @param input table|nil The input table for the get_reference_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_reference_store(input)
 	return common.execute_aws_command_with_input({ "omics", "get-reference-store" }, input)
 end
 
 --- Gets information about a workflow run
---- @param input table The input table for the get_run command
+--- @param input table|nil The input table for the get_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_run(input)
 	return common.execute_aws_command_with_input({ "omics", "get-run" }, input)
 end
 
 --- Retrieve the details for the specified run cache
---- @param input table The input table for the get_run_cache command
+--- @param input table|nil The input table for the get_run_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_run_cache(input)
 	return common.execute_aws_command_with_input({ "omics", "get-run-cache" }, input)
 end
 
 --- Gets information about a workflow run group
---- @param input table The input table for the get_run_group command
+--- @param input table|nil The input table for the get_run_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_run_group(input)
 	return common.execute_aws_command_with_input({ "omics", "get-run-group" }, input)
 end
 
 --- Retrieves details about an access policy on a given store
---- @param input table The input table for the get_s3_access_policy command
+--- @param input table|nil The input table for the get_s3_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_s3_access_policy(input)
 	return common.execute_aws_command_with_input({ "omics", "get-s3-access-policy" }, input)
 end
 
 --- Gets information about a sequence store
---- @param input table The input table for the get_sequence_store command
+--- @param input table|nil The input table for the get_sequence_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sequence_store(input)
 	return common.execute_aws_command_with_input({ "omics", "get-sequence-store" }, input)
 end
 
 --- Retrieves the metadata for the specified resource share
---- @param input table The input table for the get_share command
+--- @param input table|nil The input table for the get_share command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_share(input)
 	return common.execute_aws_command_with_input({ "omics", "get-share" }, input)
 end
 
 --- Gets information about a variant import job
---- @param input table The input table for the get_variant_import_job command
+--- @param input table|nil The input table for the get_variant_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_variant_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "get-variant-import-job" }, input)
 end
 
 --- Gets information about a variant store
---- @param input table The input table for the get_variant_store command
+--- @param input table|nil The input table for the get_variant_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_variant_store(input)
 	return common.execute_aws_command_with_input({ "omics", "get-variant-store" }, input)
 end
 
 --- Gets information about a workflow
---- @param input table The input table for the get_workflow command
+--- @param input table|nil The input table for the get_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow(input)
 	return common.execute_aws_command_with_input({ "omics", "get-workflow" }, input)
 end
 
 --- Retrieves a list of annotation import jobs
---- @param input table The input table for the list_annotation_import_jobs command
+--- @param input table|nil The input table for the list_annotation_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_annotation_import_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-annotation-import-jobs" }, input)
 end
 
 --- Lists the versions of an annotation store
---- @param input table The input table for the list_annotation_store_versions command
+--- @param input table|nil The input table for the list_annotation_store_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_annotation_store_versions(input)
 	return common.execute_aws_command_with_input({ "omics", "list-annotation-store-versions" }, input)
 end
 
 --- Retrieves a list of annotation stores
---- @param input table The input table for the list_annotation_stores command
+--- @param input table|nil The input table for the list_annotation_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_annotation_stores(input)
 	return common.execute_aws_command_with_input({ "omics", "list-annotation-stores" }, input)
 end
 
 --- Lists multipart read set uploads and for in progress uploads
---- @param input table The input table for the list_multipart_read_set_uploads command
+--- @param input table|nil The input table for the list_multipart_read_set_uploads command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_multipart_read_set_uploads(input)
 	return common.execute_aws_command_with_input({ "omics", "list-multipart-read-set-uploads" }, input)
 end
 
 --- Retrieves a list of read set activation jobs
---- @param input table The input table for the list_read_set_activation_jobs command
+--- @param input table|nil The input table for the list_read_set_activation_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_read_set_activation_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-read-set-activation-jobs" }, input)
 end
 
 --- Retrieves a list of read set export jobs
---- @param input table The input table for the list_read_set_export_jobs command
+--- @param input table|nil The input table for the list_read_set_export_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_read_set_export_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-read-set-export-jobs" }, input)
 end
 
 --- Retrieves a list of read set import jobs
---- @param input table The input table for the list_read_set_import_jobs command
+--- @param input table|nil The input table for the list_read_set_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_read_set_import_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-read-set-import-jobs" }, input)
 end
 
 --- This operation will list all parts in a requested multipart upload for a sequence store
---- @param input table The input table for the list_read_set_upload_parts command
+--- @param input table|nil The input table for the list_read_set_upload_parts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_read_set_upload_parts(input)
 	return common.execute_aws_command_with_input({ "omics", "list-read-set-upload-parts" }, input)
 end
 
 --- Retrieves a list of reference import jobs
---- @param input table The input table for the list_reference_import_jobs command
+--- @param input table|nil The input table for the list_reference_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reference_import_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-reference-import-jobs" }, input)
 end
 
 --- Retrieves a list of reference stores
---- @param input table The input table for the list_reference_stores command
+--- @param input table|nil The input table for the list_reference_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reference_stores(input)
 	return common.execute_aws_command_with_input({ "omics", "list-reference-stores" }, input)
 end
 
 --- Retrieves a list of your run caches
---- @param input table The input table for the list_run_caches command
+--- @param input table|nil The input table for the list_run_caches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_run_caches(input)
 	return common.execute_aws_command_with_input({ "omics", "list-run-caches" }, input)
 end
 
 --- Retrieves a list of run groups
---- @param input table The input table for the list_run_groups command
+--- @param input table|nil The input table for the list_run_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_run_groups(input)
 	return common.execute_aws_command_with_input({ "omics", "list-run-groups" }, input)
 end
 
 --- Retrieves a list of runs
---- @param input table The input table for the list_runs command
+--- @param input table|nil The input table for the list_runs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_runs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-runs" }, input)
 end
 
 --- Retrieves a list of sequence stores
---- @param input table The input table for the list_sequence_stores command
+--- @param input table|nil The input table for the list_sequence_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sequence_stores(input)
 	return common.execute_aws_command_with_input({ "omics", "list-sequence-stores" }, input)
 end
 
 --- Retrieves the resource shares associated with an account
---- @param input table The input table for the list_shares command
+--- @param input table|nil The input table for the list_shares command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_shares(input)
 	return common.execute_aws_command_with_input({ "omics", "list-shares" }, input)
 end
 
 --- Retrieves a list of tags for a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "omics", "list-tags-for-resource" }, input)
 end
 
 --- Retrieves a list of variant import jobs
---- @param input table The input table for the list_variant_import_jobs command
+--- @param input table|nil The input table for the list_variant_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_variant_import_jobs(input)
 	return common.execute_aws_command_with_input({ "omics", "list-variant-import-jobs" }, input)
 end
 
 --- Retrieves a list of variant stores
---- @param input table The input table for the list_variant_stores command
+--- @param input table|nil The input table for the list_variant_stores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_variant_stores(input)
 	return common.execute_aws_command_with_input({ "omics", "list-variant-stores" }, input)
 end
 
 --- Retrieves a list of workflows
---- @param input table The input table for the list_workflows command
+--- @param input table|nil The input table for the list_workflows command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflows(input)
 	return common.execute_aws_command_with_input({ "omics", "list-workflows" }, input)
 end
 
 --- Adds an access policy to the specified store
---- @param input table The input table for the put_s3_access_policy command
+--- @param input table|nil The input table for the put_s3_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_s3_access_policy(input)
 	return common.execute_aws_command_with_input({ "omics", "put-s3-access-policy" }, input)
 end
 
 --- Starts an annotation import job
---- @param input table The input table for the start_annotation_import_job command
+--- @param input table|nil The input table for the start_annotation_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_annotation_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-annotation-import-job" }, input)
 end
 
 --- Activates an archived read set
---- @param input table The input table for the start_read_set_activation_job command
+--- @param input table|nil The input table for the start_read_set_activation_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_read_set_activation_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-read-set-activation-job" }, input)
 end
 
 --- Exports a read set to Amazon S3
---- @param input table The input table for the start_read_set_export_job command
+--- @param input table|nil The input table for the start_read_set_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_read_set_export_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-read-set-export-job" }, input)
 end
 
 --- Starts a read set import job
---- @param input table The input table for the start_read_set_import_job command
+--- @param input table|nil The input table for the start_read_set_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_read_set_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-read-set-import-job" }, input)
 end
 
 --- Starts a reference import job
---- @param input table The input table for the start_reference_import_job command
+--- @param input table|nil The input table for the start_reference_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_reference_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-reference-import-job" }, input)
 end
 
 --- Starts a workflow run
---- @param input table The input table for the start_run command
+--- @param input table|nil The input table for the start_run command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_run(input)
 	return common.execute_aws_command_with_input({ "omics", "start-run" }, input)
 end
 
 --- Starts a variant import job
---- @param input table The input table for the start_variant_import_job command
+--- @param input table|nil The input table for the start_variant_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_variant_import_job(input)
 	return common.execute_aws_command_with_input({ "omics", "start-variant-import-job" }, input)
 end
 
 --- Updates an annotation store
---- @param input table The input table for the update_annotation_store command
+--- @param input table|nil The input table for the update_annotation_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_annotation_store(input)
 	return common.execute_aws_command_with_input({ "omics", "update-annotation-store" }, input)
 end
 
 --- Updates the description of an annotation store version
---- @param input table The input table for the update_annotation_store_version command
+--- @param input table|nil The input table for the update_annotation_store_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_annotation_store_version(input)
 	return common.execute_aws_command_with_input({ "omics", "update-annotation-store-version" }, input)
 end
 
 --- Update a run cache
---- @param input table The input table for the update_run_cache command
+--- @param input table|nil The input table for the update_run_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_run_cache(input)
 	return common.execute_aws_command_with_input({ "omics", "update-run-cache" }, input)
 end
 
 --- Updates a run group
---- @param input table The input table for the update_run_group command
+--- @param input table|nil The input table for the update_run_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_run_group(input)
 	return common.execute_aws_command_with_input({ "omics", "update-run-group" }, input)
 end
 
 --- Update one or more parameters for the sequence store
---- @param input table The input table for the update_sequence_store command
+--- @param input table|nil The input table for the update_sequence_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sequence_store(input)
 	return common.execute_aws_command_with_input({ "omics", "update-sequence-store" }, input)
 end
 
 --- Updates a variant store
---- @param input table The input table for the update_variant_store command
+--- @param input table|nil The input table for the update_variant_store command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_variant_store(input)
 	return common.execute_aws_command_with_input({ "omics", "update-variant-store" }, input)
 end
 
 --- Updates a workflow
---- @param input table The input table for the update_workflow command
+--- @param input table|nil The input table for the update_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workflow(input)
 	return common.execute_aws_command_with_input({ "omics", "update-workflow" }, input)
 end
 
 --- This operation uploads a specific part of a read set
---- @param input table The input table for the upload_read_set_part command
+--- @param input table|nil The input table for the upload_read_set_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_read_set_part(input)
 	return common.execute_aws_command_with_input({ "omics", "upload-read-set-part" }, input)

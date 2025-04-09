@@ -8,161 +8,161 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a new identity pool
---- @param input table The input table for the create_identity_pool command
+--- @param input table|nil The input table for the create_identity_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_identity_pool(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "create-identity-pool" }, input)
 end
 
 --- Deletes identities from an identity pool
---- @param input table The input table for the delete_identities command
+--- @param input table|nil The input table for the delete_identities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_identities(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "delete-identities" }, input)
 end
 
 --- Deletes an identity pool
---- @param input table The input table for the delete_identity_pool command
+--- @param input table|nil The input table for the delete_identity_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_identity_pool(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "delete-identity-pool" }, input)
 end
 
 --- Returns metadata related to the given identity, including when the identity was created and any associated linked logins
---- @param input table The input table for the describe_identity command
+--- @param input table|nil The input table for the describe_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "describe-identity" }, input)
 end
 
 --- Gets details about a particular identity pool, including the pool name, ID description, creation date, and current number of users
---- @param input table The input table for the describe_identity_pool command
+--- @param input table|nil The input table for the describe_identity_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_identity_pool(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "describe-identity-pool" }, input)
 end
 
 --- Returns credentials for the provided identity ID
---- @param input table The input table for the get_credentials_for_identity command
+--- @param input table|nil The input table for the get_credentials_for_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_credentials_for_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-credentials-for-identity" }, input)
 end
 
 --- Generates (or retrieves) IdentityID
---- @param input table The input table for the get_id command
+--- @param input table|nil The input table for the get_id command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_id(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-id" }, input)
 end
 
 --- Gets the roles for an identity pool
---- @param input table The input table for the get_identity_pool_roles command
+--- @param input table|nil The input table for the get_identity_pool_roles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_identity_pool_roles(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-identity-pool-roles" }, input)
 end
 
 --- Gets an OpenID token, using a known Cognito ID
---- @param input table The input table for the get_open_id_token command
+--- @param input table|nil The input table for the get_open_id_token command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_open_id_token(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-open-id-token" }, input)
 end
 
 --- Registers (or retrieves) a Cognito IdentityId and an OpenID Connect token for a user authenticated by your backend authentication process
---- @param input table The input table for the get_open_id_token_for_developer_identity command
+--- @param input table|nil The input table for the get_open_id_token_for_developer_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_open_id_token_for_developer_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-open-id-token-for-developer-identity" }, input)
 end
 
 --- Use GetPrincipalTagAttributeMap to list all mappings between PrincipalTags and user attributes
---- @param input table The input table for the get_principal_tag_attribute_map command
+--- @param input table|nil The input table for the get_principal_tag_attribute_map command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_principal_tag_attribute_map(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-principal-tag-attribute-map" }, input)
 end
 
 --- Lists the identities in an identity pool
---- @param input table The input table for the list_identities command
+--- @param input table|nil The input table for the list_identities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_identities(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "list-identities" }, input)
 end
 
 --- Lists all of the Cognito identity pools registered for your account
---- @param input table The input table for the list_identity_pools command
+--- @param input table|nil The input table for the list_identity_pools command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_identity_pools(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "list-identity-pools" }, input)
 end
 
 --- Lists the tags that are assigned to an Amazon Cognito identity pool
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "list-tags-for-resource" }, input)
 end
 
 --- Retrieves the IdentityID associated with a DeveloperUserIdentifier or the list of DeveloperUserIdentifier values associated with an IdentityId for an existing identity
---- @param input table The input table for the lookup_developer_identity command
+--- @param input table|nil The input table for the lookup_developer_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.lookup_developer_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "lookup-developer-identity" }, input)
 end
 
 --- Merges two users having different IdentityIds, existing in the same identity pool, and identified by the same developer provider
---- @param input table The input table for the merge_developer_identities command
+--- @param input table|nil The input table for the merge_developer_identities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_developer_identities(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "merge-developer-identities" }, input)
 end
 
 --- Sets the roles for an identity pool
---- @param input table The input table for the set_identity_pool_roles command
+--- @param input table|nil The input table for the set_identity_pool_roles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_identity_pool_roles(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "set-identity-pool-roles" }, input)
 end
 
 --- You can use this operation to use default (username and clientID) attribute or custom attribute mappings
---- @param input table The input table for the set_principal_tag_attribute_map command
+--- @param input table|nil The input table for the set_principal_tag_attribute_map command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_principal_tag_attribute_map(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "set-principal-tag-attribute-map" }, input)
 end
 
 --- Assigns a set of tags to the specified Amazon Cognito identity pool
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "tag-resource" }, input)
 end
 
 --- Unlinks a DeveloperUserIdentifier from an existing identity
---- @param input table The input table for the unlink_developer_identity command
+--- @param input table|nil The input table for the unlink_developer_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unlink_developer_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "unlink-developer-identity" }, input)
 end
 
 --- Unlinks a federated identity from an existing account
---- @param input table The input table for the unlink_identity command
+--- @param input table|nil The input table for the unlink_identity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unlink_identity(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "unlink-identity" }, input)
 end
 
 --- Removes the specified tags from the specified Amazon Cognito identity pool
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "untag-resource" }, input)
 end
 
 --- Updates the configuration of an identity pool
---- @param input table The input table for the update_identity_pool command
+--- @param input table|nil The input table for the update_identity_pool command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_identity_pool(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "update-identity-pool" }, input)

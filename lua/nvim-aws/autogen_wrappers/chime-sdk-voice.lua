@@ -8,672 +8,672 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates phone numbers with the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the associate_phone_numbers_with_voice_connector command
+--- @param input table|nil The input table for the associate_phone_numbers_with_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_phone_numbers_with_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "associate-phone-numbers-with-voice-connector" }, input)
 end
 
 --- Associates phone numbers with the specified Amazon Chime SDK Voice Connector group
---- @param input table The input table for the associate_phone_numbers_with_voice_connector_group command
+--- @param input table|nil The input table for the associate_phone_numbers_with_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_phone_numbers_with_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "associate-phone-numbers-with-voice-connector-group" }, input)
 end
 
 --- Moves phone numbers into the Deletion queue
---- @param input table The input table for the batch_delete_phone_number command
+--- @param input table|nil The input table for the batch_delete_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "batch-delete-phone-number" }, input)
 end
 
 --- Updates phone number product types, calling names, or phone number names
---- @param input table The input table for the batch_update_phone_number command
+--- @param input table|nil The input table for the batch_update_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "batch-update-phone-number" }, input)
 end
 
 --- Creates an order for phone numbers to be provisioned
---- @param input table The input table for the create_phone_number_order command
+--- @param input table|nil The input table for the create_phone_number_order command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_phone_number_order(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-phone-number-order" }, input)
 end
 
 --- Creates a proxy session for the specified Amazon Chime SDK Voice Connector for the specified participant phone numbers
---- @param input table The input table for the create_proxy_session command
+--- @param input table|nil The input table for the create_proxy_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_proxy_session(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-proxy-session" }, input)
 end
 
 --- Creates a SIP media application
---- @param input table The input table for the create_sip_media_application command
+--- @param input table|nil The input table for the create_sip_media_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sip_media_application(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-sip-media-application" }, input)
 end
 
 --- Creates an outbound call to a phone number from the phone number specified in the request, and it invokes the endpoint of the specified sipMediaApplicationId
---- @param input table The input table for the create_sip_media_application_call command
+--- @param input table|nil The input table for the create_sip_media_application_call command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sip_media_application_call(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-sip-media-application-call" }, input)
 end
 
 --- Creates a SIP rule, which can be used to run a SIP media application as a target for a specific trigger type
---- @param input table The input table for the create_sip_rule command
+--- @param input table|nil The input table for the create_sip_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sip_rule(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-sip-rule" }, input)
 end
 
 --- Creates an Amazon Chime SDK Voice Connector
---- @param input table The input table for the create_voice_connector command
+--- @param input table|nil The input table for the create_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-voice-connector" }, input)
 end
 
 --- Creates an Amazon Chime SDK Voice Connector group under the administrator's AWS account
---- @param input table The input table for the create_voice_connector_group command
+--- @param input table|nil The input table for the create_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-voice-connector-group" }, input)
 end
 
 --- Creates a voice profile, which consists of an enrolled user and their latest voice print
---- @param input table The input table for the create_voice_profile command
+--- @param input table|nil The input table for the create_voice_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_voice_profile(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-voice-profile" }, input)
 end
 
 --- Creates a voice profile domain, a collection of voice profiles, their voice prints, and encrypted enrollment audio
---- @param input table The input table for the create_voice_profile_domain command
+--- @param input table|nil The input table for the create_voice_profile_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_voice_profile_domain(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "create-voice-profile-domain" }, input)
 end
 
 --- Moves the specified phone number into the Deletion queue
---- @param input table The input table for the delete_phone_number command
+--- @param input table|nil The input table for the delete_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-phone-number" }, input)
 end
 
 --- Deletes the specified proxy session from the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_proxy_session command
+--- @param input table|nil The input table for the delete_proxy_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_proxy_session(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-proxy-session" }, input)
 end
 
 --- Deletes a SIP media application
---- @param input table The input table for the delete_sip_media_application command
+--- @param input table|nil The input table for the delete_sip_media_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sip_media_application(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-sip-media-application" }, input)
 end
 
 --- Deletes a SIP rule
---- @param input table The input table for the delete_sip_rule command
+--- @param input table|nil The input table for the delete_sip_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sip_rule(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-sip-rule" }, input)
 end
 
 --- Deletes an Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_voice_connector command
+--- @param input table|nil The input table for the delete_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector" }, input)
 end
 
 --- Deletes the emergency calling details from the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_voice_connector_emergency_calling_configuration command
+--- @param input table|nil The input table for the delete_voice_connector_emergency_calling_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_emergency_calling_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-emergency-calling-configuration" }, input)
 end
 
 --- Deletes the external systems configuration for a Voice Connector
---- @param input table The input table for the delete_voice_connector_external_systems_configuration command
+--- @param input table|nil The input table for the delete_voice_connector_external_systems_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_external_systems_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-external-systems-configuration" }, input)
 end
 
 --- Deletes an Amazon Chime SDK Voice Connector group
---- @param input table The input table for the delete_voice_connector_group command
+--- @param input table|nil The input table for the delete_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-group" }, input)
 end
 
 --- Deletes the origination settings for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_voice_connector_origination command
+--- @param input table|nil The input table for the delete_voice_connector_origination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_origination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-origination" }, input)
 end
 
 --- Deletes the proxy configuration from the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_voice_connector_proxy command
+--- @param input table|nil The input table for the delete_voice_connector_proxy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_proxy(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-proxy" }, input)
 end
 
 --- Deletes a Voice Connector's streaming configuration
---- @param input table The input table for the delete_voice_connector_streaming_configuration command
+--- @param input table|nil The input table for the delete_voice_connector_streaming_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_streaming_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-streaming-configuration" }, input)
 end
 
 --- Deletes the termination settings for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the delete_voice_connector_termination command
+--- @param input table|nil The input table for the delete_voice_connector_termination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_termination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-termination" }, input)
 end
 
 --- Deletes the specified SIP credentials used by your equipment to authenticate during call termination
---- @param input table The input table for the delete_voice_connector_termination_credentials command
+--- @param input table|nil The input table for the delete_voice_connector_termination_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_connector_termination_credentials(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-connector-termination-credentials" }, input)
 end
 
 --- Deletes a voice profile, including its voice print and enrollment data
---- @param input table The input table for the delete_voice_profile command
+--- @param input table|nil The input table for the delete_voice_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_profile(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-profile" }, input)
 end
 
 --- Deletes all voice profiles in the domain
---- @param input table The input table for the delete_voice_profile_domain command
+--- @param input table|nil The input table for the delete_voice_profile_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_profile_domain(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "delete-voice-profile-domain" }, input)
 end
 
 --- Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the disassociate_phone_numbers_from_voice_connector command
+--- @param input table|nil The input table for the disassociate_phone_numbers_from_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_phone_numbers_from_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "disassociate-phone-numbers-from-voice-connector" }, input)
 end
 
 --- Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector group
---- @param input table The input table for the disassociate_phone_numbers_from_voice_connector_group command
+--- @param input table|nil The input table for the disassociate_phone_numbers_from_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_phone_numbers_from_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "disassociate-phone-numbers-from-voice-connector-group" }, input)
 end
 
 --- Retrieves the global settings for the Amazon Chime SDK Voice Connectors in an AWS account
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_global_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-global-settings" }, input)
 end
 
 --- Retrieves details for the specified phone number ID, such as associations, capabilities, and product type
---- @param input table The input table for the get_phone_number command
+--- @param input table|nil The input table for the get_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-phone-number" }, input)
 end
 
 --- Retrieves details for the specified phone number order, such as the order creation timestamp, phone numbers in E
---- @param input table The input table for the get_phone_number_order command
+--- @param input table|nil The input table for the get_phone_number_order command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number_order(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-phone-number-order" }, input)
 end
 
 --- Retrieves the phone number settings for the administrator's AWS account, such as the default outbound calling name
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_phone_number_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-phone-number-settings" }, input)
 end
 
 --- Retrieves the specified proxy session details for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the get_proxy_session command
+--- @param input table|nil The input table for the get_proxy_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_proxy_session(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-proxy-session" }, input)
 end
 
 --- Retrieves the information for a SIP media application, including name, AWS Region, and endpoints
---- @param input table The input table for the get_sip_media_application command
+--- @param input table|nil The input table for the get_sip_media_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sip_media_application(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-sip-media-application" }, input)
 end
 
 --- Gets the Alexa Skill configuration for the SIP media application
---- @param input table The input table for the get_sip_media_application_alexa_skill_configuration command
+--- @param input table|nil The input table for the get_sip_media_application_alexa_skill_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sip_media_application_alexa_skill_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-sip-media-application-alexa-skill-configuration" }, input)
 end
 
 --- Retrieves the logging configuration for the specified SIP media application
---- @param input table The input table for the get_sip_media_application_logging_configuration command
+--- @param input table|nil The input table for the get_sip_media_application_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sip_media_application_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-sip-media-application-logging-configuration" }, input)
 end
 
 --- Retrieves the details of a SIP rule, such as the rule ID, name, triggers, and target endpoints
---- @param input table The input table for the get_sip_rule command
+--- @param input table|nil The input table for the get_sip_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sip_rule(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-sip-rule" }, input)
 end
 
 --- Retrieves the details of the specified speaker search task
---- @param input table The input table for the get_speaker_search_task command
+--- @param input table|nil The input table for the get_speaker_search_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_speaker_search_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-speaker-search-task" }, input)
 end
 
 --- Retrieves details for the specified Amazon Chime SDK Voice Connector, such as timestamps,name, outbound host, and encryption requirements
---- @param input table The input table for the get_voice_connector command
+--- @param input table|nil The input table for the get_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector" }, input)
 end
 
 --- Retrieves the emergency calling configuration details for the specified Voice Connector
---- @param input table The input table for the get_voice_connector_emergency_calling_configuration command
+--- @param input table|nil The input table for the get_voice_connector_emergency_calling_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_emergency_calling_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-emergency-calling-configuration" }, input)
 end
 
 --- Gets information about an external systems configuration for a Voice Connector
---- @param input table The input table for the get_voice_connector_external_systems_configuration command
+--- @param input table|nil The input table for the get_voice_connector_external_systems_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_external_systems_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-external-systems-configuration" }, input)
 end
 
 --- Retrieves details for the specified Amazon Chime SDK Voice Connector group, such as timestamps,name, and associated VoiceConnectorItems
---- @param input table The input table for the get_voice_connector_group command
+--- @param input table|nil The input table for the get_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-group" }, input)
 end
 
 --- Retrieves the logging configuration settings for the specified Voice Connector
---- @param input table The input table for the get_voice_connector_logging_configuration command
+--- @param input table|nil The input table for the get_voice_connector_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-logging-configuration" }, input)
 end
 
 --- Retrieves the origination settings for the specified Voice Connector
---- @param input table The input table for the get_voice_connector_origination command
+--- @param input table|nil The input table for the get_voice_connector_origination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_origination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-origination" }, input)
 end
 
 --- Retrieves the proxy configuration details for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the get_voice_connector_proxy command
+--- @param input table|nil The input table for the get_voice_connector_proxy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_proxy(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-proxy" }, input)
 end
 
 --- Retrieves the streaming configuration details for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the get_voice_connector_streaming_configuration command
+--- @param input table|nil The input table for the get_voice_connector_streaming_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_streaming_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-streaming-configuration" }, input)
 end
 
 --- Retrieves the termination setting details for the specified Voice Connector
---- @param input table The input table for the get_voice_connector_termination command
+--- @param input table|nil The input table for the get_voice_connector_termination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_termination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-termination" }, input)
 end
 
 --- Retrieves information about the last time a SIP OPTIONS ping was received from your SIP infrastructure for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the get_voice_connector_termination_health command
+--- @param input table|nil The input table for the get_voice_connector_termination_health command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_connector_termination_health(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-connector-termination-health" }, input)
 end
 
 --- Retrieves the details of the specified voice profile
---- @param input table The input table for the get_voice_profile command
+--- @param input table|nil The input table for the get_voice_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_profile(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-profile" }, input)
 end
 
 --- Retrieves the details of the specified voice profile domain
---- @param input table The input table for the get_voice_profile_domain command
+--- @param input table|nil The input table for the get_voice_profile_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_profile_domain(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-profile-domain" }, input)
 end
 
 --- Retrieves the details of a voice tone analysis task
---- @param input table The input table for the get_voice_tone_analysis_task command
+--- @param input table|nil The input table for the get_voice_tone_analysis_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_voice_tone_analysis_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "get-voice-tone-analysis-task" }, input)
 end
 
 --- Lists the available AWS Regions in which you can create an Amazon Chime SDK Voice Connector
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_available_voice_connector_regions(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-available-voice-connector-regions" }, input)
 end
 
 --- Lists the phone numbers for an administrator's Amazon Chime SDK account
---- @param input table The input table for the list_phone_number_orders command
+--- @param input table|nil The input table for the list_phone_number_orders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phone_number_orders(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-phone-number-orders" }, input)
 end
 
 --- Lists the phone numbers for the specified Amazon Chime SDK account, Amazon Chime SDK user, Amazon Chime SDK Voice Connector, or Amazon Chime SDK Voice Connector group
---- @param input table The input table for the list_phone_numbers command
+--- @param input table|nil The input table for the list_phone_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-phone-numbers" }, input)
 end
 
 --- Lists the proxy sessions for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the list_proxy_sessions command
+--- @param input table|nil The input table for the list_proxy_sessions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_proxy_sessions(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-proxy-sessions" }, input)
 end
 
 --- Lists the SIP media applications under the administrator's AWS account
---- @param input table The input table for the list_sip_media_applications command
+--- @param input table|nil The input table for the list_sip_media_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sip_media_applications(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-sip-media-applications" }, input)
 end
 
 --- Lists the SIP rules under the administrator's AWS account
---- @param input table The input table for the list_sip_rules command
+--- @param input table|nil The input table for the list_sip_rules command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sip_rules(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-sip-rules" }, input)
 end
 
 --- Lists the countries that you can order phone numbers from
---- @param input table The input table for the list_supported_phone_number_countries command
+--- @param input table|nil The input table for the list_supported_phone_number_countries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_supported_phone_number_countries(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-supported-phone-number-countries" }, input)
 end
 
 --- Returns a list of the tags in a given resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-tags-for-resource" }, input)
 end
 
 --- Lists the Amazon Chime SDK Voice Connector groups in the administrator's AWS account
---- @param input table The input table for the list_voice_connector_groups command
+--- @param input table|nil The input table for the list_voice_connector_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_voice_connector_groups(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-voice-connector-groups" }, input)
 end
 
 --- Lists the SIP credentials for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the list_voice_connector_termination_credentials command
+--- @param input table|nil The input table for the list_voice_connector_termination_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_voice_connector_termination_credentials(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-voice-connector-termination-credentials" }, input)
 end
 
 --- Lists the Amazon Chime SDK Voice Connectors in the administrators AWS account
---- @param input table The input table for the list_voice_connectors command
+--- @param input table|nil The input table for the list_voice_connectors command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_voice_connectors(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-voice-connectors" }, input)
 end
 
 --- Lists the specified voice profile domains in the administrator's AWS account
---- @param input table The input table for the list_voice_profile_domains command
+--- @param input table|nil The input table for the list_voice_profile_domains command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_voice_profile_domains(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-voice-profile-domains" }, input)
 end
 
 --- Lists the voice profiles in a voice profile domain
---- @param input table The input table for the list_voice_profiles command
+--- @param input table|nil The input table for the list_voice_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_voice_profiles(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "list-voice-profiles" }, input)
 end
 
 --- Updates the Alexa Skill configuration for the SIP media application
---- @param input table The input table for the put_sip_media_application_alexa_skill_configuration command
+--- @param input table|nil The input table for the put_sip_media_application_alexa_skill_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_sip_media_application_alexa_skill_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-sip-media-application-alexa-skill-configuration" }, input)
 end
 
 --- Updates the logging configuration for the specified SIP media application
---- @param input table The input table for the put_sip_media_application_logging_configuration command
+--- @param input table|nil The input table for the put_sip_media_application_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_sip_media_application_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-sip-media-application-logging-configuration" }, input)
 end
 
 --- Updates a Voice Connector's emergency calling configuration
---- @param input table The input table for the put_voice_connector_emergency_calling_configuration command
+--- @param input table|nil The input table for the put_voice_connector_emergency_calling_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_emergency_calling_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-emergency-calling-configuration" }, input)
 end
 
 --- Adds an external systems configuration to a Voice Connector
---- @param input table The input table for the put_voice_connector_external_systems_configuration command
+--- @param input table|nil The input table for the put_voice_connector_external_systems_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_external_systems_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-external-systems-configuration" }, input)
 end
 
 --- Updates a Voice Connector's logging configuration
---- @param input table The input table for the put_voice_connector_logging_configuration command
+--- @param input table|nil The input table for the put_voice_connector_logging_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-logging-configuration" }, input)
 end
 
 --- Updates a Voice Connector's origination settings
---- @param input table The input table for the put_voice_connector_origination command
+--- @param input table|nil The input table for the put_voice_connector_origination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_origination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-origination" }, input)
 end
 
 --- Puts the specified proxy configuration to the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the put_voice_connector_proxy command
+--- @param input table|nil The input table for the put_voice_connector_proxy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_proxy(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-proxy" }, input)
 end
 
 --- Updates a Voice Connector's streaming configuration settings
---- @param input table The input table for the put_voice_connector_streaming_configuration command
+--- @param input table|nil The input table for the put_voice_connector_streaming_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_streaming_configuration(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-streaming-configuration" }, input)
 end
 
 --- Updates a Voice Connector's termination settings
---- @param input table The input table for the put_voice_connector_termination command
+--- @param input table|nil The input table for the put_voice_connector_termination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_termination(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-termination" }, input)
 end
 
 --- Updates a Voice Connector's termination credentials
---- @param input table The input table for the put_voice_connector_termination_credentials command
+--- @param input table|nil The input table for the put_voice_connector_termination_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_voice_connector_termination_credentials(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "put-voice-connector-termination-credentials" }, input)
 end
 
 --- Restores a deleted phone number
---- @param input table The input table for the restore_phone_number command
+--- @param input table|nil The input table for the restore_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "restore-phone-number" }, input)
 end
 
 --- Searches the provisioned phone numbers in an organization
---- @param input table The input table for the search_available_phone_numbers command
+--- @param input table|nil The input table for the search_available_phone_numbers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_available_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "search-available-phone-numbers" }, input)
 end
 
 --- Starts a speaker search task
---- @param input table The input table for the start_speaker_search_task command
+--- @param input table|nil The input table for the start_speaker_search_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_speaker_search_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "start-speaker-search-task" }, input)
 end
 
 --- Starts a voice tone analysis task
---- @param input table The input table for the start_voice_tone_analysis_task command
+--- @param input table|nil The input table for the start_voice_tone_analysis_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_voice_tone_analysis_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "start-voice-tone-analysis-task" }, input)
 end
 
 --- Stops a speaker search task
---- @param input table The input table for the stop_speaker_search_task command
+--- @param input table|nil The input table for the stop_speaker_search_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_speaker_search_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "stop-speaker-search-task" }, input)
 end
 
 --- Stops a voice tone analysis task
---- @param input table The input table for the stop_voice_tone_analysis_task command
+--- @param input table|nil The input table for the stop_voice_tone_analysis_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_voice_tone_analysis_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "stop-voice-tone-analysis-task" }, input)
 end
 
 --- Adds a tag to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "tag-resource" }, input)
 end
 
 --- Removes tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "untag-resource" }, input)
 end
 
 --- Updates global settings for the Amazon Chime SDK Voice Connectors in an AWS account
---- @param input table The input table for the update_global_settings command
+--- @param input table|nil The input table for the update_global_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-global-settings" }, input)
 end
 
 --- Updates phone number details, such as product type, calling name, or phone number name for the specified phone number ID
---- @param input table The input table for the update_phone_number command
+--- @param input table|nil The input table for the update_phone_number command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_phone_number(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-phone-number" }, input)
 end
 
 --- Updates the phone number settings for the administrator's AWS account, such as the default outbound calling name
---- @param input table The input table for the update_phone_number_settings command
+--- @param input table|nil The input table for the update_phone_number_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_phone_number_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-phone-number-settings" }, input)
 end
 
 --- Updates the specified proxy session details, such as voice or SMS capabilities
---- @param input table The input table for the update_proxy_session command
+--- @param input table|nil The input table for the update_proxy_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_proxy_session(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-proxy-session" }, input)
 end
 
 --- Updates the details of the specified SIP media application
---- @param input table The input table for the update_sip_media_application command
+--- @param input table|nil The input table for the update_sip_media_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sip_media_application(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-sip-media-application" }, input)
 end
 
 --- Invokes the AWS Lambda function associated with the SIP media application and transaction ID in an update request
---- @param input table The input table for the update_sip_media_application_call command
+--- @param input table|nil The input table for the update_sip_media_application_call command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sip_media_application_call(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-sip-media-application-call" }, input)
 end
 
 --- Updates the details of the specified SIP rule
---- @param input table The input table for the update_sip_rule command
+--- @param input table|nil The input table for the update_sip_rule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sip_rule(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-sip-rule" }, input)
 end
 
 --- Updates the details for the specified Amazon Chime SDK Voice Connector
---- @param input table The input table for the update_voice_connector command
+--- @param input table|nil The input table for the update_voice_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_voice_connector(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-voice-connector" }, input)
 end
 
 --- Updates the settings for the specified Amazon Chime SDK Voice Connector group
---- @param input table The input table for the update_voice_connector_group command
+--- @param input table|nil The input table for the update_voice_connector_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_voice_connector_group(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-voice-connector-group" }, input)
 end
 
 --- Updates the specified voice profile’s voice print and refreshes its expiration timestamp
---- @param input table The input table for the update_voice_profile command
+--- @param input table|nil The input table for the update_voice_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_voice_profile(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-voice-profile" }, input)
 end
 
 --- Updates the settings for the specified voice profile domain
---- @param input table The input table for the update_voice_profile_domain command
+--- @param input table|nil The input table for the update_voice_profile_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_voice_profile_domain(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "update-voice-profile-domain" }, input)
 end
 
 --- Validates an address to be used for 911 calls made with Amazon Chime SDK Voice Connectors
---- @param input table The input table for the validate_e911_address command
+--- @param input table|nil The input table for the validate_e911_address command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_e911_address(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-voice", "validate-e911-address" }, input)

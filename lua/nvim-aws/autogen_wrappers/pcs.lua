@@ -8,49 +8,49 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a cluster in your account
---- @param input table The input table for the create_cluster command
+--- @param input table|nil The input table for the create_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "create-cluster" }, input)
 end
 
 --- Deletes a cluster and all its linked resources
---- @param input table The input table for the delete_cluster command
+--- @param input table|nil The input table for the delete_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "delete-cluster" }, input)
 end
 
 --- Returns detailed information about a running cluster in your account
---- @param input table The input table for the get_cluster command
+--- @param input table|nil The input table for the get_cluster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "get-cluster" }, input)
 end
 
 --- Returns a list of all tags on an Amazon Web Services PCS resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "list-tags-for-resource" }, input)
 end
 
 --- This API action isn't intended for you to use
---- @param input table The input table for the register_compute_node_group_instance command
+--- @param input table|nil The input table for the register_compute_node_group_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_compute_node_group_instance(input)
 	return common.execute_aws_command_with_input({ "pcs", "register-compute-node-group-instance" }, input)
 end
 
 --- Adds or edits tags on an Amazon Web Services PCS resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "tag-resource" }, input)
 end
 
 --- Deletes tags from an Amazon Web Services PCS resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "untag-resource" }, input)

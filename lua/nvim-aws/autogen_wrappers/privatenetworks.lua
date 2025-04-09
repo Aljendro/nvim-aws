@@ -8,182 +8,182 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Acknowledges that the specified network order was received
---- @param input table The input table for the acknowledge_order_receipt command
+--- @param input table|nil The input table for the acknowledge_order_receipt command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.acknowledge_order_receipt(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "acknowledge-order-receipt" }, input)
 end
 
 --- Activates the specified device identifier
---- @param input table The input table for the activate_device_identifier command
+--- @param input table|nil The input table for the activate_device_identifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_device_identifier(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "activate-device-identifier" }, input)
 end
 
 --- Activates the specified network site
---- @param input table The input table for the activate_network_site command
+--- @param input table|nil The input table for the activate_network_site command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_network_site(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "activate-network-site" }, input)
 end
 
 --- Configures the specified network resource
---- @param input table The input table for the configure_access_point command
+--- @param input table|nil The input table for the configure_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.configure_access_point(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "configure-access-point" }, input)
 end
 
 --- Creates a network
---- @param input table The input table for the create_network command
+--- @param input table|nil The input table for the create_network command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_network(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "create-network" }, input)
 end
 
 --- Creates a network site
---- @param input table The input table for the create_network_site command
+--- @param input table|nil The input table for the create_network_site command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_network_site(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "create-network-site" }, input)
 end
 
 --- Deactivates the specified device identifier
---- @param input table The input table for the deactivate_device_identifier command
+--- @param input table|nil The input table for the deactivate_device_identifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deactivate_device_identifier(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "deactivate-device-identifier" }, input)
 end
 
 --- Deletes the specified network
---- @param input table The input table for the delete_network command
+--- @param input table|nil The input table for the delete_network command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_network(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "delete-network" }, input)
 end
 
 --- Deletes the specified network site
---- @param input table The input table for the delete_network_site command
+--- @param input table|nil The input table for the delete_network_site command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_network_site(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "delete-network-site" }, input)
 end
 
 --- Gets the specified device identifier
---- @param input table The input table for the get_device_identifier command
+--- @param input table|nil The input table for the get_device_identifier command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_device_identifier(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "get-device-identifier" }, input)
 end
 
 --- Gets the specified network
---- @param input table The input table for the get_network command
+--- @param input table|nil The input table for the get_network command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_network(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "get-network" }, input)
 end
 
 --- Gets the specified network resource
---- @param input table The input table for the get_network_resource command
+--- @param input table|nil The input table for the get_network_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_network_resource(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "get-network-resource" }, input)
 end
 
 --- Gets the specified network site
---- @param input table The input table for the get_network_site command
+--- @param input table|nil The input table for the get_network_site command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_network_site(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "get-network-site" }, input)
 end
 
 --- Gets the specified order
---- @param input table The input table for the get_order command
+--- @param input table|nil The input table for the get_order command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_order(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "get-order" }, input)
 end
 
 --- Lists device identifiers
---- @param input table The input table for the list_device_identifiers command
+--- @param input table|nil The input table for the list_device_identifiers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_device_identifiers(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-device-identifiers" }, input)
 end
 
 --- Lists network resources
---- @param input table The input table for the list_network_resources command
+--- @param input table|nil The input table for the list_network_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_network_resources(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-network-resources" }, input)
 end
 
 --- Lists network sites
---- @param input table The input table for the list_network_sites command
+--- @param input table|nil The input table for the list_network_sites command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_network_sites(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-network-sites" }, input)
 end
 
 --- Lists networks
---- @param input table The input table for the list_networks command
+--- @param input table|nil The input table for the list_networks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_networks(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-networks" }, input)
 end
 
 --- Lists orders
---- @param input table The input table for the list_orders command
+--- @param input table|nil The input table for the list_orders command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_orders(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-orders" }, input)
 end
 
 --- Lists the tags for the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "list-tags-for-resource" }, input)
 end
 
 --- Checks the health of the service
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.ping(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "ping" }, input)
 end
 
 --- Use this action to do the following tasks: Update the duration and renewal status of the commitment period for a radio unit
---- @param input table The input table for the start_network_resource_update command
+--- @param input table|nil The input table for the start_network_resource_update command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_network_resource_update(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "start-network-resource-update" }, input)
 end
 
 --- Adds tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "tag-resource" }, input)
 end
 
 --- Removes tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "untag-resource" }, input)
 end
 
 --- Updates the specified network site
---- @param input table The input table for the update_network_site command
+--- @param input table|nil The input table for the update_network_site command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_network_site(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "update-network-site" }, input)
 end
 
 --- Updates the specified network site plan
---- @param input table The input table for the update_network_site_plan command
+--- @param input table|nil The input table for the update_network_site_plan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_network_site_plan(input)
 	return common.execute_aws_command_with_input({ "privatenetworks", "update-network-site-plan" }, input)

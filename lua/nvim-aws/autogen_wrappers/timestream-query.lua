@@ -8,105 +8,105 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Cancels a query that has been issued
---- @param input table The input table for the cancel_query command
+--- @param input table|nil The input table for the cancel_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "cancel-query" }, input)
 end
 
 --- Create a scheduled query that will be run on your behalf at the configured schedule
---- @param input table The input table for the create_scheduled_query command
+--- @param input table|nil The input table for the create_scheduled_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_scheduled_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "create-scheduled-query" }, input)
 end
 
 --- Deletes a given scheduled query
---- @param input table The input table for the delete_scheduled_query command
+--- @param input table|nil The input table for the delete_scheduled_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scheduled_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "delete-scheduled-query" }, input)
 end
 
 --- Describes the settings for your account that include the query pricing model and the configured maximum TCUs the service can use for your query workload
---- @param input table The input table for the describe_account_settings command
+--- @param input table|nil The input table for the describe_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_settings(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "describe-account-settings" }, input)
 end
 
 --- DescribeEndpoints returns a list of available endpoints to make Timestream API calls against
---- @param input table The input table for the describe_endpoints command
+--- @param input table|nil The input table for the describe_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoints(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "describe-endpoints" }, input)
 end
 
 --- Provides detailed information about a scheduled query
---- @param input table The input table for the describe_scheduled_query command
+--- @param input table|nil The input table for the describe_scheduled_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scheduled_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "describe-scheduled-query" }, input)
 end
 
 --- You can use this API to run a scheduled query manually
---- @param input table The input table for the execute_scheduled_query command
+--- @param input table|nil The input table for the execute_scheduled_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.execute_scheduled_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "execute-scheduled-query" }, input)
 end
 
 --- Gets a list of all scheduled queries in the caller's Amazon account and Region
---- @param input table The input table for the list_scheduled_queries command
+--- @param input table|nil The input table for the list_scheduled_queries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scheduled_queries(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "list-scheduled-queries" }, input)
 end
 
 --- List all tags on a Timestream query resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "list-tags-for-resource" }, input)
 end
 
 --- A synchronous operation that allows you to submit a query with parameters to be stored by Timestream for later running
---- @param input table The input table for the prepare_query command
+--- @param input table|nil The input table for the prepare_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.prepare_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "prepare-query" }, input)
 end
 
 --- Query is a synchronous operation that enables you to run a query against your Amazon Timestream data
---- @param input table The input table for the query command
+--- @param input table|nil The input table for the query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "query" }, input)
 end
 
 --- Associate a set of tags with a Timestream resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "tag-resource" }, input)
 end
 
 --- Removes the association of tags from a Timestream query resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "untag-resource" }, input)
 end
 
 --- Transitions your account to use TCUs for query pricing and modifies the maximum query compute units that you've configured
---- @param input table The input table for the update_account_settings command
+--- @param input table|nil The input table for the update_account_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_settings(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "update-account-settings" }, input)
 end
 
 --- Update a scheduled query
---- @param input table The input table for the update_scheduled_query command
+--- @param input table|nil The input table for the update_scheduled_query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_scheduled_query(input)
 	return common.execute_aws_command_with_input({ "timestream-query", "update-scheduled-query" }, input)

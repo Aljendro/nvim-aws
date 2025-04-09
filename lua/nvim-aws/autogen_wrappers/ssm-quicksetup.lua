@@ -8,98 +8,98 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a Quick Setup configuration manager resource
---- @param input table The input table for the create_configuration_manager command
+--- @param input table|nil The input table for the create_configuration_manager command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration_manager(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "create-configuration-manager" }, input)
 end
 
 --- Deletes a configuration manager
---- @param input table The input table for the delete_configuration_manager command
+--- @param input table|nil The input table for the delete_configuration_manager command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_manager(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "delete-configuration-manager" }, input)
 end
 
 --- Returns details about the specified configuration
---- @param input table The input table for the get_configuration command
+--- @param input table|nil The input table for the get_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configuration(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-configuration" }, input)
 end
 
 --- Returns a configuration manager
---- @param input table The input table for the get_configuration_manager command
+--- @param input table|nil The input table for the get_configuration_manager command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configuration_manager(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-configuration-manager" }, input)
 end
 
 --- Returns settings configured for Quick Setup in the requesting Amazon Web Services account and Amazon Web Services Region
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_settings(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-service-settings" }, input)
 end
 
 --- Returns Quick Setup configuration managers
---- @param input table The input table for the list_configuration_managers command
+--- @param input table|nil The input table for the list_configuration_managers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_managers(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-configuration-managers" }, input)
 end
 
 --- Returns configurations deployed by Quick Setup in the requesting Amazon Web Services account and Amazon Web Services Region
---- @param input table The input table for the list_configurations command
+--- @param input table|nil The input table for the list_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configurations(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-configurations" }, input)
 end
 
 --- Returns the available Quick Setup types
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_quick_setup_types(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-quick-setup-types" }, input)
 end
 
 --- Returns tags assigned to the resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-tags-for-resource" }, input)
 end
 
 --- Assigns key-value pairs of metadata to Amazon Web Services resources
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "tag-resource" }, input)
 end
 
 --- Removes tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "untag-resource" }, input)
 end
 
 --- Updates a Quick Setup configuration definition
---- @param input table The input table for the update_configuration_definition command
+--- @param input table|nil The input table for the update_configuration_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration_definition(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-configuration-definition" }, input)
 end
 
 --- Updates a Quick Setup configuration manager
---- @param input table The input table for the update_configuration_manager command
+--- @param input table|nil The input table for the update_configuration_manager command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration_manager(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-configuration-manager" }, input)
 end
 
 --- Updates settings configured for Quick Setup
---- @param input table The input table for the update_service_settings command
+--- @param input table|nil The input table for the update_service_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_settings(input)
 	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-service-settings" }, input)

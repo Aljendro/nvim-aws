@@ -8,189 +8,189 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a connection that can then be given to other Amazon Web Services services like CodePipeline so that it can access third-party code repositories
---- @param input table The input table for the create_connection command
+--- @param input table|nil The input table for the create_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "create-connection" }, input)
 end
 
 --- Creates a resource that represents the infrastructure where a third-party provider is installed
---- @param input table The input table for the create_host command
+--- @param input table|nil The input table for the create_host command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_host(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "create-host" }, input)
 end
 
 --- Creates a link to a specified external Git repository
---- @param input table The input table for the create_repository_link command
+--- @param input table|nil The input table for the create_repository_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository_link(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "create-repository-link" }, input)
 end
 
 --- Creates a sync configuration which allows Amazon Web Services to sync content from a Git repository to update a specified Amazon Web Services resource
---- @param input table The input table for the create_sync_configuration command
+--- @param input table|nil The input table for the create_sync_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "create-sync-configuration" }, input)
 end
 
 --- The connection to be deleted
---- @param input table The input table for the delete_connection command
+--- @param input table|nil The input table for the delete_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "delete-connection" }, input)
 end
 
 --- The host to be deleted
---- @param input table The input table for the delete_host command
+--- @param input table|nil The input table for the delete_host command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_host(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "delete-host" }, input)
 end
 
 --- Deletes the association between your connection and a specified external Git repository
---- @param input table The input table for the delete_repository_link command
+--- @param input table|nil The input table for the delete_repository_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository_link(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "delete-repository-link" }, input)
 end
 
 --- Deletes the sync configuration for a specified repository and connection
---- @param input table The input table for the delete_sync_configuration command
+--- @param input table|nil The input table for the delete_sync_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "delete-sync-configuration" }, input)
 end
 
 --- Returns the connection ARN and details such as status, owner, and provider type
---- @param input table The input table for the get_connection command
+--- @param input table|nil The input table for the get_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connection(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-connection" }, input)
 end
 
 --- Returns the host ARN and details such as status, provider type, endpoint, and, if applicable, the VPC configuration
---- @param input table The input table for the get_host command
+--- @param input table|nil The input table for the get_host command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_host(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-host" }, input)
 end
 
 --- Returns details about a repository link
---- @param input table The input table for the get_repository_link command
+--- @param input table|nil The input table for the get_repository_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_link(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-repository-link" }, input)
 end
 
 --- Returns details about the sync status for a repository
---- @param input table The input table for the get_repository_sync_status command
+--- @param input table|nil The input table for the get_repository_sync_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_sync_status(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-repository-sync-status" }, input)
 end
 
 --- Returns the status of the sync with the Git repository for a specific Amazon Web Services resource
---- @param input table The input table for the get_resource_sync_status command
+--- @param input table|nil The input table for the get_resource_sync_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_sync_status(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-resource-sync-status" }, input)
 end
 
 --- Returns a list of the most recent sync blockers
---- @param input table The input table for the get_sync_blocker_summary command
+--- @param input table|nil The input table for the get_sync_blocker_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sync_blocker_summary(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-sync-blocker-summary" }, input)
 end
 
 --- Returns details about a sync configuration, including the sync type and resource name
---- @param input table The input table for the get_sync_configuration command
+--- @param input table|nil The input table for the get_sync_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-sync-configuration" }, input)
 end
 
 --- Lists the connections associated with your account
---- @param input table The input table for the list_connections command
+--- @param input table|nil The input table for the list_connections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connections(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-connections" }, input)
 end
 
 --- Lists the hosts associated with your account
---- @param input table The input table for the list_hosts command
+--- @param input table|nil The input table for the list_hosts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_hosts(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-hosts" }, input)
 end
 
 --- Lists the repository links created for connections in your account
---- @param input table The input table for the list_repository_links command
+--- @param input table|nil The input table for the list_repository_links command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_links(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-repository-links" }, input)
 end
 
 --- Lists the repository sync definitions for repository links in your account
---- @param input table The input table for the list_repository_sync_definitions command
+--- @param input table|nil The input table for the list_repository_sync_definitions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_sync_definitions(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-repository-sync-definitions" }, input)
 end
 
 --- Returns a list of sync configurations for a specified repository
---- @param input table The input table for the list_sync_configurations command
+--- @param input table|nil The input table for the list_sync_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sync_configurations(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-sync-configurations" }, input)
 end
 
 --- Gets the set of key-value pairs (metadata) that are used to manage the resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "list-tags-for-resource" }, input)
 end
 
 --- Adds to or modifies the tags of the given resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "tag-resource" }, input)
 end
 
 --- Removes tags from an Amazon Web Services resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "untag-resource" }, input)
 end
 
 --- Updates a specified host with the provided configurations
---- @param input table The input table for the update_host command
+--- @param input table|nil The input table for the update_host command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_host(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "update-host" }, input)
 end
 
 --- Updates the association between your connection and a specified external Git repository
---- @param input table The input table for the update_repository_link command
+--- @param input table|nil The input table for the update_repository_link command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_link(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "update-repository-link" }, input)
 end
 
 --- Allows you to update the status of a sync blocker, resolving the blocker and allowing syncing to continue
---- @param input table The input table for the update_sync_blocker command
+--- @param input table|nil The input table for the update_sync_blocker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sync_blocker(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "update-sync-blocker" }, input)
 end
 
 --- Updates the sync configuration for your connection and a specified external Git repository
---- @param input table The input table for the update_sync_configuration command
+--- @param input table|nil The input table for the update_sync_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "update-sync-configuration" }, input)

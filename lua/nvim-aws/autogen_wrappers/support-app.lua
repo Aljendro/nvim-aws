@@ -8,70 +8,70 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a Slack channel configuration for your Amazon Web Services account
---- @param input table The input table for the create_slack_channel_configuration command
+--- @param input table|nil The input table for the create_slack_channel_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_slack_channel_configuration(input)
 	return common.execute_aws_command_with_input({ "support-app", "create-slack-channel-configuration" }, input)
 end
 
 --- Deletes an alias for an Amazon Web Services account ID
---- @param input table The input table for the delete_account_alias command
+--- @param input table|nil The input table for the delete_account_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account_alias(input)
 	return common.execute_aws_command_with_input({ "support-app", "delete-account-alias" }, input)
 end
 
 --- Deletes a Slack channel configuration from your Amazon Web Services account
---- @param input table The input table for the delete_slack_channel_configuration command
+--- @param input table|nil The input table for the delete_slack_channel_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_slack_channel_configuration(input)
 	return common.execute_aws_command_with_input({ "support-app", "delete-slack-channel-configuration" }, input)
 end
 
 --- Deletes a Slack workspace configuration from your Amazon Web Services account
---- @param input table The input table for the delete_slack_workspace_configuration command
+--- @param input table|nil The input table for the delete_slack_workspace_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_slack_workspace_configuration(input)
 	return common.execute_aws_command_with_input({ "support-app", "delete-slack-workspace-configuration" }, input)
 end
 
 --- Retrieves the alias from an Amazon Web Services account ID
---- @param input table The input table for the get_account_alias command
+--- @param input table|nil The input table for the get_account_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_alias(input)
 	return common.execute_aws_command_with_input({ "support-app", "get-account-alias" }, input)
 end
 
 --- Lists the Slack channel configurations for an Amazon Web Services account
---- @param input table The input table for the list_slack_channel_configurations command
+--- @param input table|nil The input table for the list_slack_channel_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_slack_channel_configurations(input)
 	return common.execute_aws_command_with_input({ "support-app", "list-slack-channel-configurations" }, input)
 end
 
 --- Lists the Slack workspace configurations for an Amazon Web Services account
---- @param input table The input table for the list_slack_workspace_configurations command
+--- @param input table|nil The input table for the list_slack_workspace_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_slack_workspace_configurations(input)
 	return common.execute_aws_command_with_input({ "support-app", "list-slack-workspace-configurations" }, input)
 end
 
 --- Creates or updates an individual alias for each Amazon Web Services account ID
---- @param input table The input table for the put_account_alias command
+--- @param input table|nil The input table for the put_account_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_alias(input)
 	return common.execute_aws_command_with_input({ "support-app", "put-account-alias" }, input)
 end
 
 --- Registers a Slack workspace for your Amazon Web Services account
---- @param input table The input table for the register_slack_workspace_for_organization command
+--- @param input table|nil The input table for the register_slack_workspace_for_organization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_slack_workspace_for_organization(input)
 	return common.execute_aws_command_with_input({ "support-app", "register-slack-workspace-for-organization" }, input)
 end
 
 --- Updates the configuration for a Slack channel, such as case update notifications
---- @param input table The input table for the update_slack_channel_configuration command
+--- @param input table|nil The input table for the update_slack_channel_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_slack_channel_configuration(input)
 	return common.execute_aws_command_with_input({ "support-app", "update-slack-channel-configuration" }, input)

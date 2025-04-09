@@ -8,161 +8,161 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a root or subordinate private certificate authority (CA)
---- @param input table The input table for the create_certificate_authority command
+--- @param input table|nil The input table for the create_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "create-certificate-authority" }, input)
 end
 
 --- Creates an audit report that lists every time that your CA private key is used to issue a certificate
---- @param input table The input table for the create_certificate_authority_audit_report command
+--- @param input table|nil The input table for the create_certificate_authority_audit_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_certificate_authority_audit_report(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "create-certificate-authority-audit-report" }, input)
 end
 
 --- Grants one or more permissions on a private CA to the Certificate Manager (ACM) service principal (acm
---- @param input table The input table for the create_permission command
+--- @param input table|nil The input table for the create_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_permission(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "create-permission" }, input)
 end
 
 --- Deletes a private certificate authority (CA)
---- @param input table The input table for the delete_certificate_authority command
+--- @param input table|nil The input table for the delete_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "delete-certificate-authority" }, input)
 end
 
 --- Revokes permissions on a private CA granted to the Certificate Manager (ACM) service principal (acm
---- @param input table The input table for the delete_permission command
+--- @param input table|nil The input table for the delete_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_permission(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "delete-permission" }, input)
 end
 
 --- Deletes the resource-based policy attached to a private CA
---- @param input table The input table for the delete_policy command
+--- @param input table|nil The input table for the delete_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_policy(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "delete-policy" }, input)
 end
 
 --- Lists information about your private certificate authority (CA) or one that has been shared with you
---- @param input table The input table for the describe_certificate_authority command
+--- @param input table|nil The input table for the describe_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "describe-certificate-authority" }, input)
 end
 
 --- Lists information about a specific audit report created by calling the CreateCertificateAuthorityAuditReport action
---- @param input table The input table for the describe_certificate_authority_audit_report command
+--- @param input table|nil The input table for the describe_certificate_authority_audit_report command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_certificate_authority_audit_report(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "describe-certificate-authority-audit-report" }, input)
 end
 
 --- Retrieves a certificate from your private CA or one that has been shared with you
---- @param input table The input table for the get_certificate command
+--- @param input table|nil The input table for the get_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_certificate(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "get-certificate" }, input)
 end
 
 --- Retrieves the certificate and certificate chain for your private certificate authority (CA) or one that has been shared with you
---- @param input table The input table for the get_certificate_authority_certificate command
+--- @param input table|nil The input table for the get_certificate_authority_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_certificate_authority_certificate(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "get-certificate-authority-certificate" }, input)
 end
 
 --- Retrieves the certificate signing request (CSR) for your private certificate authority (CA)
---- @param input table The input table for the get_certificate_authority_csr command
+--- @param input table|nil The input table for the get_certificate_authority_csr command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_certificate_authority_csr(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "get-certificate-authority-csr" }, input)
 end
 
 --- Retrieves the resource-based policy attached to a private CA
---- @param input table The input table for the get_policy command
+--- @param input table|nil The input table for the get_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policy(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "get-policy" }, input)
 end
 
 --- Imports a signed private CA certificate into Amazon Web Services Private CA
---- @param input table The input table for the import_certificate_authority_certificate command
+--- @param input table|nil The input table for the import_certificate_authority_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_certificate_authority_certificate(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "import-certificate-authority-certificate" }, input)
 end
 
 --- Uses your private certificate authority (CA), or one that has been shared with you, to issue a client certificate
---- @param input table The input table for the issue_certificate command
+--- @param input table|nil The input table for the issue_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.issue_certificate(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "issue-certificate" }, input)
 end
 
 --- Lists the private certificate authorities that you created by using the CreateCertificateAuthority action
---- @param input table The input table for the list_certificate_authorities command
+--- @param input table|nil The input table for the list_certificate_authorities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_certificate_authorities(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "list-certificate-authorities" }, input)
 end
 
 --- List all permissions on a private CA, if any, granted to the Certificate Manager (ACM) service principal (acm
---- @param input table The input table for the list_permissions command
+--- @param input table|nil The input table for the list_permissions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_permissions(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "list-permissions" }, input)
 end
 
 --- Lists the tags, if any, that are associated with your private CA or one that has been shared with you
---- @param input table The input table for the list_tags command
+--- @param input table|nil The input table for the list_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "list-tags" }, input)
 end
 
 --- Attaches a resource-based policy to a private CA
---- @param input table The input table for the put_policy command
+--- @param input table|nil The input table for the put_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_policy(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "put-policy" }, input)
 end
 
 --- Restores a certificate authority (CA) that is in the DELETED state
---- @param input table The input table for the restore_certificate_authority command
+--- @param input table|nil The input table for the restore_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "restore-certificate-authority" }, input)
 end
 
 --- Revokes a certificate that was issued inside Amazon Web Services Private CA
---- @param input table The input table for the revoke_certificate command
+--- @param input table|nil The input table for the revoke_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_certificate(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "revoke-certificate" }, input)
 end
 
 --- Adds one or more tags to your private CA
---- @param input table The input table for the tag_certificate_authority command
+--- @param input table|nil The input table for the tag_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "tag-certificate-authority" }, input)
 end
 
 --- Remove one or more tags from your private CA
---- @param input table The input table for the untag_certificate_authority command
+--- @param input table|nil The input table for the untag_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "untag-certificate-authority" }, input)
 end
 
 --- Updates the status or configuration of a private certificate authority (CA)
---- @param input table The input table for the update_certificate_authority command
+--- @param input table|nil The input table for the update_certificate_authority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "update-certificate-authority" }, input)

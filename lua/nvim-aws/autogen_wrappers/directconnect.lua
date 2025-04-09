@@ -8,441 +8,441 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Accepts a proposal request to attach a virtual private gateway or transit gateway to a Direct Connect gateway
---- @param input table The input table for the accept_direct_connect_gateway_association_proposal command
+--- @param input table|nil The input table for the accept_direct_connect_gateway_association_proposal command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_direct_connect_gateway_association_proposal(input)
 	return common.execute_aws_command_with_input({ "directconnect", "accept-direct-connect-gateway-association-proposal" }, input)
 end
 
 --- Deprecated
---- @param input table The input table for the allocate_connection_on_interconnect command
+--- @param input table|nil The input table for the allocate_connection_on_interconnect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_connection_on_interconnect(input)
 	return common.execute_aws_command_with_input({ "directconnect", "allocate-connection-on-interconnect" }, input)
 end
 
 --- Creates a hosted connection on the specified interconnect or a link aggregation group (LAG) of interconnects
---- @param input table The input table for the allocate_hosted_connection command
+--- @param input table|nil The input table for the allocate_hosted_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_hosted_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "allocate-hosted-connection" }, input)
 end
 
 --- Provisions a private virtual interface to be owned by the specified Amazon Web Services account
---- @param input table The input table for the allocate_private_virtual_interface command
+--- @param input table|nil The input table for the allocate_private_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_private_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "allocate-private-virtual-interface" }, input)
 end
 
 --- Provisions a public virtual interface to be owned by the specified Amazon Web Services account
---- @param input table The input table for the allocate_public_virtual_interface command
+--- @param input table|nil The input table for the allocate_public_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_public_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "allocate-public-virtual-interface" }, input)
 end
 
 --- Provisions a transit virtual interface to be owned by the specified Amazon Web Services account
---- @param input table The input table for the allocate_transit_virtual_interface command
+--- @param input table|nil The input table for the allocate_transit_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_transit_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "allocate-transit-virtual-interface" }, input)
 end
 
 --- Associates an existing connection with a link aggregation group (LAG)
---- @param input table The input table for the associate_connection_with_lag command
+--- @param input table|nil The input table for the associate_connection_with_lag command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_connection_with_lag(input)
 	return common.execute_aws_command_with_input({ "directconnect", "associate-connection-with-lag" }, input)
 end
 
 --- Associates a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect
---- @param input table The input table for the associate_hosted_connection command
+--- @param input table|nil The input table for the associate_hosted_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_hosted_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "associate-hosted-connection" }, input)
 end
 
 --- Associates a MAC Security (MACsec) Connection Key Name (CKN)/ Connectivity Association Key (CAK) pair with an Direct Connect dedicated connection
---- @param input table The input table for the associate_mac_sec_key command
+--- @param input table|nil The input table for the associate_mac_sec_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_mac_sec_key(input)
 	return common.execute_aws_command_with_input({ "directconnect", "associate-mac-sec-key" }, input)
 end
 
 --- Associates a virtual interface with a specified link aggregation group (LAG) or connection
---- @param input table The input table for the associate_virtual_interface command
+--- @param input table|nil The input table for the associate_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "associate-virtual-interface" }, input)
 end
 
 --- Confirms the creation of the specified hosted connection on an interconnect
---- @param input table The input table for the confirm_connection command
+--- @param input table|nil The input table for the confirm_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "confirm-connection" }, input)
 end
 
 --- The confirmation of the terms of agreement when creating the connection/link aggregation group (LAG)
---- @param input table The input table for the confirm_customer_agreement command
+--- @param input table|nil The input table for the confirm_customer_agreement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_customer_agreement(input)
 	return common.execute_aws_command_with_input({ "directconnect", "confirm-customer-agreement" }, input)
 end
 
 --- Accepts ownership of a private virtual interface created by another Amazon Web Services account
---- @param input table The input table for the confirm_private_virtual_interface command
+--- @param input table|nil The input table for the confirm_private_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_private_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "confirm-private-virtual-interface" }, input)
 end
 
 --- Accepts ownership of a public virtual interface created by another Amazon Web Services account
---- @param input table The input table for the confirm_public_virtual_interface command
+--- @param input table|nil The input table for the confirm_public_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_public_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "confirm-public-virtual-interface" }, input)
 end
 
 --- Accepts ownership of a transit virtual interface created by another Amazon Web Services account
---- @param input table The input table for the confirm_transit_virtual_interface command
+--- @param input table|nil The input table for the confirm_transit_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.confirm_transit_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "confirm-transit-virtual-interface" }, input)
 end
 
 --- Creates a BGP peer on the specified virtual interface
---- @param input table The input table for the create_bgp_peer command
+--- @param input table|nil The input table for the create_bgp_peer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bgp_peer(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-bgp-peer" }, input)
 end
 
 --- Creates a connection between a customer network and a specific Direct Connect location
---- @param input table The input table for the create_connection command
+--- @param input table|nil The input table for the create_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-connection" }, input)
 end
 
 --- Creates a Direct Connect gateway, which is an intermediate object that enables you to connect a set of virtual interfaces and virtual private gateways
---- @param input table The input table for the create_direct_connect_gateway command
+--- @param input table|nil The input table for the create_direct_connect_gateway command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_direct_connect_gateway(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-direct-connect-gateway" }, input)
 end
 
 --- Creates an association between a Direct Connect gateway and a virtual private gateway
---- @param input table The input table for the create_direct_connect_gateway_association command
+--- @param input table|nil The input table for the create_direct_connect_gateway_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_direct_connect_gateway_association(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-direct-connect-gateway-association" }, input)
 end
 
 --- Creates a proposal to associate the specified virtual private gateway or transit gateway with the specified Direct Connect gateway
---- @param input table The input table for the create_direct_connect_gateway_association_proposal command
+--- @param input table|nil The input table for the create_direct_connect_gateway_association_proposal command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_direct_connect_gateway_association_proposal(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-direct-connect-gateway-association-proposal" }, input)
 end
 
 --- Creates an interconnect between an Direct Connect Partner's network and a specific Direct Connect location
---- @param input table The input table for the create_interconnect command
+--- @param input table|nil The input table for the create_interconnect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_interconnect(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-interconnect" }, input)
 end
 
 --- Creates a link aggregation group (LAG) with the specified number of bundled physical dedicated connections between the customer network and a specific Direct Connect location
---- @param input table The input table for the create_lag command
+--- @param input table|nil The input table for the create_lag command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lag(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-lag" }, input)
 end
 
 --- Creates a private virtual interface
---- @param input table The input table for the create_private_virtual_interface command
+--- @param input table|nil The input table for the create_private_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_private_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-private-virtual-interface" }, input)
 end
 
 --- Creates a public virtual interface
---- @param input table The input table for the create_public_virtual_interface command
+--- @param input table|nil The input table for the create_public_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_public_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-public-virtual-interface" }, input)
 end
 
 --- Creates a transit virtual interface
---- @param input table The input table for the create_transit_virtual_interface command
+--- @param input table|nil The input table for the create_transit_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_transit_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "create-transit-virtual-interface" }, input)
 end
 
 --- Deletes the specified BGP peer on the specified virtual interface with the specified customer address and ASN
---- @param input table The input table for the delete_bgp_peer command
+--- @param input table|nil The input table for the delete_bgp_peer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bgp_peer(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-bgp-peer" }, input)
 end
 
 --- Deletes the specified connection
---- @param input table The input table for the delete_connection command
+--- @param input table|nil The input table for the delete_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-connection" }, input)
 end
 
 --- Deletes the specified Direct Connect gateway
---- @param input table The input table for the delete_direct_connect_gateway command
+--- @param input table|nil The input table for the delete_direct_connect_gateway command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_direct_connect_gateway(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-direct-connect-gateway" }, input)
 end
 
 --- Deletes the association between the specified Direct Connect gateway and virtual private gateway
---- @param input table The input table for the delete_direct_connect_gateway_association command
+--- @param input table|nil The input table for the delete_direct_connect_gateway_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_direct_connect_gateway_association(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-direct-connect-gateway-association" }, input)
 end
 
 --- Deletes the association proposal request between the specified Direct Connect gateway and virtual private gateway or transit gateway
---- @param input table The input table for the delete_direct_connect_gateway_association_proposal command
+--- @param input table|nil The input table for the delete_direct_connect_gateway_association_proposal command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_direct_connect_gateway_association_proposal(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-direct-connect-gateway-association-proposal" }, input)
 end
 
 --- Deletes the specified interconnect
---- @param input table The input table for the delete_interconnect command
+--- @param input table|nil The input table for the delete_interconnect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_interconnect(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-interconnect" }, input)
 end
 
 --- Deletes the specified link aggregation group (LAG)
---- @param input table The input table for the delete_lag command
+--- @param input table|nil The input table for the delete_lag command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lag(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-lag" }, input)
 end
 
 --- Deletes a virtual interface
---- @param input table The input table for the delete_virtual_interface command
+--- @param input table|nil The input table for the delete_virtual_interface command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_virtual_interface(input)
 	return common.execute_aws_command_with_input({ "directconnect", "delete-virtual-interface" }, input)
 end
 
 --- Deprecated
---- @param input table The input table for the describe_connection_loa command
+--- @param input table|nil The input table for the describe_connection_loa command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connection_loa(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-connection-loa" }, input)
 end
 
 --- Displays the specified connection or all connections in this Region
---- @param input table The input table for the describe_connections command
+--- @param input table|nil The input table for the describe_connections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connections(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-connections" }, input)
 end
 
 --- Deprecated
---- @param input table The input table for the describe_connections_on_interconnect command
+--- @param input table|nil The input table for the describe_connections_on_interconnect command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connections_on_interconnect(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-connections-on-interconnect" }, input)
 end
 
 --- Get and view a list of customer agreements, along with their signed status and whether the customer is an NNIPartner, NNIPartnerV2, or a nonPartner
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_customer_metadata(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-customer-metadata" }, input)
 end
 
 --- Describes one or more association proposals for connection between a virtual private gateway or transit gateway and a Direct Connect gateway
---- @param input table The input table for the describe_direct_connect_gateway_association_proposals command
+--- @param input table|nil The input table for the describe_direct_connect_gateway_association_proposals command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_direct_connect_gateway_association_proposals(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-direct-connect-gateway-association-proposals" }, input)
 end
 
 --- Lists the associations between your Direct Connect gateways and virtual private gateways and transit gateways
---- @param input table The input table for the describe_direct_connect_gateway_associations command
+--- @param input table|nil The input table for the describe_direct_connect_gateway_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_direct_connect_gateway_associations(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-direct-connect-gateway-associations" }, input)
 end
 
 --- Lists the attachments between your Direct Connect gateways and virtual interfaces
---- @param input table The input table for the describe_direct_connect_gateway_attachments command
+--- @param input table|nil The input table for the describe_direct_connect_gateway_attachments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_direct_connect_gateway_attachments(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-direct-connect-gateway-attachments" }, input)
 end
 
 --- Lists all your Direct Connect gateways or only the specified Direct Connect gateway
---- @param input table The input table for the describe_direct_connect_gateways command
+--- @param input table|nil The input table for the describe_direct_connect_gateways command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_direct_connect_gateways(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-direct-connect-gateways" }, input)
 end
 
 --- Lists the hosted connections that have been provisioned on the specified interconnect or link aggregation group (LAG)
---- @param input table The input table for the describe_hosted_connections command
+--- @param input table|nil The input table for the describe_hosted_connections command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_hosted_connections(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-hosted-connections" }, input)
 end
 
 --- Deprecated
---- @param input table The input table for the describe_interconnect_loa command
+--- @param input table|nil The input table for the describe_interconnect_loa command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_interconnect_loa(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-interconnect-loa" }, input)
 end
 
 --- Lists the interconnects owned by the Amazon Web Services account or only the specified interconnect
---- @param input table The input table for the describe_interconnects command
+--- @param input table|nil The input table for the describe_interconnects command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_interconnects(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-interconnects" }, input)
 end
 
 --- Describes all your link aggregation groups (LAG) or the specified LAG
---- @param input table The input table for the describe_lags command
+--- @param input table|nil The input table for the describe_lags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_lags(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-lags" }, input)
 end
 
 --- Gets the LOA-CFA for a connection, interconnect, or link aggregation group (LAG)
---- @param input table The input table for the describe_loa command
+--- @param input table|nil The input table for the describe_loa command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_loa(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-loa" }, input)
 end
 
 --- Lists the Direct Connect locations in the current Amazon Web Services Region
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_locations(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-locations" }, input)
 end
 
 --- Details about the router
---- @param input table The input table for the describe_router_configuration command
+--- @param input table|nil The input table for the describe_router_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_router_configuration(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-router-configuration" }, input)
 end
 
 --- Describes the tags associated with the specified Direct Connect resources
---- @param input table The input table for the describe_tags command
+--- @param input table|nil The input table for the describe_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tags(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-tags" }, input)
 end
 
 --- Deprecated
---- @param input table Optional input parameters
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_virtual_gateways(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-virtual-gateways" }, input)
 end
 
 --- Displays all virtual interfaces for an Amazon Web Services account
---- @param input table The input table for the describe_virtual_interfaces command
+--- @param input table|nil The input table for the describe_virtual_interfaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_virtual_interfaces(input)
 	return common.execute_aws_command_with_input({ "directconnect", "describe-virtual-interfaces" }, input)
 end
 
 --- Disassociates a connection from a link aggregation group (LAG)
---- @param input table The input table for the disassociate_connection_from_lag command
+--- @param input table|nil The input table for the disassociate_connection_from_lag command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_connection_from_lag(input)
 	return common.execute_aws_command_with_input({ "directconnect", "disassociate-connection-from-lag" }, input)
 end
 
 --- Removes the association between a MAC Security (MACsec) security key and an Direct Connect dedicated connection
---- @param input table The input table for the disassociate_mac_sec_key command
+--- @param input table|nil The input table for the disassociate_mac_sec_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_mac_sec_key(input)
 	return common.execute_aws_command_with_input({ "directconnect", "disassociate-mac-sec-key" }, input)
 end
 
 --- Lists the virtual interface failover test history
---- @param input table The input table for the list_virtual_interface_test_history command
+--- @param input table|nil The input table for the list_virtual_interface_test_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_virtual_interface_test_history(input)
 	return common.execute_aws_command_with_input({ "directconnect", "list-virtual-interface-test-history" }, input)
 end
 
 --- Starts the virtual interface failover test that verifies your configuration meets your resiliency requirements by placing the BGP peering session in the DOWN state
---- @param input table The input table for the start_bgp_failover_test command
+--- @param input table|nil The input table for the start_bgp_failover_test command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_bgp_failover_test(input)
 	return common.execute_aws_command_with_input({ "directconnect", "start-bgp-failover-test" }, input)
 end
 
 --- Stops the virtual interface failover test
---- @param input table The input table for the stop_bgp_failover_test command
+--- @param input table|nil The input table for the stop_bgp_failover_test command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_bgp_failover_test(input)
 	return common.execute_aws_command_with_input({ "directconnect", "stop-bgp-failover-test" }, input)
 end
 
 --- Adds the specified tags to the specified Direct Connect resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "directconnect", "tag-resource" }, input)
 end
 
 --- Removes one or more tags from the specified Direct Connect resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "directconnect", "untag-resource" }, input)
 end
 
 --- Updates the Direct Connect dedicated connection configuration
---- @param input table The input table for the update_connection command
+--- @param input table|nil The input table for the update_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connection(input)
 	return common.execute_aws_command_with_input({ "directconnect", "update-connection" }, input)
 end
 
 --- Updates the name of a current Direct Connect gateway
---- @param input table The input table for the update_direct_connect_gateway command
+--- @param input table|nil The input table for the update_direct_connect_gateway command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_direct_connect_gateway(input)
 	return common.execute_aws_command_with_input({ "directconnect", "update-direct-connect-gateway" }, input)
 end
 
 --- Updates the specified attributes of the Direct Connect gateway association
---- @param input table The input table for the update_direct_connect_gateway_association command
+--- @param input table|nil The input table for the update_direct_connect_gateway_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_direct_connect_gateway_association(input)
 	return common.execute_aws_command_with_input({ "directconnect", "update-direct-connect-gateway-association" }, input)
 end
 
 --- Updates the attributes of the specified link aggregation group (LAG)
---- @param input table The input table for the update_lag command
+--- @param input table|nil The input table for the update_lag command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_lag(input)
 	return common.execute_aws_command_with_input({ "directconnect", "update-lag" }, input)
 end
 
 --- Updates the specified attributes of the specified virtual private interface
---- @param input table The input table for the update_virtual_interface_attributes command
+--- @param input table|nil The input table for the update_virtual_interface_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_virtual_interface_attributes(input)
 	return common.execute_aws_command_with_input({ "directconnect", "update-virtual-interface-attributes" }, input)

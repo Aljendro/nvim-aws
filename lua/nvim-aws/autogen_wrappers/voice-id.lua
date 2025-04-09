@@ -8,203 +8,203 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates the fraudsters with the watchlist specified in the same domain
---- @param input table The input table for the associate_fraudster command
+--- @param input table|nil The input table for the associate_fraudster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_fraudster(input)
 	return common.execute_aws_command_with_input({ "voice-id", "associate-fraudster" }, input)
 end
 
 --- Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters, customer audio, and voiceprints
---- @param input table The input table for the create_domain command
+--- @param input table|nil The input table for the create_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain(input)
 	return common.execute_aws_command_with_input({ "voice-id", "create-domain" }, input)
 end
 
 --- Creates a watchlist that fraudsters can be a part of
---- @param input table The input table for the create_watchlist command
+--- @param input table|nil The input table for the create_watchlist command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_watchlist(input)
 	return common.execute_aws_command_with_input({ "voice-id", "create-watchlist" }, input)
 end
 
 --- Deletes the specified domain from Voice ID
---- @param input table The input table for the delete_domain command
+--- @param input table|nil The input table for the delete_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain(input)
 	return common.execute_aws_command_with_input({ "voice-id", "delete-domain" }, input)
 end
 
 --- Deletes the specified fraudster from Voice ID
---- @param input table The input table for the delete_fraudster command
+--- @param input table|nil The input table for the delete_fraudster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fraudster(input)
 	return common.execute_aws_command_with_input({ "voice-id", "delete-fraudster" }, input)
 end
 
 --- Deletes the specified speaker from Voice ID
---- @param input table The input table for the delete_speaker command
+--- @param input table|nil The input table for the delete_speaker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_speaker(input)
 	return common.execute_aws_command_with_input({ "voice-id", "delete-speaker" }, input)
 end
 
 --- Deletes the specified watchlist from Voice ID
---- @param input table The input table for the delete_watchlist command
+--- @param input table|nil The input table for the delete_watchlist command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_watchlist(input)
 	return common.execute_aws_command_with_input({ "voice-id", "delete-watchlist" }, input)
 end
 
 --- Describes the specified domain
---- @param input table The input table for the describe_domain command
+--- @param input table|nil The input table for the describe_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_domain(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-domain" }, input)
 end
 
 --- Describes the specified fraudster
---- @param input table The input table for the describe_fraudster command
+--- @param input table|nil The input table for the describe_fraudster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fraudster(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-fraudster" }, input)
 end
 
 --- Describes the specified fraudster registration job
---- @param input table The input table for the describe_fraudster_registration_job command
+--- @param input table|nil The input table for the describe_fraudster_registration_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fraudster_registration_job(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-fraudster-registration-job" }, input)
 end
 
 --- Describes the specified speaker
---- @param input table The input table for the describe_speaker command
+--- @param input table|nil The input table for the describe_speaker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_speaker(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-speaker" }, input)
 end
 
 --- Describes the specified speaker enrollment job
---- @param input table The input table for the describe_speaker_enrollment_job command
+--- @param input table|nil The input table for the describe_speaker_enrollment_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_speaker_enrollment_job(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-speaker-enrollment-job" }, input)
 end
 
 --- Describes the specified watchlist
---- @param input table The input table for the describe_watchlist command
+--- @param input table|nil The input table for the describe_watchlist command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_watchlist(input)
 	return common.execute_aws_command_with_input({ "voice-id", "describe-watchlist" }, input)
 end
 
 --- Disassociates the fraudsters from the watchlist specified
---- @param input table The input table for the disassociate_fraudster command
+--- @param input table|nil The input table for the disassociate_fraudster command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_fraudster(input)
 	return common.execute_aws_command_with_input({ "voice-id", "disassociate-fraudster" }, input)
 end
 
 --- Evaluates a specified session based on audio data accumulated during a streaming Amazon Connect Voice ID call
---- @param input table The input table for the evaluate_session command
+--- @param input table|nil The input table for the evaluate_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.evaluate_session(input)
 	return common.execute_aws_command_with_input({ "voice-id", "evaluate-session" }, input)
 end
 
 --- Lists all the domains in the Amazon Web Services account
---- @param input table The input table for the list_domains command
+--- @param input table|nil The input table for the list_domains command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domains(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-domains" }, input)
 end
 
 --- Lists all the fraudster registration jobs in the domain with the given JobStatus
---- @param input table The input table for the list_fraudster_registration_jobs command
+--- @param input table|nil The input table for the list_fraudster_registration_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fraudster_registration_jobs(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-fraudster-registration-jobs" }, input)
 end
 
 --- Lists all fraudsters in a specified watchlist or domain
---- @param input table The input table for the list_fraudsters command
+--- @param input table|nil The input table for the list_fraudsters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fraudsters(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-fraudsters" }, input)
 end
 
 --- Lists all the speaker enrollment jobs in the domain with the specified JobStatus
---- @param input table The input table for the list_speaker_enrollment_jobs command
+--- @param input table|nil The input table for the list_speaker_enrollment_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_speaker_enrollment_jobs(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-speaker-enrollment-jobs" }, input)
 end
 
 --- Lists all speakers in a specified domain
---- @param input table The input table for the list_speakers command
+--- @param input table|nil The input table for the list_speakers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_speakers(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-speakers" }, input)
 end
 
 --- Lists all tags associated with a specified Voice ID resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-tags-for-resource" }, input)
 end
 
 --- Lists all watchlists in a specified domain
---- @param input table The input table for the list_watchlists command
+--- @param input table|nil The input table for the list_watchlists command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_watchlists(input)
 	return common.execute_aws_command_with_input({ "voice-id", "list-watchlists" }, input)
 end
 
 --- Opts out a speaker from Voice ID
---- @param input table The input table for the opt_out_speaker command
+--- @param input table|nil The input table for the opt_out_speaker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.opt_out_speaker(input)
 	return common.execute_aws_command_with_input({ "voice-id", "opt-out-speaker" }, input)
 end
 
 --- Starts a new batch fraudster registration job using provided details
---- @param input table The input table for the start_fraudster_registration_job command
+--- @param input table|nil The input table for the start_fraudster_registration_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_fraudster_registration_job(input)
 	return common.execute_aws_command_with_input({ "voice-id", "start-fraudster-registration-job" }, input)
 end
 
 --- Starts a new batch speaker enrollment job using specified details
---- @param input table The input table for the start_speaker_enrollment_job command
+--- @param input table|nil The input table for the start_speaker_enrollment_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_speaker_enrollment_job(input)
 	return common.execute_aws_command_with_input({ "voice-id", "start-speaker-enrollment-job" }, input)
 end
 
 --- Tags a Voice ID resource with the provided list of tags
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "voice-id", "tag-resource" }, input)
 end
 
 --- Removes specified tags from a specified Amazon Connect Voice ID resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "voice-id", "untag-resource" }, input)
 end
 
 --- Updates the specified domain
---- @param input table The input table for the update_domain command
+--- @param input table|nil The input table for the update_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain(input)
 	return common.execute_aws_command_with_input({ "voice-id", "update-domain" }, input)
 end
 
 --- Updates the specified watchlist
---- @param input table The input table for the update_watchlist command
+--- @param input table|nil The input table for the update_watchlist command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_watchlist(input)
 	return common.execute_aws_command_with_input({ "voice-id", "update-watchlist" }, input)

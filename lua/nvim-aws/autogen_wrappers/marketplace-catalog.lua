@@ -8,91 +8,91 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Returns metadata and content for multiple entities
---- @param input table The input table for the batch_describe_entities command
+--- @param input table|nil The input table for the batch_describe_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_describe_entities(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "batch-describe-entities" }, input)
 end
 
 --- Used to cancel an open change request
---- @param input table The input table for the cancel_change_set command
+--- @param input table|nil The input table for the cancel_change_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_change_set(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "cancel-change-set" }, input)
 end
 
 --- Deletes a resource-based policy on an entity that is identified by its resource ARN
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "delete-resource-policy" }, input)
 end
 
 --- Provides information about a given change set
---- @param input table The input table for the describe_change_set command
+--- @param input table|nil The input table for the describe_change_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_change_set(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "describe-change-set" }, input)
 end
 
 --- Returns the metadata and content of the entity
---- @param input table The input table for the describe_entity command
+--- @param input table|nil The input table for the describe_entity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "describe-entity" }, input)
 end
 
 --- Gets a resource-based policy of an entity that is identified by its resource ARN
---- @param input table The input table for the get_resource_policy command
+--- @param input table|nil The input table for the get_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "get-resource-policy" }, input)
 end
 
 --- Returns the list of change sets owned by the account being used to make the call
---- @param input table The input table for the list_change_sets command
+--- @param input table|nil The input table for the list_change_sets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_change_sets(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-change-sets" }, input)
 end
 
 --- Provides the list of entities of a given type
---- @param input table The input table for the list_entities command
+--- @param input table|nil The input table for the list_entities command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entities(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-entities" }, input)
 end
 
 --- Lists all tags that have been added to a resource (either an entity or change set)
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-tags-for-resource" }, input)
 end
 
 --- Attaches a resource-based policy to an entity
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "put-resource-policy" }, input)
 end
 
 --- Allows you to request changes for your entities
---- @param input table The input table for the start_change_set command
+--- @param input table|nil The input table for the start_change_set command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_change_set(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "start-change-set" }, input)
 end
 
 --- Tags a resource (either an entity or change set)
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "tag-resource" }, input)
 end
 
 --- Removes a tag or list of tags from a resource (either an entity or change set)
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "untag-resource" }, input)

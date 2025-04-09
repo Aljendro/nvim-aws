@@ -8,133 +8,133 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Changes the Channel's properities to configure log subscription
---- @param input table The input table for the configure_logs command
+--- @param input table|nil The input table for the configure_logs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.configure_logs(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "configure-logs" }, input)
 end
 
 --- Creates a new Channel
---- @param input table The input table for the create_channel command
+--- @param input table|nil The input table for the create_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_channel(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "create-channel" }, input)
 end
 
 --- Creates a new HarvestJob record
---- @param input table The input table for the create_harvest_job command
+--- @param input table|nil The input table for the create_harvest_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_harvest_job(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "create-harvest-job" }, input)
 end
 
 --- Creates a new OriginEndpoint record
---- @param input table The input table for the create_origin_endpoint command
+--- @param input table|nil The input table for the create_origin_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "create-origin-endpoint" }, input)
 end
 
 --- Deletes an existing Channel
---- @param input table The input table for the delete_channel command
+--- @param input table|nil The input table for the delete_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_channel(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "delete-channel" }, input)
 end
 
 --- Deletes an existing OriginEndpoint
---- @param input table The input table for the delete_origin_endpoint command
+--- @param input table|nil The input table for the delete_origin_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "delete-origin-endpoint" }, input)
 end
 
 --- Gets details about a Channel
---- @param input table The input table for the describe_channel command
+--- @param input table|nil The input table for the describe_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_channel(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "describe-channel" }, input)
 end
 
 --- Gets details about an existing HarvestJob
---- @param input table The input table for the describe_harvest_job command
+--- @param input table|nil The input table for the describe_harvest_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_harvest_job(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "describe-harvest-job" }, input)
 end
 
 --- Gets details about an existing OriginEndpoint
---- @param input table The input table for the describe_origin_endpoint command
+--- @param input table|nil The input table for the describe_origin_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "describe-origin-endpoint" }, input)
 end
 
 --- Returns a collection of Channels
---- @param input table The input table for the list_channels command
+--- @param input table|nil The input table for the list_channels command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_channels(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "list-channels" }, input)
 end
 
 --- Returns a collection of HarvestJob records
---- @param input table The input table for the list_harvest_jobs command
+--- @param input table|nil The input table for the list_harvest_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_harvest_jobs(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "list-harvest-jobs" }, input)
 end
 
 --- Returns a collection of OriginEndpoint records
---- @param input table The input table for the list_origin_endpoints command
+--- @param input table|nil The input table for the list_origin_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_origin_endpoints(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "list-origin-endpoints" }, input)
 end
 
 --- AWS Operation
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "list-tags-for-resource" }, input)
 end
 
 --- Changes the Channel's first IngestEndpoint's username and password
---- @param input table The input table for the rotate_channel_credentials command
+--- @param input table|nil The input table for the rotate_channel_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rotate_channel_credentials(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "rotate-channel-credentials" }, input)
 end
 
 --- Rotate the IngestEndpoint's username and password, as specified by the IngestEndpoint's id
---- @param input table The input table for the rotate_ingest_endpoint_credentials command
+--- @param input table|nil The input table for the rotate_ingest_endpoint_credentials command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rotate_ingest_endpoint_credentials(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "rotate-ingest-endpoint-credentials" }, input)
 end
 
 --- AWS Operation
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "tag-resource" }, input)
 end
 
 --- AWS Operation
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "untag-resource" }, input)
 end
 
 --- Updates an existing Channel
---- @param input table The input table for the update_channel command
+--- @param input table|nil The input table for the update_channel command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_channel(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "update-channel" }, input)
 end
 
 --- Updates an existing OriginEndpoint
---- @param input table The input table for the update_origin_endpoint command
+--- @param input table|nil The input table for the update_origin_endpoint command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "update-origin-endpoint" }, input)

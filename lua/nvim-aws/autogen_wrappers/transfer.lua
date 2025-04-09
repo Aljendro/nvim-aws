@@ -8,497 +8,497 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Used by administrators to choose which groups in the directory should have access to upload and download files over the enabled protocols using Transfer Family
---- @param input table The input table for the create_access command
+--- @param input table|nil The input table for the create_access command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-access" }, input)
 end
 
 --- Creates an agreement
---- @param input table The input table for the create_agreement command
+--- @param input table|nil The input table for the create_agreement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agreement(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-agreement" }, input)
 end
 
 --- Creates the connector, which captures the parameters for a connection for the AS2 or SFTP protocol
---- @param input table The input table for the create_connector command
+--- @param input table|nil The input table for the create_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-connector" }, input)
 end
 
 --- Creates the local or partner profile to use for AS2 transfers
---- @param input table The input table for the create_profile command
+--- @param input table|nil The input table for the create_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-profile" }, input)
 end
 
 --- Instantiates an auto-scaling virtual server based on the selected file transfer protocol in Amazon Web Services
---- @param input table The input table for the create_server command
+--- @param input table|nil The input table for the create_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-server" }, input)
 end
 
 --- Creates a user and associates them with an existing file transfer protocol-enabled server
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-user" }, input)
 end
 
 --- Creates a web app based on specified parameters, and returns the ID for the new web app
---- @param input table The input table for the create_web_app command
+--- @param input table|nil The input table for the create_web_app command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_web_app(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-web-app" }, input)
 end
 
 --- Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer completes
---- @param input table The input table for the create_workflow command
+--- @param input table|nil The input table for the create_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workflow(input)
 	return common.execute_aws_command_with_input({ "transfer", "create-workflow" }, input)
 end
 
 --- Allows you to delete the access specified in the ServerID and ExternalID parameters
---- @param input table The input table for the delete_access command
+--- @param input table|nil The input table for the delete_access command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-access" }, input)
 end
 
 --- Delete the agreement that's specified in the provided AgreementId
---- @param input table The input table for the delete_agreement command
+--- @param input table|nil The input table for the delete_agreement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agreement(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-agreement" }, input)
 end
 
 --- Deletes the certificate that's specified in the CertificateId parameter
---- @param input table The input table for the delete_certificate command
+--- @param input table|nil The input table for the delete_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_certificate(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-certificate" }, input)
 end
 
 --- Deletes the connector that's specified in the provided ConnectorId
---- @param input table The input table for the delete_connector command
+--- @param input table|nil The input table for the delete_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connector(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-connector" }, input)
 end
 
 --- Deletes the host key that's specified in the HostKeyId parameter
---- @param input table The input table for the delete_host_key command
+--- @param input table|nil The input table for the delete_host_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_host_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-host-key" }, input)
 end
 
 --- Deletes the profile that's specified in the ProfileId parameter
---- @param input table The input table for the delete_profile command
+--- @param input table|nil The input table for the delete_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_profile(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-profile" }, input)
 end
 
 --- Deletes the file transfer protocol-enabled server that you specify
---- @param input table The input table for the delete_server command
+--- @param input table|nil The input table for the delete_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-server" }, input)
 end
 
 --- Deletes a user's Secure Shell (SSH) public key
---- @param input table The input table for the delete_ssh_public_key command
+--- @param input table|nil The input table for the delete_ssh_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ssh_public_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-ssh-public-key" }, input)
 end
 
 --- Deletes the user belonging to a file transfer protocol-enabled server you specify
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-user" }, input)
 end
 
 --- Deletes the specified web app
---- @param input table The input table for the delete_web_app command
+--- @param input table|nil The input table for the delete_web_app command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_web_app(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-web-app" }, input)
 end
 
 --- Deletes the WebAppCustomization object that corresponds to the web app ID specified
---- @param input table The input table for the delete_web_app_customization command
+--- @param input table|nil The input table for the delete_web_app_customization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_web_app_customization(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-web-app-customization" }, input)
 end
 
 --- Deletes the specified workflow
---- @param input table The input table for the delete_workflow command
+--- @param input table|nil The input table for the delete_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workflow(input)
 	return common.execute_aws_command_with_input({ "transfer", "delete-workflow" }, input)
 end
 
 --- Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its ServerId property and its ExternalId
---- @param input table The input table for the describe_access command
+--- @param input table|nil The input table for the describe_access command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_access(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-access" }, input)
 end
 
 --- Describes the agreement that's identified by the AgreementId
---- @param input table The input table for the describe_agreement command
+--- @param input table|nil The input table for the describe_agreement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_agreement(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-agreement" }, input)
 end
 
 --- Describes the certificate that's identified by the CertificateId
---- @param input table The input table for the describe_certificate command
+--- @param input table|nil The input table for the describe_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_certificate(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-certificate" }, input)
 end
 
 --- Describes the connector that's identified by the ConnectorId
---- @param input table The input table for the describe_connector command
+--- @param input table|nil The input table for the describe_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connector(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-connector" }, input)
 end
 
 --- You can use DescribeExecution to check the details of the execution of the specified workflow
---- @param input table The input table for the describe_execution command
+--- @param input table|nil The input table for the describe_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_execution(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-execution" }, input)
 end
 
 --- Returns the details of the host key that's specified by the HostKeyId and ServerId
---- @param input table The input table for the describe_host_key command
+--- @param input table|nil The input table for the describe_host_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_host_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-host-key" }, input)
 end
 
 --- Returns the details of the profile that's specified by the ProfileId
---- @param input table The input table for the describe_profile command
+--- @param input table|nil The input table for the describe_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_profile(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-profile" }, input)
 end
 
 --- Describes the security policy that is attached to your server or SFTP connector
---- @param input table The input table for the describe_security_policy command
+--- @param input table|nil The input table for the describe_security_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_security_policy(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-security-policy" }, input)
 end
 
 --- Describes a file transfer protocol-enabled server that you specify by passing the ServerId parameter
---- @param input table The input table for the describe_server command
+--- @param input table|nil The input table for the describe_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-server" }, input)
 end
 
 --- Describes the user assigned to the specific file transfer protocol-enabled server, as identified by its ServerId property
---- @param input table The input table for the describe_user command
+--- @param input table|nil The input table for the describe_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-user" }, input)
 end
 
 --- Describes the web app that's identified by WebAppId
---- @param input table The input table for the describe_web_app command
+--- @param input table|nil The input table for the describe_web_app command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_web_app(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-web-app" }, input)
 end
 
 --- Describes the web app customization object that's identified by WebAppId
---- @param input table The input table for the describe_web_app_customization command
+--- @param input table|nil The input table for the describe_web_app_customization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_web_app_customization(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-web-app-customization" }, input)
 end
 
 --- Describes the specified workflow
---- @param input table The input table for the describe_workflow command
+--- @param input table|nil The input table for the describe_workflow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workflow(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-workflow" }, input)
 end
 
 --- Imports the signing and encryption certificates that you need to create local (AS2) profiles and partner profiles
---- @param input table The input table for the import_certificate command
+--- @param input table|nil The input table for the import_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_certificate(input)
 	return common.execute_aws_command_with_input({ "transfer", "import-certificate" }, input)
 end
 
 --- Adds a host key to the server that's specified by the ServerId parameter
---- @param input table The input table for the import_host_key command
+--- @param input table|nil The input table for the import_host_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_host_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "import-host-key" }, input)
 end
 
 --- Adds a Secure Shell (SSH) public key to a Transfer Family user identified by a UserName value assigned to the specific file transfer protocol-enabled server, identified by ServerId
---- @param input table The input table for the import_ssh_public_key command
+--- @param input table|nil The input table for the import_ssh_public_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_ssh_public_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "import-ssh-public-key" }, input)
 end
 
 --- Lists the details for all the accesses you have on your server
---- @param input table The input table for the list_accesses command
+--- @param input table|nil The input table for the list_accesses command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_accesses(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-accesses" }, input)
 end
 
 --- Returns a list of the agreements for the server that's identified by the ServerId that you supply
---- @param input table The input table for the list_agreements command
+--- @param input table|nil The input table for the list_agreements command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agreements(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-agreements" }, input)
 end
 
 --- Returns a list of the current certificates that have been imported into Transfer Family
---- @param input table The input table for the list_certificates command
+--- @param input table|nil The input table for the list_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_certificates(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-certificates" }, input)
 end
 
 --- Lists the connectors for the specified Region
---- @param input table The input table for the list_connectors command
+--- @param input table|nil The input table for the list_connectors command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connectors(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-connectors" }, input)
 end
 
 --- Lists all in-progress executions for the specified workflow
---- @param input table The input table for the list_executions command
+--- @param input table|nil The input table for the list_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_executions(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-executions" }, input)
 end
 
 --- Returns real-time updates and detailed information on the status of each individual file being transferred in a specific file transfer operation
---- @param input table The input table for the list_file_transfer_results command
+--- @param input table|nil The input table for the list_file_transfer_results command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_file_transfer_results(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-file-transfer-results" }, input)
 end
 
 --- Returns a list of host keys for the server that's specified by the ServerId parameter
---- @param input table The input table for the list_host_keys command
+--- @param input table|nil The input table for the list_host_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_host_keys(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-host-keys" }, input)
 end
 
 --- Returns a list of the profiles for your system
---- @param input table The input table for the list_profiles command
+--- @param input table|nil The input table for the list_profiles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profiles(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-profiles" }, input)
 end
 
 --- Lists the security policies that are attached to your servers and SFTP connectors
---- @param input table The input table for the list_security_policies command
+--- @param input table|nil The input table for the list_security_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_security_policies(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-security-policies" }, input)
 end
 
 --- Lists the file transfer protocol-enabled servers that are associated with your Amazon Web Services account
---- @param input table The input table for the list_servers command
+--- @param input table|nil The input table for the list_servers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_servers(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-servers" }, input)
 end
 
 --- Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-tags-for-resource" }, input)
 end
 
 --- Lists the users for a file transfer protocol-enabled server that you specify by passing the ServerId parameter
---- @param input table The input table for the list_users command
+--- @param input table|nil The input table for the list_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-users" }, input)
 end
 
 --- Lists all web apps associated with your Amazon Web Services account for your current region
---- @param input table The input table for the list_web_apps command
+--- @param input table|nil The input table for the list_web_apps command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_web_apps(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-web-apps" }, input)
 end
 
 --- Lists all workflows associated with your Amazon Web Services account for your current region
---- @param input table The input table for the list_workflows command
+--- @param input table|nil The input table for the list_workflows command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflows(input)
 	return common.execute_aws_command_with_input({ "transfer", "list-workflows" }, input)
 end
 
 --- Sends a callback for asynchronous custom steps
---- @param input table The input table for the send_workflow_step_state command
+--- @param input table|nil The input table for the send_workflow_step_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_workflow_step_state(input)
 	return common.execute_aws_command_with_input({ "transfer", "send-workflow-step-state" }, input)
 end
 
 --- Retrieves a list of the contents of a directory from a remote SFTP server
---- @param input table The input table for the start_directory_listing command
+--- @param input table|nil The input table for the start_directory_listing command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_directory_listing(input)
 	return common.execute_aws_command_with_input({ "transfer", "start-directory-listing" }, input)
 end
 
 --- Begins a file transfer between local Amazon Web Services storage and a remote AS2 or SFTP server
---- @param input table The input table for the start_file_transfer command
+--- @param input table|nil The input table for the start_file_transfer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_file_transfer(input)
 	return common.execute_aws_command_with_input({ "transfer", "start-file-transfer" }, input)
 end
 
 --- Deletes a file or directory on the remote SFTP server
---- @param input table The input table for the start_remote_delete command
+--- @param input table|nil The input table for the start_remote_delete command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_remote_delete(input)
 	return common.execute_aws_command_with_input({ "transfer", "start-remote-delete" }, input)
 end
 
 --- Moves or renames a file or directory on the remote SFTP server
---- @param input table The input table for the start_remote_move command
+--- @param input table|nil The input table for the start_remote_move command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_remote_move(input)
 	return common.execute_aws_command_with_input({ "transfer", "start-remote-move" }, input)
 end
 
 --- Changes the state of a file transfer protocol-enabled server from OFFLINE to ONLINE
---- @param input table The input table for the start_server command
+--- @param input table|nil The input table for the start_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "start-server" }, input)
 end
 
 --- Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE
---- @param input table The input table for the stop_server command
+--- @param input table|nil The input table for the stop_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "stop-server" }, input)
 end
 
 --- Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN)
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "transfer", "tag-resource" }, input)
 end
 
 --- Tests whether your SFTP connector is set up successfully
---- @param input table The input table for the test_connection command
+--- @param input table|nil The input table for the test_connection command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_connection(input)
 	return common.execute_aws_command_with_input({ "transfer", "test-connection" }, input)
 end
 
 --- If the IdentityProviderType of a file transfer protocol-enabled server is AWS_DIRECTORY_SERVICE or API_Gateway, tests whether your identity provider is set up successfully
---- @param input table The input table for the test_identity_provider command
+--- @param input table|nil The input table for the test_identity_provider command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_identity_provider(input)
 	return common.execute_aws_command_with_input({ "transfer", "test-identity-provider" }, input)
 end
 
 --- Detaches a key-value pair from a resource, as identified by its Amazon Resource Name (ARN)
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "transfer", "untag-resource" }, input)
 end
 
 --- Allows you to update parameters for the access specified in the ServerID and ExternalID parameters
---- @param input table The input table for the update_access command
+--- @param input table|nil The input table for the update_access command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_access(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-access" }, input)
 end
 
 --- Updates some of the parameters for an existing agreement
---- @param input table The input table for the update_agreement command
+--- @param input table|nil The input table for the update_agreement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agreement(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-agreement" }, input)
 end
 
 --- Updates the active and inactive dates for a certificate
---- @param input table The input table for the update_certificate command
+--- @param input table|nil The input table for the update_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_certificate(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-certificate" }, input)
 end
 
 --- Updates some of the parameters for an existing connector
---- @param input table The input table for the update_connector command
+--- @param input table|nil The input table for the update_connector command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connector(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-connector" }, input)
 end
 
 --- Updates the description for the host key that's specified by the ServerId and HostKeyId parameters
---- @param input table The input table for the update_host_key command
+--- @param input table|nil The input table for the update_host_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_host_key(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-host-key" }, input)
 end
 
 --- Updates some of the parameters for an existing profile
---- @param input table The input table for the update_profile command
+--- @param input table|nil The input table for the update_profile command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_profile(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-profile" }, input)
 end
 
 --- Updates the file transfer protocol-enabled server's properties after that server has been created
---- @param input table The input table for the update_server command
+--- @param input table|nil The input table for the update_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_server(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-server" }, input)
 end
 
 --- Assigns new properties to a user
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-user" }, input)
 end
 
 --- Assigns new properties to a web app
---- @param input table The input table for the update_web_app command
+--- @param input table|nil The input table for the update_web_app command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_web_app(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-web-app" }, input)
 end
 
 --- Assigns new customization properties to a web app
---- @param input table The input table for the update_web_app_customization command
+--- @param input table|nil The input table for the update_web_app_customization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_web_app_customization(input)
 	return common.execute_aws_command_with_input({ "transfer", "update-web-app-customization" }, input)

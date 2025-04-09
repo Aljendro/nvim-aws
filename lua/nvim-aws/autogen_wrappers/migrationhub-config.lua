@@ -8,28 +8,28 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This API sets up the home region for the calling account only
---- @param input table The input table for the create_home_region_control command
+--- @param input table|nil The input table for the create_home_region_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_home_region_control(input)
 	return common.execute_aws_command_with_input({ "migrationhub-config", "create-home-region-control" }, input)
 end
 
 --- This operation deletes the home region configuration for the calling account
---- @param input table The input table for the delete_home_region_control command
+--- @param input table|nil The input table for the delete_home_region_control command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_home_region_control(input)
 	return common.execute_aws_command_with_input({ "migrationhub-config", "delete-home-region-control" }, input)
 end
 
 --- This API permits filtering on the ControlId and HomeRegion fields
---- @param input table The input table for the describe_home_region_controls command
+--- @param input table|nil The input table for the describe_home_region_controls command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_home_region_controls(input)
 	return common.execute_aws_command_with_input({ "migrationhub-config", "describe-home-region-controls" }, input)
 end
 
 --- Returns the calling account’s home region, if configured
---- @param input table The input table for the get_home_region command
+--- @param input table|nil The input table for the get_home_region command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_home_region(input)
 	return common.execute_aws_command_with_input({ "migrationhub-config", "get-home-region" }, input)

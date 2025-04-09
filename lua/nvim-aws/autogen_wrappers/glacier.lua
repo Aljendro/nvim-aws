@@ -8,231 +8,231 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This operation aborts a multipart upload identified by the upload ID
---- @param input table The input table for the abort_multipart_upload command
+--- @param input table|nil The input table for the abort_multipart_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.abort_multipart_upload(input)
 	return common.execute_aws_command_with_input({ "glacier", "abort-multipart-upload" }, input)
 end
 
 --- This operation aborts the vault locking process if the vault lock is not in the Locked state
---- @param input table The input table for the abort_vault_lock command
+--- @param input table|nil The input table for the abort_vault_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.abort_vault_lock(input)
 	return common.execute_aws_command_with_input({ "glacier", "abort-vault-lock" }, input)
 end
 
 --- This operation adds the specified tags to a vault
---- @param input table The input table for the add_tags_to_vault command
+--- @param input table|nil The input table for the add_tags_to_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_tags_to_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "add-tags-to-vault" }, input)
 end
 
 --- You call this operation to inform Amazon S3 Glacier (Glacier) that all the archive parts have been uploaded and that Glacier can now assemble the archive from the uploaded parts
---- @param input table The input table for the complete_multipart_upload command
+--- @param input table|nil The input table for the complete_multipart_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_multipart_upload(input)
 	return common.execute_aws_command_with_input({ "glacier", "complete-multipart-upload" }, input)
 end
 
 --- This operation completes the vault locking process by transitioning the vault lock from the InProgress state to the Locked state, which causes the vault lock policy to become unchangeable
---- @param input table The input table for the complete_vault_lock command
+--- @param input table|nil The input table for the complete_vault_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_vault_lock(input)
 	return common.execute_aws_command_with_input({ "glacier", "complete-vault-lock" }, input)
 end
 
 --- This operation creates a new vault with the specified name
---- @param input table The input table for the create_vault command
+--- @param input table|nil The input table for the create_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "create-vault" }, input)
 end
 
 --- This operation deletes an archive from a vault
---- @param input table The input table for the delete_archive command
+--- @param input table|nil The input table for the delete_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_archive(input)
 	return common.execute_aws_command_with_input({ "glacier", "delete-archive" }, input)
 end
 
 --- This operation deletes a vault
---- @param input table The input table for the delete_vault command
+--- @param input table|nil The input table for the delete_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "delete-vault" }, input)
 end
 
 --- This operation deletes the access policy associated with the specified vault
---- @param input table The input table for the delete_vault_access_policy command
+--- @param input table|nil The input table for the delete_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "glacier", "delete-vault-access-policy" }, input)
 end
 
 --- This operation deletes the notification configuration set for a vault
---- @param input table The input table for the delete_vault_notifications command
+--- @param input table|nil The input table for the delete_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "glacier", "delete-vault-notifications" }, input)
 end
 
 --- This operation returns information about a job you previously initiated, including the job initiation date, the user who initiated the job, the job status code/message and the Amazon SNS topic to notify after Amazon S3 Glacier (Glacier) completes the job
---- @param input table The input table for the describe_job command
+--- @param input table|nil The input table for the describe_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job(input)
 	return common.execute_aws_command_with_input({ "glacier", "describe-job" }, input)
 end
 
 --- This operation returns information about a vault, including the vault's Amazon Resource Name (ARN), the date the vault was created, the number of archives it contains, and the total size of all the archives in the vault
---- @param input table The input table for the describe_vault command
+--- @param input table|nil The input table for the describe_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "describe-vault" }, input)
 end
 
 --- This operation returns the current data retrieval policy for the account and region specified in the GET request
---- @param input table The input table for the get_data_retrieval_policy command
+--- @param input table|nil The input table for the get_data_retrieval_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_retrieval_policy(input)
 	return common.execute_aws_command_with_input({ "glacier", "get-data-retrieval-policy" }, input)
 end
 
 --- This operation downloads the output of the job you initiated using InitiateJob
---- @param input table The input table for the get_job_output command
+--- @param input table|nil The input table for the get_job_output command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_output(input)
 	return common.execute_aws_command_with_input({ "glacier", "get-job-output" }, input)
 end
 
 --- This operation retrieves the access-policy subresource set on the vault; for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy)
---- @param input table The input table for the get_vault_access_policy command
+--- @param input table|nil The input table for the get_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "glacier", "get-vault-access-policy" }, input)
 end
 
 --- This operation retrieves the following attributes from the lock-policy subresource set on the specified vault: The vault lock policy set on the vault
---- @param input table The input table for the get_vault_lock command
+--- @param input table|nil The input table for the get_vault_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vault_lock(input)
 	return common.execute_aws_command_with_input({ "glacier", "get-vault-lock" }, input)
 end
 
 --- This operation retrieves the notification-configuration subresource of the specified vault
---- @param input table The input table for the get_vault_notifications command
+--- @param input table|nil The input table for the get_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "glacier", "get-vault-notifications" }, input)
 end
 
 --- This operation initiates a job of the specified type, which can be a select, an archival retrieval, or a vault retrieval
---- @param input table The input table for the initiate_job command
+--- @param input table|nil The input table for the initiate_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_job(input)
 	return common.execute_aws_command_with_input({ "glacier", "initiate-job" }, input)
 end
 
 --- This operation initiates a multipart upload
---- @param input table The input table for the initiate_multipart_upload command
+--- @param input table|nil The input table for the initiate_multipart_upload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_multipart_upload(input)
 	return common.execute_aws_command_with_input({ "glacier", "initiate-multipart-upload" }, input)
 end
 
 --- This operation initiates the vault locking process by doing the following: Installing a vault lock policy on the specified vault
---- @param input table The input table for the initiate_vault_lock command
+--- @param input table|nil The input table for the initiate_vault_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_vault_lock(input)
 	return common.execute_aws_command_with_input({ "glacier", "initiate-vault-lock" }, input)
 end
 
 --- This operation lists jobs for a vault, including jobs that are in-progress and jobs that have recently finished
---- @param input table The input table for the list_jobs command
+--- @param input table|nil The input table for the list_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-jobs" }, input)
 end
 
 --- This operation lists in-progress multipart uploads for the specified vault
---- @param input table The input table for the list_multipart_uploads command
+--- @param input table|nil The input table for the list_multipart_uploads command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_multipart_uploads(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-multipart-uploads" }, input)
 end
 
 --- This operation lists the parts of an archive that have been uploaded in a specific multipart upload
---- @param input table The input table for the list_parts command
+--- @param input table|nil The input table for the list_parts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_parts(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-parts" }, input)
 end
 
 --- This operation lists the provisioned capacity units for the specified AWS account
---- @param input table The input table for the list_provisioned_capacity command
+--- @param input table|nil The input table for the list_provisioned_capacity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_provisioned_capacity(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-provisioned-capacity" }, input)
 end
 
 --- This operation lists all the tags attached to a vault
---- @param input table The input table for the list_tags_for_vault command
+--- @param input table|nil The input table for the list_tags_for_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-tags-for-vault" }, input)
 end
 
 --- This operation lists all vaults owned by the calling user's account
---- @param input table The input table for the list_vaults command
+--- @param input table|nil The input table for the list_vaults command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vaults(input)
 	return common.execute_aws_command_with_input({ "glacier", "list-vaults" }, input)
 end
 
 --- This operation purchases a provisioned capacity unit for an AWS account
---- @param input table The input table for the purchase_provisioned_capacity command
+--- @param input table|nil The input table for the purchase_provisioned_capacity command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purchase_provisioned_capacity(input)
 	return common.execute_aws_command_with_input({ "glacier", "purchase-provisioned-capacity" }, input)
 end
 
 --- This operation removes one or more tags from the set of tags attached to a vault
---- @param input table The input table for the remove_tags_from_vault command
+--- @param input table|nil The input table for the remove_tags_from_vault command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_tags_from_vault(input)
 	return common.execute_aws_command_with_input({ "glacier", "remove-tags-from-vault" }, input)
 end
 
 --- This operation sets and then enacts a data retrieval policy in the region specified in the PUT request
---- @param input table The input table for the set_data_retrieval_policy command
+--- @param input table|nil The input table for the set_data_retrieval_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_data_retrieval_policy(input)
 	return common.execute_aws_command_with_input({ "glacier", "set-data-retrieval-policy" }, input)
 end
 
 --- This operation configures an access policy for a vault and will overwrite an existing policy
---- @param input table The input table for the set_vault_access_policy command
+--- @param input table|nil The input table for the set_vault_access_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_vault_access_policy(input)
 	return common.execute_aws_command_with_input({ "glacier", "set-vault-access-policy" }, input)
 end
 
 --- This operation configures notifications that will be sent when specific events happen to a vault
---- @param input table The input table for the set_vault_notifications command
+--- @param input table|nil The input table for the set_vault_notifications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_vault_notifications(input)
 	return common.execute_aws_command_with_input({ "glacier", "set-vault-notifications" }, input)
 end
 
 --- This operation adds an archive to a vault
---- @param input table The input table for the upload_archive command
+--- @param input table|nil The input table for the upload_archive command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_archive(input)
 	return common.execute_aws_command_with_input({ "glacier", "upload-archive" }, input)
 end
 
 --- This operation uploads a part of an archive
---- @param input table The input table for the upload_multipart_part command
+--- @param input table|nil The input table for the upload_multipart_part command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_multipart_part(input)
 	return common.execute_aws_command_with_input({ "glacier", "upload-multipart-part" }, input)

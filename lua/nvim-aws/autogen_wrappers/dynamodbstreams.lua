@@ -8,28 +8,28 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the composition of its shards, and its corresponding DynamoDB table
---- @param input table The input table for the describe_stream command
+--- @param input table|nil The input table for the describe_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stream(input)
 	return common.execute_aws_command_with_input({ "dynamodbstreams", "describe-stream" }, input)
 end
 
 --- Retrieves the stream records from a given shard
---- @param input table The input table for the get_records command
+--- @param input table|nil The input table for the get_records command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_records(input)
 	return common.execute_aws_command_with_input({ "dynamodbstreams", "get-records" }, input)
 end
 
 --- Returns a shard iterator
---- @param input table The input table for the get_shard_iterator command
+--- @param input table|nil The input table for the get_shard_iterator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_shard_iterator(input)
 	return common.execute_aws_command_with_input({ "dynamodbstreams", "get-shard-iterator" }, input)
 end
 
 --- Returns an array of stream ARNs associated with the current account and endpoint
---- @param input table The input table for the list_streams command
+--- @param input table|nil The input table for the list_streams command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_streams(input)
 	return common.execute_aws_command_with_input({ "dynamodbstreams", "list-streams" }, input)

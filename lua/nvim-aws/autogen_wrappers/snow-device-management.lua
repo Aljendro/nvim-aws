@@ -8,77 +8,77 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Sends a cancel request for a specified task
---- @param input table The input table for the cancel_task command
+--- @param input table|nil The input table for the cancel_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_task(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "cancel-task" }, input)
 end
 
 --- Instructs one or more devices to start a task, such as unlocking or rebooting
---- @param input table The input table for the create_task command
+--- @param input table|nil The input table for the create_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_task(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "create-task" }, input)
 end
 
 --- Checks device-specific information, such as the device type, software version, IP addresses, and lock status
---- @param input table The input table for the describe_device command
+--- @param input table|nil The input table for the describe_device command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_device(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "describe-device" }, input)
 end
 
 --- Checks the current state of the Amazon EC2 instances
---- @param input table The input table for the describe_device_ec2_instances command
+--- @param input table|nil The input table for the describe_device_ec2_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_device_ec2_instances(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "describe-device-ec2-instances" }, input)
 end
 
 --- Checks the metadata for a given task on a device
---- @param input table The input table for the describe_task command
+--- @param input table|nil The input table for the describe_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_task(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "describe-task" }, input)
 end
 
 --- Returns a list of the Amazon Web Services resources available for a device
---- @param input table The input table for the list_device_resources command
+--- @param input table|nil The input table for the list_device_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_device_resources(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "list-device-resources" }, input)
 end
 
 --- Returns a list of all devices on your Amazon Web Services account that have Amazon Web Services Snow Device Management enabled in the Amazon Web Services Region where the command is run
---- @param input table The input table for the list_devices command
+--- @param input table|nil The input table for the list_devices command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_devices(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "list-devices" }, input)
 end
 
 --- Returns a list of tags for a managed device or task
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "list-tags-for-resource" }, input)
 end
 
 --- Returns a list of tasks that can be filtered by state
---- @param input table The input table for the list_tasks command
+--- @param input table|nil The input table for the list_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tasks(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "list-tasks" }, input)
 end
 
 --- Adds or replaces tags on a device or task
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "tag-resource" }, input)
 end
 
 --- Removes a tag from a device or task
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "untag-resource" }, input)

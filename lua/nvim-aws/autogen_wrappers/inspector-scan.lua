@@ -8,7 +8,7 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Scans a provided CycloneDX 1
---- @param input table The input table for the scan_sbom command
+--- @param input table|nil The input table for the scan_sbom command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.scan_sbom(input)
 	return common.execute_aws_command_with_input({ "inspector-scan", "scan-sbom" }, input)

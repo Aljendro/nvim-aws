@@ -8,231 +8,231 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds a workload to a component
---- @param input table The input table for the add_workload command
+--- @param input table|nil The input table for the add_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_workload(input)
 	return common.execute_aws_command_with_input({ "application-insights", "add-workload" }, input)
 end
 
 --- Adds an application that is created from a resource group
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "application-insights", "create-application" }, input)
 end
 
 --- Creates a custom component by grouping similar standalone instances to monitor
---- @param input table The input table for the create_component command
+--- @param input table|nil The input table for the create_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_component(input)
 	return common.execute_aws_command_with_input({ "application-insights", "create-component" }, input)
 end
 
 --- Adds an log pattern to a LogPatternSet
---- @param input table The input table for the create_log_pattern command
+--- @param input table|nil The input table for the create_log_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_log_pattern(input)
 	return common.execute_aws_command_with_input({ "application-insights", "create-log-pattern" }, input)
 end
 
 --- Removes the specified application from monitoring
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "application-insights", "delete-application" }, input)
 end
 
 --- Ungroups a custom component
---- @param input table The input table for the delete_component command
+--- @param input table|nil The input table for the delete_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_component(input)
 	return common.execute_aws_command_with_input({ "application-insights", "delete-component" }, input)
 end
 
 --- Removes the specified log pattern from a LogPatternSet
---- @param input table The input table for the delete_log_pattern command
+--- @param input table|nil The input table for the delete_log_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_log_pattern(input)
 	return common.execute_aws_command_with_input({ "application-insights", "delete-log-pattern" }, input)
 end
 
 --- Describes the application
---- @param input table The input table for the describe_application command
+--- @param input table|nil The input table for the describe_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-application" }, input)
 end
 
 --- Describes a component and lists the resources that are grouped together in a component
---- @param input table The input table for the describe_component command
+--- @param input table|nil The input table for the describe_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_component(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-component" }, input)
 end
 
 --- Describes the monitoring configuration of the component
---- @param input table The input table for the describe_component_configuration command
+--- @param input table|nil The input table for the describe_component_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_component_configuration(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-component-configuration" }, input)
 end
 
 --- Describes the recommended monitoring configuration of the component
---- @param input table The input table for the describe_component_configuration_recommendation command
+--- @param input table|nil The input table for the describe_component_configuration_recommendation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_component_configuration_recommendation(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-component-configuration-recommendation" }, input)
 end
 
 --- Describe a specific log pattern from a LogPatternSet
---- @param input table The input table for the describe_log_pattern command
+--- @param input table|nil The input table for the describe_log_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_log_pattern(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-log-pattern" }, input)
 end
 
 --- Describes an anomaly or error with the application
---- @param input table The input table for the describe_observation command
+--- @param input table|nil The input table for the describe_observation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_observation(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-observation" }, input)
 end
 
 --- Describes an application problem
---- @param input table The input table for the describe_problem command
+--- @param input table|nil The input table for the describe_problem command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_problem(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-problem" }, input)
 end
 
 --- Describes the anomalies or errors associated with the problem
---- @param input table The input table for the describe_problem_observations command
+--- @param input table|nil The input table for the describe_problem_observations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_problem_observations(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-problem-observations" }, input)
 end
 
 --- Describes a workload and its configuration
---- @param input table The input table for the describe_workload command
+--- @param input table|nil The input table for the describe_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workload(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-workload" }, input)
 end
 
 --- Lists the IDs of the applications that you are monitoring
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-applications" }, input)
 end
 
 --- Lists the auto-grouped, standalone, and custom components of the application
---- @param input table The input table for the list_components command
+--- @param input table|nil The input table for the list_components command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_components(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-components" }, input)
 end
 
 --- Lists the INFO, WARN, and ERROR events for periodic configuration updates performed by Application Insights
---- @param input table The input table for the list_configuration_history command
+--- @param input table|nil The input table for the list_configuration_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_history(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-configuration-history" }, input)
 end
 
 --- Lists the log pattern sets in the specific application
---- @param input table The input table for the list_log_pattern_sets command
+--- @param input table|nil The input table for the list_log_pattern_sets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_log_pattern_sets(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-log-pattern-sets" }, input)
 end
 
 --- Lists the log patterns in the specific log LogPatternSet
---- @param input table The input table for the list_log_patterns command
+--- @param input table|nil The input table for the list_log_patterns command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_log_patterns(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-log-patterns" }, input)
 end
 
 --- Lists the problems with your application
---- @param input table The input table for the list_problems command
+--- @param input table|nil The input table for the list_problems command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_problems(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-problems" }, input)
 end
 
 --- Retrieve a list of the tags (keys and values) that are associated with a specified application
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-tags-for-resource" }, input)
 end
 
 --- Lists the workloads that are configured on a given component
---- @param input table The input table for the list_workloads command
+--- @param input table|nil The input table for the list_workloads command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workloads(input)
 	return common.execute_aws_command_with_input({ "application-insights", "list-workloads" }, input)
 end
 
 --- Remove workload from a component
---- @param input table The input table for the remove_workload command
+--- @param input table|nil The input table for the remove_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_workload(input)
 	return common.execute_aws_command_with_input({ "application-insights", "remove-workload" }, input)
 end
 
 --- Add one or more tags (keys and values) to a specified application
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "application-insights", "tag-resource" }, input)
 end
 
 --- Remove one or more tags (keys and values) from a specified application
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "application-insights", "untag-resource" }, input)
 end
 
 --- Updates the application
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-application" }, input)
 end
 
 --- Updates the custom component name and/or the list of resources that make up the component
---- @param input table The input table for the update_component command
+--- @param input table|nil The input table for the update_component command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_component(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-component" }, input)
 end
 
 --- Updates the monitoring configurations for the component
---- @param input table The input table for the update_component_configuration command
+--- @param input table|nil The input table for the update_component_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_component_configuration(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-component-configuration" }, input)
 end
 
 --- Adds a log pattern to a LogPatternSet
---- @param input table The input table for the update_log_pattern command
+--- @param input table|nil The input table for the update_log_pattern command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_log_pattern(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-log-pattern" }, input)
 end
 
 --- Updates the visibility of the problem or specifies the problem as RESOLVED
---- @param input table The input table for the update_problem command
+--- @param input table|nil The input table for the update_problem command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_problem(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-problem" }, input)
 end
 
 --- Adds a workload to a component
---- @param input table The input table for the update_workload command
+--- @param input table|nil The input table for the update_workload command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workload(input)
 	return common.execute_aws_command_with_input({ "application-insights", "update-workload" }, input)

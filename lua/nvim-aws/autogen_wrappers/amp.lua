@@ -8,98 +8,98 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- The CreateScraper operation creates a scraper to collect metrics
---- @param input table The input table for the create_scraper command
+--- @param input table|nil The input table for the create_scraper command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "create-scraper" }, input)
 end
 
 --- Creates a Prometheus workspace
---- @param input table The input table for the create_workspace command
+--- @param input table|nil The input table for the create_workspace command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "create-workspace" }, input)
 end
 
 --- The DeleteScraper operation deletes one scraper, and stops any metrics collection that the scraper performs
---- @param input table The input table for the delete_scraper command
+--- @param input table|nil The input table for the delete_scraper command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "delete-scraper" }, input)
 end
 
 --- Deletes an existing workspace
---- @param input table The input table for the delete_workspace command
+--- @param input table|nil The input table for the delete_workspace command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "delete-workspace" }, input)
 end
 
 --- The DescribeScraper operation displays information about an existing scraper
---- @param input table The input table for the describe_scraper command
+--- @param input table|nil The input table for the describe_scraper command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "describe-scraper" }, input)
 end
 
 --- Returns information about an existing workspace
---- @param input table The input table for the describe_workspace command
+--- @param input table|nil The input table for the describe_workspace command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "describe-workspace" }, input)
 end
 
 --- The GetDefaultScraperConfiguration operation returns the default scraper configuration used when Amazon EKS creates a scraper for you
---- @param input table The input table for the get_default_scraper_configuration command
+--- @param input table|nil The input table for the get_default_scraper_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_default_scraper_configuration(input)
 	return common.execute_aws_command_with_input({ "amp", "get-default-scraper-configuration" }, input)
 end
 
 --- The ListScrapers operation lists all of the scrapers in your account
---- @param input table The input table for the list_scrapers command
+--- @param input table|nil The input table for the list_scrapers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scrapers(input)
 	return common.execute_aws_command_with_input({ "amp", "list-scrapers" }, input)
 end
 
 --- The ListTagsForResource operation returns the tags that are associated with an Amazon Managed Service for Prometheus resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "list-tags-for-resource" }, input)
 end
 
 --- Lists all of the Amazon Managed Service for Prometheus workspaces in your account
---- @param input table The input table for the list_workspaces command
+--- @param input table|nil The input table for the list_workspaces command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workspaces(input)
 	return common.execute_aws_command_with_input({ "amp", "list-workspaces" }, input)
 end
 
 --- The TagResource operation associates tags with an Amazon Managed Service for Prometheus resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "tag-resource" }, input)
 end
 
 --- Removes the specified tags from an Amazon Managed Service for Prometheus resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "untag-resource" }, input)
 end
 
 --- Updates an existing scraper
---- @param input table The input table for the update_scraper command
+--- @param input table|nil The input table for the update_scraper command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "update-scraper" }, input)
 end
 
 --- Updates the alias of an existing workspace
---- @param input table The input table for the update_workspace_alias command
+--- @param input table|nil The input table for the update_workspace_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workspace_alias(input)
 	return common.execute_aws_command_with_input({ "amp", "update-workspace-alias" }, input)

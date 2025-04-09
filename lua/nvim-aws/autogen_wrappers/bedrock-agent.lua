@@ -8,441 +8,441 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Makes an agent a collaborator for another agent
---- @param input table The input table for the associate_agent_collaborator command
+--- @param input table|nil The input table for the associate_agent_collaborator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "associate-agent-collaborator" }, input)
 end
 
 --- Associates a knowledge base with an agent
---- @param input table The input table for the associate_agent_knowledge_base command
+--- @param input table|nil The input table for the associate_agent_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "associate-agent-knowledge-base" }, input)
 end
 
 --- Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers
---- @param input table The input table for the create_agent command
+--- @param input table|nil The input table for the create_agent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent" }, input)
 end
 
 --- Creates an action group for an agent
---- @param input table The input table for the create_agent_action_group command
+--- @param input table|nil The input table for the create_agent_action_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent-action-group" }, input)
 end
 
 --- Creates an alias of an agent that can be used to deploy the agent
---- @param input table The input table for the create_agent_alias command
+--- @param input table|nil The input table for the create_agent_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent-alias" }, input)
 end
 
 --- Connects a knowledge base to a data source
---- @param input table The input table for the create_data_source command
+--- @param input table|nil The input table for the create_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-data-source" }, input)
 end
 
 --- Creates a prompt flow that you can use to send an input through various steps to yield an output
---- @param input table The input table for the create_flow command
+--- @param input table|nil The input table for the create_flow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-flow" }, input)
 end
 
 --- Creates a knowledge base
---- @param input table The input table for the create_knowledge_base command
+--- @param input table|nil The input table for the create_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-knowledge-base" }, input)
 end
 
 --- Creates a prompt in your prompt library that you can add to a flow
---- @param input table The input table for the create_prompt command
+--- @param input table|nil The input table for the create_prompt command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-prompt" }, input)
 end
 
 --- Creates a static snapshot of your prompt that can be deployed to production
---- @param input table The input table for the create_prompt_version command
+--- @param input table|nil The input table for the create_prompt_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prompt_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-prompt-version" }, input)
 end
 
 --- Deletes an agent
---- @param input table The input table for the delete_agent command
+--- @param input table|nil The input table for the delete_agent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent" }, input)
 end
 
 --- Deletes an action group in an agent
---- @param input table The input table for the delete_agent_action_group command
+--- @param input table|nil The input table for the delete_agent_action_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-action-group" }, input)
 end
 
 --- Deletes an alias of an agent
---- @param input table The input table for the delete_agent_alias command
+--- @param input table|nil The input table for the delete_agent_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-alias" }, input)
 end
 
 --- Deletes a version of an agent
---- @param input table The input table for the delete_agent_version command
+--- @param input table|nil The input table for the delete_agent_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-version" }, input)
 end
 
 --- Deletes a data source from a knowledge base
---- @param input table The input table for the delete_data_source command
+--- @param input table|nil The input table for the delete_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-data-source" }, input)
 end
 
 --- Deletes a flow
---- @param input table The input table for the delete_flow command
+--- @param input table|nil The input table for the delete_flow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-flow" }, input)
 end
 
 --- Deletes a knowledge base
---- @param input table The input table for the delete_knowledge_base command
+--- @param input table|nil The input table for the delete_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-knowledge-base" }, input)
 end
 
 --- Deletes documents from a data source and syncs the changes to the knowledge base that is connected to it
---- @param input table The input table for the delete_knowledge_base_documents command
+--- @param input table|nil The input table for the delete_knowledge_base_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-knowledge-base-documents" }, input)
 end
 
 --- Deletes a prompt or a version of it, depending on whether you include the promptVersion field or not
---- @param input table The input table for the delete_prompt command
+--- @param input table|nil The input table for the delete_prompt command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-prompt" }, input)
 end
 
 --- Disassociates an agent collaborator
---- @param input table The input table for the disassociate_agent_collaborator command
+--- @param input table|nil The input table for the disassociate_agent_collaborator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "disassociate-agent-collaborator" }, input)
 end
 
 --- Disassociates a knowledge base from an agent
---- @param input table The input table for the disassociate_agent_knowledge_base command
+--- @param input table|nil The input table for the disassociate_agent_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "disassociate-agent-knowledge-base" }, input)
 end
 
 --- Gets information about an agent
---- @param input table The input table for the get_agent command
+--- @param input table|nil The input table for the get_agent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent" }, input)
 end
 
 --- Gets information about an action group for an agent
---- @param input table The input table for the get_agent_action_group command
+--- @param input table|nil The input table for the get_agent_action_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-action-group" }, input)
 end
 
 --- Gets information about an alias of an agent
---- @param input table The input table for the get_agent_alias command
+--- @param input table|nil The input table for the get_agent_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-alias" }, input)
 end
 
 --- Retrieves information about an agent's collaborator
---- @param input table The input table for the get_agent_collaborator command
+--- @param input table|nil The input table for the get_agent_collaborator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-collaborator" }, input)
 end
 
 --- Gets information about a knowledge base associated with an agent
---- @param input table The input table for the get_agent_knowledge_base command
+--- @param input table|nil The input table for the get_agent_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-knowledge-base" }, input)
 end
 
 --- Gets details about a version of an agent
---- @param input table The input table for the get_agent_version command
+--- @param input table|nil The input table for the get_agent_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-version" }, input)
 end
 
 --- Gets information about a data source
---- @param input table The input table for the get_data_source command
+--- @param input table|nil The input table for the get_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-data-source" }, input)
 end
 
 --- Retrieves information about a flow
---- @param input table The input table for the get_flow command
+--- @param input table|nil The input table for the get_flow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-flow" }, input)
 end
 
 --- Gets information about a data ingestion job
---- @param input table The input table for the get_ingestion_job command
+--- @param input table|nil The input table for the get_ingestion_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-ingestion-job" }, input)
 end
 
 --- Gets information about a knoweldge base
---- @param input table The input table for the get_knowledge_base command
+--- @param input table|nil The input table for the get_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-knowledge-base" }, input)
 end
 
 --- Retrieves specific documents from a data source that is connected to a knowledge base
---- @param input table The input table for the get_knowledge_base_documents command
+--- @param input table|nil The input table for the get_knowledge_base_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-knowledge-base-documents" }, input)
 end
 
 --- Retrieves information about the working draft (DRAFT version) of a prompt or a version of it, depending on whether you include the promptVersion field or not
---- @param input table The input table for the get_prompt command
+--- @param input table|nil The input table for the get_prompt command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-prompt" }, input)
 end
 
 --- Ingests documents directly into the knowledge base that is connected to the data source
---- @param input table The input table for the ingest_knowledge_base_documents command
+--- @param input table|nil The input table for the ingest_knowledge_base_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.ingest_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "ingest-knowledge-base-documents" }, input)
 end
 
 --- Lists the action groups for an agent and information about each one
---- @param input table The input table for the list_agent_action_groups command
+--- @param input table|nil The input table for the list_agent_action_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_action_groups(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-action-groups" }, input)
 end
 
 --- Lists the aliases of an agent and information about each one
---- @param input table The input table for the list_agent_aliases command
+--- @param input table|nil The input table for the list_agent_aliases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_aliases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-aliases" }, input)
 end
 
 --- Retrieve a list of an agent's collaborators
---- @param input table The input table for the list_agent_collaborators command
+--- @param input table|nil The input table for the list_agent_collaborators command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_collaborators(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-collaborators" }, input)
 end
 
 --- Lists knowledge bases associated with an agent and information about each one
---- @param input table The input table for the list_agent_knowledge_bases command
+--- @param input table|nil The input table for the list_agent_knowledge_bases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-knowledge-bases" }, input)
 end
 
 --- Lists the versions of an agent and information about each version
---- @param input table The input table for the list_agent_versions command
+--- @param input table|nil The input table for the list_agent_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_versions(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-versions" }, input)
 end
 
 --- Lists the agents belonging to an account and information about each agent
---- @param input table The input table for the list_agents command
+--- @param input table|nil The input table for the list_agents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agents" }, input)
 end
 
 --- Lists the data sources in a knowledge base and information about each one
---- @param input table The input table for the list_data_sources command
+--- @param input table|nil The input table for the list_data_sources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sources(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-data-sources" }, input)
 end
 
 --- Returns a list of flows and information about each flow
---- @param input table The input table for the list_flows command
+--- @param input table|nil The input table for the list_flows command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flows(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-flows" }, input)
 end
 
 --- Lists the data ingestion jobs for a data source
---- @param input table The input table for the list_ingestion_jobs command
+--- @param input table|nil The input table for the list_ingestion_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingestion_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-ingestion-jobs" }, input)
 end
 
 --- Retrieves all the documents contained in a data source that is connected to a knowledge base
---- @param input table The input table for the list_knowledge_base_documents command
+--- @param input table|nil The input table for the list_knowledge_base_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-knowledge-base-documents" }, input)
 end
 
 --- Lists the knowledge bases in an account
---- @param input table The input table for the list_knowledge_bases command
+--- @param input table|nil The input table for the list_knowledge_bases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-knowledge-bases" }, input)
 end
 
 --- Returns either information about the working draft (DRAFT version) of each prompt in an account, or information about of all versions of a prompt, depending on whether you include the promptIdentifier field or not
---- @param input table The input table for the list_prompts command
+--- @param input table|nil The input table for the list_prompts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_prompts(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-prompts" }, input)
 end
 
 --- List all the tags for the resource you specify
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-tags-for-resource" }, input)
 end
 
 --- Creates a DRAFT version of the agent that can be used for internal testing
---- @param input table The input table for the prepare_agent command
+--- @param input table|nil The input table for the prepare_agent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.prepare_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "prepare-agent" }, input)
 end
 
 --- Prepares the DRAFT version of a flow so that it can be invoked
---- @param input table The input table for the prepare_flow command
+--- @param input table|nil The input table for the prepare_flow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.prepare_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "prepare-flow" }, input)
 end
 
 --- Begins a data ingestion job
---- @param input table The input table for the start_ingestion_job command
+--- @param input table|nil The input table for the start_ingestion_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "start-ingestion-job" }, input)
 end
 
 --- Stops a currently running data ingestion job
---- @param input table The input table for the stop_ingestion_job command
+--- @param input table|nil The input table for the stop_ingestion_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "stop-ingestion-job" }, input)
 end
 
 --- Associate tags with a resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "tag-resource" }, input)
 end
 
 --- Remove tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "untag-resource" }, input)
 end
 
 --- Updates the configuration of an agent
---- @param input table The input table for the update_agent command
+--- @param input table|nil The input table for the update_agent command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent" }, input)
 end
 
 --- Updates the configuration for an action group for an agent
---- @param input table The input table for the update_agent_action_group command
+--- @param input table|nil The input table for the update_agent_action_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-action-group" }, input)
 end
 
 --- Updates configurations for an alias of an agent
---- @param input table The input table for the update_agent_alias command
+--- @param input table|nil The input table for the update_agent_alias command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-alias" }, input)
 end
 
 --- Updates an agent's collaborator
---- @param input table The input table for the update_agent_collaborator command
+--- @param input table|nil The input table for the update_agent_collaborator command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-collaborator" }, input)
 end
 
 --- Updates the configuration for a knowledge base that has been associated with an agent
---- @param input table The input table for the update_agent_knowledge_base command
+--- @param input table|nil The input table for the update_agent_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-knowledge-base" }, input)
 end
 
 --- Updates the configurations for a data source connector
---- @param input table The input table for the update_data_source command
+--- @param input table|nil The input table for the update_data_source command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-data-source" }, input)
 end
 
 --- Modifies a flow
---- @param input table The input table for the update_flow command
+--- @param input table|nil The input table for the update_flow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-flow" }, input)
 end
 
 --- Updates the configuration of a knowledge base with the fields that you specify
---- @param input table The input table for the update_knowledge_base command
+--- @param input table|nil The input table for the update_knowledge_base command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-knowledge-base" }, input)
 end
 
 --- Modifies a prompt in your prompt library
---- @param input table The input table for the update_prompt command
+--- @param input table|nil The input table for the update_prompt command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-prompt" }, input)
 end
 
 --- Validates the definition of a flow
---- @param input table The input table for the validate_flow_definition command
+--- @param input table|nil The input table for the validate_flow_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_flow_definition(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "validate-flow-definition" }, input)

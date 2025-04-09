@@ -8,238 +8,238 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Accepts the transfer of a domain from another Amazon Web Services account to the currentAmazon Web Services account
---- @param input table The input table for the accept_domain_transfer_from_another_aws_account command
+--- @param input table|nil The input table for the accept_domain_transfer_from_another_aws_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_domain_transfer_from_another_aws_account(input)
 	return common.execute_aws_command_with_input({ "route53domains", "accept-domain-transfer-from-another-aws-account" }, input)
 end
 
 --- Creates a delegation signer (DS) record in the registry zone for this domain name
---- @param input table The input table for the associate_delegation_signer_to_domain command
+--- @param input table|nil The input table for the associate_delegation_signer_to_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_delegation_signer_to_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "associate-delegation-signer-to-domain" }, input)
 end
 
 --- Cancels the transfer of a domain from the current Amazon Web Services account to another Amazon Web Services account
---- @param input table The input table for the cancel_domain_transfer_to_another_aws_account command
+--- @param input table|nil The input table for the cancel_domain_transfer_to_another_aws_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_domain_transfer_to_another_aws_account(input)
 	return common.execute_aws_command_with_input({ "route53domains", "cancel-domain-transfer-to-another-aws-account" }, input)
 end
 
 --- This operation checks the availability of one domain name
---- @param input table The input table for the check_domain_availability command
+--- @param input table|nil The input table for the check_domain_availability command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_domain_availability(input)
 	return common.execute_aws_command_with_input({ "route53domains", "check-domain-availability" }, input)
 end
 
 --- Checks whether a domain name can be transferred to Amazon Route 53
---- @param input table The input table for the check_domain_transferability command
+--- @param input table|nil The input table for the check_domain_transferability command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_domain_transferability(input)
 	return common.execute_aws_command_with_input({ "route53domains", "check-domain-transferability" }, input)
 end
 
 --- This operation deletes the specified domain
---- @param input table The input table for the delete_domain command
+--- @param input table|nil The input table for the delete_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "delete-domain" }, input)
 end
 
 --- This operation deletes the specified tags for a domain
---- @param input table The input table for the delete_tags_for_domain command
+--- @param input table|nil The input table for the delete_tags_for_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags_for_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "delete-tags-for-domain" }, input)
 end
 
 --- This operation disables automatic renewal of domain registration for the specified domain
---- @param input table The input table for the disable_domain_auto_renew command
+--- @param input table|nil The input table for the disable_domain_auto_renew command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_domain_auto_renew(input)
 	return common.execute_aws_command_with_input({ "route53domains", "disable-domain-auto-renew" }, input)
 end
 
 --- This operation removes the transfer lock on the domain (specifically the clientTransferProhibited status) to allow domain transfers
---- @param input table The input table for the disable_domain_transfer_lock command
+--- @param input table|nil The input table for the disable_domain_transfer_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_domain_transfer_lock(input)
 	return common.execute_aws_command_with_input({ "route53domains", "disable-domain-transfer-lock" }, input)
 end
 
 --- Deletes a delegation signer (DS) record in the registry zone for this domain name
---- @param input table The input table for the disassociate_delegation_signer_from_domain command
+--- @param input table|nil The input table for the disassociate_delegation_signer_from_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_delegation_signer_from_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "disassociate-delegation-signer-from-domain" }, input)
 end
 
 --- This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration expires
---- @param input table The input table for the enable_domain_auto_renew command
+--- @param input table|nil The input table for the enable_domain_auto_renew command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_domain_auto_renew(input)
 	return common.execute_aws_command_with_input({ "route53domains", "enable-domain-auto-renew" }, input)
 end
 
 --- This operation sets the transfer lock on the domain (specifically the clientTransferProhibited status) to prevent domain transfers
---- @param input table The input table for the enable_domain_transfer_lock command
+--- @param input table|nil The input table for the enable_domain_transfer_lock command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_domain_transfer_lock(input)
 	return common.execute_aws_command_with_input({ "route53domains", "enable-domain-transfer-lock" }, input)
 end
 
 --- For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation returns information about whether the registrant contact has responded
---- @param input table The input table for the get_contact_reachability_status command
+--- @param input table|nil The input table for the get_contact_reachability_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_contact_reachability_status(input)
 	return common.execute_aws_command_with_input({ "route53domains", "get-contact-reachability-status" }, input)
 end
 
 --- This operation returns detailed information about a specified domain that is associated with the current Amazon Web Services account
---- @param input table The input table for the get_domain_detail command
+--- @param input table|nil The input table for the get_domain_detail command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_detail(input)
 	return common.execute_aws_command_with_input({ "route53domains", "get-domain-detail" }, input)
 end
 
 --- The GetDomainSuggestions operation returns a list of suggested domain names
---- @param input table The input table for the get_domain_suggestions command
+--- @param input table|nil The input table for the get_domain_suggestions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_suggestions(input)
 	return common.execute_aws_command_with_input({ "route53domains", "get-domain-suggestions" }, input)
 end
 
 --- This operation returns the current status of an operation that is not completed
---- @param input table The input table for the get_operation_detail command
+--- @param input table|nil The input table for the get_operation_detail command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_operation_detail(input)
 	return common.execute_aws_command_with_input({ "route53domains", "get-operation-detail" }, input)
 end
 
 --- This operation returns all the domain names registered with Amazon Route 53 for the current Amazon Web Services account if no filtering conditions are used
---- @param input table The input table for the list_domains command
+--- @param input table|nil The input table for the list_domains command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domains(input)
 	return common.execute_aws_command_with_input({ "route53domains", "list-domains" }, input)
 end
 
 --- Returns information about all of the operations that return an operation ID and that have ever been performed on domains that were registered by the current account
---- @param input table The input table for the list_operations command
+--- @param input table|nil The input table for the list_operations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_operations(input)
 	return common.execute_aws_command_with_input({ "route53domains", "list-operations" }, input)
 end
 
 --- Lists the following prices for either all the TLDs supported by Route 53, or the specified TLD: Registration Transfer Owner change Domain renewal Domain restoration
---- @param input table The input table for the list_prices command
+--- @param input table|nil The input table for the list_prices command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_prices(input)
 	return common.execute_aws_command_with_input({ "route53domains", "list-prices" }, input)
 end
 
 --- This operation returns all of the tags that are associated with the specified domain
---- @param input table The input table for the list_tags_for_domain command
+--- @param input table|nil The input table for the list_tags_for_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "list-tags-for-domain" }, input)
 end
 
 --- Moves a domain from Amazon Web Services to another registrar
---- @param input table The input table for the push_domain command
+--- @param input table|nil The input table for the push_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.push_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "push-domain" }, input)
 end
 
 --- This operation registers a domain
---- @param input table The input table for the register_domain command
+--- @param input table|nil The input table for the register_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "register-domain" }, input)
 end
 
 --- Rejects the transfer of a domain from another Amazon Web Services account to the current Amazon Web Services account
---- @param input table The input table for the reject_domain_transfer_from_another_aws_account command
+--- @param input table|nil The input table for the reject_domain_transfer_from_another_aws_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_domain_transfer_from_another_aws_account(input)
 	return common.execute_aws_command_with_input({ "route53domains", "reject-domain-transfer-from-another-aws-account" }, input)
 end
 
 --- This operation renews a domain for the specified number of years
---- @param input table The input table for the renew_domain command
+--- @param input table|nil The input table for the renew_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.renew_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "renew-domain" }, input)
 end
 
 --- For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation resends the confirmation email to the current email address for the registrant contact
---- @param input table The input table for the resend_contact_reachability_email command
+--- @param input table|nil The input table for the resend_contact_reachability_email command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resend_contact_reachability_email(input)
 	return common.execute_aws_command_with_input({ "route53domains", "resend-contact-reachability-email" }, input)
 end
 
 --- Resend the form of authorization email for this operation
---- @param input table The input table for the resend_operation_authorization command
+--- @param input table|nil The input table for the resend_operation_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resend_operation_authorization(input)
 	return common.execute_aws_command_with_input({ "route53domains", "resend-operation-authorization" }, input)
 end
 
 --- This operation returns the authorization code for the domain
---- @param input table The input table for the retrieve_domain_auth_code command
+--- @param input table|nil The input table for the retrieve_domain_auth_code command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retrieve_domain_auth_code(input)
 	return common.execute_aws_command_with_input({ "route53domains", "retrieve-domain-auth-code" }, input)
 end
 
 --- Transfers a domain from another registrar to Amazon Route 53
---- @param input table The input table for the transfer_domain command
+--- @param input table|nil The input table for the transfer_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.transfer_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "transfer-domain" }, input)
 end
 
 --- Transfers a domain from the current Amazon Web Services account to another Amazon Web Services account
---- @param input table The input table for the transfer_domain_to_another_aws_account command
+--- @param input table|nil The input table for the transfer_domain_to_another_aws_account command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.transfer_domain_to_another_aws_account(input)
 	return common.execute_aws_command_with_input({ "route53domains", "transfer-domain-to-another-aws-account" }, input)
 end
 
 --- This operation updates the contact information for a particular domain
---- @param input table The input table for the update_domain_contact command
+--- @param input table|nil The input table for the update_domain_contact command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_contact(input)
 	return common.execute_aws_command_with_input({ "route53domains", "update-domain-contact" }, input)
 end
 
 --- This operation updates the specified domain contact's privacy setting
---- @param input table The input table for the update_domain_contact_privacy command
+--- @param input table|nil The input table for the update_domain_contact_privacy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_contact_privacy(input)
 	return common.execute_aws_command_with_input({ "route53domains", "update-domain-contact-privacy" }, input)
 end
 
 --- This operation replaces the current set of name servers for the domain with the specified set of name servers
---- @param input table The input table for the update_domain_nameservers command
+--- @param input table|nil The input table for the update_domain_nameservers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_nameservers(input)
 	return common.execute_aws_command_with_input({ "route53domains", "update-domain-nameservers" }, input)
 end
 
 --- This operation adds or updates tags for a specified domain
---- @param input table The input table for the update_tags_for_domain command
+--- @param input table|nil The input table for the update_tags_for_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_tags_for_domain(input)
 	return common.execute_aws_command_with_input({ "route53domains", "update-tags-for-domain" }, input)
 end
 
 --- Returns all the domain-related billing records for the current Amazon Web Services account for a specified period
---- @param input table The input table for the view_billing command
+--- @param input table|nil The input table for the view_billing command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.view_billing(input)
 	return common.execute_aws_command_with_input({ "route53domains", "view-billing" }, input)

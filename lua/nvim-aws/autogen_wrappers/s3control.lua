@@ -8,679 +8,679 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associate your S3 Access Grants instance with an Amazon Web Services IAM Identity Center instance
---- @param input table The input table for the associate_access_grants_identity_center command
+--- @param input table|nil The input table for the associate_access_grants_identity_center command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_access_grants_identity_center(input)
 	return common.execute_aws_command_with_input({ "s3control", "associate-access-grants-identity-center" }, input)
 end
 
 --- Creates an access grant that gives a grantee access to your S3 data
---- @param input table The input table for the create_access_grant command
+--- @param input table|nil The input table for the create_access_grant command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_grant(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-access-grant" }, input)
 end
 
 --- Creates an S3 Access Grants instance, which serves as a logical grouping for access grants
---- @param input table The input table for the create_access_grants_instance command
+--- @param input table|nil The input table for the create_access_grants_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_grants_instance(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-access-grants-instance" }, input)
 end
 
 --- The S3 data location that you would like to register in your S3 Access Grants instance
---- @param input table The input table for the create_access_grants_location command
+--- @param input table|nil The input table for the create_access_grants_location command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_grants_location(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-access-grants-location" }, input)
 end
 
 --- Creates an access point and associates it to a specified bucket
---- @param input table The input table for the create_access_point command
+--- @param input table|nil The input table for the create_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-access-point" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the create_access_point_for_object_lambda command
+--- @param input table|nil The input table for the create_access_point_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_point_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-access-point-for-object-lambda" }, input)
 end
 
 --- This action creates an Amazon S3 on Outposts bucket
---- @param input table The input table for the create_bucket command
+--- @param input table|nil The input table for the create_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bucket(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-bucket" }, input)
 end
 
 --- This operation creates an S3 Batch Operations job
---- @param input table The input table for the create_job command
+--- @param input table|nil The input table for the create_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-job" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the create_multi_region_access_point command
+--- @param input table|nil The input table for the create_multi_region_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_multi_region_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-multi-region-access-point" }, input)
 end
 
 --- Creates a new S3 Storage Lens group and associates it with the specified Amazon Web Services account ID
---- @param input table The input table for the create_storage_lens_group command
+--- @param input table|nil The input table for the create_storage_lens_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_storage_lens_group(input)
 	return common.execute_aws_command_with_input({ "s3control", "create-storage-lens-group" }, input)
 end
 
 --- Deletes the access grant from the S3 Access Grants instance
---- @param input table The input table for the delete_access_grant command
+--- @param input table|nil The input table for the delete_access_grant command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_grant(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-grant" }, input)
 end
 
 --- Deletes your S3 Access Grants instance
---- @param input table The input table for the delete_access_grants_instance command
+--- @param input table|nil The input table for the delete_access_grants_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_grants_instance(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-grants-instance" }, input)
 end
 
 --- Deletes the resource policy of the S3 Access Grants instance
---- @param input table The input table for the delete_access_grants_instance_resource_policy command
+--- @param input table|nil The input table for the delete_access_grants_instance_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_grants_instance_resource_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-grants-instance-resource-policy" }, input)
 end
 
 --- Deregisters a location from your S3 Access Grants instance
---- @param input table The input table for the delete_access_grants_location command
+--- @param input table|nil The input table for the delete_access_grants_location command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_grants_location(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-grants-location" }, input)
 end
 
 --- Deletes the specified access point
---- @param input table The input table for the delete_access_point command
+--- @param input table|nil The input table for the delete_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-point" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_access_point_for_object_lambda command
+--- @param input table|nil The input table for the delete_access_point_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_point_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-point-for-object-lambda" }, input)
 end
 
 --- Deletes the access point policy for the specified access point
---- @param input table The input table for the delete_access_point_policy command
+--- @param input table|nil The input table for the delete_access_point_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_point_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-point-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_access_point_policy_for_object_lambda command
+--- @param input table|nil The input table for the delete_access_point_policy_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_point_policy_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-point-policy-for-object-lambda" }, input)
 end
 
 --- Deletes an existing access point scope for a directory bucket
---- @param input table The input table for the delete_access_point_scope command
+--- @param input table|nil The input table for the delete_access_point_scope command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_point_scope(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-access-point-scope" }, input)
 end
 
 --- This action deletes an Amazon S3 on Outposts bucket
---- @param input table The input table for the delete_bucket command
+--- @param input table|nil The input table for the delete_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-bucket" }, input)
 end
 
 --- This action deletes an Amazon S3 on Outposts bucket's lifecycle configuration
---- @param input table The input table for the delete_bucket_lifecycle_configuration command
+--- @param input table|nil The input table for the delete_bucket_lifecycle_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket_lifecycle_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-bucket-lifecycle-configuration" }, input)
 end
 
 --- This action deletes an Amazon S3 on Outposts bucket policy
---- @param input table The input table for the delete_bucket_policy command
+--- @param input table|nil The input table for the delete_bucket_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-bucket-policy" }, input)
 end
 
 --- This operation deletes an Amazon S3 on Outposts bucket's replication configuration
---- @param input table The input table for the delete_bucket_replication command
+--- @param input table|nil The input table for the delete_bucket_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket_replication(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-bucket-replication" }, input)
 end
 
 --- This action deletes an Amazon S3 on Outposts bucket's tags
---- @param input table The input table for the delete_bucket_tagging command
+--- @param input table|nil The input table for the delete_bucket_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-bucket-tagging" }, input)
 end
 
 --- Removes the entire tag set from the specified S3 Batch Operations job
---- @param input table The input table for the delete_job_tagging command
+--- @param input table|nil The input table for the delete_job_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-job-tagging" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_multi_region_access_point command
+--- @param input table|nil The input table for the delete_multi_region_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_multi_region_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-multi-region-access-point" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_public_access_block command
+--- @param input table|nil The input table for the delete_public_access_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_public_access_block(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-public-access-block" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_storage_lens_configuration command
+--- @param input table|nil The input table for the delete_storage_lens_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_storage_lens_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-storage-lens-configuration" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the delete_storage_lens_configuration_tagging command
+--- @param input table|nil The input table for the delete_storage_lens_configuration_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_storage_lens_configuration_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-storage-lens-configuration-tagging" }, input)
 end
 
 --- Deletes an existing S3 Storage Lens group
---- @param input table The input table for the delete_storage_lens_group command
+--- @param input table|nil The input table for the delete_storage_lens_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_storage_lens_group(input)
 	return common.execute_aws_command_with_input({ "s3control", "delete-storage-lens-group" }, input)
 end
 
 --- Retrieves the configuration parameters and status for a Batch Operations job
---- @param input table The input table for the describe_job command
+--- @param input table|nil The input table for the describe_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job(input)
 	return common.execute_aws_command_with_input({ "s3control", "describe-job" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the describe_multi_region_access_point_operation command
+--- @param input table|nil The input table for the describe_multi_region_access_point_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_multi_region_access_point_operation(input)
 	return common.execute_aws_command_with_input({ "s3control", "describe-multi-region-access-point-operation" }, input)
 end
 
 --- Dissociates the Amazon Web Services IAM Identity Center instance from the S3 Access Grants instance
---- @param input table The input table for the dissociate_access_grants_identity_center command
+--- @param input table|nil The input table for the dissociate_access_grants_identity_center command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.dissociate_access_grants_identity_center(input)
 	return common.execute_aws_command_with_input({ "s3control", "dissociate-access-grants-identity-center" }, input)
 end
 
 --- Get the details of an access grant from your S3 Access Grants instance
---- @param input table The input table for the get_access_grant command
+--- @param input table|nil The input table for the get_access_grant command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_grant(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-grant" }, input)
 end
 
 --- Retrieves the S3 Access Grants instance for a Region in your account
---- @param input table The input table for the get_access_grants_instance command
+--- @param input table|nil The input table for the get_access_grants_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_grants_instance(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-grants-instance" }, input)
 end
 
 --- Retrieve the S3 Access Grants instance that contains a particular prefix
---- @param input table The input table for the get_access_grants_instance_for_prefix command
+--- @param input table|nil The input table for the get_access_grants_instance_for_prefix command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_grants_instance_for_prefix(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-grants-instance-for-prefix" }, input)
 end
 
 --- Returns the resource policy of the S3 Access Grants instance
---- @param input table The input table for the get_access_grants_instance_resource_policy command
+--- @param input table|nil The input table for the get_access_grants_instance_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_grants_instance_resource_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-grants-instance-resource-policy" }, input)
 end
 
 --- Retrieves the details of a particular location registered in your S3 Access Grants instance
---- @param input table The input table for the get_access_grants_location command
+--- @param input table|nil The input table for the get_access_grants_location command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_grants_location(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-grants-location" }, input)
 end
 
 --- Returns configuration information about the specified access point
---- @param input table The input table for the get_access_point command
+--- @param input table|nil The input table for the get_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_access_point_configuration_for_object_lambda command
+--- @param input table|nil The input table for the get_access_point_configuration_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_configuration_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-configuration-for-object-lambda" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_access_point_for_object_lambda command
+--- @param input table|nil The input table for the get_access_point_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-for-object-lambda" }, input)
 end
 
 --- Returns the access point policy associated with the specified access point
---- @param input table The input table for the get_access_point_policy command
+--- @param input table|nil The input table for the get_access_point_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_access_point_policy_for_object_lambda command
+--- @param input table|nil The input table for the get_access_point_policy_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_policy_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-policy-for-object-lambda" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_access_point_policy_status command
+--- @param input table|nil The input table for the get_access_point_policy_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_policy_status(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-policy-status" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_access_point_policy_status_for_object_lambda command
+--- @param input table|nil The input table for the get_access_point_policy_status_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_policy_status_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-policy-status-for-object-lambda" }, input)
 end
 
 --- Returns the access point scope for a directory bucket
---- @param input table The input table for the get_access_point_scope command
+--- @param input table|nil The input table for the get_access_point_scope command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_point_scope(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-access-point-scope" }, input)
 end
 
 --- Gets an Amazon S3 on Outposts bucket
---- @param input table The input table for the get_bucket command
+--- @param input table|nil The input table for the get_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket" }, input)
 end
 
 --- This action gets an Amazon S3 on Outposts bucket's lifecycle configuration
---- @param input table The input table for the get_bucket_lifecycle_configuration command
+--- @param input table|nil The input table for the get_bucket_lifecycle_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_lifecycle_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket-lifecycle-configuration" }, input)
 end
 
 --- This action gets a bucket policy for an Amazon S3 on Outposts bucket
---- @param input table The input table for the get_bucket_policy command
+--- @param input table|nil The input table for the get_bucket_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket-policy" }, input)
 end
 
 --- This operation gets an Amazon S3 on Outposts bucket's replication configuration
---- @param input table The input table for the get_bucket_replication command
+--- @param input table|nil The input table for the get_bucket_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_replication(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket-replication" }, input)
 end
 
 --- This action gets an Amazon S3 on Outposts bucket's tags
---- @param input table The input table for the get_bucket_tagging command
+--- @param input table|nil The input table for the get_bucket_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket-tagging" }, input)
 end
 
 --- This operation returns the versioning state for S3 on Outposts buckets only
---- @param input table The input table for the get_bucket_versioning command
+--- @param input table|nil The input table for the get_bucket_versioning command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_versioning(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-bucket-versioning" }, input)
 end
 
 --- Returns a temporary access credential from S3 Access Grants to the grantee or client application
---- @param input table The input table for the get_data_access command
+--- @param input table|nil The input table for the get_data_access command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_access(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-data-access" }, input)
 end
 
 --- Returns the tags on an S3 Batch Operations job
---- @param input table The input table for the get_job_tagging command
+--- @param input table|nil The input table for the get_job_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-job-tagging" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_multi_region_access_point command
+--- @param input table|nil The input table for the get_multi_region_access_point command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_multi_region_access_point(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-multi-region-access-point" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_multi_region_access_point_policy command
+--- @param input table|nil The input table for the get_multi_region_access_point_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_multi_region_access_point_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-multi-region-access-point-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_multi_region_access_point_policy_status command
+--- @param input table|nil The input table for the get_multi_region_access_point_policy_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_multi_region_access_point_policy_status(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-multi-region-access-point-policy-status" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_multi_region_access_point_routes command
+--- @param input table|nil The input table for the get_multi_region_access_point_routes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_multi_region_access_point_routes(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-multi-region-access-point-routes" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_public_access_block command
+--- @param input table|nil The input table for the get_public_access_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_public_access_block(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-public-access-block" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_storage_lens_configuration command
+--- @param input table|nil The input table for the get_storage_lens_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_storage_lens_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-storage-lens-configuration" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the get_storage_lens_configuration_tagging command
+--- @param input table|nil The input table for the get_storage_lens_configuration_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_storage_lens_configuration_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-storage-lens-configuration-tagging" }, input)
 end
 
 --- Retrieves the Storage Lens group configuration details
---- @param input table The input table for the get_storage_lens_group command
+--- @param input table|nil The input table for the get_storage_lens_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_storage_lens_group(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-storage-lens-group" }, input)
 end
 
 --- Returns the list of access grants in your S3 Access Grants instance
---- @param input table The input table for the list_access_grants command
+--- @param input table|nil The input table for the list_access_grants command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_grants(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-grants" }, input)
 end
 
 --- Returns a list of S3 Access Grants instances
---- @param input table The input table for the list_access_grants_instances command
+--- @param input table|nil The input table for the list_access_grants_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_grants_instances(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-grants-instances" }, input)
 end
 
 --- Returns a list of the locations registered in your S3 Access Grants instance
---- @param input table The input table for the list_access_grants_locations command
+--- @param input table|nil The input table for the list_access_grants_locations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_grants_locations(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-grants-locations" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the list_access_points command
+--- @param input table|nil The input table for the list_access_points command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_points(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-points" }, input)
 end
 
 --- Returns a list of the access points that are owned by the Amazon Web Services account and that are associated with the specified directory bucket
---- @param input table The input table for the list_access_points_for_directory_buckets command
+--- @param input table|nil The input table for the list_access_points_for_directory_buckets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_points_for_directory_buckets(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-points-for-directory-buckets" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the list_access_points_for_object_lambda command
+--- @param input table|nil The input table for the list_access_points_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_points_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-access-points-for-object-lambda" }, input)
 end
 
 --- Use this API to list the access grants that grant the caller access to Amazon S3 data through S3 Access Grants
---- @param input table The input table for the list_caller_access_grants command
+--- @param input table|nil The input table for the list_caller_access_grants command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_caller_access_grants(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-caller-access-grants" }, input)
 end
 
 --- Lists current S3 Batch Operations jobs as well as the jobs that have ended within the last 90 days for the Amazon Web Services account making the request
---- @param input table The input table for the list_jobs command
+--- @param input table|nil The input table for the list_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-jobs" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the list_multi_region_access_points command
+--- @param input table|nil The input table for the list_multi_region_access_points command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_multi_region_access_points(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-multi-region-access-points" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the list_regional_buckets command
+--- @param input table|nil The input table for the list_regional_buckets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_regional_buckets(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-regional-buckets" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the list_storage_lens_configurations command
+--- @param input table|nil The input table for the list_storage_lens_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_storage_lens_configurations(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-storage-lens-configurations" }, input)
 end
 
 --- Lists all the Storage Lens groups in the specified home Region
---- @param input table The input table for the list_storage_lens_groups command
+--- @param input table|nil The input table for the list_storage_lens_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_storage_lens_groups(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-storage-lens-groups" }, input)
 end
 
 --- This operation allows you to list all the Amazon Web Services resource tags for a specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "s3control", "list-tags-for-resource" }, input)
 end
 
 --- Updates the resource policy of the S3 Access Grants instance
---- @param input table The input table for the put_access_grants_instance_resource_policy command
+--- @param input table|nil The input table for the put_access_grants_instance_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_grants_instance_resource_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-access-grants-instance-resource-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_access_point_configuration_for_object_lambda command
+--- @param input table|nil The input table for the put_access_point_configuration_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_point_configuration_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-access-point-configuration-for-object-lambda" }, input)
 end
 
 --- Associates an access policy with the specified access point
---- @param input table The input table for the put_access_point_policy command
+--- @param input table|nil The input table for the put_access_point_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_point_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-access-point-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_access_point_policy_for_object_lambda command
+--- @param input table|nil The input table for the put_access_point_policy_for_object_lambda command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_point_policy_for_object_lambda(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-access-point-policy-for-object-lambda" }, input)
 end
 
 --- Creates or replaces the access point scope for a directory bucket
---- @param input table The input table for the put_access_point_scope command
+--- @param input table|nil The input table for the put_access_point_scope command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_access_point_scope(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-access-point-scope" }, input)
 end
 
 --- This action puts a lifecycle configuration to an Amazon S3 on Outposts bucket
---- @param input table The input table for the put_bucket_lifecycle_configuration command
+--- @param input table|nil The input table for the put_bucket_lifecycle_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_bucket_lifecycle_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-bucket-lifecycle-configuration" }, input)
 end
 
 --- This action puts a bucket policy to an Amazon S3 on Outposts bucket
---- @param input table The input table for the put_bucket_policy command
+--- @param input table|nil The input table for the put_bucket_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-bucket-policy" }, input)
 end
 
 --- This action creates an Amazon S3 on Outposts bucket's replication configuration
---- @param input table The input table for the put_bucket_replication command
+--- @param input table|nil The input table for the put_bucket_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_bucket_replication(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-bucket-replication" }, input)
 end
 
 --- This action puts tags on an Amazon S3 on Outposts bucket
---- @param input table The input table for the put_bucket_tagging command
+--- @param input table|nil The input table for the put_bucket_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_bucket_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-bucket-tagging" }, input)
 end
 
 --- This operation sets the versioning state for S3 on Outposts buckets only
---- @param input table The input table for the put_bucket_versioning command
+--- @param input table|nil The input table for the put_bucket_versioning command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_bucket_versioning(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-bucket-versioning" }, input)
 end
 
 --- Sets the supplied tag-set on an S3 Batch Operations job
---- @param input table The input table for the put_job_tagging command
+--- @param input table|nil The input table for the put_job_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_job_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-job-tagging" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_multi_region_access_point_policy command
+--- @param input table|nil The input table for the put_multi_region_access_point_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_multi_region_access_point_policy(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-multi-region-access-point-policy" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_public_access_block command
+--- @param input table|nil The input table for the put_public_access_block command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_public_access_block(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-public-access-block" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_storage_lens_configuration command
+--- @param input table|nil The input table for the put_storage_lens_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_storage_lens_configuration(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-storage-lens-configuration" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the put_storage_lens_configuration_tagging command
+--- @param input table|nil The input table for the put_storage_lens_configuration_tagging command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_storage_lens_configuration_tagging(input)
 	return common.execute_aws_command_with_input({ "s3control", "put-storage-lens-configuration-tagging" }, input)
 end
 
 --- This operation is not supported by directory buckets
---- @param input table The input table for the submit_multi_region_access_point_routes command
+--- @param input table|nil The input table for the submit_multi_region_access_point_routes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.submit_multi_region_access_point_routes(input)
 	return common.execute_aws_command_with_input({ "s3control", "submit-multi-region-access-point-routes" }, input)
 end
 
 --- Creates a new Amazon Web Services resource tag or updates an existing resource tag
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "s3control", "tag-resource" }, input)
 end
 
 --- This operation removes the specified Amazon Web Services resource tags from an S3 resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "s3control", "untag-resource" }, input)
 end
 
 --- Updates the IAM role of a registered location in your S3 Access Grants instance
---- @param input table The input table for the update_access_grants_location command
+--- @param input table|nil The input table for the update_access_grants_location command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_access_grants_location(input)
 	return common.execute_aws_command_with_input({ "s3control", "update-access-grants-location" }, input)
 end
 
 --- Updates an existing S3 Batch Operations job's priority
---- @param input table The input table for the update_job_priority command
+--- @param input table|nil The input table for the update_job_priority command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job_priority(input)
 	return common.execute_aws_command_with_input({ "s3control", "update-job-priority" }, input)
 end
 
 --- Updates the status for the specified job
---- @param input table The input table for the update_job_status command
+--- @param input table|nil The input table for the update_job_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job_status(input)
 	return common.execute_aws_command_with_input({ "s3control", "update-job-status" }, input)
 end
 
 --- Updates the existing Storage Lens group
---- @param input table The input table for the update_storage_lens_group command
+--- @param input table|nil The input table for the update_storage_lens_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_storage_lens_group(input)
 	return common.execute_aws_command_with_input({ "s3control", "update-storage-lens-group" }, input)

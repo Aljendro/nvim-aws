@@ -8,49 +8,49 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Deletes the shadow for the specified thing
---- @param input table The input table for the delete_thing_shadow command
+--- @param input table|nil The input table for the delete_thing_shadow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_thing_shadow(input)
 	return common.execute_aws_command_with_input({ "iot-data", "delete-thing-shadow" }, input)
 end
 
 --- Gets the details of a single retained message for the specified topic
---- @param input table The input table for the get_retained_message command
+--- @param input table|nil The input table for the get_retained_message command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_retained_message(input)
 	return common.execute_aws_command_with_input({ "iot-data", "get-retained-message" }, input)
 end
 
 --- Gets the shadow for the specified thing
---- @param input table The input table for the get_thing_shadow command
+--- @param input table|nil The input table for the get_thing_shadow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_thing_shadow(input)
 	return common.execute_aws_command_with_input({ "iot-data", "get-thing-shadow" }, input)
 end
 
 --- Lists the shadows for the specified thing
---- @param input table The input table for the list_named_shadows_for_thing command
+--- @param input table|nil The input table for the list_named_shadows_for_thing command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_named_shadows_for_thing(input)
 	return common.execute_aws_command_with_input({ "iot-data", "list-named-shadows-for-thing" }, input)
 end
 
 --- Lists summary information about the retained messages stored for the account
---- @param input table The input table for the list_retained_messages command
+--- @param input table|nil The input table for the list_retained_messages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_retained_messages(input)
 	return common.execute_aws_command_with_input({ "iot-data", "list-retained-messages" }, input)
 end
 
 --- Publishes an MQTT message
---- @param input table The input table for the publish command
+--- @param input table|nil The input table for the publish command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish(input)
 	return common.execute_aws_command_with_input({ "iot-data", "publish" }, input)
 end
 
 --- Updates the shadow for the specified thing
---- @param input table The input table for the update_thing_shadow command
+--- @param input table|nil The input table for the update_thing_shadow command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_thing_shadow(input)
 	return common.execute_aws_command_with_input({ "iot-data", "update-thing-shadow" }, input)

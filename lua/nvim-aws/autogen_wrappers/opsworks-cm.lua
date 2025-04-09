@@ -8,133 +8,133 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates a new node with the server
---- @param input table The input table for the associate_node command
+--- @param input table|nil The input table for the associate_node command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_node(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "associate-node" }, input)
 end
 
 --- Creates an application-level backup of a server
---- @param input table The input table for the create_backup command
+--- @param input table|nil The input table for the create_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backup(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "create-backup" }, input)
 end
 
 --- Creates and immedately starts a new server
---- @param input table The input table for the create_server command
+--- @param input table|nil The input table for the create_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_server(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "create-server" }, input)
 end
 
 --- Deletes a backup
---- @param input table The input table for the delete_backup command
+--- @param input table|nil The input table for the delete_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "delete-backup" }, input)
 end
 
 --- Deletes the server and the underlying AWS CloudFormation stacks (including the server's EC2 instance)
---- @param input table The input table for the delete_server command
+--- @param input table|nil The input table for the delete_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_server(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "delete-server" }, input)
 end
 
 --- Describes your OpsWorks-CM account attributes
---- @param input table The input table for the describe_account_attributes command
+--- @param input table|nil The input table for the describe_account_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_attributes(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "describe-account-attributes" }, input)
 end
 
 --- Describes backups
---- @param input table The input table for the describe_backups command
+--- @param input table|nil The input table for the describe_backups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_backups(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "describe-backups" }, input)
 end
 
 --- Describes events for a specified server
---- @param input table The input table for the describe_events command
+--- @param input table|nil The input table for the describe_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "describe-events" }, input)
 end
 
 --- Returns the current status of an existing association or disassociation request
---- @param input table The input table for the describe_node_association_status command
+--- @param input table|nil The input table for the describe_node_association_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_node_association_status(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "describe-node-association-status" }, input)
 end
 
 --- Lists all configuration management servers that are identified with your account
---- @param input table The input table for the describe_servers command
+--- @param input table|nil The input table for the describe_servers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_servers(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "describe-servers" }, input)
 end
 
 --- Disassociates a node from an AWS OpsWorks CM server, and removes the node from the server's managed nodes
---- @param input table The input table for the disassociate_node command
+--- @param input table|nil The input table for the disassociate_node command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_node(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "disassociate-node" }, input)
 end
 
 --- Exports a specified server engine attribute as a base64-encoded string
---- @param input table The input table for the export_server_engine_attribute command
+--- @param input table|nil The input table for the export_server_engine_attribute command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_server_engine_attribute(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "export-server-engine-attribute" }, input)
 end
 
 --- Returns a list of tags that are applied to the specified AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise servers or backups
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "list-tags-for-resource" }, input)
 end
 
 --- Restores a backup to a server that is in a CONNECTION_LOST, HEALTHY, RUNNING, UNHEALTHY, or TERMINATED state
---- @param input table The input table for the restore_server command
+--- @param input table|nil The input table for the restore_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_server(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "restore-server" }, input)
 end
 
 --- Manually starts server maintenance
---- @param input table The input table for the start_maintenance command
+--- @param input table|nil The input table for the start_maintenance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_maintenance(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "start-maintenance" }, input)
 end
 
 --- Applies tags to an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server, or to server backups
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "tag-resource" }, input)
 end
 
 --- Removes specified tags from an AWS OpsWorks-CM server or backup
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "untag-resource" }, input)
 end
 
 --- Updates settings for a server
---- @param input table The input table for the update_server command
+--- @param input table|nil The input table for the update_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_server(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "update-server" }, input)
 end
 
 --- Updates engine-specific attributes on a specified server
---- @param input table The input table for the update_server_engine_attributes command
+--- @param input table|nil The input table for the update_server_engine_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_server_engine_attributes(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "update-server-engine-attributes" }, input)

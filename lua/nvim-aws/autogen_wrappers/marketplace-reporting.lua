@@ -8,7 +8,7 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Generates an embedding URL for an Amazon QuickSight dashboard for an anonymous user
---- @param input table The input table for the get_buyer_dashboard command
+--- @param input table|nil The input table for the get_buyer_dashboard command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_buyer_dashboard(input)
 	return common.execute_aws_command_with_input({ "marketplace-reporting", "get-buyer-dashboard" }, input)

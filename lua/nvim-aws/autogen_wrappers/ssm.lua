@@ -8,1008 +8,1008 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds or overwrites one or more tags for the specified resource
---- @param input table The input table for the add_tags_to_resource command
+--- @param input table|nil The input table for the add_tags_to_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_tags_to_resource(input)
 	return common.execute_aws_command_with_input({ "ssm", "add-tags-to-resource" }, input)
 end
 
 --- Associates a related item to a Systems Manager OpsCenter OpsItem
---- @param input table The input table for the associate_ops_item_related_item command
+--- @param input table|nil The input table for the associate_ops_item_related_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_ops_item_related_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "associate-ops-item-related-item" }, input)
 end
 
 --- Attempts to cancel the command specified by the Command ID
---- @param input table The input table for the cancel_command command
+--- @param input table|nil The input table for the cancel_command command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_command(input)
 	return common.execute_aws_command_with_input({ "ssm", "cancel-command" }, input)
 end
 
 --- Stops a maintenance window execution that is already in progress and cancels any tasks in the window that haven't already starting running
---- @param input table The input table for the cancel_maintenance_window_execution command
+--- @param input table|nil The input table for the cancel_maintenance_window_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_maintenance_window_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "cancel-maintenance-window-execution" }, input)
 end
 
 --- Generates an activation code and activation ID you can use to register your on-premises servers, edge devices, or virtual machine (VM) with Amazon Web Services Systems Manager
---- @param input table The input table for the create_activation command
+--- @param input table|nil The input table for the create_activation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_activation(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-activation" }, input)
 end
 
 --- A State Manager association defines the state that you want to maintain on your managed nodes
---- @param input table The input table for the create_association command
+--- @param input table|nil The input table for the create_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_association(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-association" }, input)
 end
 
 --- Associates the specified Amazon Web Services Systems Manager document (SSM document) with the specified managed nodes or targets
---- @param input table The input table for the create_association_batch command
+--- @param input table|nil The input table for the create_association_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_association_batch(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-association-batch" }, input)
 end
 
 --- Creates a Amazon Web Services Systems Manager (SSM document)
---- @param input table The input table for the create_document command
+--- @param input table|nil The input table for the create_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_document(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-document" }, input)
 end
 
 --- Creates a new maintenance window
---- @param input table The input table for the create_maintenance_window command
+--- @param input table|nil The input table for the create_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-maintenance-window" }, input)
 end
 
 --- Creates a new OpsItem
---- @param input table The input table for the create_ops_item command
+--- @param input table|nil The input table for the create_ops_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ops_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-ops-item" }, input)
 end
 
 --- If you create a new application in Application Manager, Amazon Web Services Systems Manager calls this API operation to specify information about the new application, including the application type
---- @param input table The input table for the create_ops_metadata command
+--- @param input table|nil The input table for the create_ops_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ops_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-ops-metadata" }, input)
 end
 
 --- Creates a patch baseline
---- @param input table The input table for the create_patch_baseline command
+--- @param input table|nil The input table for the create_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-patch-baseline" }, input)
 end
 
 --- A resource data sync helps you view data from multiple sources in a single location
---- @param input table The input table for the create_resource_data_sync command
+--- @param input table|nil The input table for the create_resource_data_sync command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_data_sync(input)
 	return common.execute_aws_command_with_input({ "ssm", "create-resource-data-sync" }, input)
 end
 
 --- Deletes an activation
---- @param input table The input table for the delete_activation command
+--- @param input table|nil The input table for the delete_activation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_activation(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-activation" }, input)
 end
 
 --- Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified managed node
---- @param input table The input table for the delete_association command
+--- @param input table|nil The input table for the delete_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_association(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-association" }, input)
 end
 
 --- Deletes the Amazon Web Services Systems Manager document (SSM document) and all managed node associations to the document
---- @param input table The input table for the delete_document command
+--- @param input table|nil The input table for the delete_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_document(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-document" }, input)
 end
 
 --- Delete a custom inventory type or the data associated with a custom Inventory type
---- @param input table The input table for the delete_inventory command
+--- @param input table|nil The input table for the delete_inventory command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_inventory(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-inventory" }, input)
 end
 
 --- Deletes a maintenance window
---- @param input table The input table for the delete_maintenance_window command
+--- @param input table|nil The input table for the delete_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-maintenance-window" }, input)
 end
 
 --- Delete an OpsItem
---- @param input table The input table for the delete_ops_item command
+--- @param input table|nil The input table for the delete_ops_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ops_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-ops-item" }, input)
 end
 
 --- Delete OpsMetadata related to an application
---- @param input table The input table for the delete_ops_metadata command
+--- @param input table|nil The input table for the delete_ops_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ops_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-ops-metadata" }, input)
 end
 
 --- Delete a parameter from the system
---- @param input table The input table for the delete_parameter command
+--- @param input table|nil The input table for the delete_parameter command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_parameter(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-parameter" }, input)
 end
 
 --- Delete a list of parameters
---- @param input table The input table for the delete_parameters command
+--- @param input table|nil The input table for the delete_parameters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_parameters(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-parameters" }, input)
 end
 
 --- Deletes a patch baseline
---- @param input table The input table for the delete_patch_baseline command
+--- @param input table|nil The input table for the delete_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-patch-baseline" }, input)
 end
 
 --- Deletes a resource data sync configuration
---- @param input table The input table for the delete_resource_data_sync command
+--- @param input table|nil The input table for the delete_resource_data_sync command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_data_sync(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-resource-data-sync" }, input)
 end
 
 --- Deletes a Systems Manager resource policy
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "ssm", "delete-resource-policy" }, input)
 end
 
 --- Removes the server or virtual machine from the list of registered servers
---- @param input table The input table for the deregister_managed_instance command
+--- @param input table|nil The input table for the deregister_managed_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_managed_instance(input)
 	return common.execute_aws_command_with_input({ "ssm", "deregister-managed-instance" }, input)
 end
 
 --- Removes a patch group from a patch baseline
---- @param input table The input table for the deregister_patch_baseline_for_patch_group command
+--- @param input table|nil The input table for the deregister_patch_baseline_for_patch_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_patch_baseline_for_patch_group(input)
 	return common.execute_aws_command_with_input({ "ssm", "deregister-patch-baseline-for-patch-group" }, input)
 end
 
 --- Removes a target from a maintenance window
---- @param input table The input table for the deregister_target_from_maintenance_window command
+--- @param input table|nil The input table for the deregister_target_from_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_target_from_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "deregister-target-from-maintenance-window" }, input)
 end
 
 --- Removes a task from a maintenance window
---- @param input table The input table for the deregister_task_from_maintenance_window command
+--- @param input table|nil The input table for the deregister_task_from_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_task_from_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "deregister-task-from-maintenance-window" }, input)
 end
 
 --- Describes details about the activation, such as the date and time the activation was created, its expiration date, the Identity and Access Management (IAM) role assigned to the managed nodes in the activation, and the number of nodes registered by using this activation
---- @param input table The input table for the describe_activations command
+--- @param input table|nil The input table for the describe_activations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_activations(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-activations" }, input)
 end
 
 --- Describes the association for the specified target or managed node
---- @param input table The input table for the describe_association command
+--- @param input table|nil The input table for the describe_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_association(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-association" }, input)
 end
 
 --- Views information about a specific execution of a specific association
---- @param input table The input table for the describe_association_execution_targets command
+--- @param input table|nil The input table for the describe_association_execution_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_association_execution_targets(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-association-execution-targets" }, input)
 end
 
 --- Views all executions for a specific association ID
---- @param input table The input table for the describe_association_executions command
+--- @param input table|nil The input table for the describe_association_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_association_executions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-association-executions" }, input)
 end
 
 --- Provides details about all active and terminated Automation executions
---- @param input table The input table for the describe_automation_executions command
+--- @param input table|nil The input table for the describe_automation_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_automation_executions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-automation-executions" }, input)
 end
 
 --- Information about all active and terminated step executions in an Automation workflow
---- @param input table The input table for the describe_automation_step_executions command
+--- @param input table|nil The input table for the describe_automation_step_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_automation_step_executions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-automation-step-executions" }, input)
 end
 
 --- Lists all patches eligible to be included in a patch baseline
---- @param input table The input table for the describe_available_patches command
+--- @param input table|nil The input table for the describe_available_patches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_available_patches(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-available-patches" }, input)
 end
 
 --- Describes the specified Amazon Web Services Systems Manager document (SSM document)
---- @param input table The input table for the describe_document command
+--- @param input table|nil The input table for the describe_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_document(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-document" }, input)
 end
 
 --- Describes the permissions for a Amazon Web Services Systems Manager document (SSM document)
---- @param input table The input table for the describe_document_permission command
+--- @param input table|nil The input table for the describe_document_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_document_permission(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-document-permission" }, input)
 end
 
 --- All associations for the managed nodes
---- @param input table The input table for the describe_effective_instance_associations command
+--- @param input table|nil The input table for the describe_effective_instance_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_effective_instance_associations(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-effective-instance-associations" }, input)
 end
 
 --- Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline
---- @param input table The input table for the describe_effective_patches_for_patch_baseline command
+--- @param input table|nil The input table for the describe_effective_patches_for_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_effective_patches_for_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-effective-patches-for-patch-baseline" }, input)
 end
 
 --- The status of the associations for the managed nodes
---- @param input table The input table for the describe_instance_associations_status command
+--- @param input table|nil The input table for the describe_instance_associations_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_associations_status(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-associations-status" }, input)
 end
 
 --- Provides information about one or more of your managed nodes, including the operating system platform, SSM Agent version, association status, and IP address
---- @param input table The input table for the describe_instance_information command
+--- @param input table|nil The input table for the describe_instance_information command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_information(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-information" }, input)
 end
 
 --- Retrieves the high-level patch state of one or more managed nodes
---- @param input table The input table for the describe_instance_patch_states command
+--- @param input table|nil The input table for the describe_instance_patch_states command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_patch_states(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patch-states" }, input)
 end
 
 --- Retrieves the high-level patch state for the managed nodes in the specified patch group
---- @param input table The input table for the describe_instance_patch_states_for_patch_group command
+--- @param input table|nil The input table for the describe_instance_patch_states_for_patch_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_patch_states_for_patch_group(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patch-states-for-patch-group" }, input)
 end
 
 --- Retrieves information about the patches on the specified managed node and their state relative to the patch baseline being used for the node
---- @param input table The input table for the describe_instance_patches command
+--- @param input table|nil The input table for the describe_instance_patches command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_patches(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patches" }, input)
 end
 
 --- An API operation used by the Systems Manager console to display information about Systems Manager managed nodes
---- @param input table The input table for the describe_instance_properties command
+--- @param input table|nil The input table for the describe_instance_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instance_properties(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-instance-properties" }, input)
 end
 
 --- Describes a specific delete inventory operation
---- @param input table The input table for the describe_inventory_deletions command
+--- @param input table|nil The input table for the describe_inventory_deletions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_inventory_deletions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-inventory-deletions" }, input)
 end
 
 --- Retrieves the individual task executions (one per target) for a particular task run as part of a maintenance window execution
---- @param input table The input table for the describe_maintenance_window_execution_task_invocations command
+--- @param input table|nil The input table for the describe_maintenance_window_execution_task_invocations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_execution_task_invocations(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-execution-task-invocations" }, input)
 end
 
 --- For a given maintenance window execution, lists the tasks that were run
---- @param input table The input table for the describe_maintenance_window_execution_tasks command
+--- @param input table|nil The input table for the describe_maintenance_window_execution_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_execution_tasks(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-execution-tasks" }, input)
 end
 
 --- Lists the executions of a maintenance window
---- @param input table The input table for the describe_maintenance_window_executions command
+--- @param input table|nil The input table for the describe_maintenance_window_executions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_executions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-executions" }, input)
 end
 
 --- Retrieves information about upcoming executions of a maintenance window
---- @param input table The input table for the describe_maintenance_window_schedule command
+--- @param input table|nil The input table for the describe_maintenance_window_schedule command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_schedule(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-schedule" }, input)
 end
 
 --- Lists the targets registered with the maintenance window
---- @param input table The input table for the describe_maintenance_window_targets command
+--- @param input table|nil The input table for the describe_maintenance_window_targets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_targets(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-targets" }, input)
 end
 
 --- Lists the tasks in a maintenance window
---- @param input table The input table for the describe_maintenance_window_tasks command
+--- @param input table|nil The input table for the describe_maintenance_window_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_window_tasks(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-tasks" }, input)
 end
 
 --- Retrieves the maintenance windows in an Amazon Web Services account
---- @param input table The input table for the describe_maintenance_windows command
+--- @param input table|nil The input table for the describe_maintenance_windows command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_windows(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-windows" }, input)
 end
 
 --- Retrieves information about the maintenance window targets or tasks that a managed node is associated with
---- @param input table The input table for the describe_maintenance_windows_for_target command
+--- @param input table|nil The input table for the describe_maintenance_windows_for_target command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_maintenance_windows_for_target(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-windows-for-target" }, input)
 end
 
 --- Query a set of OpsItems
---- @param input table The input table for the describe_ops_items command
+--- @param input table|nil The input table for the describe_ops_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ops_items(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-ops-items" }, input)
 end
 
 --- Lists the parameters in your Amazon Web Services account or the parameters shared with you when you enable the Shared option
---- @param input table The input table for the describe_parameters command
+--- @param input table|nil The input table for the describe_parameters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_parameters(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-parameters" }, input)
 end
 
 --- Lists the patch baselines in your Amazon Web Services account
---- @param input table The input table for the describe_patch_baselines command
+--- @param input table|nil The input table for the describe_patch_baselines command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_patch_baselines(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-patch-baselines" }, input)
 end
 
 --- Returns high-level aggregated patch compliance state information for a patch group
---- @param input table The input table for the describe_patch_group_state command
+--- @param input table|nil The input table for the describe_patch_group_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_patch_group_state(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-patch-group-state" }, input)
 end
 
 --- Lists all patch groups that have been registered with patch baselines
---- @param input table The input table for the describe_patch_groups command
+--- @param input table|nil The input table for the describe_patch_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_patch_groups(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-patch-groups" }, input)
 end
 
 --- Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches
---- @param input table The input table for the describe_patch_properties command
+--- @param input table|nil The input table for the describe_patch_properties command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_patch_properties(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-patch-properties" }, input)
 end
 
 --- Retrieves a list of all active sessions (both connected and disconnected) or terminated sessions from the past 30 days
---- @param input table The input table for the describe_sessions command
+--- @param input table|nil The input table for the describe_sessions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_sessions(input)
 	return common.execute_aws_command_with_input({ "ssm", "describe-sessions" }, input)
 end
 
 --- Deletes the association between an OpsItem and a related item
---- @param input table The input table for the disassociate_ops_item_related_item command
+--- @param input table|nil The input table for the disassociate_ops_item_related_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_ops_item_related_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "disassociate-ops-item-related-item" }, input)
 end
 
 --- Get detailed information about a particular Automation execution
---- @param input table The input table for the get_automation_execution command
+--- @param input table|nil The input table for the get_automation_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_automation_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-automation-execution" }, input)
 end
 
 --- Gets the state of a Amazon Web Services Systems Manager change calendar at the current time or a specified time
---- @param input table The input table for the get_calendar_state command
+--- @param input table|nil The input table for the get_calendar_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_calendar_state(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-calendar-state" }, input)
 end
 
 --- Returns detailed information about command execution for an invocation or plugin
---- @param input table The input table for the get_command_invocation command
+--- @param input table|nil The input table for the get_command_invocation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_command_invocation(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-command-invocation" }, input)
 end
 
 --- Retrieves the Session Manager connection status for a managed node to determine whether it is running and ready to receive Session Manager connections
---- @param input table The input table for the get_connection_status command
+--- @param input table|nil The input table for the get_connection_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connection_status(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-connection-status" }, input)
 end
 
 --- Retrieves the default patch baseline
---- @param input table The input table for the get_default_patch_baseline command
+--- @param input table|nil The input table for the get_default_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_default_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-default-patch-baseline" }, input)
 end
 
 --- Retrieves the current snapshot for the patch baseline the managed node uses
---- @param input table The input table for the get_deployable_patch_snapshot_for_instance command
+--- @param input table|nil The input table for the get_deployable_patch_snapshot_for_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployable_patch_snapshot_for_instance(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-deployable-patch-snapshot-for-instance" }, input)
 end
 
 --- Gets the contents of the specified Amazon Web Services Systems Manager document (SSM document)
---- @param input table The input table for the get_document command
+--- @param input table|nil The input table for the get_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-document" }, input)
 end
 
 --- Initiates the process of retrieving an existing preview that shows the effects that running a specified Automation runbook would have on the targeted resources
---- @param input table The input table for the get_execution_preview command
+--- @param input table|nil The input table for the get_execution_preview command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_execution_preview(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-execution-preview" }, input)
 end
 
 --- Query inventory information
---- @param input table The input table for the get_inventory command
+--- @param input table|nil The input table for the get_inventory command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_inventory(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-inventory" }, input)
 end
 
 --- Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item type
---- @param input table The input table for the get_inventory_schema command
+--- @param input table|nil The input table for the get_inventory_schema command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_inventory_schema(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-inventory-schema" }, input)
 end
 
 --- Retrieves a maintenance window
---- @param input table The input table for the get_maintenance_window command
+--- @param input table|nil The input table for the get_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window" }, input)
 end
 
 --- Retrieves details about a specific a maintenance window execution
---- @param input table The input table for the get_maintenance_window_execution command
+--- @param input table|nil The input table for the get_maintenance_window_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_maintenance_window_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution" }, input)
 end
 
 --- Retrieves the details about a specific task run as part of a maintenance window execution
---- @param input table The input table for the get_maintenance_window_execution_task command
+--- @param input table|nil The input table for the get_maintenance_window_execution_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_maintenance_window_execution_task(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution-task" }, input)
 end
 
 --- Retrieves information about a specific task running on a specific target
---- @param input table The input table for the get_maintenance_window_execution_task_invocation command
+--- @param input table|nil The input table for the get_maintenance_window_execution_task_invocation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_maintenance_window_execution_task_invocation(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution-task-invocation" }, input)
 end
 
 --- Retrieves the details of a maintenance window task
---- @param input table The input table for the get_maintenance_window_task command
+--- @param input table|nil The input table for the get_maintenance_window_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_maintenance_window_task(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-task" }, input)
 end
 
 --- Get information about an OpsItem by using the ID
---- @param input table The input table for the get_ops_item command
+--- @param input table|nil The input table for the get_ops_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ops_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-ops-item" }, input)
 end
 
 --- View operational metadata related to an application in Application Manager
---- @param input table The input table for the get_ops_metadata command
+--- @param input table|nil The input table for the get_ops_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ops_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-ops-metadata" }, input)
 end
 
 --- View a summary of operations metadata (OpsData) based on specified filters and aggregators
---- @param input table The input table for the get_ops_summary command
+--- @param input table|nil The input table for the get_ops_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ops_summary(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-ops-summary" }, input)
 end
 
 --- Get information about a single parameter by specifying the parameter name
---- @param input table The input table for the get_parameter command
+--- @param input table|nil The input table for the get_parameter command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameter(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-parameter" }, input)
 end
 
 --- Retrieves the history of all changes to a parameter
---- @param input table The input table for the get_parameter_history command
+--- @param input table|nil The input table for the get_parameter_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameter_history(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-parameter-history" }, input)
 end
 
 --- Get information about one or more parameters by specifying multiple parameter names
---- @param input table The input table for the get_parameters command
+--- @param input table|nil The input table for the get_parameters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameters(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-parameters" }, input)
 end
 
 --- Retrieve information about one or more parameters under a specified level in a hierarchy
---- @param input table The input table for the get_parameters_by_path command
+--- @param input table|nil The input table for the get_parameters_by_path command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameters_by_path(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-parameters-by-path" }, input)
 end
 
 --- Retrieves information about a patch baseline
---- @param input table The input table for the get_patch_baseline command
+--- @param input table|nil The input table for the get_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-patch-baseline" }, input)
 end
 
 --- Retrieves the patch baseline that should be used for the specified patch group
---- @param input table The input table for the get_patch_baseline_for_patch_group command
+--- @param input table|nil The input table for the get_patch_baseline_for_patch_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_patch_baseline_for_patch_group(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-patch-baseline-for-patch-group" }, input)
 end
 
 --- Returns an array of the Policy object
---- @param input table The input table for the get_resource_policies command
+--- @param input table|nil The input table for the get_resource_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policies(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-resource-policies" }, input)
 end
 
 --- ServiceSetting is an account-level setting for an Amazon Web Services service
---- @param input table The input table for the get_service_setting command
+--- @param input table|nil The input table for the get_service_setting command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_setting(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-service-setting" }, input)
 end
 
 --- A parameter label is a user-defined alias to help you manage different versions of a parameter
---- @param input table The input table for the label_parameter_version command
+--- @param input table|nil The input table for the label_parameter_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.label_parameter_version(input)
 	return common.execute_aws_command_with_input({ "ssm", "label-parameter-version" }, input)
 end
 
 --- Retrieves all versions of an association for a specific association ID
---- @param input table The input table for the list_association_versions command
+--- @param input table|nil The input table for the list_association_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_association_versions(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-association-versions" }, input)
 end
 
 --- Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region
---- @param input table The input table for the list_associations command
+--- @param input table|nil The input table for the list_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associations(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-associations" }, input)
 end
 
 --- An invocation is copy of a command sent to a specific managed node
---- @param input table The input table for the list_command_invocations command
+--- @param input table|nil The input table for the list_command_invocations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_command_invocations(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-command-invocations" }, input)
 end
 
 --- Lists the commands requested by users of the Amazon Web Services account
---- @param input table The input table for the list_commands command
+--- @param input table|nil The input table for the list_commands command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_commands(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-commands" }, input)
 end
 
 --- For a specified resource ID, this API operation returns a list of compliance statuses for different resource types
---- @param input table The input table for the list_compliance_items command
+--- @param input table|nil The input table for the list_compliance_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_compliance_items(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-compliance-items" }, input)
 end
 
 --- Returns a summary count of compliant and non-compliant resources for a compliance type
---- @param input table The input table for the list_compliance_summaries command
+--- @param input table|nil The input table for the list_compliance_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_compliance_summaries(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-compliance-summaries" }, input)
 end
 
 --- Information about approval reviews for a version of a change template in Change Manager
---- @param input table The input table for the list_document_metadata_history command
+--- @param input table|nil The input table for the list_document_metadata_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_document_metadata_history(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-document-metadata-history" }, input)
 end
 
 --- List all versions for a document
---- @param input table The input table for the list_document_versions command
+--- @param input table|nil The input table for the list_document_versions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_document_versions(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-document-versions" }, input)
 end
 
 --- Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services Region
---- @param input table The input table for the list_documents command
+--- @param input table|nil The input table for the list_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_documents(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-documents" }, input)
 end
 
 --- A list of inventory items returned by the request
---- @param input table The input table for the list_inventory_entries command
+--- @param input table|nil The input table for the list_inventory_entries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_inventory_entries(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-inventory-entries" }, input)
 end
 
 --- Takes in filters and returns a list of managed nodes matching the filter criteria
---- @param input table The input table for the list_nodes command
+--- @param input table|nil The input table for the list_nodes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_nodes(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-nodes" }, input)
 end
 
 --- Generates a summary of managed instance/node metadata based on the filters and aggregators you specify
---- @param input table The input table for the list_nodes_summary command
+--- @param input table|nil The input table for the list_nodes_summary command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_nodes_summary(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-nodes-summary" }, input)
 end
 
 --- Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account
---- @param input table The input table for the list_ops_item_events command
+--- @param input table|nil The input table for the list_ops_item_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ops_item_events(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-ops-item-events" }, input)
 end
 
 --- Lists all related-item resources associated with a Systems Manager OpsCenter OpsItem
---- @param input table The input table for the list_ops_item_related_items command
+--- @param input table|nil The input table for the list_ops_item_related_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ops_item_related_items(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-ops-item-related-items" }, input)
 end
 
 --- Amazon Web Services Systems Manager calls this API operation when displaying all Application Manager OpsMetadata objects or blobs
---- @param input table The input table for the list_ops_metadata command
+--- @param input table|nil The input table for the list_ops_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ops_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-ops-metadata" }, input)
 end
 
 --- Returns a resource-level summary count
---- @param input table The input table for the list_resource_compliance_summaries command
+--- @param input table|nil The input table for the list_resource_compliance_summaries command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_compliance_summaries(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-resource-compliance-summaries" }, input)
 end
 
 --- Lists your resource data sync configurations
---- @param input table The input table for the list_resource_data_sync command
+--- @param input table|nil The input table for the list_resource_data_sync command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_data_sync(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-resource-data-sync" }, input)
 end
 
 --- Returns a list of the tags assigned to the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ssm", "list-tags-for-resource" }, input)
 end
 
 --- Shares a Amazon Web Services Systems Manager document (SSM document)publicly or privately
---- @param input table The input table for the modify_document_permission command
+--- @param input table|nil The input table for the modify_document_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_document_permission(input)
 	return common.execute_aws_command_with_input({ "ssm", "modify-document-permission" }, input)
 end
 
 --- Registers a compliance type and other compliance details on a designated resource
---- @param input table The input table for the put_compliance_items command
+--- @param input table|nil The input table for the put_compliance_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_compliance_items(input)
 	return common.execute_aws_command_with_input({ "ssm", "put-compliance-items" }, input)
 end
 
 --- Bulk update custom inventory items on one or more managed nodes
---- @param input table The input table for the put_inventory command
+--- @param input table|nil The input table for the put_inventory command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_inventory(input)
 	return common.execute_aws_command_with_input({ "ssm", "put-inventory" }, input)
 end
 
 --- Create or update a parameter in Parameter Store
---- @param input table The input table for the put_parameter command
+--- @param input table|nil The input table for the put_parameter command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_parameter(input)
 	return common.execute_aws_command_with_input({ "ssm", "put-parameter" }, input)
 end
 
 --- Creates or updates a Systems Manager resource policy
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "ssm", "put-resource-policy" }, input)
 end
 
 --- Defines the default patch baseline for the relevant operating system
---- @param input table The input table for the register_default_patch_baseline command
+--- @param input table|nil The input table for the register_default_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_default_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "register-default-patch-baseline" }, input)
 end
 
 --- Registers a patch baseline for a patch group
---- @param input table The input table for the register_patch_baseline_for_patch_group command
+--- @param input table|nil The input table for the register_patch_baseline_for_patch_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_patch_baseline_for_patch_group(input)
 	return common.execute_aws_command_with_input({ "ssm", "register-patch-baseline-for-patch-group" }, input)
 end
 
 --- Registers a target with a maintenance window
---- @param input table The input table for the register_target_with_maintenance_window command
+--- @param input table|nil The input table for the register_target_with_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_target_with_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "register-target-with-maintenance-window" }, input)
 end
 
 --- Adds a new task to a maintenance window
---- @param input table The input table for the register_task_with_maintenance_window command
+--- @param input table|nil The input table for the register_task_with_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_task_with_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "register-task-with-maintenance-window" }, input)
 end
 
 --- Removes tag keys from the specified resource
---- @param input table The input table for the remove_tags_from_resource command
+--- @param input table|nil The input table for the remove_tags_from_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_tags_from_resource(input)
 	return common.execute_aws_command_with_input({ "ssm", "remove-tags-from-resource" }, input)
 end
 
 --- ServiceSetting is an account-level setting for an Amazon Web Services service
---- @param input table The input table for the reset_service_setting command
+--- @param input table|nil The input table for the reset_service_setting command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_service_setting(input)
 	return common.execute_aws_command_with_input({ "ssm", "reset-service-setting" }, input)
 end
 
 --- Reconnects a session to a managed node after it has been disconnected
---- @param input table The input table for the resume_session command
+--- @param input table|nil The input table for the resume_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_session(input)
 	return common.execute_aws_command_with_input({ "ssm", "resume-session" }, input)
 end
 
 --- Sends a signal to an Automation execution to change the current behavior or status of the execution
---- @param input table The input table for the send_automation_signal command
+--- @param input table|nil The input table for the send_automation_signal command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_automation_signal(input)
 	return common.execute_aws_command_with_input({ "ssm", "send-automation-signal" }, input)
 end
 
 --- Runs commands on one or more managed nodes
---- @param input table The input table for the send_command command
+--- @param input table|nil The input table for the send_command command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_command(input)
 	return common.execute_aws_command_with_input({ "ssm", "send-command" }, input)
 end
 
 --- Runs an association immediately and only one time
---- @param input table The input table for the start_associations_once command
+--- @param input table|nil The input table for the start_associations_once command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_associations_once(input)
 	return common.execute_aws_command_with_input({ "ssm", "start-associations-once" }, input)
 end
 
 --- Initiates execution of an Automation runbook
---- @param input table The input table for the start_automation_execution command
+--- @param input table|nil The input table for the start_automation_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_automation_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "start-automation-execution" }, input)
 end
 
 --- Creates a change request for Change Manager
---- @param input table The input table for the start_change_request_execution command
+--- @param input table|nil The input table for the start_change_request_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_change_request_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "start-change-request-execution" }, input)
 end
 
 --- Initiates the process of creating a preview showing the effects that running a specified Automation runbook would have on the targeted resources
---- @param input table The input table for the start_execution_preview command
+--- @param input table|nil The input table for the start_execution_preview command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_execution_preview(input)
 	return common.execute_aws_command_with_input({ "ssm", "start-execution-preview" }, input)
 end
 
 --- Initiates a connection to a target (for example, a managed node) for a Session Manager session
---- @param input table The input table for the start_session command
+--- @param input table|nil The input table for the start_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_session(input)
 	return common.execute_aws_command_with_input({ "ssm", "start-session" }, input)
 end
 
 --- Stop an Automation that is currently running
---- @param input table The input table for the stop_automation_execution command
+--- @param input table|nil The input table for the stop_automation_execution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_automation_execution(input)
 	return common.execute_aws_command_with_input({ "ssm", "stop-automation-execution" }, input)
 end
 
 --- Permanently ends a session and closes the data connection between the Session Manager client and SSM Agent on the managed node
---- @param input table The input table for the terminate_session command
+--- @param input table|nil The input table for the terminate_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_session(input)
 	return common.execute_aws_command_with_input({ "ssm", "terminate-session" }, input)
 end
 
 --- Remove a label or labels from a parameter
---- @param input table The input table for the unlabel_parameter_version command
+--- @param input table|nil The input table for the unlabel_parameter_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unlabel_parameter_version(input)
 	return common.execute_aws_command_with_input({ "ssm", "unlabel-parameter-version" }, input)
 end
 
 --- Updates an association
---- @param input table The input table for the update_association command
+--- @param input table|nil The input table for the update_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_association(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-association" }, input)
 end
 
 --- Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the specified managed node
---- @param input table The input table for the update_association_status command
+--- @param input table|nil The input table for the update_association_status command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_association_status(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-association-status" }, input)
 end
 
 --- Updates one or more values for an SSM document
---- @param input table The input table for the update_document command
+--- @param input table|nil The input table for the update_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_document(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-document" }, input)
 end
 
 --- Set the default version of a document
---- @param input table The input table for the update_document_default_version command
+--- @param input table|nil The input table for the update_document_default_version command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_document_default_version(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-document-default-version" }, input)
 end
 
 --- Updates information related to approval reviews for a specific version of a change template in Change Manager
---- @param input table The input table for the update_document_metadata command
+--- @param input table|nil The input table for the update_document_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_document_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-document-metadata" }, input)
 end
 
 --- Updates an existing maintenance window
---- @param input table The input table for the update_maintenance_window command
+--- @param input table|nil The input table for the update_maintenance_window command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_maintenance_window(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window" }, input)
 end
 
 --- Modifies the target of an existing maintenance window
---- @param input table The input table for the update_maintenance_window_target command
+--- @param input table|nil The input table for the update_maintenance_window_target command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_maintenance_window_target(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window-target" }, input)
 end
 
 --- Modifies a task assigned to a maintenance window
---- @param input table The input table for the update_maintenance_window_task command
+--- @param input table|nil The input table for the update_maintenance_window_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_maintenance_window_task(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window-task" }, input)
 end
 
 --- Changes the Identity and Access Management (IAM) role that is assigned to the on-premises server, edge device, or virtual machines (VM)
---- @param input table The input table for the update_managed_instance_role command
+--- @param input table|nil The input table for the update_managed_instance_role command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_managed_instance_role(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-managed-instance-role" }, input)
 end
 
 --- Edit or change an OpsItem
---- @param input table The input table for the update_ops_item command
+--- @param input table|nil The input table for the update_ops_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ops_item(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-ops-item" }, input)
 end
 
 --- Amazon Web Services Systems Manager calls this API operation when you edit OpsMetadata in Application Manager
---- @param input table The input table for the update_ops_metadata command
+--- @param input table|nil The input table for the update_ops_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ops_metadata(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-ops-metadata" }, input)
 end
 
 --- Modifies an existing patch baseline
---- @param input table The input table for the update_patch_baseline command
+--- @param input table|nil The input table for the update_patch_baseline command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_patch_baseline(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-patch-baseline" }, input)
 end
 
 --- Update a resource data sync
---- @param input table The input table for the update_resource_data_sync command
+--- @param input table|nil The input table for the update_resource_data_sync command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_data_sync(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-resource-data-sync" }, input)
 end
 
 --- ServiceSetting is an account-level setting for an Amazon Web Services service
---- @param input table The input table for the update_service_setting command
+--- @param input table|nil The input table for the update_service_setting command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_setting(input)
 	return common.execute_aws_command_with_input({ "ssm", "update-service-setting" }, input)

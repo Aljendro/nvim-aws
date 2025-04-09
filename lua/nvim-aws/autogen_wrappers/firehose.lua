@@ -8,84 +8,84 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a Firehose stream
---- @param input table The input table for the create_delivery_stream command
+--- @param input table|nil The input table for the create_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "create-delivery-stream" }, input)
 end
 
 --- Deletes a Firehose stream and its data
---- @param input table The input table for the delete_delivery_stream command
+--- @param input table|nil The input table for the delete_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "delete-delivery-stream" }, input)
 end
 
 --- Describes the specified Firehose stream and its status
---- @param input table The input table for the describe_delivery_stream command
+--- @param input table|nil The input table for the describe_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "describe-delivery-stream" }, input)
 end
 
 --- Lists your Firehose streams in alphabetical order of their names
---- @param input table The input table for the list_delivery_streams command
+--- @param input table|nil The input table for the list_delivery_streams command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_delivery_streams(input)
 	return common.execute_aws_command_with_input({ "firehose", "list-delivery-streams" }, input)
 end
 
 --- Lists the tags for the specified Firehose stream
---- @param input table The input table for the list_tags_for_delivery_stream command
+--- @param input table|nil The input table for the list_tags_for_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "list-tags-for-delivery-stream" }, input)
 end
 
 --- Writes a single data record into an Firehose stream
---- @param input table The input table for the put_record command
+--- @param input table|nil The input table for the put_record command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_record(input)
 	return common.execute_aws_command_with_input({ "firehose", "put-record" }, input)
 end
 
 --- Writes multiple data records into a Firehose stream in a single call, which can achieve higher throughput per producer than when writing single records
---- @param input table The input table for the put_record_batch command
+--- @param input table|nil The input table for the put_record_batch command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_record_batch(input)
 	return common.execute_aws_command_with_input({ "firehose", "put-record-batch" }, input)
 end
 
 --- Enables server-side encryption (SSE) for the Firehose stream
---- @param input table The input table for the start_delivery_stream_encryption command
+--- @param input table|nil The input table for the start_delivery_stream_encryption command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_delivery_stream_encryption(input)
 	return common.execute_aws_command_with_input({ "firehose", "start-delivery-stream-encryption" }, input)
 end
 
 --- Disables server-side encryption (SSE) for the Firehose stream
---- @param input table The input table for the stop_delivery_stream_encryption command
+--- @param input table|nil The input table for the stop_delivery_stream_encryption command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_delivery_stream_encryption(input)
 	return common.execute_aws_command_with_input({ "firehose", "stop-delivery-stream-encryption" }, input)
 end
 
 --- Adds or updates tags for the specified Firehose stream
---- @param input table The input table for the tag_delivery_stream command
+--- @param input table|nil The input table for the tag_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "tag-delivery-stream" }, input)
 end
 
 --- Removes tags from the specified Firehose stream
---- @param input table The input table for the untag_delivery_stream command
+--- @param input table|nil The input table for the untag_delivery_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "untag-delivery-stream" }, input)
 end
 
 --- Updates the specified destination of the specified Firehose stream
---- @param input table The input table for the update_destination command
+--- @param input table|nil The input table for the update_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_destination(input)
 	return common.execute_aws_command_with_input({ "firehose", "update-destination" }, input)

@@ -8,315 +8,315 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Adds or updates a permission policy for a Amazon Q Business application, allowing cross-account access for an ISV
---- @param input table The input table for the associate_permission command
+--- @param input table|nil The input table for the associate_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_permission(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "associate-permission" }, input)
 end
 
 --- Asynchronously deletes one or more documents added using the BatchPutDocument API from an Amazon Q Business index
---- @param input table The input table for the batch_delete_document command
+--- @param input table|nil The input table for the batch_delete_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_document(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "batch-delete-document" }, input)
 end
 
 --- Adds one or more documents to an Amazon Q Business index
---- @param input table The input table for the batch_put_document command
+--- @param input table|nil The input table for the batch_put_document command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_put_document(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "batch-put-document" }, input)
 end
 
 --- Unsubscribes a user or a group from their pricing tier in an Amazon Q Business application
---- @param input table The input table for the cancel_subscription command
+--- @param input table|nil The input table for the cancel_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_subscription(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "cancel-subscription" }, input)
 end
 
 --- Starts or continues a streaming Amazon Q Business conversation
---- @param input table The input table for the chat command
+--- @param input table|nil The input table for the chat command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.chat(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "chat" }, input)
 end
 
 --- Starts or continues a non-streaming Amazon Q Business conversation
---- @param input table The input table for the chat_sync command
+--- @param input table|nil The input table for the chat_sync command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.chat_sync(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "chat-sync" }, input)
 end
 
 --- Creates an Amazon Q Business application
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "create-application" }, input)
 end
 
 --- Subscribes an IAM Identity Center user or a group to a pricing tier for an Amazon Q Business application
---- @param input table The input table for the create_subscription command
+--- @param input table|nil The input table for the create_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "create-subscription" }, input)
 end
 
 --- Creates a universally unique identifier (UUID) mapped to a list of local user ids within an application
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "create-user" }, input)
 end
 
 --- Deletes an Amazon Q Business application
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-application" }, input)
 end
 
 --- Deletes an attachment associated with a specific Amazon Q Business conversation
---- @param input table The input table for the delete_attachment command
+--- @param input table|nil The input table for the delete_attachment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_attachment(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-attachment" }, input)
 end
 
 --- Deletes chat controls configured for an existing Amazon Q Business application
---- @param input table The input table for the delete_chat_controls_configuration command
+--- @param input table|nil The input table for the delete_chat_controls_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_chat_controls_configuration(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-chat-controls-configuration" }, input)
 end
 
 --- Deletes an Amazon Q Business web experience conversation
---- @param input table The input table for the delete_conversation command
+--- @param input table|nil The input table for the delete_conversation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_conversation(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-conversation" }, input)
 end
 
 --- Deletes a group so that all users and sub groups that belong to the group can no longer access documents only available to that group
---- @param input table The input table for the delete_group command
+--- @param input table|nil The input table for the delete_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-group" }, input)
 end
 
 --- Deletes a user by email id
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "delete-user" }, input)
 end
 
 --- Removes a permission policy from a Amazon Q Business application, revoking the cross-account access that was previously granted to an ISV
---- @param input table The input table for the disassociate_permission command
+--- @param input table|nil The input table for the disassociate_permission command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_permission(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "disassociate-permission" }, input)
 end
 
 --- Gets information about an existing Amazon Q Business application
---- @param input table The input table for the get_application command
+--- @param input table|nil The input table for the get_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_application(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-application" }, input)
 end
 
 --- Gets information about chat controls configured for an existing Amazon Q Business application
---- @param input table The input table for the get_chat_controls_configuration command
+--- @param input table|nil The input table for the get_chat_controls_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_chat_controls_configuration(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-chat-controls-configuration" }, input)
 end
 
 --- Describes a group by group name
---- @param input table The input table for the get_group command
+--- @param input table|nil The input table for the get_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-group" }, input)
 end
 
 --- Returns the image bytes corresponding to a media object
---- @param input table The input table for the get_media command
+--- @param input table|nil The input table for the get_media command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_media(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-media" }, input)
 end
 
 --- Retrieves the current permission policy for a Amazon Q Business application
---- @param input table The input table for the get_policy command
+--- @param input table|nil The input table for the get_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policy(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-policy" }, input)
 end
 
 --- Describes the universally unique identifier (UUID) associated with a local user in a data source
---- @param input table The input table for the get_user command
+--- @param input table|nil The input table for the get_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-user" }, input)
 end
 
 --- Lists Amazon Q Business applications
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-applications" }, input)
 end
 
 --- Gets a list of attachments associated with an Amazon Q Business web experience or a list of attachements associated with a specific Amazon Q Business conversation
---- @param input table The input table for the list_attachments command
+--- @param input table|nil The input table for the list_attachments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_attachments(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-attachments" }, input)
 end
 
 --- Lists one or more Amazon Q Business conversations
---- @param input table The input table for the list_conversations command
+--- @param input table|nil The input table for the list_conversations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_conversations(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-conversations" }, input)
 end
 
 --- Get information about an Amazon Q Business data source connector synchronization
---- @param input table The input table for the list_data_source_sync_jobs command
+--- @param input table|nil The input table for the list_data_source_sync_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_source_sync_jobs(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-data-source-sync-jobs" }, input)
 end
 
 --- A list of documents attached to an index
---- @param input table The input table for the list_documents command
+--- @param input table|nil The input table for the list_documents command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_documents(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-documents" }, input)
 end
 
 --- Provides a list of groups that are mapped to users
---- @param input table The input table for the list_groups command
+--- @param input table|nil The input table for the list_groups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-groups" }, input)
 end
 
 --- Gets a list of messages associated with an Amazon Q Business web experience
---- @param input table The input table for the list_messages command
+--- @param input table|nil The input table for the list_messages command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_messages(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-messages" }, input)
 end
 
 --- Lists configured Amazon Q Business actions for a specific plugin in an Amazon Q Business application
---- @param input table The input table for the list_plugin_actions command
+--- @param input table|nil The input table for the list_plugin_actions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_plugin_actions(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-plugin-actions" }, input)
 end
 
 --- Lists configured Amazon Q Business actions for any plugin type—both built-in and custom
---- @param input table The input table for the list_plugin_type_actions command
+--- @param input table|nil The input table for the list_plugin_type_actions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_plugin_type_actions(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-plugin-type-actions" }, input)
 end
 
 --- Lists metadata for all Amazon Q Business plugin types
---- @param input table The input table for the list_plugin_type_metadata command
+--- @param input table|nil The input table for the list_plugin_type_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_plugin_type_metadata(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-plugin-type-metadata" }, input)
 end
 
 --- Lists all subscriptions created in an Amazon Q Business application
---- @param input table The input table for the list_subscriptions command
+--- @param input table|nil The input table for the list_subscriptions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscriptions(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-subscriptions" }, input)
 end
 
 --- Gets a list of tags associated with a specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "list-tags-for-resource" }, input)
 end
 
 --- Enables your end user to provide feedback on their Amazon Q Business generated chat responses
---- @param input table The input table for the put_feedback command
+--- @param input table|nil The input table for the put_feedback command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_feedback(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "put-feedback" }, input)
 end
 
 --- Create, or updates, a mapping of users—who have access to a document—to groups
---- @param input table The input table for the put_group command
+--- @param input table|nil The input table for the put_group command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_group(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "put-group" }, input)
 end
 
 --- Searches for relevant content in a Amazon Q Business application based on a query
---- @param input table The input table for the search_relevant_content command
+--- @param input table|nil The input table for the search_relevant_content command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_relevant_content(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "search-relevant-content" }, input)
 end
 
 --- Starts a data source connector synchronization job
---- @param input table The input table for the start_data_source_sync_job command
+--- @param input table|nil The input table for the start_data_source_sync_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_data_source_sync_job(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "start-data-source-sync-job" }, input)
 end
 
 --- Stops an Amazon Q Business data source connector synchronization job already in progress
---- @param input table The input table for the stop_data_source_sync_job command
+--- @param input table|nil The input table for the stop_data_source_sync_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_data_source_sync_job(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "stop-data-source-sync-job" }, input)
 end
 
 --- Adds the specified tag to the specified Amazon Q Business application or data source resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "tag-resource" }, input)
 end
 
 --- Removes a tag from an Amazon Q Business application or a data source
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "untag-resource" }, input)
 end
 
 --- Updates an existing Amazon Q Business application
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "update-application" }, input)
 end
 
 --- Updates a set of chat controls configured for an existing Amazon Q Business application
---- @param input table The input table for the update_chat_controls_configuration command
+--- @param input table|nil The input table for the update_chat_controls_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_chat_controls_configuration(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "update-chat-controls-configuration" }, input)
 end
 
 --- Updates the pricing tier for an Amazon Q Business subscription
---- @param input table The input table for the update_subscription command
+--- @param input table|nil The input table for the update_subscription command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "update-subscription" }, input)
 end
 
 --- Updates a information associated with a user id
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "update-user" }, input)

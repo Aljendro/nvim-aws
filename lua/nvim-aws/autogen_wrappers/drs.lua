@@ -8,322 +8,322 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associate a Source Network to an existing CloudFormation Stack and modify launch templates to use this network
---- @param input table The input table for the associate_source_network_stack command
+--- @param input table|nil The input table for the associate_source_network_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_source_network_stack(input)
 	return common.execute_aws_command_with_input({ "drs", "associate-source-network-stack" }, input)
 end
 
 --- Create an extended source server in the target Account based on the source server in staging account
---- @param input table The input table for the create_extended_source_server command
+--- @param input table|nil The input table for the create_extended_source_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_extended_source_server(input)
 	return common.execute_aws_command_with_input({ "drs", "create-extended-source-server" }, input)
 end
 
 --- Creates a new Launch Configuration Template
---- @param input table The input table for the create_launch_configuration_template command
+--- @param input table|nil The input table for the create_launch_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "create-launch-configuration-template" }, input)
 end
 
 --- Creates a new ReplicationConfigurationTemplate
---- @param input table The input table for the create_replication_configuration_template command
+--- @param input table|nil The input table for the create_replication_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "create-replication-configuration-template" }, input)
 end
 
 --- Create a new Source Network resource for a provided VPC ID
---- @param input table The input table for the create_source_network command
+--- @param input table|nil The input table for the create_source_network command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_source_network(input)
 	return common.execute_aws_command_with_input({ "drs", "create-source-network" }, input)
 end
 
 --- Deletes a single Job by ID
---- @param input table The input table for the delete_job command
+--- @param input table|nil The input table for the delete_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-job" }, input)
 end
 
 --- Deletes a resource launch action
---- @param input table The input table for the delete_launch_action command
+--- @param input table|nil The input table for the delete_launch_action command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_launch_action(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-launch-action" }, input)
 end
 
 --- Deletes a single Launch Configuration Template by ID
---- @param input table The input table for the delete_launch_configuration_template command
+--- @param input table|nil The input table for the delete_launch_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-launch-configuration-template" }, input)
 end
 
 --- Deletes a single Recovery Instance by ID
---- @param input table The input table for the delete_recovery_instance command
+--- @param input table|nil The input table for the delete_recovery_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recovery_instance(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-recovery-instance" }, input)
 end
 
 --- Deletes a single Replication Configuration Template by ID
---- @param input table The input table for the delete_replication_configuration_template command
+--- @param input table|nil The input table for the delete_replication_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-replication-configuration-template" }, input)
 end
 
 --- Delete Source Network resource
---- @param input table The input table for the delete_source_network command
+--- @param input table|nil The input table for the delete_source_network command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_source_network(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-source-network" }, input)
 end
 
 --- Deletes a single Source Server by ID
---- @param input table The input table for the delete_source_server command
+--- @param input table|nil The input table for the delete_source_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_source_server(input)
 	return common.execute_aws_command_with_input({ "drs", "delete-source-server" }, input)
 end
 
 --- Retrieves a detailed Job log with pagination
---- @param input table The input table for the describe_job_log_items command
+--- @param input table|nil The input table for the describe_job_log_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_log_items(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-job-log-items" }, input)
 end
 
 --- Returns a list of Jobs
---- @param input table The input table for the describe_jobs command
+--- @param input table|nil The input table for the describe_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_jobs(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-jobs" }, input)
 end
 
 --- Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
---- @param input table The input table for the describe_launch_configuration_templates command
+--- @param input table|nil The input table for the describe_launch_configuration_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_launch_configuration_templates(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-launch-configuration-templates" }, input)
 end
 
 --- Lists all Recovery Instances or multiple Recovery Instances by ID
---- @param input table The input table for the describe_recovery_instances command
+--- @param input table|nil The input table for the describe_recovery_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recovery_instances(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-recovery-instances" }, input)
 end
 
 --- Lists all Recovery Snapshots for a single Source Server
---- @param input table The input table for the describe_recovery_snapshots command
+--- @param input table|nil The input table for the describe_recovery_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recovery_snapshots(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-recovery-snapshots" }, input)
 end
 
 --- Lists all ReplicationConfigurationTemplates, filtered by Source Server IDs
---- @param input table The input table for the describe_replication_configuration_templates command
+--- @param input table|nil The input table for the describe_replication_configuration_templates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_replication_configuration_templates(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-replication-configuration-templates" }, input)
 end
 
 --- Lists all Source Networks or multiple Source Networks filtered by ID
---- @param input table The input table for the describe_source_networks command
+--- @param input table|nil The input table for the describe_source_networks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_source_networks(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-source-networks" }, input)
 end
 
 --- Lists all Source Servers or multiple Source Servers filtered by ID
---- @param input table The input table for the describe_source_servers command
+--- @param input table|nil The input table for the describe_source_servers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_source_servers(input)
 	return common.execute_aws_command_with_input({ "drs", "describe-source-servers" }, input)
 end
 
 --- Disconnect a Recovery Instance from Elastic Disaster Recovery
---- @param input table The input table for the disconnect_recovery_instance command
+--- @param input table|nil The input table for the disconnect_recovery_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disconnect_recovery_instance(input)
 	return common.execute_aws_command_with_input({ "drs", "disconnect-recovery-instance" }, input)
 end
 
 --- Disconnects a specific Source Server from Elastic Disaster Recovery
---- @param input table The input table for the disconnect_source_server command
+--- @param input table|nil The input table for the disconnect_source_server command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disconnect_source_server(input)
 	return common.execute_aws_command_with_input({ "drs", "disconnect-source-server" }, input)
 end
 
 --- Export the Source Network CloudFormation template to an S3 bucket
---- @param input table The input table for the export_source_network_cfn_template command
+--- @param input table|nil The input table for the export_source_network_cfn_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_source_network_cfn_template(input)
 	return common.execute_aws_command_with_input({ "drs", "export-source-network-cfn-template" }, input)
 end
 
 --- Lists all Failback ReplicationConfigurations, filtered by Recovery Instance ID
---- @param input table The input table for the get_failback_replication_configuration command
+--- @param input table|nil The input table for the get_failback_replication_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_failback_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "get-failback-replication-configuration" }, input)
 end
 
 --- Gets a LaunchConfiguration, filtered by Source Server IDs
---- @param input table The input table for the get_launch_configuration command
+--- @param input table|nil The input table for the get_launch_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "get-launch-configuration" }, input)
 end
 
 --- Gets a ReplicationConfiguration, filtered by Source Server ID
---- @param input table The input table for the get_replication_configuration command
+--- @param input table|nil The input table for the get_replication_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "get-replication-configuration" }, input)
 end
 
 --- Initialize Elastic Disaster Recovery
---- @param input table The input table for the initialize_service command
+--- @param input table|nil The input table for the initialize_service command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initialize_service(input)
 	return common.execute_aws_command_with_input({ "drs", "initialize-service" }, input)
 end
 
 --- Returns a list of source servers on a staging account that are extensible, which means that: a
---- @param input table The input table for the list_extensible_source_servers command
+--- @param input table|nil The input table for the list_extensible_source_servers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_extensible_source_servers(input)
 	return common.execute_aws_command_with_input({ "drs", "list-extensible-source-servers" }, input)
 end
 
 --- Lists resource launch actions
---- @param input table The input table for the list_launch_actions command
+--- @param input table|nil The input table for the list_launch_actions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_launch_actions(input)
 	return common.execute_aws_command_with_input({ "drs", "list-launch-actions" }, input)
 end
 
 --- Returns an array of staging accounts for existing extended source servers
---- @param input table The input table for the list_staging_accounts command
+--- @param input table|nil The input table for the list_staging_accounts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_staging_accounts(input)
 	return common.execute_aws_command_with_input({ "drs", "list-staging-accounts" }, input)
 end
 
 --- List all tags for your Elastic Disaster Recovery resources
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "drs", "list-tags-for-resource" }, input)
 end
 
 --- Puts a resource launch action
---- @param input table The input table for the put_launch_action command
+--- @param input table|nil The input table for the put_launch_action command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_launch_action(input)
 	return common.execute_aws_command_with_input({ "drs", "put-launch-action" }, input)
 end
 
 --- WARNING: RetryDataReplication is deprecated
---- @param input table The input table for the retry_data_replication command
+--- @param input table|nil The input table for the retry_data_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retry_data_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "retry-data-replication" }, input)
 end
 
 --- Start replication to origin / target region - applies only to protected instances that originated in EC2
---- @param input table The input table for the reverse_replication command
+--- @param input table|nil The input table for the reverse_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reverse_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "reverse-replication" }, input)
 end
 
 --- Starts replication for a stopped Source Server
---- @param input table The input table for the start_replication command
+--- @param input table|nil The input table for the start_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "start-replication" }, input)
 end
 
 --- Starts replication for a Source Network
---- @param input table The input table for the start_source_network_replication command
+--- @param input table|nil The input table for the start_source_network_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_source_network_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "start-source-network-replication" }, input)
 end
 
 --- Stops the failback process for a specified Recovery Instance
---- @param input table The input table for the stop_failback command
+--- @param input table|nil The input table for the stop_failback command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_failback(input)
 	return common.execute_aws_command_with_input({ "drs", "stop-failback" }, input)
 end
 
 --- Stops replication for a Source Server
---- @param input table The input table for the stop_replication command
+--- @param input table|nil The input table for the stop_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "stop-replication" }, input)
 end
 
 --- Stops replication for a Source Network
---- @param input table The input table for the stop_source_network_replication command
+--- @param input table|nil The input table for the stop_source_network_replication command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_source_network_replication(input)
 	return common.execute_aws_command_with_input({ "drs", "stop-source-network-replication" }, input)
 end
 
 --- Adds or overwrites only the specified tags for the specified Elastic Disaster Recovery resource or resources
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "drs", "tag-resource" }, input)
 end
 
 --- Deletes the specified set of tags from the specified set of Elastic Disaster Recovery resources
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "drs", "untag-resource" }, input)
 end
 
 --- Allows you to update the failback replication configuration of a Recovery Instance by ID
---- @param input table The input table for the update_failback_replication_configuration command
+--- @param input table|nil The input table for the update_failback_replication_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_failback_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "update-failback-replication-configuration" }, input)
 end
 
 --- Updates a LaunchConfiguration by Source Server ID
---- @param input table The input table for the update_launch_configuration command
+--- @param input table|nil The input table for the update_launch_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "update-launch-configuration" }, input)
 end
 
 --- Updates an existing Launch Configuration Template by ID
---- @param input table The input table for the update_launch_configuration_template command
+--- @param input table|nil The input table for the update_launch_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "update-launch-configuration-template" }, input)
 end
 
 --- Allows you to update a ReplicationConfiguration by Source Server ID
---- @param input table The input table for the update_replication_configuration command
+--- @param input table|nil The input table for the update_replication_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "update-replication-configuration" }, input)
 end
 
 --- Updates a ReplicationConfigurationTemplate by ID
---- @param input table The input table for the update_replication_configuration_template command
+--- @param input table|nil The input table for the update_replication_configuration_template command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "drs", "update-replication-configuration-template" }, input)

@@ -8,161 +8,161 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a broker
---- @param input table The input table for the create_broker command
+--- @param input table|nil The input table for the create_broker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "create-broker" }, input)
 end
 
 --- Creates a new configuration for the specified configuration name
---- @param input table The input table for the create_configuration command
+--- @param input table|nil The input table for the create_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "create-configuration" }, input)
 end
 
 --- Add a tag to a resource
---- @param input table The input table for the create_tags command
+--- @param input table|nil The input table for the create_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "create-tags" }, input)
 end
 
 --- Creates an ActiveMQ user
---- @param input table The input table for the create_user command
+--- @param input table|nil The input table for the create_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "mq", "create-user" }, input)
 end
 
 --- Deletes a broker
---- @param input table The input table for the delete_broker command
+--- @param input table|nil The input table for the delete_broker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-broker" }, input)
 end
 
 --- Removes a tag from a resource
---- @param input table The input table for the delete_tags command
+--- @param input table|nil The input table for the delete_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-tags" }, input)
 end
 
 --- Deletes an ActiveMQ user
---- @param input table The input table for the delete_user command
+--- @param input table|nil The input table for the delete_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-user" }, input)
 end
 
 --- Returns information about the specified broker
---- @param input table The input table for the describe_broker command
+--- @param input table|nil The input table for the describe_broker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker" }, input)
 end
 
 --- Describe available engine types and versions
---- @param input table The input table for the describe_broker_engine_types command
+--- @param input table|nil The input table for the describe_broker_engine_types command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker_engine_types(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker-engine-types" }, input)
 end
 
 --- Describe available broker instance options
---- @param input table The input table for the describe_broker_instance_options command
+--- @param input table|nil The input table for the describe_broker_instance_options command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker_instance_options(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker-instance-options" }, input)
 end
 
 --- Returns information about the specified configuration
---- @param input table The input table for the describe_configuration command
+--- @param input table|nil The input table for the describe_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-configuration" }, input)
 end
 
 --- Returns the specified configuration revision for the specified configuration
---- @param input table The input table for the describe_configuration_revision command
+--- @param input table|nil The input table for the describe_configuration_revision command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_revision(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-configuration-revision" }, input)
 end
 
 --- Returns information about an ActiveMQ user
---- @param input table The input table for the describe_user command
+--- @param input table|nil The input table for the describe_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-user" }, input)
 end
 
 --- Returns a list of all brokers
---- @param input table The input table for the list_brokers command
+--- @param input table|nil The input table for the list_brokers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_brokers(input)
 	return common.execute_aws_command_with_input({ "mq", "list-brokers" }, input)
 end
 
 --- Returns a list of all revisions for the specified configuration
---- @param input table The input table for the list_configuration_revisions command
+--- @param input table|nil The input table for the list_configuration_revisions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_revisions(input)
 	return common.execute_aws_command_with_input({ "mq", "list-configuration-revisions" }, input)
 end
 
 --- Returns a list of all configurations
---- @param input table The input table for the list_configurations command
+--- @param input table|nil The input table for the list_configurations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configurations(input)
 	return common.execute_aws_command_with_input({ "mq", "list-configurations" }, input)
 end
 
 --- Lists tags for a resource
---- @param input table The input table for the list_tags command
+--- @param input table|nil The input table for the list_tags command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "list-tags" }, input)
 end
 
 --- Returns a list of all ActiveMQ users
---- @param input table The input table for the list_users command
+--- @param input table|nil The input table for the list_users command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "mq", "list-users" }, input)
 end
 
 --- Promotes a data replication replica broker to the primary broker role
---- @param input table The input table for the promote command
+--- @param input table|nil The input table for the promote command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.promote(input)
 	return common.execute_aws_command_with_input({ "mq", "promote" }, input)
 end
 
 --- Reboots a broker
---- @param input table The input table for the reboot_broker command
+--- @param input table|nil The input table for the reboot_broker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "reboot-broker" }, input)
 end
 
 --- Adds a pending configuration change to a broker
---- @param input table The input table for the update_broker command
+--- @param input table|nil The input table for the update_broker command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "update-broker" }, input)
 end
 
 --- Updates the specified configuration
---- @param input table The input table for the update_configuration command
+--- @param input table|nil The input table for the update_configuration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "update-configuration" }, input)
 end
 
 --- Updates the information for an ActiveMQ user
---- @param input table The input table for the update_user command
+--- @param input table|nil The input table for the update_user command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "mq", "update-user" }, input)

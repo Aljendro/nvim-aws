@@ -8,42 +8,42 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Deletes the specified report definition in AWS Application Cost Profiler
---- @param input table The input table for the delete_report_definition command
+--- @param input table|nil The input table for the delete_report_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_report_definition(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "delete-report-definition" }, input)
 end
 
 --- Retrieves the definition of a report already configured in AWS Application Cost Profiler
---- @param input table The input table for the get_report_definition command
+--- @param input table|nil The input table for the get_report_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report_definition(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "get-report-definition" }, input)
 end
 
 --- Ingests application usage data from Amazon Simple Storage Service (Amazon S3)
---- @param input table The input table for the import_application_usage command
+--- @param input table|nil The input table for the import_application_usage command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_application_usage(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "import-application-usage" }, input)
 end
 
 --- Retrieves a list of all reports and their configurations for your AWS account
---- @param input table The input table for the list_report_definitions command
+--- @param input table|nil The input table for the list_report_definitions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_report_definitions(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "list-report-definitions" }, input)
 end
 
 --- Creates the report definition for a report in Application Cost Profiler
---- @param input table The input table for the put_report_definition command
+--- @param input table|nil The input table for the put_report_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_report_definition(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "put-report-definition" }, input)
 end
 
 --- Updates existing report in AWS Application Cost Profiler
---- @param input table The input table for the update_report_definition command
+--- @param input table|nil The input table for the update_report_definition command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_report_definition(input)
 	return common.execute_aws_command_with_input({ "applicationcostprofiler", "update-report-definition" }, input)

@@ -8,182 +8,182 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Gets user access details in a batch request
---- @param input table The input table for the batch_get_user_access_tasks command
+--- @param input table|nil The input table for the batch_get_user_access_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_user_access_tasks(input)
 	return common.execute_aws_command_with_input({ "appfabric", "batch-get-user-access-tasks" }, input)
 end
 
 --- Establishes a connection between Amazon Web Services AppFabric and an application, which allows AppFabric to call the APIs of the application
---- @param input table The input table for the connect_app_authorization command
+--- @param input table|nil The input table for the connect_app_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.connect_app_authorization(input)
 	return common.execute_aws_command_with_input({ "appfabric", "connect-app-authorization" }, input)
 end
 
 --- Creates an app authorization within an app bundle, which allows AppFabric to connect to an application
---- @param input table The input table for the create_app_authorization command
+--- @param input table|nil The input table for the create_app_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_authorization(input)
 	return common.execute_aws_command_with_input({ "appfabric", "create-app-authorization" }, input)
 end
 
 --- Creates an app bundle to collect data from an application using AppFabric
---- @param input table The input table for the create_app_bundle command
+--- @param input table|nil The input table for the create_app_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app_bundle(input)
 	return common.execute_aws_command_with_input({ "appfabric", "create-app-bundle" }, input)
 end
 
 --- Creates a data ingestion for an application
---- @param input table The input table for the create_ingestion command
+--- @param input table|nil The input table for the create_ingestion command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ingestion(input)
 	return common.execute_aws_command_with_input({ "appfabric", "create-ingestion" }, input)
 end
 
 --- Creates an ingestion destination, which specifies how an application's ingested data is processed by Amazon Web Services AppFabric and where it's delivered
---- @param input table The input table for the create_ingestion_destination command
+--- @param input table|nil The input table for the create_ingestion_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ingestion_destination(input)
 	return common.execute_aws_command_with_input({ "appfabric", "create-ingestion-destination" }, input)
 end
 
 --- Deletes an app authorization
---- @param input table The input table for the delete_app_authorization command
+--- @param input table|nil The input table for the delete_app_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_authorization(input)
 	return common.execute_aws_command_with_input({ "appfabric", "delete-app-authorization" }, input)
 end
 
 --- Deletes an app bundle
---- @param input table The input table for the delete_app_bundle command
+--- @param input table|nil The input table for the delete_app_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_bundle(input)
 	return common.execute_aws_command_with_input({ "appfabric", "delete-app-bundle" }, input)
 end
 
 --- Deletes an ingestion
---- @param input table The input table for the delete_ingestion command
+--- @param input table|nil The input table for the delete_ingestion command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ingestion(input)
 	return common.execute_aws_command_with_input({ "appfabric", "delete-ingestion" }, input)
 end
 
 --- Deletes an ingestion destination
---- @param input table The input table for the delete_ingestion_destination command
+--- @param input table|nil The input table for the delete_ingestion_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ingestion_destination(input)
 	return common.execute_aws_command_with_input({ "appfabric", "delete-ingestion-destination" }, input)
 end
 
 --- Returns information about an app authorization
---- @param input table The input table for the get_app_authorization command
+--- @param input table|nil The input table for the get_app_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_authorization(input)
 	return common.execute_aws_command_with_input({ "appfabric", "get-app-authorization" }, input)
 end
 
 --- Returns information about an app bundle
---- @param input table The input table for the get_app_bundle command
+--- @param input table|nil The input table for the get_app_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_bundle(input)
 	return common.execute_aws_command_with_input({ "appfabric", "get-app-bundle" }, input)
 end
 
 --- Returns information about an ingestion
---- @param input table The input table for the get_ingestion command
+--- @param input table|nil The input table for the get_ingestion command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ingestion(input)
 	return common.execute_aws_command_with_input({ "appfabric", "get-ingestion" }, input)
 end
 
 --- Returns information about an ingestion destination
---- @param input table The input table for the get_ingestion_destination command
+--- @param input table|nil The input table for the get_ingestion_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ingestion_destination(input)
 	return common.execute_aws_command_with_input({ "appfabric", "get-ingestion-destination" }, input)
 end
 
 --- Returns a list of all app authorizations configured for an app bundle
---- @param input table The input table for the list_app_authorizations command
+--- @param input table|nil The input table for the list_app_authorizations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_authorizations(input)
 	return common.execute_aws_command_with_input({ "appfabric", "list-app-authorizations" }, input)
 end
 
 --- Returns a list of app bundles
---- @param input table The input table for the list_app_bundles command
+--- @param input table|nil The input table for the list_app_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_app_bundles(input)
 	return common.execute_aws_command_with_input({ "appfabric", "list-app-bundles" }, input)
 end
 
 --- Returns a list of all ingestion destinations configured for an ingestion
---- @param input table The input table for the list_ingestion_destinations command
+--- @param input table|nil The input table for the list_ingestion_destinations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingestion_destinations(input)
 	return common.execute_aws_command_with_input({ "appfabric", "list-ingestion-destinations" }, input)
 end
 
 --- Returns a list of all ingestions configured for an app bundle
---- @param input table The input table for the list_ingestions command
+--- @param input table|nil The input table for the list_ingestions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingestions(input)
 	return common.execute_aws_command_with_input({ "appfabric", "list-ingestions" }, input)
 end
 
 --- Returns a list of tags for a resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "appfabric", "list-tags-for-resource" }, input)
 end
 
 --- Starts (enables) an ingestion, which collects data from an application
---- @param input table The input table for the start_ingestion command
+--- @param input table|nil The input table for the start_ingestion command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_ingestion(input)
 	return common.execute_aws_command_with_input({ "appfabric", "start-ingestion" }, input)
 end
 
 --- Starts the tasks to search user access status for a specific email address
---- @param input table The input table for the start_user_access_tasks command
+--- @param input table|nil The input table for the start_user_access_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_user_access_tasks(input)
 	return common.execute_aws_command_with_input({ "appfabric", "start-user-access-tasks" }, input)
 end
 
 --- Stops (disables) an ingestion
---- @param input table The input table for the stop_ingestion command
+--- @param input table|nil The input table for the stop_ingestion command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_ingestion(input)
 	return common.execute_aws_command_with_input({ "appfabric", "stop-ingestion" }, input)
 end
 
 --- Assigns one or more tags (key-value pairs) to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "appfabric", "tag-resource" }, input)
 end
 
 --- Removes a tag or tags from a resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "appfabric", "untag-resource" }, input)
 end
 
 --- Updates an app authorization within an app bundle, which allows AppFabric to connect to an application
---- @param input table The input table for the update_app_authorization command
+--- @param input table|nil The input table for the update_app_authorization command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app_authorization(input)
 	return common.execute_aws_command_with_input({ "appfabric", "update-app-authorization" }, input)
 end
 
 --- Updates an ingestion destination, which specifies how an application's ingested data is processed by Amazon Web Services AppFabric and where it's delivered
---- @param input table The input table for the update_ingestion_destination command
+--- @param input table|nil The input table for the update_ingestion_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ingestion_destination(input)
 	return common.execute_aws_command_with_input({ "appfabric", "update-ingestion-destination" }, input)

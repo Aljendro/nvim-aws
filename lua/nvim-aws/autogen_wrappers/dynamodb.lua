@@ -8,399 +8,399 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL
---- @param input table The input table for the batch_execute_statement command
+--- @param input table|nil The input table for the batch_execute_statement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_execute_statement(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "batch-execute-statement" }, input)
 end
 
 --- The BatchGetItem operation returns the attributes of one or more items from one or more tables
---- @param input table The input table for the batch_get_item command
+--- @param input table|nil The input table for the batch_get_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "batch-get-item" }, input)
 end
 
 --- The BatchWriteItem operation puts or deletes multiple items in one or more tables
---- @param input table The input table for the batch_write_item command
+--- @param input table|nil The input table for the batch_write_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_write_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "batch-write-item" }, input)
 end
 
 --- Creates a backup for an existing table
---- @param input table The input table for the create_backup command
+--- @param input table|nil The input table for the create_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_backup(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "create-backup" }, input)
 end
 
 --- Creates a global table from an existing table
---- @param input table The input table for the create_global_table command
+--- @param input table|nil The input table for the create_global_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_global_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "create-global-table" }, input)
 end
 
 --- The CreateTable operation adds a new table to your account
---- @param input table The input table for the create_table command
+--- @param input table|nil The input table for the create_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "create-table" }, input)
 end
 
 --- Deletes an existing backup of a table
---- @param input table The input table for the delete_backup command
+--- @param input table|nil The input table for the delete_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_backup(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "delete-backup" }, input)
 end
 
 --- Deletes a single item in a table by primary key
---- @param input table The input table for the delete_item command
+--- @param input table|nil The input table for the delete_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "delete-item" }, input)
 end
 
 --- Deletes the resource-based policy attached to the resource, which can be a table or stream
---- @param input table The input table for the delete_resource_policy command
+--- @param input table|nil The input table for the delete_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "delete-resource-policy" }, input)
 end
 
 --- The DeleteTable operation deletes a table and all of its items
---- @param input table The input table for the delete_table command
+--- @param input table|nil The input table for the delete_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "delete-table" }, input)
 end
 
 --- Describes an existing backup of a table
---- @param input table The input table for the describe_backup command
+--- @param input table|nil The input table for the describe_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_backup(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-backup" }, input)
 end
 
 --- Checks the status of continuous backups and point in time recovery on the specified table
---- @param input table The input table for the describe_continuous_backups command
+--- @param input table|nil The input table for the describe_continuous_backups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_continuous_backups(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-continuous-backups" }, input)
 end
 
 --- Returns information about contributor insights for a given table or global secondary index
---- @param input table The input table for the describe_contributor_insights command
+--- @param input table|nil The input table for the describe_contributor_insights command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_contributor_insights(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-contributor-insights" }, input)
 end
 
 --- Returns the regional endpoint information
---- @param input table The input table for the describe_endpoints command
+--- @param input table|nil The input table for the describe_endpoints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoints(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-endpoints" }, input)
 end
 
 --- Describes an existing table export
---- @param input table The input table for the describe_export command
+--- @param input table|nil The input table for the describe_export command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_export(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-export" }, input)
 end
 
 --- Returns information about the specified global table
---- @param input table The input table for the describe_global_table command
+--- @param input table|nil The input table for the describe_global_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_global_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-global-table" }, input)
 end
 
 --- Describes Region-specific settings for a global table
---- @param input table The input table for the describe_global_table_settings command
+--- @param input table|nil The input table for the describe_global_table_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_global_table_settings(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-global-table-settings" }, input)
 end
 
 --- Represents the properties of the import
---- @param input table The input table for the describe_import command
+--- @param input table|nil The input table for the describe_import command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_import(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-import" }, input)
 end
 
 --- Returns information about the status of Kinesis streaming
---- @param input table The input table for the describe_kinesis_streaming_destination command
+--- @param input table|nil The input table for the describe_kinesis_streaming_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_kinesis_streaming_destination(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-kinesis-streaming-destination" }, input)
 end
 
 --- Returns the current provisioned-capacity quotas for your Amazon Web Services account in a Region, both for the Region as a whole and for any one DynamoDB table that you create there
---- @param input table The input table for the describe_limits command
+--- @param input table|nil The input table for the describe_limits command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_limits(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-limits" }, input)
 end
 
 --- Returns information about the table, including the current status of the table, when it was created, the primary key schema, and any indexes on the table
---- @param input table The input table for the describe_table command
+--- @param input table|nil The input table for the describe_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-table" }, input)
 end
 
 --- Describes auto scaling settings across replicas of the global table at once
---- @param input table The input table for the describe_table_replica_auto_scaling command
+--- @param input table|nil The input table for the describe_table_replica_auto_scaling command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_table_replica_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-table-replica-auto-scaling" }, input)
 end
 
 --- Gives a description of the Time to Live (TTL) status on the specified table
---- @param input table The input table for the describe_time_to_live command
+--- @param input table|nil The input table for the describe_time_to_live command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_time_to_live(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "describe-time-to-live" }, input)
 end
 
 --- Stops replication from the DynamoDB table to the Kinesis data stream
---- @param input table The input table for the disable_kinesis_streaming_destination command
+--- @param input table|nil The input table for the disable_kinesis_streaming_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_kinesis_streaming_destination(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "disable-kinesis-streaming-destination" }, input)
 end
 
 --- Starts table data replication to the specified Kinesis data stream at a timestamp chosen during the enable workflow
---- @param input table The input table for the enable_kinesis_streaming_destination command
+--- @param input table|nil The input table for the enable_kinesis_streaming_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_kinesis_streaming_destination(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "enable-kinesis-streaming-destination" }, input)
 end
 
 --- This operation allows you to perform reads and singleton writes on data stored in DynamoDB, using PartiQL
---- @param input table The input table for the execute_statement command
+--- @param input table|nil The input table for the execute_statement command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.execute_statement(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "execute-statement" }, input)
 end
 
 --- This operation allows you to perform transactional reads or writes on data stored in DynamoDB, using PartiQL
---- @param input table The input table for the execute_transaction command
+--- @param input table|nil The input table for the execute_transaction command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.execute_transaction(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "execute-transaction" }, input)
 end
 
 --- Exports table data to an S3 bucket
---- @param input table The input table for the export_table_to_point_in_time command
+--- @param input table|nil The input table for the export_table_to_point_in_time command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_table_to_point_in_time(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "export-table-to-point-in-time" }, input)
 end
 
 --- The GetItem operation returns a set of attributes for the item with the given primary key
---- @param input table The input table for the get_item command
+--- @param input table|nil The input table for the get_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "get-item" }, input)
 end
 
 --- Returns the resource-based policy document attached to the resource, which can be a table or stream, in JSON format
---- @param input table The input table for the get_resource_policy command
+--- @param input table|nil The input table for the get_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "get-resource-policy" }, input)
 end
 
 --- Imports table data from an S3 bucket
---- @param input table The input table for the import_table command
+--- @param input table|nil The input table for the import_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "import-table" }, input)
 end
 
 --- List DynamoDB backups that are associated with an Amazon Web Services account and weren't made with Amazon Web Services Backup
---- @param input table The input table for the list_backups command
+--- @param input table|nil The input table for the list_backups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_backups(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-backups" }, input)
 end
 
 --- Returns a list of ContributorInsightsSummary for a table and all its global secondary indexes
---- @param input table The input table for the list_contributor_insights command
+--- @param input table|nil The input table for the list_contributor_insights command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_contributor_insights(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-contributor-insights" }, input)
 end
 
 --- Lists completed exports within the past 90 days
---- @param input table The input table for the list_exports command
+--- @param input table|nil The input table for the list_exports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_exports(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-exports" }, input)
 end
 
 --- Lists all global tables that have a replica in the specified Region
---- @param input table The input table for the list_global_tables command
+--- @param input table|nil The input table for the list_global_tables command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_global_tables(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-global-tables" }, input)
 end
 
 --- Lists completed imports within the past 90 days
---- @param input table The input table for the list_imports command
+--- @param input table|nil The input table for the list_imports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_imports(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-imports" }, input)
 end
 
 --- Returns an array of table names associated with the current account and endpoint
---- @param input table The input table for the list_tables command
+--- @param input table|nil The input table for the list_tables command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tables(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-tables" }, input)
 end
 
 --- List all tags on an Amazon DynamoDB resource
---- @param input table The input table for the list_tags_of_resource command
+--- @param input table|nil The input table for the list_tags_of_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_of_resource(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "list-tags-of-resource" }, input)
 end
 
 --- Creates a new item, or replaces an old item with a new item
---- @param input table The input table for the put_item command
+--- @param input table|nil The input table for the put_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "put-item" }, input)
 end
 
 --- Attaches a resource-based policy document to the resource, which can be a table or stream
---- @param input table The input table for the put_resource_policy command
+--- @param input table|nil The input table for the put_resource_policy command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "put-resource-policy" }, input)
 end
 
 --- You must provide the name of the partition key attribute and a single value for that attribute
---- @param input table The input table for the query command
+--- @param input table|nil The input table for the query command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.query(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "query" }, input)
 end
 
 --- Creates a new table from an existing backup
---- @param input table The input table for the restore_table_from_backup command
+--- @param input table|nil The input table for the restore_table_from_backup command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_table_from_backup(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "restore-table-from-backup" }, input)
 end
 
 --- Restores the specified table to the specified point in time within EarliestRestorableDateTime and LatestRestorableDateTime
---- @param input table The input table for the restore_table_to_point_in_time command
+--- @param input table|nil The input table for the restore_table_to_point_in_time command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_table_to_point_in_time(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "restore-table-to-point-in-time" }, input)
 end
 
 --- The Scan operation returns one or more items and item attributes by accessing every item in a table or a secondary index
---- @param input table The input table for the scan command
+--- @param input table|nil The input table for the scan command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.scan(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "scan" }, input)
 end
 
 --- Associate a set of tags with an Amazon DynamoDB resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "tag-resource" }, input)
 end
 
 --- TransactGetItems is a synchronous operation that atomically retrieves multiple items from one or more tables (but not from indexes) in a single account and Region
---- @param input table The input table for the transact_get_items command
+--- @param input table|nil The input table for the transact_get_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.transact_get_items(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "transact-get-items" }, input)
 end
 
 --- TransactWriteItems is a synchronous write operation that groups up to 100 action requests
---- @param input table The input table for the transact_write_items command
+--- @param input table|nil The input table for the transact_write_items command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.transact_write_items(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "transact-write-items" }, input)
 end
 
 --- Removes the association of tags from an Amazon DynamoDB resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "untag-resource" }, input)
 end
 
 --- UpdateContinuousBackups enables or disables point in time recovery for the specified table
---- @param input table The input table for the update_continuous_backups command
+--- @param input table|nil The input table for the update_continuous_backups command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_continuous_backups(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-continuous-backups" }, input)
 end
 
 --- Updates the status for contributor insights for a specific table or index
---- @param input table The input table for the update_contributor_insights command
+--- @param input table|nil The input table for the update_contributor_insights command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_contributor_insights(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-contributor-insights" }, input)
 end
 
 --- Adds or removes replicas in the specified global table
---- @param input table The input table for the update_global_table command
+--- @param input table|nil The input table for the update_global_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-global-table" }, input)
 end
 
 --- Updates settings for a global table
---- @param input table The input table for the update_global_table_settings command
+--- @param input table|nil The input table for the update_global_table_settings command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_global_table_settings(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-global-table-settings" }, input)
 end
 
 --- Edits an existing item's attributes, or adds a new item to the table if it does not already exist
---- @param input table The input table for the update_item command
+--- @param input table|nil The input table for the update_item command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_item(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-item" }, input)
 end
 
 --- The command to update the Kinesis stream destination
---- @param input table The input table for the update_kinesis_streaming_destination command
+--- @param input table|nil The input table for the update_kinesis_streaming_destination command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_kinesis_streaming_destination(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-kinesis-streaming-destination" }, input)
 end
 
 --- Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given table
---- @param input table The input table for the update_table command
+--- @param input table|nil The input table for the update_table command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-table" }, input)
 end
 
 --- Updates auto scaling settings on your global tables at once
---- @param input table The input table for the update_table_replica_auto_scaling command
+--- @param input table|nil The input table for the update_table_replica_auto_scaling command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table_replica_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-table-replica-auto-scaling" }, input)
 end
 
 --- The UpdateTimeToLive method enables or disables Time to Live (TTL) for the specified table
---- @param input table The input table for the update_time_to_live command
+--- @param input table|nil The input table for the update_time_to_live command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_time_to_live(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-time-to-live" }, input)

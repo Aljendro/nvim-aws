@@ -8,91 +8,91 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates a data store that can ingest and export FHIR formatted data
---- @param input table The input table for the create_fhir_datastore command
+--- @param input table|nil The input table for the create_fhir_datastore command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fhir_datastore(input)
 	return common.execute_aws_command_with_input({ "healthlake", "create-fhir-datastore" }, input)
 end
 
 --- Deletes a data store
---- @param input table The input table for the delete_fhir_datastore command
+--- @param input table|nil The input table for the delete_fhir_datastore command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fhir_datastore(input)
 	return common.execute_aws_command_with_input({ "healthlake", "delete-fhir-datastore" }, input)
 end
 
 --- Gets the properties associated with the FHIR data store, including the data store ID, data store ARN, data store name, data store status, when the data store was created, data store type version, and the data store's endpoint
---- @param input table The input table for the describe_fhir_datastore command
+--- @param input table|nil The input table for the describe_fhir_datastore command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fhir_datastore(input)
 	return common.execute_aws_command_with_input({ "healthlake", "describe-fhir-datastore" }, input)
 end
 
 --- Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job
---- @param input table The input table for the describe_fhir_export_job command
+--- @param input table|nil The input table for the describe_fhir_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fhir_export_job(input)
 	return common.execute_aws_command_with_input({ "healthlake", "describe-fhir-export-job" }, input)
 end
 
 --- Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job
---- @param input table The input table for the describe_fhir_import_job command
+--- @param input table|nil The input table for the describe_fhir_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fhir_import_job(input)
 	return common.execute_aws_command_with_input({ "healthlake", "describe-fhir-import-job" }, input)
 end
 
 --- Lists all FHIR data stores that are in the user’s account, regardless of data store status
---- @param input table The input table for the list_fhir_datastores command
+--- @param input table|nil The input table for the list_fhir_datastores command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fhir_datastores(input)
 	return common.execute_aws_command_with_input({ "healthlake", "list-fhir-datastores" }, input)
 end
 
 --- Lists all FHIR export jobs associated with an account and their statuses
---- @param input table The input table for the list_fhir_export_jobs command
+--- @param input table|nil The input table for the list_fhir_export_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fhir_export_jobs(input)
 	return common.execute_aws_command_with_input({ "healthlake", "list-fhir-export-jobs" }, input)
 end
 
 --- Lists all FHIR import jobs associated with an account and their statuses
---- @param input table The input table for the list_fhir_import_jobs command
+--- @param input table|nil The input table for the list_fhir_import_jobs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fhir_import_jobs(input)
 	return common.execute_aws_command_with_input({ "healthlake", "list-fhir-import-jobs" }, input)
 end
 
 --- Returns a list of all existing tags associated with a data store
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "healthlake", "list-tags-for-resource" }, input)
 end
 
 --- Begins a FHIR export job
---- @param input table The input table for the start_fhir_export_job command
+--- @param input table|nil The input table for the start_fhir_export_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_fhir_export_job(input)
 	return common.execute_aws_command_with_input({ "healthlake", "start-fhir-export-job" }, input)
 end
 
 --- Begins a FHIR Import job
---- @param input table The input table for the start_fhir_import_job command
+--- @param input table|nil The input table for the start_fhir_import_job command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_fhir_import_job(input)
 	return common.execute_aws_command_with_input({ "healthlake", "start-fhir-import-job" }, input)
 end
 
 --- Adds a user specified key and value tag to a data store
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "healthlake", "tag-resource" }, input)
 end
 
 --- Removes tags from a data store
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "healthlake", "untag-resource" }, input)

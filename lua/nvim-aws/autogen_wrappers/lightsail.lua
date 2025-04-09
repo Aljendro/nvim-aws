@@ -8,1127 +8,1127 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Allocates a static IP address
---- @param input table The input table for the allocate_static_ip command
+--- @param input table|nil The input table for the allocate_static_ip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.allocate_static_ip(input)
 	return common.execute_aws_command_with_input({ "lightsail", "allocate-static-ip" }, input)
 end
 
 --- Attaches an SSL/TLS certificate to your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the attach_certificate_to_distribution command
+--- @param input table|nil The input table for the attach_certificate_to_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_certificate_to_distribution(input)
 	return common.execute_aws_command_with_input({ "lightsail", "attach-certificate-to-distribution" }, input)
 end
 
 --- Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the specified disk name
---- @param input table The input table for the attach_disk command
+--- @param input table|nil The input table for the attach_disk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_disk(input)
 	return common.execute_aws_command_with_input({ "lightsail", "attach-disk" }, input)
 end
 
 --- Attaches one or more Lightsail instances to a load balancer
---- @param input table The input table for the attach_instances_to_load_balancer command
+--- @param input table|nil The input table for the attach_instances_to_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_instances_to_load_balancer(input)
 	return common.execute_aws_command_with_input({ "lightsail", "attach-instances-to-load-balancer" }, input)
 end
 
 --- Attaches a Transport Layer Security (TLS) certificate to your load balancer
---- @param input table The input table for the attach_load_balancer_tls_certificate command
+--- @param input table|nil The input table for the attach_load_balancer_tls_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_load_balancer_tls_certificate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "attach-load-balancer-tls-certificate" }, input)
 end
 
 --- Attaches a static IP address to a specific Amazon Lightsail instance
---- @param input table The input table for the attach_static_ip command
+--- @param input table|nil The input table for the attach_static_ip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_static_ip(input)
 	return common.execute_aws_command_with_input({ "lightsail", "attach-static-ip" }, input)
 end
 
 --- Closes ports for a specific Amazon Lightsail instance
---- @param input table The input table for the close_instance_public_ports command
+--- @param input table|nil The input table for the close_instance_public_ports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.close_instance_public_ports(input)
 	return common.execute_aws_command_with_input({ "lightsail", "close-instance-public-ports" }, input)
 end
 
 --- Copies a manual snapshot of an instance or disk as another manual snapshot, or copies an automatic snapshot of an instance or disk as a manual snapshot
---- @param input table The input table for the copy_snapshot command
+--- @param input table|nil The input table for the copy_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "copy-snapshot" }, input)
 end
 
 --- Creates an Amazon Lightsail bucket
---- @param input table The input table for the create_bucket command
+--- @param input table|nil The input table for the create_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bucket(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-bucket" }, input)
 end
 
 --- Creates a new access key for the specified Amazon Lightsail bucket
---- @param input table The input table for the create_bucket_access_key command
+--- @param input table|nil The input table for the create_bucket_access_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bucket_access_key(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-bucket-access-key" }, input)
 end
 
 --- Creates an SSL/TLS certificate for an Amazon Lightsail content delivery network (CDN) distribution and a container service
---- @param input table The input table for the create_certificate command
+--- @param input table|nil The input table for the create_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_certificate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-certificate" }, input)
 end
 
 --- Creates an AWS CloudFormation stack, which creates a new Amazon EC2 instance from an exported Amazon Lightsail snapshot
---- @param input table The input table for the create_cloud_formation_stack command
+--- @param input table|nil The input table for the create_cloud_formation_stack command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cloud_formation_stack(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-cloud-formation-stack" }, input)
 end
 
 --- Creates an email or SMS text message contact method
---- @param input table The input table for the create_contact_method command
+--- @param input table|nil The input table for the create_contact_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_contact_method(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-contact-method" }, input)
 end
 
 --- Creates an Amazon Lightsail container service
---- @param input table The input table for the create_container_service command
+--- @param input table|nil The input table for the create_container_service command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_service(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-container-service" }, input)
 end
 
 --- Creates a deployment for your Amazon Lightsail container service
---- @param input table The input table for the create_container_service_deployment command
+--- @param input table|nil The input table for the create_container_service_deployment command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_service_deployment(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-container-service-deployment" }, input)
 end
 
 --- Creates a temporary set of log in credentials that you can use to log in to the Docker process on your local machine
---- @param input table The input table for the create_container_service_registry_login command
+--- @param input table|nil The input table for the create_container_service_registry_login command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_service_registry_login(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-container-service-registry-login" }, input)
 end
 
 --- Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone (us-east-2a)
---- @param input table The input table for the create_disk command
+--- @param input table|nil The input table for the create_disk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_disk(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-disk" }, input)
 end
 
 --- Creates a block storage disk from a manual or automatic snapshot of a disk
---- @param input table The input table for the create_disk_from_snapshot command
+--- @param input table|nil The input table for the create_disk_from_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_disk_from_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-disk-from-snapshot" }, input)
 end
 
 --- Creates a snapshot of a block storage disk
---- @param input table The input table for the create_disk_snapshot command
+--- @param input table|nil The input table for the create_disk_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_disk_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-disk-snapshot" }, input)
 end
 
 --- Creates an Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the create_distribution command
+--- @param input table|nil The input table for the create_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_distribution(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-distribution" }, input)
 end
 
 --- Creates a domain resource for the specified domain (example
---- @param input table The input table for the create_domain command
+--- @param input table|nil The input table for the create_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-domain" }, input)
 end
 
 --- Creates one of the following domain name system (DNS) records in a domain DNS zone: Address (A), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT)
---- @param input table The input table for the create_domain_entry command
+--- @param input table|nil The input table for the create_domain_entry command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain_entry(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-domain-entry" }, input)
 end
 
 --- Creates two URLs that are used to access a virtual computer’s graphical user interface (GUI) session
---- @param input table The input table for the create_gui_session_access_details command
+--- @param input table|nil The input table for the create_gui_session_access_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_gui_session_access_details(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-gui-session-access-details" }, input)
 end
 
 --- Creates a snapshot of a specific virtual private server, or instance
---- @param input table The input table for the create_instance_snapshot command
+--- @param input table|nil The input table for the create_instance_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_instance_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-instance-snapshot" }, input)
 end
 
 --- Creates one or more Amazon Lightsail instances
---- @param input table The input table for the create_instances command
+--- @param input table|nil The input table for the create_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_instances(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-instances" }, input)
 end
 
 --- Creates one or more new instances from a manual or automatic snapshot of an instance
---- @param input table The input table for the create_instances_from_snapshot command
+--- @param input table|nil The input table for the create_instances_from_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_instances_from_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-instances-from-snapshot" }, input)
 end
 
 --- Creates a custom SSH key pair that you can use with an Amazon Lightsail instance
---- @param input table The input table for the create_key_pair command
+--- @param input table|nil The input table for the create_key_pair command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_key_pair(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-key-pair" }, input)
 end
 
 --- Creates a Lightsail load balancer
---- @param input table The input table for the create_load_balancer command
+--- @param input table|nil The input table for the create_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_load_balancer(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-load-balancer" }, input)
 end
 
 --- Creates an SSL/TLS certificate for an Amazon Lightsail load balancer
---- @param input table The input table for the create_load_balancer_tls_certificate command
+--- @param input table|nil The input table for the create_load_balancer_tls_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_load_balancer_tls_certificate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-load-balancer-tls-certificate" }, input)
 end
 
 --- Creates a new database in Amazon Lightsail
---- @param input table The input table for the create_relational_database command
+--- @param input table|nil The input table for the create_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-relational-database" }, input)
 end
 
 --- Creates a new database from an existing database snapshot in Amazon Lightsail
---- @param input table The input table for the create_relational_database_from_snapshot command
+--- @param input table|nil The input table for the create_relational_database_from_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_relational_database_from_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-relational-database-from-snapshot" }, input)
 end
 
 --- Creates a snapshot of your database in Amazon Lightsail
---- @param input table The input table for the create_relational_database_snapshot command
+--- @param input table|nil The input table for the create_relational_database_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_relational_database_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "create-relational-database-snapshot" }, input)
 end
 
 --- Deletes an alarm
---- @param input table The input table for the delete_alarm command
+--- @param input table|nil The input table for the delete_alarm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alarm(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-alarm" }, input)
 end
 
 --- Deletes an automatic snapshot of an instance or disk
---- @param input table The input table for the delete_auto_snapshot command
+--- @param input table|nil The input table for the delete_auto_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_auto_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-auto-snapshot" }, input)
 end
 
 --- Deletes a Amazon Lightsail bucket
---- @param input table The input table for the delete_bucket command
+--- @param input table|nil The input table for the delete_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-bucket" }, input)
 end
 
 --- Deletes an access key for the specified Amazon Lightsail bucket
---- @param input table The input table for the delete_bucket_access_key command
+--- @param input table|nil The input table for the delete_bucket_access_key command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bucket_access_key(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-bucket-access-key" }, input)
 end
 
 --- Deletes an SSL/TLS certificate for your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the delete_certificate command
+--- @param input table|nil The input table for the delete_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_certificate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-certificate" }, input)
 end
 
 --- Deletes a contact method
---- @param input table The input table for the delete_contact_method command
+--- @param input table|nil The input table for the delete_contact_method command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_contact_method(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-contact-method" }, input)
 end
 
 --- Deletes a container image that is registered to your Amazon Lightsail container service
---- @param input table The input table for the delete_container_image command
+--- @param input table|nil The input table for the delete_container_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_image(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-container-image" }, input)
 end
 
 --- Deletes your Amazon Lightsail container service
---- @param input table The input table for the delete_container_service command
+--- @param input table|nil The input table for the delete_container_service command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_service(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-container-service" }, input)
 end
 
 --- Deletes the specified block storage disk
---- @param input table The input table for the delete_disk command
+--- @param input table|nil The input table for the delete_disk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_disk(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-disk" }, input)
 end
 
 --- Deletes the specified disk snapshot
---- @param input table The input table for the delete_disk_snapshot command
+--- @param input table|nil The input table for the delete_disk_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_disk_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-disk-snapshot" }, input)
 end
 
 --- Deletes your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the delete_distribution command
+--- @param input table|nil The input table for the delete_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_distribution(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-distribution" }, input)
 end
 
 --- Deletes the specified domain recordset and all of its domain records
---- @param input table The input table for the delete_domain command
+--- @param input table|nil The input table for the delete_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-domain" }, input)
 end
 
 --- Deletes a specific domain entry
---- @param input table The input table for the delete_domain_entry command
+--- @param input table|nil The input table for the delete_domain_entry command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain_entry(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-domain-entry" }, input)
 end
 
 --- Deletes an Amazon Lightsail instance
---- @param input table The input table for the delete_instance command
+--- @param input table|nil The input table for the delete_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_instance(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-instance" }, input)
 end
 
 --- Deletes a specific snapshot of a virtual private server (or instance)
---- @param input table The input table for the delete_instance_snapshot command
+--- @param input table|nil The input table for the delete_instance_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_instance_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-instance-snapshot" }, input)
 end
 
 --- Deletes the specified key pair by removing the public key from Amazon Lightsail
---- @param input table The input table for the delete_key_pair command
+--- @param input table|nil The input table for the delete_key_pair command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_key_pair(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-key-pair" }, input)
 end
 
 --- Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate an instance
---- @param input table The input table for the delete_known_host_keys command
+--- @param input table|nil The input table for the delete_known_host_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_known_host_keys(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-known-host-keys" }, input)
 end
 
 --- Deletes a Lightsail load balancer and all its associated SSL/TLS certificates
---- @param input table The input table for the delete_load_balancer command
+--- @param input table|nil The input table for the delete_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_load_balancer(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-load-balancer" }, input)
 end
 
 --- Deletes an SSL/TLS certificate associated with a Lightsail load balancer
---- @param input table The input table for the delete_load_balancer_tls_certificate command
+--- @param input table|nil The input table for the delete_load_balancer_tls_certificate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_load_balancer_tls_certificate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-load-balancer-tls-certificate" }, input)
 end
 
 --- Deletes a database in Amazon Lightsail
---- @param input table The input table for the delete_relational_database command
+--- @param input table|nil The input table for the delete_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-relational-database" }, input)
 end
 
 --- Deletes a database snapshot in Amazon Lightsail
---- @param input table The input table for the delete_relational_database_snapshot command
+--- @param input table|nil The input table for the delete_relational_database_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_relational_database_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "delete-relational-database-snapshot" }, input)
 end
 
 --- Detaches an SSL/TLS certificate from your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the detach_certificate_from_distribution command
+--- @param input table|nil The input table for the detach_certificate_from_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detach_certificate_from_distribution(input)
 	return common.execute_aws_command_with_input({ "lightsail", "detach-certificate-from-distribution" }, input)
 end
 
 --- Detaches a stopped block storage disk from a Lightsail instance
---- @param input table The input table for the detach_disk command
+--- @param input table|nil The input table for the detach_disk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detach_disk(input)
 	return common.execute_aws_command_with_input({ "lightsail", "detach-disk" }, input)
 end
 
 --- Detaches the specified instances from a Lightsail load balancer
---- @param input table The input table for the detach_instances_from_load_balancer command
+--- @param input table|nil The input table for the detach_instances_from_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detach_instances_from_load_balancer(input)
 	return common.execute_aws_command_with_input({ "lightsail", "detach-instances-from-load-balancer" }, input)
 end
 
 --- Detaches a static IP from the Amazon Lightsail instance to which it is attached
---- @param input table The input table for the detach_static_ip command
+--- @param input table|nil The input table for the detach_static_ip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detach_static_ip(input)
 	return common.execute_aws_command_with_input({ "lightsail", "detach-static-ip" }, input)
 end
 
 --- Disables an add-on for an Amazon Lightsail resource
---- @param input table The input table for the disable_add_on command
+--- @param input table|nil The input table for the disable_add_on command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_add_on(input)
 	return common.execute_aws_command_with_input({ "lightsail", "disable-add-on" }, input)
 end
 
 --- Downloads the regional Amazon Lightsail default key pair
---- @param input table The input table for the download_default_key_pair command
+--- @param input table|nil The input table for the download_default_key_pair command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.download_default_key_pair(input)
 	return common.execute_aws_command_with_input({ "lightsail", "download-default-key-pair" }, input)
 end
 
 --- Enables or modifies an add-on for an Amazon Lightsail resource
---- @param input table The input table for the enable_add_on command
+--- @param input table|nil The input table for the enable_add_on command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_add_on(input)
 	return common.execute_aws_command_with_input({ "lightsail", "enable-add-on" }, input)
 end
 
 --- Exports an Amazon Lightsail instance or block storage disk snapshot to Amazon Elastic Compute Cloud (Amazon EC2)
---- @param input table The input table for the export_snapshot command
+--- @param input table|nil The input table for the export_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "export-snapshot" }, input)
 end
 
 --- Returns the names of all active (not deleted) resources
---- @param input table The input table for the get_active_names command
+--- @param input table|nil The input table for the get_active_names command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_active_names(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-active-names" }, input)
 end
 
 --- Returns information about the configured alarms
---- @param input table The input table for the get_alarms command
+--- @param input table|nil The input table for the get_alarms command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_alarms(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-alarms" }, input)
 end
 
 --- Returns the available automatic snapshots for an instance or disk
---- @param input table The input table for the get_auto_snapshots command
+--- @param input table|nil The input table for the get_auto_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_auto_snapshots(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-auto-snapshots" }, input)
 end
 
 --- Returns the list of available instance images, or blueprints
---- @param input table The input table for the get_blueprints command
+--- @param input table|nil The input table for the get_blueprints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blueprints(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-blueprints" }, input)
 end
 
 --- Returns the existing access key IDs for the specified Amazon Lightsail bucket
---- @param input table The input table for the get_bucket_access_keys command
+--- @param input table|nil The input table for the get_bucket_access_keys command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_access_keys(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-bucket-access-keys" }, input)
 end
 
 --- Returns the bundles that you can apply to a Amazon Lightsail bucket
---- @param input table The input table for the get_bucket_bundles command
+--- @param input table|nil The input table for the get_bucket_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_bundles(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-bucket-bundles" }, input)
 end
 
 --- Returns the data points of a specific metric for an Amazon Lightsail bucket
---- @param input table The input table for the get_bucket_metric_data command
+--- @param input table|nil The input table for the get_bucket_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-bucket-metric-data" }, input)
 end
 
 --- Returns information about one or more Amazon Lightsail buckets
---- @param input table The input table for the get_buckets command
+--- @param input table|nil The input table for the get_buckets command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_buckets(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-buckets" }, input)
 end
 
 --- Returns the bundles that you can apply to an Amazon Lightsail instance when you create it
---- @param input table The input table for the get_bundles command
+--- @param input table|nil The input table for the get_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bundles(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-bundles" }, input)
 end
 
 --- Returns information about one or more Amazon Lightsail SSL/TLS certificates
---- @param input table The input table for the get_certificates command
+--- @param input table|nil The input table for the get_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_certificates(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-certificates" }, input)
 end
 
 --- Returns the CloudFormation stack record created as a result of the create cloud formation stack operation
---- @param input table The input table for the get_cloud_formation_stack_records command
+--- @param input table|nil The input table for the get_cloud_formation_stack_records command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cloud_formation_stack_records(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-cloud-formation-stack-records" }, input)
 end
 
 --- Returns information about the configured contact methods
---- @param input table The input table for the get_contact_methods command
+--- @param input table|nil The input table for the get_contact_methods command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_contact_methods(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-contact-methods" }, input)
 end
 
 --- Returns information about Amazon Lightsail containers, such as the current version of the Lightsail Control (lightsailctl) plugin
---- @param input table The input table for the get_container_api_metadata command
+--- @param input table|nil The input table for the get_container_api_metadata command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_api_metadata(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-api-metadata" }, input)
 end
 
 --- Returns the container images that are registered to your Amazon Lightsail container service
---- @param input table The input table for the get_container_images command
+--- @param input table|nil The input table for the get_container_images command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_images(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-images" }, input)
 end
 
 --- Returns the log events of a container of your Amazon Lightsail container service
---- @param input table The input table for the get_container_log command
+--- @param input table|nil The input table for the get_container_log command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_log(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-log" }, input)
 end
 
 --- Returns the deployments for your Amazon Lightsail container service A deployment specifies the settings, such as the ports and launch command, of containers that are deployed to your container service
---- @param input table The input table for the get_container_service_deployments command
+--- @param input table|nil The input table for the get_container_service_deployments command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_service_deployments(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-service-deployments" }, input)
 end
 
 --- Returns the data points of a specific metric of your Amazon Lightsail container service
---- @param input table The input table for the get_container_service_metric_data command
+--- @param input table|nil The input table for the get_container_service_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_service_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-service-metric-data" }, input)
 end
 
 --- Returns the list of powers that can be specified for your Amazon Lightsail container services
---- @param input table The input table for the get_container_service_powers command
+--- @param input table|nil The input table for the get_container_service_powers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_service_powers(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-service-powers" }, input)
 end
 
 --- Returns information about one or more of your Amazon Lightsail container services
---- @param input table The input table for the get_container_services command
+--- @param input table|nil The input table for the get_container_services command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_services(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-container-services" }, input)
 end
 
 --- Retrieves information about the cost estimate for a specified resource
---- @param input table The input table for the get_cost_estimate command
+--- @param input table|nil The input table for the get_cost_estimate command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cost_estimate(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-cost-estimate" }, input)
 end
 
 --- Returns information about a specific block storage disk
---- @param input table The input table for the get_disk command
+--- @param input table|nil The input table for the get_disk command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_disk(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-disk" }, input)
 end
 
 --- Returns information about a specific block storage disk snapshot
---- @param input table The input table for the get_disk_snapshot command
+--- @param input table|nil The input table for the get_disk_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_disk_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-disk-snapshot" }, input)
 end
 
 --- Returns information about all block storage disk snapshots in your AWS account and region
---- @param input table The input table for the get_disk_snapshots command
+--- @param input table|nil The input table for the get_disk_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_disk_snapshots(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-disk-snapshots" }, input)
 end
 
 --- Returns information about all block storage disks in your AWS account and region
---- @param input table The input table for the get_disks command
+--- @param input table|nil The input table for the get_disks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_disks(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-disks" }, input)
 end
 
 --- Returns the bundles that can be applied to your Amazon Lightsail content delivery network (CDN) distributions
---- @param input table The input table for the get_distribution_bundles command
+--- @param input table|nil The input table for the get_distribution_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution_bundles(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-distribution-bundles" }, input)
 end
 
 --- Returns the timestamp and status of the last cache reset of a specific Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the get_distribution_latest_cache_reset command
+--- @param input table|nil The input table for the get_distribution_latest_cache_reset command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution_latest_cache_reset(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-distribution-latest-cache-reset" }, input)
 end
 
 --- Returns the data points of a specific metric for an Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the get_distribution_metric_data command
+--- @param input table|nil The input table for the get_distribution_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-distribution-metric-data" }, input)
 end
 
 --- Returns information about one or more of your Amazon Lightsail content delivery network (CDN) distributions
---- @param input table The input table for the get_distributions command
+--- @param input table|nil The input table for the get_distributions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distributions(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-distributions" }, input)
 end
 
 --- Returns information about a specific domain recordset
---- @param input table The input table for the get_domain command
+--- @param input table|nil The input table for the get_domain command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-domain" }, input)
 end
 
 --- Returns a list of all domains in the user's account
---- @param input table The input table for the get_domains command
+--- @param input table|nil The input table for the get_domains command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domains(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-domains" }, input)
 end
 
 --- Returns all export snapshot records created as a result of the export snapshot operation
---- @param input table The input table for the get_export_snapshot_records command
+--- @param input table|nil The input table for the get_export_snapshot_records command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_export_snapshot_records(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-export-snapshot-records" }, input)
 end
 
 --- Returns information about a specific Amazon Lightsail instance, which is a virtual private server
---- @param input table The input table for the get_instance command
+--- @param input table|nil The input table for the get_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance" }, input)
 end
 
 --- Returns temporary SSH keys you can use to connect to a specific virtual private server, or instance
---- @param input table The input table for the get_instance_access_details command
+--- @param input table|nil The input table for the get_instance_access_details command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_access_details(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-access-details" }, input)
 end
 
 --- Returns the data points for the specified Amazon Lightsail instance metric, given an instance name
---- @param input table The input table for the get_instance_metric_data command
+--- @param input table|nil The input table for the get_instance_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-metric-data" }, input)
 end
 
 --- Returns the firewall port states for a specific Amazon Lightsail instance, the IP addresses allowed to connect to the instance through the ports, and the protocol
---- @param input table The input table for the get_instance_port_states command
+--- @param input table|nil The input table for the get_instance_port_states command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_port_states(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-port-states" }, input)
 end
 
 --- Returns information about a specific instance snapshot
---- @param input table The input table for the get_instance_snapshot command
+--- @param input table|nil The input table for the get_instance_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-snapshot" }, input)
 end
 
 --- Returns all instance snapshots for the user's account
---- @param input table The input table for the get_instance_snapshots command
+--- @param input table|nil The input table for the get_instance_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_snapshots(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-snapshots" }, input)
 end
 
 --- Returns the state of a specific instance
---- @param input table The input table for the get_instance_state command
+--- @param input table|nil The input table for the get_instance_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_state(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instance-state" }, input)
 end
 
 --- Returns information about all Amazon Lightsail virtual private servers, or instances
---- @param input table The input table for the get_instances command
+--- @param input table|nil The input table for the get_instances command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instances(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-instances" }, input)
 end
 
 --- Returns information about a specific key pair
---- @param input table The input table for the get_key_pair command
+--- @param input table|nil The input table for the get_key_pair command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key_pair(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-key-pair" }, input)
 end
 
 --- Returns information about all key pairs in the user's account
---- @param input table The input table for the get_key_pairs command
+--- @param input table|nil The input table for the get_key_pairs command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key_pairs(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-key-pairs" }, input)
 end
 
 --- Returns information about the specified Lightsail load balancer
---- @param input table The input table for the get_load_balancer command
+--- @param input table|nil The input table for the get_load_balancer command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_load_balancer(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-load-balancer" }, input)
 end
 
 --- Returns information about health metrics for your Lightsail load balancer
---- @param input table The input table for the get_load_balancer_metric_data command
+--- @param input table|nil The input table for the get_load_balancer_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_load_balancer_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-load-balancer-metric-data" }, input)
 end
 
 --- Returns information about the TLS certificates that are associated with the specified Lightsail load balancer
---- @param input table The input table for the get_load_balancer_tls_certificates command
+--- @param input table|nil The input table for the get_load_balancer_tls_certificates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_load_balancer_tls_certificates(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-load-balancer-tls-certificates" }, input)
 end
 
 --- Returns a list of TLS security policies that you can apply to Lightsail load balancers
---- @param input table The input table for the get_load_balancer_tls_policies command
+--- @param input table|nil The input table for the get_load_balancer_tls_policies command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_load_balancer_tls_policies(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-load-balancer-tls-policies" }, input)
 end
 
 --- Returns information about all load balancers in an account
---- @param input table The input table for the get_load_balancers command
+--- @param input table|nil The input table for the get_load_balancers command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_load_balancers(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-load-balancers" }, input)
 end
 
 --- Returns information about a specific operation
---- @param input table The input table for the get_operation command
+--- @param input table|nil The input table for the get_operation command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_operation(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-operation" }, input)
 end
 
 --- Returns information about all operations
---- @param input table The input table for the get_operations command
+--- @param input table|nil The input table for the get_operations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_operations(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-operations" }, input)
 end
 
 --- Gets operations for a specific resource (an instance or a static IP)
---- @param input table The input table for the get_operations_for_resource command
+--- @param input table|nil The input table for the get_operations_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_operations_for_resource(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-operations-for-resource" }, input)
 end
 
 --- Returns a list of all valid regions for Amazon Lightsail
---- @param input table The input table for the get_regions command
+--- @param input table|nil The input table for the get_regions command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_regions(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-regions" }, input)
 end
 
 --- Returns information about a specific database in Amazon Lightsail
---- @param input table The input table for the get_relational_database command
+--- @param input table|nil The input table for the get_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database" }, input)
 end
 
 --- Returns a list of available database blueprints in Amazon Lightsail
---- @param input table The input table for the get_relational_database_blueprints command
+--- @param input table|nil The input table for the get_relational_database_blueprints command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_blueprints(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-blueprints" }, input)
 end
 
 --- Returns the list of bundles that are available in Amazon Lightsail
---- @param input table The input table for the get_relational_database_bundles command
+--- @param input table|nil The input table for the get_relational_database_bundles command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_bundles(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-bundles" }, input)
 end
 
 --- Returns a list of events for a specific database in Amazon Lightsail
---- @param input table The input table for the get_relational_database_events command
+--- @param input table|nil The input table for the get_relational_database_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_events(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-events" }, input)
 end
 
 --- Returns a list of log events for a database in Amazon Lightsail
---- @param input table The input table for the get_relational_database_log_events command
+--- @param input table|nil The input table for the get_relational_database_log_events command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_log_events(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-log-events" }, input)
 end
 
 --- Returns a list of available log streams for a specific database in Amazon Lightsail
---- @param input table The input table for the get_relational_database_log_streams command
+--- @param input table|nil The input table for the get_relational_database_log_streams command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_log_streams(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-log-streams" }, input)
 end
 
 --- Returns the current, previous, or pending versions of the master user password for a Lightsail database
---- @param input table The input table for the get_relational_database_master_user_password command
+--- @param input table|nil The input table for the get_relational_database_master_user_password command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_master_user_password(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-master-user-password" }, input)
 end
 
 --- Returns the data points of the specified metric for a database in Amazon Lightsail
---- @param input table The input table for the get_relational_database_metric_data command
+--- @param input table|nil The input table for the get_relational_database_metric_data command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_metric_data(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-metric-data" }, input)
 end
 
 --- Returns all of the runtime parameters offered by the underlying database software, or engine, for a specific database in Amazon Lightsail
---- @param input table The input table for the get_relational_database_parameters command
+--- @param input table|nil The input table for the get_relational_database_parameters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_parameters(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-parameters" }, input)
 end
 
 --- Returns information about a specific database snapshot in Amazon Lightsail
---- @param input table The input table for the get_relational_database_snapshot command
+--- @param input table|nil The input table for the get_relational_database_snapshot command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_snapshot(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-snapshot" }, input)
 end
 
 --- Returns information about all of your database snapshots in Amazon Lightsail
---- @param input table The input table for the get_relational_database_snapshots command
+--- @param input table|nil The input table for the get_relational_database_snapshots command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_database_snapshots(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-database-snapshots" }, input)
 end
 
 --- Returns information about all of your databases in Amazon Lightsail
---- @param input table The input table for the get_relational_databases command
+--- @param input table|nil The input table for the get_relational_databases command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_relational_databases(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-relational-databases" }, input)
 end
 
 --- Returns detailed information for five of the most recent SetupInstanceHttps requests that were ran on the target instance
---- @param input table The input table for the get_setup_history command
+--- @param input table|nil The input table for the get_setup_history command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_setup_history(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-setup-history" }, input)
 end
 
 --- Returns information about an Amazon Lightsail static IP
---- @param input table The input table for the get_static_ip command
+--- @param input table|nil The input table for the get_static_ip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_static_ip(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-static-ip" }, input)
 end
 
 --- Returns information about all static IPs in the user's account
---- @param input table The input table for the get_static_ips command
+--- @param input table|nil The input table for the get_static_ips command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_static_ips(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-static-ips" }, input)
 end
 
 --- Imports a public SSH key from a specific key pair
---- @param input table The input table for the import_key_pair command
+--- @param input table|nil The input table for the import_key_pair command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_key_pair(input)
 	return common.execute_aws_command_with_input({ "lightsail", "import-key-pair" }, input)
 end
 
 --- Returns a Boolean value indicating whether your Lightsail VPC is peered
---- @param input table The input table for the is_vpc_peered command
+--- @param input table|nil The input table for the is_vpc_peered command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.is_vpc_peered(input)
 	return common.execute_aws_command_with_input({ "lightsail", "is-vpc-peered" }, input)
 end
 
 --- Opens ports for a specific Amazon Lightsail instance, and specifies the IP addresses allowed to connect to the instance through the ports, and the protocol
---- @param input table The input table for the open_instance_public_ports command
+--- @param input table|nil The input table for the open_instance_public_ports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.open_instance_public_ports(input)
 	return common.execute_aws_command_with_input({ "lightsail", "open-instance-public-ports" }, input)
 end
 
 --- Peers the Lightsail VPC with the user's default VPC
---- @param input table The input table for the peer_vpc command
+--- @param input table|nil The input table for the peer_vpc command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.peer_vpc(input)
 	return common.execute_aws_command_with_input({ "lightsail", "peer-vpc" }, input)
 end
 
 --- Creates or updates an alarm, and associates it with the specified metric
---- @param input table The input table for the put_alarm command
+--- @param input table|nil The input table for the put_alarm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_alarm(input)
 	return common.execute_aws_command_with_input({ "lightsail", "put-alarm" }, input)
 end
 
 --- Opens ports for a specific Amazon Lightsail instance, and specifies the IP addresses allowed to connect to the instance through the ports, and the protocol
---- @param input table The input table for the put_instance_public_ports command
+--- @param input table|nil The input table for the put_instance_public_ports command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_instance_public_ports(input)
 	return common.execute_aws_command_with_input({ "lightsail", "put-instance-public-ports" }, input)
 end
 
 --- Restarts a specific instance
---- @param input table The input table for the reboot_instance command
+--- @param input table|nil The input table for the reboot_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_instance(input)
 	return common.execute_aws_command_with_input({ "lightsail", "reboot-instance" }, input)
 end
 
 --- Restarts a specific database in Amazon Lightsail
---- @param input table The input table for the reboot_relational_database command
+--- @param input table|nil The input table for the reboot_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "reboot-relational-database" }, input)
 end
 
 --- Registers a container image to your Amazon Lightsail container service
---- @param input table The input table for the register_container_image command
+--- @param input table|nil The input table for the register_container_image command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_container_image(input)
 	return common.execute_aws_command_with_input({ "lightsail", "register-container-image" }, input)
 end
 
 --- Deletes a specific static IP from your account
---- @param input table The input table for the release_static_ip command
+--- @param input table|nil The input table for the release_static_ip command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.release_static_ip(input)
 	return common.execute_aws_command_with_input({ "lightsail", "release-static-ip" }, input)
 end
 
 --- Deletes currently cached content from your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the reset_distribution_cache command
+--- @param input table|nil The input table for the reset_distribution_cache command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_distribution_cache(input)
 	return common.execute_aws_command_with_input({ "lightsail", "reset-distribution-cache" }, input)
 end
 
 --- Sends a verification request to an email contact method to ensure it's owned by the requester
---- @param input table The input table for the send_contact_method_verification command
+--- @param input table|nil The input table for the send_contact_method_verification command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_contact_method_verification(input)
 	return common.execute_aws_command_with_input({ "lightsail", "send-contact-method-verification" }, input)
 end
 
 --- Sets the IP address type for an Amazon Lightsail resource
---- @param input table The input table for the set_ip_address_type command
+--- @param input table|nil The input table for the set_ip_address_type command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_ip_address_type(input)
 	return common.execute_aws_command_with_input({ "lightsail", "set-ip-address-type" }, input)
 end
 
 --- Sets the Amazon Lightsail resources that can access the specified Lightsail bucket
---- @param input table The input table for the set_resource_access_for_bucket command
+--- @param input table|nil The input table for the set_resource_access_for_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_resource_access_for_bucket(input)
 	return common.execute_aws_command_with_input({ "lightsail", "set-resource-access-for-bucket" }, input)
 end
 
 --- Creates an SSL/TLS certificate that secures traffic for your website
---- @param input table The input table for the setup_instance_https command
+--- @param input table|nil The input table for the setup_instance_https command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.setup_instance_https(input)
 	return common.execute_aws_command_with_input({ "lightsail", "setup-instance-https" }, input)
 end
 
 --- Initiates a graphical user interface (GUI) session that’s used to access a virtual computer’s operating system and application
---- @param input table The input table for the start_gui_session command
+--- @param input table|nil The input table for the start_gui_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_gui_session(input)
 	return common.execute_aws_command_with_input({ "lightsail", "start-gui-session" }, input)
 end
 
 --- Starts a specific Amazon Lightsail instance from a stopped state
---- @param input table The input table for the start_instance command
+--- @param input table|nil The input table for the start_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_instance(input)
 	return common.execute_aws_command_with_input({ "lightsail", "start-instance" }, input)
 end
 
 --- Starts a specific database from a stopped state in Amazon Lightsail
---- @param input table The input table for the start_relational_database command
+--- @param input table|nil The input table for the start_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "start-relational-database" }, input)
 end
 
 --- Terminates a web-based Amazon DCV session that’s used to access a virtual computer’s operating system or application
---- @param input table The input table for the stop_gui_session command
+--- @param input table|nil The input table for the stop_gui_session command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_gui_session(input)
 	return common.execute_aws_command_with_input({ "lightsail", "stop-gui-session" }, input)
 end
 
 --- Stops a specific Amazon Lightsail instance that is currently running
---- @param input table The input table for the stop_instance command
+--- @param input table|nil The input table for the stop_instance command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_instance(input)
 	return common.execute_aws_command_with_input({ "lightsail", "stop-instance" }, input)
 end
 
 --- Stops a specific database that is currently running in Amazon Lightsail
---- @param input table The input table for the stop_relational_database command
+--- @param input table|nil The input table for the stop_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "stop-relational-database" }, input)
 end
 
 --- Adds one or more tags to the specified Amazon Lightsail resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "lightsail", "tag-resource" }, input)
 end
 
 --- Tests an alarm by displaying a banner on the Amazon Lightsail console
---- @param input table The input table for the test_alarm command
+--- @param input table|nil The input table for the test_alarm command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_alarm(input)
 	return common.execute_aws_command_with_input({ "lightsail", "test-alarm" }, input)
 end
 
 --- Unpeers the Lightsail VPC from the user's default VPC
---- @param input table The input table for the unpeer_vpc command
+--- @param input table|nil The input table for the unpeer_vpc command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unpeer_vpc(input)
 	return common.execute_aws_command_with_input({ "lightsail", "unpeer-vpc" }, input)
 end
 
 --- Deletes the specified set of tag keys and their values from the specified Amazon Lightsail resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "lightsail", "untag-resource" }, input)
 end
 
 --- Updates an existing Amazon Lightsail bucket
---- @param input table The input table for the update_bucket command
+--- @param input table|nil The input table for the update_bucket command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bucket(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-bucket" }, input)
 end
 
 --- Updates the bundle, or storage plan, of an existing Amazon Lightsail bucket
---- @param input table The input table for the update_bucket_bundle command
+--- @param input table|nil The input table for the update_bucket_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bucket_bundle(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-bucket-bundle" }, input)
 end
 
 --- Updates the configuration of your Amazon Lightsail container service, such as its power, scale, and public domain names
---- @param input table The input table for the update_container_service command
+--- @param input table|nil The input table for the update_container_service command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_container_service(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-container-service" }, input)
 end
 
 --- Updates an existing Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the update_distribution command
+--- @param input table|nil The input table for the update_distribution command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_distribution(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-distribution" }, input)
 end
 
 --- Updates the bundle of your Amazon Lightsail content delivery network (CDN) distribution
---- @param input table The input table for the update_distribution_bundle command
+--- @param input table|nil The input table for the update_distribution_bundle command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_distribution_bundle(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-distribution-bundle" }, input)
 end
 
 --- Updates a domain recordset after it is created
---- @param input table The input table for the update_domain_entry command
+--- @param input table|nil The input table for the update_domain_entry command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_entry(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-domain-entry" }, input)
 end
 
 --- Modifies the Amazon Lightsail instance metadata parameters on a running or stopped instance
---- @param input table The input table for the update_instance_metadata_options command
+--- @param input table|nil The input table for the update_instance_metadata_options command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_instance_metadata_options(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-instance-metadata-options" }, input)
 end
 
 --- Updates the specified attribute for a load balancer
---- @param input table The input table for the update_load_balancer_attribute command
+--- @param input table|nil The input table for the update_load_balancer_attribute command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_load_balancer_attribute(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-load-balancer-attribute" }, input)
 end
 
 --- Allows the update of one or more attributes of a database in Amazon Lightsail
---- @param input table The input table for the update_relational_database command
+--- @param input table|nil The input table for the update_relational_database command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_relational_database(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-relational-database" }, input)
 end
 
 --- Allows the update of one or more parameters of a database in Amazon Lightsail
---- @param input table The input table for the update_relational_database_parameters command
+--- @param input table|nil The input table for the update_relational_database_parameters command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_relational_database_parameters(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-relational-database-parameters" }, input)

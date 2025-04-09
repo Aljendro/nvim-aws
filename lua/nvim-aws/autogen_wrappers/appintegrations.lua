@@ -8,161 +8,161 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Creates and persists an Application resource
---- @param input table The input table for the create_application command
+--- @param input table|nil The input table for the create_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "create-application" }, input)
 end
 
 --- Creates and persists a DataIntegration resource
---- @param input table The input table for the create_data_integration command
+--- @param input table|nil The input table for the create_data_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "create-data-integration" }, input)
 end
 
 --- Creates and persists a DataIntegrationAssociation resource
---- @param input table The input table for the create_data_integration_association command
+--- @param input table|nil The input table for the create_data_integration_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_integration_association(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "create-data-integration-association" }, input)
 end
 
 --- Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in your account and a partner event source that pushes events to that bus
---- @param input table The input table for the create_event_integration command
+--- @param input table|nil The input table for the create_event_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "create-event-integration" }, input)
 end
 
 --- Deletes the Application
---- @param input table The input table for the delete_application command
+--- @param input table|nil The input table for the delete_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "delete-application" }, input)
 end
 
 --- Deletes the DataIntegration
---- @param input table The input table for the delete_data_integration command
+--- @param input table|nil The input table for the delete_data_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "delete-data-integration" }, input)
 end
 
 --- Deletes the specified existing event integration
---- @param input table The input table for the delete_event_integration command
+--- @param input table|nil The input table for the delete_event_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "delete-event-integration" }, input)
 end
 
 --- Get an Application resource
---- @param input table The input table for the get_application command
+--- @param input table|nil The input table for the get_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_application(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "get-application" }, input)
 end
 
 --- Returns information about the DataIntegration
---- @param input table The input table for the get_data_integration command
+--- @param input table|nil The input table for the get_data_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "get-data-integration" }, input)
 end
 
 --- Returns information about the event integration
---- @param input table The input table for the get_event_integration command
+--- @param input table|nil The input table for the get_event_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_event_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "get-event-integration" }, input)
 end
 
 --- Returns a paginated list of application associations for an application
---- @param input table The input table for the list_application_associations command
+--- @param input table|nil The input table for the list_application_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_application_associations(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-application-associations" }, input)
 end
 
 --- Lists applications in the account
---- @param input table The input table for the list_applications command
+--- @param input table|nil The input table for the list_applications command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-applications" }, input)
 end
 
 --- Returns a paginated list of DataIntegration associations in the account
---- @param input table The input table for the list_data_integration_associations command
+--- @param input table|nil The input table for the list_data_integration_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_integration_associations(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-data-integration-associations" }, input)
 end
 
 --- Returns a paginated list of DataIntegrations in the account
---- @param input table The input table for the list_data_integrations command
+--- @param input table|nil The input table for the list_data_integrations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_integrations(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-data-integrations" }, input)
 end
 
 --- Returns a paginated list of event integration associations in the account
---- @param input table The input table for the list_event_integration_associations command
+--- @param input table|nil The input table for the list_event_integration_associations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_integration_associations(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-event-integration-associations" }, input)
 end
 
 --- Returns a paginated list of event integrations in the account
---- @param input table The input table for the list_event_integrations command
+--- @param input table|nil The input table for the list_event_integrations command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_integrations(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-event-integrations" }, input)
 end
 
 --- Lists the tags for the specified resource
---- @param input table The input table for the list_tags_for_resource command
+--- @param input table|nil The input table for the list_tags_for_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "list-tags-for-resource" }, input)
 end
 
 --- Adds the specified tags to the specified resource
---- @param input table The input table for the tag_resource command
+--- @param input table|nil The input table for the tag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "tag-resource" }, input)
 end
 
 --- Removes the specified tags from the specified resource
---- @param input table The input table for the untag_resource command
+--- @param input table|nil The input table for the untag_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "untag-resource" }, input)
 end
 
 --- Updates and persists an Application resource
---- @param input table The input table for the update_application command
+--- @param input table|nil The input table for the update_application command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "update-application" }, input)
 end
 
 --- Updates the description of a DataIntegration
---- @param input table The input table for the update_data_integration command
+--- @param input table|nil The input table for the update_data_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "update-data-integration" }, input)
 end
 
 --- Updates and persists a DataIntegrationAssociation resource
---- @param input table The input table for the update_data_integration_association command
+--- @param input table|nil The input table for the update_data_integration_association command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_integration_association(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "update-data-integration-association" }, input)
 end
 
 --- Updates the description of an event integration
---- @param input table The input table for the update_event_integration command
+--- @param input table|nil The input table for the update_event_integration command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_event_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "update-event-integration" }, input)

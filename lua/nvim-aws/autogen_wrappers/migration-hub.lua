@@ -8,147 +8,147 @@ local common = require("nvim-aws.wrappers.common")
 local M = {}
 
 --- Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task performed by a migration tool
---- @param input table The input table for the associate_created_artifact command
+--- @param input table|nil The input table for the associate_created_artifact command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_created_artifact(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "associate-created-artifact" }, input)
 end
 
 --- Associates a discovered resource ID from Application Discovery Service with a migration task
---- @param input table The input table for the associate_discovered_resource command
+--- @param input table|nil The input table for the associate_discovered_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_discovered_resource(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "associate-discovered-resource" }, input)
 end
 
 --- Associates a source resource with a migration task
---- @param input table The input table for the associate_source_resource command
+--- @param input table|nil The input table for the associate_source_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_source_resource(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "associate-source-resource" }, input)
 end
 
 --- Creates a progress update stream which is an AWS resource used for access control as well as a namespace for migration task names that is implicitly linked to your AWS account
---- @param input table The input table for the create_progress_update_stream command
+--- @param input table|nil The input table for the create_progress_update_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_progress_update_stream(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "create-progress-update-stream" }, input)
 end
 
 --- Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for access control
---- @param input table The input table for the delete_progress_update_stream command
+--- @param input table|nil The input table for the delete_progress_update_stream command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_progress_update_stream(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "delete-progress-update-stream" }, input)
 end
 
 --- Gets the migration status of an application
---- @param input table The input table for the describe_application_state command
+--- @param input table|nil The input table for the describe_application_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application_state(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "describe-application-state" }, input)
 end
 
 --- Retrieves a list of all attributes associated with a specific migration task
---- @param input table The input table for the describe_migration_task command
+--- @param input table|nil The input table for the describe_migration_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_migration_task(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "describe-migration-task" }, input)
 end
 
 --- Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was previously associated
---- @param input table The input table for the disassociate_created_artifact command
+--- @param input table|nil The input table for the disassociate_created_artifact command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_created_artifact(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "disassociate-created-artifact" }, input)
 end
 
 --- Disassociate an Application Discovery Service discovered resource from a migration task
---- @param input table The input table for the disassociate_discovered_resource command
+--- @param input table|nil The input table for the disassociate_discovered_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_discovered_resource(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "disassociate-discovered-resource" }, input)
 end
 
 --- Removes the association between a source resource and a migration task
---- @param input table The input table for the disassociate_source_resource command
+--- @param input table|nil The input table for the disassociate_source_resource command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_source_resource(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "disassociate-source-resource" }, input)
 end
 
 --- Registers a new migration task which represents a server, database, etc
---- @param input table The input table for the import_migration_task command
+--- @param input table|nil The input table for the import_migration_task command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_migration_task(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "import-migration-task" }, input)
 end
 
 --- Lists all the migration statuses for your applications
---- @param input table The input table for the list_application_states command
+--- @param input table|nil The input table for the list_application_states command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_application_states(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-application-states" }, input)
 end
 
 --- Lists the created artifacts attached to a given migration task in an update stream
---- @param input table The input table for the list_created_artifacts command
+--- @param input table|nil The input table for the list_created_artifacts command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_created_artifacts(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-created-artifacts" }, input)
 end
 
 --- Lists discovered resources associated with the given MigrationTask
---- @param input table The input table for the list_discovered_resources command
+--- @param input table|nil The input table for the list_discovered_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_discovered_resources(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-discovered-resources" }, input)
 end
 
 --- This is a paginated API that returns all the migration-task states for the specified MigrationTaskName and ProgressUpdateStream
---- @param input table The input table for the list_migration_task_updates command
+--- @param input table|nil The input table for the list_migration_task_updates command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_migration_task_updates(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-migration-task-updates" }, input)
 end
 
 --- Lists all, or filtered by resource name, migration tasks associated with the user account making this call
---- @param input table The input table for the list_migration_tasks command
+--- @param input table|nil The input table for the list_migration_tasks command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_migration_tasks(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-migration-tasks" }, input)
 end
 
 --- Lists progress update streams associated with the user account making this call
---- @param input table The input table for the list_progress_update_streams command
+--- @param input table|nil The input table for the list_progress_update_streams command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_progress_update_streams(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-progress-update-streams" }, input)
 end
 
 --- Lists all the source resource that are associated with the specified MigrationTaskName and ProgressUpdateStream
---- @param input table The input table for the list_source_resources command
+--- @param input table|nil The input table for the list_source_resources command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_source_resources(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "list-source-resources" }, input)
 end
 
 --- Sets the migration state of an application
---- @param input table The input table for the notify_application_state command
+--- @param input table|nil The input table for the notify_application_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_application_state(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "notify-application-state" }, input)
 end
 
 --- Notifies Migration Hub of the current status, progress, or other detail regarding a migration task
---- @param input table The input table for the notify_migration_task_state command
+--- @param input table|nil The input table for the notify_migration_task_state command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_migration_task_state(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "notify-migration-task-state" }, input)
 end
 
 --- Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery Service repository
---- @param input table The input table for the put_resource_attributes command
+--- @param input table|nil The input table for the put_resource_attributes command
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_attributes(input)
 	return common.execute_aws_command_with_input({ "migration-hub", "put-resource-attributes" }, input)
