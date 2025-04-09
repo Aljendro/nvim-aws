@@ -2,9 +2,9 @@ import io
 from src.extract_services import AwsModelParser
 
 
-def test_special_function_get_object(output_dir):
+def test_special_function_get_object(output_dir, output_dir_tests):
     """Test special function handling for GetObject."""
-    parser = AwsModelParser("s3.json", output_dir)
+    parser = AwsModelParser("s3.json", output_dir, output_dir_tests)
 
     # Create a StringIO object to capture the write operations
     mock_file = io.StringIO()

@@ -2,9 +2,9 @@ import os
 from src.extract_services import AwsModelParser
 
 
-def test_service_parsing(sample_model_path, output_dir):
+def test_service_parsing(sample_model_path, output_dir, output_dir_tests):
     """Test basic service model parsing."""
-    parser = AwsModelParser(sample_model_path, output_dir)
+    parser = AwsModelParser(sample_model_path, output_dir, output_dir_tests)
     parser.parse()
 
     # Check that output file was created
@@ -24,15 +24,15 @@ def test_service_parsing(sample_model_path, output_dir):
 
 def test_to_snake_case():
     """Test the snake case conversion function."""
-    parser = AwsModelParser("dummy.json", "dummy_dir")
+    parser = AwsModelParser("dummy.json", "dummy_dir", "dummy_dir_tests")
     assert parser._to_snake_case("GetObject") == "get_object"
     assert parser._to_snake_case("ListBuckets") == "list_buckets"
     assert parser._to_snake_case("CreateS3Bucket") == "create_s3_bucket"
 
 
-def test_extract_resource_operations(sample_model_path, output_dir):
+def test_extract_resource_operations(sample_model_path, output_dir, output_dir_tests):
     """Test extraction of operations from resources."""
-    parser = AwsModelParser(sample_model_path, output_dir)
+    parser = AwsModelParser(sample_model_path, output_dir, output_dir_tests)
 
     # Create a mock service shape with a resource
     service_shape = {"resources": [{"target": "ResourceShape"}]}
@@ -60,10 +60,10 @@ def test_extract_resource_operations(sample_model_path, output_dir):
 
 
 def test_integration_with_resource_operations(
-    sample_model_path, output_dir, monkeypatch
+    sample_model_path, output_dir, output_dir_tests, monkeypatch
 ):
     """Test that resource operations are included in the final output."""
-    parser = AwsModelParser(sample_model_path, output_dir)
+    parser = AwsModelParser(sample_model_path, output_dir, output_dir_tests)
 
     # Mock the _extract_resource_operations method to return a known operation
     def mock_extract_resource_operations(self, service_shape, shapes):

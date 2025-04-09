@@ -21,10 +21,12 @@ def run_extraction_for_all_models():
         project_root, "external/aws-sdk-js-v3/codegen/sdk-codegen/aws-models"
     )
     output_dir = os.path.join(project_root, "lua/nvim-aws/autogen_wrappers")
+    output_dir_tests = os.path.join(project_root, "lua/spec/nvim-aws/autogen_wrappers")
     extract_script = os.path.join(current_dir, "extract_services.py")
 
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(output_dir_tests, exist_ok=True)
 
     # Get all JSON files in the models directory
     json_files = glob.glob(os.path.join(models_dir, "*.json"))
@@ -46,6 +48,8 @@ def run_extraction_for_all_models():
                     model_file,
                     "--output-dir",
                     output_dir,
+                    "--output-dir-tests",
+                    output_dir_tests,
                 ],
                 check=True,
             )
