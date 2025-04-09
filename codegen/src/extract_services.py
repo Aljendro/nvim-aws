@@ -139,7 +139,7 @@ class AwsModelParser:
                 f.write(f"--- {doc}\n")
 
                 # Write input param documentation
-                f.write("--- @param input table")
+                f.write("--- @param input table|nil")
                 if input_shape:
                     f.write(f" The input table for the {lua_func_name} command\n")
                 else:
@@ -174,18 +174,18 @@ class AwsModelParser:
 
             # Write header
             f.write('require("nvim-aws").setup()\n')
-            f.write('local common = require("nvim-aws.wrappers.common")\n\n')
+            f.write(
+                f'local service = require("nvim-aws.autogen_wrappers.{service_id}")\n\n'
+            )
 
             f.write(f'describe("AWS {self.service_name} service testing", function()\n')
             # Write each operation
             for op_name, _ in sorted(operations):
-                op_name_kebab = self._to_kebab_case(op_name)
+                lua_func_name = self._to_snake_case(op_name)
                 f.write(
-                    f'\tit("should generate a cli skeleton for {op_name_kebab}", function()\n'
+                    f'\tit("should generate a cli skeleton with {lua_func_name}", function()\n'
                 )
-                f.write(
-                    f'\t\tlocal result = common.execute_aws_command_with_input({{ "{service_id}", "{op_name_kebab}" }})\n'
-                )
+                f.write(f"\t\tlocal result = service.{lua_func_name}()\n")
                 f.write("\t\tassert.is_true(result.success)\n")
 
                 f.write("\tend)\n\n")

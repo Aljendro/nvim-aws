@@ -25,10 +25,9 @@ def test_test_file_generation(sample_model_path, tmpdir):
 
         # Check for expected structure
         assert 'require("nvim-aws").setup()' in content
-        assert 'local common = require("nvim-aws.wrappers.common")' in content
         assert f'describe("AWS {service_name} service testing", function()' in content
-        assert 'it("should generate a cli skeleton for ' in content
-        assert "local result = common.execute_aws_command_with_input" in content
+        assert 'it("should generate a cli skeleton with ' in content
+        assert "local result = service.test_operation" in content
         assert "assert.is_true(result.success)" in content
         assert "end)" in content  # Test case end
 
@@ -59,7 +58,7 @@ def test_test_file_contains_all_operations(tmpdir):
         content = f.read()
 
         # All operations should have test cases
-        assert content.count('it("should generate a cli skeleton for') == 3
-        assert 'it("should generate a cli skeleton for list-buckets"' in content
-        assert 'it("should generate a cli skeleton for create-bucket"' in content
-        assert 'it("should generate a cli skeleton for delete-object"' in content
+        assert content.count('it("should generate a cli skeleton with') == 3
+        assert 'it("should generate a cli skeleton with list_buckets"' in content
+        assert 'it("should generate a cli skeleton with create_bucket"' in content
+        assert 'it("should generate a cli skeleton with delete_object"' in content
