@@ -14,7 +14,7 @@ def test_test_file_generation(sample_model_path, tmpdir):
     # Check that output files were created
     service_name = os.path.basename(sample_model_path).replace(".json", "")
     output_file = os.path.join(str(output_dir), f"{service_name.lower()}.lua")
-    test_file = os.path.join(str(output_dir_tests), f"{service_name.lower()}.lua")
+    test_file = os.path.join(str(output_dir_tests), f"{service_name.lower()}_spec.lua")
 
     assert os.path.exists(output_file), "Main wrapper file should be created"
     assert os.path.exists(test_file), "Test file should be created"
@@ -51,7 +51,7 @@ def test_test_file_contains_all_operations(tmpdir):
     parser._generate_lua_file(operations, {})
 
     # Check test file
-    test_file = os.path.join(str(output_dir_tests), "dummy.lua")
+    test_file = os.path.join(str(output_dir_tests), "dummy_spec.lua")
     assert os.path.exists(test_file)
 
     with open(test_file, "r") as f:
