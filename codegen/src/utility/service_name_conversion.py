@@ -77,7 +77,6 @@ FILENAME_TO_SERVICE_MAP = {
     "cloudsearch.json": "cloudsearch",
     "cloudtrail-data.json": "cloudtrail-data",
     "cloudtrail.json": "cloudtrail",
-    "cloudwatch-events.json": "events",  # check this
     "cloudwatch-logs.json": "logs",
     "cloudwatch.json": "cloudwatch",
     "codeartifact.json": "codeartifact",
@@ -151,7 +150,7 @@ FILENAME_TO_SERVICE_MAP = {
     "emr-serverless.json": "emr-serverless",
     "emr.json": "emr",
     "entityresolution.json": "entityresolution",
-    "eventbridge.json": "eventbridge",
+    "eventbridge.json": "events",
     "evidently.json": "evidently",
     "finspace-data.json": "finspace-data",
     "finspace.json": "finspace",
@@ -187,8 +186,8 @@ FILENAME_TO_SERVICE_MAP = {
     "internetmonitor.json": "internetmonitor",
     "invoicing.json": "invoicing",
     "iot-data-plane.json": "iot-data",
-    "iot-events-data.json": "iot-events-data",
-    "iot-events.json": "iot-events",
+    "iot-events-data.json": "iotevents-data",
+    "iot-events.json": "iotevents",
     "iot-jobs-data-plane.json": "iot-jobs-data",
     "iot-managed-integrations.json": "iot-managed-integrations",
     "iot-wireless.json": "iotwireless",
@@ -241,10 +240,10 @@ FILENAME_TO_SERVICE_MAP = {
     "managedblockchain.json": "managedblockchain",
     "marketplace-agreement.json": "marketplace-agreement",
     "marketplace-catalog.json": "marketplace-catalog",
-    "marketplace-commerce-analytics.json": "marketplace-commerce-analytics",
+    "marketplace-commerce-analytics.json": "marketplacecommerceanalytics",
     "marketplace-deployment.json": "marketplace-deployment",
     "marketplace-entitlement-service.json": "marketplace-entitlement",
-    "marketplace-metering.json": "marketplace-metering",
+    "marketplace-metering.json": "meteringmarketplace",
     "marketplace-reporting.json": "marketplace-reporting",
     "mediaconnect.json": "mediaconnect",
     "mediaconvert.json": "mediaconvert",
@@ -259,7 +258,7 @@ FILENAME_TO_SERVICE_MAP = {
     "memorydb.json": "memorydb",
     "mgn.json": "mgn",
     "migration-hub-refactor-spaces.json": "migration-hub-refactor-spaces",
-    "migration-hub.json": "migration-hub",
+    "migration-hub.json": "mgh",
     "migrationhub-config.json": "migrationhub-config",
     "migrationhuborchestrator.json": "migrationhuborchestrator",
     "migrationhubstrategy.json": "migrationhubstrategy",
@@ -414,7 +413,7 @@ FILENAME_TO_SERVICE_MAP = {
 }
 
 
-def get_service_name(filename):
+def get_service_name(filename) -> str | None:
     """
     Convert a service filename to the AWS CLI service name
 
