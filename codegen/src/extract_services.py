@@ -117,8 +117,8 @@ class AwsModelParser:
             print(
                 "\nWARNING: The following commands do not support --generate-cli-skeleton:"
             )
-            for cmd in unsupported_operations:
-                print(f"  - {cmd}")
+            for op_name, _ in unsupported_operations:
+                print(f"  - {op_name}")
 
         # Create the output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
@@ -249,7 +249,7 @@ class AwsModelParser:
 
         supported_operations = []
         unsupported_operations = []
-        for op_name, _ in operations:
+        for op_name, op_shape in operations:
             kebab_op_name = self._to_kebab_case(op_name)
             cmd = f"aws {service_id} {kebab_op_name} --generate-cli-skeleton"
 
@@ -264,12 +264,12 @@ class AwsModelParser:
                 )
 
                 if result.returncode == 0:
-                    supported_operations.append(kebab_op_name)
+                    supported_operations.append([op_name, op_shape])
                 else:
-                    unsupported_operations.append(kebab_op_name)
+                    unsupported_operations.append([op_name, op_shape])
             except Exception as e:
                 print(f"Error checking {cmd}: {str(e)}")
-                unsupported_operations.append(kebab_op_name)
+                unsupported_operations.append([op_name, op_shape])
 
         return [supported_operations, unsupported_operations]
 
