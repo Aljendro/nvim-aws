@@ -8,6 +8,8 @@ import json
 import os
 import re
 import argparse
+import subprocess
+import shlex
 from typing import Dict, List, Optional
 
 # Import the service name conversion utility
@@ -105,6 +107,19 @@ class AwsModelParser:
             )
             return
 
+        # Check CLI skeleton support for each operation
+        [supported_operations, unsupported_operations] = (
+            self._check_cli_skeleton_support(service_id, operations)
+        )
+
+        # Log any commands that don't support --generate-cli-skeleton
+        if unsupported_operations:
+            print(
+                "\nWARNING: The following commands do not support --generate-cli-skeleton:"
+            )
+            for cmd in unsupported_operations:
+                print(f"  - {cmd}")
+
         # Create the output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -121,7 +136,7 @@ class AwsModelParser:
             f.write("local M = {}\n\n")
 
             # Write each operation
-            for op_name, op_shape in sorted(operations):
+            for op_name, op_shape in sorted(supported_operations):
                 lua_func_name = self._to_snake_case(op_name)
 
                 # Get input and output shapes
@@ -179,7 +194,7 @@ class AwsModelParser:
 
             f.write(f'describe("AWS {self.service_name} service testing", function()\n')
             # Write each operation
-            for op_name, _ in sorted(operations):
+            for op_name, _ in sorted(supported_operations):
                 lua_func_name = self._to_snake_case(op_name)
                 f.write(
                     f'\tit("should generate a cli skeleton with {lua_func_name}", function()\n'
@@ -228,6 +243,35 @@ class AwsModelParser:
     def _to_title_case(self, name: str) -> str:
         """Convert string to Title Case"""
         return " ".join(word.capitalize() for word in name.split())
+
+    def _check_cli_skeleton_support(self, service_id: str, operations: List[tuple]):
+        """Check if each operation supports the --generate-cli-skeleton option"""
+
+        supported_operations = []
+        unsupported_operations = []
+        for op_name, _ in operations:
+            kebab_op_name = self._to_kebab_case(op_name)
+            cmd = f"aws {service_id} {kebab_op_name} --generate-cli-skeleton"
+
+            try:
+                # Execute with check=False to avoid raising an exception on error
+                result = subprocess.run(
+                    shlex.split(cmd),
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    check=False,
+                )
+
+                if result.returncode == 0:
+                    supported_operations.append(kebab_op_name)
+                else:
+                    unsupported_operations.append(kebab_op_name)
+            except Exception as e:
+                print(f"Error checking {cmd}: {str(e)}")
+                unsupported_operations.append(kebab_op_name)
+
+        return [supported_operations, unsupported_operations]
 
 
 def main():

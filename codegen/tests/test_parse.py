@@ -2,8 +2,22 @@ import os
 from src.extract_services import AwsModelParser
 
 
-def test_service_parsing(sample_model_path, output_dir, output_dir_tests):
+def test_service_parsing(sample_model_path, output_dir, output_dir_tests, monkeypatch):
     """Test basic service model parsing."""
+
+    # Mock the service name conversion to return a valid service ID for testing
+    def mock_get_service_name(filename):
+        return os.path.basename(filename).replace(".json", "").lower()
+
+    monkeypatch.setattr("src.extract_services.get_service_name", mock_get_service_name)
+
+    def mock_check_cli_skeleton_support(self, service_id, operations):
+        return [operations, []]
+
+    monkeypatch.setattr(
+        AwsModelParser, "_check_cli_skeleton_support", mock_check_cli_skeleton_support
+    )
+
     parser = AwsModelParser(sample_model_path, output_dir, output_dir_tests)
     parser.parse()
 
@@ -51,7 +65,6 @@ def test_extract_resource_operations(sample_model_path, output_dir, output_dir_t
 
     operations = parser._extract_resource_operations(service_shape, shapes)
 
-    # Check that operations were extracted correctly
     assert len(operations) == 3
     operation_names = [op[0] for op in operations]
     assert "CreateResource" in operation_names
@@ -65,7 +78,19 @@ def test_integration_with_resource_operations(
     """Test that resource operations are included in the final output."""
     parser = AwsModelParser(sample_model_path, output_dir, output_dir_tests)
 
-    # Mock the _extract_resource_operations method to return a known operation
+    # Mock the service name conversion to return a valid service ID for testing
+    def mock_get_service_name(filename):
+        return os.path.basename(filename).replace(".json", "").lower()
+
+    monkeypatch.setattr("src.extract_services.get_service_name", mock_get_service_name)
+
+    def mock_check_cli_skeleton_support(self, service_id, operations):
+        return [operations, []]
+
+    monkeypatch.setattr(
+        AwsModelParser, "_check_cli_skeleton_support", mock_check_cli_skeleton_support
+    )
+
     def mock_extract_resource_operations(self, service_shape, shapes):
         return [("ResourceOperation", {"http": {"method": "GET"}})]
 

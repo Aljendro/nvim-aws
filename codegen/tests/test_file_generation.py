@@ -1,12 +1,24 @@
 import os
-import re
 from src.extract_services import AwsModelParser
 
 
-def test_test_file_generation(sample_model_path, tmpdir):
+def test_test_file_generation(sample_model_path, tmpdir, monkeypatch):
     """Test that test files are correctly generated."""
     output_dir = tmpdir.mkdir("output")
     output_dir_tests = tmpdir.mkdir("output_tests")
+
+    # Mock the service name conversion to return a valid service ID for testing
+    def mock_get_service_name(filename):
+        return os.path.basename(filename).replace(".json", "").lower()
+
+    monkeypatch.setattr("src.extract_services.get_service_name", mock_get_service_name)
+
+    def mock_check_cli_skeleton_support(self, service_id, operations):
+        return [operations, []]
+
+    monkeypatch.setattr(
+        AwsModelParser, "_check_cli_skeleton_support", mock_check_cli_skeleton_support
+    )
 
     parser = AwsModelParser(sample_model_path, str(output_dir), str(output_dir_tests))
     parser.parse()
@@ -32,10 +44,24 @@ def test_test_file_generation(sample_model_path, tmpdir):
         assert "end)" in content  # Test case end
 
 
-def test_test_file_contains_all_operations(tmpdir):
+def test_test_file_contains_all_operations(tmpdir, monkeypatch):
     """Test that the test file contains tests for all operations."""
     output_dir = tmpdir.mkdir("output")
     output_dir_tests = tmpdir.mkdir("output_tests")
+
+    # Mock the service name conversion to return a valid service ID for testing
+    def mock_get_service_name(filename):
+        return os.path.basename(filename).replace(".json", "").lower()
+
+    monkeypatch.setattr("src.extract_services.get_service_name", mock_get_service_name)
+
+    # Mock cli skeleton support to return all operations as supported
+    def mock_check_cli_skeleton_support(self, service_id, operations):
+        return [operations, []]
+
+    monkeypatch.setattr(
+        AwsModelParser, "_check_cli_skeleton_support", mock_check_cli_skeleton_support
+    )
 
     # Create a minimal model parser with mock operations
     parser = AwsModelParser("dummy.json", str(output_dir), str(output_dir_tests))
