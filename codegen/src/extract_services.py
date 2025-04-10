@@ -8,7 +8,6 @@ import json
 import os
 import re
 import argparse
-import datetime
 from typing import Dict, List, Optional
 
 # Import the service name conversion utility
@@ -97,7 +96,14 @@ class AwsModelParser:
     def _generate_lua_file(self, operations: List[tuple], shapes: Dict):
         """Generate the Lua wrapper file"""
         filename = os.path.basename(self.model_path)
-        service_id = get_service_name(filename) or self.service_name.lower()
+        service_id = get_service_name(filename)
+
+        # If service_id is None, the service was not mapped in the conversion utility
+        if service_id is None:
+            print(
+                f"Service {self.service_name} was not mapped to a service ID, skipping"
+            )
+            return
 
         # Create the output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
