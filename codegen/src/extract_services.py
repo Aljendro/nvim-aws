@@ -153,16 +153,11 @@ class AwsModelParser:
                 return_doc = self._generate_return_doc(output_shape)
                 f.write(f"--- @return {{{return_doc}}} Result table\n")
 
-                # Special handling for certain operations
-                if op_name in ["GetObject"]:
-                    self._write_special_function(f, lua_func_name, op_name)
-                else:
-                    # Regular function implementation
-                    f.write(f"function M.{lua_func_name}(input)\n")
-                    f.write(
-                        f'\treturn common.execute_aws_command_with_input({{ "{service_id}", "{self._to_kebab_case(op_name)}" }}, input)\n'
-                    )
-                    f.write("end\n\n")
+                f.write(f"function M.{lua_func_name}(input)\n")
+                f.write(
+                    f'\treturn common.execute_aws_command_with_input({{ "{service_id}", "{self._to_kebab_case(op_name)}" }}, input)\n'
+                )
+                f.write("end\n\n")
 
             # Write return statement
             f.write("return M\n")
@@ -220,24 +215,6 @@ class AwsModelParser:
         # For simplicity, we're not going to parse the full response structure
         # Just return a generic table
         return f"{base}table|nil, error: string|nil"
-
-    def _write_special_function(self, f, func_name: str, op_name: str):
-        """Write special function implementations for certain operations"""
-        if op_name == "GetObject":
-            f.write(f"function M.{func_name}(input)\n")
-            f.write(
-                '\t-- NOTE: This command does not have a "skeleton" template, so we need to emulate the behavior\n'
-            )
-            f.write("\treturn common.execute_aws_command({\n")
-            f.write('\t\t"s3api",\n')
-            f.write('\t\t"get-object",\n')
-            f.write('\t\t"--bucket",\n')
-            f.write("\t\tinput.Bucket,\n")
-            f.write('\t\t"--key",\n')
-            f.write("\t\tinput.Key,\n")
-            f.write("\t\tinput.Outfile,\n")
-            f.write("\t})\n")
-            f.write("end\n\n")
 
     def _to_snake_case(self, name: str) -> str:
         """Convert CamelCase to snake_case"""
