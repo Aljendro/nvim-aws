@@ -20,13 +20,6 @@ function M.get_search_result_export_job(input)
 	return common.execute_aws_command_with_input({ "backupsearch", "get-search-result-export-job" }, input)
 end
 
---- AWS backupsearch help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "backupsearch", "help" }, input)
-end
-
 --- AWS backupsearch list-search-job-backups operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

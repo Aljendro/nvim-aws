@@ -202,13 +202,6 @@ function M.get_messaging_streaming_configurations(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-messaging-streaming-configurations" }, input)
 end
 
---- AWS chime-sdk-messaging help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "help" }, input)
-end
-
 --- AWS chime-sdk-messaging list-channel-bans operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

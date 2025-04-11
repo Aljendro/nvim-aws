@@ -279,13 +279,6 @@ function M.get_web_experience(input)
 	return common.execute_aws_command_with_input({ "qbusiness", "get-web-experience" }, input)
 end
 
---- AWS qbusiness help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "qbusiness", "help" }, input)
-end
-
 --- AWS qbusiness list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

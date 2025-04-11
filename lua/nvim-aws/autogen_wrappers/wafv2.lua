@@ -230,13 +230,6 @@ function M.get_web_acl_for_resource(input)
 	return common.execute_aws_command_with_input({ "wafv2", "get-web-acl-for-resource" }, input)
 end
 
---- AWS wafv2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "wafv2", "help" }, input)
-end
-
 --- AWS wafv2 list-api-keys operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

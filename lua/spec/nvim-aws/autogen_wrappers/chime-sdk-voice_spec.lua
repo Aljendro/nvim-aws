@@ -265,11 +265,6 @@ describe("AWS chime-sdk-voice service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_available_voice_connector_regions", function()
 		local result = service.list_available_voice_connector_regions()
 		assert.is_true(result.success)

@@ -188,13 +188,6 @@ function M.get_recommendation_summaries(input)
 	return common.execute_aws_command_with_input({ "compute-optimizer", "get-recommendation-summaries" }, input)
 end
 
---- AWS compute-optimizer help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "help" }, input)
-end
-
 --- AWS compute-optimizer put-recommendation-preferences operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

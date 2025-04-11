@@ -265,13 +265,6 @@ function M.get_resolver_rule_policy(input)
 	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-rule-policy" }, input)
 end
 
---- AWS route53resolver help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "help" }, input)
-end
-
 --- AWS route53resolver import-firewall-domains operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

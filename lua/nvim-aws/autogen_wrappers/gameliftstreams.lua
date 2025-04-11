@@ -90,13 +90,6 @@ function M.get_stream_session(input)
 	return common.execute_aws_command_with_input({ "gameliftstreams", "get-stream-session" }, input)
 end
 
---- AWS gameliftstreams help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "gameliftstreams", "help" }, input)
-end
-
 --- AWS gameliftstreams list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

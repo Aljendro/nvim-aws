@@ -90,11 +90,6 @@ describe("AWS lookoutmetrics service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_alerts", function()
 		local result = service.list_alerts()
 		assert.is_true(result.success)

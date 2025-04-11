@@ -55,13 +55,6 @@ function M.get_statement_result_v2(input)
 	return common.execute_aws_command_with_input({ "redshift-data", "get-statement-result-v2" }, input)
 end
 
---- AWS redshift-data help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "help" }, input)
-end
-
 --- AWS redshift-data list-databases operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

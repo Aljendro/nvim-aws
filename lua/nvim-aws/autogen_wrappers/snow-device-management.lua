@@ -48,13 +48,6 @@ function M.describe_task(input)
 	return common.execute_aws_command_with_input({ "snow-device-management", "describe-task" }, input)
 end
 
---- AWS snow-device-management help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "snow-device-management", "help" }, input)
-end
-
 --- AWS snow-device-management list-device-resources operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

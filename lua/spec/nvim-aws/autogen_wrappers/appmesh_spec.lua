@@ -110,11 +110,6 @@ describe("AWS appmesh service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_gateway_routes", function()
 		local result = service.list_gateway_routes()
 		assert.is_true(result.success)

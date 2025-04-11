@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS APPCONFIGDATA service functions
 local M = {}
 
---- AWS appconfigdata help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "appconfigdata", "help" }, input)
-end
-
 --- AWS appconfigdata start-configuration-session operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

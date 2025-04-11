@@ -50,11 +50,6 @@ describe("AWS secretsmanager service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_secret_version_ids", function()
 		local result = service.list_secret_version_ids()
 		assert.is_true(result.success)

@@ -90,13 +90,6 @@ function M.export_server_engine_attribute(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "export-server-engine-attribute" }, input)
 end
 
---- AWS opsworks-cm help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "opsworks-cm", "help" }, input)
-end
-
 --- AWS opsworks-cm list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

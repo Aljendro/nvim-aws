@@ -20,13 +20,6 @@ function M.describe_tunnel(input)
 	return common.execute_aws_command_with_input({ "iotsecuretunneling", "describe-tunnel" }, input)
 end
 
---- AWS iotsecuretunneling help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "help" }, input)
-end
-
 --- AWS iotsecuretunneling list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

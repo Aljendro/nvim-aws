@@ -55,13 +55,6 @@ function M.get_attributes(input)
 	return common.execute_aws_command_with_input({ "sdb", "get-attributes" }, input)
 end
 
---- AWS sdb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sdb", "help" }, input)
-end
-
 --- AWS sdb list-domains operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

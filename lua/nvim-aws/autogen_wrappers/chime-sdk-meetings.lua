@@ -69,13 +69,6 @@ function M.get_meeting(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-meetings", "get-meeting" }, input)
 end
 
---- AWS chime-sdk-meetings help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-meetings", "help" }, input)
-end
-
 --- AWS chime-sdk-meetings list-attendees operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

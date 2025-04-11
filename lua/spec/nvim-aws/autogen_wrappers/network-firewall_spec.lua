@@ -110,11 +110,6 @@ describe("AWS network-firewall service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_analysis_reports", function()
 		local result = service.list_analysis_reports()
 		assert.is_true(result.success)

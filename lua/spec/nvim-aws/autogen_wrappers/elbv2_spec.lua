@@ -175,11 +175,6 @@ describe("AWS elbv2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with modify_capacity_reservation", function()
 		local result = service.modify_capacity_reservation()
 		assert.is_true(result.success)

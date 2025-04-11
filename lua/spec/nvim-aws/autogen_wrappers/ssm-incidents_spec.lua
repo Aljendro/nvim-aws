@@ -75,11 +75,6 @@ describe("AWS ssm-incidents service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_incident_findings", function()
 		local result = service.list_incident_findings()
 		assert.is_true(result.success)

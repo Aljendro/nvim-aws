@@ -27,13 +27,6 @@ function M.describe_rescore_execution_plan(input)
 	return common.execute_aws_command_with_input({ "kendra-ranking", "describe-rescore-execution-plan" }, input)
 end
 
---- AWS kendra-ranking help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "help" }, input)
-end
-
 --- AWS kendra-ranking list-rescore-execution-plans operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

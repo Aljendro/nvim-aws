@@ -41,13 +41,6 @@ function M.get_managed_resource(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "get-managed-resource" }, input)
 end
 
---- AWS arc-zonal-shift help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "arc-zonal-shift", "help" }, input)
-end
-
 --- AWS arc-zonal-shift list-autoshifts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

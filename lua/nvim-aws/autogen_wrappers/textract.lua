@@ -111,13 +111,6 @@ function M.get_lending_analysis_summary(input)
 	return common.execute_aws_command_with_input({ "textract", "get-lending-analysis-summary" }, input)
 end
 
---- AWS textract help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "textract", "help" }, input)
-end
-
 --- AWS textract list-adapter-versions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

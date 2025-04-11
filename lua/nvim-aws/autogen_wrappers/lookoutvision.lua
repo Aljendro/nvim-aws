@@ -83,13 +83,6 @@ function M.detect_anomalies(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "detect-anomalies" }, input)
 end
 
---- AWS lookoutvision help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lookoutvision", "help" }, input)
-end
-
 --- AWS lookoutvision list-dataset-entries operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

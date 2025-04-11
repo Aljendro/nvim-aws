@@ -55,13 +55,6 @@ function M.get_resource_permission(input)
 	return common.execute_aws_command_with_input({ "ssm-sap", "get-resource-permission" }, input)
 end
 
---- AWS ssm-sap help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ssm-sap", "help" }, input)
-end
-
 --- AWS ssm-sap list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

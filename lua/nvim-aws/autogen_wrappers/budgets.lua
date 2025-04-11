@@ -139,13 +139,6 @@ function M.execute_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "execute-budget-action" }, input)
 end
 
---- AWS budgets help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "budgets", "help" }, input)
-end
-
 --- AWS budgets list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

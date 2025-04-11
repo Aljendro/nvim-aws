@@ -167,13 +167,6 @@ function M.enable_availability_zones_for_load_balancer(input)
 	return common.execute_aws_command_with_input({ "elb", "enable-availability-zones-for-load-balancer" }, input)
 end
 
---- AWS elb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "elb", "help" }, input)
-end
-
 --- AWS elb modify-load-balancer-attributes operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

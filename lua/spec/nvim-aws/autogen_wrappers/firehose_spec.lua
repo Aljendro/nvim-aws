@@ -20,11 +20,6 @@ describe("AWS firehose service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_delivery_streams", function()
 		local result = service.list_delivery_streams()
 		assert.is_true(result.success)

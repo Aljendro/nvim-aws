@@ -13,13 +13,6 @@ function M.batch_meter_usage(input)
 	return common.execute_aws_command_with_input({ "meteringmarketplace", "batch-meter-usage" }, input)
 end
 
---- AWS meteringmarketplace help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "meteringmarketplace", "help" }, input)
-end
-
 --- AWS meteringmarketplace meter-usage operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

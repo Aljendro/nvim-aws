@@ -181,13 +181,6 @@ function M.get_kx_volume(input)
 	return common.execute_aws_command_with_input({ "finspace", "get-kx-volume" }, input)
 end
 
---- AWS finspace help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "finspace", "help" }, input)
-end
-
 --- AWS finspace list-kx-changesets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

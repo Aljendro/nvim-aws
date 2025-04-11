@@ -167,13 +167,6 @@ function M.get_workspace(input)
 	return common.execute_aws_command_with_input({ "iottwinmaker", "get-workspace" }, input)
 end
 
---- AWS iottwinmaker help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iottwinmaker", "help" }, input)
-end
-
 --- AWS iottwinmaker list-component-types operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

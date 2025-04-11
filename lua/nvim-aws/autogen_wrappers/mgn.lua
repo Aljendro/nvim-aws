@@ -216,13 +216,6 @@ function M.get_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "mgn", "get-replication-configuration" }, input)
 end
 
---- AWS mgn help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mgn", "help" }, input)
-end
-
 --- AWS mgn initialize-service operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

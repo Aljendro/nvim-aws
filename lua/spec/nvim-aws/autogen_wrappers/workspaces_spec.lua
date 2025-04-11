@@ -275,11 +275,6 @@ describe("AWS workspaces service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with import_client_branding", function()
 		local result = service.import_client_branding()
 		assert.is_true(result.success)

@@ -237,13 +237,6 @@ function M.get_upgrade_status(input)
 	return common.execute_aws_command_with_input({ "es", "get-upgrade-status" }, input)
 end
 
---- AWS es help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "es", "help" }, input)
-end
-
 --- AWS es list-domain-names operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -83,13 +83,6 @@ function M.get_target_resource_type(input)
 	return common.execute_aws_command_with_input({ "fis", "get-target-resource-type" }, input)
 end
 
---- AWS fis help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "fis", "help" }, input)
-end
-
 --- AWS fis list-actions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

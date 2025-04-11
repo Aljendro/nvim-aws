@@ -181,13 +181,6 @@ function M.get_prefetch_schedule(input)
 	return common.execute_aws_command_with_input({ "mediatailor", "get-prefetch-schedule" }, input)
 end
 
---- AWS mediatailor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "help" }, input)
-end
-
 --- AWS mediatailor list-alerts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

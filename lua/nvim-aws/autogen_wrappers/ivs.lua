@@ -139,13 +139,6 @@ function M.get_stream_session(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-stream-session" }, input)
 end
 
---- AWS ivs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ivs", "help" }, input)
-end
-
 --- AWS ivs import-playback-key-pair operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

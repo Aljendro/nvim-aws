@@ -20,11 +20,6 @@ describe("AWS bedrock-runtime service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_async_invokes", function()
 		local result = service.list_async_invokes()
 		assert.is_true(result.success)

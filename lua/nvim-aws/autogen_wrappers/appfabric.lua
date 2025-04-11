@@ -104,13 +104,6 @@ function M.get_ingestion_destination(input)
 	return common.execute_aws_command_with_input({ "appfabric", "get-ingestion-destination" }, input)
 end
 
---- AWS appfabric help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "appfabric", "help" }, input)
-end
-
 --- AWS appfabric list-app-authorizations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

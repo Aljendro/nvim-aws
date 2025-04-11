@@ -120,11 +120,6 @@ describe("AWS elb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with modify_load_balancer_attributes", function()
 		local result = service.modify_load_balancer_attributes()
 		assert.is_true(result.success)

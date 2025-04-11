@@ -90,11 +90,6 @@ describe("AWS partnercentral-selling service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_engagement_by_accepting_invitation_tasks", function()
 		local result = service.list_engagement_by_accepting_invitation_tasks()
 		assert.is_true(result.success)

@@ -20,13 +20,6 @@ function M.get_pending_job_executions(input)
 	return common.execute_aws_command_with_input({ "iot-jobs-data", "get-pending-job-executions" }, input)
 end
 
---- AWS iot-jobs-data help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "help" }, input)
-end
-
 --- AWS iot-jobs-data start-command-execution operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

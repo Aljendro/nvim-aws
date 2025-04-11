@@ -2610,11 +2610,6 @@ describe("AWS ec2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with import_client_vpn_client_certificate_revocation_list", function()
 		local result = service.import_client_vpn_client_certificate_revocation_list()
 		assert.is_true(result.success)

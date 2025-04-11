@@ -34,13 +34,6 @@ function M.get_transaction(input)
 	return common.execute_aws_command_with_input({ "managedblockchain-query", "get-transaction" }, input)
 end
 
---- AWS managedblockchain-query help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "managedblockchain-query", "help" }, input)
-end
-
 --- AWS managedblockchain-query list-asset-contracts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

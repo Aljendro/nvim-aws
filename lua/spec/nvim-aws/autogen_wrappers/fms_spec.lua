@@ -115,11 +115,6 @@ describe("AWS fms service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_admin_accounts_for_organization", function()
 		local result = service.list_admin_accounts_for_organization()
 		assert.is_true(result.success)

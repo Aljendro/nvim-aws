@@ -391,13 +391,6 @@ function M.head_object(input)
 	return common.execute_aws_command_with_input({ "s3api", "head-object" }, input)
 end
 
---- AWS s3api help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "s3api", "help" }, input)
-end
-
 --- AWS s3api list-bucket-analytics-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

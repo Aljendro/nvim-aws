@@ -90,13 +90,6 @@ function M.get_configuration(input)
 	return common.execute_aws_command_with_input({ "servicecatalog-appregistry", "get-configuration" }, input)
 end
 
---- AWS servicecatalog-appregistry help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "servicecatalog-appregistry", "help" }, input)
-end
-
 --- AWS servicecatalog-appregistry list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

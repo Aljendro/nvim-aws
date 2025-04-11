@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS FORECASTQUERY service functions
 local M = {}
 
---- AWS forecastquery help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "forecastquery", "help" }, input)
-end
-
 --- AWS forecastquery query-forecast operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

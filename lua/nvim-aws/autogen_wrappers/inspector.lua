@@ -139,13 +139,6 @@ function M.get_telemetry_metadata(input)
 	return common.execute_aws_command_with_input({ "inspector", "get-telemetry-metadata" }, input)
 end
 
---- AWS inspector help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "inspector", "help" }, input)
-end
-
 --- AWS inspector list-assessment-run-agents operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -426,13 +426,6 @@ function M.get_worker(input)
 	return common.execute_aws_command_with_input({ "deadline", "get-worker" }, input)
 end
 
---- AWS deadline help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "deadline", "help" }, input)
-end
-
 --- AWS deadline list-available-metered-products operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

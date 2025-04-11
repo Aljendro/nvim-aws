@@ -125,13 +125,6 @@ function M.get_resource_shares(input)
 	return common.execute_aws_command_with_input({ "ram", "get-resource-shares" }, input)
 end
 
---- AWS ram help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ram", "help" }, input)
-end
-
 --- AWS ram list-pending-invitation-resources operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

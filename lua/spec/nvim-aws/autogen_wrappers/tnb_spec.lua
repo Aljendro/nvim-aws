@@ -65,11 +65,6 @@ describe("AWS tnb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with instantiate_sol_network_instance", function()
 		local result = service.instantiate_sol_network_instance()
 		assert.is_true(result.success)

@@ -279,13 +279,6 @@ function M.get_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-prompt" }, input)
 end
 
---- AWS bedrock-agent help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "bedrock-agent", "help" }, input)
-end
-
 --- AWS bedrock-agent ingest-knowledge-base-documents operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

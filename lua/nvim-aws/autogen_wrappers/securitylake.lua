@@ -139,13 +139,6 @@ function M.get_subscriber(input)
 	return common.execute_aws_command_with_input({ "securitylake", "get-subscriber" }, input)
 end
 
---- AWS securitylake help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "securitylake", "help" }, input)
-end
-
 --- AWS securitylake list-data-lake-exceptions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

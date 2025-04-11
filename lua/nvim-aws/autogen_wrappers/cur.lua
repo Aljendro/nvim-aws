@@ -20,13 +20,6 @@ function M.describe_report_definitions(input)
 	return common.execute_aws_command_with_input({ "cur", "describe-report-definitions" }, input)
 end
 
---- AWS cur help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cur", "help" }, input)
-end
-
 --- AWS cur list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

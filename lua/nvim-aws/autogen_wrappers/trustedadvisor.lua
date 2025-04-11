@@ -27,13 +27,6 @@ function M.get_recommendation(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "get-recommendation" }, input)
 end
 
---- AWS trustedadvisor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "help" }, input)
-end
-
 --- AWS trustedadvisor list-checks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

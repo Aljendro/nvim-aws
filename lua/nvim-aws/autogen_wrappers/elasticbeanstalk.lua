@@ -216,13 +216,6 @@ function M.disassociate_environment_operations_role(input)
 	return common.execute_aws_command_with_input({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input)
 end
 
---- AWS elasticbeanstalk help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "help" }, input)
-end
-
 --- AWS elasticbeanstalk list-available-solution-stacks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

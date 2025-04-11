@@ -76,13 +76,6 @@ function M.get_virtual_machine(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "get-virtual-machine" }, input)
 end
 
---- AWS backup-gateway help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "backup-gateway", "help" }, input)
-end
-
 --- AWS backup-gateway import-hypervisor-configuration operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -1035,13 +1035,6 @@ function M.get_v2_logging_options(input)
 	return common.execute_aws_command_with_input({ "iot", "get-v2-logging-options" }, input)
 end
 
---- AWS iot help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iot", "help" }, input)
-end
-
 --- AWS iot list-active-violations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

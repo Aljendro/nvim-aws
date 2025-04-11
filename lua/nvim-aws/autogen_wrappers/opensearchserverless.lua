@@ -153,13 +153,6 @@ function M.get_security_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-security-policy" }, input)
 end
 
---- AWS opensearchserverless help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "help" }, input)
-end
-
 --- AWS opensearchserverless list-access-policies operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

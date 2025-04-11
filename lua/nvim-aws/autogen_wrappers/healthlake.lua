@@ -41,13 +41,6 @@ function M.describe_fhir_import_job(input)
 	return common.execute_aws_command_with_input({ "healthlake", "describe-fhir-import-job" }, input)
 end
 
---- AWS healthlake help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "healthlake", "help" }, input)
-end
-
 --- AWS healthlake list-fhir-datastores operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

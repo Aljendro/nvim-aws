@@ -34,13 +34,6 @@ function M.get_speech_synthesis_task(input)
 	return common.execute_aws_command_with_input({ "polly", "get-speech-synthesis-task" }, input)
 end
 
---- AWS polly help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "polly", "help" }, input)
-end
-
 --- AWS polly list-lexicons operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

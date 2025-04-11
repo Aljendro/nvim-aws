@@ -48,13 +48,6 @@ function M.get_probe(input)
 	return common.execute_aws_command_with_input({ "networkmonitor", "get-probe" }, input)
 end
 
---- AWS networkmonitor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "networkmonitor", "help" }, input)
-end
-
 --- AWS networkmonitor list-monitors operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

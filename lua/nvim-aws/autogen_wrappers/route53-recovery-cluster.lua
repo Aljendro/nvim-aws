@@ -13,13 +13,6 @@ function M.get_routing_control_state(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-cluster", "get-routing-control-state" }, input)
 end
 
---- AWS route53-recovery-cluster help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-cluster", "help" }, input)
-end
-
 --- AWS route53-recovery-cluster list-routing-controls operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -250,11 +250,6 @@ describe("AWS directconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_virtual_interface_test_history", function()
 		local result = service.list_virtual_interface_test_history()
 		assert.is_true(result.success)

@@ -45,11 +45,6 @@ describe("AWS cognito-sync service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_datasets", function()
 		local result = service.list_datasets()
 		assert.is_true(result.success)

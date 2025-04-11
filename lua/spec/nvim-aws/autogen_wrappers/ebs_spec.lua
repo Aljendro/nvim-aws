@@ -10,11 +10,6 @@ describe("AWS ebs service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_changed_blocks", function()
 		local result = service.list_changed_blocks()
 		assert.is_true(result.success)

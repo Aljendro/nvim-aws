@@ -50,11 +50,6 @@ describe("AWS taxsettings service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_supplemental_tax_registrations", function()
 		local result = service.list_supplemental_tax_registrations()
 		assert.is_true(result.success)

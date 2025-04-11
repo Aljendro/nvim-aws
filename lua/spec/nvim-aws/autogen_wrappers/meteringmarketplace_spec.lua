@@ -10,11 +10,6 @@ describe("AWS meteringmarketplace service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with meter_usage", function()
 		local result = service.meter_usage()
 		assert.is_true(result.success)

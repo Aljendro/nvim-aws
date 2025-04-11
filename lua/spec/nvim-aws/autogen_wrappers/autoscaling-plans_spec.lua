@@ -30,11 +30,6 @@ describe("AWS autoscaling-plans service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with update_scaling_plan", function()
 		local result = service.update_scaling_plan()
 		assert.is_true(result.success)

@@ -48,13 +48,6 @@ function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "marketplace-catalog", "get-resource-policy" }, input)
 end
 
---- AWS marketplace-catalog help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "help" }, input)
-end
-
 --- AWS marketplace-catalog list-change-sets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

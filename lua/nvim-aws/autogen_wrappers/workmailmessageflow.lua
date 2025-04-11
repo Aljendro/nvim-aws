@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS WORKMAILMESSAGEFLOW service functions
 local M = {}
 
---- AWS workmailmessageflow help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "workmailmessageflow", "help" }, input)
-end
-
 --- AWS workmailmessageflow put-raw-message-content operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

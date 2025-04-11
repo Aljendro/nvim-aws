@@ -55,13 +55,6 @@ function M.get_resource_metrics(input)
 	return common.execute_aws_command_with_input({ "pi", "get-resource-metrics" }, input)
 end
 
---- AWS pi help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pi", "help" }, input)
-end
-
 --- AWS pi list-available-resource-dimensions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -188,13 +188,6 @@ function M.get_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "drs", "get-replication-configuration" }, input)
 end
 
---- AWS drs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "drs", "help" }, input)
-end
-
 --- AWS drs initialize-service operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

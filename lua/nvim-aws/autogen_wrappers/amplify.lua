@@ -146,13 +146,6 @@ function M.get_webhook(input)
 	return common.execute_aws_command_with_input({ "amplify", "get-webhook" }, input)
 end
 
---- AWS amplify help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "amplify", "help" }, input)
-end
-
 --- AWS amplify list-apps operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

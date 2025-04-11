@@ -20,11 +20,6 @@ describe("AWS cloudfront-keyvaluestore service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_keys", function()
 		local result = service.list_keys()
 		assert.is_true(result.success)

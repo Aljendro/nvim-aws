@@ -342,13 +342,6 @@ function M.get_usage_totals(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-usage-totals" }, input)
 end
 
---- AWS macie2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "macie2", "help" }, input)
-end
-
 --- AWS macie2 list-allow-lists operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

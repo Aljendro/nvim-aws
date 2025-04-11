@@ -335,13 +335,6 @@ function M.get_snapshot_limits(input)
 	return common.execute_aws_command_with_input({ "ds", "get-snapshot-limits" }, input)
 end
 
---- AWS ds help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ds", "help" }, input)
-end
-
 --- AWS ds list-certificates operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

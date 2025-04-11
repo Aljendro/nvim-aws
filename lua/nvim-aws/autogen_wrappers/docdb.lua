@@ -265,13 +265,6 @@ function M.failover_global_cluster(input)
 	return common.execute_aws_command_with_input({ "docdb", "failover-global-cluster" }, input)
 end
 
---- AWS docdb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "docdb", "help" }, input)
-end
-
 --- AWS docdb list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

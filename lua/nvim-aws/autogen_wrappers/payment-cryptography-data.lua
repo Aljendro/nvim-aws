@@ -48,13 +48,6 @@ function M.generate_pin_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "generate-pin-data" }, input)
 end
 
---- AWS payment-cryptography-data help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "payment-cryptography-data", "help" }, input)
-end
-
 --- AWS payment-cryptography-data re-encrypt-data operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

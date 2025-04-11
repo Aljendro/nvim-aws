@@ -69,13 +69,6 @@ function M.describe_table(input)
 	return common.execute_aws_command_with_input({ "timestream-write", "describe-table" }, input)
 end
 
---- AWS timestream-write help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "help" }, input)
-end
-
 --- AWS timestream-write list-batch-load-tasks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

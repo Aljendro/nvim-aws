@@ -10,11 +10,6 @@ describe("AWS bedrock-data-automation-runtime service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with invoke_data_automation_async", function()
 		local result = service.invoke_data_automation_async()
 		assert.is_true(result.success)

@@ -237,13 +237,6 @@ function M.get_training_dataset(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-training-dataset" }, input)
 end
 
---- AWS cleanroomsml help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "help" }, input)
-end
-
 --- AWS cleanroomsml list-audience-export-jobs operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

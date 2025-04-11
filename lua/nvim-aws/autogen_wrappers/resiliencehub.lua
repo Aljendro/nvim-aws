@@ -188,13 +188,6 @@ function M.describe_resource_grouping_recommendation_task(input)
 	return common.execute_aws_command_with_input({ "resiliencehub", "describe-resource-grouping-recommendation-task" }, input)
 end
 
---- AWS resiliencehub help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "resiliencehub", "help" }, input)
-end
-
 --- AWS resiliencehub import-resources-to-draft-app-version operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

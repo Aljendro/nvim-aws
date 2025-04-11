@@ -118,13 +118,6 @@ function M.get_origin_endpoint_policy(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "get-origin-endpoint-policy" }, input)
 end
 
---- AWS mediapackagev2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediapackagev2", "help" }, input)
-end
-
 --- AWS mediapackagev2 list-channel-groups operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

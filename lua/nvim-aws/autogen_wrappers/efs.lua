@@ -132,13 +132,6 @@ function M.describe_replication_configurations(input)
 	return common.execute_aws_command_with_input({ "efs", "describe-replication-configurations" }, input)
 end
 
---- AWS efs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "efs", "help" }, input)
-end
-
 --- AWS efs list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

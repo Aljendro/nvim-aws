@@ -48,13 +48,6 @@ function M.get_terminology(input)
 	return common.execute_aws_command_with_input({ "translate", "get-terminology" }, input)
 end
 
---- AWS translate help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "translate", "help" }, input)
-end
-
 --- AWS translate import-terminology operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

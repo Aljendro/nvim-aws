@@ -209,13 +209,6 @@ function M.describe_listener(input)
 	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-listener" }, input)
 end
 
---- AWS globalaccelerator help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "help" }, input)
-end
-
 --- AWS globalaccelerator list-accelerators operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

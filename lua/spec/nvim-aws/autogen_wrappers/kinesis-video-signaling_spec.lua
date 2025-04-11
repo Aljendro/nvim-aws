@@ -10,11 +10,6 @@ describe("AWS kinesis-video-signaling service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with send_alexa_offer_to_master", function()
 		local result = service.send_alexa_offer_to_master()
 		assert.is_true(result.success)

@@ -3653,13 +3653,6 @@ function M.get_vpn_tunnel_replacement_status(input)
 	return common.execute_aws_command_with_input({ "ec2", "get-vpn-tunnel-replacement-status" }, input)
 end
 
---- AWS ec2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ec2", "help" }, input)
-end
-
 --- AWS ec2 import-client-vpn-client-certificate-revocation-list operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

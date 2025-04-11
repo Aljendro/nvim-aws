@@ -34,13 +34,6 @@ function M.describe_notification_rule(input)
 	return common.execute_aws_command_with_input({ "codestar-notifications", "describe-notification-rule" }, input)
 end
 
---- AWS codestar-notifications help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "help" }, input)
-end
-
 --- AWS codestar-notifications list-event-types operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

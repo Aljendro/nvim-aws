@@ -13,13 +13,6 @@ function M.complete_snapshot(input)
 	return common.execute_aws_command_with_input({ "ebs", "complete-snapshot" }, input)
 end
 
---- AWS ebs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ebs", "help" }, input)
-end
-
 --- AWS ebs list-changed-blocks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

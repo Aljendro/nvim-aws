@@ -237,13 +237,6 @@ function M.get_template(input)
 	return common.execute_aws_command_with_input({ "ses", "get-template" }, input)
 end
 
---- AWS ses help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ses", "help" }, input)
-end
-
 --- AWS ses list-configuration-sets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

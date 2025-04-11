@@ -40,11 +40,6 @@ describe("AWS timestream-query service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_scheduled_queries", function()
 		local result = service.list_scheduled_queries()
 		assert.is_true(result.success)

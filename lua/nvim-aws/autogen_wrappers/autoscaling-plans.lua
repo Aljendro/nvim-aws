@@ -41,13 +41,6 @@ function M.get_scaling_plan_resource_forecast_data(input)
 	return common.execute_aws_command_with_input({ "autoscaling-plans", "get-scaling-plan-resource-forecast-data" }, input)
 end
 
---- AWS autoscaling-plans help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "help" }, input)
-end
-
 --- AWS autoscaling-plans update-scaling-plan operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

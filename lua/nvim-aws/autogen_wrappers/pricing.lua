@@ -34,13 +34,6 @@ function M.get_products(input)
 	return common.execute_aws_command_with_input({ "pricing", "get-products" }, input)
 end
 
---- AWS pricing help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pricing", "help" }, input)
-end
-
 --- AWS pricing list-price-lists operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

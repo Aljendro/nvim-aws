@@ -76,13 +76,6 @@ function M.disassociate_source_resource(input)
 	return common.execute_aws_command_with_input({ "mgh", "disassociate-source-resource" }, input)
 end
 
---- AWS mgh help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mgh", "help" }, input)
-end
-
 --- AWS mgh import-migration-task operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

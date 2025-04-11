@@ -250,11 +250,6 @@ describe("AWS backup service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_backup_job_summaries", function()
 		local result = service.list_backup_job_summaries()
 		assert.is_true(result.success)

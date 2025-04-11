@@ -76,13 +76,6 @@ function M.get_public_key_certificate(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-public-key-certificate" }, input)
 end
 
---- AWS payment-cryptography help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "payment-cryptography", "help" }, input)
-end
-
 --- AWS payment-cryptography import-key operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

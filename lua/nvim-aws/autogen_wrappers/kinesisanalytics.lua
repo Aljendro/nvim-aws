@@ -97,13 +97,6 @@ function M.discover_input_schema(input)
 	return common.execute_aws_command_with_input({ "kinesisanalytics", "discover-input-schema" }, input)
 end
 
---- AWS kinesisanalytics help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kinesisanalytics", "help" }, input)
-end
-
 --- AWS kinesisanalytics list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

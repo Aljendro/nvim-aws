@@ -48,13 +48,6 @@ function M.get_service_level_objective(input)
 	return common.execute_aws_command_with_input({ "application-signals", "get-service-level-objective" }, input)
 end
 
---- AWS application-signals help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "application-signals", "help" }, input)
-end
-
 --- AWS application-signals list-service-dependencies operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

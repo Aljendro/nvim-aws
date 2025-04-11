@@ -125,13 +125,6 @@ function M.get_voice_tone_analysis_task(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-media-pipelines", "get-voice-tone-analysis-task" }, input)
 end
 
---- AWS chime-sdk-media-pipelines help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-media-pipelines", "help" }, input)
-end
-
 --- AWS chime-sdk-media-pipelines list-media-capture-pipelines operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

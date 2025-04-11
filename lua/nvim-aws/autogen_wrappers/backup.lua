@@ -349,13 +349,6 @@ function M.get_supported_resource_types(input)
 	return common.execute_aws_command_with_input({ "backup", "get-supported-resource-types" }, input)
 end
 
---- AWS backup help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "backup", "help" }, input)
-end
-
 --- AWS backup list-backup-job-summaries operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

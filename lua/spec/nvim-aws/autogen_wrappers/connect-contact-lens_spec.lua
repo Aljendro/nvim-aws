@@ -5,14 +5,8 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.connect-contact-lens")
 
 describe("AWS connect-contact-lens service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_realtime_contact_analysis_segments", function()
 		local result = service.list_realtime_contact_analysis_segments()
 		assert.is_true(result.success)
 	end)
-
 end)

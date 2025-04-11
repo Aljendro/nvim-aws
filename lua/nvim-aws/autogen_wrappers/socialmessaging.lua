@@ -48,13 +48,6 @@ function M.get_whatsapp_message_media(input)
 	return common.execute_aws_command_with_input({ "socialmessaging", "get-whatsapp-message-media" }, input)
 end
 
---- AWS socialmessaging help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "socialmessaging", "help" }, input)
-end
-
 --- AWS socialmessaging list-linked-whatsapp-business-accounts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

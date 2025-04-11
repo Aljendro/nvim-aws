@@ -1147,13 +1147,6 @@ function M.get_workflow_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-workflow-runs" }, input)
 end
 
---- AWS glue help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "glue", "help" }, input)
-end
-
 --- AWS glue import-catalog-to-glue operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

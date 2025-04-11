@@ -13,11 +13,4 @@ function M.get_free_tier_usage(input)
 	return common.execute_aws_command_with_input({ "freetier", "get-free-tier-usage" }, input)
 end
 
---- AWS freetier help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "freetier", "help" }, input)
-end
-
 return M

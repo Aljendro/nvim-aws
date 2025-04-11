@@ -90,13 +90,6 @@ function M.get_detector_model_analysis_results(input)
 	return common.execute_aws_command_with_input({ "iotevents", "get-detector-model-analysis-results" }, input)
 end
 
---- AWS iotevents help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotevents", "help" }, input)
-end
-
 --- AWS iotevents list-alarm-model-versions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

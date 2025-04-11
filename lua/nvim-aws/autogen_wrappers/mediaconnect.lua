@@ -160,13 +160,6 @@ function M.grant_flow_entitlements(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "grant-flow-entitlements" }, input)
 end
 
---- AWS mediaconnect help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediaconnect", "help" }, input)
-end
-
 --- AWS mediaconnect list-bridges operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

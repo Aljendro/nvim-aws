@@ -237,13 +237,6 @@ function M.describe_workflow(input)
 	return common.execute_aws_command_with_input({ "transfer", "describe-workflow" }, input)
 end
 
---- AWS transfer help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "transfer", "help" }, input)
-end
-
 --- AWS transfer import-certificate operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

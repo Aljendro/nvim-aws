@@ -160,13 +160,6 @@ function M.get_violation_details(input)
 	return common.execute_aws_command_with_input({ "fms", "get-violation-details" }, input)
 end
 
---- AWS fms help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "fms", "help" }, input)
-end
-
 --- AWS fms list-admin-accounts-for-organization operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

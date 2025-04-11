@@ -69,13 +69,6 @@ function M.get_instance_onboarding_job_status(input)
 	return common.execute_aws_command_with_input({ "connectcampaigns", "get-instance-onboarding-job-status" }, input)
 end
 
---- AWS connectcampaigns help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "connectcampaigns", "help" }, input)
-end
-
 --- AWS connectcampaigns list-campaigns operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -300,13 +300,6 @@ function M.get_usage_statistics(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-usage-statistics" }, input)
 end
 
---- AWS guardduty help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "guardduty", "help" }, input)
-end
-
 --- AWS guardduty invite-members operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

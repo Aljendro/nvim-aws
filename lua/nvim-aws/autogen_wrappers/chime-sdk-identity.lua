@@ -111,13 +111,6 @@ function M.get_app_instance_retention_settings(input)
 	return common.execute_aws_command_with_input({ "chime-sdk-identity", "get-app-instance-retention-settings" }, input)
 end
 
---- AWS chime-sdk-identity help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-identity", "help" }, input)
-end
-
 --- AWS chime-sdk-identity list-app-instance-admins operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

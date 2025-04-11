@@ -80,11 +80,6 @@ describe("AWS kinesis service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with increase_stream_retention_period", function()
 		local result = service.increase_stream_retention_period()
 		assert.is_true(result.success)

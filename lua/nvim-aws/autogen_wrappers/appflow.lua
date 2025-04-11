@@ -83,13 +83,6 @@ function M.describe_flow_execution_records(input)
 	return common.execute_aws_command_with_input({ "appflow", "describe-flow-execution-records" }, input)
 end
 
---- AWS appflow help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "appflow", "help" }, input)
-end
-
 --- AWS appflow list-connector-entities operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

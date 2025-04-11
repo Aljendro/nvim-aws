@@ -76,13 +76,6 @@ function M.group_resources(input)
 	return common.execute_aws_command_with_input({ "resource-groups", "group-resources" }, input)
 end
 
---- AWS resource-groups help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "help" }, input)
-end
-
 --- AWS resource-groups list-group-resources operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

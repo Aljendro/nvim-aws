@@ -34,13 +34,6 @@ function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "billing", "get-resource-policy" }, input)
 end
 
---- AWS billing help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "billing", "help" }, input)
-end
-
 --- AWS billing list-billing-views operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

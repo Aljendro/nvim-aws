@@ -34,11 +34,4 @@ function M.get_home_region(input)
 	return common.execute_aws_command_with_input({ "migrationhub-config", "get-home-region" }, input)
 end
 
---- AWS migrationhub-config help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "migrationhub-config", "help" }, input)
-end
-
 return M

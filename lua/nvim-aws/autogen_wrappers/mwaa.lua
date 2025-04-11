@@ -41,13 +41,6 @@ function M.get_environment(input)
 	return common.execute_aws_command_with_input({ "mwaa", "get-environment" }, input)
 end
 
---- AWS mwaa help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mwaa", "help" }, input)
-end
-
 --- AWS mwaa invoke-rest-api operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

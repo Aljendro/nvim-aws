@@ -30,11 +30,6 @@ describe("AWS resourcegroupstaggingapi service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with start_report_creation", function()
 		local result = service.start_report_creation()
 		assert.is_true(result.success)

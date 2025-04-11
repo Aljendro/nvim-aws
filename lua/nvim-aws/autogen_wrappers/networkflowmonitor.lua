@@ -90,13 +90,6 @@ function M.get_scope(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-scope" }, input)
 end
 
---- AWS networkflowmonitor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "networkflowmonitor", "help" }, input)
-end
-
 --- AWS networkflowmonitor list-monitors operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -75,11 +75,6 @@ describe("AWS emr-containers service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_job_runs", function()
 		local result = service.list_job_runs()
 		assert.is_true(result.success)

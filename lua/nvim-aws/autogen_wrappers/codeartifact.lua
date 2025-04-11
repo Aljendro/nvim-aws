@@ -181,13 +181,6 @@ function M.get_repository_permissions_policy(input)
 	return common.execute_aws_command_with_input({ "codeartifact", "get-repository-permissions-policy" }, input)
 end
 
---- AWS codeartifact help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "help" }, input)
-end
-
 --- AWS codeartifact list-allowed-repositories-for-group operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

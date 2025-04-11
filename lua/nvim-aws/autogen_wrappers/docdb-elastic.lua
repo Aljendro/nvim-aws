@@ -69,13 +69,6 @@ function M.get_pending_maintenance_action(input)
 	return common.execute_aws_command_with_input({ "docdb-elastic", "get-pending-maintenance-action" }, input)
 end
 
---- AWS docdb-elastic help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "docdb-elastic", "help" }, input)
-end
-
 --- AWS docdb-elastic list-cluster-snapshots operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

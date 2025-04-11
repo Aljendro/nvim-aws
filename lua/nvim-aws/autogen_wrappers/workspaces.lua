@@ -384,13 +384,6 @@ function M.get_account_link(input)
 	return common.execute_aws_command_with_input({ "workspaces", "get-account-link" }, input)
 end
 
---- AWS workspaces help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "workspaces", "help" }, input)
-end
-
 --- AWS workspaces import-client-branding operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -25,11 +25,6 @@ describe("AWS notificationscontacts service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_email_contacts", function()
 		local result = service.list_email_contacts()
 		assert.is_true(result.success)

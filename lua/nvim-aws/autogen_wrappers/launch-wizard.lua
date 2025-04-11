@@ -41,13 +41,6 @@ function M.get_workload_deployment_pattern(input)
 	return common.execute_aws_command_with_input({ "launch-wizard", "get-workload-deployment-pattern" }, input)
 end
 
---- AWS launch-wizard help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "help" }, input)
-end
-
 --- AWS launch-wizard list-deployment-events operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

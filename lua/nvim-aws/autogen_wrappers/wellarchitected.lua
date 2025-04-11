@@ -258,13 +258,6 @@ function M.get_workload(input)
 	return common.execute_aws_command_with_input({ "wellarchitected", "get-workload" }, input)
 end
 
---- AWS wellarchitected help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "wellarchitected", "help" }, input)
-end
-
 --- AWS wellarchitected import-lens operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

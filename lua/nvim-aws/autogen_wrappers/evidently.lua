@@ -132,13 +132,6 @@ function M.get_segment(input)
 	return common.execute_aws_command_with_input({ "evidently", "get-segment" }, input)
 end
 
---- AWS evidently help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "evidently", "help" }, input)
-end
-
 --- AWS evidently list-experiments operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

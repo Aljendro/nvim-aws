@@ -440,13 +440,6 @@ function M.get_wireless_gateway_task_definition(input)
 	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-task-definition" }, input)
 end
 
---- AWS iotwireless help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "help" }, input)
-end
-
 --- AWS iotwireless list-destinations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

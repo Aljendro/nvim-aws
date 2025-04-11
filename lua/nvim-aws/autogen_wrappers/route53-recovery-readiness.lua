@@ -139,13 +139,6 @@ function M.get_resource_set(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-resource-set" }, input)
 end
 
---- AWS route53-recovery-readiness help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "help" }, input)
-end
-
 --- AWS route53-recovery-readiness list-cells operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

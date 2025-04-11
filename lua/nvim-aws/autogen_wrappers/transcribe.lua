@@ -167,13 +167,6 @@ function M.get_vocabulary_filter(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-vocabulary-filter" }, input)
 end
 
---- AWS transcribe help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "transcribe", "help" }, input)
-end
-
 --- AWS transcribe list-call-analytics-categories operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

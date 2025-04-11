@@ -139,13 +139,6 @@ function M.get_qualification_type(input)
 	return common.execute_aws_command_with_input({ "mturk", "get-qualification-type" }, input)
 end
 
---- AWS mturk help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mturk", "help" }, input)
-end
-
 --- AWS mturk list-assignments-for-hit operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

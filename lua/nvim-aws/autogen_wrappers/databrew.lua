@@ -153,13 +153,6 @@ function M.describe_schedule(input)
 	return common.execute_aws_command_with_input({ "databrew", "describe-schedule" }, input)
 end
 
---- AWS databrew help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "databrew", "help" }, input)
-end
-
 --- AWS databrew list-datasets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

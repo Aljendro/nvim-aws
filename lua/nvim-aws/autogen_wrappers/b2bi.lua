@@ -111,13 +111,6 @@ function M.get_transformer_job(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-transformer-job" }, input)
 end
 
---- AWS b2bi help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "b2bi", "help" }, input)
-end
-
 --- AWS b2bi list-capabilities operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

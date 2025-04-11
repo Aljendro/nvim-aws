@@ -384,13 +384,6 @@ function M.get_interpolated_asset_property_values(input)
 	return common.execute_aws_command_with_input({ "iotsitewise", "get-interpolated-asset-property-values" }, input)
 end
 
---- AWS iotsitewise help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "help" }, input)
-end
-
 --- AWS iotsitewise list-access-policies operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

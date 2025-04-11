@@ -200,11 +200,6 @@ describe("AWS bedrock-agent service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with ingest_knowledge_base_documents", function()
 		local result = service.ingest_knowledge_base_documents()
 		assert.is_true(result.success)

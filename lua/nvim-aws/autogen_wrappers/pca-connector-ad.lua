@@ -111,13 +111,6 @@ function M.get_template_group_access_control_entry(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-template-group-access-control-entry" }, input)
 end
 
---- AWS pca-connector-ad help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pca-connector-ad", "help" }, input)
-end
-
 --- AWS pca-connector-ad list-connectors operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

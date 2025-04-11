@@ -125,13 +125,6 @@ function M.get_selling_system_settings(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-selling-system-settings" }, input)
 end
 
---- AWS partnercentral-selling help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "partnercentral-selling", "help" }, input)
-end
-
 --- AWS partnercentral-selling list-engagement-by-accepting-invitation-tasks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

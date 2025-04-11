@@ -130,11 +130,6 @@ describe("AWS codeartifact service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_allowed_repositories_for_group", function()
 		local result = service.list_allowed_repositories_for_group()
 		assert.is_true(result.success)

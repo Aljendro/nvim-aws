@@ -27,13 +27,6 @@ function M.get_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "get-rule" }, input)
 end
 
---- AWS rbin help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "rbin", "help" }, input)
-end
-
 --- AWS rbin list-rules operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

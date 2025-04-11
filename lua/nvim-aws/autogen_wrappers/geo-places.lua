@@ -27,13 +27,6 @@ function M.get_place(input)
 	return common.execute_aws_command_with_input({ "geo-places", "get-place" }, input)
 end
 
---- AWS geo-places help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "geo-places", "help" }, input)
-end
-
 --- AWS geo-places reverse-geocode operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -174,13 +174,6 @@ function M.get_subscription_state(input)
 	return common.execute_aws_command_with_input({ "shield", "get-subscription-state" }, input)
 end
 
---- AWS shield help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "shield", "help" }, input)
-end
-
 --- AWS shield list-attacks operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

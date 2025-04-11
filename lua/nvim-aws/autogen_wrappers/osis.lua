@@ -41,13 +41,6 @@ function M.get_pipeline_change_progress(input)
 	return common.execute_aws_command_with_input({ "osis", "get-pipeline-change-progress" }, input)
 end
 
---- AWS osis help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "osis", "help" }, input)
-end
-
 --- AWS osis list-pipeline-blueprints operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

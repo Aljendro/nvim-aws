@@ -740,11 +740,6 @@ describe("AWS iot service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_active_violations", function()
 		local result = service.list_active_violations()
 		assert.is_true(result.success)

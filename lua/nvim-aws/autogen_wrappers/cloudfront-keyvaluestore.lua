@@ -27,13 +27,6 @@ function M.get_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "get-key" }, input)
 end
 
---- AWS cloudfront-keyvaluestore help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "help" }, input)
-end
-
 --- AWS cloudfront-keyvaluestore list-keys operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

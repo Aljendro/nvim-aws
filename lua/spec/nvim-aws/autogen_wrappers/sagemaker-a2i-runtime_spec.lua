@@ -15,11 +15,6 @@ describe("AWS sagemaker-a2i-runtime service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_human_loops", function()
 		local result = service.list_human_loops()
 		assert.is_true(result.success)

@@ -748,13 +748,6 @@ function M.failover_global_cluster(input)
 	return common.execute_aws_command_with_input({ "rds", "failover-global-cluster" }, input)
 end
 
---- AWS rds help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "rds", "help" }, input)
-end
-
 --- AWS rds list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

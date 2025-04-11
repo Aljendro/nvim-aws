@@ -130,11 +130,6 @@ describe("AWS deploy service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_application_revisions", function()
 		local result = service.list_application_revisions()
 		assert.is_true(result.success)

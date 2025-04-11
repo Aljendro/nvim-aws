@@ -34,13 +34,6 @@ function M.get_invoice_unit(input)
 	return common.execute_aws_command_with_input({ "invoicing", "get-invoice-unit" }, input)
 end
 
---- AWS invoicing help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "invoicing", "help" }, input)
-end
-
 --- AWS invoicing list-invoice-units operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

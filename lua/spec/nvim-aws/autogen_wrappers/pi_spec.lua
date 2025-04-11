@@ -40,11 +40,6 @@ describe("AWS pi service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_available_resource_dimensions", function()
 		local result = service.list_available_resource_dimensions()
 		assert.is_true(result.success)

@@ -13,13 +13,6 @@ function M.get_data_automation_status(input)
 	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "get-data-automation-status" }, input)
 end
 
---- AWS bedrock-data-automation-runtime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "help" }, input)
-end
-
 --- AWS bedrock-data-automation-runtime invoke-data-automation-async operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

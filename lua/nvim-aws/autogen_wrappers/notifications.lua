@@ -146,13 +146,6 @@ function M.get_notifications_access_for_organization(input)
 	return common.execute_aws_command_with_input({ "notifications", "get-notifications-access-for-organization" }, input)
 end
 
---- AWS notifications help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "notifications", "help" }, input)
-end
-
 --- AWS notifications list-channels operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

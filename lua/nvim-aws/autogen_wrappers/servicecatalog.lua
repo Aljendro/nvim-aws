@@ -370,13 +370,6 @@ function M.get_provisioned_product_outputs(input)
 	return common.execute_aws_command_with_input({ "servicecatalog", "get-provisioned-product-outputs" }, input)
 end
 
---- AWS servicecatalog help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "help" }, input)
-end
-
 --- AWS servicecatalog import-as-provisioned-product operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

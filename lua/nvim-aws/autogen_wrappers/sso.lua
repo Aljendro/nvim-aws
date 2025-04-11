@@ -13,13 +13,6 @@ function M.get_role_credentials(input)
 	return common.execute_aws_command_with_input({ "sso", "get-role-credentials" }, input)
 end
 
---- AWS sso help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sso", "help" }, input)
-end
-
 --- AWS sso list-account-roles operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

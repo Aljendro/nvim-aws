@@ -356,13 +356,6 @@ function M.get_predictive_scaling_forecast(input)
 	return common.execute_aws_command_with_input({ "autoscaling", "get-predictive-scaling-forecast" }, input)
 end
 
---- AWS autoscaling help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "autoscaling", "help" }, input)
-end
-
 --- AWS autoscaling put-lifecycle-hook operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

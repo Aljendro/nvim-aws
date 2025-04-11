@@ -153,13 +153,6 @@ function M.describe_virtual_service(input)
 	return common.execute_aws_command_with_input({ "appmesh", "describe-virtual-service" }, input)
 end
 
---- AWS appmesh help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "appmesh", "help" }, input)
-end
-
 --- AWS appmesh list-gateway-routes operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

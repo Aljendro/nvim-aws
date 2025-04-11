@@ -35,11 +35,6 @@ describe("AWS elastictranscoder service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_jobs_by_pipeline", function()
 		local result = service.list_jobs_by_pipeline()
 		assert.is_true(result.success)

@@ -75,11 +75,6 @@ describe("AWS support service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with refresh_trusted_advisor_check", function()
 		local result = service.refresh_trusted_advisor_check()
 		assert.is_true(result.success)

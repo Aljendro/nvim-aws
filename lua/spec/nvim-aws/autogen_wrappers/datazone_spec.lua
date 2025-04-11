@@ -460,11 +460,6 @@ describe("AWS datazone service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_asset_filters", function()
 		local result = service.list_asset_filters()
 		assert.is_true(result.success)

@@ -48,13 +48,6 @@ function M.get_job_run(input)
 	return common.execute_aws_command_with_input({ "emr-serverless", "get-job-run" }, input)
 end
 
---- AWS emr-serverless help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "help" }, input)
-end
-
 --- AWS emr-serverless list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

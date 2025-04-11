@@ -55,13 +55,6 @@ function M.get_software_set(input)
 	return common.execute_aws_command_with_input({ "workspaces-thin-client", "get-software-set" }, input)
 end
 
---- AWS workspaces-thin-client help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "workspaces-thin-client", "help" }, input)
-end
-
 --- AWS workspaces-thin-client list-devices operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

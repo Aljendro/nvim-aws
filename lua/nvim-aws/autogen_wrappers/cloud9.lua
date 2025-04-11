@@ -55,13 +55,6 @@ function M.describe_environments(input)
 	return common.execute_aws_command_with_input({ "cloud9", "describe-environments" }, input)
 end
 
---- AWS cloud9 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cloud9", "help" }, input)
-end
-
 --- AWS cloud9 list-environments operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

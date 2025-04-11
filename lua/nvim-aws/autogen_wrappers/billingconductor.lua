@@ -111,13 +111,6 @@ function M.get_billing_group_cost_report(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "get-billing-group-cost-report" }, input)
 end
 
---- AWS billingconductor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "billingconductor", "help" }, input)
-end
-
 --- AWS billingconductor list-account-associations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

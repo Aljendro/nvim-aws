@@ -237,13 +237,6 @@ function M.get_place(input)
 	return common.execute_aws_command_with_input({ "location", "get-place" }, input)
 end
 
---- AWS location help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "location", "help" }, input)
-end
-
 --- AWS location list-device-positions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

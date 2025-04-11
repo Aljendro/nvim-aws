@@ -90,11 +90,6 @@ describe("AWS panorama service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_application_instance_dependencies", function()
 		local result = service.list_application_instance_dependencies()
 		assert.is_true(result.success)

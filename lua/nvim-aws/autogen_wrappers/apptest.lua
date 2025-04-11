@@ -83,13 +83,6 @@ function M.get_test_suite(input)
 	return common.execute_aws_command_with_input({ "apptest", "get-test-suite" }, input)
 end
 
---- AWS apptest help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "apptest", "help" }, input)
-end
-
 --- AWS apptest list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

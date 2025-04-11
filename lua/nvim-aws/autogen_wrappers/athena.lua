@@ -251,13 +251,6 @@ function M.get_work_group(input)
 	return common.execute_aws_command_with_input({ "athena", "get-work-group" }, input)
 end
 
---- AWS athena help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "athena", "help" }, input)
-end
-
 --- AWS athena import-notebook operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

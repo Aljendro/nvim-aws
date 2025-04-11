@@ -145,11 +145,6 @@ describe("AWS ce service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_commitment_purchase_analyses", function()
 		local result = service.list_commitment_purchase_analyses()
 		assert.is_true(result.success)

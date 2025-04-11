@@ -125,13 +125,6 @@ function M.get_satellite(input)
 	return common.execute_aws_command_with_input({ "groundstation", "get-satellite" }, input)
 end
 
---- AWS groundstation help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "groundstation", "help" }, input)
-end
-
 --- AWS groundstation list-configs operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

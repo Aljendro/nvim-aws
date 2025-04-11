@@ -175,11 +175,6 @@ describe("AWS iot-managed-integrations service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_credential_lockers", function()
 		local result = service.list_credential_lockers()
 		assert.is_true(result.success)

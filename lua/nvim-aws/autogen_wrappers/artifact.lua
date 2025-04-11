@@ -34,13 +34,6 @@ function M.get_term_for_report(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-term-for-report" }, input)
 end
 
---- AWS artifact help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "artifact", "help" }, input)
-end
-
 --- AWS artifact list-customer-agreements operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

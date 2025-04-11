@@ -15,11 +15,6 @@ describe("AWS applicationcostprofiler service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with import_application_usage", function()
 		local result = service.import_application_usage()
 		assert.is_true(result.success)

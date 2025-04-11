@@ -34,13 +34,6 @@ function M.get_email_contact(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "get-email-contact" }, input)
 end
 
---- AWS notificationscontacts help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "help" }, input)
-end
-
 --- AWS notificationscontacts list-email-contacts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

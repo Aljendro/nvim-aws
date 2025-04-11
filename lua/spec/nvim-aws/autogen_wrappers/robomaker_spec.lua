@@ -135,11 +135,6 @@ describe("AWS robomaker service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_robot_applications", function()
 		local result = service.list_robot_applications()
 		assert.is_true(result.success)

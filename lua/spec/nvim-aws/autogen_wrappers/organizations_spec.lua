@@ -150,11 +150,6 @@ describe("AWS organizations service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with invite_account_to_organization", function()
 		local result = service.invite_account_to_organization()
 		assert.is_true(result.success)

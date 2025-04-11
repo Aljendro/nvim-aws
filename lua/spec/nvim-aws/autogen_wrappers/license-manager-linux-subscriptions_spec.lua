@@ -20,11 +20,6 @@ describe("AWS license-manager-linux-subscriptions service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_linux_subscription_instances", function()
 		local result = service.list_linux_subscription_instances()
 		assert.is_true(result.success)

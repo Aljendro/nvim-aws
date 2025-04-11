@@ -342,13 +342,6 @@ function M.get_template_summary(input)
 	return common.execute_aws_command_with_input({ "cloudformation", "get-template-summary" }, input)
 end
 
---- AWS cloudformation help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cloudformation", "help" }, input)
-end
-
 --- AWS cloudformation import-stacks-to-stack-set operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

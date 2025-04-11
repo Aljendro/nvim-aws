@@ -55,13 +55,6 @@ function M.get_sink_policy(input)
 	return common.execute_aws_command_with_input({ "oam", "get-sink-policy" }, input)
 end
 
---- AWS oam help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "oam", "help" }, input)
-end
-
 --- AWS oam list-attached-links operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

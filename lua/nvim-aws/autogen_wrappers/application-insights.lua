@@ -118,13 +118,6 @@ function M.describe_workload(input)
 	return common.execute_aws_command_with_input({ "application-insights", "describe-workload" }, input)
 end
 
---- AWS application-insights help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "application-insights", "help" }, input)
-end
-
 --- AWS application-insights list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -55,13 +55,6 @@ function M.get_image_set(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "get-image-set" }, input)
 end
 
---- AWS medical-imaging help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "medical-imaging", "help" }, input)
-end
-
 --- AWS medical-imaging list-datastores operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

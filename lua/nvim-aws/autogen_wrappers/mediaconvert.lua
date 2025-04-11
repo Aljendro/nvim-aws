@@ -118,13 +118,6 @@ function M.get_queue(input)
 	return common.execute_aws_command_with_input({ "mediaconvert", "get-queue" }, input)
 end
 
---- AWS mediaconvert help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediaconvert", "help" }, input)
-end
-
 --- AWS mediaconvert list-job-templates operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

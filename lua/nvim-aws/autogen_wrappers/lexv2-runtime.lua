@@ -20,13 +20,6 @@ function M.get_session(input)
 	return common.execute_aws_command_with_input({ "lexv2-runtime", "get-session" }, input)
 end
 
---- AWS lexv2-runtime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lexv2-runtime", "help" }, input)
-end
-
 --- AWS lexv2-runtime recognize-text operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

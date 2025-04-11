@@ -230,13 +230,6 @@ function M.disassociate_file_system_aliases(input)
 	return common.execute_aws_command_with_input({ "fsx", "disassociate-file-system-aliases" }, input)
 end
 
---- AWS fsx help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "fsx", "help" }, input)
-end
-
 --- AWS fsx list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

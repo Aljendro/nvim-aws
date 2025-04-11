@@ -258,13 +258,6 @@ function M.get_settings(input)
 	return common.execute_aws_command_with_input({ "auditmanager", "get-settings" }, input)
 end
 
---- AWS auditmanager help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "auditmanager", "help" }, input)
-end
-
 --- AWS auditmanager list-assessment-control-insights-by-control-domain operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

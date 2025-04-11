@@ -62,13 +62,6 @@ function M.get_identity_pool_configuration(input)
 	return common.execute_aws_command_with_input({ "cognito-sync", "get-identity-pool-configuration" }, input)
 end
 
---- AWS cognito-sync help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cognito-sync", "help" }, input)
-end
-
 --- AWS cognito-sync list-datasets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

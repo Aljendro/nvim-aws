@@ -132,13 +132,6 @@ function M.get_dataset_content(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "get-dataset-content" }, input)
 end
 
---- AWS iotanalytics help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "help" }, input)
-end
-
 --- AWS iotanalytics list-channels operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -139,13 +139,6 @@ function M.get_workload_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "get-workload-estimate" }, input)
 end
 
---- AWS bcm-pricing-calculator help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "help" }, input)
-end
-
 --- AWS bcm-pricing-calculator list-bill-estimate-commitments operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

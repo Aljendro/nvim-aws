@@ -35,11 +35,6 @@ describe("AWS repostspace service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_spaces", function()
 		local result = service.list_spaces()
 		assert.is_true(result.success)

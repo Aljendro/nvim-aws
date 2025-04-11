@@ -188,13 +188,6 @@ function M.get_world_template_body(input)
 	return common.execute_aws_command_with_input({ "robomaker", "get-world-template-body" }, input)
 end
 
---- AWS robomaker help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "robomaker", "help" }, input)
-end
-
 --- AWS robomaker list-robot-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

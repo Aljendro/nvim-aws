@@ -111,13 +111,6 @@ function M.evaluate_session(input)
 	return common.execute_aws_command_with_input({ "voice-id", "evaluate-session" }, input)
 end
 
---- AWS voice-id help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "voice-id", "help" }, input)
-end
-
 --- AWS voice-id list-domains operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

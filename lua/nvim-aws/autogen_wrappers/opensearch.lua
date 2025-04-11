@@ -335,13 +335,6 @@ function M.get_upgrade_status(input)
 	return common.execute_aws_command_with_input({ "opensearch", "get-upgrade-status" }, input)
 end
 
---- AWS opensearch help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "opensearch", "help" }, input)
-end
-
 --- AWS opensearch list-applications operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

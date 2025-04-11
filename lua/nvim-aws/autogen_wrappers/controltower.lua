@@ -97,13 +97,6 @@ function M.get_landing_zone_operation(input)
 	return common.execute_aws_command_with_input({ "controltower", "get-landing-zone-operation" }, input)
 end
 
---- AWS controltower help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "controltower", "help" }, input)
-end
-
 --- AWS controltower list-baselines operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

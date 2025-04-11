@@ -118,13 +118,6 @@ function M.get_signed_bluinsights_url(input)
 	return common.execute_aws_command_with_input({ "m2", "get-signed-bluinsights-url" }, input)
 end
 
---- AWS m2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "m2", "help" }, input)
-end
-
 --- AWS m2 list-application-versions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

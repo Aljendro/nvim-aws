@@ -629,13 +629,6 @@ function M.get_service_setting(input)
 	return common.execute_aws_command_with_input({ "ssm", "get-service-setting" }, input)
 end
 
---- AWS ssm help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ssm", "help" }, input)
-end
-
 --- AWS ssm label-parameter-version operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

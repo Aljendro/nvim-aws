@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.cloudsearchdomain")
 
 describe("AWS cloudsearchdomain service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with search", function()
 		local result = service.search()
 		assert.is_true(result.success)
@@ -24,5 +19,4 @@ describe("AWS cloudsearchdomain service testing", function()
 		local result = service.upload_documents()
 		assert.is_true(result.success)
 	end)
-
 end)

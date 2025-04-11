@@ -55,13 +55,6 @@ function M.get_data_automation_project(input)
 	return common.execute_aws_command_with_input({ "bedrock-data-automation", "get-data-automation-project" }, input)
 end
 
---- AWS bedrock-data-automation help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "help" }, input)
-end
-
 --- AWS bedrock-data-automation list-blueprints operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

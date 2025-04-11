@@ -69,13 +69,6 @@ function M.get_queue(input)
 	return common.execute_aws_command_with_input({ "pcs", "get-queue" }, input)
 end
 
---- AWS pcs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pcs", "help" }, input)
-end
-
 --- AWS pcs list-clusters operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -27,13 +27,6 @@ function M.get_async_invoke(input)
 	return common.execute_aws_command_with_input({ "bedrock-runtime", "get-async-invoke" }, input)
 end
 
---- AWS bedrock-runtime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "help" }, input)
-end
-
 --- AWS bedrock-runtime list-async-invokes operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -370,13 +370,6 @@ function M.get_test_execution_artifacts_url(input)
 	return common.execute_aws_command_with_input({ "lexv2-models", "get-test-execution-artifacts-url" }, input)
 end
 
---- AWS lexv2-models help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "help" }, input)
-end
-
 --- AWS lexv2-models list-aggregated-utterances operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -97,13 +97,6 @@ function M.disassociate_license(input)
 	return common.execute_aws_command_with_input({ "grafana", "disassociate-license" }, input)
 end
 
---- AWS grafana help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "grafana", "help" }, input)
-end
-
 --- AWS grafana list-permissions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -930,13 +930,6 @@ function M.get_traffic_distribution(input)
 	return common.execute_aws_command_with_input({ "connect", "get-traffic-distribution" }, input)
 end
 
---- AWS connect help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "connect", "help" }, input)
-end
-
 --- AWS connect import-phone-number operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -90,13 +90,6 @@ function M.get_group(input)
 	return common.execute_aws_command_with_input({ "synthetics", "get-group" }, input)
 end
 
---- AWS synthetics help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "synthetics", "help" }, input)
-end
-
 --- AWS synthetics list-associated-groups operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

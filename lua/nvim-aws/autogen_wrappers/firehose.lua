@@ -27,13 +27,6 @@ function M.describe_delivery_stream(input)
 	return common.execute_aws_command_with_input({ "firehose", "describe-delivery-stream" }, input)
 end
 
---- AWS firehose help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "firehose", "help" }, input)
-end
-
 --- AWS firehose list-delivery-streams operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

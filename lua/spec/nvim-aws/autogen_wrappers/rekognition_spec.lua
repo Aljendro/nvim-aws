@@ -215,11 +215,6 @@ describe("AWS rekognition service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with index_faces", function()
 		local result = service.index_faces()
 		assert.is_true(result.success)

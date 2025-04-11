@@ -97,13 +97,6 @@ function M.describe_subnet_groups(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-subnet-groups" }, input)
 end
 
---- AWS dax help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "dax", "help" }, input)
-end
-
 --- AWS dax increase-replication-factor operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

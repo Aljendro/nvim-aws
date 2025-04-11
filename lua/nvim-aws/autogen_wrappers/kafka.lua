@@ -167,13 +167,6 @@ function M.get_compatible_kafka_versions(input)
 	return common.execute_aws_command_with_input({ "kafka", "get-compatible-kafka-versions" }, input)
 end
 
---- AWS kafka help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kafka", "help" }, input)
-end
-
 --- AWS kafka list-client-vpc-connections operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

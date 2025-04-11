@@ -300,13 +300,6 @@ function M.get_repository_triggers(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-repository-triggers" }, input)
 end
 
---- AWS codecommit help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codecommit", "help" }, input)
-end
-
 --- AWS codecommit list-approval-rule-templates operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

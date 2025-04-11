@@ -30,11 +30,6 @@ describe("AWS arc-zonal-shift service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_autoshifts", function()
 		local result = service.list_autoshifts()
 		assert.is_true(result.success)

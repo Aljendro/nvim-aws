@@ -20,13 +20,6 @@ function M.describe_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "describe-object" }, input)
 end
 
---- AWS mediastore-data help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediastore-data", "help" }, input)
-end
-
 --- AWS mediastore-data list-items operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -510,13 +510,6 @@ function M.get_instance_access(input)
 	return common.execute_aws_command_with_input({ "gamelift", "get-instance-access" }, input)
 end
 
---- AWS gamelift help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "gamelift", "help" }, input)
-end
-
 --- AWS gamelift list-aliases operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

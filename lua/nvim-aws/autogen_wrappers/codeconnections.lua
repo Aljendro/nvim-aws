@@ -111,13 +111,6 @@ function M.get_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codeconnections", "get-sync-configuration" }, input)
 end
 
---- AWS codeconnections help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "help" }, input)
-end
-
 --- AWS codeconnections list-connections operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

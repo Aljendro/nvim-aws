@@ -285,11 +285,6 @@ describe("AWS storagegateway service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with join_domain", function()
 		local result = service.join_domain()
 		assert.is_true(result.success)

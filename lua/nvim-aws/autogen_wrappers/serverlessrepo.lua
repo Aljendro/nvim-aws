@@ -62,13 +62,6 @@ function M.get_cloud_formation_template(input)
 	return common.execute_aws_command_with_input({ "serverlessrepo", "get-cloud-formation-template" }, input)
 end
 
---- AWS serverlessrepo help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "serverlessrepo", "help" }, input)
-end
-
 --- AWS serverlessrepo list-application-dependencies operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

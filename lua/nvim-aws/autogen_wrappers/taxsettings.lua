@@ -69,13 +69,6 @@ function M.get_tax_registration_document(input)
 	return common.execute_aws_command_with_input({ "taxsettings", "get-tax-registration-document" }, input)
 end
 
---- AWS taxsettings help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "help" }, input)
-end
-
 --- AWS taxsettings list-supplemental-tax-registrations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

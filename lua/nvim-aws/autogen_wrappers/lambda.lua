@@ -244,13 +244,6 @@ function M.get_runtime_management_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-runtime-management-config" }, input)
 end
 
---- AWS lambda help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lambda", "help" }, input)
-end
-
 --- AWS lambda list-aliases operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

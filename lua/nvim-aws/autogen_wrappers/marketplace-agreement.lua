@@ -20,13 +20,6 @@ function M.get_agreement_terms(input)
 	return common.execute_aws_command_with_input({ "marketplace-agreement", "get-agreement-terms" }, input)
 end
 
---- AWS marketplace-agreement help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "marketplace-agreement", "help" }, input)
-end
-
 --- AWS marketplace-agreement search-agreements operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

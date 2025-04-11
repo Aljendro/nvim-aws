@@ -384,13 +384,6 @@ function M.get_vpc_links(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-vpc-links" }, input)
 end
 
---- AWS apigatewayv2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "apigatewayv2", "help" }, input)
-end
-
 --- AWS apigatewayv2 import-api operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

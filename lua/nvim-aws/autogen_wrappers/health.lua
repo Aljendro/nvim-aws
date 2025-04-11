@@ -104,11 +104,4 @@ function M.enable_health_service_access_for_organization(input)
 	return common.execute_aws_command_with_input({ "health", "enable-health-service-access-for-organization" }, input)
 end
 
---- AWS health help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "health", "help" }, input)
-end
-
 return M

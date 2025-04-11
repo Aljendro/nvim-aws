@@ -125,13 +125,6 @@ function M.get_sample_data(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "get-sample-data" }, input)
 end
 
---- AWS lookoutmetrics help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lookoutmetrics", "help" }, input)
-end
-
 --- AWS lookoutmetrics list-alerts operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

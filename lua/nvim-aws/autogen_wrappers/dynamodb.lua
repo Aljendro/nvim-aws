@@ -216,13 +216,6 @@ function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "get-resource-policy" }, input)
 end
 
---- AWS dynamodb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "dynamodb", "help" }, input)
-end
-
 --- AWS dynamodb import-table operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

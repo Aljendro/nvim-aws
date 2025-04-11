@@ -139,13 +139,6 @@ function M.get_studio_session_mapping(input)
 	return common.execute_aws_command_with_input({ "emr", "get-studio-session-mapping" }, input)
 end
 
---- AWS emr help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "emr", "help" }, input)
-end
-
 --- AWS emr list-clusters operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

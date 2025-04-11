@@ -804,13 +804,6 @@ function M.get_session_embed_url(input)
 	return common.execute_aws_command_with_input({ "quicksight", "get-session-embed-url" }, input)
 end
 
---- AWS quicksight help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "quicksight", "help" }, input)
-end
-
 --- AWS quicksight list-analyses operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

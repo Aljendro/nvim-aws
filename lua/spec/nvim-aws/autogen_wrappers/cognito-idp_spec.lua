@@ -375,11 +375,6 @@ describe("AWS cognito-idp service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with initiate_auth", function()
 		local result = service.initiate_auth()
 		assert.is_true(result.success)

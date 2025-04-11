@@ -167,13 +167,6 @@ function M.get_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "get-ml-model" }, input)
 end
 
---- AWS machinelearning help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "help" }, input)
-end
-
 --- AWS machinelearning predict operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

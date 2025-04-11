@@ -15,11 +15,6 @@ describe("AWS iot-jobs-data service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with start_command_execution", function()
 		local result = service.start_command_execution()
 		assert.is_true(result.success)

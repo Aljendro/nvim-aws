@@ -398,13 +398,6 @@ function M.evict_files_failing_upload(input)
 	return common.execute_aws_command_with_input({ "storagegateway", "evict-files-failing-upload" }, input)
 end
 
---- AWS storagegateway help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "storagegateway", "help" }, input)
-end
-
 --- AWS storagegateway join-domain operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

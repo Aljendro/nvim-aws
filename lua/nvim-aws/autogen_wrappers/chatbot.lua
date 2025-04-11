@@ -153,13 +153,6 @@ function M.get_microsoft_teams_channel_configuration(input)
 	return common.execute_aws_command_with_input({ "chatbot", "get-microsoft-teams-channel-configuration" }, input)
 end
 
---- AWS chatbot help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chatbot", "help" }, input)
-end
-
 --- AWS chatbot list-associations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

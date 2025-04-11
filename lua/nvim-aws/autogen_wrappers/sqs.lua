@@ -76,13 +76,6 @@ function M.get_queue_url(input)
 	return common.execute_aws_command_with_input({ "sqs", "get-queue-url" }, input)
 end
 
---- AWS sqs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sqs", "help" }, input)
-end
-
 --- AWS sqs list-dead-letter-source-queues operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

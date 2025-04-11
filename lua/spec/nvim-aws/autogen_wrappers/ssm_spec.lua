@@ -450,11 +450,6 @@ describe("AWS ssm service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with label_parameter_version", function()
 		local result = service.label_parameter_version()
 		assert.is_true(result.success)

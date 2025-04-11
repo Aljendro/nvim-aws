@@ -146,13 +146,6 @@ function M.get_schema_mapping(input)
 	return common.execute_aws_command_with_input({ "entityresolution", "get-schema-mapping" }, input)
 end
 
---- AWS entityresolution help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "help" }, input)
-end
-
 --- AWS entityresolution list-id-mapping-jobs operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -41,13 +41,6 @@ function M.disassociate_user(input)
 	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "disassociate-user" }, input)
 end
 
---- AWS license-manager-user-subscriptions help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "help" }, input)
-end
-
 --- AWS license-manager-user-subscriptions list-identity-providers operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

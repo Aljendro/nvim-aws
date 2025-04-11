@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PERSONALIZE-EVENTS service functions
 local M = {}
 
---- AWS personalize-events help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "personalize-events", "help" }, input)
-end
-
 --- AWS personalize-events put-action-interactions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

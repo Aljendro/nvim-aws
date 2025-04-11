@@ -62,13 +62,6 @@ function M.get_service_quota_increase_request_from_template(input)
 	return common.execute_aws_command_with_input({ "service-quotas", "get-service-quota-increase-request-from-template" }, input)
 end
 
---- AWS service-quotas help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "help" }, input)
-end
-
 --- AWS service-quotas list-aws-default-service-quotas operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

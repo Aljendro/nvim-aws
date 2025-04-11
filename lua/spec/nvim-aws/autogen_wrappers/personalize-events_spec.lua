@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.personalize-events")
 
 describe("AWS personalize-events service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with put_action_interactions", function()
 		local result = service.put_action_interactions()
 		assert.is_true(result.success)
@@ -34,5 +29,4 @@ describe("AWS personalize-events service testing", function()
 		local result = service.put_users()
 		assert.is_true(result.success)
 	end)
-
 end)

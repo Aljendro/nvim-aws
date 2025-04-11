@@ -75,11 +75,6 @@ describe("AWS privatenetworks service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_device_identifiers", function()
 		local result = service.list_device_identifiers()
 		assert.is_true(result.success)

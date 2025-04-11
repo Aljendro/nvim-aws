@@ -265,11 +265,6 @@ describe("AWS lexv2-models service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_aggregated_utterances", function()
 		local result = service.list_aggregated_utterances()
 		assert.is_true(result.success)

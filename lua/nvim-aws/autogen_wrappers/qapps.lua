@@ -132,13 +132,6 @@ function M.get_q_app_session_metadata(input)
 	return common.execute_aws_command_with_input({ "qapps", "get-q-app-session-metadata" }, input)
 end
 
---- AWS qapps help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "qapps", "help" }, input)
-end
-
 --- AWS qapps import-document operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -300,13 +300,6 @@ function M.detect_toxic_content(input)
 	return common.execute_aws_command_with_input({ "comprehend", "detect-toxic-content" }, input)
 end
 
---- AWS comprehend help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "comprehend", "help" }, input)
-end
-
 --- AWS comprehend import-model operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

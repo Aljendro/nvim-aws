@@ -13,13 +13,6 @@ function M.get_control(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "get-control" }, input)
 end
 
---- AWS controlcatalog help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "help" }, input)
-end
-
 --- AWS controlcatalog list-common-controls operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

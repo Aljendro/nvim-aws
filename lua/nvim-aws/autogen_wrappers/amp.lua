@@ -118,13 +118,6 @@ function M.get_default_scraper_configuration(input)
 	return common.execute_aws_command_with_input({ "amp", "get-default-scraper-configuration" }, input)
 end
 
---- AWS amp help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "amp", "help" }, input)
-end
-
 --- AWS amp list-rule-groups-namespaces operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

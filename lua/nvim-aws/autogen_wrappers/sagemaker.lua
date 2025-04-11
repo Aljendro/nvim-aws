@@ -1420,13 +1420,6 @@ function M.get_search_suggestions(input)
 	return common.execute_aws_command_with_input({ "sagemaker", "get-search-suggestions" }, input)
 end
 
---- AWS sagemaker help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "help" }, input)
-end
-
 --- AWS sagemaker import-hub-content operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

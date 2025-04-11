@@ -888,13 +888,6 @@ function M.get_static_ips(input)
 	return common.execute_aws_command_with_input({ "lightsail", "get-static-ips" }, input)
 end
 
---- AWS lightsail help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lightsail", "help" }, input)
-end
-
 --- AWS lightsail import-key-pair operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

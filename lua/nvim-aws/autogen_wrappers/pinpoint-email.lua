@@ -146,13 +146,6 @@ function M.get_email_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-email-identity" }, input)
 end
 
---- AWS pinpoint-email help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pinpoint-email", "help" }, input)
-end
-
 --- AWS pinpoint-email list-configuration-sets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

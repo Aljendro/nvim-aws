@@ -363,13 +363,6 @@ function M.get_personal_access_token_metadata(input)
 	return common.execute_aws_command_with_input({ "workmail", "get-personal-access-token-metadata" }, input)
 end
 
---- AWS workmail help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "workmail", "help" }, input)
-end
-
 --- AWS workmail list-access-control-rules operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

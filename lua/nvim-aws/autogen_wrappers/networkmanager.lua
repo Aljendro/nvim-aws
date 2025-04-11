@@ -447,13 +447,6 @@ function M.get_vpc_attachment(input)
 	return common.execute_aws_command_with_input({ "networkmanager", "get-vpc-attachment" }, input)
 end
 
---- AWS networkmanager help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "networkmanager", "help" }, input)
-end
-
 --- AWS networkmanager list-attachments operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

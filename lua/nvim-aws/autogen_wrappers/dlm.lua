@@ -34,13 +34,6 @@ function M.get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policy" }, input)
 end
 
---- AWS dlm help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "dlm", "help" }, input)
-end
-
 --- AWS dlm list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

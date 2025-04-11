@@ -160,13 +160,6 @@ function M.describe_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-retraining-scheduler" }, input)
 end
 
---- AWS lookoutequipment help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "help" }, input)
-end
-
 --- AWS lookoutequipment import-dataset operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

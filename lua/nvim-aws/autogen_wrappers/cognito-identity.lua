@@ -83,13 +83,6 @@ function M.get_principal_tag_attribute_map(input)
 	return common.execute_aws_command_with_input({ "cognito-identity", "get-principal-tag-attribute-map" }, input)
 end
 
---- AWS cognito-identity help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cognito-identity", "help" }, input)
-end
-
 --- AWS cognito-identity list-identities operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

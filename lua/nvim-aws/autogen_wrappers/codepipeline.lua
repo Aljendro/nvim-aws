@@ -118,13 +118,6 @@ function M.get_third_party_job_details(input)
 	return common.execute_aws_command_with_input({ "codepipeline", "get-third-party-job-details" }, input)
 end
 
---- AWS codepipeline help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codepipeline", "help" }, input)
-end
-
 --- AWS codepipeline list-action-executions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

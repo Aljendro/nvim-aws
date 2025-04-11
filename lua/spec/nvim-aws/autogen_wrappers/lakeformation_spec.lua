@@ -185,11 +185,6 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_data_cells_filter", function()
 		local result = service.list_data_cells_filter()
 		assert.is_true(result.success)

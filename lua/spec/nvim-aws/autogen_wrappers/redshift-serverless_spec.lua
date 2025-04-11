@@ -155,11 +155,6 @@ describe("AWS redshift-serverless service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_custom_domain_associations", function()
 		local result = service.list_custom_domain_associations()
 		assert.is_true(result.success)

@@ -76,13 +76,6 @@ function M.get_event_integration(input)
 	return common.execute_aws_command_with_input({ "appintegrations", "get-event-integration" }, input)
 end
 
---- AWS appintegrations help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "appintegrations", "help" }, input)
-end
-
 --- AWS appintegrations list-application-associations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -70,11 +70,6 @@ describe("AWS kinesisanalytics service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_applications", function()
 		local result = service.list_applications()
 		assert.is_true(result.success)

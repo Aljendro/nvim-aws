@@ -454,13 +454,6 @@ function M.get_signal_map(input)
 	return common.execute_aws_command_with_input({ "medialive", "get-signal-map" }, input)
 end
 
---- AWS medialive help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "medialive", "help" }, input)
-end
-
 --- AWS medialive list-channel-placement-groups operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

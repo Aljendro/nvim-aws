@@ -48,13 +48,6 @@ function M.get_certificate(input)
 	return common.execute_aws_command_with_input({ "acm", "get-certificate" }, input)
 end
 
---- AWS acm help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "acm", "help" }, input)
-end
-
 --- AWS acm import-certificate operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

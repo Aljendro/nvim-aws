@@ -342,13 +342,6 @@ function M.get_template_sync_status(input)
 	return common.execute_aws_command_with_input({ "proton", "get-template-sync-status" }, input)
 end
 
---- AWS proton help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "proton", "help" }, input)
-end
-
 --- AWS proton list-component-outputs operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

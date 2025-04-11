@@ -69,13 +69,6 @@ function M.get_room(input)
 	return common.execute_aws_command_with_input({ "ivschat", "get-room" }, input)
 end
 
---- AWS ivschat help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ivschat", "help" }, input)
-end
-
 --- AWS ivschat list-logging-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

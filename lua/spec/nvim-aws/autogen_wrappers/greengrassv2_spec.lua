@@ -90,11 +90,6 @@ describe("AWS greengrassv2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_client_devices_associated_with_core_device", function()
 		local result = service.list_client_devices_associated_with_core_device()
 		assert.is_true(result.success)

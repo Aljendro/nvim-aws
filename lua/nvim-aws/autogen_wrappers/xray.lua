@@ -174,13 +174,6 @@ function M.get_trace_summaries(input)
 	return common.execute_aws_command_with_input({ "xray", "get-trace-summaries" }, input)
 end
 
---- AWS xray help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "xray", "help" }, input)
-end
-
 --- AWS xray list-resource-policies operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

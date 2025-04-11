@@ -280,11 +280,6 @@ describe("AWS s3api service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_bucket_analytics_configurations", function()
 		local result = service.list_bucket_analytics_configurations()
 		assert.is_true(result.success)

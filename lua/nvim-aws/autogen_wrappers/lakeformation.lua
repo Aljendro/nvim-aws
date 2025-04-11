@@ -258,13 +258,6 @@ function M.grant_permissions(input)
 	return common.execute_aws_command_with_input({ "lakeformation", "grant-permissions" }, input)
 end
 
---- AWS lakeformation help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lakeformation", "help" }, input)
-end
-
 --- AWS lakeformation list-data-cells-filter operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

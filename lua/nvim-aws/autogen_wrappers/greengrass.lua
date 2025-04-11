@@ -391,13 +391,6 @@ function M.get_thing_runtime_configuration(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-thing-runtime-configuration" }, input)
 end
 
---- AWS greengrass help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "greengrass", "help" }, input)
-end
-
 --- AWS greengrass list-bulk-deployment-detailed-reports operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

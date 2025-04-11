@@ -146,13 +146,6 @@ function M.get_servers(input)
 	return common.execute_aws_command_with_input({ "sms", "get-servers" }, input)
 end
 
---- AWS sms help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sms", "help" }, input)
-end
-
 --- AWS sms import-app-catalog operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

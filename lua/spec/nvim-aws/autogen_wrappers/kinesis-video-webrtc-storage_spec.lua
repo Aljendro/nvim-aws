@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.kinesis-video-webrtc-storage")
 
 describe("AWS kinesis-video-webrtc-storage service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with join_storage_session", function()
 		local result = service.join_storage_session()
 		assert.is_true(result.success)
@@ -19,5 +14,4 @@ describe("AWS kinesis-video-webrtc-storage service testing", function()
 		local result = service.join_storage_session_as_viewer()
 		assert.is_true(result.success)
 	end)
-
 end)

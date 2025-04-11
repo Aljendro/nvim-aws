@@ -146,13 +146,6 @@ function M.get_generated_policy(input)
 	return common.execute_aws_command_with_input({ "accessanalyzer", "get-generated-policy" }, input)
 end
 
---- AWS accessanalyzer help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "help" }, input)
-end
-
 --- AWS accessanalyzer list-access-preview-findings operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

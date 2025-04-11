@@ -90,13 +90,6 @@ function M.get_sol_network_package(input)
 	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-package" }, input)
 end
 
---- AWS tnb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "tnb", "help" }, input)
-end
-
 --- AWS tnb instantiate-sol-network-instance operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

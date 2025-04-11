@@ -125,13 +125,6 @@ function M.get_service_role_for_account(input)
 	return common.execute_aws_command_with_input({ "greengrassv2", "get-service-role-for-account" }, input)
 end
 
---- AWS greengrassv2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "help" }, input)
-end
-
 --- AWS greengrassv2 list-client-devices-associated-with-core-device operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

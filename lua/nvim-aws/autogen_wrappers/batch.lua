@@ -125,13 +125,6 @@ function M.get_job_queue_snapshot(input)
 	return common.execute_aws_command_with_input({ "batch", "get-job-queue-snapshot" }, input)
 end
 
---- AWS batch help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "batch", "help" }, input)
-end
-
 --- AWS batch list-consumable-resources operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

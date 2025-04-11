@@ -13,11 +13,4 @@ function M.generate_data_set(input)
 	return common.execute_aws_command_with_input({ "marketplacecommerceanalytics", "generate-data-set" }, input)
 end
 
---- AWS marketplacecommerceanalytics help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "marketplacecommerceanalytics", "help" }, input)
-end
-
 return M

@@ -356,13 +356,6 @@ function M.get_variables(input)
 	return common.execute_aws_command_with_input({ "frauddetector", "get-variables" }, input)
 end
 
---- AWS frauddetector help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "frauddetector", "help" }, input)
-end
-
 --- AWS frauddetector list-event-predictions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

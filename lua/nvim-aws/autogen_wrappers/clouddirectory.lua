@@ -237,13 +237,6 @@ function M.get_typed_link_facet_information(input)
 	return common.execute_aws_command_with_input({ "clouddirectory", "get-typed-link-facet-information" }, input)
 end
 
---- AWS clouddirectory help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "help" }, input)
-end
-
 --- AWS clouddirectory list-applied-schema-arns operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

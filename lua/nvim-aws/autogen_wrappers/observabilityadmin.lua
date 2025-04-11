@@ -20,13 +20,6 @@ function M.get_telemetry_evaluation_status_for_organization(input)
 	return common.execute_aws_command_with_input({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" }, input)
 end
 
---- AWS observabilityadmin help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "help" }, input)
-end
-
 --- AWS observabilityadmin list-resource-telemetry operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

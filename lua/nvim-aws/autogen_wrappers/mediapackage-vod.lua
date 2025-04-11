@@ -76,13 +76,6 @@ function M.describe_packaging_group(input)
 	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-packaging-group" }, input)
 end
 
---- AWS mediapackage-vod help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "help" }, input)
-end
-
 --- AWS mediapackage-vod list-assets operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -76,13 +76,6 @@ function M.get_server_strategies(input)
 	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-server-strategies" }, input)
 end
 
---- AWS migrationhubstrategy help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "help" }, input)
-end
-
 --- AWS migrationhubstrategy list-analyzable-servers operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

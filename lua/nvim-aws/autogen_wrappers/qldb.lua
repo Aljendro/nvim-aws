@@ -76,13 +76,6 @@ function M.get_revision(input)
 	return common.execute_aws_command_with_input({ "qldb", "get-revision" }, input)
 end
 
---- AWS qldb help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "qldb", "help" }, input)
-end
-
 --- AWS qldb list-journal-kinesis-streams-for-ledger operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

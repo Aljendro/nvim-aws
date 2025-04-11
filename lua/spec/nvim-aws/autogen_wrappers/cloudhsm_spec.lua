@@ -2,12 +2,5 @@
 -- AWS Service: cloudhsm
 
 require("nvim-aws").setup()
-local service = require("nvim-aws.autogen_wrappers.cloudhsm")
 
-describe("AWS cloudhsm service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
-end)
+describe("AWS cloudhsm service testing", function() end)

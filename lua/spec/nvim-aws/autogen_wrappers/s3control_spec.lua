@@ -315,11 +315,6 @@ describe("AWS s3control service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_access_grants", function()
 		local result = service.list_access_grants()
 		assert.is_true(result.success)

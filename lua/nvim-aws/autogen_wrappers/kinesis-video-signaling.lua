@@ -13,13 +13,6 @@ function M.get_ice_server_config(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "get-ice-server-config" }, input)
 end
 
---- AWS kinesis-video-signaling help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "help" }, input)
-end
-
 --- AWS kinesis-video-signaling send-alexa-offer-to-master operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

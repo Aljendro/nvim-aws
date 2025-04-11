@@ -15,11 +15,6 @@ describe("AWS cost-optimization-hub service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_enrollment_statuses", function()
 		local result = service.list_enrollment_statuses()
 		assert.is_true(result.success)

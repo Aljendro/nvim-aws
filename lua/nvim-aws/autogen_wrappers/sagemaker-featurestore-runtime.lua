@@ -27,13 +27,6 @@ function M.get_record(input)
 	return common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "get-record" }, input)
 end
 
---- AWS sagemaker-featurestore-runtime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sagemaker-featurestore-runtime", "help" }, input)
-end
-
 --- AWS sagemaker-featurestore-runtime put-record operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

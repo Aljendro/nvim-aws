@@ -524,13 +524,6 @@ function M.global_sign_out(input)
 	return common.execute_aws_command_with_input({ "cognito-idp", "global-sign-out" }, input)
 end
 
---- AWS cognito-idp help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "help" }, input)
-end
-
 --- AWS cognito-idp initiate-auth operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

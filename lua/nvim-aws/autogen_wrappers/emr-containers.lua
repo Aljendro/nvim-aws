@@ -104,13 +104,6 @@ function M.get_managed_endpoint_session_credentials(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "get-managed-endpoint-session-credentials" }, input)
 end
 
---- AWS emr-containers help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "help" }, input)
-end
-
 --- AWS emr-containers list-job-runs operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

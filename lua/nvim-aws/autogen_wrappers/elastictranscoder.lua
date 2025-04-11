@@ -48,13 +48,6 @@ function M.delete_preset(input)
 	return common.execute_aws_command_with_input({ "elastictranscoder", "delete-preset" }, input)
 end
 
---- AWS elastictranscoder help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "elastictranscoder", "help" }, input)
-end
-
 --- AWS elastictranscoder list-jobs-by-pipeline operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

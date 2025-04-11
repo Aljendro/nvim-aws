@@ -27,13 +27,6 @@ function M.get_service_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "get-service-settings" }, input)
 end
 
---- AWS license-manager-linux-subscriptions help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "help" }, input)
-end
-
 --- AWS license-manager-linux-subscriptions list-linux-subscription-instances operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

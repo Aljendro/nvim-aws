@@ -75,11 +75,6 @@ describe("AWS swf service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_activity_types", function()
 		local result = service.list_activity_types()
 		assert.is_true(result.success)

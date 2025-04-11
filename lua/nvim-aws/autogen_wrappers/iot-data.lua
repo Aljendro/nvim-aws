@@ -13,13 +13,6 @@ function M.get_retained_message(input)
 	return common.execute_aws_command_with_input({ "iot-data", "get-retained-message" }, input)
 end
 
---- AWS iot-data help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iot-data", "help" }, input)
-end
-
 --- AWS iot-data list-named-shadows-for-thing operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

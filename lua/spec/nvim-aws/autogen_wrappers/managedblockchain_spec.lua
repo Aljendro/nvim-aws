@@ -70,11 +70,6 @@ describe("AWS managedblockchain service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_accessors", function()
 		local result = service.list_accessors()
 		assert.is_true(result.success)

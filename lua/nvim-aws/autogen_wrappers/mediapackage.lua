@@ -69,13 +69,6 @@ function M.describe_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackage", "describe-origin-endpoint" }, input)
 end
 
---- AWS mediapackage help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "help" }, input)
-end
-
 --- AWS mediapackage list-channels operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

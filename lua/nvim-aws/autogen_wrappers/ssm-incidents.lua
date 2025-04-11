@@ -104,13 +104,6 @@ function M.get_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-timeline-event" }, input)
 end
 
---- AWS ssm-incidents help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "help" }, input)
-end
-
 --- AWS ssm-incidents list-incident-findings operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

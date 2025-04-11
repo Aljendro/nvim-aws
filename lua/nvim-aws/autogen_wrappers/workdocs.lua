@@ -251,13 +251,6 @@ function M.get_resources(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-resources" }, input)
 end
 
---- AWS workdocs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "workdocs", "help" }, input)
-end
-
 --- AWS workdocs initiate-document-version-upload operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

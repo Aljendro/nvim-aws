@@ -41,13 +41,6 @@ function M.get_account_alias(input)
 	return common.execute_aws_command_with_input({ "support-app", "get-account-alias" }, input)
 end
 
---- AWS support-app help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "support-app", "help" }, input)
-end
-
 --- AWS support-app list-slack-channel-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -520,11 +520,6 @@ describe("AWS redshift service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_recommendations", function()
 		local result = service.list_recommendations()
 		assert.is_true(result.success)

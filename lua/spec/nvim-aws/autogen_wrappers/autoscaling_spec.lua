@@ -255,11 +255,6 @@ describe("AWS autoscaling service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with put_lifecycle_hook", function()
 		local result = service.put_lifecycle_hook()
 		assert.is_true(result.success)

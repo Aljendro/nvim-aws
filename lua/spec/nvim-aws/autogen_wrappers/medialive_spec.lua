@@ -325,11 +325,6 @@ describe("AWS medialive service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_channel_placement_groups", function()
 		local result = service.list_channel_placement_groups()
 		assert.is_true(result.success)

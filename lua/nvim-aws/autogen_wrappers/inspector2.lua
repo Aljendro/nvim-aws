@@ -216,13 +216,6 @@ function M.get_sbom_export(input)
 	return common.execute_aws_command_with_input({ "inspector2", "get-sbom-export" }, input)
 end
 
---- AWS inspector2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "inspector2", "help" }, input)
-end
-
 --- AWS inspector2 list-account-permissions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

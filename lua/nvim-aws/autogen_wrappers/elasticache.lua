@@ -377,13 +377,6 @@ function M.failover_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "failover-global-replication-group" }, input)
 end
 
---- AWS elasticache help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "elasticache", "help" }, input)
-end
-
 --- AWS elasticache increase-node-groups-in-global-replication-group operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

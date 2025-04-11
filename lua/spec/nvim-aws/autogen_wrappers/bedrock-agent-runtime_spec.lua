@@ -50,11 +50,6 @@ describe("AWS bedrock-agent-runtime service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_invocation_steps", function()
 		local result = service.list_invocation_steps()
 		assert.is_true(result.success)

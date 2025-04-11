@@ -20,11 +20,6 @@ describe("AWS dynamodbstreams service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_streams", function()
 		local result = service.list_streams()
 		assert.is_true(result.success)

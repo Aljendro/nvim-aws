@@ -48,13 +48,6 @@ function M.get_suite_run_report(input)
 	return common.execute_aws_command_with_input({ "iotdeviceadvisor", "get-suite-run-report" }, input)
 end
 
---- AWS iotdeviceadvisor help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "iotdeviceadvisor", "help" }, input)
-end
-
 --- AWS iotdeviceadvisor list-suite-definitions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

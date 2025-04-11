@@ -111,13 +111,6 @@ function M.get_resource_collection(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "get-resource-collection" }, input)
 end
 
---- AWS devops-guru help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "help" }, input)
-end
-
 --- AWS devops-guru list-anomalies-for-insight operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

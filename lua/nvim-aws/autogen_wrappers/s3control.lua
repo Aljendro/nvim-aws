@@ -440,13 +440,6 @@ function M.get_storage_lens_group(input)
 	return common.execute_aws_command_with_input({ "s3control", "get-storage-lens-group" }, input)
 end
 
---- AWS s3control help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "s3control", "help" }, input)
-end
-
 --- AWS s3control list-access-grants operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

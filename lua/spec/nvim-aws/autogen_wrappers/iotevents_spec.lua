@@ -65,11 +65,6 @@ describe("AWS iotevents service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_alarm_model_versions", function()
 		local result = service.list_alarm_model_versions()
 		assert.is_true(result.success)

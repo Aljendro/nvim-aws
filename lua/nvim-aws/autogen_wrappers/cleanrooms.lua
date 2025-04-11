@@ -321,13 +321,6 @@ function M.get_schema_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-schema-analysis-rule" }, input)
 end
 
---- AWS cleanrooms help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cleanrooms", "help" }, input)
-end
-
 --- AWS cleanrooms list-analysis-templates operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

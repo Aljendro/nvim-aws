@@ -230,11 +230,6 @@ describe("AWS waf service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_activated_rules_in_rule_group", function()
 		local result = service.list_activated_rules_in_rule_group()
 		assert.is_true(result.success)

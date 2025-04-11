@@ -20,13 +20,6 @@ function M.create_token_with_iam(input)
 	return common.execute_aws_command_with_input({ "sso-oidc", "create-token-with-iam" }, input)
 end
 
---- AWS sso-oidc help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sso-oidc", "help" }, input)
-end
-
 --- AWS sso-oidc register-client operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

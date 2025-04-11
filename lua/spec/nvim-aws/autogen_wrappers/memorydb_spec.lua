@@ -155,11 +155,6 @@ describe("AWS memorydb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_allowed_multi_region_cluster_updates", function()
 		local result = service.list_allowed_multi_region_cluster_updates()
 		assert.is_true(result.success)

@@ -55,11 +55,6 @@ describe("AWS qldb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_journal_kinesis_streams_for_ledger", function()
 		local result = service.list_journal_kinesis_streams_for_ledger()
 		assert.is_true(result.success)

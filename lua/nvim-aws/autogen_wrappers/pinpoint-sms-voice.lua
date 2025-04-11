@@ -41,13 +41,6 @@ function M.get_configuration_set_event_destinations(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice", "get-configuration-set-event-destinations" }, input)
 end
 
---- AWS pinpoint-sms-voice help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice", "help" }, input)
-end
-
 --- AWS pinpoint-sms-voice send-voice-message operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

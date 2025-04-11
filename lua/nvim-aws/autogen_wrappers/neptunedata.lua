@@ -195,13 +195,6 @@ function M.get_sparql_stream(input)
 	return common.execute_aws_command_with_input({ "neptunedata", "get-sparql-stream" }, input)
 end
 
---- AWS neptunedata help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "help" }, input)
-end
-
 --- AWS neptunedata list-gremlin-queries operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

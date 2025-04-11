@@ -265,13 +265,6 @@ function M.get_snapshots(input)
 	return common.execute_aws_command_with_input({ "kendra", "get-snapshots" }, input)
 end
 
---- AWS kendra help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kendra", "help" }, input)
-end
-
 --- AWS kendra list-access-control-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

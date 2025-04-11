@@ -279,13 +279,6 @@ function M.get_permissions_boundary_for_permission_set(input)
 	return common.execute_aws_command_with_input({ "sso-admin", "get-permissions-boundary-for-permission-set" }, input)
 end
 
---- AWS sso-admin help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "sso-admin", "help" }, input)
-end
-
 --- AWS sso-admin list-account-assignment-creation-status operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -48,13 +48,6 @@ function M.get_signing_profile(input)
 	return common.execute_aws_command_with_input({ "signer", "get-signing-profile" }, input)
 end
 
---- AWS signer help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "signer", "help" }, input)
-end
-
 --- AWS signer list-profile-permissions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

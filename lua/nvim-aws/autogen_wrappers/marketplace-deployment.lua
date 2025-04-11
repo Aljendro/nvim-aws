@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MARKETPLACE-DEPLOYMENT service functions
 local M = {}
 
---- AWS marketplace-deployment help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "marketplace-deployment", "help" }, input)
-end
-
 --- AWS marketplace-deployment list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

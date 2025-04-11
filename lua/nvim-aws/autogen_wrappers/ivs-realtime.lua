@@ -139,13 +139,6 @@ function M.get_storage_configuration(input)
 	return common.execute_aws_command_with_input({ "ivs-realtime", "get-storage-configuration" }, input)
 end
 
---- AWS ivs-realtime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "help" }, input)
-end
-
 --- AWS ivs-realtime import-public-key operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

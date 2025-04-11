@@ -85,11 +85,6 @@ describe("AWS glacier service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with initiate_job", function()
 		local result = service.initiate_job()
 		assert.is_true(result.success)

@@ -41,13 +41,6 @@ function M.get_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "get-cluster" }, input)
 end
 
---- AWS dsql help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "dsql", "help" }, input)
-end
-
 --- AWS dsql list-clusters operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

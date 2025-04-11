@@ -820,11 +820,6 @@ describe("AWS glue service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with import_catalog_to_glue", function()
 		local result = service.import_catalog_to_glue()
 		assert.is_true(result.success)

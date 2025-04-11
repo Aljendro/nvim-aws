@@ -209,13 +209,6 @@ function M.enable_policy_type(input)
 	return common.execute_aws_command_with_input({ "organizations", "enable-policy-type" }, input)
 end
 
---- AWS organizations help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "organizations", "help" }, input)
-end
-
 --- AWS organizations invite-account-to-organization operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

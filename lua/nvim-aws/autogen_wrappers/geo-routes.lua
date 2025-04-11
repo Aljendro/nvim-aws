@@ -27,13 +27,6 @@ function M.calculate_routes(input)
 	return common.execute_aws_command_with_input({ "geo-routes", "calculate-routes" }, input)
 end
 
---- AWS geo-routes help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "help" }, input)
-end
-
 --- AWS geo-routes optimize-waypoints operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

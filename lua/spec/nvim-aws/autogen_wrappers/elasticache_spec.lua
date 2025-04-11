@@ -270,11 +270,6 @@ describe("AWS elasticache service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with increase_node_groups_in_global_replication_group", function()
 		local result = service.increase_node_groups_in_global_replication_group()
 		assert.is_true(result.success)

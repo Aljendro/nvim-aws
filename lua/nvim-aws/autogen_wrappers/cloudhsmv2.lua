@@ -76,13 +76,6 @@ function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "cloudhsmv2", "get-resource-policy" }, input)
 end
 
---- AWS cloudhsmv2 help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cloudhsmv2", "help" }, input)
-end
-
 --- AWS cloudhsmv2 initialize-cluster operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -300,11 +300,6 @@ describe("AWS appstream service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_associated_fleets", function()
 		local result = service.list_associated_fleets()
 		assert.is_true(result.success)

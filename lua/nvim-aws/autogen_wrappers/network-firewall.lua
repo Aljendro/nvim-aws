@@ -153,13 +153,6 @@ function M.get_analysis_report_results(input)
 	return common.execute_aws_command_with_input({ "network-firewall", "get-analysis-report-results" }, input)
 end
 
---- AWS network-firewall help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "network-firewall", "help" }, input)
-end
-
 --- AWS network-firewall list-analysis-reports operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

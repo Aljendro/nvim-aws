@@ -146,13 +146,6 @@ function M.get_token(input)
 	return common.execute_aws_command_with_input({ "amplifybackend", "get-token" }, input)
 end
 
---- AWS amplifybackend help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "help" }, input)
-end
-
 --- AWS amplifybackend import-backend-auth operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

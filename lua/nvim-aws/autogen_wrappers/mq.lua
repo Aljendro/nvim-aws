@@ -97,13 +97,6 @@ function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-user" }, input)
 end
 
---- AWS mq help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "mq", "help" }, input)
-end
-
 --- AWS mq list-brokers operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

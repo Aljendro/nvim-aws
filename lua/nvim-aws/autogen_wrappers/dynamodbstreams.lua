@@ -27,13 +27,6 @@ function M.get_shard_iterator(input)
 	return common.execute_aws_command_with_input({ "dynamodbstreams", "get-shard-iterator" }, input)
 end
 
---- AWS dynamodbstreams help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "dynamodbstreams", "help" }, input)
-end
-
 --- AWS dynamodbstreams list-streams operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

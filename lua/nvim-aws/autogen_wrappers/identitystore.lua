@@ -90,13 +90,6 @@ function M.get_user_id(input)
 	return common.execute_aws_command_with_input({ "identitystore", "get-user-id" }, input)
 end
 
---- AWS identitystore help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "identitystore", "help" }, input)
-end
-
 --- AWS identitystore is-member-in-groups operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -15,11 +15,6 @@ describe("AWS sso-oidc service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with register_client", function()
 		local result = service.register_client()
 		assert.is_true(result.success)

@@ -40,11 +40,6 @@ describe("AWS internetmonitor service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_health_events", function()
 		local result = service.list_health_events()
 		assert.is_true(result.success)

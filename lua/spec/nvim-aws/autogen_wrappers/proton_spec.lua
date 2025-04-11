@@ -245,11 +245,6 @@ describe("AWS proton service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_component_outputs", function()
 		local result = service.list_component_outputs()
 		assert.is_true(result.success)

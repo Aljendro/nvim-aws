@@ -55,13 +55,6 @@ function M.detect_phi(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "detect-phi" }, input)
 end
 
---- AWS comprehendmedical help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "comprehendmedical", "help" }, input)
-end
-
 --- AWS comprehendmedical infer-icd10-cm operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

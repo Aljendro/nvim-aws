@@ -146,13 +146,6 @@ function M.get_metric_widget_image(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-widget-image" }, input)
 end
 
---- AWS cloudwatch help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "help" }, input)
-end
-
 --- AWS cloudwatch list-dashboards operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

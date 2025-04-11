@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KINESIS-VIDEO-WEBRTC-STORAGE service functions
 local M = {}
 
---- AWS kinesis-video-webrtc-storage help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-webrtc-storage", "help" }, input)
-end
-
 --- AWS kinesis-video-webrtc-storage join-storage-session operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

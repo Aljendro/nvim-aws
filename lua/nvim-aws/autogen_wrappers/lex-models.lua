@@ -237,13 +237,6 @@ function M.get_utterances_view(input)
 	return common.execute_aws_command_with_input({ "lex-models", "get-utterances-view" }, input)
 end
 
---- AWS lex-models help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "lex-models", "help" }, input)
-end
-
 --- AWS lex-models list-tags-for-resource operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -45,11 +45,6 @@ describe("AWS service-quotas service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_aws_default_service_quotas", function()
 		local result = service.list_aws_default_service_quotas()
 		assert.is_true(result.success)

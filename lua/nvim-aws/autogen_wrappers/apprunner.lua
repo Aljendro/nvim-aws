@@ -146,13 +146,6 @@ function M.disassociate_custom_domain(input)
 	return common.execute_aws_command_with_input({ "apprunner", "disassociate-custom-domain" }, input)
 end
 
---- AWS apprunner help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "apprunner", "help" }, input)
-end
-
 --- AWS apprunner list-auto-scaling-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -118,13 +118,6 @@ function M.get_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "get-trust-anchor" }, input)
 end
 
---- AWS rolesanywhere help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "help" }, input)
-end
-
 --- AWS rolesanywhere import-crl operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

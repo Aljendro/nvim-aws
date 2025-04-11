@@ -118,13 +118,6 @@ function M.get_discovery_summary(input)
 	return common.execute_aws_command_with_input({ "discovery", "get-discovery-summary" }, input)
 end
 
---- AWS discovery help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "discovery", "help" }, input)
-end
-
 --- AWS discovery list-configurations operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

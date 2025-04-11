@@ -55,13 +55,6 @@ function M.get_scan(input)
 	return common.execute_aws_command_with_input({ "codeguru-security", "get-scan" }, input)
 end
 
---- AWS codeguru-security help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codeguru-security", "help" }, input)
-end
-
 --- AWS codeguru-security list-findings-metrics operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

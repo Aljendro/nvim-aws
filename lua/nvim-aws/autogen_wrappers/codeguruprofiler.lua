@@ -76,13 +76,6 @@ function M.get_recommendations(input)
 	return common.execute_aws_command_with_input({ "codeguruprofiler", "get-recommendations" }, input)
 end
 
---- AWS codeguruprofiler help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "codeguruprofiler", "help" }, input)
-end
-
 --- AWS codeguruprofiler list-findings-reports operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

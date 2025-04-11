@@ -181,13 +181,6 @@ function M.get_task_protection(input)
 	return common.execute_aws_command_with_input({ "ecs", "get-task-protection" }, input)
 end
 
---- AWS ecs help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "ecs", "help" }, input)
-end
-
 --- AWS ecs list-account-settings operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -594,13 +594,6 @@ function M.get_voice_template(input)
 	return common.execute_aws_command_with_input({ "pinpoint", "get-voice-template" }, input)
 end
 
---- AWS pinpoint help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "help" }, input)
-end
-
 --- AWS pinpoint list-journeys operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

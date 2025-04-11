@@ -244,13 +244,6 @@ function M.get_user_settings(input)
 	return common.execute_aws_command_with_input({ "chime", "get-user-settings" }, input)
 end
 
---- AWS chime help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "chime", "help" }, input)
-end
-
 --- AWS chime invite-users operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

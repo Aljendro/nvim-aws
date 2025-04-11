@@ -200,11 +200,6 @@ describe("AWS sso-admin service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_account_assignment_creation_status", function()
 		local result = service.list_account_assignment_creation_status()
 		assert.is_true(result.success)

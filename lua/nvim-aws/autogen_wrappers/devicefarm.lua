@@ -258,13 +258,6 @@ function M.get_vpce_configuration(input)
 	return common.execute_aws_command_with_input({ "devicefarm", "get-vpce-configuration" }, input)
 end
 
---- AWS devicefarm help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "help" }, input)
-end
-
 --- AWS devicefarm install-to-remote-access-session operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

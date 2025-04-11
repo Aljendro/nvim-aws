@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.marketplace-deployment")
 
 describe("AWS marketplace-deployment service testing", function()
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
@@ -29,5 +24,4 @@ describe("AWS marketplace-deployment service testing", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

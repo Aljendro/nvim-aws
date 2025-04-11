@@ -115,11 +115,6 @@ describe("AWS mediaconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_bridges", function()
 		local result = service.list_bridges()
 		assert.is_true(result.success)

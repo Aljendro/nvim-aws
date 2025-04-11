@@ -62,13 +62,6 @@ function M.get_region_opt_status(input)
 	return common.execute_aws_command_with_input({ "account", "get-region-opt-status" }, input)
 end
 
---- AWS account help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "account", "help" }, input)
-end
-
 --- AWS account list-regions operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

@@ -209,13 +209,6 @@ function M.get_public_key(input)
 	return common.execute_aws_command_with_input({ "kms", "get-public-key" }, input)
 end
 
---- AWS kms help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "kms", "help" }, input)
-end
-
 --- AWS kms import-key-material operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

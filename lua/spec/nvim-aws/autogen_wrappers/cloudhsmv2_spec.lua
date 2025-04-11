@@ -55,11 +55,6 @@ describe("AWS cloudhsmv2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with help", function()
-		local result = service.help()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with initialize_cluster", function()
 		local result = service.initialize_cluster()
 		assert.is_true(result.success)

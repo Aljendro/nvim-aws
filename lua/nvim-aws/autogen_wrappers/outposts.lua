@@ -118,13 +118,6 @@ function M.get_site_address(input)
 	return common.execute_aws_command_with_input({ "outposts", "get-site-address" }, input)
 end
 
---- AWS outposts help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "outposts", "help" }, input)
-end
-
 --- AWS outposts list-asset-instances operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

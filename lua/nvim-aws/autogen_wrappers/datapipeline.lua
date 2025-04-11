@@ -69,13 +69,6 @@ function M.get_pipeline_definition(input)
 	return common.execute_aws_command_with_input({ "datapipeline", "get-pipeline-definition" }, input)
 end
 
---- AWS datapipeline help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "help" }, input)
-end
-
 --- AWS datapipeline list-pipelines operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

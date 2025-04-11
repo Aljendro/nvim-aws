@@ -6,13 +6,6 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS QLDB-SESSION service functions
 local M = {}
 
---- AWS qldb-session help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "qldb-session", "help" }, input)
-end
-
 --- AWS qldb-session send-command operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table

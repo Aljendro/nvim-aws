@@ -20,13 +20,6 @@ function M.delete_endpoint(input)
 	return common.execute_aws_command_with_input({ "s3outposts", "delete-endpoint" }, input)
 end
 
---- AWS s3outposts help operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.help(input)
-	return common.execute_aws_command_with_input({ "s3outposts", "help" }, input)
-end
-
 --- AWS s3outposts list-endpoints operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
