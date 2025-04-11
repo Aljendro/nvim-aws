@@ -6,78 +6,85 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LICENSE-MANAGER-LINUX-SUBSCRIPTIONS service functions
 local M = {}
 
---- Remove a third-party subscription provider from the Bring Your Own License (BYOL) subscriptions registered to your account
---- @param input table|nil The input table for the deregister_subscription_provider command
+--- AWS license-manager-linux-subscriptions deregister-subscription-provider operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_subscription_provider(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "deregister-subscription-provider" }, input)
 end
 
---- Get details for a Bring Your Own License (BYOL) subscription that's registered to your account
---- @param input table|nil The input table for the get_registered_subscription_provider command
+--- AWS license-manager-linux-subscriptions get-registered-subscription-provider operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_registered_subscription_provider(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "get-registered-subscription-provider" }, input)
 end
 
---- Lists the Linux subscriptions service settings for your account
---- @param input table|nil The input table for the get_service_settings command
+--- AWS license-manager-linux-subscriptions get-service-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "get-service-settings" }, input)
 end
 
---- Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions
---- @param input table|nil The input table for the list_linux_subscription_instances command
+--- AWS license-manager-linux-subscriptions help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "help" }, input)
+end
+
+--- AWS license-manager-linux-subscriptions list-linux-subscription-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_linux_subscription_instances(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "list-linux-subscription-instances" }, input)
 end
 
---- Lists the Linux subscriptions that have been discovered
---- @param input table|nil The input table for the list_linux_subscriptions command
+--- AWS license-manager-linux-subscriptions list-linux-subscriptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_linux_subscriptions(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "list-linux-subscriptions" }, input)
 end
 
---- List Bring Your Own License (BYOL) subscription registration resources for your account
---- @param input table|nil The input table for the list_registered_subscription_providers command
+--- AWS license-manager-linux-subscriptions list-registered-subscription-providers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_registered_subscription_providers(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "list-registered-subscription-providers" }, input)
 end
 
---- List the metadata tags that are assigned to the specified Amazon Web Services resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS license-manager-linux-subscriptions list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "list-tags-for-resource" }, input)
 end
 
---- Register the supported third-party subscription provider for your Bring Your Own License (BYOL) subscription
---- @param input table|nil The input table for the register_subscription_provider command
+--- AWS license-manager-linux-subscriptions register-subscription-provider operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_subscription_provider(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "register-subscription-provider" }, input)
 end
 
---- Add metadata tags to the specified Amazon Web Services resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS license-manager-linux-subscriptions tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "tag-resource" }, input)
 end
 
---- Remove one or more metadata tag from the specified Amazon Web Services resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS license-manager-linux-subscriptions untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "untag-resource" }, input)
 end
 
---- Updates the service settings for Linux subscriptions
---- @param input table|nil The input table for the update_service_settings command
+--- AWS license-manager-linux-subscriptions update-service-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager-linux-subscriptions", "update-service-settings" }, input)

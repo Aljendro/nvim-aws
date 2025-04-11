@@ -15,11 +15,6 @@ describe("AWS robomaker service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with cancel_deployment_job", function()
-		local result = service.cancel_deployment_job()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with cancel_simulation_job", function()
 		local result = service.cancel_simulation_job()
 		assert.is_true(result.success)
@@ -37,21 +32,6 @@ describe("AWS robomaker service testing", function()
 
 	it("should generate a cli skeleton with cancel_world_generation_job", function()
 		local result = service.cancel_world_generation_job()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with create_deployment_job", function()
-		local result = service.create_deployment_job()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with create_fleet", function()
-		local result = service.create_fleet()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with create_robot", function()
-		local result = service.create_robot()
 		assert.is_true(result.success)
 	end)
 
@@ -95,16 +75,6 @@ describe("AWS robomaker service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with delete_fleet", function()
-		local result = service.delete_fleet()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with delete_robot", function()
-		local result = service.delete_robot()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with delete_robot_application", function()
 		local result = service.delete_robot_application()
 		assert.is_true(result.success)
@@ -117,26 +87,6 @@ describe("AWS robomaker service testing", function()
 
 	it("should generate a cli skeleton with delete_world_template", function()
 		local result = service.delete_world_template()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with deregister_robot", function()
-		local result = service.deregister_robot()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with describe_deployment_job", function()
-		local result = service.describe_deployment_job()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with describe_fleet", function()
-		local result = service.describe_fleet()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with describe_robot", function()
-		local result = service.describe_robot()
 		assert.is_true(result.success)
 	end)
 
@@ -185,23 +135,13 @@ describe("AWS robomaker service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_deployment_jobs", function()
-		local result = service.list_deployment_jobs()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_fleets", function()
-		local result = service.list_fleets()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
 	it("should generate a cli skeleton with list_robot_applications", function()
 		local result = service.list_robot_applications()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_robots", function()
-		local result = service.list_robots()
 		assert.is_true(result.success)
 	end)
 
@@ -245,11 +185,6 @@ describe("AWS robomaker service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with register_robot", function()
-		local result = service.register_robot()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with restart_simulation_job", function()
 		local result = service.restart_simulation_job()
 		assert.is_true(result.success)
@@ -257,11 +192,6 @@ describe("AWS robomaker service testing", function()
 
 	it("should generate a cli skeleton with start_simulation_job_batch", function()
 		local result = service.start_simulation_job_batch()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with sync_deployment_job", function()
-		local result = service.sync_deployment_job()
 		assert.is_true(result.success)
 	end)
 

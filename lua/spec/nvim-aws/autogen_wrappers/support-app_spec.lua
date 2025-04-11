@@ -30,6 +30,11 @@ describe("AWS support-app service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_slack_channel_configurations", function()
 		local result = service.list_slack_channel_configurations()
 		assert.is_true(result.success)

@@ -6,253 +6,253 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SHIELD service functions
 local M = {}
 
---- Authorizes the Shield Response Team (SRT) to access the specified Amazon S3 bucket containing log data such as Application Load Balancer access logs, CloudFront logs, or logs from third party sources
---- @param input table|nil The input table for the associate_drt_log_bucket command
+--- AWS shield associate-drt-log-bucket operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_drt_log_bucket(input)
 	return common.execute_aws_command_with_input({ "shield", "associate-drt-log-bucket" }, input)
 end
 
---- Authorizes the Shield Response Team (SRT) using the specified role, to access your Amazon Web Services account to assist with DDoS attack mitigation during potential attacks
---- @param input table|nil The input table for the associate_drt_role command
+--- AWS shield associate-drt-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_drt_role(input)
 	return common.execute_aws_command_with_input({ "shield", "associate-drt-role" }, input)
 end
 
---- Adds health-based detection to the Shield Advanced protection for a resource
---- @param input table|nil The input table for the associate_health_check command
+--- AWS shield associate-health-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_health_check(input)
 	return common.execute_aws_command_with_input({ "shield", "associate-health-check" }, input)
 end
 
---- Initializes proactive engagement and sets the list of contacts for the Shield Response Team (SRT) to use
---- @param input table|nil The input table for the associate_proactive_engagement_details command
+--- AWS shield associate-proactive-engagement-details operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_proactive_engagement_details(input)
 	return common.execute_aws_command_with_input({ "shield", "associate-proactive-engagement-details" }, input)
 end
 
---- Enables Shield Advanced for a specific Amazon Web Services resource
---- @param input table|nil The input table for the create_protection command
+--- AWS shield create-protection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_protection(input)
 	return common.execute_aws_command_with_input({ "shield", "create-protection" }, input)
 end
 
---- Creates a grouping of protected resources so they can be handled as a collective
---- @param input table|nil The input table for the create_protection_group command
+--- AWS shield create-protection-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_protection_group(input)
 	return common.execute_aws_command_with_input({ "shield", "create-protection-group" }, input)
 end
 
---- Activates Shield Advanced for an account
---- @param input table|nil The input table for the create_subscription command
+--- AWS shield create-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription(input)
 	return common.execute_aws_command_with_input({ "shield", "create-subscription" }, input)
 end
 
---- Deletes an Shield Advanced Protection
---- @param input table|nil The input table for the delete_protection command
+--- AWS shield delete-protection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_protection(input)
 	return common.execute_aws_command_with_input({ "shield", "delete-protection" }, input)
 end
 
---- Removes the specified protection group
---- @param input table|nil The input table for the delete_protection_group command
+--- AWS shield delete-protection-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_protection_group(input)
 	return common.execute_aws_command_with_input({ "shield", "delete-protection-group" }, input)
 end
 
---- Removes Shield Advanced from an account
---- @param input table|nil The input table for the delete_subscription command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_subscription(input)
-	return common.execute_aws_command_with_input({ "shield", "delete-subscription" }, input)
-end
-
---- Describes the details of a DDoS attack
---- @param input table|nil The input table for the describe_attack command
+--- AWS shield describe-attack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_attack(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-attack" }, input)
 end
 
---- Provides information about the number and type of attacks Shield has detected in the last year for all resources that belong to your account, regardless of whether you've defined Shield protections for them
---- @param input table|nil The input table for the describe_attack_statistics command
+--- AWS shield describe-attack-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_attack_statistics(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-attack-statistics" }, input)
 end
 
---- Returns the current role and list of Amazon S3 log buckets used by the Shield Response Team (SRT) to access your Amazon Web Services account while assisting with attack mitigation
---- @param input table|nil The input table for the describe_drt_access command
+--- AWS shield describe-drt-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_drt_access(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-drt-access" }, input)
 end
 
---- A list of email addresses and phone numbers that the Shield Response Team (SRT) can use to contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer support
---- @param input table|nil The input table for the describe_emergency_contact_settings command
+--- AWS shield describe-emergency-contact-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_emergency_contact_settings(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-emergency-contact-settings" }, input)
 end
 
---- Lists the details of a Protection object
---- @param input table|nil The input table for the describe_protection command
+--- AWS shield describe-protection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_protection(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-protection" }, input)
 end
 
---- Returns the specification for the specified protection group
---- @param input table|nil The input table for the describe_protection_group command
+--- AWS shield describe-protection-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_protection_group(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-protection-group" }, input)
 end
 
---- Provides details about the Shield Advanced subscription for an account
---- @param input table|nil The input table for the describe_subscription command
+--- AWS shield describe-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_subscription(input)
 	return common.execute_aws_command_with_input({ "shield", "describe-subscription" }, input)
 end
 
---- Disable the Shield Advanced automatic application layer DDoS mitigation feature for the protected resource
---- @param input table|nil The input table for the disable_application_layer_automatic_response command
+--- AWS shield disable-application-layer-automatic-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_application_layer_automatic_response(input)
 	return common.execute_aws_command_with_input({ "shield", "disable-application-layer-automatic-response" }, input)
 end
 
---- Removes authorization from the Shield Response Team (SRT) to notify contacts about escalations to the SRT and to initiate proactive customer support
---- @param input table|nil The input table for the disable_proactive_engagement command
+--- AWS shield disable-proactive-engagement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_proactive_engagement(input)
 	return common.execute_aws_command_with_input({ "shield", "disable-proactive-engagement" }, input)
 end
 
---- Removes the Shield Response Team's (SRT) access to the specified Amazon S3 bucket containing the logs that you shared previously
---- @param input table|nil The input table for the disassociate_drt_log_bucket command
+--- AWS shield disassociate-drt-log-bucket operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_drt_log_bucket(input)
 	return common.execute_aws_command_with_input({ "shield", "disassociate-drt-log-bucket" }, input)
 end
 
---- Removes the Shield Response Team's (SRT) access to your Amazon Web Services account
---- @param input table|nil The input table for the disassociate_drt_role command
+--- AWS shield disassociate-drt-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_drt_role(input)
 	return common.execute_aws_command_with_input({ "shield", "disassociate-drt-role" }, input)
 end
 
---- Removes health-based detection from the Shield Advanced protection for a resource
---- @param input table|nil The input table for the disassociate_health_check command
+--- AWS shield disassociate-health-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_health_check(input)
 	return common.execute_aws_command_with_input({ "shield", "disassociate-health-check" }, input)
 end
 
---- Enable the Shield Advanced automatic application layer DDoS mitigation for the protected resource
---- @param input table|nil The input table for the enable_application_layer_automatic_response command
+--- AWS shield enable-application-layer-automatic-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_application_layer_automatic_response(input)
 	return common.execute_aws_command_with_input({ "shield", "enable-application-layer-automatic-response" }, input)
 end
 
---- Authorizes the Shield Response Team (SRT) to use email and phone to notify contacts about escalations to the SRT and to initiate proactive customer support
---- @param input table|nil The input table for the enable_proactive_engagement command
+--- AWS shield enable-proactive-engagement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_proactive_engagement(input)
 	return common.execute_aws_command_with_input({ "shield", "enable-proactive-engagement" }, input)
 end
 
---- Returns the SubscriptionState, either Active or Inactive
---- @param input table|nil The input table for the get_subscription_state command
+--- AWS shield get-subscription-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_state(input)
 	return common.execute_aws_command_with_input({ "shield", "get-subscription-state" }, input)
 end
 
---- Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period
---- @param input table|nil The input table for the list_attacks command
+--- AWS shield help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "shield", "help" }, input)
+end
+
+--- AWS shield list-attacks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_attacks(input)
 	return common.execute_aws_command_with_input({ "shield", "list-attacks" }, input)
 end
 
---- Retrieves ProtectionGroup objects for the account
---- @param input table|nil The input table for the list_protection_groups command
+--- AWS shield list-protection-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protection_groups(input)
 	return common.execute_aws_command_with_input({ "shield", "list-protection-groups" }, input)
 end
 
---- Retrieves Protection objects for the account
---- @param input table|nil The input table for the list_protections command
+--- AWS shield list-protections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protections(input)
 	return common.execute_aws_command_with_input({ "shield", "list-protections" }, input)
 end
 
---- Retrieves the resources that are included in the protection group
---- @param input table|nil The input table for the list_resources_in_protection_group command
+--- AWS shield list-resources-in-protection-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resources_in_protection_group(input)
 	return common.execute_aws_command_with_input({ "shield", "list-resources-in-protection-group" }, input)
 end
 
---- Gets information about Amazon Web Services tags for a specified Amazon Resource Name (ARN) in Shield
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS shield list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "shield", "list-tags-for-resource" }, input)
 end
 
---- Adds or updates tags for a resource in Shield
---- @param input table|nil The input table for the tag_resource command
+--- AWS shield tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "shield", "tag-resource" }, input)
 end
 
---- Removes tags from a resource in Shield
---- @param input table|nil The input table for the untag_resource command
+--- AWS shield untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "shield", "untag-resource" }, input)
 end
 
---- Updates an existing Shield Advanced automatic application layer DDoS mitigation configuration for the specified resource
---- @param input table|nil The input table for the update_application_layer_automatic_response command
+--- AWS shield update-application-layer-automatic-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application_layer_automatic_response(input)
 	return common.execute_aws_command_with_input({ "shield", "update-application-layer-automatic-response" }, input)
 end
 
---- Updates the details of the list of email addresses and phone numbers that the Shield Response Team (SRT) can use to contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer support
---- @param input table|nil The input table for the update_emergency_contact_settings command
+--- AWS shield update-emergency-contact-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_emergency_contact_settings(input)
 	return common.execute_aws_command_with_input({ "shield", "update-emergency-contact-settings" }, input)
 end
 
---- Updates an existing protection group
---- @param input table|nil The input table for the update_protection_group command
+--- AWS shield update-protection-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_protection_group(input)
 	return common.execute_aws_command_with_input({ "shield", "update-protection-group" }, input)
 end
 
---- Updates the details of an existing subscription
---- @param input table|nil The input table for the update_subscription command
+--- AWS shield update-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription(input)
 	return common.execute_aws_command_with_input({ "shield", "update-subscription" }, input)

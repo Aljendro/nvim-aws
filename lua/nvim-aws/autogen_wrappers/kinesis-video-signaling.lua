@@ -6,15 +6,22 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KINESIS-VIDEO-SIGNALING service functions
 local M = {}
 
---- Gets the Interactive Connectivity Establishment (ICE) server configuration information, including URIs, username, and password which can be used to configure the WebRTC connection
---- @param input table|nil The input table for the get_ice_server_config command
+--- AWS kinesis-video-signaling get-ice-server-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ice_server_config(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "get-ice-server-config" }, input)
 end
 
---- This API allows you to connect WebRTC-enabled devices with Alexa display devices
---- @param input table|nil The input table for the send_alexa_offer_to_master command
+--- AWS kinesis-video-signaling help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "help" }, input)
+end
+
+--- AWS kinesis-video-signaling send-alexa-offer-to-master operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_alexa_offer_to_master(input)
 	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "send-alexa-offer-to-master" }, input)

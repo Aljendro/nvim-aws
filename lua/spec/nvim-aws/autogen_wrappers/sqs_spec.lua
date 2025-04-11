@@ -55,6 +55,11 @@ describe("AWS sqs service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_dead_letter_source_queues", function()
 		local result = service.list_dead_letter_source_queues()
 		assert.is_true(result.success)

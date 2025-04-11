@@ -110,6 +110,11 @@ describe("AWS opensearchserverless service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_access_policies", function()
 		local result = service.list_access_policies()
 		assert.is_true(result.success)

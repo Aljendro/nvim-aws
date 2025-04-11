@@ -6,162 +6,169 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MQ service functions
 local M = {}
 
---- Creates a broker
---- @param input table|nil The input table for the create_broker command
+--- AWS mq create-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "create-broker" }, input)
 end
 
---- Creates a new configuration for the specified configuration name
---- @param input table|nil The input table for the create_configuration command
+--- AWS mq create-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "create-configuration" }, input)
 end
 
---- Add a tag to a resource
---- @param input table|nil The input table for the create_tags command
+--- AWS mq create-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "create-tags" }, input)
 end
 
---- Creates an ActiveMQ user
---- @param input table|nil The input table for the create_user command
+--- AWS mq create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "mq", "create-user" }, input)
 end
 
---- Deletes a broker
---- @param input table|nil The input table for the delete_broker command
+--- AWS mq delete-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-broker" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the delete_tags command
+--- AWS mq delete-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-tags" }, input)
 end
 
---- Deletes an ActiveMQ user
---- @param input table|nil The input table for the delete_user command
+--- AWS mq delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "mq", "delete-user" }, input)
 end
 
---- Returns information about the specified broker
---- @param input table|nil The input table for the describe_broker command
+--- AWS mq describe-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker" }, input)
 end
 
---- Describe available engine types and versions
---- @param input table|nil The input table for the describe_broker_engine_types command
+--- AWS mq describe-broker-engine-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker_engine_types(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker-engine-types" }, input)
 end
 
---- Describe available broker instance options
---- @param input table|nil The input table for the describe_broker_instance_options command
+--- AWS mq describe-broker-instance-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_broker_instance_options(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-broker-instance-options" }, input)
 end
 
---- Returns information about the specified configuration
---- @param input table|nil The input table for the describe_configuration command
+--- AWS mq describe-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-configuration" }, input)
 end
 
---- Returns the specified configuration revision for the specified configuration
---- @param input table|nil The input table for the describe_configuration_revision command
+--- AWS mq describe-configuration-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_revision(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-configuration-revision" }, input)
 end
 
---- Returns information about an ActiveMQ user
---- @param input table|nil The input table for the describe_user command
+--- AWS mq describe-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "mq", "describe-user" }, input)
 end
 
---- Returns a list of all brokers
---- @param input table|nil The input table for the list_brokers command
+--- AWS mq help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mq", "help" }, input)
+end
+
+--- AWS mq list-brokers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_brokers(input)
 	return common.execute_aws_command_with_input({ "mq", "list-brokers" }, input)
 end
 
---- Returns a list of all revisions for the specified configuration
---- @param input table|nil The input table for the list_configuration_revisions command
+--- AWS mq list-configuration-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_revisions(input)
 	return common.execute_aws_command_with_input({ "mq", "list-configuration-revisions" }, input)
 end
 
---- Returns a list of all configurations
---- @param input table|nil The input table for the list_configurations command
+--- AWS mq list-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configurations(input)
 	return common.execute_aws_command_with_input({ "mq", "list-configurations" }, input)
 end
 
---- Lists tags for a resource
---- @param input table|nil The input table for the list_tags command
+--- AWS mq list-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "mq", "list-tags" }, input)
 end
 
---- Returns a list of all ActiveMQ users
---- @param input table|nil The input table for the list_users command
+--- AWS mq list-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "mq", "list-users" }, input)
 end
 
---- Promotes a data replication replica broker to the primary broker role
---- @param input table|nil The input table for the promote command
+--- AWS mq promote operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.promote(input)
 	return common.execute_aws_command_with_input({ "mq", "promote" }, input)
 end
 
---- Reboots a broker
---- @param input table|nil The input table for the reboot_broker command
+--- AWS mq reboot-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "reboot-broker" }, input)
 end
 
---- Adds a pending configuration change to a broker
---- @param input table|nil The input table for the update_broker command
+--- AWS mq update-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_broker(input)
 	return common.execute_aws_command_with_input({ "mq", "update-broker" }, input)
 end
 
---- Updates the specified configuration
---- @param input table|nil The input table for the update_configuration command
+--- AWS mq update-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration(input)
 	return common.execute_aws_command_with_input({ "mq", "update-configuration" }, input)
 end
 
---- Updates the information for an ActiveMQ user
---- @param input table|nil The input table for the update_user command
+--- AWS mq update-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "mq", "update-user" }, input)

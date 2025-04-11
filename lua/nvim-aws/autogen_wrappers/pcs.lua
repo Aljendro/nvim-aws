@@ -6,53 +6,137 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PCS service functions
 local M = {}
 
---- Creates a cluster in your account
---- @param input table|nil The input table for the create_cluster command
+--- AWS pcs create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "create-cluster" }, input)
 end
 
---- Deletes a cluster and all its linked resources
---- @param input table|nil The input table for the delete_cluster command
+--- AWS pcs create-compute-node-group operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_compute_node_group(input)
+	return common.execute_aws_command_with_input({ "pcs", "create-compute-node-group" }, input)
+end
+
+--- AWS pcs create-queue operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_queue(input)
+	return common.execute_aws_command_with_input({ "pcs", "create-queue" }, input)
+end
+
+--- AWS pcs delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "delete-cluster" }, input)
 end
 
---- Returns detailed information about a running cluster in your account
---- @param input table|nil The input table for the get_cluster command
+--- AWS pcs delete-compute-node-group operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_compute_node_group(input)
+	return common.execute_aws_command_with_input({ "pcs", "delete-compute-node-group" }, input)
+end
+
+--- AWS pcs delete-queue operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_queue(input)
+	return common.execute_aws_command_with_input({ "pcs", "delete-queue" }, input)
+end
+
+--- AWS pcs get-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster(input)
 	return common.execute_aws_command_with_input({ "pcs", "get-cluster" }, input)
 end
 
---- Returns a list of all tags on an Amazon Web Services PCS resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS pcs get-compute-node-group operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_compute_node_group(input)
+	return common.execute_aws_command_with_input({ "pcs", "get-compute-node-group" }, input)
+end
+
+--- AWS pcs get-queue operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_queue(input)
+	return common.execute_aws_command_with_input({ "pcs", "get-queue" }, input)
+end
+
+--- AWS pcs help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "pcs", "help" }, input)
+end
+
+--- AWS pcs list-clusters operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_clusters(input)
+	return common.execute_aws_command_with_input({ "pcs", "list-clusters" }, input)
+end
+
+--- AWS pcs list-compute-node-groups operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_compute_node_groups(input)
+	return common.execute_aws_command_with_input({ "pcs", "list-compute-node-groups" }, input)
+end
+
+--- AWS pcs list-queues operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_queues(input)
+	return common.execute_aws_command_with_input({ "pcs", "list-queues" }, input)
+end
+
+--- AWS pcs list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "list-tags-for-resource" }, input)
 end
 
---- This API action isn't intended for you to use
---- @param input table|nil The input table for the register_compute_node_group_instance command
+--- AWS pcs register-compute-node-group-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_compute_node_group_instance(input)
 	return common.execute_aws_command_with_input({ "pcs", "register-compute-node-group-instance" }, input)
 end
 
---- Adds or edits tags on an Amazon Web Services PCS resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS pcs tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "tag-resource" }, input)
 end
 
---- Deletes tags from an Amazon Web Services PCS resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS pcs untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pcs", "untag-resource" }, input)
+end
+
+--- AWS pcs update-compute-node-group operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_compute_node_group(input)
+	return common.execute_aws_command_with_input({ "pcs", "update-compute-node-group" }, input)
+end
+
+--- AWS pcs update-queue operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_queue(input)
+	return common.execute_aws_command_with_input({ "pcs", "update-queue" }, input)
 end
 
 return M

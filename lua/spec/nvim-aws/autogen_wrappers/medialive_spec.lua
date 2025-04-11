@@ -250,11 +250,6 @@ describe("AWS medialive service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with describe_input_device_thumbnail", function()
-		local result = service.describe_input_device_thumbnail()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with describe_input_security_group", function()
 		local result = service.describe_input_security_group()
 		assert.is_true(result.success)
@@ -327,6 +322,11 @@ describe("AWS medialive service testing", function()
 
 	it("should generate a cli skeleton with get_signal_map", function()
 		local result = service.get_signal_map()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

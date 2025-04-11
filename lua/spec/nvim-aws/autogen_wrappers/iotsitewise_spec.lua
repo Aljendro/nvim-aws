@@ -275,8 +275,8 @@ describe("AWS iotsitewise service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with invoke_assistant", function()
-		local result = service.invoke_assistant()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

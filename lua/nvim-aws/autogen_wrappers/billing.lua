@@ -6,71 +6,78 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BILLING service functions
 local M = {}
 
---- Creates a billing view with the specified billing view attributes
---- @param input table|nil The input table for the create_billing_view command
+--- AWS billing create-billing-view operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_billing_view(input)
 	return common.execute_aws_command_with_input({ "billing", "create-billing-view" }, input)
 end
 
---- Deletes the specified billing view
---- @param input table|nil The input table for the delete_billing_view command
+--- AWS billing delete-billing-view operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_billing_view(input)
 	return common.execute_aws_command_with_input({ "billing", "delete-billing-view" }, input)
 end
 
---- Returns the metadata associated to the specified billing view ARN
---- @param input table|nil The input table for the get_billing_view command
+--- AWS billing get-billing-view operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_billing_view(input)
 	return common.execute_aws_command_with_input({ "billing", "get-billing-view" }, input)
 end
 
---- Returns the resource-based policy document attached to the resource in JSON format
---- @param input table|nil The input table for the get_resource_policy command
+--- AWS billing get-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "billing", "get-resource-policy" }, input)
 end
 
---- Lists the billing views available for a given time period
---- @param input table|nil The input table for the list_billing_views command
+--- AWS billing help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "billing", "help" }, input)
+end
+
+--- AWS billing list-billing-views operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_billing_views(input)
 	return common.execute_aws_command_with_input({ "billing", "list-billing-views" }, input)
 end
 
---- Lists the source views (managed Amazon Web Services billing views) associated with the billing view
---- @param input table|nil The input table for the list_source_views_for_billing_view command
+--- AWS billing list-source-views-for-billing-view operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_source_views_for_billing_view(input)
 	return common.execute_aws_command_with_input({ "billing", "list-source-views-for-billing-view" }, input)
 end
 
---- Lists tags associated with the billing view resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS billing list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "billing", "list-tags-for-resource" }, input)
 end
 
---- An API operation for adding one or more tags (key-value pairs) to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS billing tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "billing", "tag-resource" }, input)
 end
 
---- Removes one or more tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS billing untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "billing", "untag-resource" }, input)
 end
 
---- An API to update the attributes of the billing view
---- @param input table|nil The input table for the update_billing_view command
+--- AWS billing update-billing-view operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_billing_view(input)
 	return common.execute_aws_command_with_input({ "billing", "update-billing-view" }, input)

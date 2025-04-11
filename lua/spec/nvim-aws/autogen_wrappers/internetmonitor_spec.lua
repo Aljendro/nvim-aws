@@ -15,6 +15,11 @@ describe("AWS internetmonitor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_health_event", function()
+		local result = service.get_health_event()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_internet_event", function()
 		local result = service.get_internet_event()
 		assert.is_true(result.success)
@@ -32,6 +37,16 @@ describe("AWS internetmonitor service testing", function()
 
 	it("should generate a cli skeleton with get_query_status", function()
 		local result = service.get_query_status()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_health_events", function()
+		local result = service.list_health_events()
 		assert.is_true(result.success)
 	end)
 

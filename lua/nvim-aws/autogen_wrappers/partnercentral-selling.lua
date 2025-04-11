@@ -6,267 +6,274 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PARTNERCENTRAL-SELLING service functions
 local M = {}
 
---- Use the AcceptEngagementInvitation action to accept an engagement invitation shared by AWS
---- @param input table|nil The input table for the accept_engagement_invitation command
+--- AWS partnercentral-selling accept-engagement-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_engagement_invitation(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "accept-engagement-invitation" }, input)
 end
 
---- Enables you to reassign an existing Opportunity to another user within your Partner Central account
---- @param input table|nil The input table for the assign_opportunity command
+--- AWS partnercentral-selling assign-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assign_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "assign-opportunity" }, input)
 end
 
---- Enables you to create a formal association between an Opportunity and various related entities, enriching the context and details of the opportunity for better collaboration and decision making
---- @param input table|nil The input table for the associate_opportunity command
+--- AWS partnercentral-selling associate-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "associate-opportunity" }, input)
 end
 
---- The CreateEngagement action allows you to create an Engagement, which serves as a collaborative space between different parties such as AWS Partners and AWS Sellers
---- @param input table|nil The input table for the create_engagement command
+--- AWS partnercentral-selling create-engagement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_engagement(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "create-engagement" }, input)
 end
 
---- This action creates an invitation from a sender to a single receiver to join an engagement
---- @param input table|nil The input table for the create_engagement_invitation command
+--- AWS partnercentral-selling create-engagement-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_engagement_invitation(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "create-engagement-invitation" }, input)
 end
 
---- Creates an Opportunity record in Partner Central
---- @param input table|nil The input table for the create_opportunity command
+--- AWS partnercentral-selling create-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "create-opportunity" }, input)
 end
 
---- This action allows you to create an immutable snapshot of a specific resource, such as an opportunity, within the context of an engagement
---- @param input table|nil The input table for the create_resource_snapshot command
+--- AWS partnercentral-selling create-resource-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_snapshot(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "create-resource-snapshot" }, input)
 end
 
---- Use this action to create a job to generate a snapshot of the specified resource within an engagement
---- @param input table|nil The input table for the create_resource_snapshot_job command
+--- AWS partnercentral-selling create-resource-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "create-resource-snapshot-job" }, input)
 end
 
---- Use this action to deletes a previously created resource snapshot job
---- @param input table|nil The input table for the delete_resource_snapshot_job command
+--- AWS partnercentral-selling delete-resource-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "delete-resource-snapshot-job" }, input)
 end
 
---- Allows you to remove an existing association between an Opportunity and related entities, such as a Partner Solution, Amazon Web Services product, or an Amazon Web Services Marketplace offer
---- @param input table|nil The input table for the disassociate_opportunity command
+--- AWS partnercentral-selling disassociate-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "disassociate-opportunity" }, input)
 end
 
---- Retrieves a summary of an AWS Opportunity
---- @param input table|nil The input table for the get_aws_opportunity_summary command
+--- AWS partnercentral-selling get-aws-opportunity-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_aws_opportunity_summary(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-aws-opportunity-summary" }, input)
 end
 
---- Use this action to retrieve the engagement record for a given EngagementIdentifier
---- @param input table|nil The input table for the get_engagement command
+--- AWS partnercentral-selling get-engagement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_engagement(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-engagement" }, input)
 end
 
---- Retrieves the details of an engagement invitation shared by AWS with a partner
---- @param input table|nil The input table for the get_engagement_invitation command
+--- AWS partnercentral-selling get-engagement-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_engagement_invitation(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-engagement-invitation" }, input)
 end
 
---- Fetches the Opportunity record from Partner Central by a given Identifier
---- @param input table|nil The input table for the get_opportunity command
+--- AWS partnercentral-selling get-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-opportunity" }, input)
 end
 
---- Use this action to retrieve a specific snapshot record
---- @param input table|nil The input table for the get_resource_snapshot command
+--- AWS partnercentral-selling get-resource-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_snapshot(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-resource-snapshot" }, input)
 end
 
---- Use this action to retrieves information about a specific resource snapshot job
---- @param input table|nil The input table for the get_resource_snapshot_job command
+--- AWS partnercentral-selling get-resource-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-resource-snapshot-job" }, input)
 end
 
---- Retrieves the currently set system settings, which include the IAM Role used for resource snapshot jobs
---- @param input table|nil The input table for the get_selling_system_settings command
+--- AWS partnercentral-selling get-selling-system-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_selling_system_settings(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "get-selling-system-settings" }, input)
 end
 
---- Lists all in-progress, completed, or failed StartEngagementByAcceptingInvitationTask tasks that were initiated by the caller's account
---- @param input table|nil The input table for the list_engagement_by_accepting_invitation_tasks command
+--- AWS partnercentral-selling help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "partnercentral-selling", "help" }, input)
+end
+
+--- AWS partnercentral-selling list-engagement-by-accepting-invitation-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagement_by_accepting_invitation_tasks(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagement-by-accepting-invitation-tasks" }, input)
 end
 
---- Lists all in-progress, completed, or failed EngagementFromOpportunity tasks that were initiated by the caller's account
---- @param input table|nil The input table for the list_engagement_from_opportunity_tasks command
+--- AWS partnercentral-selling list-engagement-from-opportunity-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagement_from_opportunity_tasks(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagement-from-opportunity-tasks" }, input)
 end
 
---- Retrieves a list of engagement invitations sent to the partner
---- @param input table|nil The input table for the list_engagement_invitations command
+--- AWS partnercentral-selling list-engagement-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagement_invitations(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagement-invitations" }, input)
 end
 
---- Retrieves the details of member partners in an Engagement
---- @param input table|nil The input table for the list_engagement_members command
+--- AWS partnercentral-selling list-engagement-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagement_members(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagement-members" }, input)
 end
 
---- Lists the associations between resources and engagements where the caller is a member and has at least one snapshot in the engagement
---- @param input table|nil The input table for the list_engagement_resource_associations command
+--- AWS partnercentral-selling list-engagement-resource-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagement_resource_associations(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagement-resource-associations" }, input)
 end
 
---- This action allows users to retrieve a list of Engagement records from Partner Central
---- @param input table|nil The input table for the list_engagements command
+--- AWS partnercentral-selling list-engagements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engagements(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-engagements" }, input)
 end
 
---- This request accepts a list of filters that retrieve opportunity subsets as well as sort options
---- @param input table|nil The input table for the list_opportunities command
+--- AWS partnercentral-selling list-opportunities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_opportunities(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-opportunities" }, input)
 end
 
---- Lists resource snapshot jobs owned by the customer
---- @param input table|nil The input table for the list_resource_snapshot_jobs command
+--- AWS partnercentral-selling list-resource-snapshot-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_snapshot_jobs(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-resource-snapshot-jobs" }, input)
 end
 
---- Retrieves a list of resource view snapshots based on specified criteria
---- @param input table|nil The input table for the list_resource_snapshots command
+--- AWS partnercentral-selling list-resource-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_snapshots(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-resource-snapshots" }, input)
 end
 
---- Retrieves a list of Partner Solutions that the partner registered on Partner Central
---- @param input table|nil The input table for the list_solutions command
+--- AWS partnercentral-selling list-solutions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_solutions(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-solutions" }, input)
 end
 
---- Returns a list of tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS partnercentral-selling list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "list-tags-for-resource" }, input)
 end
 
---- Updates the currently set system settings, which include the IAM Role used for resource snapshot jobs
---- @param input table|nil The input table for the put_selling_system_settings command
+--- AWS partnercentral-selling put-selling-system-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_selling_system_settings(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "put-selling-system-settings" }, input)
 end
 
---- This action rejects an EngagementInvitation that AWS shared
---- @param input table|nil The input table for the reject_engagement_invitation command
+--- AWS partnercentral-selling reject-engagement-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_engagement_invitation(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "reject-engagement-invitation" }, input)
 end
 
---- This action starts the engagement by accepting an EngagementInvitation
---- @param input table|nil The input table for the start_engagement_by_accepting_invitation_task command
+--- AWS partnercentral-selling start-engagement-by-accepting-invitation-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_engagement_by_accepting_invitation_task(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "start-engagement-by-accepting-invitation-task" }, input)
 end
 
---- This action initiates the engagement process from an existing opportunity by accepting the engagement invitation and creating a corresponding opportunity in the partner’s system
---- @param input table|nil The input table for the start_engagement_from_opportunity_task command
+--- AWS partnercentral-selling start-engagement-from-opportunity-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_engagement_from_opportunity_task(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "start-engagement-from-opportunity-task" }, input)
 end
 
---- Starts a resource snapshot job that has been previously created
---- @param input table|nil The input table for the start_resource_snapshot_job command
+--- AWS partnercentral-selling start-resource-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_resource_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "start-resource-snapshot-job" }, input)
 end
 
---- Stops a resource snapshot job
---- @param input table|nil The input table for the stop_resource_snapshot_job command
+--- AWS partnercentral-selling stop-resource-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_resource_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "stop-resource-snapshot-job" }, input)
 end
 
---- Use this action to submit an Opportunity that was previously created by partner for AWS review
---- @param input table|nil The input table for the submit_opportunity command
+--- AWS partnercentral-selling submit-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.submit_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "submit-opportunity" }, input)
 end
 
---- Assigns one or more tags (key-value pairs) to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS partnercentral-selling tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "tag-resource" }, input)
 end
 
---- Removes a tag or tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS partnercentral-selling untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "untag-resource" }, input)
 end
 
---- Updates the Opportunity record identified by a given Identifier
---- @param input table|nil The input table for the update_opportunity command
+--- AWS partnercentral-selling update-opportunity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_opportunity(input)
 	return common.execute_aws_command_with_input({ "partnercentral-selling", "update-opportunity" }, input)

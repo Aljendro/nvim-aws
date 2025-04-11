@@ -35,6 +35,11 @@ describe("AWS translate service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_terminology", function()
 		local result = service.import_terminology()
 		assert.is_true(result.success)

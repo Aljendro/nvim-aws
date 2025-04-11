@@ -6,442 +6,449 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS FORECAST service functions
 local M = {}
 
---- Creates an Amazon Forecast predictor
---- @param input table|nil The input table for the create_auto_predictor command
+--- AWS forecast create-auto-predictor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_auto_predictor(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-auto-predictor" }, input)
 end
 
---- Creates an Amazon Forecast dataset
---- @param input table|nil The input table for the create_dataset command
+--- AWS forecast create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-dataset" }, input)
 end
 
---- Creates a dataset group, which holds a collection of related datasets
---- @param input table|nil The input table for the create_dataset_group command
+--- AWS forecast create-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_group(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-dataset-group" }, input)
 end
 
---- Imports your training data to an Amazon Forecast dataset
---- @param input table|nil The input table for the create_dataset_import_job command
+--- AWS forecast create-dataset-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_import_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-dataset-import-job" }, input)
 end
 
---- Explainability is only available for Forecasts and Predictors generated from an AutoPredictor (CreateAutoPredictor) Creates an Amazon Forecast Explainability
---- @param input table|nil The input table for the create_explainability command
+--- AWS forecast create-explainability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_explainability(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-explainability" }, input)
 end
 
---- Exports an Explainability resource created by the CreateExplainability operation
---- @param input table|nil The input table for the create_explainability_export command
+--- AWS forecast create-explainability-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_explainability_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-explainability-export" }, input)
 end
 
---- Creates a forecast for each item in the TARGET_TIME_SERIES dataset that was used to train the predictor
---- @param input table|nil The input table for the create_forecast command
+--- AWS forecast create-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-forecast" }, input)
 end
 
---- Exports a forecast created by the CreateForecast operation to your Amazon Simple Storage Service (Amazon S3) bucket
---- @param input table|nil The input table for the create_forecast_export_job command
+--- AWS forecast create-forecast-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_forecast_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-forecast-export-job" }, input)
 end
 
---- Creates a predictor monitor resource for an existing auto predictor
---- @param input table|nil The input table for the create_monitor command
+--- AWS forecast create-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_monitor(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-monitor" }, input)
 end
 
---- This operation creates a legacy predictor that does not include all the predictor functionalities provided by Amazon Forecast
---- @param input table|nil The input table for the create_predictor command
+--- AWS forecast create-predictor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_predictor(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-predictor" }, input)
 end
 
---- Exports backtest forecasts and accuracy metrics generated by the CreateAutoPredictor or CreatePredictor operations
---- @param input table|nil The input table for the create_predictor_backtest_export_job command
+--- AWS forecast create-predictor-backtest-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_predictor_backtest_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-predictor-backtest-export-job" }, input)
 end
 
---- What-if analysis is a scenario modeling technique where you make a hypothetical change to a time series and compare the forecasts generated by these changes against the baseline, unchanged time series
---- @param input table|nil The input table for the create_what_if_analysis command
+--- AWS forecast create-what-if-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_what_if_analysis(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-what-if-analysis" }, input)
 end
 
---- A what-if forecast is a forecast that is created from a modified version of the baseline forecast
---- @param input table|nil The input table for the create_what_if_forecast command
+--- AWS forecast create-what-if-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_what_if_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-what-if-forecast" }, input)
 end
 
---- Exports a forecast created by the CreateWhatIfForecast operation to your Amazon Simple Storage Service (Amazon S3) bucket
---- @param input table|nil The input table for the create_what_if_forecast_export command
+--- AWS forecast create-what-if-forecast-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_what_if_forecast_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "create-what-if-forecast-export" }, input)
 end
 
---- Deletes an Amazon Forecast dataset that was created using the CreateDataset operation
---- @param input table|nil The input table for the delete_dataset command
+--- AWS forecast delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-dataset" }, input)
 end
 
---- Deletes a dataset group created using the CreateDatasetGroup operation
---- @param input table|nil The input table for the delete_dataset_group command
+--- AWS forecast delete-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset_group(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-dataset-group" }, input)
 end
 
---- Deletes a dataset import job created using the CreateDatasetImportJob operation
---- @param input table|nil The input table for the delete_dataset_import_job command
+--- AWS forecast delete-dataset-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset_import_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-dataset-import-job" }, input)
 end
 
---- Deletes an Explainability resource
---- @param input table|nil The input table for the delete_explainability command
+--- AWS forecast delete-explainability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_explainability(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-explainability" }, input)
 end
 
---- Deletes an Explainability export
---- @param input table|nil The input table for the delete_explainability_export command
+--- AWS forecast delete-explainability-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_explainability_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-explainability-export" }, input)
 end
 
---- Deletes a forecast created using the CreateForecast operation
---- @param input table|nil The input table for the delete_forecast command
+--- AWS forecast delete-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-forecast" }, input)
 end
 
---- Deletes a forecast export job created using the CreateForecastExportJob operation
---- @param input table|nil The input table for the delete_forecast_export_job command
+--- AWS forecast delete-forecast-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_forecast_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-forecast-export-job" }, input)
 end
 
---- Deletes a monitor resource
---- @param input table|nil The input table for the delete_monitor command
+--- AWS forecast delete-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_monitor(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-monitor" }, input)
 end
 
---- Deletes a predictor created using the DescribePredictor or CreatePredictor operations
---- @param input table|nil The input table for the delete_predictor command
+--- AWS forecast delete-predictor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_predictor(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-predictor" }, input)
 end
 
---- Deletes a predictor backtest export job
---- @param input table|nil The input table for the delete_predictor_backtest_export_job command
+--- AWS forecast delete-predictor-backtest-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_predictor_backtest_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-predictor-backtest-export-job" }, input)
 end
 
---- Deletes an entire resource tree
---- @param input table|nil The input table for the delete_resource_tree command
+--- AWS forecast delete-resource-tree operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_tree(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-resource-tree" }, input)
 end
 
---- Deletes a what-if analysis created using the CreateWhatIfAnalysis operation
---- @param input table|nil The input table for the delete_what_if_analysis command
+--- AWS forecast delete-what-if-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_what_if_analysis(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-analysis" }, input)
 end
 
---- Deletes a what-if forecast created using the CreateWhatIfForecast operation
---- @param input table|nil The input table for the delete_what_if_forecast command
+--- AWS forecast delete-what-if-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_what_if_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-forecast" }, input)
 end
 
---- Deletes a what-if forecast export created using the CreateWhatIfForecastExport operation
---- @param input table|nil The input table for the delete_what_if_forecast_export command
+--- AWS forecast delete-what-if-forecast-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_what_if_forecast_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-forecast-export" }, input)
 end
 
---- Describes a predictor created using the CreateAutoPredictor operation
---- @param input table|nil The input table for the describe_auto_predictor command
+--- AWS forecast describe-auto-predictor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_auto_predictor(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-auto-predictor" }, input)
 end
 
---- Describes an Amazon Forecast dataset created using the CreateDataset operation
---- @param input table|nil The input table for the describe_dataset command
+--- AWS forecast describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-dataset" }, input)
 end
 
---- Describes a dataset group created using the CreateDatasetGroup operation
---- @param input table|nil The input table for the describe_dataset_group command
+--- AWS forecast describe-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset_group(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-dataset-group" }, input)
 end
 
---- Describes a dataset import job created using the CreateDatasetImportJob operation
---- @param input table|nil The input table for the describe_dataset_import_job command
+--- AWS forecast describe-dataset-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset_import_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-dataset-import-job" }, input)
 end
 
---- Describes an Explainability resource created using the CreateExplainability operation
---- @param input table|nil The input table for the describe_explainability command
+--- AWS forecast describe-explainability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_explainability(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-explainability" }, input)
 end
 
---- Describes an Explainability export created using the CreateExplainabilityExport operation
---- @param input table|nil The input table for the describe_explainability_export command
+--- AWS forecast describe-explainability-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_explainability_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-explainability-export" }, input)
 end
 
---- Describes a forecast created using the CreateForecast operation
---- @param input table|nil The input table for the describe_forecast command
+--- AWS forecast describe-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-forecast" }, input)
 end
 
---- Describes a forecast export job created using the CreateForecastExportJob operation
---- @param input table|nil The input table for the describe_forecast_export_job command
+--- AWS forecast describe-forecast-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_forecast_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-forecast-export-job" }, input)
 end
 
---- Describes a monitor resource
---- @param input table|nil The input table for the describe_monitor command
+--- AWS forecast describe-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_monitor(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-monitor" }, input)
 end
 
---- This operation is only valid for legacy predictors created with CreatePredictor
---- @param input table|nil The input table for the describe_predictor command
+--- AWS forecast describe-predictor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_predictor(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-predictor" }, input)
 end
 
---- Describes a predictor backtest export job created using the CreatePredictorBacktestExportJob operation
---- @param input table|nil The input table for the describe_predictor_backtest_export_job command
+--- AWS forecast describe-predictor-backtest-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_predictor_backtest_export_job(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-predictor-backtest-export-job" }, input)
 end
 
---- Describes the what-if analysis created using the CreateWhatIfAnalysis operation
---- @param input table|nil The input table for the describe_what_if_analysis command
+--- AWS forecast describe-what-if-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_what_if_analysis(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-analysis" }, input)
 end
 
---- Describes the what-if forecast created using the CreateWhatIfForecast operation
---- @param input table|nil The input table for the describe_what_if_forecast command
+--- AWS forecast describe-what-if-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_what_if_forecast(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-forecast" }, input)
 end
 
---- Describes the what-if forecast export created using the CreateWhatIfForecastExport operation
---- @param input table|nil The input table for the describe_what_if_forecast_export command
+--- AWS forecast describe-what-if-forecast-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_what_if_forecast_export(input)
 	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-forecast-export" }, input)
 end
 
---- Provides metrics on the accuracy of the models that were trained by the CreatePredictor operation
---- @param input table|nil The input table for the get_accuracy_metrics command
+--- AWS forecast get-accuracy-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_accuracy_metrics(input)
 	return common.execute_aws_command_with_input({ "forecast", "get-accuracy-metrics" }, input)
 end
 
---- Returns a list of dataset groups created using the CreateDatasetGroup operation
---- @param input table|nil The input table for the list_dataset_groups command
+--- AWS forecast help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "forecast", "help" }, input)
+end
+
+--- AWS forecast list-dataset-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_groups(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-dataset-groups" }, input)
 end
 
---- Returns a list of dataset import jobs created using the CreateDatasetImportJob operation
---- @param input table|nil The input table for the list_dataset_import_jobs command
+--- AWS forecast list-dataset-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_import_jobs(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-dataset-import-jobs" }, input)
 end
 
---- Returns a list of datasets created using the CreateDataset operation
---- @param input table|nil The input table for the list_datasets command
+--- AWS forecast list-datasets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-datasets" }, input)
 end
 
---- Returns a list of Explainability resources created using the CreateExplainability operation
---- @param input table|nil The input table for the list_explainabilities command
+--- AWS forecast list-explainabilities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_explainabilities(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-explainabilities" }, input)
 end
 
---- Returns a list of Explainability exports created using the CreateExplainabilityExport operation
---- @param input table|nil The input table for the list_explainability_exports command
+--- AWS forecast list-explainability-exports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_explainability_exports(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-explainability-exports" }, input)
 end
 
---- Returns a list of forecast export jobs created using the CreateForecastExportJob operation
---- @param input table|nil The input table for the list_forecast_export_jobs command
+--- AWS forecast list-forecast-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_forecast_export_jobs(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-forecast-export-jobs" }, input)
 end
 
---- Returns a list of forecasts created using the CreateForecast operation
---- @param input table|nil The input table for the list_forecasts command
+--- AWS forecast list-forecasts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_forecasts(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-forecasts" }, input)
 end
 
---- Returns a list of the monitoring evaluation results and predictor events collected by the monitor resource during different windows of time
---- @param input table|nil The input table for the list_monitor_evaluations command
+--- AWS forecast list-monitor-evaluations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitor_evaluations(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-monitor-evaluations" }, input)
 end
 
---- Returns a list of monitors created with the CreateMonitor operation and CreateAutoPredictor operation
---- @param input table|nil The input table for the list_monitors command
+--- AWS forecast list-monitors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitors(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-monitors" }, input)
 end
 
---- Returns a list of predictor backtest export jobs created using the CreatePredictorBacktestExportJob operation
---- @param input table|nil The input table for the list_predictor_backtest_export_jobs command
+--- AWS forecast list-predictor-backtest-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_predictor_backtest_export_jobs(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-predictor-backtest-export-jobs" }, input)
 end
 
---- Returns a list of predictors created using the CreateAutoPredictor or CreatePredictor operations
---- @param input table|nil The input table for the list_predictors command
+--- AWS forecast list-predictors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_predictors(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-predictors" }, input)
 end
 
---- Lists the tags for an Amazon Forecast resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS forecast list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-tags-for-resource" }, input)
 end
 
---- Returns a list of what-if analyses created using the CreateWhatIfAnalysis operation
---- @param input table|nil The input table for the list_what_if_analyses command
+--- AWS forecast list-what-if-analyses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_what_if_analyses(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-what-if-analyses" }, input)
 end
 
---- Returns a list of what-if forecast exports created using the CreateWhatIfForecastExport operation
---- @param input table|nil The input table for the list_what_if_forecast_exports command
+--- AWS forecast list-what-if-forecast-exports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_what_if_forecast_exports(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-what-if-forecast-exports" }, input)
 end
 
---- Returns a list of what-if forecasts created using the CreateWhatIfForecast operation
---- @param input table|nil The input table for the list_what_if_forecasts command
+--- AWS forecast list-what-if-forecasts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_what_if_forecasts(input)
 	return common.execute_aws_command_with_input({ "forecast", "list-what-if-forecasts" }, input)
 end
 
---- Resumes a stopped monitor resource
---- @param input table|nil The input table for the resume_resource command
+--- AWS forecast resume-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_resource(input)
 	return common.execute_aws_command_with_input({ "forecast", "resume-resource" }, input)
 end
 
---- Stops a resource
---- @param input table|nil The input table for the stop_resource command
+--- AWS forecast stop-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_resource(input)
 	return common.execute_aws_command_with_input({ "forecast", "stop-resource" }, input)
 end
 
---- Associates the specified tags to a resource with the specified resourceArn
---- @param input table|nil The input table for the tag_resource command
+--- AWS forecast tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "forecast", "tag-resource" }, input)
 end
 
---- Deletes the specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS forecast untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "forecast", "untag-resource" }, input)
 end
 
---- Replaces the datasets in a dataset group with the specified datasets
---- @param input table|nil The input table for the update_dataset_group command
+--- AWS forecast update-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset_group(input)
 	return common.execute_aws_command_with_input({ "forecast", "update-dataset-group" }, input)

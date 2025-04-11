@@ -6,15 +6,15 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS APPCONFIGDATA service functions
 local M = {}
 
---- Retrieves the latest deployed configuration
---- @param input table|nil The input table for the get_latest_configuration command
+--- AWS appconfigdata help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_latest_configuration(input)
-	return common.execute_aws_command_with_input({ "appconfigdata", "get-latest-configuration" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "appconfigdata", "help" }, input)
 end
 
---- Starts a configuration session used to retrieve a deployed configuration
---- @param input table|nil The input table for the start_configuration_session command
+--- AWS appconfigdata start-configuration-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_configuration_session(input)
 	return common.execute_aws_command_with_input({ "appconfigdata", "start-configuration-session" }, input)

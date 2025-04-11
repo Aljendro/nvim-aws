@@ -90,6 +90,11 @@ describe("AWS s3tables service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_namespaces", function()
 		local result = service.list_namespaces()
 		assert.is_true(result.success)

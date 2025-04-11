@@ -85,8 +85,8 @@ describe("AWS memorydb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with describe_ac_ls", function()
-		local result = service.describe_ac_ls()
+	it("should generate a cli skeleton with describe_acls", function()
+		local result = service.describe_acls()
 		assert.is_true(result.success)
 	end)
 
@@ -152,6 +152,11 @@ describe("AWS memorydb service testing", function()
 
 	it("should generate a cli skeleton with failover_shard", function()
 		local result = service.failover_shard()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -80,6 +80,11 @@ describe("AWS pca-connector-ad service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_connectors", function()
 		local result = service.list_connectors()
 		assert.is_true(result.success)

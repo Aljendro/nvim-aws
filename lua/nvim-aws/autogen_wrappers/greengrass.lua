@@ -6,645 +6,652 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS GREENGRASS service functions
 local M = {}
 
---- Associates a role with a group
---- @param input table|nil The input table for the associate_role_to_group command
+--- AWS greengrass associate-role-to-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_role_to_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "associate-role-to-group" }, input)
 end
 
---- Associates a role with your account
---- @param input table|nil The input table for the associate_service_role_to_account command
+--- AWS greengrass associate-service-role-to-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_service_role_to_account(input)
 	return common.execute_aws_command_with_input({ "greengrass", "associate-service-role-to-account" }, input)
 end
 
---- Creates a connector definition
---- @param input table|nil The input table for the create_connector_definition command
+--- AWS greengrass create-connector-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-connector-definition" }, input)
 end
 
---- Creates a version of a connector definition which has already been defined
---- @param input table|nil The input table for the create_connector_definition_version command
+--- AWS greengrass create-connector-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-connector-definition-version" }, input)
 end
 
---- Creates a core definition
---- @param input table|nil The input table for the create_core_definition command
+--- AWS greengrass create-core-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_core_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-core-definition" }, input)
 end
 
---- Creates a version of a core definition that has already been defined
---- @param input table|nil The input table for the create_core_definition_version command
+--- AWS greengrass create-core-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_core_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-core-definition-version" }, input)
 end
 
---- Creates a deployment
---- @param input table|nil The input table for the create_deployment command
+--- AWS greengrass create-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-deployment" }, input)
 end
 
---- Creates a device definition
---- @param input table|nil The input table for the create_device_definition command
+--- AWS greengrass create-device-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_device_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-device-definition" }, input)
 end
 
---- Creates a version of a device definition that has already been defined
---- @param input table|nil The input table for the create_device_definition_version command
+--- AWS greengrass create-device-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_device_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-device-definition-version" }, input)
 end
 
---- Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a group
---- @param input table|nil The input table for the create_function_definition command
+--- AWS greengrass create-function-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_function_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-function-definition" }, input)
 end
 
---- Creates a version of a Lambda function definition that has already been defined
---- @param input table|nil The input table for the create_function_definition_version command
+--- AWS greengrass create-function-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_function_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-function-definition-version" }, input)
 end
 
---- Creates a group
---- @param input table|nil The input table for the create_group command
+--- AWS greengrass create-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-group" }, input)
 end
 
---- Creates a CA for the group
---- @param input table|nil The input table for the create_group_certificate_authority command
+--- AWS greengrass create-group-certificate-authority operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-group-certificate-authority" }, input)
 end
 
---- Creates a version of a group which has already been defined
---- @param input table|nil The input table for the create_group_version command
+--- AWS greengrass create-group-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-group-version" }, input)
 end
 
---- Creates a logger definition
---- @param input table|nil The input table for the create_logger_definition command
+--- AWS greengrass create-logger-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_logger_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-logger-definition" }, input)
 end
 
---- Creates a version of a logger definition that has already been defined
---- @param input table|nil The input table for the create_logger_definition_version command
+--- AWS greengrass create-logger-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_logger_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-logger-definition-version" }, input)
 end
 
---- Creates a resource definition which contains a list of resources to be used in a group
---- @param input table|nil The input table for the create_resource_definition command
+--- AWS greengrass create-resource-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-resource-definition" }, input)
 end
 
---- Creates a version of a resource definition that has already been defined
---- @param input table|nil The input table for the create_resource_definition_version command
+--- AWS greengrass create-resource-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-resource-definition-version" }, input)
 end
 
---- Creates a software update for a core or group of cores (specified as an IoT thing group
---- @param input table|nil The input table for the create_software_update_job command
+--- AWS greengrass create-software-update-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_software_update_job(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-software-update-job" }, input)
 end
 
---- Creates a subscription definition
---- @param input table|nil The input table for the create_subscription_definition command
+--- AWS greengrass create-subscription-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-subscription-definition" }, input)
 end
 
---- Creates a version of a subscription definition which has already been defined
---- @param input table|nil The input table for the create_subscription_definition_version command
+--- AWS greengrass create-subscription-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "create-subscription-definition-version" }, input)
 end
 
---- Deletes a connector definition
---- @param input table|nil The input table for the delete_connector_definition command
+--- AWS greengrass delete-connector-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connector_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-connector-definition" }, input)
 end
 
---- Deletes a core definition
---- @param input table|nil The input table for the delete_core_definition command
+--- AWS greengrass delete-core-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_core_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-core-definition" }, input)
 end
 
---- Deletes a device definition
---- @param input table|nil The input table for the delete_device_definition command
+--- AWS greengrass delete-device-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_device_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-device-definition" }, input)
 end
 
---- Deletes a Lambda function definition
---- @param input table|nil The input table for the delete_function_definition command
+--- AWS greengrass delete-function-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-function-definition" }, input)
 end
 
---- Deletes a group
---- @param input table|nil The input table for the delete_group command
+--- AWS greengrass delete-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-group" }, input)
 end
 
---- Deletes a logger definition
---- @param input table|nil The input table for the delete_logger_definition command
+--- AWS greengrass delete-logger-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_logger_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-logger-definition" }, input)
 end
 
---- Deletes a resource definition
---- @param input table|nil The input table for the delete_resource_definition command
+--- AWS greengrass delete-resource-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-resource-definition" }, input)
 end
 
---- Deletes a subscription definition
---- @param input table|nil The input table for the delete_subscription_definition command
+--- AWS greengrass delete-subscription-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscription_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "delete-subscription-definition" }, input)
 end
 
---- Disassociates the role from a group
---- @param input table|nil The input table for the disassociate_role_from_group command
+--- AWS greengrass disassociate-role-from-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_role_from_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "disassociate-role-from-group" }, input)
 end
 
---- Disassociates the service role from your account
---- @param input table|nil The input table for the disassociate_service_role_from_account command
+--- AWS greengrass disassociate-service-role-from-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_service_role_from_account(input)
 	return common.execute_aws_command_with_input({ "greengrass", "disassociate-service-role-from-account" }, input)
 end
 
---- Retrieves the role associated with a particular group
---- @param input table|nil The input table for the get_associated_role command
+--- AWS greengrass get-associated-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_associated_role(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-associated-role" }, input)
 end
 
---- Returns the status of a bulk deployment
---- @param input table|nil The input table for the get_bulk_deployment_status command
+--- AWS greengrass get-bulk-deployment-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bulk_deployment_status(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-bulk-deployment-status" }, input)
 end
 
---- Retrieves the connectivity information for a core
---- @param input table|nil The input table for the get_connectivity_info command
+--- AWS greengrass get-connectivity-info operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connectivity_info(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-connectivity-info" }, input)
 end
 
---- Retrieves information about a connector definition
---- @param input table|nil The input table for the get_connector_definition command
+--- AWS greengrass get-connector-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connector_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-connector-definition" }, input)
 end
 
---- Retrieves information about a connector definition version, including the connectors that the version contains
---- @param input table|nil The input table for the get_connector_definition_version command
+--- AWS greengrass get-connector-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connector_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-connector-definition-version" }, input)
 end
 
---- Retrieves information about a core definition version
---- @param input table|nil The input table for the get_core_definition command
+--- AWS greengrass get-core-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_core_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-core-definition" }, input)
 end
 
---- Retrieves information about a core definition version
---- @param input table|nil The input table for the get_core_definition_version command
+--- AWS greengrass get-core-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_core_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-core-definition-version" }, input)
 end
 
---- Returns the status of a deployment
---- @param input table|nil The input table for the get_deployment_status command
+--- AWS greengrass get-deployment-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment_status(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-deployment-status" }, input)
 end
 
---- Retrieves information about a device definition
---- @param input table|nil The input table for the get_device_definition command
+--- AWS greengrass get-device-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_device_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-device-definition" }, input)
 end
 
---- Retrieves information about a device definition version
---- @param input table|nil The input table for the get_device_definition_version command
+--- AWS greengrass get-device-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_device_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-device-definition-version" }, input)
 end
 
---- Retrieves information about a Lambda function definition, including its creation time and latest version
---- @param input table|nil The input table for the get_function_definition command
+--- AWS greengrass get-function-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-function-definition" }, input)
 end
 
---- Retrieves information about a Lambda function definition version, including which Lambda functions are included in the version and their configurations
---- @param input table|nil The input table for the get_function_definition_version command
+--- AWS greengrass get-function-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-function-definition-version" }, input)
 end
 
---- Retrieves information about a group
---- @param input table|nil The input table for the get_group command
+--- AWS greengrass get-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-group" }, input)
 end
 
---- Retreives the CA associated with a group
---- @param input table|nil The input table for the get_group_certificate_authority command
+--- AWS greengrass get-group-certificate-authority operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-group-certificate-authority" }, input)
 end
 
---- Retrieves the current configuration for the CA used by the group
---- @param input table|nil The input table for the get_group_certificate_configuration command
+--- AWS greengrass get-group-certificate-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_certificate_configuration(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-group-certificate-configuration" }, input)
 end
 
---- Retrieves information about a group version
---- @param input table|nil The input table for the get_group_version command
+--- AWS greengrass get-group-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-group-version" }, input)
 end
 
---- Retrieves information about a logger definition
---- @param input table|nil The input table for the get_logger_definition command
+--- AWS greengrass get-logger-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_logger_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-logger-definition" }, input)
 end
 
---- Retrieves information about a logger definition version
---- @param input table|nil The input table for the get_logger_definition_version command
+--- AWS greengrass get-logger-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_logger_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-logger-definition-version" }, input)
 end
 
---- Retrieves information about a resource definition, including its creation time and latest version
---- @param input table|nil The input table for the get_resource_definition command
+--- AWS greengrass get-resource-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-resource-definition" }, input)
 end
 
---- Retrieves information about a resource definition version, including which resources are included in the version
---- @param input table|nil The input table for the get_resource_definition_version command
+--- AWS greengrass get-resource-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-resource-definition-version" }, input)
 end
 
---- Retrieves the service role that is attached to your account
---- @param input table|nil The input table for the get_service_role_for_account command
+--- AWS greengrass get-service-role-for-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_role_for_account(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-service-role-for-account" }, input)
 end
 
---- Retrieves information about a subscription definition
---- @param input table|nil The input table for the get_subscription_definition command
+--- AWS greengrass get-subscription-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-subscription-definition" }, input)
 end
 
---- Retrieves information about a subscription definition version
---- @param input table|nil The input table for the get_subscription_definition_version command
+--- AWS greengrass get-subscription-definition-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_definition_version(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-subscription-definition-version" }, input)
 end
 
---- Get the runtime configuration of a thing
---- @param input table|nil The input table for the get_thing_runtime_configuration command
+--- AWS greengrass get-thing-runtime-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_thing_runtime_configuration(input)
 	return common.execute_aws_command_with_input({ "greengrass", "get-thing-runtime-configuration" }, input)
 end
 
---- Gets a paginated list of the deployments that have been started in a bulk deployment operation, and their current deployment status
---- @param input table|nil The input table for the list_bulk_deployment_detailed_reports command
+--- AWS greengrass help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "greengrass", "help" }, input)
+end
+
+--- AWS greengrass list-bulk-deployment-detailed-reports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bulk_deployment_detailed_reports(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-bulk-deployment-detailed-reports" }, input)
 end
 
---- Returns a list of bulk deployments
---- @param input table|nil The input table for the list_bulk_deployments command
+--- AWS greengrass list-bulk-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bulk_deployments(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-bulk-deployments" }, input)
 end
 
---- Lists the versions of a connector definition, which are containers for connectors
---- @param input table|nil The input table for the list_connector_definition_versions command
+--- AWS greengrass list-connector-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connector_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-connector-definition-versions" }, input)
 end
 
---- Retrieves a list of connector definitions
---- @param input table|nil The input table for the list_connector_definitions command
+--- AWS greengrass list-connector-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connector_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-connector-definitions" }, input)
 end
 
---- Lists the versions of a core definition
---- @param input table|nil The input table for the list_core_definition_versions command
+--- AWS greengrass list-core-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_core_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-core-definition-versions" }, input)
 end
 
---- Retrieves a list of core definitions
---- @param input table|nil The input table for the list_core_definitions command
+--- AWS greengrass list-core-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_core_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-core-definitions" }, input)
 end
 
---- Returns a history of deployments for the group
---- @param input table|nil The input table for the list_deployments command
+--- AWS greengrass list-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_deployments(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-deployments" }, input)
 end
 
---- Lists the versions of a device definition
---- @param input table|nil The input table for the list_device_definition_versions command
+--- AWS greengrass list-device-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_device_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-device-definition-versions" }, input)
 end
 
---- Retrieves a list of device definitions
---- @param input table|nil The input table for the list_device_definitions command
+--- AWS greengrass list-device-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_device_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-device-definitions" }, input)
 end
 
---- Lists the versions of a Lambda function definition
---- @param input table|nil The input table for the list_function_definition_versions command
+--- AWS greengrass list-function-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_function_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-function-definition-versions" }, input)
 end
 
---- Retrieves a list of Lambda function definitions
---- @param input table|nil The input table for the list_function_definitions command
+--- AWS greengrass list-function-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_function_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-function-definitions" }, input)
 end
 
---- Retrieves the current CAs for a group
---- @param input table|nil The input table for the list_group_certificate_authorities command
+--- AWS greengrass list-group-certificate-authorities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_certificate_authorities(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-group-certificate-authorities" }, input)
 end
 
---- Lists the versions of a group
---- @param input table|nil The input table for the list_group_versions command
+--- AWS greengrass list-group-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-group-versions" }, input)
 end
 
---- Retrieves a list of groups
---- @param input table|nil The input table for the list_groups command
+--- AWS greengrass list-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-groups" }, input)
 end
 
---- Lists the versions of a logger definition
---- @param input table|nil The input table for the list_logger_definition_versions command
+--- AWS greengrass list-logger-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_logger_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-logger-definition-versions" }, input)
 end
 
---- Retrieves a list of logger definitions
---- @param input table|nil The input table for the list_logger_definitions command
+--- AWS greengrass list-logger-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_logger_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-logger-definitions" }, input)
 end
 
---- Lists the versions of a resource definition
---- @param input table|nil The input table for the list_resource_definition_versions command
+--- AWS greengrass list-resource-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-resource-definition-versions" }, input)
 end
 
---- Retrieves a list of resource definitions
---- @param input table|nil The input table for the list_resource_definitions command
+--- AWS greengrass list-resource-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-resource-definitions" }, input)
 end
 
---- Lists the versions of a subscription definition
---- @param input table|nil The input table for the list_subscription_definition_versions command
+--- AWS greengrass list-subscription-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscription_definition_versions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-subscription-definition-versions" }, input)
 end
 
---- Retrieves a list of subscription definitions
---- @param input table|nil The input table for the list_subscription_definitions command
+--- AWS greengrass list-subscription-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscription_definitions(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-subscription-definitions" }, input)
 end
 
---- Retrieves a list of resource tags for a resource arn
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS greengrass list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "greengrass", "list-tags-for-resource" }, input)
 end
 
---- Resets a group's deployments
---- @param input table|nil The input table for the reset_deployments command
+--- AWS greengrass reset-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_deployments(input)
 	return common.execute_aws_command_with_input({ "greengrass", "reset-deployments" }, input)
 end
 
---- Deploys multiple groups in one operation
---- @param input table|nil The input table for the start_bulk_deployment command
+--- AWS greengrass start-bulk-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_bulk_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrass", "start-bulk-deployment" }, input)
 end
 
---- Stops the execution of a bulk deployment
---- @param input table|nil The input table for the stop_bulk_deployment command
+--- AWS greengrass stop-bulk-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_bulk_deployment(input)
 	return common.execute_aws_command_with_input({ "greengrass", "stop-bulk-deployment" }, input)
 end
 
---- Adds tags to a Greengrass resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS greengrass tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "greengrass", "tag-resource" }, input)
 end
 
---- Remove resource tags from a Greengrass Resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS greengrass untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "greengrass", "untag-resource" }, input)
 end
 
---- Updates the connectivity information for the core
---- @param input table|nil The input table for the update_connectivity_info command
+--- AWS greengrass update-connectivity-info operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connectivity_info(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-connectivity-info" }, input)
 end
 
---- Updates a connector definition
---- @param input table|nil The input table for the update_connector_definition command
+--- AWS greengrass update-connector-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connector_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-connector-definition" }, input)
 end
 
---- Updates a core definition
---- @param input table|nil The input table for the update_core_definition command
+--- AWS greengrass update-core-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_core_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-core-definition" }, input)
 end
 
---- Updates a device definition
---- @param input table|nil The input table for the update_device_definition command
+--- AWS greengrass update-device-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_device_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-device-definition" }, input)
 end
 
---- Updates a Lambda function definition
---- @param input table|nil The input table for the update_function_definition command
+--- AWS greengrass update-function-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-function-definition" }, input)
 end
 
---- Updates a group
---- @param input table|nil The input table for the update_group command
+--- AWS greengrass update-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-group" }, input)
 end
 
---- Updates the Certificate expiry time for a group
---- @param input table|nil The input table for the update_group_certificate_configuration command
+--- AWS greengrass update-group-certificate-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group_certificate_configuration(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-group-certificate-configuration" }, input)
 end
 
---- Updates a logger definition
---- @param input table|nil The input table for the update_logger_definition command
+--- AWS greengrass update-logger-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_logger_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-logger-definition" }, input)
 end
 
---- Updates a resource definition
---- @param input table|nil The input table for the update_resource_definition command
+--- AWS greengrass update-resource-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-resource-definition" }, input)
 end
 
---- Updates a subscription definition
---- @param input table|nil The input table for the update_subscription_definition command
+--- AWS greengrass update-subscription-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription_definition(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-subscription-definition" }, input)
 end
 
---- Updates the runtime configuration of a thing
---- @param input table|nil The input table for the update_thing_runtime_configuration command
+--- AWS greengrass update-thing-runtime-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_thing_runtime_configuration(input)
 	return common.execute_aws_command_with_input({ "greengrass", "update-thing-runtime-configuration" }, input)

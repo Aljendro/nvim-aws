@@ -6,169 +6,176 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS APPTEST service functions
 local M = {}
 
---- Creates a test case
---- @param input table|nil The input table for the create_test_case command
+--- AWS apptest create-test-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_test_case(input)
 	return common.execute_aws_command_with_input({ "apptest", "create-test-case" }, input)
 end
 
---- Creates a test configuration
---- @param input table|nil The input table for the create_test_configuration command
+--- AWS apptest create-test-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_test_configuration(input)
 	return common.execute_aws_command_with_input({ "apptest", "create-test-configuration" }, input)
 end
 
---- Creates a test suite
---- @param input table|nil The input table for the create_test_suite command
+--- AWS apptest create-test-suite operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_test_suite(input)
 	return common.execute_aws_command_with_input({ "apptest", "create-test-suite" }, input)
 end
 
---- Deletes a test case
---- @param input table|nil The input table for the delete_test_case command
+--- AWS apptest delete-test-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_test_case(input)
 	return common.execute_aws_command_with_input({ "apptest", "delete-test-case" }, input)
 end
 
---- Deletes a test configuration
---- @param input table|nil The input table for the delete_test_configuration command
+--- AWS apptest delete-test-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_test_configuration(input)
 	return common.execute_aws_command_with_input({ "apptest", "delete-test-configuration" }, input)
 end
 
---- Deletes a test run
---- @param input table|nil The input table for the delete_test_run command
+--- AWS apptest delete-test-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_test_run(input)
 	return common.execute_aws_command_with_input({ "apptest", "delete-test-run" }, input)
 end
 
---- Deletes a test suite
---- @param input table|nil The input table for the delete_test_suite command
+--- AWS apptest delete-test-suite operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_test_suite(input)
 	return common.execute_aws_command_with_input({ "apptest", "delete-test-suite" }, input)
 end
 
---- Gets a test case
---- @param input table|nil The input table for the get_test_case command
+--- AWS apptest get-test-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_test_case(input)
 	return common.execute_aws_command_with_input({ "apptest", "get-test-case" }, input)
 end
 
---- Gets a test configuration
---- @param input table|nil The input table for the get_test_configuration command
+--- AWS apptest get-test-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_test_configuration(input)
 	return common.execute_aws_command_with_input({ "apptest", "get-test-configuration" }, input)
 end
 
---- Gets a test run step
---- @param input table|nil The input table for the get_test_run_step command
+--- AWS apptest get-test-run-step operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_test_run_step(input)
 	return common.execute_aws_command_with_input({ "apptest", "get-test-run-step" }, input)
 end
 
---- Gets a test suite
---- @param input table|nil The input table for the get_test_suite command
+--- AWS apptest get-test-suite operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_test_suite(input)
 	return common.execute_aws_command_with_input({ "apptest", "get-test-suite" }, input)
 end
 
---- Lists tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS apptest help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "apptest", "help" }, input)
+end
+
+--- AWS apptest list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-tags-for-resource" }, input)
 end
 
---- Lists test cases
---- @param input table|nil The input table for the list_test_cases command
+--- AWS apptest list-test-cases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_cases(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-cases" }, input)
 end
 
---- Lists test configurations
---- @param input table|nil The input table for the list_test_configurations command
+--- AWS apptest list-test-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_configurations(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-configurations" }, input)
 end
 
---- Lists test run steps
---- @param input table|nil The input table for the list_test_run_steps command
+--- AWS apptest list-test-run-steps operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_run_steps(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-run-steps" }, input)
 end
 
---- Lists test run test cases
---- @param input table|nil The input table for the list_test_run_test_cases command
+--- AWS apptest list-test-run-test-cases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_run_test_cases(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-run-test-cases" }, input)
 end
 
---- Lists test runs
---- @param input table|nil The input table for the list_test_runs command
+--- AWS apptest list-test-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_runs(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-runs" }, input)
 end
 
---- Lists test suites
---- @param input table|nil The input table for the list_test_suites command
+--- AWS apptest list-test-suites operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_test_suites(input)
 	return common.execute_aws_command_with_input({ "apptest", "list-test-suites" }, input)
 end
 
---- Starts a test run
---- @param input table|nil The input table for the start_test_run command
+--- AWS apptest start-test-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_test_run(input)
 	return common.execute_aws_command_with_input({ "apptest", "start-test-run" }, input)
 end
 
---- Specifies tags of a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS apptest tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "apptest", "tag-resource" }, input)
 end
 
---- Untags a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS apptest untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "apptest", "untag-resource" }, input)
 end
 
---- Updates a test case
---- @param input table|nil The input table for the update_test_case command
+--- AWS apptest update-test-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_test_case(input)
 	return common.execute_aws_command_with_input({ "apptest", "update-test-case" }, input)
 end
 
---- Updates a test configuration
---- @param input table|nil The input table for the update_test_configuration command
+--- AWS apptest update-test-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_test_configuration(input)
 	return common.execute_aws_command_with_input({ "apptest", "update-test-configuration" }, input)
 end
 
---- Updates a test suite
---- @param input table|nil The input table for the update_test_suite command
+--- AWS apptest update-test-suite operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_test_suite(input)
 	return common.execute_aws_command_with_input({ "apptest", "update-test-suite" }, input)

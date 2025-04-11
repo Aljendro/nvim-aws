@@ -6,344 +6,351 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ECR service functions
 local M = {}
 
---- Checks the availability of one or more image layers in a repository
---- @param input table|nil The input table for the batch_check_layer_availability command
+--- AWS ecr batch-check-layer-availability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_check_layer_availability(input)
 	return common.execute_aws_command_with_input({ "ecr", "batch-check-layer-availability" }, input)
 end
 
---- Deletes a list of specified images within a repository
---- @param input table|nil The input table for the batch_delete_image command
+--- AWS ecr batch-delete-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_image(input)
 	return common.execute_aws_command_with_input({ "ecr", "batch-delete-image" }, input)
 end
 
---- Gets detailed information for an image
---- @param input table|nil The input table for the batch_get_image command
+--- AWS ecr batch-get-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_image(input)
 	return common.execute_aws_command_with_input({ "ecr", "batch-get-image" }, input)
 end
 
---- Gets the scanning configuration for one or more repositories
---- @param input table|nil The input table for the batch_get_repository_scanning_configuration command
+--- AWS ecr batch-get-repository-scanning-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_repository_scanning_configuration(input)
 	return common.execute_aws_command_with_input({ "ecr", "batch-get-repository-scanning-configuration" }, input)
 end
 
---- Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID
---- @param input table|nil The input table for the complete_layer_upload command
+--- AWS ecr complete-layer-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_layer_upload(input)
 	return common.execute_aws_command_with_input({ "ecr", "complete-layer-upload" }, input)
 end
 
---- Creates a pull through cache rule
---- @param input table|nil The input table for the create_pull_through_cache_rule command
+--- AWS ecr create-pull-through-cache-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pull_through_cache_rule(input)
 	return common.execute_aws_command_with_input({ "ecr", "create-pull-through-cache-rule" }, input)
 end
 
---- Creates a repository
---- @param input table|nil The input table for the create_repository command
+--- AWS ecr create-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository(input)
 	return common.execute_aws_command_with_input({ "ecr", "create-repository" }, input)
 end
 
---- Creates a repository creation template
---- @param input table|nil The input table for the create_repository_creation_template command
+--- AWS ecr create-repository-creation-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository_creation_template(input)
 	return common.execute_aws_command_with_input({ "ecr", "create-repository-creation-template" }, input)
 end
 
---- Deletes the lifecycle policy associated with the specified repository
---- @param input table|nil The input table for the delete_lifecycle_policy command
+--- AWS ecr delete-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-lifecycle-policy" }, input)
 end
 
---- Deletes a pull through cache rule
---- @param input table|nil The input table for the delete_pull_through_cache_rule command
+--- AWS ecr delete-pull-through-cache-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pull_through_cache_rule(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-pull-through-cache-rule" }, input)
 end
 
---- Deletes the registry permissions policy
---- @param input table|nil The input table for the delete_registry_policy command
+--- AWS ecr delete-registry-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registry_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-registry-policy" }, input)
 end
 
---- Deletes a repository
---- @param input table|nil The input table for the delete_repository command
+--- AWS ecr delete-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-repository" }, input)
 end
 
---- Deletes a repository creation template
---- @param input table|nil The input table for the delete_repository_creation_template command
+--- AWS ecr delete-repository-creation-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository_creation_template(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-repository-creation-template" }, input)
 end
 
---- Deletes the repository policy associated with the specified repository
---- @param input table|nil The input table for the delete_repository_policy command
+--- AWS ecr delete-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "delete-repository-policy" }, input)
 end
 
---- Returns the replication status for a specified image
---- @param input table|nil The input table for the describe_image_replication_status command
+--- AWS ecr describe-image-replication-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_replication_status(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-image-replication-status" }, input)
 end
 
---- Returns the scan findings for the specified image
---- @param input table|nil The input table for the describe_image_scan_findings command
+--- AWS ecr describe-image-scan-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_scan_findings(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-image-scan-findings" }, input)
 end
 
---- Returns metadata about the images in a repository
---- @param input table|nil The input table for the describe_images command
+--- AWS ecr describe-images operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_images(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-images" }, input)
 end
 
---- Returns the pull through cache rules for a registry
---- @param input table|nil The input table for the describe_pull_through_cache_rules command
+--- AWS ecr describe-pull-through-cache-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pull_through_cache_rules(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-pull-through-cache-rules" }, input)
 end
 
---- Describes the settings for a registry
---- @param input table|nil The input table for the describe_registry command
+--- AWS ecr describe-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registry(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-registry" }, input)
 end
 
---- Describes image repositories in a registry
---- @param input table|nil The input table for the describe_repositories command
+--- AWS ecr describe-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_repositories(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-repositories" }, input)
 end
 
---- Returns details about the repository creation templates in a registry
---- @param input table|nil The input table for the describe_repository_creation_templates command
+--- AWS ecr describe-repository-creation-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_repository_creation_templates(input)
 	return common.execute_aws_command_with_input({ "ecr", "describe-repository-creation-templates" }, input)
 end
 
---- Retrieves the account setting value for the specified setting name
---- @param input table|nil The input table for the get_account_setting command
+--- AWS ecr get-account-setting operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_setting(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-account-setting" }, input)
 end
 
---- Retrieves an authorization token
---- @param input table|nil The input table for the get_authorization_token command
+--- AWS ecr get-authorization-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorization_token(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-authorization-token" }, input)
 end
 
---- Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer
---- @param input table|nil The input table for the get_download_url_for_layer command
+--- AWS ecr get-download-url-for-layer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_download_url_for_layer(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-download-url-for-layer" }, input)
 end
 
---- Retrieves the lifecycle policy for the specified repository
---- @param input table|nil The input table for the get_lifecycle_policy command
+--- AWS ecr get-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-lifecycle-policy" }, input)
 end
 
---- Retrieves the results of the lifecycle policy preview request for the specified repository
---- @param input table|nil The input table for the get_lifecycle_policy_preview command
+--- AWS ecr get-lifecycle-policy-preview operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policy_preview(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-lifecycle-policy-preview" }, input)
 end
 
---- Retrieves the permissions policy for a registry
---- @param input table|nil The input table for the get_registry_policy command
+--- AWS ecr get-registry-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_registry_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-registry-policy" }, input)
 end
 
---- Retrieves the scanning configuration for a registry
---- @param input table|nil The input table for the get_registry_scanning_configuration command
+--- AWS ecr get-registry-scanning-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_registry_scanning_configuration(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-registry-scanning-configuration" }, input)
 end
 
---- Retrieves the repository policy for the specified repository
---- @param input table|nil The input table for the get_repository_policy command
+--- AWS ecr get-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "get-repository-policy" }, input)
 end
 
---- Notifies Amazon ECR that you intend to upload an image layer
---- @param input table|nil The input table for the initiate_layer_upload command
+--- AWS ecr help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ecr", "help" }, input)
+end
+
+--- AWS ecr initiate-layer-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_layer_upload(input)
 	return common.execute_aws_command_with_input({ "ecr", "initiate-layer-upload" }, input)
 end
 
---- Lists all the image IDs for the specified repository
---- @param input table|nil The input table for the list_images command
+--- AWS ecr list-images operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_images(input)
 	return common.execute_aws_command_with_input({ "ecr", "list-images" }, input)
 end
 
---- List the tags for an Amazon ECR resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS ecr list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ecr", "list-tags-for-resource" }, input)
 end
 
---- Allows you to change the basic scan type version or registry policy scope
---- @param input table|nil The input table for the put_account_setting command
+--- AWS ecr put-account-setting operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_setting(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-account-setting" }, input)
 end
 
---- Creates or updates the image manifest and tags associated with an image
---- @param input table|nil The input table for the put_image command
+--- AWS ecr put-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-image" }, input)
 end
 
---- The PutImageScanningConfiguration API is being deprecated, in favor of specifying the image scanning configuration at the registry level
---- @param input table|nil The input table for the put_image_scanning_configuration command
+--- AWS ecr put-image-scanning-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image_scanning_configuration(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-image-scanning-configuration" }, input)
 end
 
---- Updates the image tag mutability settings for the specified repository
---- @param input table|nil The input table for the put_image_tag_mutability command
+--- AWS ecr put-image-tag-mutability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image_tag_mutability(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-image-tag-mutability" }, input)
 end
 
---- Creates or updates the lifecycle policy for the specified repository
---- @param input table|nil The input table for the put_lifecycle_policy command
+--- AWS ecr put-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-lifecycle-policy" }, input)
 end
 
---- Creates or updates the permissions policy for your registry
---- @param input table|nil The input table for the put_registry_policy command
+--- AWS ecr put-registry-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_registry_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-registry-policy" }, input)
 end
 
---- Creates or updates the scanning configuration for your private registry
---- @param input table|nil The input table for the put_registry_scanning_configuration command
+--- AWS ecr put-registry-scanning-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_registry_scanning_configuration(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-registry-scanning-configuration" }, input)
 end
 
---- Creates or updates the replication configuration for a registry
---- @param input table|nil The input table for the put_replication_configuration command
+--- AWS ecr put-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "ecr", "put-replication-configuration" }, input)
 end
 
---- Applies a repository policy to the specified repository to control access permissions
---- @param input table|nil The input table for the set_repository_policy command
+--- AWS ecr set-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr", "set-repository-policy" }, input)
 end
 
---- Starts a basic image vulnerability scan
---- @param input table|nil The input table for the start_image_scan command
+--- AWS ecr start-image-scan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_image_scan(input)
 	return common.execute_aws_command_with_input({ "ecr", "start-image-scan" }, input)
 end
 
---- Starts a preview of a lifecycle policy for the specified repository
---- @param input table|nil The input table for the start_lifecycle_policy_preview command
+--- AWS ecr start-lifecycle-policy-preview operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_lifecycle_policy_preview(input)
 	return common.execute_aws_command_with_input({ "ecr", "start-lifecycle-policy-preview" }, input)
 end
 
---- Adds specified tags to a resource with the specified ARN
---- @param input table|nil The input table for the tag_resource command
+--- AWS ecr tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ecr", "tag-resource" }, input)
 end
 
---- Deletes specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS ecr untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ecr", "untag-resource" }, input)
 end
 
---- Updates an existing pull through cache rule
---- @param input table|nil The input table for the update_pull_through_cache_rule command
+--- AWS ecr update-pull-through-cache-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_through_cache_rule(input)
 	return common.execute_aws_command_with_input({ "ecr", "update-pull-through-cache-rule" }, input)
 end
 
---- Updates an existing repository creation template
---- @param input table|nil The input table for the update_repository_creation_template command
+--- AWS ecr update-repository-creation-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_creation_template(input)
 	return common.execute_aws_command_with_input({ "ecr", "update-repository-creation-template" }, input)
 end
 
---- Uploads an image layer part to Amazon ECR
---- @param input table|nil The input table for the upload_layer_part command
+--- AWS ecr upload-layer-part operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_layer_part(input)
 	return common.execute_aws_command_with_input({ "ecr", "upload-layer-part" }, input)
 end
 
---- Validates an existing pull through cache rule for an upstream registry that requires authentication
---- @param input table|nil The input table for the validate_pull_through_cache_rule command
+--- AWS ecr validate-pull-through-cache-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_pull_through_cache_rule(input)
 	return common.execute_aws_command_with_input({ "ecr", "validate-pull-through-cache-rule" }, input)

@@ -280,6 +280,11 @@ describe("AWS greengrass service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_bulk_deployment_detailed_reports", function()
 		local result = service.list_bulk_deployment_detailed_reports()
 		assert.is_true(result.success)

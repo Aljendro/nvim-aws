@@ -20,11 +20,6 @@ describe("AWS mediatailor service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with create_channel", function()
-		local result = service.create_channel()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with create_live_source", function()
 		local result = service.create_live_source()
 		assert.is_true(result.success)
@@ -32,6 +27,11 @@ describe("AWS mediatailor service testing", function()
 
 	it("should generate a cli skeleton with create_prefetch_schedule", function()
 		local result = service.create_prefetch_schedule()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_program", function()
+		local result = service.create_program()
 		assert.is_true(result.success)
 	end)
 
@@ -50,6 +50,11 @@ describe("AWS mediatailor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_channel_policy", function()
+		local result = service.delete_channel_policy()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_live_source", function()
 		local result = service.delete_live_source()
 		assert.is_true(result.success)
@@ -62,6 +67,11 @@ describe("AWS mediatailor service testing", function()
 
 	it("should generate a cli skeleton with delete_prefetch_schedule", function()
 		local result = service.delete_prefetch_schedule()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_program", function()
+		local result = service.delete_program()
 		assert.is_true(result.success)
 	end)
 
@@ -85,6 +95,11 @@ describe("AWS mediatailor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with describe_program", function()
+		local result = service.describe_program()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with describe_source_location", function()
 		local result = service.describe_source_location()
 		assert.is_true(result.success)
@@ -92,6 +107,11 @@ describe("AWS mediatailor service testing", function()
 
 	it("should generate a cli skeleton with describe_vod_source", function()
 		local result = service.describe_vod_source()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_channel_policy", function()
+		local result = service.get_channel_policy()
 		assert.is_true(result.success)
 	end)
 
@@ -107,6 +127,11 @@ describe("AWS mediatailor service testing", function()
 
 	it("should generate a cli skeleton with get_prefetch_schedule", function()
 		local result = service.get_prefetch_schedule()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -150,6 +175,11 @@ describe("AWS mediatailor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with put_channel_policy", function()
+		local result = service.put_channel_policy()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with put_playback_configuration", function()
 		local result = service.put_playback_configuration()
 		assert.is_true(result.success)
@@ -182,6 +212,11 @@ describe("AWS mediatailor service testing", function()
 
 	it("should generate a cli skeleton with update_live_source", function()
 		local result = service.update_live_source()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_program", function()
+		local result = service.update_program()
 		assert.is_true(result.success)
 	end)
 

@@ -115,11 +115,6 @@ describe("AWS codeartifact service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_package_version_asset", function()
-		local result = service.get_package_version_asset()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_package_version_readme", function()
 		local result = service.get_package_version_readme()
 		assert.is_true(result.success)
@@ -132,6 +127,11 @@ describe("AWS codeartifact service testing", function()
 
 	it("should generate a cli skeleton with get_repository_permissions_policy", function()
 		local result = service.get_repository_permissions_policy()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

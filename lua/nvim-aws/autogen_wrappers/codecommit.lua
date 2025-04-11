@@ -6,554 +6,561 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CODECOMMIT service functions
 local M = {}
 
---- Creates an association between an approval rule template and a specified repository
---- @param input table|nil The input table for the associate_approval_rule_template_with_repository command
+--- AWS codecommit associate-approval-rule-template-with-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_approval_rule_template_with_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "associate-approval-rule-template-with-repository" }, input)
 end
 
---- Creates an association between an approval rule template and one or more specified repositories
---- @param input table|nil The input table for the batch_associate_approval_rule_template_with_repositories command
+--- AWS codecommit batch-associate-approval-rule-template-with-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_approval_rule_template_with_repositories(input)
 	return common.execute_aws_command_with_input({ "codecommit", "batch-associate-approval-rule-template-with-repositories" }, input)
 end
 
---- Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash or three-way merge strategy
---- @param input table|nil The input table for the batch_describe_merge_conflicts command
+--- AWS codecommit batch-describe-merge-conflicts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_describe_merge_conflicts(input)
 	return common.execute_aws_command_with_input({ "codecommit", "batch-describe-merge-conflicts" }, input)
 end
 
---- Removes the association between an approval rule template and one or more specified repositories
---- @param input table|nil The input table for the batch_disassociate_approval_rule_template_from_repositories command
+--- AWS codecommit batch-disassociate-approval-rule-template-from-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_approval_rule_template_from_repositories(input)
 	return common.execute_aws_command_with_input({ "codecommit", "batch-disassociate-approval-rule-template-from-repositories" }, input)
 end
 
---- Returns information about the contents of one or more commits in a repository
---- @param input table|nil The input table for the batch_get_commits command
+--- AWS codecommit batch-get-commits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_commits(input)
 	return common.execute_aws_command_with_input({ "codecommit", "batch-get-commits" }, input)
 end
 
---- Returns information about one or more repositories
---- @param input table|nil The input table for the batch_get_repositories command
+--- AWS codecommit batch-get-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_repositories(input)
 	return common.execute_aws_command_with_input({ "codecommit", "batch-get-repositories" }, input)
 end
 
---- Creates a template for approval rules that can then be associated with one or more repositories in your Amazon Web Services account
---- @param input table|nil The input table for the create_approval_rule_template command
+--- AWS codecommit create-approval-rule-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_approval_rule_template(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-approval-rule-template" }, input)
 end
 
---- Creates a branch in a repository and points the branch to a commit
---- @param input table|nil The input table for the create_branch command
+--- AWS codecommit create-branch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_branch(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-branch" }, input)
 end
 
---- Creates a commit for a repository on the tip of a specified branch
---- @param input table|nil The input table for the create_commit command
+--- AWS codecommit create-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-commit" }, input)
 end
 
---- Creates a pull request in the specified repository
---- @param input table|nil The input table for the create_pull_request command
+--- AWS codecommit create-pull-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pull_request(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-pull-request" }, input)
 end
 
---- Creates an approval rule for a pull request
---- @param input table|nil The input table for the create_pull_request_approval_rule command
+--- AWS codecommit create-pull-request-approval-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pull_request_approval_rule(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-pull-request-approval-rule" }, input)
 end
 
---- Creates a new, empty repository
---- @param input table|nil The input table for the create_repository command
+--- AWS codecommit create-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-repository" }, input)
 end
 
---- Creates an unreferenced commit that represents the result of merging two branches using a specified merge strategy
---- @param input table|nil The input table for the create_unreferenced_merge_commit command
+--- AWS codecommit create-unreferenced-merge-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_unreferenced_merge_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "create-unreferenced-merge-commit" }, input)
 end
 
---- Deletes a specified approval rule template
---- @param input table|nil The input table for the delete_approval_rule_template command
+--- AWS codecommit delete-approval-rule-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_approval_rule_template(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-approval-rule-template" }, input)
 end
 
---- Deletes a branch from a repository, unless that branch is the default branch for the repository
---- @param input table|nil The input table for the delete_branch command
+--- AWS codecommit delete-branch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_branch(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-branch" }, input)
 end
 
---- Deletes the content of a comment made on a change, file, or commit in a repository
---- @param input table|nil The input table for the delete_comment_content command
+--- AWS codecommit delete-comment-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_comment_content(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-comment-content" }, input)
 end
 
---- Deletes a specified file from a specified branch
---- @param input table|nil The input table for the delete_file command
+--- AWS codecommit delete-file operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_file(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-file" }, input)
 end
 
---- Deletes an approval rule from a specified pull request
---- @param input table|nil The input table for the delete_pull_request_approval_rule command
+--- AWS codecommit delete-pull-request-approval-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pull_request_approval_rule(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-pull-request-approval-rule" }, input)
 end
 
---- Deletes a repository
---- @param input table|nil The input table for the delete_repository command
+--- AWS codecommit delete-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "delete-repository" }, input)
 end
 
---- Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash or three-way merge strategy
---- @param input table|nil The input table for the describe_merge_conflicts command
+--- AWS codecommit describe-merge-conflicts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_merge_conflicts(input)
 	return common.execute_aws_command_with_input({ "codecommit", "describe-merge-conflicts" }, input)
 end
 
---- Returns information about one or more pull request events
---- @param input table|nil The input table for the describe_pull_request_events command
+--- AWS codecommit describe-pull-request-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pull_request_events(input)
 	return common.execute_aws_command_with_input({ "codecommit", "describe-pull-request-events" }, input)
 end
 
---- Removes the association between a template and a repository so that approval rules based on the template are not automatically created when pull requests are created in the specified repository
---- @param input table|nil The input table for the disassociate_approval_rule_template_from_repository command
+--- AWS codecommit disassociate-approval-rule-template-from-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_approval_rule_template_from_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "disassociate-approval-rule-template-from-repository" }, input)
 end
 
---- Evaluates whether a pull request has met all the conditions specified in its associated approval rules
---- @param input table|nil The input table for the evaluate_pull_request_approval_rules command
+--- AWS codecommit evaluate-pull-request-approval-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.evaluate_pull_request_approval_rules(input)
 	return common.execute_aws_command_with_input({ "codecommit", "evaluate-pull-request-approval-rules" }, input)
 end
 
---- Returns information about a specified approval rule template
---- @param input table|nil The input table for the get_approval_rule_template command
+--- AWS codecommit get-approval-rule-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_approval_rule_template(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-approval-rule-template" }, input)
 end
 
---- Returns the base-64 encoded content of an individual blob in a repository
---- @param input table|nil The input table for the get_blob command
+--- AWS codecommit get-blob operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blob(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-blob" }, input)
 end
 
---- Returns information about a repository branch, including its name and the last commit ID
---- @param input table|nil The input table for the get_branch command
+--- AWS codecommit get-branch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_branch(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-branch" }, input)
 end
 
---- Returns the content of a comment made on a change, file, or commit in a repository
---- @param input table|nil The input table for the get_comment command
+--- AWS codecommit get-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_comment(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-comment" }, input)
 end
 
---- Returns information about reactions to a specified comment ID
---- @param input table|nil The input table for the get_comment_reactions command
+--- AWS codecommit get-comment-reactions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_comment_reactions(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-comment-reactions" }, input)
 end
 
---- Returns information about comments made on the comparison between two commits
---- @param input table|nil The input table for the get_comments_for_compared_commit command
+--- AWS codecommit get-comments-for-compared-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_comments_for_compared_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-comments-for-compared-commit" }, input)
 end
 
---- Returns comments made on a pull request
---- @param input table|nil The input table for the get_comments_for_pull_request command
+--- AWS codecommit get-comments-for-pull-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_comments_for_pull_request(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-comments-for-pull-request" }, input)
 end
 
---- Returns information about a commit, including commit message and committer information
---- @param input table|nil The input table for the get_commit command
+--- AWS codecommit get-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-commit" }, input)
 end
 
---- Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID, or other fully qualified reference)
---- @param input table|nil The input table for the get_differences command
+--- AWS codecommit get-differences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_differences(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-differences" }, input)
 end
 
---- Returns the base-64 encoded contents of a specified file and its metadata
---- @param input table|nil The input table for the get_file command
+--- AWS codecommit get-file operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_file(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-file" }, input)
 end
 
---- Returns the contents of a specified folder in a repository
---- @param input table|nil The input table for the get_folder command
+--- AWS codecommit get-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_folder(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-folder" }, input)
 end
 
---- Returns information about a specified merge commit
---- @param input table|nil The input table for the get_merge_commit command
+--- AWS codecommit get-merge-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_merge_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-merge-commit" }, input)
 end
 
---- Returns information about merge conflicts between the before and after commit IDs for a pull request in a repository
---- @param input table|nil The input table for the get_merge_conflicts command
+--- AWS codecommit get-merge-conflicts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_merge_conflicts(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-merge-conflicts" }, input)
 end
 
---- Returns information about the merge options available for merging two specified branches
---- @param input table|nil The input table for the get_merge_options command
+--- AWS codecommit get-merge-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_merge_options(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-merge-options" }, input)
 end
 
---- Gets information about a pull request in a specified repository
---- @param input table|nil The input table for the get_pull_request command
+--- AWS codecommit get-pull-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pull_request(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-pull-request" }, input)
 end
 
---- Gets information about the approval states for a specified pull request
---- @param input table|nil The input table for the get_pull_request_approval_states command
+--- AWS codecommit get-pull-request-approval-states operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pull_request_approval_states(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-pull-request-approval-states" }, input)
 end
 
---- Returns information about whether approval rules have been set aside (overridden) for a pull request, and if so, the Amazon Resource Name (ARN) of the user or identity that overrode the rules and their requirements for the pull request
---- @param input table|nil The input table for the get_pull_request_override_state command
+--- AWS codecommit get-pull-request-override-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pull_request_override_state(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-pull-request-override-state" }, input)
 end
 
---- Returns information about a repository
---- @param input table|nil The input table for the get_repository command
+--- AWS codecommit get-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-repository" }, input)
 end
 
---- Gets information about triggers configured for a repository
---- @param input table|nil The input table for the get_repository_triggers command
+--- AWS codecommit get-repository-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_triggers(input)
 	return common.execute_aws_command_with_input({ "codecommit", "get-repository-triggers" }, input)
 end
 
---- Lists all approval rule templates in the specified Amazon Web Services Region in your Amazon Web Services account
---- @param input table|nil The input table for the list_approval_rule_templates command
+--- AWS codecommit help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "codecommit", "help" }, input)
+end
+
+--- AWS codecommit list-approval-rule-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_approval_rule_templates(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-approval-rule-templates" }, input)
 end
 
---- Lists all approval rule templates that are associated with a specified repository
---- @param input table|nil The input table for the list_associated_approval_rule_templates_for_repository command
+--- AWS codecommit list-associated-approval-rule-templates-for-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associated_approval_rule_templates_for_repository(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-associated-approval-rule-templates-for-repository" }, input)
 end
 
---- Gets information about one or more branches in a repository
---- @param input table|nil The input table for the list_branches command
+--- AWS codecommit list-branches operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_branches(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-branches" }, input)
 end
 
---- Retrieves a list of commits and changes to a specified file
---- @param input table|nil The input table for the list_file_commit_history command
+--- AWS codecommit list-file-commit-history operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_file_commit_history(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-file-commit-history" }, input)
 end
 
---- Returns a list of pull requests for a specified repository
---- @param input table|nil The input table for the list_pull_requests command
+--- AWS codecommit list-pull-requests operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pull_requests(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-pull-requests" }, input)
 end
 
---- Gets information about one or more repositories
---- @param input table|nil The input table for the list_repositories command
+--- AWS codecommit list-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repositories(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-repositories" }, input)
 end
 
---- Lists all repositories associated with the specified approval rule template
---- @param input table|nil The input table for the list_repositories_for_approval_rule_template command
+--- AWS codecommit list-repositories-for-approval-rule-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repositories_for_approval_rule_template(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-repositories-for-approval-rule-template" }, input)
 end
 
---- Gets information about Amazon Web Servicestags for a specified Amazon Resource Name (ARN) in CodeCommit
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS codecommit list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "codecommit", "list-tags-for-resource" }, input)
 end
 
---- Merges two branches using the fast-forward merge strategy
---- @param input table|nil The input table for the merge_branches_by_fast_forward command
+--- AWS codecommit merge-branches-by-fast-forward operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_branches_by_fast_forward(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-branches-by-fast-forward" }, input)
 end
 
---- Merges two branches using the squash merge strategy
---- @param input table|nil The input table for the merge_branches_by_squash command
+--- AWS codecommit merge-branches-by-squash operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_branches_by_squash(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-branches-by-squash" }, input)
 end
 
---- Merges two specified branches using the three-way merge strategy
---- @param input table|nil The input table for the merge_branches_by_three_way command
+--- AWS codecommit merge-branches-by-three-way operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_branches_by_three_way(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-branches-by-three-way" }, input)
 end
 
---- Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the fast-forward merge strategy
---- @param input table|nil The input table for the merge_pull_request_by_fast_forward command
+--- AWS codecommit merge-pull-request-by-fast-forward operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_pull_request_by_fast_forward(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-pull-request-by-fast-forward" }, input)
 end
 
---- Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the squash merge strategy
---- @param input table|nil The input table for the merge_pull_request_by_squash command
+--- AWS codecommit merge-pull-request-by-squash operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_pull_request_by_squash(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-pull-request-by-squash" }, input)
 end
 
---- Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the three-way merge strategy
---- @param input table|nil The input table for the merge_pull_request_by_three_way command
+--- AWS codecommit merge-pull-request-by-three-way operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.merge_pull_request_by_three_way(input)
 	return common.execute_aws_command_with_input({ "codecommit", "merge-pull-request-by-three-way" }, input)
 end
 
---- Sets aside (overrides) all approval rule requirements for a specified pull request
---- @param input table|nil The input table for the override_pull_request_approval_rules command
+--- AWS codecommit override-pull-request-approval-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.override_pull_request_approval_rules(input)
 	return common.execute_aws_command_with_input({ "codecommit", "override-pull-request-approval-rules" }, input)
 end
 
---- Posts a comment on the comparison between two commits
---- @param input table|nil The input table for the post_comment_for_compared_commit command
+--- AWS codecommit post-comment-for-compared-commit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.post_comment_for_compared_commit(input)
 	return common.execute_aws_command_with_input({ "codecommit", "post-comment-for-compared-commit" }, input)
 end
 
---- Posts a comment on a pull request
---- @param input table|nil The input table for the post_comment_for_pull_request command
+--- AWS codecommit post-comment-for-pull-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.post_comment_for_pull_request(input)
 	return common.execute_aws_command_with_input({ "codecommit", "post-comment-for-pull-request" }, input)
 end
 
---- Posts a comment in reply to an existing comment on a comparison between commits or a pull request
---- @param input table|nil The input table for the post_comment_reply command
+--- AWS codecommit post-comment-reply operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.post_comment_reply(input)
 	return common.execute_aws_command_with_input({ "codecommit", "post-comment-reply" }, input)
 end
 
---- Adds or updates a reaction to a specified comment for the user whose identity is used to make the request
---- @param input table|nil The input table for the put_comment_reaction command
+--- AWS codecommit put-comment-reaction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_comment_reaction(input)
 	return common.execute_aws_command_with_input({ "codecommit", "put-comment-reaction" }, input)
 end
 
---- Adds or updates a file in a branch in an CodeCommit repository, and generates a commit for the addition in the specified branch
---- @param input table|nil The input table for the put_file command
+--- AWS codecommit put-file operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_file(input)
 	return common.execute_aws_command_with_input({ "codecommit", "put-file" }, input)
 end
 
---- Replaces all triggers for a repository
---- @param input table|nil The input table for the put_repository_triggers command
+--- AWS codecommit put-repository-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_repository_triggers(input)
 	return common.execute_aws_command_with_input({ "codecommit", "put-repository-triggers" }, input)
 end
 
---- Adds or updates tags for a resource in CodeCommit
---- @param input table|nil The input table for the tag_resource command
+--- AWS codecommit tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "codecommit", "tag-resource" }, input)
 end
 
---- Tests the functionality of repository triggers by sending information to the trigger target
---- @param input table|nil The input table for the test_repository_triggers command
+--- AWS codecommit test-repository-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_repository_triggers(input)
 	return common.execute_aws_command_with_input({ "codecommit", "test-repository-triggers" }, input)
 end
 
---- Removes tags for a resource in CodeCommit
---- @param input table|nil The input table for the untag_resource command
+--- AWS codecommit untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "codecommit", "untag-resource" }, input)
 end
 
---- Updates the content of an approval rule template
---- @param input table|nil The input table for the update_approval_rule_template_content command
+--- AWS codecommit update-approval-rule-template-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_approval_rule_template_content(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-approval-rule-template-content" }, input)
 end
 
---- Updates the description for a specified approval rule template
---- @param input table|nil The input table for the update_approval_rule_template_description command
+--- AWS codecommit update-approval-rule-template-description operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_approval_rule_template_description(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-approval-rule-template-description" }, input)
 end
 
---- Updates the name of a specified approval rule template
---- @param input table|nil The input table for the update_approval_rule_template_name command
+--- AWS codecommit update-approval-rule-template-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_approval_rule_template_name(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-approval-rule-template-name" }, input)
 end
 
---- Replaces the contents of a comment
---- @param input table|nil The input table for the update_comment command
+--- AWS codecommit update-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_comment(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-comment" }, input)
 end
 
---- Sets or changes the default branch name for the specified repository
---- @param input table|nil The input table for the update_default_branch command
+--- AWS codecommit update-default-branch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_default_branch(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-default-branch" }, input)
 end
 
---- Updates the structure of an approval rule created specifically for a pull request
---- @param input table|nil The input table for the update_pull_request_approval_rule_content command
+--- AWS codecommit update-pull-request-approval-rule-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_request_approval_rule_content(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-pull-request-approval-rule-content" }, input)
 end
 
---- Updates the state of a user's approval on a pull request
---- @param input table|nil The input table for the update_pull_request_approval_state command
+--- AWS codecommit update-pull-request-approval-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_request_approval_state(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-pull-request-approval-state" }, input)
 end
 
---- Replaces the contents of the description of a pull request
---- @param input table|nil The input table for the update_pull_request_description command
+--- AWS codecommit update-pull-request-description operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_request_description(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-pull-request-description" }, input)
 end
 
---- Updates the status of a pull request
---- @param input table|nil The input table for the update_pull_request_status command
+--- AWS codecommit update-pull-request-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_request_status(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-pull-request-status" }, input)
 end
 
---- Replaces the title of a pull request
---- @param input table|nil The input table for the update_pull_request_title command
+--- AWS codecommit update-pull-request-title operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pull_request_title(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-pull-request-title" }, input)
 end
 
---- Sets or changes the comment or description for a repository
---- @param input table|nil The input table for the update_repository_description command
+--- AWS codecommit update-repository-description operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_description(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-repository-description" }, input)
 end
 
---- Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository
---- @param input table|nil The input table for the update_repository_encryption_key command
+--- AWS codecommit update-repository-encryption-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_encryption_key(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-repository-encryption-key" }, input)
 end
 
---- Renames a repository
---- @param input table|nil The input table for the update_repository_name command
+--- AWS codecommit update-repository-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_name(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-repository-name" }, input)

@@ -35,6 +35,11 @@ describe("AWS payment-cryptography-data service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with re_encrypt_data", function()
 		local result = service.re_encrypt_data()
 		assert.is_true(result.success)

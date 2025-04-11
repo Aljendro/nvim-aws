@@ -50,16 +50,6 @@ describe("AWS tnb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_sol_function_package_content", function()
-		local result = service.get_sol_function_package_content()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_sol_function_package_descriptor", function()
-		local result = service.get_sol_function_package_descriptor()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_sol_network_instance", function()
 		local result = service.get_sol_network_instance()
 		assert.is_true(result.success)
@@ -75,13 +65,8 @@ describe("AWS tnb service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_sol_network_package_content", function()
-		local result = service.get_sol_network_package_content()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_sol_network_package_descriptor", function()
-		local result = service.get_sol_network_package_descriptor()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

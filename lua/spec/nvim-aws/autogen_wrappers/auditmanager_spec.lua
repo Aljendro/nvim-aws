@@ -185,6 +185,11 @@ describe("AWS auditmanager service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_assessment_control_insights_by_control_domain", function()
 		local result = service.list_assessment_control_insights_by_control_domain()
 		assert.is_true(result.success)

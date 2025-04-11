@@ -6,351 +6,358 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LICENSE-MANAGER service functions
 local M = {}
 
---- Accepts the specified grant
---- @param input table|nil The input table for the accept_grant command
+--- AWS license-manager accept-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_grant(input)
 	return common.execute_aws_command_with_input({ "license-manager", "accept-grant" }, input)
 end
 
---- Checks in the specified license
---- @param input table|nil The input table for the check_in_license command
+--- AWS license-manager check-in-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_in_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "check-in-license" }, input)
 end
 
---- Checks out the specified license for offline use
---- @param input table|nil The input table for the checkout_borrow_license command
+--- AWS license-manager checkout-borrow-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.checkout_borrow_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "checkout-borrow-license" }, input)
 end
 
---- Checks out the specified license
---- @param input table|nil The input table for the checkout_license command
+--- AWS license-manager checkout-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.checkout_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "checkout-license" }, input)
 end
 
---- Creates a grant for the specified license
---- @param input table|nil The input table for the create_grant command
+--- AWS license-manager create-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_grant(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-grant" }, input)
 end
 
---- Creates a new version of the specified grant
---- @param input table|nil The input table for the create_grant_version command
+--- AWS license-manager create-grant-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_grant_version(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-grant-version" }, input)
 end
 
---- Creates a license
---- @param input table|nil The input table for the create_license command
+--- AWS license-manager create-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-license" }, input)
 end
 
---- Creates a license configuration
---- @param input table|nil The input table for the create_license_configuration command
+--- AWS license-manager create-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-license-configuration" }, input)
 end
 
---- Creates a new license conversion task
---- @param input table|nil The input table for the create_license_conversion_task_for_resource command
+--- AWS license-manager create-license-conversion-task-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_conversion_task_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-license-conversion-task-for-resource" }, input)
 end
 
---- Creates a report generator
---- @param input table|nil The input table for the create_license_manager_report_generator command
+--- AWS license-manager create-license-manager-report-generator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_manager_report_generator(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-license-manager-report-generator" }, input)
 end
 
---- Creates a new version of the specified license
---- @param input table|nil The input table for the create_license_version command
+--- AWS license-manager create-license-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_license_version(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-license-version" }, input)
 end
 
---- Creates a long-lived token
---- @param input table|nil The input table for the create_token command
+--- AWS license-manager create-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_token(input)
 	return common.execute_aws_command_with_input({ "license-manager", "create-token" }, input)
 end
 
---- Deletes the specified grant
---- @param input table|nil The input table for the delete_grant command
+--- AWS license-manager delete-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_grant(input)
 	return common.execute_aws_command_with_input({ "license-manager", "delete-grant" }, input)
 end
 
---- Deletes the specified license
---- @param input table|nil The input table for the delete_license command
+--- AWS license-manager delete-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "delete-license" }, input)
 end
 
---- Deletes the specified license configuration
---- @param input table|nil The input table for the delete_license_configuration command
+--- AWS license-manager delete-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "delete-license-configuration" }, input)
 end
 
---- Deletes the specified report generator
---- @param input table|nil The input table for the delete_license_manager_report_generator command
+--- AWS license-manager delete-license-manager-report-generator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_license_manager_report_generator(input)
 	return common.execute_aws_command_with_input({ "license-manager", "delete-license-manager-report-generator" }, input)
 end
 
---- Deletes the specified token
---- @param input table|nil The input table for the delete_token command
+--- AWS license-manager delete-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_token(input)
 	return common.execute_aws_command_with_input({ "license-manager", "delete-token" }, input)
 end
 
---- Extends the expiration date for license consumption
---- @param input table|nil The input table for the extend_license_consumption command
+--- AWS license-manager extend-license-consumption operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.extend_license_consumption(input)
 	return common.execute_aws_command_with_input({ "license-manager", "extend-license-consumption" }, input)
 end
 
---- Gets a temporary access token to use with AssumeRoleWithWebIdentity
---- @param input table|nil The input table for the get_access_token command
+--- AWS license-manager get-access-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_token(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-access-token" }, input)
 end
 
---- Gets detailed information about the specified grant
---- @param input table|nil The input table for the get_grant command
+--- AWS license-manager get-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_grant(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-grant" }, input)
 end
 
---- Gets detailed information about the specified license
---- @param input table|nil The input table for the get_license command
+--- AWS license-manager get-license operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-license" }, input)
 end
 
---- Gets detailed information about the specified license configuration
---- @param input table|nil The input table for the get_license_configuration command
+--- AWS license-manager get-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-license-configuration" }, input)
 end
 
---- Gets information about the specified license type conversion task
---- @param input table|nil The input table for the get_license_conversion_task command
+--- AWS license-manager get-license-conversion-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license_conversion_task(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-license-conversion-task" }, input)
 end
 
---- Gets information about the specified report generator
---- @param input table|nil The input table for the get_license_manager_report_generator command
+--- AWS license-manager get-license-manager-report-generator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license_manager_report_generator(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-license-manager-report-generator" }, input)
 end
 
---- Gets detailed information about the usage of the specified license
---- @param input table|nil The input table for the get_license_usage command
+--- AWS license-manager get-license-usage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_license_usage(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-license-usage" }, input)
 end
 
---- Gets the License Manager settings for the current Region
---- @param input table|nil The input table for the get_service_settings command
+--- AWS license-manager get-service-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager", "get-service-settings" }, input)
 end
 
---- Lists the resource associations for the specified license configuration
---- @param input table|nil The input table for the list_associations_for_license_configuration command
+--- AWS license-manager help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "license-manager", "help" }, input)
+end
+
+--- AWS license-manager list-associations-for-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associations_for_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-associations-for-license-configuration" }, input)
 end
 
---- Lists the grants distributed for the specified license
---- @param input table|nil The input table for the list_distributed_grants command
+--- AWS license-manager list-distributed-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distributed_grants(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-distributed-grants" }, input)
 end
 
---- Lists the license configuration operations that failed
---- @param input table|nil The input table for the list_failures_for_license_configuration_operations command
+--- AWS license-manager list-failures-for-license-configuration-operations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_failures_for_license_configuration_operations(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-failures-for-license-configuration-operations" }, input)
 end
 
---- Lists the license configurations for your account
---- @param input table|nil The input table for the list_license_configurations command
+--- AWS license-manager list-license-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_configurations(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-license-configurations" }, input)
 end
 
---- Lists the license type conversion tasks for your account
---- @param input table|nil The input table for the list_license_conversion_tasks command
+--- AWS license-manager list-license-conversion-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_conversion_tasks(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-license-conversion-tasks" }, input)
 end
 
---- Lists the report generators for your account
---- @param input table|nil The input table for the list_license_manager_report_generators command
+--- AWS license-manager list-license-manager-report-generators operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_manager_report_generators(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-license-manager-report-generators" }, input)
 end
 
---- Describes the license configurations for the specified resource
---- @param input table|nil The input table for the list_license_specifications_for_resource command
+--- AWS license-manager list-license-specifications-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_specifications_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-license-specifications-for-resource" }, input)
 end
 
---- Lists all versions of the specified license
---- @param input table|nil The input table for the list_license_versions command
+--- AWS license-manager list-license-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_license_versions(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-license-versions" }, input)
 end
 
---- Lists the licenses for your account
---- @param input table|nil The input table for the list_licenses command
+--- AWS license-manager list-licenses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_licenses(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-licenses" }, input)
 end
 
---- Lists grants that are received
---- @param input table|nil The input table for the list_received_grants command
+--- AWS license-manager list-received-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_received_grants(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-received-grants" }, input)
 end
 
---- Lists the grants received for all accounts in the organization
---- @param input table|nil The input table for the list_received_grants_for_organization command
+--- AWS license-manager list-received-grants-for-organization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_received_grants_for_organization(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-received-grants-for-organization" }, input)
 end
 
---- Lists received licenses
---- @param input table|nil The input table for the list_received_licenses command
+--- AWS license-manager list-received-licenses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_received_licenses(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-received-licenses" }, input)
 end
 
---- Lists the licenses received for all accounts in the organization
---- @param input table|nil The input table for the list_received_licenses_for_organization command
+--- AWS license-manager list-received-licenses-for-organization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_received_licenses_for_organization(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-received-licenses-for-organization" }, input)
 end
 
---- Lists resources managed using Systems Manager inventory
---- @param input table|nil The input table for the list_resource_inventory command
+--- AWS license-manager list-resource-inventory operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_inventory(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-resource-inventory" }, input)
 end
 
---- Lists the tags for the specified license configuration
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS license-manager list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-tags-for-resource" }, input)
 end
 
---- Lists your tokens
---- @param input table|nil The input table for the list_tokens command
+--- AWS license-manager list-tokens operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tokens(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-tokens" }, input)
 end
 
---- Lists all license usage records for a license configuration, displaying license consumption details by resource at a selected point in time
---- @param input table|nil The input table for the list_usage_for_license_configuration command
+--- AWS license-manager list-usage-for-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_usage_for_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "list-usage-for-license-configuration" }, input)
 end
 
---- Rejects the specified grant
---- @param input table|nil The input table for the reject_grant command
+--- AWS license-manager reject-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_grant(input)
 	return common.execute_aws_command_with_input({ "license-manager", "reject-grant" }, input)
 end
 
---- Adds the specified tags to the specified license configuration
---- @param input table|nil The input table for the tag_resource command
+--- AWS license-manager tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified license configuration
---- @param input table|nil The input table for the untag_resource command
+--- AWS license-manager untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "untag-resource" }, input)
 end
 
---- Modifies the attributes of an existing license configuration
---- @param input table|nil The input table for the update_license_configuration command
+--- AWS license-manager update-license-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_license_configuration(input)
 	return common.execute_aws_command_with_input({ "license-manager", "update-license-configuration" }, input)
 end
 
---- Updates a report generator
---- @param input table|nil The input table for the update_license_manager_report_generator command
+--- AWS license-manager update-license-manager-report-generator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_license_manager_report_generator(input)
 	return common.execute_aws_command_with_input({ "license-manager", "update-license-manager-report-generator" }, input)
 end
 
---- Adds or removes the specified license configurations for the specified Amazon Web Services resource
---- @param input table|nil The input table for the update_license_specifications_for_resource command
+--- AWS license-manager update-license-specifications-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_license_specifications_for_resource(input)
 	return common.execute_aws_command_with_input({ "license-manager", "update-license-specifications-for-resource" }, input)
 end
 
---- Updates License Manager settings for the current Region
---- @param input table|nil The input table for the update_service_settings command
+--- AWS license-manager update-service-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_settings(input)
 	return common.execute_aws_command_with_input({ "license-manager", "update-service-settings" }, input)

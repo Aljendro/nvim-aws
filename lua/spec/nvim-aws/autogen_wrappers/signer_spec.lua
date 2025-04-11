@@ -35,6 +35,11 @@ describe("AWS signer service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_profile_permissions", function()
 		local result = service.list_profile_permissions()
 		assert.is_true(result.success)

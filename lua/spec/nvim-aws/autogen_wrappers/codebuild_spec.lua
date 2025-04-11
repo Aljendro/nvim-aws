@@ -130,6 +130,11 @@ describe("AWS codebuild service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_source_credentials", function()
 		local result = service.import_source_credentials()
 		assert.is_true(result.success)

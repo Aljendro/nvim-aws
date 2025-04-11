@@ -135,6 +135,11 @@ describe("AWS resiliencehub service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_resources_to_draft_app_version", function()
 		local result = service.import_resources_to_draft_app_version()
 		assert.is_true(result.success)

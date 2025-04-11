@@ -70,11 +70,6 @@ describe("AWS schemas service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_code_binding_source", function()
-		local result = service.get_code_binding_source()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_discovered_schema", function()
 		local result = service.get_discovered_schema()
 		assert.is_true(result.success)
@@ -82,6 +77,11 @@ describe("AWS schemas service testing", function()
 
 	it("should generate a cli skeleton with get_resource_policy", function()
 		local result = service.get_resource_policy()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

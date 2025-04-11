@@ -6,85 +6,92 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SCHEDULER service functions
 local M = {}
 
---- Creates the specified schedule
---- @param input table|nil The input table for the create_schedule command
+--- AWS scheduler create-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schedule(input)
 	return common.execute_aws_command_with_input({ "scheduler", "create-schedule" }, input)
 end
 
---- Creates the specified schedule group
---- @param input table|nil The input table for the create_schedule_group command
+--- AWS scheduler create-schedule-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schedule_group(input)
 	return common.execute_aws_command_with_input({ "scheduler", "create-schedule-group" }, input)
 end
 
---- Deletes the specified schedule
---- @param input table|nil The input table for the delete_schedule command
+--- AWS scheduler delete-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schedule(input)
 	return common.execute_aws_command_with_input({ "scheduler", "delete-schedule" }, input)
 end
 
---- Deletes the specified schedule group
---- @param input table|nil The input table for the delete_schedule_group command
+--- AWS scheduler delete-schedule-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schedule_group(input)
 	return common.execute_aws_command_with_input({ "scheduler", "delete-schedule-group" }, input)
 end
 
---- Retrieves the specified schedule
---- @param input table|nil The input table for the get_schedule command
+--- AWS scheduler get-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schedule(input)
 	return common.execute_aws_command_with_input({ "scheduler", "get-schedule" }, input)
 end
 
---- Retrieves the specified schedule group
---- @param input table|nil The input table for the get_schedule_group command
+--- AWS scheduler get-schedule-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schedule_group(input)
 	return common.execute_aws_command_with_input({ "scheduler", "get-schedule-group" }, input)
 end
 
---- Returns a paginated list of your schedule groups
---- @param input table|nil The input table for the list_schedule_groups command
+--- AWS scheduler help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "scheduler", "help" }, input)
+end
+
+--- AWS scheduler list-schedule-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schedule_groups(input)
 	return common.execute_aws_command_with_input({ "scheduler", "list-schedule-groups" }, input)
 end
 
---- Returns a paginated list of your EventBridge Scheduler schedules
---- @param input table|nil The input table for the list_schedules command
+--- AWS scheduler list-schedules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schedules(input)
 	return common.execute_aws_command_with_input({ "scheduler", "list-schedules" }, input)
 end
 
---- Lists the tags associated with the Scheduler resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS scheduler list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "scheduler", "list-tags-for-resource" }, input)
 end
 
---- Assigns one or more tags (key-value pairs) to the specified EventBridge Scheduler resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS scheduler tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "scheduler", "tag-resource" }, input)
 end
 
---- Removes one or more tags from the specified EventBridge Scheduler schedule group
---- @param input table|nil The input table for the untag_resource command
+--- AWS scheduler untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "scheduler", "untag-resource" }, input)
 end
 
---- Updates the specified schedule
---- @param input table|nil The input table for the update_schedule command
+--- AWS scheduler update-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_schedule(input)
 	return common.execute_aws_command_with_input({ "scheduler", "update-schedule" }, input)

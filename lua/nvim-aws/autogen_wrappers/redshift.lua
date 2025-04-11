@@ -6,974 +6,981 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS REDSHIFT service functions
 local M = {}
 
---- Exchanges a DC1 Reserved Node for a DC2 Reserved Node with no changes to the configuration (term, payment type, or number of nodes) and no additional costs
---- @param input table|nil The input table for the accept_reserved_node_exchange command
+--- AWS redshift accept-reserved-node-exchange operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_reserved_node_exchange(input)
 	return common.execute_aws_command_with_input({ "redshift", "accept-reserved-node-exchange" }, input)
 end
 
---- Adds a partner integration to a cluster
---- @param input table|nil The input table for the add_partner command
+--- AWS redshift add-partner operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_partner(input)
 	return common.execute_aws_command_with_input({ "redshift", "add-partner" }, input)
 end
 
---- From a datashare consumer account, associates a datashare with the account (AssociateEntireAccount) or the specified namespace (ConsumerArn)
---- @param input table|nil The input table for the associate_data_share_consumer command
+--- AWS redshift associate-data-share-consumer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_data_share_consumer(input)
 	return common.execute_aws_command_with_input({ "redshift", "associate-data-share-consumer" }, input)
 end
 
---- Adds an inbound (ingress) rule to an Amazon Redshift security group
---- @param input table|nil The input table for the authorize_cluster_security_group_ingress command
+--- AWS redshift authorize-cluster-security-group-ingress operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_cluster_security_group_ingress(input)
 	return common.execute_aws_command_with_input({ "redshift", "authorize-cluster-security-group-ingress" }, input)
 end
 
---- From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or managing entities
---- @param input table|nil The input table for the authorize_data_share command
+--- AWS redshift authorize-data-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_data_share(input)
 	return common.execute_aws_command_with_input({ "redshift", "authorize-data-share" }, input)
 end
 
---- Grants access to a cluster
---- @param input table|nil The input table for the authorize_endpoint_access command
+--- AWS redshift authorize-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "authorize-endpoint-access" }, input)
 end
 
---- Authorizes the specified Amazon Web Services account to restore the specified snapshot
---- @param input table|nil The input table for the authorize_snapshot_access command
+--- AWS redshift authorize-snapshot-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_snapshot_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "authorize-snapshot-access" }, input)
 end
 
---- Deletes a set of cluster snapshots
---- @param input table|nil The input table for the batch_delete_cluster_snapshots command
+--- AWS redshift batch-delete-cluster-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_cluster_snapshots(input)
 	return common.execute_aws_command_with_input({ "redshift", "batch-delete-cluster-snapshots" }, input)
 end
 
---- Modifies the settings for a set of cluster snapshots
---- @param input table|nil The input table for the batch_modify_cluster_snapshots command
+--- AWS redshift batch-modify-cluster-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_modify_cluster_snapshots(input)
 	return common.execute_aws_command_with_input({ "redshift", "batch-modify-cluster-snapshots" }, input)
 end
 
---- Cancels a resize operation for a cluster
---- @param input table|nil The input table for the cancel_resize command
+--- AWS redshift cancel-resize operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_resize(input)
 	return common.execute_aws_command_with_input({ "redshift", "cancel-resize" }, input)
 end
 
---- Copies the specified automated cluster snapshot to a new manual cluster snapshot
---- @param input table|nil The input table for the copy_cluster_snapshot command
+--- AWS redshift copy-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "copy-cluster-snapshot" }, input)
 end
 
---- Creates an authentication profile with the specified parameters
---- @param input table|nil The input table for the create_authentication_profile command
+--- AWS redshift create-authentication-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_authentication_profile(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-authentication-profile" }, input)
 end
 
---- Creates a new cluster with the specified parameters
---- @param input table|nil The input table for the create_cluster command
+--- AWS redshift create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-cluster" }, input)
 end
 
---- Creates an Amazon Redshift parameter group
---- @param input table|nil The input table for the create_cluster_parameter_group command
+--- AWS redshift create-cluster-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster_parameter_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-cluster-parameter-group" }, input)
 end
 
---- Creates a new Amazon Redshift security group
---- @param input table|nil The input table for the create_cluster_security_group command
+--- AWS redshift create-cluster-security-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster_security_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-cluster-security-group" }, input)
 end
 
---- Creates a manual snapshot of the specified cluster
---- @param input table|nil The input table for the create_cluster_snapshot command
+--- AWS redshift create-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-cluster-snapshot" }, input)
 end
 
---- Creates a new Amazon Redshift subnet group
---- @param input table|nil The input table for the create_cluster_subnet_group command
+--- AWS redshift create-cluster-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster_subnet_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-cluster-subnet-group" }, input)
 end
 
---- Used to create a custom domain name for a cluster
---- @param input table|nil The input table for the create_custom_domain_association command
+--- AWS redshift create-custom-domain-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_domain_association(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-custom-domain-association" }, input)
 end
 
---- Creates a Redshift-managed VPC endpoint
---- @param input table|nil The input table for the create_endpoint_access command
+--- AWS redshift create-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-endpoint-access" }, input)
 end
 
---- Creates an Amazon Redshift event notification subscription
---- @param input table|nil The input table for the create_event_subscription command
+--- AWS redshift create-event-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_subscription(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-event-subscription" }, input)
 end
 
---- Creates an HSM client certificate that an Amazon Redshift cluster will use to connect to the client's HSM in order to store and retrieve the keys used to encrypt the cluster databases
---- @param input table|nil The input table for the create_hsm_client_certificate command
+--- AWS redshift create-hsm-client-certificate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_hsm_client_certificate(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-hsm-client-certificate" }, input)
 end
 
---- Creates an HSM configuration that contains the information required by an Amazon Redshift cluster to store and use database encryption keys in a Hardware Security Module (HSM)
---- @param input table|nil The input table for the create_hsm_configuration command
+--- AWS redshift create-hsm-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_hsm_configuration(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-hsm-configuration" }, input)
 end
 
---- Creates a zero-ETL integration or S3 event integration with Amazon Redshift
---- @param input table|nil The input table for the create_integration command
+--- AWS redshift create-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-integration" }, input)
 end
 
---- Creates an Amazon Redshift application for use with IAM Identity Center
---- @param input table|nil The input table for the create_redshift_idc_application command
+--- AWS redshift create-redshift-idc-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_redshift_idc_application(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-redshift-idc-application" }, input)
 end
 
---- Creates a scheduled action
---- @param input table|nil The input table for the create_scheduled_action command
+--- AWS redshift create-scheduled-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_scheduled_action(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-scheduled-action" }, input)
 end
 
---- Creates a snapshot copy grant that permits Amazon Redshift to use an encrypted symmetric key from Key Management Service (KMS) to encrypt copied snapshots in a destination region
---- @param input table|nil The input table for the create_snapshot_copy_grant command
+--- AWS redshift create-snapshot-copy-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_snapshot_copy_grant(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-snapshot-copy-grant" }, input)
 end
 
---- Create a snapshot schedule that can be associated to a cluster and which overrides the default system backup schedule
---- @param input table|nil The input table for the create_snapshot_schedule command
+--- AWS redshift create-snapshot-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_snapshot_schedule(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-snapshot-schedule" }, input)
 end
 
---- Adds tags to a cluster
---- @param input table|nil The input table for the create_tags command
+--- AWS redshift create-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_tags(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-tags" }, input)
 end
 
---- Creates a usage limit for a specified Amazon Redshift feature on a cluster
---- @param input table|nil The input table for the create_usage_limit command
+--- AWS redshift create-usage-limit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_usage_limit(input)
 	return common.execute_aws_command_with_input({ "redshift", "create-usage-limit" }, input)
 end
 
---- From a datashare producer account, removes authorization from the specified datashare
---- @param input table|nil The input table for the deauthorize_data_share command
+--- AWS redshift deauthorize-data-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deauthorize_data_share(input)
 	return common.execute_aws_command_with_input({ "redshift", "deauthorize-data-share" }, input)
 end
 
---- Deletes an authentication profile
---- @param input table|nil The input table for the delete_authentication_profile command
+--- AWS redshift delete-authentication-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_authentication_profile(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-authentication-profile" }, input)
 end
 
---- Deletes a previously provisioned cluster without its final snapshot being created
---- @param input table|nil The input table for the delete_cluster command
+--- AWS redshift delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-cluster" }, input)
 end
 
---- Deletes a specified Amazon Redshift parameter group
---- @param input table|nil The input table for the delete_cluster_parameter_group command
+--- AWS redshift delete-cluster-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster_parameter_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-parameter-group" }, input)
 end
 
---- Deletes an Amazon Redshift security group
---- @param input table|nil The input table for the delete_cluster_security_group command
+--- AWS redshift delete-cluster-security-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster_security_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-security-group" }, input)
 end
 
---- Deletes the specified manual snapshot
---- @param input table|nil The input table for the delete_cluster_snapshot command
+--- AWS redshift delete-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-snapshot" }, input)
 end
 
---- Deletes the specified cluster subnet group
---- @param input table|nil The input table for the delete_cluster_subnet_group command
+--- AWS redshift delete-cluster-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster_subnet_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-subnet-group" }, input)
 end
 
---- Contains information about deleting a custom domain association for a cluster
---- @param input table|nil The input table for the delete_custom_domain_association command
+--- AWS redshift delete-custom-domain-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_domain_association(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-custom-domain-association" }, input)
 end
 
---- Deletes a Redshift-managed VPC endpoint
---- @param input table|nil The input table for the delete_endpoint_access command
+--- AWS redshift delete-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-endpoint-access" }, input)
 end
 
---- Deletes an Amazon Redshift event notification subscription
---- @param input table|nil The input table for the delete_event_subscription command
+--- AWS redshift delete-event-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_subscription(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-event-subscription" }, input)
 end
 
---- Deletes the specified HSM client certificate
---- @param input table|nil The input table for the delete_hsm_client_certificate command
+--- AWS redshift delete-hsm-client-certificate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_hsm_client_certificate(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-hsm-client-certificate" }, input)
 end
 
---- Deletes the specified Amazon Redshift HSM configuration
---- @param input table|nil The input table for the delete_hsm_configuration command
+--- AWS redshift delete-hsm-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_hsm_configuration(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-hsm-configuration" }, input)
 end
 
---- Deletes a zero-ETL integration or S3 event integration with Amazon Redshift
---- @param input table|nil The input table for the delete_integration command
+--- AWS redshift delete-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-integration" }, input)
 end
 
---- Deletes a partner integration from a cluster
---- @param input table|nil The input table for the delete_partner command
+--- AWS redshift delete-partner operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_partner(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-partner" }, input)
 end
 
---- Deletes an Amazon Redshift IAM Identity Center application
---- @param input table|nil The input table for the delete_redshift_idc_application command
+--- AWS redshift delete-redshift-idc-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_redshift_idc_application(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-redshift-idc-application" }, input)
 end
 
---- Deletes the resource policy for a specified resource
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS redshift delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-resource-policy" }, input)
 end
 
---- Deletes a scheduled action
---- @param input table|nil The input table for the delete_scheduled_action command
+--- AWS redshift delete-scheduled-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scheduled_action(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-scheduled-action" }, input)
 end
 
---- Deletes the specified snapshot copy grant
---- @param input table|nil The input table for the delete_snapshot_copy_grant command
+--- AWS redshift delete-snapshot-copy-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_snapshot_copy_grant(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-snapshot-copy-grant" }, input)
 end
 
---- Deletes a snapshot schedule
---- @param input table|nil The input table for the delete_snapshot_schedule command
+--- AWS redshift delete-snapshot-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_snapshot_schedule(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-snapshot-schedule" }, input)
 end
 
---- Deletes tags from a resource
---- @param input table|nil The input table for the delete_tags command
+--- AWS redshift delete-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_tags(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-tags" }, input)
 end
 
---- Deletes a usage limit from a cluster
---- @param input table|nil The input table for the delete_usage_limit command
+--- AWS redshift delete-usage-limit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_usage_limit(input)
 	return common.execute_aws_command_with_input({ "redshift", "delete-usage-limit" }, input)
 end
 
---- Deregisters a cluster or serverless namespace from the Amazon Web Services Glue Data Catalog
---- @param input table|nil The input table for the deregister_namespace command
+--- AWS redshift deregister-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_namespace(input)
 	return common.execute_aws_command_with_input({ "redshift", "deregister-namespace" }, input)
 end
 
---- Returns a list of attributes attached to an account
---- @param input table|nil The input table for the describe_account_attributes command
+--- AWS redshift describe-account-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_attributes(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-account-attributes" }, input)
 end
 
---- Describes an authentication profile
---- @param input table|nil The input table for the describe_authentication_profiles command
+--- AWS redshift describe-authentication-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_authentication_profiles(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-authentication-profiles" }, input)
 end
 
---- Returns an array of ClusterDbRevision objects
---- @param input table|nil The input table for the describe_cluster_db_revisions command
+--- AWS redshift describe-cluster-db-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_db_revisions(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-db-revisions" }, input)
 end
 
---- Returns a list of Amazon Redshift parameter groups, including parameter groups you created and the default parameter group
---- @param input table|nil The input table for the describe_cluster_parameter_groups command
+--- AWS redshift describe-cluster-parameter-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_parameter_groups(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-parameter-groups" }, input)
 end
 
---- Returns a detailed list of parameters contained within the specified Amazon Redshift parameter group
---- @param input table|nil The input table for the describe_cluster_parameters command
+--- AWS redshift describe-cluster-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_parameters(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-parameters" }, input)
 end
 
---- Returns information about Amazon Redshift security groups
---- @param input table|nil The input table for the describe_cluster_security_groups command
+--- AWS redshift describe-cluster-security-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_security_groups(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-security-groups" }, input)
 end
 
---- Returns one or more snapshot objects, which contain metadata about your cluster snapshots
---- @param input table|nil The input table for the describe_cluster_snapshots command
+--- AWS redshift describe-cluster-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_snapshots(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-snapshots" }, input)
 end
 
---- Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups
---- @param input table|nil The input table for the describe_cluster_subnet_groups command
+--- AWS redshift describe-cluster-subnet-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_subnet_groups(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-subnet-groups" }, input)
 end
 
---- Returns a list of all the available maintenance tracks
---- @param input table|nil The input table for the describe_cluster_tracks command
+--- AWS redshift describe-cluster-tracks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_tracks(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-tracks" }, input)
 end
 
---- Returns descriptions of the available Amazon Redshift cluster versions
---- @param input table|nil The input table for the describe_cluster_versions command
+--- AWS redshift describe-cluster-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_versions(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-versions" }, input)
 end
 
---- Returns properties of provisioned clusters including general cluster properties, cluster database properties, maintenance and backup properties, and security and access properties
---- @param input table|nil The input table for the describe_clusters command
+--- AWS redshift describe-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_clusters(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-clusters" }, input)
 end
 
---- Contains information about custom domain associations for a cluster
---- @param input table|nil The input table for the describe_custom_domain_associations command
+--- AWS redshift describe-custom-domain-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_domain_associations(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-custom-domain-associations" }, input)
 end
 
---- Shows the status of any inbound or outbound datashares available in the specified account
---- @param input table|nil The input table for the describe_data_shares command
+--- AWS redshift describe-data-shares operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_shares(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares" }, input)
 end
 
---- Returns a list of datashares where the account identifier being called is a consumer account identifier
---- @param input table|nil The input table for the describe_data_shares_for_consumer command
+--- AWS redshift describe-data-shares-for-consumer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_shares_for_consumer(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares-for-consumer" }, input)
 end
 
---- Returns a list of datashares when the account identifier being called is a producer account identifier
---- @param input table|nil The input table for the describe_data_shares_for_producer command
+--- AWS redshift describe-data-shares-for-producer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_shares_for_producer(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares-for-producer" }, input)
 end
 
---- Returns a list of parameter settings for the specified parameter group family
---- @param input table|nil The input table for the describe_default_cluster_parameters command
+--- AWS redshift describe-default-cluster-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_default_cluster_parameters(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-default-cluster-parameters" }, input)
 end
 
---- Describes a Redshift-managed VPC endpoint
---- @param input table|nil The input table for the describe_endpoint_access command
+--- AWS redshift describe-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-endpoint-access" }, input)
 end
 
---- Describes an endpoint authorization
---- @param input table|nil The input table for the describe_endpoint_authorization command
+--- AWS redshift describe-endpoint-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_endpoint_authorization(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-endpoint-authorization" }, input)
 end
 
---- Displays a list of event categories for all event source types, or for a specified source type
---- @param input table|nil The input table for the describe_event_categories command
+--- AWS redshift describe-event-categories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_categories(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-event-categories" }, input)
 end
 
---- Lists descriptions of all the Amazon Redshift event notification subscriptions for a customer account
---- @param input table|nil The input table for the describe_event_subscriptions command
+--- AWS redshift describe-event-subscriptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_subscriptions(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-event-subscriptions" }, input)
 end
 
---- Returns events related to clusters, security groups, snapshots, and parameter groups for the past 14 days
---- @param input table|nil The input table for the describe_events command
+--- AWS redshift describe-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-events" }, input)
 end
 
---- Returns information about the specified HSM client certificate
---- @param input table|nil The input table for the describe_hsm_client_certificates command
+--- AWS redshift describe-hsm-client-certificates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_hsm_client_certificates(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-hsm-client-certificates" }, input)
 end
 
---- Returns information about the specified Amazon Redshift HSM configuration
---- @param input table|nil The input table for the describe_hsm_configurations command
+--- AWS redshift describe-hsm-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_hsm_configurations(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-hsm-configurations" }, input)
 end
 
---- Returns a list of inbound integrations
---- @param input table|nil The input table for the describe_inbound_integrations command
+--- AWS redshift describe-inbound-integrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_inbound_integrations(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-inbound-integrations" }, input)
 end
 
---- Describes one or more zero-ETL or S3 event integrations with Amazon Redshift
---- @param input table|nil The input table for the describe_integrations command
+--- AWS redshift describe-integrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_integrations(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-integrations" }, input)
 end
 
---- Describes whether information, such as queries and connection attempts, is being logged for the specified Amazon Redshift cluster
---- @param input table|nil The input table for the describe_logging_status command
+--- AWS redshift describe-logging-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_logging_status(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-logging-status" }, input)
 end
 
---- Returns properties of possible node configurations such as node type, number of nodes, and disk usage for the specified action type
---- @param input table|nil The input table for the describe_node_configuration_options command
+--- AWS redshift describe-node-configuration-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_node_configuration_options(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-node-configuration-options" }, input)
 end
 
---- Returns a list of orderable cluster options
---- @param input table|nil The input table for the describe_orderable_cluster_options command
+--- AWS redshift describe-orderable-cluster-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_orderable_cluster_options(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-orderable-cluster-options" }, input)
 end
 
---- Returns information about the partner integrations defined for a cluster
---- @param input table|nil The input table for the describe_partners command
+--- AWS redshift describe-partners operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_partners(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-partners" }, input)
 end
 
---- Lists the Amazon Redshift IAM Identity Center applications
---- @param input table|nil The input table for the describe_redshift_idc_applications command
+--- AWS redshift describe-redshift-idc-applications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_redshift_idc_applications(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-redshift-idc-applications" }, input)
 end
 
---- Returns exchange status details and associated metadata for a reserved-node exchange
---- @param input table|nil The input table for the describe_reserved_node_exchange_status command
+--- AWS redshift describe-reserved-node-exchange-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_node_exchange_status(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-node-exchange-status" }, input)
 end
 
---- Returns a list of the available reserved node offerings by Amazon Redshift with their descriptions including the node type, the fixed and recurring costs of reserving the node and duration the node will be reserved for you
---- @param input table|nil The input table for the describe_reserved_node_offerings command
+--- AWS redshift describe-reserved-node-offerings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_node_offerings(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-node-offerings" }, input)
 end
 
---- Returns the descriptions of the reserved nodes
---- @param input table|nil The input table for the describe_reserved_nodes command
+--- AWS redshift describe-reserved-nodes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_nodes(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-nodes" }, input)
 end
 
---- Returns information about the last resize operation for the specified cluster
---- @param input table|nil The input table for the describe_resize command
+--- AWS redshift describe-resize operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resize(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-resize" }, input)
 end
 
---- Describes properties of scheduled actions
---- @param input table|nil The input table for the describe_scheduled_actions command
+--- AWS redshift describe-scheduled-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scheduled_actions(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-scheduled-actions" }, input)
 end
 
---- Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region
---- @param input table|nil The input table for the describe_snapshot_copy_grants command
+--- AWS redshift describe-snapshot-copy-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_snapshot_copy_grants(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-snapshot-copy-grants" }, input)
 end
 
---- Returns a list of snapshot schedules
---- @param input table|nil The input table for the describe_snapshot_schedules command
+--- AWS redshift describe-snapshot-schedules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_snapshot_schedules(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-snapshot-schedules" }, input)
 end
 
---- Returns account level backups storage size and provisional storage
+--- AWS redshift describe-storage operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_storage(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-storage" }, input)
 end
 
---- Lists the status of one or more table restore requests made using the RestoreTableFromClusterSnapshot API action
---- @param input table|nil The input table for the describe_table_restore_status command
+--- AWS redshift describe-table-restore-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_table_restore_status(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-table-restore-status" }, input)
 end
 
---- Returns a list of tags
---- @param input table|nil The input table for the describe_tags command
+--- AWS redshift describe-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_tags(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-tags" }, input)
 end
 
---- Shows usage limits on a cluster
---- @param input table|nil The input table for the describe_usage_limits command
+--- AWS redshift describe-usage-limits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_usage_limits(input)
 	return common.execute_aws_command_with_input({ "redshift", "describe-usage-limits" }, input)
 end
 
---- Stops logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster
---- @param input table|nil The input table for the disable_logging command
+--- AWS redshift disable-logging operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_logging(input)
 	return common.execute_aws_command_with_input({ "redshift", "disable-logging" }, input)
 end
 
---- Disables the automatic copying of snapshots from one region to another region for a specified cluster
---- @param input table|nil The input table for the disable_snapshot_copy command
+--- AWS redshift disable-snapshot-copy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_snapshot_copy(input)
 	return common.execute_aws_command_with_input({ "redshift", "disable-snapshot-copy" }, input)
 end
 
---- From a datashare consumer account, remove association for the specified datashare
---- @param input table|nil The input table for the disassociate_data_share_consumer command
+--- AWS redshift disassociate-data-share-consumer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_data_share_consumer(input)
 	return common.execute_aws_command_with_input({ "redshift", "disassociate-data-share-consumer" }, input)
 end
 
---- Starts logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster
---- @param input table|nil The input table for the enable_logging command
+--- AWS redshift enable-logging operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_logging(input)
 	return common.execute_aws_command_with_input({ "redshift", "enable-logging" }, input)
 end
 
---- Enables the automatic copy of snapshots from one region to another region for a specified cluster
---- @param input table|nil The input table for the enable_snapshot_copy command
+--- AWS redshift enable-snapshot-copy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_snapshot_copy(input)
 	return common.execute_aws_command_with_input({ "redshift", "enable-snapshot-copy" }, input)
 end
 
---- Fails over the primary compute unit of the specified Multi-AZ cluster to another Availability Zone
---- @param input table|nil The input table for the failover_primary_compute command
+--- AWS redshift failover-primary-compute operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.failover_primary_compute(input)
 	return common.execute_aws_command_with_input({ "redshift", "failover-primary-compute" }, input)
 end
 
---- Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database
---- @param input table|nil The input table for the get_cluster_credentials command
+--- AWS redshift get-cluster-credentials operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster_credentials(input)
 	return common.execute_aws_command_with_input({ "redshift", "get-cluster-credentials" }, input)
 end
 
---- Returns a database user name and temporary password with temporary authorization to log in to an Amazon Redshift database
---- @param input table|nil The input table for the get_cluster_credentials_with_iam command
+--- AWS redshift get-cluster-credentials-with-iam operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster_credentials_with_iam(input)
 	return common.execute_aws_command_with_input({ "redshift", "get-cluster-credentials-with-iam" }, input)
 end
 
---- Gets the configuration options for the reserved-node exchange
---- @param input table|nil The input table for the get_reserved_node_exchange_configuration_options command
+--- AWS redshift get-reserved-node-exchange-configuration-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_reserved_node_exchange_configuration_options(input)
 	return common.execute_aws_command_with_input({ "redshift", "get-reserved-node-exchange-configuration-options" }, input)
 end
 
---- Returns an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1 reserved node
---- @param input table|nil The input table for the get_reserved_node_exchange_offerings command
+--- AWS redshift get-reserved-node-exchange-offerings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_reserved_node_exchange_offerings(input)
 	return common.execute_aws_command_with_input({ "redshift", "get-reserved-node-exchange-offerings" }, input)
 end
 
---- Get the resource policy for a specified resource
---- @param input table|nil The input table for the get_resource_policy command
+--- AWS redshift get-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "redshift", "get-resource-policy" }, input)
 end
 
---- List the Amazon Redshift Advisor recommendations for one or multiple Amazon Redshift clusters in an Amazon Web Services account
---- @param input table|nil The input table for the list_recommendations command
+--- AWS redshift help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "redshift", "help" }, input)
+end
+
+--- AWS redshift list-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendations(input)
 	return common.execute_aws_command_with_input({ "redshift", "list-recommendations" }, input)
 end
 
---- This operation is retired
---- @param input table|nil The input table for the modify_aqua_configuration command
+--- AWS redshift modify-aqua-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_aqua_configuration(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-aqua-configuration" }, input)
 end
 
---- Modifies an authentication profile
---- @param input table|nil The input table for the modify_authentication_profile command
+--- AWS redshift modify-authentication-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_authentication_profile(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-authentication-profile" }, input)
 end
 
---- Modifies the settings for a cluster
---- @param input table|nil The input table for the modify_cluster command
+--- AWS redshift modify-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster" }, input)
 end
 
---- Modifies the database revision of a cluster
---- @param input table|nil The input table for the modify_cluster_db_revision command
+--- AWS redshift modify-cluster-db-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_db_revision(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-db-revision" }, input)
 end
 
---- Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services
---- @param input table|nil The input table for the modify_cluster_iam_roles command
+--- AWS redshift modify-cluster-iam-roles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_iam_roles(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-iam-roles" }, input)
 end
 
---- Modifies the maintenance settings of a cluster
---- @param input table|nil The input table for the modify_cluster_maintenance command
+--- AWS redshift modify-cluster-maintenance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_maintenance(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-maintenance" }, input)
 end
 
---- Modifies the parameters of a parameter group
---- @param input table|nil The input table for the modify_cluster_parameter_group command
+--- AWS redshift modify-cluster-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_parameter_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-parameter-group" }, input)
 end
 
---- Modifies the settings for a snapshot
---- @param input table|nil The input table for the modify_cluster_snapshot command
+--- AWS redshift modify-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-snapshot" }, input)
 end
 
---- Modifies a snapshot schedule for a cluster
---- @param input table|nil The input table for the modify_cluster_snapshot_schedule command
+--- AWS redshift modify-cluster-snapshot-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_snapshot_schedule(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-snapshot-schedule" }, input)
 end
 
---- Modifies a cluster subnet group to include the specified list of VPC subnets
---- @param input table|nil The input table for the modify_cluster_subnet_group command
+--- AWS redshift modify-cluster-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cluster_subnet_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-subnet-group" }, input)
 end
 
---- Contains information for changing a custom domain association
---- @param input table|nil The input table for the modify_custom_domain_association command
+--- AWS redshift modify-custom-domain-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_custom_domain_association(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-custom-domain-association" }, input)
 end
 
---- Modifies a Redshift-managed VPC endpoint
---- @param input table|nil The input table for the modify_endpoint_access command
+--- AWS redshift modify-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-endpoint-access" }, input)
 end
 
---- Modifies an existing Amazon Redshift event notification subscription
---- @param input table|nil The input table for the modify_event_subscription command
+--- AWS redshift modify-event-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_event_subscription(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-event-subscription" }, input)
 end
 
---- Modifies a zero-ETL integration or S3 event integration with Amazon Redshift
---- @param input table|nil The input table for the modify_integration command
+--- AWS redshift modify-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_integration(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-integration" }, input)
 end
 
---- Changes an existing Amazon Redshift IAM Identity Center application
---- @param input table|nil The input table for the modify_redshift_idc_application command
+--- AWS redshift modify-redshift-idc-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_redshift_idc_application(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-redshift-idc-application" }, input)
 end
 
---- Modifies a scheduled action
---- @param input table|nil The input table for the modify_scheduled_action command
+--- AWS redshift modify-scheduled-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_scheduled_action(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-scheduled-action" }, input)
 end
 
---- Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region
---- @param input table|nil The input table for the modify_snapshot_copy_retention_period command
+--- AWS redshift modify-snapshot-copy-retention-period operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_snapshot_copy_retention_period(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-snapshot-copy-retention-period" }, input)
 end
 
---- Modifies a snapshot schedule
---- @param input table|nil The input table for the modify_snapshot_schedule command
+--- AWS redshift modify-snapshot-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_snapshot_schedule(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-snapshot-schedule" }, input)
 end
 
---- Modifies a usage limit in a cluster
---- @param input table|nil The input table for the modify_usage_limit command
+--- AWS redshift modify-usage-limit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_usage_limit(input)
 	return common.execute_aws_command_with_input({ "redshift", "modify-usage-limit" }, input)
 end
 
---- Pauses a cluster
---- @param input table|nil The input table for the pause_cluster command
+--- AWS redshift pause-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.pause_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "pause-cluster" }, input)
 end
 
---- Allows you to purchase reserved nodes
---- @param input table|nil The input table for the purchase_reserved_node_offering command
+--- AWS redshift purchase-reserved-node-offering operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purchase_reserved_node_offering(input)
 	return common.execute_aws_command_with_input({ "redshift", "purchase-reserved-node-offering" }, input)
 end
 
---- Updates the resource policy for a specified resource
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS redshift put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "redshift", "put-resource-policy" }, input)
 end
 
---- Reboots a cluster
---- @param input table|nil The input table for the reboot_cluster command
+--- AWS redshift reboot-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "reboot-cluster" }, input)
 end
 
---- Registers a cluster or serverless namespace to the Amazon Web Services Glue Data Catalog
---- @param input table|nil The input table for the register_namespace command
+--- AWS redshift register-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_namespace(input)
 	return common.execute_aws_command_with_input({ "redshift", "register-namespace" }, input)
 end
 
---- From a datashare consumer account, rejects the specified datashare
---- @param input table|nil The input table for the reject_data_share command
+--- AWS redshift reject-data-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_data_share(input)
 	return common.execute_aws_command_with_input({ "redshift", "reject-data-share" }, input)
 end
 
---- Sets one or more parameters of the specified parameter group to their default values and sets the source values of the parameters to "engine-default"
---- @param input table|nil The input table for the reset_cluster_parameter_group command
+--- AWS redshift reset-cluster-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_cluster_parameter_group(input)
 	return common.execute_aws_command_with_input({ "redshift", "reset-cluster-parameter-group" }, input)
 end
 
---- Changes the size of the cluster
---- @param input table|nil The input table for the resize_cluster command
+--- AWS redshift resize-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resize_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "resize-cluster" }, input)
 end
 
---- Creates a new cluster from a snapshot
---- @param input table|nil The input table for the restore_from_cluster_snapshot command
+--- AWS redshift restore-from-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_from_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "restore-from-cluster-snapshot" }, input)
 end
 
---- Creates a new table from a table in an Amazon Redshift cluster snapshot
---- @param input table|nil The input table for the restore_table_from_cluster_snapshot command
+--- AWS redshift restore-table-from-cluster-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_table_from_cluster_snapshot(input)
 	return common.execute_aws_command_with_input({ "redshift", "restore-table-from-cluster-snapshot" }, input)
 end
 
---- Resumes a paused cluster
---- @param input table|nil The input table for the resume_cluster command
+--- AWS redshift resume-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_cluster(input)
 	return common.execute_aws_command_with_input({ "redshift", "resume-cluster" }, input)
 end
 
---- Revokes an ingress rule in an Amazon Redshift security group for a previously authorized IP range or Amazon EC2 security group
---- @param input table|nil The input table for the revoke_cluster_security_group_ingress command
+--- AWS redshift revoke-cluster-security-group-ingress operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_cluster_security_group_ingress(input)
 	return common.execute_aws_command_with_input({ "redshift", "revoke-cluster-security-group-ingress" }, input)
 end
 
---- Revokes access to a cluster
---- @param input table|nil The input table for the revoke_endpoint_access command
+--- AWS redshift revoke-endpoint-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_endpoint_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "revoke-endpoint-access" }, input)
 end
 
---- Removes the ability of the specified Amazon Web Services account to restore the specified snapshot
---- @param input table|nil The input table for the revoke_snapshot_access command
+--- AWS redshift revoke-snapshot-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_snapshot_access(input)
 	return common.execute_aws_command_with_input({ "redshift", "revoke-snapshot-access" }, input)
 end
 
---- Rotates the encryption keys for a cluster
---- @param input table|nil The input table for the rotate_encryption_key command
+--- AWS redshift rotate-encryption-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rotate_encryption_key(input)
 	return common.execute_aws_command_with_input({ "redshift", "rotate-encryption-key" }, input)
 end
 
---- Updates the status of a partner integration
---- @param input table|nil The input table for the update_partner_status command
+--- AWS redshift update-partner-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_partner_status(input)
 	return common.execute_aws_command_with_input({ "redshift", "update-partner-status" }, input)

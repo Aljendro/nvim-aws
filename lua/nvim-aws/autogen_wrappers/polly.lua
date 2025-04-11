@@ -6,67 +6,67 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS POLLY service functions
 local M = {}
 
---- Deletes the specified pronunciation lexicon stored in an Amazon Web Services Region
---- @param input table|nil The input table for the delete_lexicon command
+--- AWS polly delete-lexicon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lexicon(input)
 	return common.execute_aws_command_with_input({ "polly", "delete-lexicon" }, input)
 end
 
---- Returns the list of voices that are available for use when requesting speech synthesis
---- @param input table|nil The input table for the describe_voices command
+--- AWS polly describe-voices operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_voices(input)
 	return common.execute_aws_command_with_input({ "polly", "describe-voices" }, input)
 end
 
---- Returns the content of the specified pronunciation lexicon stored in an Amazon Web Services Region
---- @param input table|nil The input table for the get_lexicon command
+--- AWS polly get-lexicon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lexicon(input)
 	return common.execute_aws_command_with_input({ "polly", "get-lexicon" }, input)
 end
 
---- Retrieves a specific SpeechSynthesisTask object based on its TaskID
---- @param input table|nil The input table for the get_speech_synthesis_task command
+--- AWS polly get-speech-synthesis-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_speech_synthesis_task(input)
 	return common.execute_aws_command_with_input({ "polly", "get-speech-synthesis-task" }, input)
 end
 
---- Returns a list of pronunciation lexicons stored in an Amazon Web Services Region
---- @param input table|nil The input table for the list_lexicons command
+--- AWS polly help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "polly", "help" }, input)
+end
+
+--- AWS polly list-lexicons operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lexicons(input)
 	return common.execute_aws_command_with_input({ "polly", "list-lexicons" }, input)
 end
 
---- Returns a list of SpeechSynthesisTask objects ordered by their creation date
---- @param input table|nil The input table for the list_speech_synthesis_tasks command
+--- AWS polly list-speech-synthesis-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_speech_synthesis_tasks(input)
 	return common.execute_aws_command_with_input({ "polly", "list-speech-synthesis-tasks" }, input)
 end
 
---- Stores a pronunciation lexicon in an Amazon Web Services Region
---- @param input table|nil The input table for the put_lexicon command
+--- AWS polly put-lexicon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_lexicon(input)
 	return common.execute_aws_command_with_input({ "polly", "put-lexicon" }, input)
 end
 
---- Allows the creation of an asynchronous synthesis task, by starting a new SpeechSynthesisTask
---- @param input table|nil The input table for the start_speech_synthesis_task command
+--- AWS polly start-speech-synthesis-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_speech_synthesis_task(input)
 	return common.execute_aws_command_with_input({ "polly", "start-speech-synthesis-task" }, input)
-end
-
---- Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes
---- @param input table|nil The input table for the synthesize_speech command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.synthesize_speech(input)
-	return common.execute_aws_command_with_input({ "polly", "synthesize-speech" }, input)
 end
 
 return M

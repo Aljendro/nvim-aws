@@ -2610,6 +2610,11 @@ describe("AWS ec2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_client_vpn_client_certificate_revocation_list", function()
 		local result = service.import_client_vpn_client_certificate_revocation_list()
 		assert.is_true(result.success)
@@ -2620,11 +2625,6 @@ describe("AWS ec2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with import_instance", function()
-		local result = service.import_instance()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with import_key_pair", function()
 		local result = service.import_key_pair()
 		assert.is_true(result.success)
@@ -2632,11 +2632,6 @@ describe("AWS ec2 service testing", function()
 
 	it("should generate a cli skeleton with import_snapshot", function()
 		local result = service.import_snapshot()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with import_volume", function()
-		local result = service.import_volume()
 		assert.is_true(result.success)
 	end)
 

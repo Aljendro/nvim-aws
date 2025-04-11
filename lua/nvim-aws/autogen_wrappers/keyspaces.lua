@@ -6,134 +6,141 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KEYSPACES service functions
 local M = {}
 
---- The CreateKeyspace operation adds a new keyspace to your account
---- @param input table|nil The input table for the create_keyspace command
+--- AWS keyspaces create-keyspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_keyspace(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "create-keyspace" }, input)
 end
 
---- The CreateTable operation adds a new table to the specified keyspace
---- @param input table|nil The input table for the create_table command
+--- AWS keyspaces create-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "create-table" }, input)
 end
 
---- The CreateType operation creates a new user-defined type in the specified keyspace
---- @param input table|nil The input table for the create_type command
+--- AWS keyspaces create-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_type(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "create-type" }, input)
 end
 
---- The DeleteKeyspace operation deletes a keyspace and all of its tables
---- @param input table|nil The input table for the delete_keyspace command
+--- AWS keyspaces delete-keyspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_keyspace(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "delete-keyspace" }, input)
 end
 
---- The DeleteTable operation deletes a table and all of its data
---- @param input table|nil The input table for the delete_table command
+--- AWS keyspaces delete-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "delete-table" }, input)
 end
 
---- The DeleteType operation deletes a user-defined type (UDT)
---- @param input table|nil The input table for the delete_type command
+--- AWS keyspaces delete-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_type(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "delete-type" }, input)
 end
 
---- Returns the name of the specified keyspace, the Amazon Resource Name (ARN), the replication strategy, the Amazon Web Services Regions of a multi-Region keyspace, and the status of newly added Regions after an UpdateKeyspace operation
---- @param input table|nil The input table for the get_keyspace command
+--- AWS keyspaces get-keyspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_keyspace(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "get-keyspace" }, input)
 end
 
---- Returns information about the table, including the table's name and current status, the keyspace name, configuration settings, and metadata
---- @param input table|nil The input table for the get_table command
+--- AWS keyspaces get-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "get-table" }, input)
 end
 
---- Returns auto scaling related settings of the specified table in JSON format
---- @param input table|nil The input table for the get_table_auto_scaling_settings command
+--- AWS keyspaces get-table-auto-scaling-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_auto_scaling_settings(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "get-table-auto-scaling-settings" }, input)
 end
 
---- The GetType operation returns information about the type, for example the field definitions, the timestamp when the type was last modified, the level of nesting, the status, and details about if the type is used in other types and tables
---- @param input table|nil The input table for the get_type command
+--- AWS keyspaces get-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_type(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "get-type" }, input)
 end
 
---- The ListKeyspaces operation returns a list of keyspaces
---- @param input table|nil The input table for the list_keyspaces command
+--- AWS keyspaces help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "keyspaces", "help" }, input)
+end
+
+--- AWS keyspaces list-keyspaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_keyspaces(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "list-keyspaces" }, input)
 end
 
---- The ListTables operation returns a list of tables for a specified keyspace
---- @param input table|nil The input table for the list_tables command
+--- AWS keyspaces list-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tables(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "list-tables" }, input)
 end
 
---- Returns a list of all tags associated with the specified Amazon Keyspaces resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS keyspaces list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "list-tags-for-resource" }, input)
 end
 
---- The ListTypes operation returns a list of types for a specified keyspace
---- @param input table|nil The input table for the list_types command
+--- AWS keyspaces list-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_types(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "list-types" }, input)
 end
 
---- Restores the table to the specified point in time within the earliest_restorable_timestamp and the current time
---- @param input table|nil The input table for the restore_table command
+--- AWS keyspaces restore-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_table(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "restore-table" }, input)
 end
 
---- Associates a set of tags with a Amazon Keyspaces resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS keyspaces tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "tag-resource" }, input)
 end
 
---- Removes the association of tags from a Amazon Keyspaces resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS keyspaces untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "untag-resource" }, input)
 end
 
---- Adds a new Amazon Web Services Region to the keyspace
---- @param input table|nil The input table for the update_keyspace command
+--- AWS keyspaces update-keyspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_keyspace(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "update-keyspace" }, input)
 end
 
---- Adds new columns to the table or updates one of the table's settings, for example capacity mode, auto scaling, encryption, point-in-time recovery, or ttl settings
---- @param input table|nil The input table for the update_table command
+--- AWS keyspaces update-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table(input)
 	return common.execute_aws_command_with_input({ "keyspaces", "update-table" }, input)

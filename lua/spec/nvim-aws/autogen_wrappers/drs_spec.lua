@@ -135,6 +135,11 @@ describe("AWS drs service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with initialize_service", function()
 		local result = service.initialize_service()
 		assert.is_true(result.success)
@@ -165,18 +170,28 @@ describe("AWS drs service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with retry_data_replication", function()
-		local result = service.retry_data_replication()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with reverse_replication", function()
 		local result = service.reverse_replication()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with start_failback_launch", function()
+		local result = service.start_failback_launch()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with start_recovery", function()
+		local result = service.start_recovery()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with start_replication", function()
 		local result = service.start_replication()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with start_source_network_recovery", function()
+		local result = service.start_source_network_recovery()
 		assert.is_true(result.success)
 	end)
 
@@ -202,6 +217,11 @@ describe("AWS drs service testing", function()
 
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with terminate_recovery_instances", function()
+		local result = service.terminate_recovery_instances()
 		assert.is_true(result.success)
 	end)
 

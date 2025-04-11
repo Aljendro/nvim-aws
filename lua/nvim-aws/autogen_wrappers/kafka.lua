@@ -6,365 +6,372 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KAFKA service functions
 local M = {}
 
---- Associates one or more Scram Secrets with an Amazon MSK cluster
---- @param input table|nil The input table for the batch_associate_scram_secret command
+--- AWS kafka batch-associate-scram-secret operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_scram_secret(input)
 	return common.execute_aws_command_with_input({ "kafka", "batch-associate-scram-secret" }, input)
 end
 
---- Disassociates one or more Scram Secrets from an Amazon MSK cluster
---- @param input table|nil The input table for the batch_disassociate_scram_secret command
+--- AWS kafka batch-disassociate-scram-secret operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_scram_secret(input)
 	return common.execute_aws_command_with_input({ "kafka", "batch-disassociate-scram-secret" }, input)
 end
 
---- Creates a new MSK cluster
---- @param input table|nil The input table for the create_cluster command
+--- AWS kafka create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "kafka", "create-cluster" }, input)
 end
 
---- Creates a new MSK cluster
---- @param input table|nil The input table for the create_cluster_v2 command
+--- AWS kafka create-cluster-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster_v2(input)
 	return common.execute_aws_command_with_input({ "kafka", "create-cluster-v2" }, input)
 end
 
---- Creates a new MSK configuration
---- @param input table|nil The input table for the create_configuration command
+--- AWS kafka create-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration(input)
 	return common.execute_aws_command_with_input({ "kafka", "create-configuration" }, input)
 end
 
---- Creates the replicator
---- @param input table|nil The input table for the create_replicator command
+--- AWS kafka create-replicator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replicator(input)
 	return common.execute_aws_command_with_input({ "kafka", "create-replicator" }, input)
 end
 
---- Creates a new MSK VPC connection
---- @param input table|nil The input table for the create_vpc_connection command
+--- AWS kafka create-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "kafka", "create-vpc-connection" }, input)
 end
 
---- Deletes the MSK cluster specified by the Amazon Resource Name (ARN) in the request
---- @param input table|nil The input table for the delete_cluster command
+--- AWS kafka delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "kafka", "delete-cluster" }, input)
 end
 
---- Deletes the MSK cluster policy specified by the Amazon Resource Name (ARN) in the request
---- @param input table|nil The input table for the delete_cluster_policy command
+--- AWS kafka delete-cluster-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster_policy(input)
 	return common.execute_aws_command_with_input({ "kafka", "delete-cluster-policy" }, input)
 end
 
---- Deletes an MSK Configuration
---- @param input table|nil The input table for the delete_configuration command
+--- AWS kafka delete-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration(input)
 	return common.execute_aws_command_with_input({ "kafka", "delete-configuration" }, input)
 end
 
---- Deletes a replicator
---- @param input table|nil The input table for the delete_replicator command
+--- AWS kafka delete-replicator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replicator(input)
 	return common.execute_aws_command_with_input({ "kafka", "delete-replicator" }, input)
 end
 
---- Deletes a MSK VPC connection
---- @param input table|nil The input table for the delete_vpc_connection command
+--- AWS kafka delete-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "kafka", "delete-vpc-connection" }, input)
 end
 
---- Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request
---- @param input table|nil The input table for the describe_cluster command
+--- AWS kafka describe-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-cluster" }, input)
 end
 
---- Returns a description of the cluster operation specified by the ARN
---- @param input table|nil The input table for the describe_cluster_operation command
+--- AWS kafka describe-cluster-operation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_operation(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-cluster-operation" }, input)
 end
 
---- Returns a description of the cluster operation specified by the ARN
---- @param input table|nil The input table for the describe_cluster_operation_v2 command
+--- AWS kafka describe-cluster-operation-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_operation_v2(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-cluster-operation-v2" }, input)
 end
 
---- Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request
---- @param input table|nil The input table for the describe_cluster_v2 command
+--- AWS kafka describe-cluster-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_v2(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-cluster-v2" }, input)
 end
 
---- Returns a description of this MSK configuration
---- @param input table|nil The input table for the describe_configuration command
+--- AWS kafka describe-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-configuration" }, input)
 end
 
---- Returns a description of this revision of the configuration
---- @param input table|nil The input table for the describe_configuration_revision command
+--- AWS kafka describe-configuration-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_revision(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-configuration-revision" }, input)
 end
 
---- Describes a replicator
---- @param input table|nil The input table for the describe_replicator command
+--- AWS kafka describe-replicator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_replicator(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-replicator" }, input)
 end
 
---- Returns a description of this MSK VPC connection
---- @param input table|nil The input table for the describe_vpc_connection command
+--- AWS kafka describe-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "kafka", "describe-vpc-connection" }, input)
 end
 
---- A list of brokers that a client application can use to bootstrap
---- @param input table|nil The input table for the get_bootstrap_brokers command
+--- AWS kafka get-bootstrap-brokers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bootstrap_brokers(input)
 	return common.execute_aws_command_with_input({ "kafka", "get-bootstrap-brokers" }, input)
 end
 
---- Get the MSK cluster policy specified by the Amazon Resource Name (ARN) in the request
---- @param input table|nil The input table for the get_cluster_policy command
+--- AWS kafka get-cluster-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster_policy(input)
 	return common.execute_aws_command_with_input({ "kafka", "get-cluster-policy" }, input)
 end
 
---- Gets the Apache Kafka versions to which you can update the MSK cluster
---- @param input table|nil The input table for the get_compatible_kafka_versions command
+--- AWS kafka get-compatible-kafka-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compatible_kafka_versions(input)
 	return common.execute_aws_command_with_input({ "kafka", "get-compatible-kafka-versions" }, input)
 end
 
---- Returns a list of all the VPC connections in this Region
---- @param input table|nil The input table for the list_client_vpc_connections command
+--- AWS kafka help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "kafka", "help" }, input)
+end
+
+--- AWS kafka list-client-vpc-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_client_vpc_connections(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-client-vpc-connections" }, input)
 end
 
---- Returns a list of all the operations that have been performed on the specified MSK cluster
---- @param input table|nil The input table for the list_cluster_operations command
+--- AWS kafka list-cluster-operations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cluster_operations(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-cluster-operations" }, input)
 end
 
---- Returns a list of all the operations that have been performed on the specified MSK cluster
---- @param input table|nil The input table for the list_cluster_operations_v2 command
+--- AWS kafka list-cluster-operations-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cluster_operations_v2(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-cluster-operations-v2" }, input)
 end
 
---- Returns a list of all the MSK clusters in the current Region
---- @param input table|nil The input table for the list_clusters command
+--- AWS kafka list-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_clusters(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-clusters" }, input)
 end
 
---- Returns a list of all the MSK clusters in the current Region
---- @param input table|nil The input table for the list_clusters_v2 command
+--- AWS kafka list-clusters-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_clusters_v2(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-clusters-v2" }, input)
 end
 
---- Returns a list of all the MSK configurations in this Region
---- @param input table|nil The input table for the list_configuration_revisions command
+--- AWS kafka list-configuration-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_revisions(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-configuration-revisions" }, input)
 end
 
---- Returns a list of all the MSK configurations in this Region
---- @param input table|nil The input table for the list_configurations command
+--- AWS kafka list-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configurations(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-configurations" }, input)
 end
 
---- Returns a list of Apache Kafka versions
---- @param input table|nil The input table for the list_kafka_versions command
+--- AWS kafka list-kafka-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_kafka_versions(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-kafka-versions" }, input)
 end
 
---- Returns a list of the broker nodes in the cluster
---- @param input table|nil The input table for the list_nodes command
+--- AWS kafka list-nodes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_nodes(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-nodes" }, input)
 end
 
---- Lists the replicators
---- @param input table|nil The input table for the list_replicators command
+--- AWS kafka list-replicators operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_replicators(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-replicators" }, input)
 end
 
---- Returns a list of the Scram Secrets associated with an Amazon MSK cluster
---- @param input table|nil The input table for the list_scram_secrets command
+--- AWS kafka list-scram-secrets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scram_secrets(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-scram-secrets" }, input)
 end
 
---- Returns a list of the tags associated with the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS kafka list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-tags-for-resource" }, input)
 end
 
---- Returns a list of all the VPC connections in this Region
---- @param input table|nil The input table for the list_vpc_connections command
+--- AWS kafka list-vpc-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vpc_connections(input)
 	return common.execute_aws_command_with_input({ "kafka", "list-vpc-connections" }, input)
 end
 
---- Creates or updates the MSK cluster policy specified by the cluster Amazon Resource Name (ARN) in the request
---- @param input table|nil The input table for the put_cluster_policy command
+--- AWS kafka put-cluster-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_cluster_policy(input)
 	return common.execute_aws_command_with_input({ "kafka", "put-cluster-policy" }, input)
 end
 
---- Reboots brokers
---- @param input table|nil The input table for the reboot_broker command
+--- AWS kafka reboot-broker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_broker(input)
 	return common.execute_aws_command_with_input({ "kafka", "reboot-broker" }, input)
 end
 
---- Returns empty response
---- @param input table|nil The input table for the reject_client_vpc_connection command
+--- AWS kafka reject-client-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_client_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "kafka", "reject-client-vpc-connection" }, input)
 end
 
---- Adds tags to the specified MSK resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS kafka tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "kafka", "tag-resource" }, input)
 end
 
---- Removes the tags associated with the keys that are provided in the query
---- @param input table|nil The input table for the untag_resource command
+--- AWS kafka untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "kafka", "untag-resource" }, input)
 end
 
---- Updates the number of broker nodes in the cluster
---- @param input table|nil The input table for the update_broker_count command
+--- AWS kafka update-broker-count operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_broker_count(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-broker-count" }, input)
 end
 
---- Updates the EBS storage associated with MSK brokers
---- @param input table|nil The input table for the update_broker_storage command
+--- AWS kafka update-broker-storage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_broker_storage(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-broker-storage" }, input)
 end
 
---- Updates EC2 instance type
---- @param input table|nil The input table for the update_broker_type command
+--- AWS kafka update-broker-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_broker_type(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-broker-type" }, input)
 end
 
---- Updates the cluster with the configuration that is specified in the request body
---- @param input table|nil The input table for the update_cluster_configuration command
+--- AWS kafka update-cluster-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster_configuration(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-cluster-configuration" }, input)
 end
 
---- Updates the Apache Kafka version for the cluster
---- @param input table|nil The input table for the update_cluster_kafka_version command
+--- AWS kafka update-cluster-kafka-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster_kafka_version(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-cluster-kafka-version" }, input)
 end
 
---- Updates an MSK configuration
---- @param input table|nil The input table for the update_configuration command
+--- AWS kafka update-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-configuration" }, input)
 end
 
---- Updates the cluster's connectivity configuration
---- @param input table|nil The input table for the update_connectivity command
+--- AWS kafka update-connectivity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connectivity(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-connectivity" }, input)
 end
 
---- Updates the monitoring settings for the cluster
---- @param input table|nil The input table for the update_monitoring command
+--- AWS kafka update-monitoring operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_monitoring(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-monitoring" }, input)
 end
 
---- Updates replication info of a replicator
---- @param input table|nil The input table for the update_replication_info command
+--- AWS kafka update-replication-info operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_info(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-replication-info" }, input)
 end
 
---- Updates the security settings for the cluster
---- @param input table|nil The input table for the update_security command
+--- AWS kafka update-security operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_security(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-security" }, input)
 end
 
---- Updates cluster broker volume size (or) sets cluster storage mode to TIERED
---- @param input table|nil The input table for the update_storage command
+--- AWS kafka update-storage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_storage(input)
 	return common.execute_aws_command_with_input({ "kafka", "update-storage" }, input)

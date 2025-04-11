@@ -10,11 +10,6 @@ describe("AWS securityhub service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with accept_invitation", function()
-		local result = service.accept_invitation()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with batch_delete_automation_rules", function()
 		local result = service.batch_delete_automation_rules()
 		assert.is_true(result.success)
@@ -185,11 +180,6 @@ describe("AWS securityhub service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with disassociate_from_master_account", function()
-		local result = service.disassociate_from_master_account()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with disassociate_members", function()
 		local result = service.disassociate_members()
 		assert.is_true(result.success)
@@ -260,11 +250,6 @@ describe("AWS securityhub service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_master_account", function()
-		local result = service.get_master_account()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_members", function()
 		local result = service.get_members()
 		assert.is_true(result.success)
@@ -272,6 +257,11 @@ describe("AWS securityhub service testing", function()
 
 	it("should generate a cli skeleton with get_security_control_definition", function()
 		local result = service.get_security_control_definition()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -6,50 +6,57 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ARTIFACT service functions
 local M = {}
 
---- Get the account settings for Artifact
---- @param input table|nil The input table for the get_account_settings command
+--- AWS artifact get-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-account-settings" }, input)
 end
 
---- Get the content for a single report
---- @param input table|nil The input table for the get_report command
+--- AWS artifact get-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-report" }, input)
 end
 
---- Get the metadata for a single report
---- @param input table|nil The input table for the get_report_metadata command
+--- AWS artifact get-report-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_report_metadata(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-report-metadata" }, input)
 end
 
---- Get the Term content associated with a single report
---- @param input table|nil The input table for the get_term_for_report command
+--- AWS artifact get-term-for-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_term_for_report(input)
 	return common.execute_aws_command_with_input({ "artifact", "get-term-for-report" }, input)
 end
 
---- List active customer-agreements applicable to calling identity
---- @param input table|nil The input table for the list_customer_agreements command
+--- AWS artifact help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "artifact", "help" }, input)
+end
+
+--- AWS artifact list-customer-agreements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_customer_agreements(input)
 	return common.execute_aws_command_with_input({ "artifact", "list-customer-agreements" }, input)
 end
 
---- List available reports
---- @param input table|nil The input table for the list_reports command
+--- AWS artifact list-reports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reports(input)
 	return common.execute_aws_command_with_input({ "artifact", "list-reports" }, input)
 end
 
---- Put the account settings for Artifact
---- @param input table|nil The input table for the put_account_settings command
+--- AWS artifact put-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_settings(input)
 	return common.execute_aws_command_with_input({ "artifact", "put-account-settings" }, input)

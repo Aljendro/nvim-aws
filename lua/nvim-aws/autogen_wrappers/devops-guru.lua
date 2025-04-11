@@ -6,218 +6,225 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DEVOPS-GURU service functions
 local M = {}
 
---- Adds a notification channel to DevOps Guru
---- @param input table|nil The input table for the add_notification_channel command
+--- AWS devops-guru add-notification-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_notification_channel(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "add-notification-channel" }, input)
 end
 
---- Deletes the insight along with the associated anomalies, events and recommendations
---- @param input table|nil The input table for the delete_insight command
+--- AWS devops-guru delete-insight operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_insight(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "delete-insight" }, input)
 end
 
---- Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics analyzed in your Amazon Web Services account
---- @param input table|nil The input table for the describe_account_health command
+--- AWS devops-guru describe-account-health operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_health(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-account-health" }, input)
 end
 
---- For the time range passed in, returns the number of open reactive insight that were created, the number of open proactive insights that were created, and the Mean Time to Recover (MTTR) for all closed reactive insights
---- @param input table|nil The input table for the describe_account_overview command
+--- AWS devops-guru describe-account-overview operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_overview(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-account-overview" }, input)
 end
 
---- Returns details about an anomaly that you specify using its ID
---- @param input table|nil The input table for the describe_anomaly command
+--- AWS devops-guru describe-anomaly operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_anomaly(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-anomaly" }, input)
 end
 
---- Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge
---- @param input table|nil The input table for the describe_event_sources_config command
+--- AWS devops-guru describe-event-sources-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_sources_config(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-event-sources-config" }, input)
 end
 
---- Returns the most recent feedback submitted in the current Amazon Web Services account and Region
---- @param input table|nil The input table for the describe_feedback command
+--- AWS devops-guru describe-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_feedback(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-feedback" }, input)
 end
 
---- Returns details about an insight that you specify using its ID
---- @param input table|nil The input table for the describe_insight command
+--- AWS devops-guru describe-insight operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_insight(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-insight" }, input)
 end
 
---- Returns active insights, predictive insights, and resource hours analyzed in last hour
---- @param input table|nil The input table for the describe_organization_health command
+--- AWS devops-guru describe-organization-health operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_health(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-health" }, input)
 end
 
---- Returns an overview of your organization's history based on the specified time range
---- @param input table|nil The input table for the describe_organization_overview command
+--- AWS devops-guru describe-organization-overview operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_overview(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-overview" }, input)
 end
 
---- Provides an overview of your system's health
---- @param input table|nil The input table for the describe_organization_resource_collection_health command
+--- AWS devops-guru describe-organization-resource-collection-health operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_resource_collection_health(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-resource-collection-health" }, input)
 end
 
---- Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all closed insights in resource collections in your account
---- @param input table|nil The input table for the describe_resource_collection_health command
+--- AWS devops-guru describe-resource-collection-health operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource_collection_health(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-resource-collection-health" }, input)
 end
 
---- Returns the integration status of services that are integrated with DevOps Guru
---- @param input table|nil The input table for the describe_service_integration command
+--- AWS devops-guru describe-service-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_service_integration(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "describe-service-integration" }, input)
 end
 
---- Returns an estimate of the monthly cost for DevOps Guru to analyze your Amazon Web Services resources
---- @param input table|nil The input table for the get_cost_estimation command
+--- AWS devops-guru get-cost-estimation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cost_estimation(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "get-cost-estimation" }, input)
 end
 
---- Returns lists Amazon Web Services resources that are of the specified resource collection type
---- @param input table|nil The input table for the get_resource_collection command
+--- AWS devops-guru get-resource-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_collection(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "get-resource-collection" }, input)
 end
 
---- Returns a list of the anomalies that belong to an insight that you specify using its ID
---- @param input table|nil The input table for the list_anomalies_for_insight command
+--- AWS devops-guru help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "devops-guru", "help" }, input)
+end
+
+--- AWS devops-guru list-anomalies-for-insight operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomalies_for_insight(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-anomalies-for-insight" }, input)
 end
 
---- Returns the list of log groups that contain log anomalies
---- @param input table|nil The input table for the list_anomalous_log_groups command
+--- AWS devops-guru list-anomalous-log-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomalous_log_groups(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-anomalous-log-groups" }, input)
 end
 
---- Returns a list of the events emitted by the resources that are evaluated by DevOps Guru
---- @param input table|nil The input table for the list_events command
+--- AWS devops-guru list-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_events(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-events" }, input)
 end
 
---- Returns a list of insights in your Amazon Web Services account
---- @param input table|nil The input table for the list_insights command
+--- AWS devops-guru list-insights operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_insights(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-insights" }, input)
 end
 
---- Returns the list of all log groups that are being monitored and tagged by DevOps Guru
---- @param input table|nil The input table for the list_monitored_resources command
+--- AWS devops-guru list-monitored-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitored_resources(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-monitored-resources" }, input)
 end
 
---- Returns a list of notification channels configured for DevOps Guru
---- @param input table|nil The input table for the list_notification_channels command
+--- AWS devops-guru list-notification-channels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notification_channels(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-notification-channels" }, input)
 end
 
---- Returns a list of insights associated with the account or OU Id
---- @param input table|nil The input table for the list_organization_insights command
+--- AWS devops-guru list-organization-insights operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_insights(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-organization-insights" }, input)
 end
 
---- Returns a list of a specified insight's recommendations
---- @param input table|nil The input table for the list_recommendations command
+--- AWS devops-guru list-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendations(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "list-recommendations" }, input)
 end
 
---- Collects customer feedback about the specified insight
---- @param input table|nil The input table for the put_feedback command
+--- AWS devops-guru put-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_feedback(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "put-feedback" }, input)
 end
 
---- Removes a notification channel from DevOps Guru
---- @param input table|nil The input table for the remove_notification_channel command
+--- AWS devops-guru remove-notification-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_notification_channel(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "remove-notification-channel" }, input)
 end
 
---- Returns a list of insights in your Amazon Web Services account
---- @param input table|nil The input table for the search_insights command
+--- AWS devops-guru search-insights operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_insights(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "search-insights" }, input)
 end
 
---- Returns a list of insights in your organization
---- @param input table|nil The input table for the search_organization_insights command
+--- AWS devops-guru search-organization-insights operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_organization_insights(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "search-organization-insights" }, input)
 end
 
---- Starts the creation of an estimate of the monthly cost to analyze your Amazon Web Services resources
---- @param input table|nil The input table for the start_cost_estimation command
+--- AWS devops-guru start-cost-estimation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_cost_estimation(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "start-cost-estimation" }, input)
 end
 
---- Enables or disables integration with a service that can be integrated with DevOps Guru
---- @param input table|nil The input table for the update_event_sources_config command
+--- AWS devops-guru update-event-sources-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_event_sources_config(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "update-event-sources-config" }, input)
 end
 
---- Updates the collection of resources that DevOps Guru analyzes
---- @param input table|nil The input table for the update_resource_collection command
+--- AWS devops-guru update-resource-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_collection(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "update-resource-collection" }, input)
 end
 
---- Enables or disables integration with a service that can be integrated with DevOps Guru
---- @param input table|nil The input table for the update_service_integration command
+--- AWS devops-guru update-service-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_integration(input)
 	return common.execute_aws_command_with_input({ "devops-guru", "update-service-integration" }, input)

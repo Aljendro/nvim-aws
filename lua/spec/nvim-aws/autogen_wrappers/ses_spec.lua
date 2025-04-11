@@ -100,11 +100,6 @@ describe("AWS ses service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with delete_verified_email_address", function()
-		local result = service.delete_verified_email_address()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with describe_active_receipt_rule_set", function()
 		local result = service.describe_active_receipt_rule_set()
 		assert.is_true(result.success)
@@ -175,6 +170,11 @@ describe("AWS ses service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_configuration_sets", function()
 		local result = service.list_configuration_sets()
 		assert.is_true(result.success)
@@ -207,11 +207,6 @@ describe("AWS ses service testing", function()
 
 	it("should generate a cli skeleton with list_templates", function()
 		local result = service.list_templates()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_verified_email_addresses", function()
-		local result = service.list_verified_email_addresses()
 		assert.is_true(result.success)
 	end)
 
@@ -347,11 +342,6 @@ describe("AWS ses service testing", function()
 
 	it("should generate a cli skeleton with verify_domain_identity", function()
 		local result = service.verify_domain_identity()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with verify_email_address", function()
-		local result = service.verify_email_address()
 		assert.is_true(result.success)
 	end)
 

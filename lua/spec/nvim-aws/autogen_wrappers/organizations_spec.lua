@@ -135,18 +135,23 @@ describe("AWS organizations service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with enable_aws_service_access", function()
-		local result = service.enable_aws_service_access()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with enable_all_features", function()
 		local result = service.enable_all_features()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with enable_aws_service_access", function()
+		local result = service.enable_aws_service_access()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with enable_policy_type", function()
 		local result = service.enable_policy_type()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -160,11 +165,6 @@ describe("AWS organizations service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_aws_service_access_for_organization", function()
-		local result = service.list_aws_service_access_for_organization()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_accounts", function()
 		local result = service.list_accounts()
 		assert.is_true(result.success)
@@ -172,6 +172,11 @@ describe("AWS organizations service testing", function()
 
 	it("should generate a cli skeleton with list_accounts_for_parent", function()
 		local result = service.list_accounts_for_parent()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_aws_service_access_for_organization", function()
+		local result = service.list_aws_service_access_for_organization()
 		assert.is_true(result.success)
 	end)
 

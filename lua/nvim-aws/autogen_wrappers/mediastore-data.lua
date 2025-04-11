@@ -6,45 +6,36 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEDIASTORE-DATA service functions
 local M = {}
 
---- Deletes an object at the specified path
---- @param input table|nil The input table for the delete_object command
+--- AWS mediastore-data delete-object operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "delete-object" }, input)
 end
 
---- Gets the headers for an object at the specified path
---- @param input table|nil The input table for the describe_object command
+--- AWS mediastore-data describe-object operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "describe-object" }, input)
 end
 
---- Downloads the object at the specified path
---- @param input table|nil The input table for the get_object command
+--- AWS mediastore-data help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_object(input)
-	-- NOTE: This command does not have a "skeleton" template, so we need to emulate the behavior
-	return common.execute_aws_command({
-		"s3api",
-		"get-object",
-		"--bucket",
-		input.Bucket,
-		"--key",
-		input.Key,
-		input.Outfile,
-	})
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mediastore-data", "help" }, input)
 end
 
---- Provides a list of metadata entries about folders and objects in the specified folder
---- @param input table|nil The input table for the list_items command
+--- AWS mediastore-data list-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_items(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "list-items" }, input)
 end
 
---- Uploads an object to the specified path
---- @param input table|nil The input table for the put_object command
+--- AWS mediastore-data put-object operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "put-object" }, input)

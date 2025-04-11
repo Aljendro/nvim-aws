@@ -6,470 +6,498 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MGN service functions
 local M = {}
 
---- Archive application
---- @param input table|nil The input table for the archive_application command
+--- AWS mgn archive-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.archive_application(input)
 	return common.execute_aws_command_with_input({ "mgn", "archive-application" }, input)
 end
 
---- Archive wave
---- @param input table|nil The input table for the archive_wave command
+--- AWS mgn archive-wave operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.archive_wave(input)
 	return common.execute_aws_command_with_input({ "mgn", "archive-wave" }, input)
 end
 
---- Associate applications to wave
---- @param input table|nil The input table for the associate_applications command
+--- AWS mgn associate-applications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_applications(input)
 	return common.execute_aws_command_with_input({ "mgn", "associate-applications" }, input)
 end
 
---- Associate source servers to application
---- @param input table|nil The input table for the associate_source_servers command
+--- AWS mgn associate-source-servers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_source_servers(input)
 	return common.execute_aws_command_with_input({ "mgn", "associate-source-servers" }, input)
 end
 
---- Allows the user to set the SourceServer
---- @param input table|nil The input table for the change_server_life_cycle_state command
+--- AWS mgn change-server-life-cycle-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.change_server_life_cycle_state(input)
 	return common.execute_aws_command_with_input({ "mgn", "change-server-life-cycle-state" }, input)
 end
 
---- Create application
---- @param input table|nil The input table for the create_application command
+--- AWS mgn create-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "mgn", "create-application" }, input)
 end
 
---- Create Connector
---- @param input table|nil The input table for the create_connector command
+--- AWS mgn create-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector(input)
 	return common.execute_aws_command_with_input({ "mgn", "create-connector" }, input)
 end
 
---- Creates a new Launch Configuration Template
---- @param input table|nil The input table for the create_launch_configuration_template command
+--- AWS mgn create-launch-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "create-launch-configuration-template" }, input)
 end
 
---- Creates a new ReplicationConfigurationTemplate
---- @param input table|nil The input table for the create_replication_configuration_template command
+--- AWS mgn create-replication-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "create-replication-configuration-template" }, input)
 end
 
---- Create wave
---- @param input table|nil The input table for the create_wave command
+--- AWS mgn create-wave operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_wave(input)
 	return common.execute_aws_command_with_input({ "mgn", "create-wave" }, input)
 end
 
---- Delete application
---- @param input table|nil The input table for the delete_application command
+--- AWS mgn delete-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-application" }, input)
 end
 
---- Delete Connector
---- @param input table|nil The input table for the delete_connector command
+--- AWS mgn delete-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connector(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-connector" }, input)
 end
 
---- Deletes a single Job by ID
---- @param input table|nil The input table for the delete_job command
+--- AWS mgn delete-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-job" }, input)
 end
 
---- Deletes a single Launch Configuration Template by ID
---- @param input table|nil The input table for the delete_launch_configuration_template command
+--- AWS mgn delete-launch-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-launch-configuration-template" }, input)
 end
 
---- Deletes a single Replication Configuration Template by ID
---- @param input table|nil The input table for the delete_replication_configuration_template command
+--- AWS mgn delete-replication-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-replication-configuration-template" }, input)
 end
 
---- Deletes a single source server by ID
---- @param input table|nil The input table for the delete_source_server command
+--- AWS mgn delete-source-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_source_server(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-source-server" }, input)
 end
 
---- Deletes a given vCenter client by ID
---- @param input table|nil The input table for the delete_vcenter_client command
+--- AWS mgn delete-vcenter-client operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vcenter_client(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-vcenter-client" }, input)
 end
 
---- Delete wave
---- @param input table|nil The input table for the delete_wave command
+--- AWS mgn delete-wave operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_wave(input)
 	return common.execute_aws_command_with_input({ "mgn", "delete-wave" }, input)
 end
 
---- Retrieves detailed job log items with paging
---- @param input table|nil The input table for the describe_job_log_items command
+--- AWS mgn describe-job-log-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_job_log_items(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-job-log-items" }, input)
 end
 
---- Returns a list of Jobs
---- @param input table|nil The input table for the describe_jobs command
+--- AWS mgn describe-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_jobs(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-jobs" }, input)
 end
 
---- Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
---- @param input table|nil The input table for the describe_launch_configuration_templates command
+--- AWS mgn describe-launch-configuration-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_launch_configuration_templates(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-launch-configuration-templates" }, input)
 end
 
---- Lists all ReplicationConfigurationTemplates, filtered by Source Server IDs
---- @param input table|nil The input table for the describe_replication_configuration_templates command
+--- AWS mgn describe-replication-configuration-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_replication_configuration_templates(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-replication-configuration-templates" }, input)
 end
 
---- Retrieves all SourceServers or multiple SourceServers by ID
---- @param input table|nil The input table for the describe_source_servers command
+--- AWS mgn describe-source-servers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_source_servers(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-source-servers" }, input)
 end
 
---- Returns a list of the installed vCenter clients
---- @param input table|nil The input table for the describe_vcenter_clients command
+--- AWS mgn describe-vcenter-clients operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vcenter_clients(input)
 	return common.execute_aws_command_with_input({ "mgn", "describe-vcenter-clients" }, input)
 end
 
---- Disassociate applications from wave
---- @param input table|nil The input table for the disassociate_applications command
+--- AWS mgn disassociate-applications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_applications(input)
 	return common.execute_aws_command_with_input({ "mgn", "disassociate-applications" }, input)
 end
 
---- Disassociate source servers from application
---- @param input table|nil The input table for the disassociate_source_servers command
+--- AWS mgn disassociate-source-servers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_source_servers(input)
 	return common.execute_aws_command_with_input({ "mgn", "disassociate-source-servers" }, input)
 end
 
---- Disconnects specific Source Servers from Application Migration Service
---- @param input table|nil The input table for the disconnect_from_service command
+--- AWS mgn disconnect-from-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disconnect_from_service(input)
 	return common.execute_aws_command_with_input({ "mgn", "disconnect-from-service" }, input)
 end
 
---- Finalizes the cutover immediately for specific Source Servers
---- @param input table|nil The input table for the finalize_cutover command
+--- AWS mgn finalize-cutover operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.finalize_cutover(input)
 	return common.execute_aws_command_with_input({ "mgn", "finalize-cutover" }, input)
 end
 
---- Lists all LaunchConfigurations available, filtered by Source Server IDs
---- @param input table|nil The input table for the get_launch_configuration command
+--- AWS mgn get-launch-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "mgn", "get-launch-configuration" }, input)
 end
 
---- Lists all ReplicationConfigurations, filtered by Source Server ID
---- @param input table|nil The input table for the get_replication_configuration command
+--- AWS mgn get-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "mgn", "get-replication-configuration" }, input)
 end
 
---- Initialize Application Migration Service
---- @param input table|nil The input table for the initialize_service command
+--- AWS mgn help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mgn", "help" }, input)
+end
+
+--- AWS mgn initialize-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initialize_service(input)
 	return common.execute_aws_command_with_input({ "mgn", "initialize-service" }, input)
 end
 
---- Retrieves all applications or multiple applications by ID
---- @param input table|nil The input table for the list_applications command
+--- AWS mgn list-applications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-applications" }, input)
 end
 
---- List Connectors
---- @param input table|nil The input table for the list_connectors command
+--- AWS mgn list-connectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connectors(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-connectors" }, input)
 end
 
---- List export errors
---- @param input table|nil The input table for the list_export_errors command
+--- AWS mgn list-export-errors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_export_errors(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-export-errors" }, input)
 end
 
---- List exports
---- @param input table|nil The input table for the list_exports command
+--- AWS mgn list-exports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_exports(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-exports" }, input)
 end
 
---- List import errors
---- @param input table|nil The input table for the list_import_errors command
+--- AWS mgn list-import-errors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_import_errors(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-import-errors" }, input)
 end
 
---- List imports
---- @param input table|nil The input table for the list_imports command
+--- AWS mgn list-imports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_imports(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-imports" }, input)
 end
 
---- List Managed Accounts
---- @param input table|nil The input table for the list_managed_accounts command
+--- AWS mgn list-managed-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_managed_accounts(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-managed-accounts" }, input)
 end
 
---- List source server post migration custom actions
---- @param input table|nil The input table for the list_source_server_actions command
+--- AWS mgn list-source-server-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_source_server_actions(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-source-server-actions" }, input)
 end
 
---- List all tags for your Application Migration Service resources
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS mgn list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-tags-for-resource" }, input)
 end
 
---- List template post migration custom actions
---- @param input table|nil The input table for the list_template_actions command
+--- AWS mgn list-template-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_template_actions(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-template-actions" }, input)
 end
 
---- Retrieves all waves or multiple waves by ID
---- @param input table|nil The input table for the list_waves command
+--- AWS mgn list-waves operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_waves(input)
 	return common.execute_aws_command_with_input({ "mgn", "list-waves" }, input)
 end
 
---- Archives specific Source Servers by setting the SourceServer
---- @param input table|nil The input table for the mark_as_archived command
+--- AWS mgn mark-as-archived operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.mark_as_archived(input)
 	return common.execute_aws_command_with_input({ "mgn", "mark-as-archived" }, input)
 end
 
---- Pause Replication
---- @param input table|nil The input table for the pause_replication command
+--- AWS mgn pause-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.pause_replication(input)
 	return common.execute_aws_command_with_input({ "mgn", "pause-replication" }, input)
 end
 
---- Put source server post migration custom action
---- @param input table|nil The input table for the put_source_server_action command
+--- AWS mgn put-source-server-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_source_server_action(input)
 	return common.execute_aws_command_with_input({ "mgn", "put-source-server-action" }, input)
 end
 
---- Put template post migration custom action
---- @param input table|nil The input table for the put_template_action command
+--- AWS mgn put-template-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_template_action(input)
 	return common.execute_aws_command_with_input({ "mgn", "put-template-action" }, input)
 end
 
---- Remove source server post migration custom action
---- @param input table|nil The input table for the remove_source_server_action command
+--- AWS mgn remove-source-server-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_source_server_action(input)
 	return common.execute_aws_command_with_input({ "mgn", "remove-source-server-action" }, input)
 end
 
---- Remove template post migration custom action
---- @param input table|nil The input table for the remove_template_action command
+--- AWS mgn remove-template-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_template_action(input)
 	return common.execute_aws_command_with_input({ "mgn", "remove-template-action" }, input)
 end
 
---- Resume Replication
---- @param input table|nil The input table for the resume_replication command
+--- AWS mgn resume-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_replication(input)
 	return common.execute_aws_command_with_input({ "mgn", "resume-replication" }, input)
 end
 
---- Causes the data replication initiation sequence to begin immediately upon next Handshake for specified SourceServer IDs, regardless of when the previous initiation started
---- @param input table|nil The input table for the retry_data_replication command
+--- AWS mgn retry-data-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.retry_data_replication(input)
 	return common.execute_aws_command_with_input({ "mgn", "retry-data-replication" }, input)
 end
 
---- Start export
---- @param input table|nil The input table for the start_export command
+--- AWS mgn start-cutover operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.start_cutover(input)
+	return common.execute_aws_command_with_input({ "mgn", "start-cutover" }, input)
+end
+
+--- AWS mgn start-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_export(input)
 	return common.execute_aws_command_with_input({ "mgn", "start-export" }, input)
 end
 
---- Start import
---- @param input table|nil The input table for the start_import command
+--- AWS mgn start-import operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_import(input)
 	return common.execute_aws_command_with_input({ "mgn", "start-import" }, input)
 end
 
---- Starts replication for SNAPSHOT_SHIPPING agents
---- @param input table|nil The input table for the start_replication command
+--- AWS mgn start-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_replication(input)
 	return common.execute_aws_command_with_input({ "mgn", "start-replication" }, input)
 end
 
---- Stop Replication
---- @param input table|nil The input table for the stop_replication command
+--- AWS mgn start-test operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.start_test(input)
+	return common.execute_aws_command_with_input({ "mgn", "start-test" }, input)
+end
+
+--- AWS mgn stop-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_replication(input)
 	return common.execute_aws_command_with_input({ "mgn", "stop-replication" }, input)
 end
 
---- Adds or overwrites only the specified tags for the specified Application Migration Service resource or resources
---- @param input table|nil The input table for the tag_resource command
+--- AWS mgn tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mgn", "tag-resource" }, input)
 end
 
---- Unarchive application
---- @param input table|nil The input table for the unarchive_application command
+--- AWS mgn terminate-target-instances operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.terminate_target_instances(input)
+	return common.execute_aws_command_with_input({ "mgn", "terminate-target-instances" }, input)
+end
+
+--- AWS mgn unarchive-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unarchive_application(input)
 	return common.execute_aws_command_with_input({ "mgn", "unarchive-application" }, input)
 end
 
---- Unarchive wave
---- @param input table|nil The input table for the unarchive_wave command
+--- AWS mgn unarchive-wave operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unarchive_wave(input)
 	return common.execute_aws_command_with_input({ "mgn", "unarchive-wave" }, input)
 end
 
---- Deletes the specified set of tags from the specified set of Application Migration Service resources
---- @param input table|nil The input table for the untag_resource command
+--- AWS mgn untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mgn", "untag-resource" }, input)
 end
 
---- Update application
---- @param input table|nil The input table for the update_application command
+--- AWS mgn update-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-application" }, input)
 end
 
---- Update Connector
---- @param input table|nil The input table for the update_connector command
+--- AWS mgn update-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connector(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-connector" }, input)
 end
 
---- Updates multiple LaunchConfigurations by Source Server ID
---- @param input table|nil The input table for the update_launch_configuration command
+--- AWS mgn update-launch-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-launch-configuration" }, input)
 end
 
---- Updates an existing Launch Configuration Template by ID
---- @param input table|nil The input table for the update_launch_configuration_template command
+--- AWS mgn update-launch-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_launch_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-launch-configuration-template" }, input)
 end
 
---- Allows you to update multiple ReplicationConfigurations by Source Server ID
---- @param input table|nil The input table for the update_replication_configuration command
+--- AWS mgn update-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-replication-configuration" }, input)
 end
 
---- Updates multiple ReplicationConfigurationTemplates by ID
---- @param input table|nil The input table for the update_replication_configuration_template command
+--- AWS mgn update-replication-configuration-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_configuration_template(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-replication-configuration-template" }, input)
 end
 
---- Update Source Server
---- @param input table|nil The input table for the update_source_server command
+--- AWS mgn update-source-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_source_server(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-source-server" }, input)
 end
 
---- Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type
---- @param input table|nil The input table for the update_source_server_replication_type command
+--- AWS mgn update-source-server-replication-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_source_server_replication_type(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-source-server-replication-type" }, input)
 end
 
---- Update wave
---- @param input table|nil The input table for the update_wave command
+--- AWS mgn update-wave operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_wave(input)
 	return common.execute_aws_command_with_input({ "mgn", "update-wave" }, input)

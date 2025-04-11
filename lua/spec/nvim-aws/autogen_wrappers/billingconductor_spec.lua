@@ -80,6 +80,11 @@ describe("AWS billingconductor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_account_associations", function()
 		local result = service.list_account_associations()
 		assert.is_true(result.success)
@@ -110,8 +115,18 @@ describe("AWS billingconductor service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_pricing_plans_associated_with_pricing_rule", function()
+		local result = service.list_pricing_plans_associated_with_pricing_rule()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_pricing_rules", function()
 		local result = service.list_pricing_rules()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_pricing_rules_associated_to_pricing_plan", function()
+		local result = service.list_pricing_rules_associated_to_pricing_plan()
 		assert.is_true(result.success)
 	end)
 

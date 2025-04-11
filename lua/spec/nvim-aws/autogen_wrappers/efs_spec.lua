@@ -25,11 +25,6 @@ describe("AWS efs service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with create_tags", function()
-		local result = service.create_tags()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with delete_access_point", function()
 		local result = service.delete_access_point()
 		assert.is_true(result.success)
@@ -52,11 +47,6 @@ describe("AWS efs service testing", function()
 
 	it("should generate a cli skeleton with delete_replication_configuration", function()
 		local result = service.delete_replication_configuration()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with delete_tags", function()
-		local result = service.delete_tags()
 		assert.is_true(result.success)
 	end)
 
@@ -105,8 +95,8 @@ describe("AWS efs service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with describe_tags", function()
-		local result = service.describe_tags()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

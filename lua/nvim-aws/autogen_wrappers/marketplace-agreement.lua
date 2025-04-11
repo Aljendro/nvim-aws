@@ -6,22 +6,29 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MARKETPLACE-AGREEMENT service functions
 local M = {}
 
---- Provides details about an agreement, such as the proposer, acceptor, start date, and end date
---- @param input table|nil The input table for the describe_agreement command
+--- AWS marketplace-agreement describe-agreement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_agreement(input)
 	return common.execute_aws_command_with_input({ "marketplace-agreement", "describe-agreement" }, input)
 end
 
---- Obtains details about the terms in an agreement that you participated in as proposer or acceptor
---- @param input table|nil The input table for the get_agreement_terms command
+--- AWS marketplace-agreement get-agreement-terms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agreement_terms(input)
 	return common.execute_aws_command_with_input({ "marketplace-agreement", "get-agreement-terms" }, input)
 end
 
---- Searches across all agreements that a proposer or an acceptor has in AWS Marketplace
---- @param input table|nil The input table for the search_agreements command
+--- AWS marketplace-agreement help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "marketplace-agreement", "help" }, input)
+end
+
+--- AWS marketplace-agreement search-agreements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_agreements(input)
 	return common.execute_aws_command_with_input({ "marketplace-agreement", "search-agreements" }, input)

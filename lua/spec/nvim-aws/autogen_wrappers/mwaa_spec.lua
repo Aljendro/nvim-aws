@@ -30,6 +30,11 @@ describe("AWS mwaa service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with invoke_rest_api", function()
 		local result = service.invoke_rest_api()
 		assert.is_true(result.success)
@@ -42,11 +47,6 @@ describe("AWS mwaa service testing", function()
 
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with publish_metrics", function()
-		local result = service.publish_metrics()
 		assert.is_true(result.success)
 	end)
 

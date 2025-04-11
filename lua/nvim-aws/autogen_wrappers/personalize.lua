@@ -6,498 +6,505 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PERSONALIZE service functions
 local M = {}
 
---- Generates batch recommendations based on a list of items or users stored in Amazon S3 and exports the recommendations to an Amazon S3 bucket
---- @param input table|nil The input table for the create_batch_inference_job command
+--- AWS personalize create-batch-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_batch_inference_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-batch-inference-job" }, input)
 end
 
---- Creates a batch segment job
---- @param input table|nil The input table for the create_batch_segment_job command
+--- AWS personalize create-batch-segment-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_batch_segment_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-batch-segment-job" }, input)
 end
 
---- You incur campaign costs while it is active
---- @param input table|nil The input table for the create_campaign command
+--- AWS personalize create-campaign operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_campaign(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-campaign" }, input)
 end
 
---- Creates a batch job that deletes all references to specific users from an Amazon Personalize dataset group in batches
---- @param input table|nil The input table for the create_data_deletion_job command
+--- AWS personalize create-data-deletion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_deletion_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-data-deletion-job" }, input)
 end
 
---- Creates an empty dataset and adds it to the specified dataset group
---- @param input table|nil The input table for the create_dataset command
+--- AWS personalize create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-dataset" }, input)
 end
 
---- Creates a job that exports data from your dataset to an Amazon S3 bucket
---- @param input table|nil The input table for the create_dataset_export_job command
+--- AWS personalize create-dataset-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_export_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-dataset-export-job" }, input)
 end
 
---- Creates an empty dataset group
---- @param input table|nil The input table for the create_dataset_group command
+--- AWS personalize create-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_group(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-dataset-group" }, input)
 end
 
---- Creates a job that imports training data from your data source (an Amazon S3 bucket) to an Amazon Personalize dataset
---- @param input table|nil The input table for the create_dataset_import_job command
+--- AWS personalize create-dataset-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_import_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-dataset-import-job" }, input)
 end
 
---- Creates an event tracker that you use when adding event data to a specified dataset group using the PutEvents API
---- @param input table|nil The input table for the create_event_tracker command
+--- AWS personalize create-event-tracker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_tracker(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-event-tracker" }, input)
 end
 
---- Creates a recommendation filter
---- @param input table|nil The input table for the create_filter command
+--- AWS personalize create-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_filter(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-filter" }, input)
 end
 
---- Creates a metric attribution
---- @param input table|nil The input table for the create_metric_attribution command
+--- AWS personalize create-metric-attribution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_metric_attribution(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-metric-attribution" }, input)
 end
 
---- Creates a recommender with the recipe (a Domain dataset group use case) you specify
---- @param input table|nil The input table for the create_recommender command
+--- AWS personalize create-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-recommender" }, input)
 end
 
---- Creates an Amazon Personalize schema from the specified schema string
---- @param input table|nil The input table for the create_schema command
+--- AWS personalize create-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schema(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-schema" }, input)
 end
 
---- By default, all new solutions use automatic training
---- @param input table|nil The input table for the create_solution command
+--- AWS personalize create-solution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_solution(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-solution" }, input)
 end
 
---- Trains or retrains an active solution in a Custom dataset group
---- @param input table|nil The input table for the create_solution_version command
+--- AWS personalize create-solution-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_solution_version(input)
 	return common.execute_aws_command_with_input({ "personalize", "create-solution-version" }, input)
 end
 
---- Removes a campaign by deleting the solution deployment
---- @param input table|nil The input table for the delete_campaign command
+--- AWS personalize delete-campaign operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_campaign(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-campaign" }, input)
 end
 
---- Deletes a dataset
---- @param input table|nil The input table for the delete_dataset command
+--- AWS personalize delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-dataset" }, input)
 end
 
---- Deletes a dataset group
---- @param input table|nil The input table for the delete_dataset_group command
+--- AWS personalize delete-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset_group(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-dataset-group" }, input)
 end
 
---- Deletes the event tracker
---- @param input table|nil The input table for the delete_event_tracker command
+--- AWS personalize delete-event-tracker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_tracker(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-event-tracker" }, input)
 end
 
---- Deletes a filter
---- @param input table|nil The input table for the delete_filter command
+--- AWS personalize delete-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_filter(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-filter" }, input)
 end
 
---- Deletes a metric attribution
---- @param input table|nil The input table for the delete_metric_attribution command
+--- AWS personalize delete-metric-attribution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_metric_attribution(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-metric-attribution" }, input)
 end
 
---- Deactivates and removes a recommender
---- @param input table|nil The input table for the delete_recommender command
+--- AWS personalize delete-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-recommender" }, input)
 end
 
---- Deletes a schema
---- @param input table|nil The input table for the delete_schema command
+--- AWS personalize delete-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schema(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-schema" }, input)
 end
 
---- Deletes all versions of a solution and the Solution object itself
---- @param input table|nil The input table for the delete_solution command
+--- AWS personalize delete-solution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_solution(input)
 	return common.execute_aws_command_with_input({ "personalize", "delete-solution" }, input)
 end
 
---- Describes the given algorithm
---- @param input table|nil The input table for the describe_algorithm command
+--- AWS personalize describe-algorithm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_algorithm(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-algorithm" }, input)
 end
 
---- Gets the properties of a batch inference job including name, Amazon Resource Name (ARN), status, input and output configurations, and the ARN of the solution version used to generate the recommendations
---- @param input table|nil The input table for the describe_batch_inference_job command
+--- AWS personalize describe-batch-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_batch_inference_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-batch-inference-job" }, input)
 end
 
---- Gets the properties of a batch segment job including name, Amazon Resource Name (ARN), status, input and output configurations, and the ARN of the solution version used to generate segments
---- @param input table|nil The input table for the describe_batch_segment_job command
+--- AWS personalize describe-batch-segment-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_batch_segment_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-batch-segment-job" }, input)
 end
 
---- Describes the given campaign, including its status
---- @param input table|nil The input table for the describe_campaign command
+--- AWS personalize describe-campaign operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_campaign(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-campaign" }, input)
 end
 
---- Describes the data deletion job created by CreateDataDeletionJob, including the job status
---- @param input table|nil The input table for the describe_data_deletion_job command
+--- AWS personalize describe-data-deletion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_deletion_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-data-deletion-job" }, input)
 end
 
---- Describes the given dataset
---- @param input table|nil The input table for the describe_dataset command
+--- AWS personalize describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-dataset" }, input)
 end
 
---- Describes the dataset export job created by CreateDatasetExportJob, including the export job status
---- @param input table|nil The input table for the describe_dataset_export_job command
+--- AWS personalize describe-dataset-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset_export_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-dataset-export-job" }, input)
 end
 
---- Describes the given dataset group
---- @param input table|nil The input table for the describe_dataset_group command
+--- AWS personalize describe-dataset-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset_group(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-dataset-group" }, input)
 end
 
---- Describes the dataset import job created by CreateDatasetImportJob, including the import job status
---- @param input table|nil The input table for the describe_dataset_import_job command
+--- AWS personalize describe-dataset-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset_import_job(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-dataset-import-job" }, input)
 end
 
---- Describes an event tracker
---- @param input table|nil The input table for the describe_event_tracker command
+--- AWS personalize describe-event-tracker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_event_tracker(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-event-tracker" }, input)
 end
 
---- Describes the given feature transformation
---- @param input table|nil The input table for the describe_feature_transformation command
+--- AWS personalize describe-feature-transformation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_feature_transformation(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-feature-transformation" }, input)
 end
 
---- Describes a filter's properties
---- @param input table|nil The input table for the describe_filter command
+--- AWS personalize describe-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_filter(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-filter" }, input)
 end
 
---- Describes a metric attribution
---- @param input table|nil The input table for the describe_metric_attribution command
+--- AWS personalize describe-metric-attribution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_metric_attribution(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-metric-attribution" }, input)
 end
 
---- Describes a recipe
---- @param input table|nil The input table for the describe_recipe command
+--- AWS personalize describe-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recipe(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-recipe" }, input)
 end
 
---- Describes the given recommender, including its status
---- @param input table|nil The input table for the describe_recommender command
+--- AWS personalize describe-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-recommender" }, input)
 end
 
---- Describes a schema
---- @param input table|nil The input table for the describe_schema command
+--- AWS personalize describe-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_schema(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-schema" }, input)
 end
 
---- Describes a solution
---- @param input table|nil The input table for the describe_solution command
+--- AWS personalize describe-solution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_solution(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-solution" }, input)
 end
 
---- Describes a specific version of a solution
---- @param input table|nil The input table for the describe_solution_version command
+--- AWS personalize describe-solution-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_solution_version(input)
 	return common.execute_aws_command_with_input({ "personalize", "describe-solution-version" }, input)
 end
 
---- Gets the metrics for the specified solution version
---- @param input table|nil The input table for the get_solution_metrics command
+--- AWS personalize get-solution-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_solution_metrics(input)
 	return common.execute_aws_command_with_input({ "personalize", "get-solution-metrics" }, input)
 end
 
---- Gets a list of the batch inference jobs that have been performed off of a solution version
---- @param input table|nil The input table for the list_batch_inference_jobs command
+--- AWS personalize help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "personalize", "help" }, input)
+end
+
+--- AWS personalize list-batch-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-batch-inference-jobs" }, input)
 end
 
---- Gets a list of the batch segment jobs that have been performed off of a solution version that you specify
---- @param input table|nil The input table for the list_batch_segment_jobs command
+--- AWS personalize list-batch-segment-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_segment_jobs(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-batch-segment-jobs" }, input)
 end
 
---- Returns a list of campaigns that use the given solution
---- @param input table|nil The input table for the list_campaigns command
+--- AWS personalize list-campaigns operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_campaigns(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-campaigns" }, input)
 end
 
---- Returns a list of data deletion jobs for a dataset group ordered by creation time, with the most recent first
---- @param input table|nil The input table for the list_data_deletion_jobs command
+--- AWS personalize list-data-deletion-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_deletion_jobs(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-data-deletion-jobs" }, input)
 end
 
---- Returns a list of dataset export jobs that use the given dataset
---- @param input table|nil The input table for the list_dataset_export_jobs command
+--- AWS personalize list-dataset-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_export_jobs(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-dataset-export-jobs" }, input)
 end
 
---- Returns a list of dataset groups
---- @param input table|nil The input table for the list_dataset_groups command
+--- AWS personalize list-dataset-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_groups(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-dataset-groups" }, input)
 end
 
---- Returns a list of dataset import jobs that use the given dataset
---- @param input table|nil The input table for the list_dataset_import_jobs command
+--- AWS personalize list-dataset-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_import_jobs(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-dataset-import-jobs" }, input)
 end
 
---- Returns the list of datasets contained in the given dataset group
---- @param input table|nil The input table for the list_datasets command
+--- AWS personalize list-datasets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-datasets" }, input)
 end
 
---- Returns the list of event trackers associated with the account
---- @param input table|nil The input table for the list_event_trackers command
+--- AWS personalize list-event-trackers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_trackers(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-event-trackers" }, input)
 end
 
---- Lists all filters that belong to a given dataset group
---- @param input table|nil The input table for the list_filters command
+--- AWS personalize list-filters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_filters(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-filters" }, input)
 end
 
---- Lists the metrics for the metric attribution
---- @param input table|nil The input table for the list_metric_attribution_metrics command
+--- AWS personalize list-metric-attribution-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metric_attribution_metrics(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-metric-attribution-metrics" }, input)
 end
 
---- Lists metric attributions
---- @param input table|nil The input table for the list_metric_attributions command
+--- AWS personalize list-metric-attributions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metric_attributions(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-metric-attributions" }, input)
 end
 
---- Returns a list of available recipes
---- @param input table|nil The input table for the list_recipes command
+--- AWS personalize list-recipes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recipes(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-recipes" }, input)
 end
 
---- Returns a list of recommenders in a given Domain dataset group
---- @param input table|nil The input table for the list_recommenders command
+--- AWS personalize list-recommenders operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommenders(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-recommenders" }, input)
 end
 
---- Returns the list of schemas associated with the account
---- @param input table|nil The input table for the list_schemas command
+--- AWS personalize list-schemas operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schemas(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-schemas" }, input)
 end
 
---- Returns a list of solution versions for the given solution
---- @param input table|nil The input table for the list_solution_versions command
+--- AWS personalize list-solution-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_solution_versions(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-solution-versions" }, input)
 end
 
---- Returns a list of solutions in a given dataset group
---- @param input table|nil The input table for the list_solutions command
+--- AWS personalize list-solutions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_solutions(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-solutions" }, input)
 end
 
---- Get a list of tags attached to a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS personalize list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "personalize", "list-tags-for-resource" }, input)
 end
 
---- Starts a recommender that is INACTIVE
---- @param input table|nil The input table for the start_recommender command
+--- AWS personalize start-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "start-recommender" }, input)
 end
 
---- Stops a recommender that is ACTIVE
---- @param input table|nil The input table for the stop_recommender command
+--- AWS personalize stop-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "stop-recommender" }, input)
 end
 
---- Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS
---- @param input table|nil The input table for the stop_solution_version_creation command
+--- AWS personalize stop-solution-version-creation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_solution_version_creation(input)
 	return common.execute_aws_command_with_input({ "personalize", "stop-solution-version-creation" }, input)
 end
 
---- Add a list of tags to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS personalize tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "personalize", "tag-resource" }, input)
 end
 
---- Removes the specified tags that are attached to a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS personalize untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "personalize", "untag-resource" }, input)
 end
 
---- Updates a campaign to deploy a retrained solution version with an existing campaign, change your campaign's minProvisionedTPS, or modify your campaign's configuration
---- @param input table|nil The input table for the update_campaign command
+--- AWS personalize update-campaign operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_campaign(input)
 	return common.execute_aws_command_with_input({ "personalize", "update-campaign" }, input)
 end
 
---- Update a dataset to replace its schema with a new or existing one
---- @param input table|nil The input table for the update_dataset command
+--- AWS personalize update-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset(input)
 	return common.execute_aws_command_with_input({ "personalize", "update-dataset" }, input)
 end
 
---- Updates a metric attribution
---- @param input table|nil The input table for the update_metric_attribution command
+--- AWS personalize update-metric-attribution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_metric_attribution(input)
 	return common.execute_aws_command_with_input({ "personalize", "update-metric-attribution" }, input)
 end
 
---- Updates the recommender to modify the recommender configuration
---- @param input table|nil The input table for the update_recommender command
+--- AWS personalize update-recommender operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recommender(input)
 	return common.execute_aws_command_with_input({ "personalize", "update-recommender" }, input)
 end
 
---- Updates an Amazon Personalize solution to use a different automatic training configuration
---- @param input table|nil The input table for the update_solution command
+--- AWS personalize update-solution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_solution(input)
 	return common.execute_aws_command_with_input({ "personalize", "update-solution" }, input)

@@ -6,113 +6,120 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SUPPORT service functions
 local M = {}
 
---- Adds one or more attachments to an attachment set
---- @param input table|nil The input table for the add_attachments_to_set command
+--- AWS support add-attachments-to-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_attachments_to_set(input)
 	return common.execute_aws_command_with_input({ "support", "add-attachments-to-set" }, input)
 end
 
---- Adds additional customer communication to an Amazon Web Services Support case
---- @param input table|nil The input table for the add_communication_to_case command
+--- AWS support add-communication-to-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_communication_to_case(input)
 	return common.execute_aws_command_with_input({ "support", "add-communication-to-case" }, input)
 end
 
---- Creates a case in the Amazon Web Services Support Center
---- @param input table|nil The input table for the create_case command
+--- AWS support create-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_case(input)
 	return common.execute_aws_command_with_input({ "support", "create-case" }, input)
 end
 
---- Returns the attachment that has the specified ID
---- @param input table|nil The input table for the describe_attachment command
+--- AWS support describe-attachment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_attachment(input)
 	return common.execute_aws_command_with_input({ "support", "describe-attachment" }, input)
 end
 
---- Returns a list of cases that you specify by passing one or more case IDs
---- @param input table|nil The input table for the describe_cases command
+--- AWS support describe-cases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cases(input)
 	return common.execute_aws_command_with_input({ "support", "describe-cases" }, input)
 end
 
---- Returns communications and attachments for one or more support cases
---- @param input table|nil The input table for the describe_communications command
+--- AWS support describe-communications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_communications(input)
 	return common.execute_aws_command_with_input({ "support", "describe-communications" }, input)
 end
 
---- Returns a list of CreateCaseOption types along with the corresponding supported hours and language availability
---- @param input table|nil The input table for the describe_create_case_options command
+--- AWS support describe-create-case-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_create_case_options(input)
 	return common.execute_aws_command_with_input({ "support", "describe-create-case-options" }, input)
 end
 
---- Returns the current list of Amazon Web Services services and a list of service categories for each service
---- @param input table|nil The input table for the describe_services command
+--- AWS support describe-services operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_services(input)
 	return common.execute_aws_command_with_input({ "support", "describe-services" }, input)
 end
 
---- Returns the list of severity levels that you can assign to a support case
---- @param input table|nil The input table for the describe_severity_levels command
+--- AWS support describe-severity-levels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_severity_levels(input)
 	return common.execute_aws_command_with_input({ "support", "describe-severity-levels" }, input)
 end
 
---- Returns a list of supported languages for a specified categoryCode, issueType and serviceCode
---- @param input table|nil The input table for the describe_supported_languages command
+--- AWS support describe-supported-languages operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_supported_languages(input)
 	return common.execute_aws_command_with_input({ "support", "describe-supported-languages" }, input)
 end
 
---- Returns the refresh status of the Trusted Advisor checks that have the specified check IDs
---- @param input table|nil The input table for the describe_trusted_advisor_check_refresh_statuses command
+--- AWS support describe-trusted-advisor-check-refresh-statuses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trusted_advisor_check_refresh_statuses(input)
 	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-refresh-statuses" }, input)
 end
 
---- Returns the results of the Trusted Advisor check that has the specified check ID
---- @param input table|nil The input table for the describe_trusted_advisor_check_result command
+--- AWS support describe-trusted-advisor-check-result operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trusted_advisor_check_result(input)
 	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-result" }, input)
 end
 
---- Returns the results for the Trusted Advisor check summaries for the check IDs that you specified
---- @param input table|nil The input table for the describe_trusted_advisor_check_summaries command
+--- AWS support describe-trusted-advisor-check-summaries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trusted_advisor_check_summaries(input)
 	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-summaries" }, input)
 end
 
---- Returns information about all available Trusted Advisor checks, including the name, ID, category, description, and metadata
---- @param input table|nil The input table for the describe_trusted_advisor_checks command
+--- AWS support describe-trusted-advisor-checks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_trusted_advisor_checks(input)
 	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-checks" }, input)
 end
 
---- Refreshes the Trusted Advisor check that you specify using the check ID
---- @param input table|nil The input table for the refresh_trusted_advisor_check command
+--- AWS support help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "support", "help" }, input)
+end
+
+--- AWS support refresh-trusted-advisor-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.refresh_trusted_advisor_check(input)
 	return common.execute_aws_command_with_input({ "support", "refresh-trusted-advisor-check" }, input)
 end
 
---- Resolves a support case
---- @param input table|nil The input table for the resolve_case command
+--- AWS support resolve-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resolve_case(input)
 	return common.execute_aws_command_with_input({ "support", "resolve-case" }, input)

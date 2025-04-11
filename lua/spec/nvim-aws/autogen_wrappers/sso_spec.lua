@@ -10,6 +10,11 @@ describe("AWS sso service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_account_roles", function()
 		local result = service.list_account_roles()
 		assert.is_true(result.success)
@@ -17,11 +22,6 @@ describe("AWS sso service testing", function()
 
 	it("should generate a cli skeleton with list_accounts", function()
 		local result = service.list_accounts()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with logout", function()
-		local result = service.logout()
 		assert.is_true(result.success)
 	end)
 

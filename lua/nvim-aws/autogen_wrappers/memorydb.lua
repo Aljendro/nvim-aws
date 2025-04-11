@@ -6,302 +6,309 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEMORYDB service functions
 local M = {}
 
---- Apply the service update to a list of clusters supplied
---- @param input table|nil The input table for the batch_update_cluster command
+--- AWS memorydb batch-update-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "batch-update-cluster" }, input)
 end
 
---- Makes a copy of an existing snapshot
---- @param input table|nil The input table for the copy_snapshot command
+--- AWS memorydb copy-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_snapshot(input)
 	return common.execute_aws_command_with_input({ "memorydb", "copy-snapshot" }, input)
 end
 
---- Creates an Access Control List
---- @param input table|nil The input table for the create_acl command
+--- AWS memorydb create-acl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_acl(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-acl" }, input)
 end
 
---- Creates a cluster
---- @param input table|nil The input table for the create_cluster command
+--- AWS memorydb create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-cluster" }, input)
 end
 
---- Creates a new multi-Region cluster
---- @param input table|nil The input table for the create_multi_region_cluster command
+--- AWS memorydb create-multi-region-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_multi_region_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-multi-region-cluster" }, input)
 end
 
---- Creates a new MemoryDB parameter group
---- @param input table|nil The input table for the create_parameter_group command
+--- AWS memorydb create-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_parameter_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-parameter-group" }, input)
 end
 
---- Creates a copy of an entire cluster at a specific moment in time
---- @param input table|nil The input table for the create_snapshot command
+--- AWS memorydb create-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_snapshot(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-snapshot" }, input)
 end
 
---- Creates a subnet group
---- @param input table|nil The input table for the create_subnet_group command
+--- AWS memorydb create-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subnet_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-subnet-group" }, input)
 end
 
---- Creates a MemoryDB user
---- @param input table|nil The input table for the create_user command
+--- AWS memorydb create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "memorydb", "create-user" }, input)
 end
 
---- Deletes an Access Control List
---- @param input table|nil The input table for the delete_acl command
+--- AWS memorydb delete-acl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_acl(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-acl" }, input)
 end
 
---- Deletes a cluster
---- @param input table|nil The input table for the delete_cluster command
+--- AWS memorydb delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-cluster" }, input)
 end
 
---- Deletes an existing multi-Region cluster
---- @param input table|nil The input table for the delete_multi_region_cluster command
+--- AWS memorydb delete-multi-region-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_multi_region_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-multi-region-cluster" }, input)
 end
 
---- Deletes the specified parameter group
---- @param input table|nil The input table for the delete_parameter_group command
+--- AWS memorydb delete-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_parameter_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-parameter-group" }, input)
 end
 
---- Deletes an existing snapshot
---- @param input table|nil The input table for the delete_snapshot command
+--- AWS memorydb delete-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_snapshot(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-snapshot" }, input)
 end
 
---- Deletes a subnet group
---- @param input table|nil The input table for the delete_subnet_group command
+--- AWS memorydb delete-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subnet_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-subnet-group" }, input)
 end
 
---- Deletes a user
---- @param input table|nil The input table for the delete_user command
+--- AWS memorydb delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "memorydb", "delete-user" }, input)
 end
 
---- Returns a list of ACLs
---- @param input table|nil The input table for the describe_ac_ls command
+--- AWS memorydb describe-acls operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_ac_ls(input)
-	return common.execute_aws_command_with_input({ "memorydb", "describe-ac-ls" }, input)
+function M.describe_acls(input)
+	return common.execute_aws_command_with_input({ "memorydb", "describe-acls" }, input)
 end
 
---- Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cluster if a cluster name is supplied
---- @param input table|nil The input table for the describe_clusters command
+--- AWS memorydb describe-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_clusters(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-clusters" }, input)
 end
 
---- Returns a list of the available Redis OSS engine versions
---- @param input table|nil The input table for the describe_engine_versions command
+--- AWS memorydb describe-engine-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_engine_versions(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-engine-versions" }, input)
 end
 
---- Returns events related to clusters, security groups, and parameter groups
---- @param input table|nil The input table for the describe_events command
+--- AWS memorydb describe-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-events" }, input)
 end
 
---- Returns details about one or more multi-Region clusters
---- @param input table|nil The input table for the describe_multi_region_clusters command
+--- AWS memorydb describe-multi-region-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_multi_region_clusters(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-multi-region-clusters" }, input)
 end
 
---- Returns a list of parameter group descriptions
---- @param input table|nil The input table for the describe_parameter_groups command
+--- AWS memorydb describe-parameter-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_parameter_groups(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-parameter-groups" }, input)
 end
 
---- Returns the detailed parameter list for a particular parameter group
---- @param input table|nil The input table for the describe_parameters command
+--- AWS memorydb describe-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_parameters(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-parameters" }, input)
 end
 
---- Returns information about reserved nodes for this account, or about a specified reserved node
---- @param input table|nil The input table for the describe_reserved_nodes command
+--- AWS memorydb describe-reserved-nodes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_nodes(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-reserved-nodes" }, input)
 end
 
---- Lists available reserved node offerings
---- @param input table|nil The input table for the describe_reserved_nodes_offerings command
+--- AWS memorydb describe-reserved-nodes-offerings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_nodes_offerings(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-reserved-nodes-offerings" }, input)
 end
 
---- Returns details of the service updates
---- @param input table|nil The input table for the describe_service_updates command
+--- AWS memorydb describe-service-updates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_service_updates(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-service-updates" }, input)
 end
 
---- Returns information about cluster snapshots
---- @param input table|nil The input table for the describe_snapshots command
+--- AWS memorydb describe-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_snapshots(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-snapshots" }, input)
 end
 
---- Returns a list of subnet group descriptions
---- @param input table|nil The input table for the describe_subnet_groups command
+--- AWS memorydb describe-subnet-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_subnet_groups(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-subnet-groups" }, input)
 end
 
---- Returns a list of users
---- @param input table|nil The input table for the describe_users command
+--- AWS memorydb describe-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_users(input)
 	return common.execute_aws_command_with_input({ "memorydb", "describe-users" }, input)
 end
 
---- Used to failover a shard
---- @param input table|nil The input table for the failover_shard command
+--- AWS memorydb failover-shard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.failover_shard(input)
 	return common.execute_aws_command_with_input({ "memorydb", "failover-shard" }, input)
 end
 
---- Lists the allowed updates for a multi-Region cluster
---- @param input table|nil The input table for the list_allowed_multi_region_cluster_updates command
+--- AWS memorydb help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "memorydb", "help" }, input)
+end
+
+--- AWS memorydb list-allowed-multi-region-cluster-updates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_allowed_multi_region_cluster_updates(input)
 	return common.execute_aws_command_with_input({ "memorydb", "list-allowed-multi-region-cluster-updates" }, input)
 end
 
---- Lists all available node types that you can scale to from your cluster's current node type
---- @param input table|nil The input table for the list_allowed_node_type_updates command
+--- AWS memorydb list-allowed-node-type-updates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_allowed_node_type_updates(input)
 	return common.execute_aws_command_with_input({ "memorydb", "list-allowed-node-type-updates" }, input)
 end
 
---- Lists all tags currently on a named resource
---- @param input table|nil The input table for the list_tags command
+--- AWS memorydb list-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "memorydb", "list-tags" }, input)
 end
 
---- Allows you to purchase a reserved node offering
---- @param input table|nil The input table for the purchase_reserved_nodes_offering command
+--- AWS memorydb purchase-reserved-nodes-offering operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purchase_reserved_nodes_offering(input)
 	return common.execute_aws_command_with_input({ "memorydb", "purchase-reserved-nodes-offering" }, input)
 end
 
---- Modifies the parameters of a parameter group to the engine or system default value
---- @param input table|nil The input table for the reset_parameter_group command
+--- AWS memorydb reset-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_parameter_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "reset-parameter-group" }, input)
 end
 
---- A tag is a key-value pair where the key and value are case-sensitive
---- @param input table|nil The input table for the tag_resource command
+--- AWS memorydb tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "memorydb", "tag-resource" }, input)
 end
 
---- Use this operation to remove tags on a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS memorydb untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "memorydb", "untag-resource" }, input)
 end
 
---- Changes the list of users that belong to the Access Control List
---- @param input table|nil The input table for the update_acl command
+--- AWS memorydb update-acl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_acl(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-acl" }, input)
 end
 
---- Modifies the settings for a cluster
---- @param input table|nil The input table for the update_cluster command
+--- AWS memorydb update-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-cluster" }, input)
 end
 
---- Updates the configuration of an existing multi-Region cluster
---- @param input table|nil The input table for the update_multi_region_cluster command
+--- AWS memorydb update-multi-region-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_multi_region_cluster(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-multi-region-cluster" }, input)
 end
 
---- Updates the parameters of a parameter group
---- @param input table|nil The input table for the update_parameter_group command
+--- AWS memorydb update-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_parameter_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-parameter-group" }, input)
 end
 
---- Updates a subnet group
---- @param input table|nil The input table for the update_subnet_group command
+--- AWS memorydb update-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subnet_group(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-subnet-group" }, input)
 end
 
---- Changes user password(s) and/or access string
---- @param input table|nil The input table for the update_user command
+--- AWS memorydb update-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "memorydb", "update-user" }, input)

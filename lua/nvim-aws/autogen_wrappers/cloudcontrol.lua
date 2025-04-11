@@ -6,57 +6,64 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLOUDCONTROL service functions
 local M = {}
 
---- Cancels the specified resource operation request
---- @param input table|nil The input table for the cancel_resource_request command
+--- AWS cloudcontrol cancel-resource-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_resource_request(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "cancel-resource-request" }, input)
 end
 
---- Creates the specified resource
---- @param input table|nil The input table for the create_resource command
+--- AWS cloudcontrol create-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "create-resource" }, input)
 end
 
---- Deletes the specified resource
---- @param input table|nil The input table for the delete_resource command
+--- AWS cloudcontrol delete-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "delete-resource" }, input)
 end
 
---- Returns information about the current state of the specified resource
---- @param input table|nil The input table for the get_resource command
+--- AWS cloudcontrol get-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "get-resource" }, input)
 end
 
---- Returns the current status of a resource operation request
---- @param input table|nil The input table for the get_resource_request_status command
+--- AWS cloudcontrol get-resource-request-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_request_status(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "get-resource-request-status" }, input)
 end
 
---- Returns existing resource operation requests
---- @param input table|nil The input table for the list_resource_requests command
+--- AWS cloudcontrol help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cloudcontrol", "help" }, input)
+end
+
+--- AWS cloudcontrol list-resource-requests operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_requests(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "list-resource-requests" }, input)
 end
 
---- Returns information about the specified resources
---- @param input table|nil The input table for the list_resources command
+--- AWS cloudcontrol list-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resources(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "list-resources" }, input)
 end
 
---- Updates the specified property values in the resource
---- @param input table|nil The input table for the update_resource command
+--- AWS cloudcontrol update-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "update-resource" }, input)

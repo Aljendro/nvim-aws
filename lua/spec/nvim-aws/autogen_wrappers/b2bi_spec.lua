@@ -80,6 +80,11 @@ describe("AWS b2bi service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_capabilities", function()
 		local result = service.list_capabilities()
 		assert.is_true(result.success)

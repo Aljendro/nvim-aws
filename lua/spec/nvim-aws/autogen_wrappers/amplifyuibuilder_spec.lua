@@ -40,6 +40,21 @@ describe("AWS amplifyuibuilder service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with export_components", function()
+		local result = service.export_components()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with export_forms", function()
+		local result = service.export_forms()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with export_themes", function()
+		local result = service.export_themes()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_codegen_job", function()
 		local result = service.get_codegen_job()
 		assert.is_true(result.success)
@@ -62,6 +77,11 @@ describe("AWS amplifyuibuilder service testing", function()
 
 	it("should generate a cli skeleton with get_theme", function()
 		local result = service.get_theme()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -15,6 +15,11 @@ describe("AWS omics service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with batch_delete_read_set", function()
+		local result = service.batch_delete_read_set()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with cancel_annotation_import_job", function()
 		local result = service.cancel_annotation_import_job()
 		assert.is_true(result.success)
@@ -87,6 +92,16 @@ describe("AWS omics service testing", function()
 
 	it("should generate a cli skeleton with delete_annotation_store", function()
 		local result = service.delete_annotation_store()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_annotation_store_versions", function()
+		local result = service.delete_annotation_store_versions()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_reference", function()
+		local result = service.delete_reference()
 		assert.is_true(result.success)
 	end)
 
@@ -165,8 +180,18 @@ describe("AWS omics service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_read_set_metadata", function()
+		local result = service.get_read_set_metadata()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_reference_import_job", function()
 		local result = service.get_reference_import_job()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_reference_metadata", function()
+		local result = service.get_reference_metadata()
 		assert.is_true(result.success)
 	end)
 
@@ -187,6 +212,11 @@ describe("AWS omics service testing", function()
 
 	it("should generate a cli skeleton with get_run_group", function()
 		local result = service.get_run_group()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_run_task", function()
+		local result = service.get_run_task()
 		assert.is_true(result.success)
 	end)
 
@@ -217,6 +247,11 @@ describe("AWS omics service testing", function()
 
 	it("should generate a cli skeleton with get_workflow", function()
 		local result = service.get_workflow()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -260,6 +295,11 @@ describe("AWS omics service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_read_sets", function()
+		local result = service.list_read_sets()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_reference_import_jobs", function()
 		local result = service.list_reference_import_jobs()
 		assert.is_true(result.success)
@@ -270,6 +310,11 @@ describe("AWS omics service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_references", function()
+		local result = service.list_references()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_run_caches", function()
 		local result = service.list_run_caches()
 		assert.is_true(result.success)
@@ -277,6 +322,11 @@ describe("AWS omics service testing", function()
 
 	it("should generate a cli skeleton with list_run_groups", function()
 		local result = service.list_run_groups()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_run_tasks", function()
+		local result = service.list_run_tasks()
 		assert.is_true(result.success)
 	end)
 
@@ -352,6 +402,16 @@ describe("AWS omics service testing", function()
 
 	it("should generate a cli skeleton with start_variant_import_job", function()
 		local result = service.start_variant_import_job()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 

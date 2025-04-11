@@ -6,477 +6,463 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LAMBDA service functions
 local M = {}
 
---- Adds permissions to the resource-based policy of a version of an Lambda layer
---- @param input table|nil The input table for the add_layer_version_permission command
+--- AWS lambda add-layer-version-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_layer_version_permission(input)
 	return common.execute_aws_command_with_input({ "lambda", "add-layer-version-permission" }, input)
 end
 
---- Grants a principal permission to use a function
---- @param input table|nil The input table for the add_permission command
+--- AWS lambda add-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_permission(input)
 	return common.execute_aws_command_with_input({ "lambda", "add-permission" }, input)
 end
 
---- Creates an alias for a Lambda function version
---- @param input table|nil The input table for the create_alias command
+--- AWS lambda create-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_alias(input)
 	return common.execute_aws_command_with_input({ "lambda", "create-alias" }, input)
 end
 
---- Creates a code signing configuration
---- @param input table|nil The input table for the create_code_signing_config command
+--- AWS lambda create-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "create-code-signing-config" }, input)
 end
 
---- Creates a mapping between an event source and an Lambda function
---- @param input table|nil The input table for the create_event_source_mapping command
+--- AWS lambda create-event-source-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_source_mapping(input)
 	return common.execute_aws_command_with_input({ "lambda", "create-event-source-mapping" }, input)
 end
 
---- Creates a Lambda function
---- @param input table|nil The input table for the create_function command
+--- AWS lambda create-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_function(input)
 	return common.execute_aws_command_with_input({ "lambda", "create-function" }, input)
 end
 
---- Creates a Lambda function URL with the specified configuration parameters
---- @param input table|nil The input table for the create_function_url_config command
+--- AWS lambda create-function-url-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_function_url_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "create-function-url-config" }, input)
 end
 
---- Deletes a Lambda function alias
---- @param input table|nil The input table for the delete_alias command
+--- AWS lambda delete-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alias(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-alias" }, input)
 end
 
---- Deletes the code signing configuration
---- @param input table|nil The input table for the delete_code_signing_config command
+--- AWS lambda delete-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-code-signing-config" }, input)
 end
 
---- Deletes an event source mapping
---- @param input table|nil The input table for the delete_event_source_mapping command
+--- AWS lambda delete-event-source-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_source_mapping(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-event-source-mapping" }, input)
 end
 
---- Deletes a Lambda function
---- @param input table|nil The input table for the delete_function command
+--- AWS lambda delete-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-function" }, input)
 end
 
---- Removes the code signing configuration from the function
---- @param input table|nil The input table for the delete_function_code_signing_config command
+--- AWS lambda delete-function-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-function-code-signing-config" }, input)
 end
 
---- Removes a concurrent execution limit from a function
---- @param input table|nil The input table for the delete_function_concurrency command
+--- AWS lambda delete-function-concurrency operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function_concurrency(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-function-concurrency" }, input)
 end
 
---- Deletes the configuration for asynchronous invocation for a function, version, or alias
---- @param input table|nil The input table for the delete_function_event_invoke_config command
+--- AWS lambda delete-function-event-invoke-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function_event_invoke_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-function-event-invoke-config" }, input)
 end
 
---- Deletes a Lambda function URL
---- @param input table|nil The input table for the delete_function_url_config command
+--- AWS lambda delete-function-url-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_function_url_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-function-url-config" }, input)
 end
 
---- Deletes a version of an Lambda layer
---- @param input table|nil The input table for the delete_layer_version command
+--- AWS lambda delete-layer-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_layer_version(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-layer-version" }, input)
 end
 
---- Deletes the provisioned concurrency configuration for a function
---- @param input table|nil The input table for the delete_provisioned_concurrency_config command
+--- AWS lambda delete-provisioned-concurrency-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_provisioned_concurrency_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "delete-provisioned-concurrency-config" }, input)
 end
 
---- Retrieves details about your account's limits and usage in an Amazon Web Services Region
---- @param input table|nil The input table for the get_account_settings command
+--- AWS lambda get-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-account-settings" }, input)
 end
 
---- Returns details about a Lambda function alias
---- @param input table|nil The input table for the get_alias command
+--- AWS lambda get-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_alias(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-alias" }, input)
 end
 
---- Returns information about the specified code signing configuration
---- @param input table|nil The input table for the get_code_signing_config command
+--- AWS lambda get-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-code-signing-config" }, input)
 end
 
---- Returns details about an event source mapping
---- @param input table|nil The input table for the get_event_source_mapping command
+--- AWS lambda get-event-source-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_event_source_mapping(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-event-source-mapping" }, input)
 end
 
---- Returns information about the function or function version, with a link to download the deployment package that's valid for 10 minutes
---- @param input table|nil The input table for the get_function command
+--- AWS lambda get-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function" }, input)
 end
 
---- Returns the code signing configuration for the specified function
---- @param input table|nil The input table for the get_function_code_signing_config command
+--- AWS lambda get-function-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-code-signing-config" }, input)
 end
 
---- Returns details about the reserved concurrency configuration for a function
---- @param input table|nil The input table for the get_function_concurrency command
+--- AWS lambda get-function-concurrency operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_concurrency(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-concurrency" }, input)
 end
 
---- Returns the version-specific settings of a Lambda function or version
---- @param input table|nil The input table for the get_function_configuration command
+--- AWS lambda get-function-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_configuration(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-configuration" }, input)
 end
 
---- Retrieves the configuration for asynchronous invocation for a function, version, or alias
---- @param input table|nil The input table for the get_function_event_invoke_config command
+--- AWS lambda get-function-event-invoke-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_event_invoke_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-event-invoke-config" }, input)
 end
 
---- Returns your function's recursive loop detection configuration
---- @param input table|nil The input table for the get_function_recursion_config command
+--- AWS lambda get-function-recursion-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_recursion_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-recursion-config" }, input)
 end
 
---- Returns details about a Lambda function URL
---- @param input table|nil The input table for the get_function_url_config command
+--- AWS lambda get-function-url-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_function_url_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-function-url-config" }, input)
 end
 
---- Returns information about a version of an Lambda layer, with a link to download the layer archive that's valid for 10 minutes
---- @param input table|nil The input table for the get_layer_version command
+--- AWS lambda get-layer-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_layer_version(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-layer-version" }, input)
 end
 
---- Returns information about a version of an Lambda layer, with a link to download the layer archive that's valid for 10 minutes
---- @param input table|nil The input table for the get_layer_version_by_arn command
+--- AWS lambda get-layer-version-by-arn operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_layer_version_by_arn(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-layer-version-by-arn" }, input)
 end
 
---- Returns the permission policy for a version of an Lambda layer
---- @param input table|nil The input table for the get_layer_version_policy command
+--- AWS lambda get-layer-version-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_layer_version_policy(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-layer-version-policy" }, input)
 end
 
---- Returns the resource-based IAM policy for a function, version, or alias
---- @param input table|nil The input table for the get_policy command
+--- AWS lambda get-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policy(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-policy" }, input)
 end
 
---- Retrieves the provisioned concurrency configuration for a function's alias or version
---- @param input table|nil The input table for the get_provisioned_concurrency_config command
+--- AWS lambda get-provisioned-concurrency-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_provisioned_concurrency_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-provisioned-concurrency-config" }, input)
 end
 
---- Retrieves the runtime management configuration for a function's version
---- @param input table|nil The input table for the get_runtime_management_config command
+--- AWS lambda get-runtime-management-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_runtime_management_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "get-runtime-management-config" }, input)
 end
 
---- Invokes a Lambda function
---- @param input table|nil The input table for the invoke command
+--- AWS lambda help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.invoke(input)
-	return common.execute_aws_command_with_input({ "lambda", "invoke" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "lambda", "help" }, input)
 end
 
---- For asynchronous function invocation, use Invoke
---- @param input table|nil The input table for the invoke_async command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.invoke_async(input)
-	return common.execute_aws_command_with_input({ "lambda", "invoke-async" }, input)
-end
-
---- Configure your Lambda functions to stream response payloads back to clients
---- @param input table|nil The input table for the invoke_with_response_stream command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.invoke_with_response_stream(input)
-	return common.execute_aws_command_with_input({ "lambda", "invoke-with-response-stream" }, input)
-end
-
---- Returns a list of aliases for a Lambda function
---- @param input table|nil The input table for the list_aliases command
+--- AWS lambda list-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_aliases(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-aliases" }, input)
 end
 
---- Returns a list of code signing configurations
---- @param input table|nil The input table for the list_code_signing_configs command
+--- AWS lambda list-code-signing-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_code_signing_configs(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-code-signing-configs" }, input)
 end
 
---- Lists event source mappings
---- @param input table|nil The input table for the list_event_source_mappings command
+--- AWS lambda list-event-source-mappings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_source_mappings(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-event-source-mappings" }, input)
 end
 
---- Retrieves a list of configurations for asynchronous invocation for a function
---- @param input table|nil The input table for the list_function_event_invoke_configs command
+--- AWS lambda list-function-event-invoke-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_function_event_invoke_configs(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-function-event-invoke-configs" }, input)
 end
 
---- Returns a list of Lambda function URLs for the specified function
---- @param input table|nil The input table for the list_function_url_configs command
+--- AWS lambda list-function-url-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_function_url_configs(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-function-url-configs" }, input)
 end
 
---- Returns a list of Lambda functions, with the version-specific configuration of each
---- @param input table|nil The input table for the list_functions command
+--- AWS lambda list-functions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_functions(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-functions" }, input)
 end
 
---- List the functions that use the specified code signing configuration
---- @param input table|nil The input table for the list_functions_by_code_signing_config command
+--- AWS lambda list-functions-by-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_functions_by_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-functions-by-code-signing-config" }, input)
 end
 
---- Lists the versions of an Lambda layer
---- @param input table|nil The input table for the list_layer_versions command
+--- AWS lambda list-layer-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_layer_versions(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-layer-versions" }, input)
 end
 
---- Lists Lambda layers and shows information about the latest version of each
---- @param input table|nil The input table for the list_layers command
+--- AWS lambda list-layers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_layers(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-layers" }, input)
 end
 
---- Retrieves a list of provisioned concurrency configurations for a function
---- @param input table|nil The input table for the list_provisioned_concurrency_configs command
+--- AWS lambda list-provisioned-concurrency-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_provisioned_concurrency_configs(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-provisioned-concurrency-configs" }, input)
 end
 
---- Returns a function, event source mapping, or code signing configuration's tags
---- @param input table|nil The input table for the list_tags command
+--- AWS lambda list-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-tags" }, input)
 end
 
---- Returns a list of versions, with the version-specific configuration of each
---- @param input table|nil The input table for the list_versions_by_function command
+--- AWS lambda list-versions-by-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_versions_by_function(input)
 	return common.execute_aws_command_with_input({ "lambda", "list-versions-by-function" }, input)
 end
 
---- Creates an Lambda layer from a ZIP archive
---- @param input table|nil The input table for the publish_layer_version command
+--- AWS lambda publish-layer-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish_layer_version(input)
 	return common.execute_aws_command_with_input({ "lambda", "publish-layer-version" }, input)
 end
 
---- Creates a version from the current code and configuration of a function
---- @param input table|nil The input table for the publish_version command
+--- AWS lambda publish-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.publish_version(input)
 	return common.execute_aws_command_with_input({ "lambda", "publish-version" }, input)
 end
 
---- Update the code signing configuration for the function
---- @param input table|nil The input table for the put_function_code_signing_config command
+--- AWS lambda put-function-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_function_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-function-code-signing-config" }, input)
 end
 
---- Sets the maximum number of simultaneous executions for a function, and reserves capacity for that concurrency level
---- @param input table|nil The input table for the put_function_concurrency command
+--- AWS lambda put-function-concurrency operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_function_concurrency(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-function-concurrency" }, input)
 end
 
---- Configures options for asynchronous invocation on a function, version, or alias
---- @param input table|nil The input table for the put_function_event_invoke_config command
+--- AWS lambda put-function-event-invoke-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_function_event_invoke_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-function-event-invoke-config" }, input)
 end
 
---- Sets your function's recursive loop detection configuration
---- @param input table|nil The input table for the put_function_recursion_config command
+--- AWS lambda put-function-recursion-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_function_recursion_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-function-recursion-config" }, input)
 end
 
---- Adds a provisioned concurrency configuration to a function's alias or version
---- @param input table|nil The input table for the put_provisioned_concurrency_config command
+--- AWS lambda put-provisioned-concurrency-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_provisioned_concurrency_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-provisioned-concurrency-config" }, input)
 end
 
---- Sets the runtime management configuration for a function's version
---- @param input table|nil The input table for the put_runtime_management_config command
+--- AWS lambda put-runtime-management-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_runtime_management_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "put-runtime-management-config" }, input)
 end
 
---- Removes a statement from the permissions policy for a version of an Lambda layer
---- @param input table|nil The input table for the remove_layer_version_permission command
+--- AWS lambda remove-layer-version-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_layer_version_permission(input)
 	return common.execute_aws_command_with_input({ "lambda", "remove-layer-version-permission" }, input)
 end
 
---- Revokes function-use permission from an Amazon Web Services service or another Amazon Web Services account
---- @param input table|nil The input table for the remove_permission command
+--- AWS lambda remove-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_permission(input)
 	return common.execute_aws_command_with_input({ "lambda", "remove-permission" }, input)
 end
 
---- Adds tags to a function, event source mapping, or code signing configuration
---- @param input table|nil The input table for the tag_resource command
+--- AWS lambda tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "lambda", "tag-resource" }, input)
 end
 
---- Removes tags from a function, event source mapping, or code signing configuration
---- @param input table|nil The input table for the untag_resource command
+--- AWS lambda untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "lambda", "untag-resource" }, input)
 end
 
---- Updates the configuration of a Lambda function alias
---- @param input table|nil The input table for the update_alias command
+--- AWS lambda update-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_alias(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-alias" }, input)
 end
 
---- Update the code signing configuration
---- @param input table|nil The input table for the update_code_signing_config command
+--- AWS lambda update-code-signing-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_code_signing_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-code-signing-config" }, input)
 end
 
---- Updates an event source mapping
---- @param input table|nil The input table for the update_event_source_mapping command
+--- AWS lambda update-event-source-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_event_source_mapping(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-event-source-mapping" }, input)
 end
 
---- Updates a Lambda function's code
---- @param input table|nil The input table for the update_function_code command
+--- AWS lambda update-function-code operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function_code(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-function-code" }, input)
 end
 
---- Modify the version-specific settings of a Lambda function
---- @param input table|nil The input table for the update_function_configuration command
+--- AWS lambda update-function-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function_configuration(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-function-configuration" }, input)
 end
 
---- Updates the configuration for asynchronous invocation for a function, version, or alias
---- @param input table|nil The input table for the update_function_event_invoke_config command
+--- AWS lambda update-function-event-invoke-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function_event_invoke_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-function-event-invoke-config" }, input)
 end
 
---- Updates the configuration for a Lambda function URL
---- @param input table|nil The input table for the update_function_url_config command
+--- AWS lambda update-function-url-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_function_url_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-function-url-config" }, input)

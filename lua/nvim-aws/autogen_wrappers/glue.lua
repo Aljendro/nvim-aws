@@ -6,1772 +6,1779 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS GLUE service functions
 local M = {}
 
---- Creates one or more partitions in a batch operation
---- @param input table|nil The input table for the batch_create_partition command
+--- AWS glue batch-create-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_create_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-create-partition" }, input)
 end
 
---- Deletes a list of connection definitions from the Data Catalog
---- @param input table|nil The input table for the batch_delete_connection command
+--- AWS glue batch-delete-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-delete-connection" }, input)
 end
 
---- Deletes one or more partitions in a batch operation
---- @param input table|nil The input table for the batch_delete_partition command
+--- AWS glue batch-delete-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-delete-partition" }, input)
 end
 
---- Deletes multiple tables at once
---- @param input table|nil The input table for the batch_delete_table command
+--- AWS glue batch-delete-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_table(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-delete-table" }, input)
 end
 
---- Deletes a specified batch of versions of a table
---- @param input table|nil The input table for the batch_delete_table_version command
+--- AWS glue batch-delete-table-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_table_version(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-delete-table-version" }, input)
 end
 
---- Retrieves information about a list of blueprints
---- @param input table|nil The input table for the batch_get_blueprints command
+--- AWS glue batch-get-blueprints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_blueprints(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-blueprints" }, input)
 end
 
---- Returns a list of resource metadata for a given list of crawler names
---- @param input table|nil The input table for the batch_get_crawlers command
+--- AWS glue batch-get-crawlers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_crawlers(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-crawlers" }, input)
 end
 
---- Retrieves the details for the custom patterns specified by a list of names
---- @param input table|nil The input table for the batch_get_custom_entity_types command
+--- AWS glue batch-get-custom-entity-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_custom_entity_types(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-custom-entity-types" }, input)
 end
 
---- Retrieves a list of data quality results for the specified result IDs
---- @param input table|nil The input table for the batch_get_data_quality_result command
+--- AWS glue batch-get-data-quality-result operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_data_quality_result(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-data-quality-result" }, input)
 end
 
---- Returns a list of resource metadata for a given list of development endpoint names
---- @param input table|nil The input table for the batch_get_dev_endpoints command
+--- AWS glue batch-get-dev-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_dev_endpoints(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-dev-endpoints" }, input)
 end
 
---- Returns a list of resource metadata for a given list of job names
---- @param input table|nil The input table for the batch_get_jobs command
+--- AWS glue batch-get-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_jobs(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-jobs" }, input)
 end
 
---- Retrieves partitions in a batch request
---- @param input table|nil The input table for the batch_get_partition command
+--- AWS glue batch-get-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-partition" }, input)
 end
 
---- Returns the configuration for the specified table optimizers
---- @param input table|nil The input table for the batch_get_table_optimizer command
+--- AWS glue batch-get-table-optimizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_table_optimizer(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-table-optimizer" }, input)
 end
 
---- Returns a list of resource metadata for a given list of trigger names
---- @param input table|nil The input table for the batch_get_triggers command
+--- AWS glue batch-get-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_triggers(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-triggers" }, input)
 end
 
---- Returns a list of resource metadata for a given list of workflow names
---- @param input table|nil The input table for the batch_get_workflows command
+--- AWS glue batch-get-workflows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_workflows(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-get-workflows" }, input)
 end
 
---- Annotate datapoints over time for a specific data quality statistic
---- @param input table|nil The input table for the batch_put_data_quality_statistic_annotation command
+--- AWS glue batch-put-data-quality-statistic-annotation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_put_data_quality_statistic_annotation(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-put-data-quality-statistic-annotation" }, input)
 end
 
---- Stops one or more job runs for a specified job definition
---- @param input table|nil The input table for the batch_stop_job_run command
+--- AWS glue batch-stop-job-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_stop_job_run(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-stop-job-run" }, input)
 end
 
---- Updates one or more partitions in a batch operation
---- @param input table|nil The input table for the batch_update_partition command
+--- AWS glue batch-update-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "batch-update-partition" }, input)
 end
 
---- Cancels the specified recommendation run that was being used to generate rules
---- @param input table|nil The input table for the cancel_data_quality_rule_recommendation_run command
+--- AWS glue cancel-data-quality-rule-recommendation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_data_quality_rule_recommendation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "cancel-data-quality-rule-recommendation-run" }, input)
 end
 
---- Cancels a run where a ruleset is being evaluated against a data source
---- @param input table|nil The input table for the cancel_data_quality_ruleset_evaluation_run command
+--- AWS glue cancel-data-quality-ruleset-evaluation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_data_quality_ruleset_evaluation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "cancel-data-quality-ruleset-evaluation-run" }, input)
 end
 
---- Cancels (stops) a task run
---- @param input table|nil The input table for the cancel_ml_task_run command
+--- AWS glue cancel-ml-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_ml_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "cancel-ml-task-run" }, input)
 end
 
---- Cancels the statement
---- @param input table|nil The input table for the cancel_statement command
+--- AWS glue cancel-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_statement(input)
 	return common.execute_aws_command_with_input({ "glue", "cancel-statement" }, input)
 end
 
---- Validates the supplied schema
---- @param input table|nil The input table for the check_schema_version_validity command
+--- AWS glue check-schema-version-validity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.check_schema_version_validity(input)
 	return common.execute_aws_command_with_input({ "glue", "check-schema-version-validity" }, input)
 end
 
---- Registers a blueprint with Glue
---- @param input table|nil The input table for the create_blueprint command
+--- AWS glue create-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_blueprint(input)
 	return common.execute_aws_command_with_input({ "glue", "create-blueprint" }, input)
 end
 
---- Creates a new catalog in the Glue Data Catalog
---- @param input table|nil The input table for the create_catalog command
+--- AWS glue create-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_catalog(input)
 	return common.execute_aws_command_with_input({ "glue", "create-catalog" }, input)
 end
 
---- Creates a classifier in the user's account
---- @param input table|nil The input table for the create_classifier command
+--- AWS glue create-classifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_classifier(input)
 	return common.execute_aws_command_with_input({ "glue", "create-classifier" }, input)
 end
 
---- Creates settings for a column statistics task
---- @param input table|nil The input table for the create_column_statistics_task_settings command
+--- AWS glue create-column-statistics-task-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_column_statistics_task_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "create-column-statistics-task-settings" }, input)
 end
 
---- Creates a connection definition in the Data Catalog
---- @param input table|nil The input table for the create_connection command
+--- AWS glue create-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "create-connection" }, input)
 end
 
---- Creates a new crawler with specified targets, role, configuration, and optional schedule
---- @param input table|nil The input table for the create_crawler command
+--- AWS glue create-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "create-crawler" }, input)
 end
 
---- Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured data
---- @param input table|nil The input table for the create_custom_entity_type command
+--- AWS glue create-custom-entity-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_entity_type(input)
 	return common.execute_aws_command_with_input({ "glue", "create-custom-entity-type" }, input)
 end
 
---- Creates a data quality ruleset with DQDL rules applied to a specified Glue table
---- @param input table|nil The input table for the create_data_quality_ruleset command
+--- AWS glue create-data-quality-ruleset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_quality_ruleset(input)
 	return common.execute_aws_command_with_input({ "glue", "create-data-quality-ruleset" }, input)
 end
 
---- Creates a new database in a Data Catalog
---- @param input table|nil The input table for the create_database command
+--- AWS glue create-database operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_database(input)
 	return common.execute_aws_command_with_input({ "glue", "create-database" }, input)
 end
 
---- Creates a new development endpoint
---- @param input table|nil The input table for the create_dev_endpoint command
+--- AWS glue create-dev-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dev_endpoint(input)
 	return common.execute_aws_command_with_input({ "glue", "create-dev-endpoint" }, input)
 end
 
---- Creates a Zero-ETL integration in the caller's account between two resources with Amazon Resource Names (ARNs): the SourceArn and TargetArn
---- @param input table|nil The input table for the create_integration command
+--- AWS glue create-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration(input)
 	return common.execute_aws_command_with_input({ "glue", "create-integration" }, input)
 end
 
---- This API can be used for setting up the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target)
---- @param input table|nil The input table for the create_integration_resource_property command
+--- AWS glue create-integration-resource-property operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration_resource_property(input)
 	return common.execute_aws_command_with_input({ "glue", "create-integration-resource-property" }, input)
 end
 
---- This API is used to provide optional override properties for the the tables that need to be replicated
---- @param input table|nil The input table for the create_integration_table_properties command
+--- AWS glue create-integration-table-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration_table_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "create-integration-table-properties" }, input)
 end
 
---- Creates a new job definition
---- @param input table|nil The input table for the create_job command
+--- AWS glue create-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job(input)
 	return common.execute_aws_command_with_input({ "glue", "create-job" }, input)
 end
 
---- Creates an Glue machine learning transform
---- @param input table|nil The input table for the create_ml_transform command
+--- AWS glue create-ml-transform operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ml_transform(input)
 	return common.execute_aws_command_with_input({ "glue", "create-ml-transform" }, input)
 end
 
---- Creates a new partition
---- @param input table|nil The input table for the create_partition command
+--- AWS glue create-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "create-partition" }, input)
 end
 
---- Creates a specified partition index in an existing table
---- @param input table|nil The input table for the create_partition_index command
+--- AWS glue create-partition-index operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_partition_index(input)
 	return common.execute_aws_command_with_input({ "glue", "create-partition-index" }, input)
 end
 
---- Creates a new registry which may be used to hold a collection of schemas
---- @param input table|nil The input table for the create_registry command
+--- AWS glue create-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registry(input)
 	return common.execute_aws_command_with_input({ "glue", "create-registry" }, input)
 end
 
---- Creates a new schema set and registers the schema definition
---- @param input table|nil The input table for the create_schema command
+--- AWS glue create-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schema(input)
 	return common.execute_aws_command_with_input({ "glue", "create-schema" }, input)
 end
 
---- Transforms a directed acyclic graph (DAG) into code
---- @param input table|nil The input table for the create_script command
+--- AWS glue create-script operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_script(input)
 	return common.execute_aws_command_with_input({ "glue", "create-script" }, input)
 end
 
---- Creates a new security configuration
---- @param input table|nil The input table for the create_security_configuration command
+--- AWS glue create-security-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_security_configuration(input)
 	return common.execute_aws_command_with_input({ "glue", "create-security-configuration" }, input)
 end
 
---- Creates a new session
---- @param input table|nil The input table for the create_session command
+--- AWS glue create-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_session(input)
 	return common.execute_aws_command_with_input({ "glue", "create-session" }, input)
 end
 
---- Creates a new table definition in the Data Catalog
---- @param input table|nil The input table for the create_table command
+--- AWS glue create-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table(input)
 	return common.execute_aws_command_with_input({ "glue", "create-table" }, input)
 end
 
---- Creates a new table optimizer for a specific function
---- @param input table|nil The input table for the create_table_optimizer command
+--- AWS glue create-table-optimizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table_optimizer(input)
 	return common.execute_aws_command_with_input({ "glue", "create-table-optimizer" }, input)
 end
 
---- Creates a new trigger
---- @param input table|nil The input table for the create_trigger command
+--- AWS glue create-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "create-trigger" }, input)
 end
 
---- Creates an Glue usage profile
---- @param input table|nil The input table for the create_usage_profile command
+--- AWS glue create-usage-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_usage_profile(input)
 	return common.execute_aws_command_with_input({ "glue", "create-usage-profile" }, input)
 end
 
---- Creates a new function definition in the Data Catalog
---- @param input table|nil The input table for the create_user_defined_function command
+--- AWS glue create-user-defined-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user_defined_function(input)
 	return common.execute_aws_command_with_input({ "glue", "create-user-defined-function" }, input)
 end
 
---- Creates a new workflow
---- @param input table|nil The input table for the create_workflow command
+--- AWS glue create-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workflow(input)
 	return common.execute_aws_command_with_input({ "glue", "create-workflow" }, input)
 end
 
---- Deletes an existing blueprint
---- @param input table|nil The input table for the delete_blueprint command
+--- AWS glue delete-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_blueprint(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-blueprint" }, input)
 end
 
---- Removes the specified catalog from the Glue Data Catalog
---- @param input table|nil The input table for the delete_catalog command
+--- AWS glue delete-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_catalog(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-catalog" }, input)
 end
 
---- Removes a classifier from the Data Catalog
---- @param input table|nil The input table for the delete_classifier command
+--- AWS glue delete-classifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_classifier(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-classifier" }, input)
 end
 
---- Delete the partition column statistics of a column
---- @param input table|nil The input table for the delete_column_statistics_for_partition command
+--- AWS glue delete-column-statistics-for-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_column_statistics_for_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-column-statistics-for-partition" }, input)
 end
 
---- Retrieves table statistics of columns
---- @param input table|nil The input table for the delete_column_statistics_for_table command
+--- AWS glue delete-column-statistics-for-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_column_statistics_for_table(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-column-statistics-for-table" }, input)
 end
 
---- Deletes settings for a column statistics task
---- @param input table|nil The input table for the delete_column_statistics_task_settings command
+--- AWS glue delete-column-statistics-task-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_column_statistics_task_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-column-statistics-task-settings" }, input)
 end
 
---- Deletes a connection from the Data Catalog
---- @param input table|nil The input table for the delete_connection command
+--- AWS glue delete-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-connection" }, input)
 end
 
---- Removes a specified crawler from the Glue Data Catalog, unless the crawler state is RUNNING
---- @param input table|nil The input table for the delete_crawler command
+--- AWS glue delete-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-crawler" }, input)
 end
 
---- Deletes a custom pattern by specifying its name
---- @param input table|nil The input table for the delete_custom_entity_type command
+--- AWS glue delete-custom-entity-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_entity_type(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-custom-entity-type" }, input)
 end
 
---- Deletes a data quality ruleset
---- @param input table|nil The input table for the delete_data_quality_ruleset command
+--- AWS glue delete-data-quality-ruleset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_quality_ruleset(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-data-quality-ruleset" }, input)
 end
 
---- Removes a specified database from a Data Catalog
---- @param input table|nil The input table for the delete_database command
+--- AWS glue delete-database operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_database(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-database" }, input)
 end
 
---- Deletes a specified development endpoint
---- @param input table|nil The input table for the delete_dev_endpoint command
+--- AWS glue delete-dev-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dev_endpoint(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-dev-endpoint" }, input)
 end
 
---- Deletes the specified Zero-ETL integration
---- @param input table|nil The input table for the delete_integration command
+--- AWS glue delete-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-integration" }, input)
 end
 
---- Deletes the table properties that have been created for the tables that need to be replicated
---- @param input table|nil The input table for the delete_integration_table_properties command
+--- AWS glue delete-integration-table-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration_table_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-integration-table-properties" }, input)
 end
 
---- Deletes a specified job definition
---- @param input table|nil The input table for the delete_job command
+--- AWS glue delete-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_job(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-job" }, input)
 end
 
---- Deletes an Glue machine learning transform
---- @param input table|nil The input table for the delete_ml_transform command
+--- AWS glue delete-ml-transform operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ml_transform(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-ml-transform" }, input)
 end
 
---- Deletes a specified partition
---- @param input table|nil The input table for the delete_partition command
+--- AWS glue delete-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-partition" }, input)
 end
 
---- Deletes a specified partition index from an existing table
---- @param input table|nil The input table for the delete_partition_index command
+--- AWS glue delete-partition-index operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_partition_index(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-partition-index" }, input)
 end
 
---- Delete the entire registry including schema and all of its versions
---- @param input table|nil The input table for the delete_registry command
+--- AWS glue delete-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registry(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-registry" }, input)
 end
 
---- Deletes a specified policy
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS glue delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-resource-policy" }, input)
 end
 
---- Deletes the entire schema set, including the schema set and all of its versions
---- @param input table|nil The input table for the delete_schema command
+--- AWS glue delete-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schema(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-schema" }, input)
 end
 
---- Remove versions from the specified schema
---- @param input table|nil The input table for the delete_schema_versions command
+--- AWS glue delete-schema-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schema_versions(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-schema-versions" }, input)
 end
 
---- Deletes a specified security configuration
---- @param input table|nil The input table for the delete_security_configuration command
+--- AWS glue delete-security-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_security_configuration(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-security-configuration" }, input)
 end
 
---- Deletes the session
---- @param input table|nil The input table for the delete_session command
+--- AWS glue delete-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_session(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-session" }, input)
 end
 
---- Removes a table definition from the Data Catalog
---- @param input table|nil The input table for the delete_table command
+--- AWS glue delete-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-table" }, input)
 end
 
---- Deletes an optimizer and all associated metadata for a table
---- @param input table|nil The input table for the delete_table_optimizer command
+--- AWS glue delete-table-optimizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table_optimizer(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-table-optimizer" }, input)
 end
 
---- Deletes a specified version of a table
---- @param input table|nil The input table for the delete_table_version command
+--- AWS glue delete-table-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table_version(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-table-version" }, input)
 end
 
---- Deletes a specified trigger
---- @param input table|nil The input table for the delete_trigger command
+--- AWS glue delete-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-trigger" }, input)
 end
 
---- Deletes the Glue specified usage profile
---- @param input table|nil The input table for the delete_usage_profile command
+--- AWS glue delete-usage-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_usage_profile(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-usage-profile" }, input)
 end
 
---- Deletes an existing function definition from the Data Catalog
---- @param input table|nil The input table for the delete_user_defined_function command
+--- AWS glue delete-user-defined-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user_defined_function(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-user-defined-function" }, input)
 end
 
---- Deletes a workflow
---- @param input table|nil The input table for the delete_workflow command
+--- AWS glue delete-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workflow(input)
 	return common.execute_aws_command_with_input({ "glue", "delete-workflow" }, input)
 end
 
---- The DescribeConnectionType API provides full details of the supported options for a given connection type in Glue
---- @param input table|nil The input table for the describe_connection_type command
+--- AWS glue describe-connection-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_connection_type(input)
 	return common.execute_aws_command_with_input({ "glue", "describe-connection-type" }, input)
 end
 
---- Provides details regarding the entity used with the connection type, with a description of the data model for each field in the selected entity
---- @param input table|nil The input table for the describe_entity command
+--- AWS glue describe-entity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entity(input)
 	return common.execute_aws_command_with_input({ "glue", "describe-entity" }, input)
 end
 
---- Returns a list of inbound integrations for the specified integration
---- @param input table|nil The input table for the describe_inbound_integrations command
+--- AWS glue describe-inbound-integrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_inbound_integrations(input)
 	return common.execute_aws_command_with_input({ "glue", "describe-inbound-integrations" }, input)
 end
 
---- The API is used to retrieve a list of integrations
---- @param input table|nil The input table for the describe_integrations command
+--- AWS glue describe-integrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_integrations(input)
 	return common.execute_aws_command_with_input({ "glue", "describe-integrations" }, input)
 end
 
---- Retrieves the details of a blueprint
---- @param input table|nil The input table for the get_blueprint command
+--- AWS glue get-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blueprint(input)
 	return common.execute_aws_command_with_input({ "glue", "get-blueprint" }, input)
 end
 
---- Retrieves the details of a blueprint run
---- @param input table|nil The input table for the get_blueprint_run command
+--- AWS glue get-blueprint-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blueprint_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-blueprint-run" }, input)
 end
 
---- Retrieves the details of blueprint runs for a specified blueprint
---- @param input table|nil The input table for the get_blueprint_runs command
+--- AWS glue get-blueprint-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blueprint_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-blueprint-runs" }, input)
 end
 
---- The name of the Catalog to retrieve
---- @param input table|nil The input table for the get_catalog command
+--- AWS glue get-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_catalog(input)
 	return common.execute_aws_command_with_input({ "glue", "get-catalog" }, input)
 end
 
---- Retrieves the status of a migration operation
---- @param input table|nil The input table for the get_catalog_import_status command
+--- AWS glue get-catalog-import-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_catalog_import_status(input)
 	return common.execute_aws_command_with_input({ "glue", "get-catalog-import-status" }, input)
 end
 
---- Retrieves all catalogs defined in a catalog in the Glue Data Catalog
---- @param input table|nil The input table for the get_catalogs command
+--- AWS glue get-catalogs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_catalogs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-catalogs" }, input)
 end
 
---- Retrieve a classifier by name
---- @param input table|nil The input table for the get_classifier command
+--- AWS glue get-classifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_classifier(input)
 	return common.execute_aws_command_with_input({ "glue", "get-classifier" }, input)
 end
 
---- Lists all classifier objects in the Data Catalog
---- @param input table|nil The input table for the get_classifiers command
+--- AWS glue get-classifiers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_classifiers(input)
 	return common.execute_aws_command_with_input({ "glue", "get-classifiers" }, input)
 end
 
---- Retrieves partition statistics of columns
---- @param input table|nil The input table for the get_column_statistics_for_partition command
+--- AWS glue get-column-statistics-for-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_column_statistics_for_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "get-column-statistics-for-partition" }, input)
 end
 
---- Retrieves table statistics of columns
---- @param input table|nil The input table for the get_column_statistics_for_table command
+--- AWS glue get-column-statistics-for-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_column_statistics_for_table(input)
 	return common.execute_aws_command_with_input({ "glue", "get-column-statistics-for-table" }, input)
 end
 
---- Get the associated metadata/information for a task run, given a task run ID
---- @param input table|nil The input table for the get_column_statistics_task_run command
+--- AWS glue get-column-statistics-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_column_statistics_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-column-statistics-task-run" }, input)
 end
 
---- Retrieves information about all runs associated with the specified table
---- @param input table|nil The input table for the get_column_statistics_task_runs command
+--- AWS glue get-column-statistics-task-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_column_statistics_task_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-column-statistics-task-runs" }, input)
 end
 
---- Gets settings for a column statistics task
---- @param input table|nil The input table for the get_column_statistics_task_settings command
+--- AWS glue get-column-statistics-task-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_column_statistics_task_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "get-column-statistics-task-settings" }, input)
 end
 
---- Retrieves a connection definition from the Data Catalog
---- @param input table|nil The input table for the get_connection command
+--- AWS glue get-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "get-connection" }, input)
 end
 
---- Retrieves a list of connection definitions from the Data Catalog
---- @param input table|nil The input table for the get_connections command
+--- AWS glue get-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connections(input)
 	return common.execute_aws_command_with_input({ "glue", "get-connections" }, input)
 end
 
---- Retrieves metadata for a specified crawler
---- @param input table|nil The input table for the get_crawler command
+--- AWS glue get-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "get-crawler" }, input)
 end
 
---- Retrieves metrics about specified crawlers
---- @param input table|nil The input table for the get_crawler_metrics command
+--- AWS glue get-crawler-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_crawler_metrics(input)
 	return common.execute_aws_command_with_input({ "glue", "get-crawler-metrics" }, input)
 end
 
---- Retrieves metadata for all crawlers defined in the customer account
---- @param input table|nil The input table for the get_crawlers command
+--- AWS glue get-crawlers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_crawlers(input)
 	return common.execute_aws_command_with_input({ "glue", "get-crawlers" }, input)
 end
 
---- Retrieves the details of a custom pattern by specifying its name
---- @param input table|nil The input table for the get_custom_entity_type command
+--- AWS glue get-custom-entity-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_custom_entity_type(input)
 	return common.execute_aws_command_with_input({ "glue", "get-custom-entity-type" }, input)
 end
 
---- Retrieves the security configuration for a specified catalog
---- @param input table|nil The input table for the get_data_catalog_encryption_settings command
+--- AWS glue get-data-catalog-encryption-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_catalog_encryption_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-catalog-encryption-settings" }, input)
 end
 
---- Retrieve the training status of the model along with more information (CompletedOn, StartedOn, FailureReason)
---- @param input table|nil The input table for the get_data_quality_model command
+--- AWS glue get-data-quality-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_model(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-model" }, input)
 end
 
---- Retrieve a statistic's predictions for a given Profile ID
---- @param input table|nil The input table for the get_data_quality_model_result command
+--- AWS glue get-data-quality-model-result operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_model_result(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-model-result" }, input)
 end
 
---- Retrieves the result of a data quality rule evaluation
---- @param input table|nil The input table for the get_data_quality_result command
+--- AWS glue get-data-quality-result operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_result(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-result" }, input)
 end
 
---- Gets the specified recommendation run that was used to generate rules
---- @param input table|nil The input table for the get_data_quality_rule_recommendation_run command
+--- AWS glue get-data-quality-rule-recommendation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_rule_recommendation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-rule-recommendation-run" }, input)
 end
 
---- Returns an existing ruleset by identifier or name
---- @param input table|nil The input table for the get_data_quality_ruleset command
+--- AWS glue get-data-quality-ruleset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_ruleset(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-ruleset" }, input)
 end
 
---- Retrieves a specific run where a ruleset is evaluated against a data source
---- @param input table|nil The input table for the get_data_quality_ruleset_evaluation_run command
+--- AWS glue get-data-quality-ruleset-evaluation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_ruleset_evaluation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-data-quality-ruleset-evaluation-run" }, input)
 end
 
---- Retrieves the definition of a specified database
---- @param input table|nil The input table for the get_database command
+--- AWS glue get-database operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_database(input)
 	return common.execute_aws_command_with_input({ "glue", "get-database" }, input)
 end
 
---- Retrieves all databases defined in a given Data Catalog
---- @param input table|nil The input table for the get_databases command
+--- AWS glue get-databases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_databases(input)
 	return common.execute_aws_command_with_input({ "glue", "get-databases" }, input)
 end
 
---- Transforms a Python script into a directed acyclic graph (DAG)
---- @param input table|nil The input table for the get_dataflow_graph command
+--- AWS glue get-dataflow-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dataflow_graph(input)
 	return common.execute_aws_command_with_input({ "glue", "get-dataflow-graph" }, input)
 end
 
---- Retrieves information about a specified development endpoint
---- @param input table|nil The input table for the get_dev_endpoint command
+--- AWS glue get-dev-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dev_endpoint(input)
 	return common.execute_aws_command_with_input({ "glue", "get-dev-endpoint" }, input)
 end
 
---- Retrieves all the development endpoints in this Amazon Web Services account
---- @param input table|nil The input table for the get_dev_endpoints command
+--- AWS glue get-dev-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dev_endpoints(input)
 	return common.execute_aws_command_with_input({ "glue", "get-dev-endpoints" }, input)
 end
 
---- This API is used to query preview data from a given connection type or from a native Amazon S3 based Glue Data Catalog
---- @param input table|nil The input table for the get_entity_records command
+--- AWS glue get-entity-records operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_entity_records(input)
 	return common.execute_aws_command_with_input({ "glue", "get-entity-records" }, input)
 end
 
---- This API is used for fetching the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target)
---- @param input table|nil The input table for the get_integration_resource_property command
+--- AWS glue get-integration-resource-property operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration_resource_property(input)
 	return common.execute_aws_command_with_input({ "glue", "get-integration-resource-property" }, input)
 end
 
---- This API is used to retrieve optional override properties for the tables that need to be replicated
---- @param input table|nil The input table for the get_integration_table_properties command
+--- AWS glue get-integration-table-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration_table_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "get-integration-table-properties" }, input)
 end
 
---- Retrieves an existing job definition
---- @param input table|nil The input table for the get_job command
+--- AWS glue get-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job(input)
 	return common.execute_aws_command_with_input({ "glue", "get-job" }, input)
 end
 
---- Returns information on a job bookmark entry
---- @param input table|nil The input table for the get_job_bookmark command
+--- AWS glue get-job-bookmark operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_bookmark(input)
 	return common.execute_aws_command_with_input({ "glue", "get-job-bookmark" }, input)
 end
 
---- Retrieves the metadata for a given job run
---- @param input table|nil The input table for the get_job_run command
+--- AWS glue get-job-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-job-run" }, input)
 end
 
---- Retrieves metadata for all runs of a given job definition
---- @param input table|nil The input table for the get_job_runs command
+--- AWS glue get-job-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-job-runs" }, input)
 end
 
---- Retrieves all current job definitions
---- @param input table|nil The input table for the get_jobs command
+--- AWS glue get-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_jobs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-jobs" }, input)
 end
 
---- Gets details for a specific task run on a machine learning transform
---- @param input table|nil The input table for the get_ml_task_run command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_task_run(input)
-	return common.execute_aws_command_with_input({ "glue", "get-ml-task-run" }, input)
-end
-
---- Gets a list of runs for a machine learning transform
---- @param input table|nil The input table for the get_ml_task_runs command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_task_runs(input)
-	return common.execute_aws_command_with_input({ "glue", "get-ml-task-runs" }, input)
-end
-
---- Gets an Glue machine learning transform artifact and all its corresponding metadata
---- @param input table|nil The input table for the get_ml_transform command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_transform(input)
-	return common.execute_aws_command_with_input({ "glue", "get-ml-transform" }, input)
-end
-
---- Gets a sortable, filterable list of existing Glue machine learning transforms
---- @param input table|nil The input table for the get_ml_transforms command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_transforms(input)
-	return common.execute_aws_command_with_input({ "glue", "get-ml-transforms" }, input)
-end
-
---- Creates mappings
---- @param input table|nil The input table for the get_mapping command
+--- AWS glue get-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_mapping(input)
 	return common.execute_aws_command_with_input({ "glue", "get-mapping" }, input)
 end
 
---- Retrieves information about a specified partition
---- @param input table|nil The input table for the get_partition command
+--- AWS glue get-ml-task-run operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ml_task_run(input)
+	return common.execute_aws_command_with_input({ "glue", "get-ml-task-run" }, input)
+end
+
+--- AWS glue get-ml-task-runs operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ml_task_runs(input)
+	return common.execute_aws_command_with_input({ "glue", "get-ml-task-runs" }, input)
+end
+
+--- AWS glue get-ml-transform operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ml_transform(input)
+	return common.execute_aws_command_with_input({ "glue", "get-ml-transform" }, input)
+end
+
+--- AWS glue get-ml-transforms operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ml_transforms(input)
+	return common.execute_aws_command_with_input({ "glue", "get-ml-transforms" }, input)
+end
+
+--- AWS glue get-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "get-partition" }, input)
 end
 
---- Retrieves the partition indexes associated with a table
---- @param input table|nil The input table for the get_partition_indexes command
+--- AWS glue get-partition-indexes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_partition_indexes(input)
 	return common.execute_aws_command_with_input({ "glue", "get-partition-indexes" }, input)
 end
 
---- Retrieves information about the partitions in a table
---- @param input table|nil The input table for the get_partitions command
+--- AWS glue get-partitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_partitions(input)
 	return common.execute_aws_command_with_input({ "glue", "get-partitions" }, input)
 end
 
---- Gets code to perform a specified mapping
---- @param input table|nil The input table for the get_plan command
+--- AWS glue get-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_plan(input)
 	return common.execute_aws_command_with_input({ "glue", "get-plan" }, input)
 end
 
---- Describes the specified registry in detail
---- @param input table|nil The input table for the get_registry command
+--- AWS glue get-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_registry(input)
 	return common.execute_aws_command_with_input({ "glue", "get-registry" }, input)
 end
 
---- Retrieves the resource policies set on individual resources by Resource Access Manager during cross-account permission grants
---- @param input table|nil The input table for the get_resource_policies command
+--- AWS glue get-resource-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policies(input)
 	return common.execute_aws_command_with_input({ "glue", "get-resource-policies" }, input)
 end
 
---- Retrieves a specified resource policy
---- @param input table|nil The input table for the get_resource_policy command
+--- AWS glue get-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "glue", "get-resource-policy" }, input)
 end
 
---- Describes the specified schema in detail
---- @param input table|nil The input table for the get_schema command
+--- AWS glue get-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema(input)
 	return common.execute_aws_command_with_input({ "glue", "get-schema" }, input)
 end
 
---- Retrieves a schema by the SchemaDefinition
---- @param input table|nil The input table for the get_schema_by_definition command
+--- AWS glue get-schema-by-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema_by_definition(input)
 	return common.execute_aws_command_with_input({ "glue", "get-schema-by-definition" }, input)
 end
 
---- Get the specified schema by its unique ID assigned when a version of the schema is created or registered
---- @param input table|nil The input table for the get_schema_version command
+--- AWS glue get-schema-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema_version(input)
 	return common.execute_aws_command_with_input({ "glue", "get-schema-version" }, input)
 end
 
---- Fetches the schema version difference in the specified difference type between two stored schema versions in the Schema Registry
---- @param input table|nil The input table for the get_schema_versions_diff command
+--- AWS glue get-schema-versions-diff operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema_versions_diff(input)
 	return common.execute_aws_command_with_input({ "glue", "get-schema-versions-diff" }, input)
 end
 
---- Retrieves a specified security configuration
---- @param input table|nil The input table for the get_security_configuration command
+--- AWS glue get-security-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_security_configuration(input)
 	return common.execute_aws_command_with_input({ "glue", "get-security-configuration" }, input)
 end
 
---- Retrieves a list of all security configurations
---- @param input table|nil The input table for the get_security_configurations command
+--- AWS glue get-security-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_security_configurations(input)
 	return common.execute_aws_command_with_input({ "glue", "get-security-configurations" }, input)
 end
 
---- Retrieves the session
---- @param input table|nil The input table for the get_session command
+--- AWS glue get-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_session(input)
 	return common.execute_aws_command_with_input({ "glue", "get-session" }, input)
 end
 
---- Retrieves the statement
---- @param input table|nil The input table for the get_statement command
+--- AWS glue get-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_statement(input)
 	return common.execute_aws_command_with_input({ "glue", "get-statement" }, input)
 end
 
---- Retrieves the Table definition in a Data Catalog for a specified table
---- @param input table|nil The input table for the get_table command
+--- AWS glue get-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table(input)
 	return common.execute_aws_command_with_input({ "glue", "get-table" }, input)
 end
 
---- Returns the configuration of all optimizers associated with a specified table
---- @param input table|nil The input table for the get_table_optimizer command
+--- AWS glue get-table-optimizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_optimizer(input)
 	return common.execute_aws_command_with_input({ "glue", "get-table-optimizer" }, input)
 end
 
---- Retrieves a specified version of a table
---- @param input table|nil The input table for the get_table_version command
+--- AWS glue get-table-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_version(input)
 	return common.execute_aws_command_with_input({ "glue", "get-table-version" }, input)
 end
 
---- Retrieves a list of strings that identify available versions of a specified table
---- @param input table|nil The input table for the get_table_versions command
+--- AWS glue get-table-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_versions(input)
 	return common.execute_aws_command_with_input({ "glue", "get-table-versions" }, input)
 end
 
---- Retrieves the definitions of some or all of the tables in a given Database
---- @param input table|nil The input table for the get_tables command
+--- AWS glue get-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_tables(input)
 	return common.execute_aws_command_with_input({ "glue", "get-tables" }, input)
 end
 
---- Retrieves a list of tags associated with a resource
---- @param input table|nil The input table for the get_tags command
+--- AWS glue get-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_tags(input)
 	return common.execute_aws_command_with_input({ "glue", "get-tags" }, input)
 end
 
---- Retrieves the definition of a trigger
---- @param input table|nil The input table for the get_trigger command
+--- AWS glue get-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "get-trigger" }, input)
 end
 
---- Gets all the triggers associated with a job
---- @param input table|nil The input table for the get_triggers command
+--- AWS glue get-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_triggers(input)
 	return common.execute_aws_command_with_input({ "glue", "get-triggers" }, input)
 end
 
---- Retrieves partition metadata from the Data Catalog that contains unfiltered metadata
---- @param input table|nil The input table for the get_unfiltered_partition_metadata command
+--- AWS glue get-unfiltered-partition-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_unfiltered_partition_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "get-unfiltered-partition-metadata" }, input)
 end
 
---- Retrieves partition metadata from the Data Catalog that contains unfiltered metadata
---- @param input table|nil The input table for the get_unfiltered_partitions_metadata command
+--- AWS glue get-unfiltered-partitions-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_unfiltered_partitions_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "get-unfiltered-partitions-metadata" }, input)
 end
 
---- Allows a third-party analytical engine to retrieve unfiltered table metadata from the Data Catalog
---- @param input table|nil The input table for the get_unfiltered_table_metadata command
+--- AWS glue get-unfiltered-table-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_unfiltered_table_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "get-unfiltered-table-metadata" }, input)
 end
 
---- Retrieves information about the specified Glue usage profile
---- @param input table|nil The input table for the get_usage_profile command
+--- AWS glue get-usage-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_profile(input)
 	return common.execute_aws_command_with_input({ "glue", "get-usage-profile" }, input)
 end
 
---- Retrieves a specified function definition from the Data Catalog
---- @param input table|nil The input table for the get_user_defined_function command
+--- AWS glue get-user-defined-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user_defined_function(input)
 	return common.execute_aws_command_with_input({ "glue", "get-user-defined-function" }, input)
 end
 
---- Retrieves multiple function definitions from the Data Catalog
---- @param input table|nil The input table for the get_user_defined_functions command
+--- AWS glue get-user-defined-functions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user_defined_functions(input)
 	return common.execute_aws_command_with_input({ "glue", "get-user-defined-functions" }, input)
 end
 
---- Retrieves resource metadata for a workflow
---- @param input table|nil The input table for the get_workflow command
+--- AWS glue get-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow(input)
 	return common.execute_aws_command_with_input({ "glue", "get-workflow" }, input)
 end
 
---- Retrieves the metadata for a given workflow run
---- @param input table|nil The input table for the get_workflow_run command
+--- AWS glue get-workflow-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow_run(input)
 	return common.execute_aws_command_with_input({ "glue", "get-workflow-run" }, input)
 end
 
---- Retrieves the workflow run properties which were set during the run
---- @param input table|nil The input table for the get_workflow_run_properties command
+--- AWS glue get-workflow-run-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow_run_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "get-workflow-run-properties" }, input)
 end
 
---- Retrieves metadata for all runs of a given workflow
---- @param input table|nil The input table for the get_workflow_runs command
+--- AWS glue get-workflow-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "get-workflow-runs" }, input)
 end
 
---- Imports an existing Amazon Athena Data Catalog to Glue
---- @param input table|nil The input table for the import_catalog_to_glue command
+--- AWS glue help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "glue", "help" }, input)
+end
+
+--- AWS glue import-catalog-to-glue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_catalog_to_glue(input)
 	return common.execute_aws_command_with_input({ "glue", "import-catalog-to-glue" }, input)
 end
 
---- Lists all the blueprint names in an account
---- @param input table|nil The input table for the list_blueprints command
+--- AWS glue list-blueprints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_blueprints(input)
 	return common.execute_aws_command_with_input({ "glue", "list-blueprints" }, input)
 end
 
---- List all task runs for a particular account
---- @param input table|nil The input table for the list_column_statistics_task_runs command
+--- AWS glue list-column-statistics-task-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_column_statistics_task_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "list-column-statistics-task-runs" }, input)
 end
 
---- The ListConnectionTypes API provides a discovery mechanism to learn available connection types in Glue
---- @param input table|nil The input table for the list_connection_types command
+--- AWS glue list-connection-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connection_types(input)
 	return common.execute_aws_command_with_input({ "glue", "list-connection-types" }, input)
 end
 
---- Retrieves the names of all crawler resources in this Amazon Web Services account, or the resources with the specified tag
---- @param input table|nil The input table for the list_crawlers command
+--- AWS glue list-crawlers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_crawlers(input)
 	return common.execute_aws_command_with_input({ "glue", "list-crawlers" }, input)
 end
 
---- Returns all the crawls of a specified crawler
---- @param input table|nil The input table for the list_crawls command
+--- AWS glue list-crawls operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_crawls(input)
 	return common.execute_aws_command_with_input({ "glue", "list-crawls" }, input)
 end
 
---- Lists all the custom patterns that have been created
---- @param input table|nil The input table for the list_custom_entity_types command
+--- AWS glue list-custom-entity-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_entity_types(input)
 	return common.execute_aws_command_with_input({ "glue", "list-custom-entity-types" }, input)
 end
 
---- Returns all data quality execution results for your account
---- @param input table|nil The input table for the list_data_quality_results command
+--- AWS glue list-data-quality-results operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_results(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-results" }, input)
 end
 
---- Lists the recommendation runs meeting the filter criteria
---- @param input table|nil The input table for the list_data_quality_rule_recommendation_runs command
+--- AWS glue list-data-quality-rule-recommendation-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_rule_recommendation_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-rule-recommendation-runs" }, input)
 end
 
---- Lists all the runs meeting the filter criteria, where a ruleset is evaluated against a data source
---- @param input table|nil The input table for the list_data_quality_ruleset_evaluation_runs command
+--- AWS glue list-data-quality-ruleset-evaluation-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_ruleset_evaluation_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-ruleset-evaluation-runs" }, input)
 end
 
---- Returns a paginated list of rulesets for the specified list of Glue tables
---- @param input table|nil The input table for the list_data_quality_rulesets command
+--- AWS glue list-data-quality-rulesets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_rulesets(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-rulesets" }, input)
 end
 
---- Retrieve annotations for a data quality statistic
---- @param input table|nil The input table for the list_data_quality_statistic_annotations command
+--- AWS glue list-data-quality-statistic-annotations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_statistic_annotations(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-statistic-annotations" }, input)
 end
 
---- Retrieves a list of data quality statistics
---- @param input table|nil The input table for the list_data_quality_statistics command
+--- AWS glue list-data-quality-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_quality_statistics(input)
 	return common.execute_aws_command_with_input({ "glue", "list-data-quality-statistics" }, input)
 end
 
---- Retrieves the names of all DevEndpoint resources in this Amazon Web Services account, or the resources with the specified tag
---- @param input table|nil The input table for the list_dev_endpoints command
+--- AWS glue list-dev-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dev_endpoints(input)
 	return common.execute_aws_command_with_input({ "glue", "list-dev-endpoints" }, input)
 end
 
---- Returns the available entities supported by the connection type
---- @param input table|nil The input table for the list_entities command
+--- AWS glue list-entities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entities(input)
 	return common.execute_aws_command_with_input({ "glue", "list-entities" }, input)
 end
 
---- Retrieves the names of all job resources in this Amazon Web Services account, or the resources with the specified tag
---- @param input table|nil The input table for the list_jobs command
+--- AWS glue list-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "glue", "list-jobs" }, input)
 end
 
---- Retrieves a sortable, filterable list of existing Glue machine learning transforms in this Amazon Web Services account, or the resources with the specified tag
---- @param input table|nil The input table for the list_ml_transforms command
+--- AWS glue list-ml-transforms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ml_transforms(input)
 	return common.execute_aws_command_with_input({ "glue", "list-ml-transforms" }, input)
 end
 
---- Returns a list of registries that you have created, with minimal registry information
---- @param input table|nil The input table for the list_registries command
+--- AWS glue list-registries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_registries(input)
 	return common.execute_aws_command_with_input({ "glue", "list-registries" }, input)
 end
 
---- Returns a list of schema versions that you have created, with minimal information
---- @param input table|nil The input table for the list_schema_versions command
+--- AWS glue list-schema-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schema_versions(input)
 	return common.execute_aws_command_with_input({ "glue", "list-schema-versions" }, input)
 end
 
---- Returns a list of schemas with minimal details
---- @param input table|nil The input table for the list_schemas command
+--- AWS glue list-schemas operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schemas(input)
 	return common.execute_aws_command_with_input({ "glue", "list-schemas" }, input)
 end
 
---- Retrieve a list of sessions
---- @param input table|nil The input table for the list_sessions command
+--- AWS glue list-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sessions(input)
 	return common.execute_aws_command_with_input({ "glue", "list-sessions" }, input)
 end
 
---- Lists statements for the session
---- @param input table|nil The input table for the list_statements command
+--- AWS glue list-statements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_statements(input)
 	return common.execute_aws_command_with_input({ "glue", "list-statements" }, input)
 end
 
---- Lists the history of previous optimizer runs for a specific table
---- @param input table|nil The input table for the list_table_optimizer_runs command
+--- AWS glue list-table-optimizer-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_table_optimizer_runs(input)
 	return common.execute_aws_command_with_input({ "glue", "list-table-optimizer-runs" }, input)
 end
 
---- Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the specified tag
---- @param input table|nil The input table for the list_triggers command
+--- AWS glue list-triggers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_triggers(input)
 	return common.execute_aws_command_with_input({ "glue", "list-triggers" }, input)
 end
 
---- List all the Glue usage profiles
---- @param input table|nil The input table for the list_usage_profiles command
+--- AWS glue list-usage-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_usage_profiles(input)
 	return common.execute_aws_command_with_input({ "glue", "list-usage-profiles" }, input)
 end
 
---- Lists names of workflows created in the account
---- @param input table|nil The input table for the list_workflows command
+--- AWS glue list-workflows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflows(input)
 	return common.execute_aws_command_with_input({ "glue", "list-workflows" }, input)
 end
 
---- Modifies a Zero-ETL integration in the caller's account
---- @param input table|nil The input table for the modify_integration command
+--- AWS glue modify-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_integration(input)
 	return common.execute_aws_command_with_input({ "glue", "modify-integration" }, input)
 end
 
---- Sets the security configuration for a specified catalog
---- @param input table|nil The input table for the put_data_catalog_encryption_settings command
+--- AWS glue put-data-catalog-encryption-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_data_catalog_encryption_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "put-data-catalog-encryption-settings" }, input)
 end
 
---- Annotate all datapoints for a Profile
---- @param input table|nil The input table for the put_data_quality_profile_annotation command
+--- AWS glue put-data-quality-profile-annotation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_data_quality_profile_annotation(input)
 	return common.execute_aws_command_with_input({ "glue", "put-data-quality-profile-annotation" }, input)
 end
 
---- Sets the Data Catalog resource policy for access control
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS glue put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "glue", "put-resource-policy" }, input)
 end
 
---- Puts the metadata key value pair for a specified schema version ID
---- @param input table|nil The input table for the put_schema_version_metadata command
+--- AWS glue put-schema-version-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_schema_version_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "put-schema-version-metadata" }, input)
 end
 
---- Puts the specified workflow run properties for the given workflow run
---- @param input table|nil The input table for the put_workflow_run_properties command
+--- AWS glue put-workflow-run-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_workflow_run_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "put-workflow-run-properties" }, input)
 end
 
---- Queries for the schema version metadata information
---- @param input table|nil The input table for the query_schema_version_metadata command
+--- AWS glue query-schema-version-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.query_schema_version_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "query-schema-version-metadata" }, input)
 end
 
---- Adds a new version to the existing schema
---- @param input table|nil The input table for the register_schema_version command
+--- AWS glue register-schema-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_schema_version(input)
 	return common.execute_aws_command_with_input({ "glue", "register-schema-version" }, input)
 end
 
---- Removes a key value pair from the schema version metadata for the specified schema version ID
---- @param input table|nil The input table for the remove_schema_version_metadata command
+--- AWS glue remove-schema-version-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_schema_version_metadata(input)
 	return common.execute_aws_command_with_input({ "glue", "remove-schema-version-metadata" }, input)
 end
 
---- Resets a bookmark entry
---- @param input table|nil The input table for the reset_job_bookmark command
+--- AWS glue reset-job-bookmark operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_job_bookmark(input)
 	return common.execute_aws_command_with_input({ "glue", "reset-job-bookmark" }, input)
 end
 
---- Restarts selected nodes of a previous partially completed workflow run and resumes the workflow run
---- @param input table|nil The input table for the resume_workflow_run command
+--- AWS glue resume-workflow-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_workflow_run(input)
 	return common.execute_aws_command_with_input({ "glue", "resume-workflow-run" }, input)
 end
 
---- Executes the statement
---- @param input table|nil The input table for the run_statement command
+--- AWS glue run-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.run_statement(input)
 	return common.execute_aws_command_with_input({ "glue", "run-statement" }, input)
 end
 
---- Searches a set of tables based on properties in the table metadata as well as on the parent database
---- @param input table|nil The input table for the search_tables command
+--- AWS glue search-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_tables(input)
 	return common.execute_aws_command_with_input({ "glue", "search-tables" }, input)
 end
 
---- Starts a new run of the specified blueprint
---- @param input table|nil The input table for the start_blueprint_run command
+--- AWS glue start-blueprint-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_blueprint_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-blueprint-run" }, input)
 end
 
---- Starts a column statistics task run, for a specified table and columns
---- @param input table|nil The input table for the start_column_statistics_task_run command
+--- AWS glue start-column-statistics-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_column_statistics_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-column-statistics-task-run" }, input)
 end
 
---- Starts a column statistics task run schedule
---- @param input table|nil The input table for the start_column_statistics_task_run_schedule command
+--- AWS glue start-column-statistics-task-run-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_column_statistics_task_run_schedule(input)
 	return common.execute_aws_command_with_input({ "glue", "start-column-statistics-task-run-schedule" }, input)
 end
 
---- Starts a crawl using the specified crawler, regardless of what is scheduled
---- @param input table|nil The input table for the start_crawler command
+--- AWS glue start-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "start-crawler" }, input)
 end
 
---- Changes the schedule state of the specified crawler to SCHEDULED, unless the crawler is already running or the schedule state is already SCHEDULED
---- @param input table|nil The input table for the start_crawler_schedule command
+--- AWS glue start-crawler-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_crawler_schedule(input)
 	return common.execute_aws_command_with_input({ "glue", "start-crawler-schedule" }, input)
 end
 
---- Starts a recommendation run that is used to generate rules when you don't know what rules to write
---- @param input table|nil The input table for the start_data_quality_rule_recommendation_run command
+--- AWS glue start-data-quality-rule-recommendation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_data_quality_rule_recommendation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-data-quality-rule-recommendation-run" }, input)
 end
 
---- Once you have a ruleset definition (either recommended or your own), you call this operation to evaluate the ruleset against a data source (Glue table)
---- @param input table|nil The input table for the start_data_quality_ruleset_evaluation_run command
+--- AWS glue start-data-quality-ruleset-evaluation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_data_quality_ruleset_evaluation_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-data-quality-ruleset-evaluation-run" }, input)
 end
 
---- Begins an asynchronous task to export all labeled data for a particular transform
---- @param input table|nil The input table for the start_export_labels_task_run command
+--- AWS glue start-export-labels-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_export_labels_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-export-labels-task-run" }, input)
 end
 
---- Enables you to provide additional labels (examples of truth) to be used to teach the machine learning transform and improve its quality
---- @param input table|nil The input table for the start_import_labels_task_run command
+--- AWS glue start-import-labels-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_import_labels_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-import-labels-task-run" }, input)
 end
 
---- Starts a job run using a job definition
---- @param input table|nil The input table for the start_job_run command
+--- AWS glue start-job-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_job_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-job-run" }, input)
 end
 
---- Starts a task to estimate the quality of the transform
---- @param input table|nil The input table for the start_ml_evaluation_task_run command
+--- AWS glue start-ml-evaluation-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_ml_evaluation_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-ml-evaluation-task-run" }, input)
 end
 
---- Starts the active learning workflow for your machine learning transform to improve the transform's quality by generating label sets and adding labels
---- @param input table|nil The input table for the start_ml_labeling_set_generation_task_run command
+--- AWS glue start-ml-labeling-set-generation-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_ml_labeling_set_generation_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-ml-labeling-set-generation-task-run" }, input)
 end
 
---- Starts an existing trigger
---- @param input table|nil The input table for the start_trigger command
+--- AWS glue start-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "start-trigger" }, input)
 end
 
---- Starts a new run of the specified workflow
---- @param input table|nil The input table for the start_workflow_run command
+--- AWS glue start-workflow-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_workflow_run(input)
 	return common.execute_aws_command_with_input({ "glue", "start-workflow-run" }, input)
 end
 
---- Stops a task run for the specified table
---- @param input table|nil The input table for the stop_column_statistics_task_run command
+--- AWS glue stop-column-statistics-task-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_column_statistics_task_run(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-column-statistics-task-run" }, input)
 end
 
---- Stops a column statistics task run schedule
---- @param input table|nil The input table for the stop_column_statistics_task_run_schedule command
+--- AWS glue stop-column-statistics-task-run-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_column_statistics_task_run_schedule(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-column-statistics-task-run-schedule" }, input)
 end
 
---- If the specified crawler is running, stops the crawl
---- @param input table|nil The input table for the stop_crawler command
+--- AWS glue stop-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-crawler" }, input)
 end
 
---- Sets the schedule state of the specified crawler to NOT_SCHEDULED, but does not stop the crawler if it is already running
---- @param input table|nil The input table for the stop_crawler_schedule command
+--- AWS glue stop-crawler-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_crawler_schedule(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-crawler-schedule" }, input)
 end
 
---- Stops the session
---- @param input table|nil The input table for the stop_session command
+--- AWS glue stop-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_session(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-session" }, input)
 end
 
---- Stops a specified trigger
---- @param input table|nil The input table for the stop_trigger command
+--- AWS glue stop-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-trigger" }, input)
 end
 
---- Stops the execution of the specified workflow run
---- @param input table|nil The input table for the stop_workflow_run command
+--- AWS glue stop-workflow-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_workflow_run(input)
 	return common.execute_aws_command_with_input({ "glue", "stop-workflow-run" }, input)
 end
 
---- Adds tags to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS glue tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "glue", "tag-resource" }, input)
 end
 
---- Tests a connection to a service to validate the service credentials that you provide
---- @param input table|nil The input table for the test_connection command
+--- AWS glue test-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "test-connection" }, input)
 end
 
---- Removes tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS glue untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "glue", "untag-resource" }, input)
 end
 
---- Updates a registered blueprint
---- @param input table|nil The input table for the update_blueprint command
+--- AWS glue update-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_blueprint(input)
 	return common.execute_aws_command_with_input({ "glue", "update-blueprint" }, input)
 end
 
---- Updates an existing catalog's properties in the Glue Data Catalog
---- @param input table|nil The input table for the update_catalog command
+--- AWS glue update-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_catalog(input)
 	return common.execute_aws_command_with_input({ "glue", "update-catalog" }, input)
 end
 
---- Modifies an existing classifier (a GrokClassifier, an XMLClassifier, a JsonClassifier, or a CsvClassifier, depending on which field is present)
---- @param input table|nil The input table for the update_classifier command
+--- AWS glue update-classifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_classifier(input)
 	return common.execute_aws_command_with_input({ "glue", "update-classifier" }, input)
 end
 
---- Creates or updates partition statistics of columns
---- @param input table|nil The input table for the update_column_statistics_for_partition command
+--- AWS glue update-column-statistics-for-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_column_statistics_for_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "update-column-statistics-for-partition" }, input)
 end
 
---- Creates or updates table statistics of columns
---- @param input table|nil The input table for the update_column_statistics_for_table command
+--- AWS glue update-column-statistics-for-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_column_statistics_for_table(input)
 	return common.execute_aws_command_with_input({ "glue", "update-column-statistics-for-table" }, input)
 end
 
---- Updates settings for a column statistics task
---- @param input table|nil The input table for the update_column_statistics_task_settings command
+--- AWS glue update-column-statistics-task-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_column_statistics_task_settings(input)
 	return common.execute_aws_command_with_input({ "glue", "update-column-statistics-task-settings" }, input)
 end
 
---- Updates a connection definition in the Data Catalog
---- @param input table|nil The input table for the update_connection command
+--- AWS glue update-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connection(input)
 	return common.execute_aws_command_with_input({ "glue", "update-connection" }, input)
 end
 
---- Updates a crawler
---- @param input table|nil The input table for the update_crawler command
+--- AWS glue update-crawler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_crawler(input)
 	return common.execute_aws_command_with_input({ "glue", "update-crawler" }, input)
 end
 
---- Updates the schedule of a crawler using a cron expression
---- @param input table|nil The input table for the update_crawler_schedule command
+--- AWS glue update-crawler-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_crawler_schedule(input)
 	return common.execute_aws_command_with_input({ "glue", "update-crawler-schedule" }, input)
 end
 
---- Updates the specified data quality ruleset
---- @param input table|nil The input table for the update_data_quality_ruleset command
+--- AWS glue update-data-quality-ruleset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_quality_ruleset(input)
 	return common.execute_aws_command_with_input({ "glue", "update-data-quality-ruleset" }, input)
 end
 
---- Updates an existing database definition in a Data Catalog
---- @param input table|nil The input table for the update_database command
+--- AWS glue update-database operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_database(input)
 	return common.execute_aws_command_with_input({ "glue", "update-database" }, input)
 end
 
---- Updates a specified development endpoint
---- @param input table|nil The input table for the update_dev_endpoint command
+--- AWS glue update-dev-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dev_endpoint(input)
 	return common.execute_aws_command_with_input({ "glue", "update-dev-endpoint" }, input)
 end
 
---- This API can be used for updating the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target)
---- @param input table|nil The input table for the update_integration_resource_property command
+--- AWS glue update-integration-resource-property operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration_resource_property(input)
 	return common.execute_aws_command_with_input({ "glue", "update-integration-resource-property" }, input)
 end
 
---- This API is used to provide optional override properties for the tables that need to be replicated
---- @param input table|nil The input table for the update_integration_table_properties command
+--- AWS glue update-integration-table-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration_table_properties(input)
 	return common.execute_aws_command_with_input({ "glue", "update-integration-table-properties" }, input)
 end
 
---- Updates an existing job definition
---- @param input table|nil The input table for the update_job command
+--- AWS glue update-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job(input)
 	return common.execute_aws_command_with_input({ "glue", "update-job" }, input)
 end
 
---- Synchronizes a job from the source control repository
---- @param input table|nil The input table for the update_job_from_source_control command
+--- AWS glue update-job-from-source-control operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_job_from_source_control(input)
 	return common.execute_aws_command_with_input({ "glue", "update-job-from-source-control" }, input)
 end
 
---- Updates an existing machine learning transform
---- @param input table|nil The input table for the update_ml_transform command
+--- AWS glue update-ml-transform operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ml_transform(input)
 	return common.execute_aws_command_with_input({ "glue", "update-ml-transform" }, input)
 end
 
---- Updates a partition
---- @param input table|nil The input table for the update_partition command
+--- AWS glue update-partition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_partition(input)
 	return common.execute_aws_command_with_input({ "glue", "update-partition" }, input)
 end
 
---- Updates an existing registry which is used to hold a collection of schemas
---- @param input table|nil The input table for the update_registry command
+--- AWS glue update-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_registry(input)
 	return common.execute_aws_command_with_input({ "glue", "update-registry" }, input)
 end
 
---- Updates the description, compatibility setting, or version checkpoint for a schema set
---- @param input table|nil The input table for the update_schema command
+--- AWS glue update-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_schema(input)
 	return common.execute_aws_command_with_input({ "glue", "update-schema" }, input)
 end
 
---- Synchronizes a job to the source control repository
---- @param input table|nil The input table for the update_source_control_from_job command
+--- AWS glue update-source-control-from-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_source_control_from_job(input)
 	return common.execute_aws_command_with_input({ "glue", "update-source-control-from-job" }, input)
 end
 
---- Updates a metadata table in the Data Catalog
---- @param input table|nil The input table for the update_table command
+--- AWS glue update-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table(input)
 	return common.execute_aws_command_with_input({ "glue", "update-table" }, input)
 end
 
---- Updates the configuration for an existing table optimizer
---- @param input table|nil The input table for the update_table_optimizer command
+--- AWS glue update-table-optimizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table_optimizer(input)
 	return common.execute_aws_command_with_input({ "glue", "update-table-optimizer" }, input)
 end
 
---- Updates a trigger definition
---- @param input table|nil The input table for the update_trigger command
+--- AWS glue update-trigger operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_trigger(input)
 	return common.execute_aws_command_with_input({ "glue", "update-trigger" }, input)
 end
 
---- Update an Glue usage profile
---- @param input table|nil The input table for the update_usage_profile command
+--- AWS glue update-usage-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_usage_profile(input)
 	return common.execute_aws_command_with_input({ "glue", "update-usage-profile" }, input)
 end
 
---- Updates an existing function definition in the Data Catalog
---- @param input table|nil The input table for the update_user_defined_function command
+--- AWS glue update-user-defined-function operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user_defined_function(input)
 	return common.execute_aws_command_with_input({ "glue", "update-user-defined-function" }, input)
 end
 
---- Updates an existing workflow
---- @param input table|nil The input table for the update_workflow command
+--- AWS glue update-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workflow(input)
 	return common.execute_aws_command_with_input({ "glue", "update-workflow" }, input)

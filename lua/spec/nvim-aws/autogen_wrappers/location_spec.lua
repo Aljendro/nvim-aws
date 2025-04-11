@@ -165,28 +165,13 @@ describe("AWS location service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_map_glyphs", function()
-		local result = service.get_map_glyphs()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_map_sprites", function()
-		local result = service.get_map_sprites()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_map_style_descriptor", function()
-		local result = service.get_map_style_descriptor()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_map_tile", function()
-		local result = service.get_map_tile()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_place", function()
 		local result = service.get_place()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

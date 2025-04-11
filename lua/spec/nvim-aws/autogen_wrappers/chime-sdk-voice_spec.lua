@@ -185,11 +185,6 @@ describe("AWS chime-sdk-voice service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_sip_media_application_alexa_skill_configuration", function()
-		local result = service.get_sip_media_application_alexa_skill_configuration()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_sip_media_application_logging_configuration", function()
 		local result = service.get_sip_media_application_logging_configuration()
 		assert.is_true(result.success)
@@ -270,6 +265,11 @@ describe("AWS chime-sdk-voice service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_available_voice_connector_regions", function()
 		local result = service.list_available_voice_connector_regions()
 		assert.is_true(result.success)
@@ -332,11 +332,6 @@ describe("AWS chime-sdk-voice service testing", function()
 
 	it("should generate a cli skeleton with list_voice_profiles", function()
 		local result = service.list_voice_profiles()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with put_sip_media_application_alexa_skill_configuration", function()
-		local result = service.put_sip_media_application_alexa_skill_configuration()
 		assert.is_true(result.success)
 	end)
 

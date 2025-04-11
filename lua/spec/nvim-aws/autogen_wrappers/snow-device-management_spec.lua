@@ -25,8 +25,18 @@ describe("AWS snow-device-management service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with describe_execution", function()
+		local result = service.describe_execution()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with describe_task", function()
 		local result = service.describe_task()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -37,6 +47,11 @@ describe("AWS snow-device-management service testing", function()
 
 	it("should generate a cli skeleton with list_devices", function()
 		local result = service.list_devices()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_executions", function()
+		local result = service.list_executions()
 		assert.is_true(result.success)
 	end)
 

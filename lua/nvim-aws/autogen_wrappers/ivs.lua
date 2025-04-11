@@ -6,246 +6,253 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS IVS service functions
 local M = {}
 
---- Performs GetChannel on multiple ARNs simultaneously
---- @param input table|nil The input table for the batch_get_channel command
+--- AWS ivs batch-get-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_channel(input)
 	return common.execute_aws_command_with_input({ "ivs", "batch-get-channel" }, input)
 end
 
---- Performs GetStreamKey on multiple ARNs simultaneously
---- @param input table|nil The input table for the batch_get_stream_key command
+--- AWS ivs batch-get-stream-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_stream_key(input)
 	return common.execute_aws_command_with_input({ "ivs", "batch-get-stream-key" }, input)
 end
 
---- Performs StartViewerSessionRevocation on multiple channel ARN and viewer ID pairs simultaneously
---- @param input table|nil The input table for the batch_start_viewer_session_revocation command
+--- AWS ivs batch-start-viewer-session-revocation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_start_viewer_session_revocation(input)
 	return common.execute_aws_command_with_input({ "ivs", "batch-start-viewer-session-revocation" }, input)
 end
 
---- Creates a new channel and an associated stream key to start streaming
---- @param input table|nil The input table for the create_channel command
+--- AWS ivs create-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_channel(input)
 	return common.execute_aws_command_with_input({ "ivs", "create-channel" }, input)
 end
 
---- Creates a new playback restriction policy, for constraining playback by countries and/or origins
---- @param input table|nil The input table for the create_playback_restriction_policy command
+--- AWS ivs create-playback-restriction-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_playback_restriction_policy(input)
 	return common.execute_aws_command_with_input({ "ivs", "create-playback-restriction-policy" }, input)
 end
 
---- Creates a new recording configuration, used to enable recording to Amazon S3
---- @param input table|nil The input table for the create_recording_configuration command
+--- AWS ivs create-recording-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_recording_configuration(input)
 	return common.execute_aws_command_with_input({ "ivs", "create-recording-configuration" }, input)
 end
 
---- Creates a stream key, used to initiate a stream, for the specified channel ARN
---- @param input table|nil The input table for the create_stream_key command
+--- AWS ivs create-stream-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stream_key(input)
 	return common.execute_aws_command_with_input({ "ivs", "create-stream-key" }, input)
 end
 
---- Deletes the specified channel and its associated stream keys
---- @param input table|nil The input table for the delete_channel command
+--- AWS ivs delete-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_channel(input)
 	return common.execute_aws_command_with_input({ "ivs", "delete-channel" }, input)
 end
 
---- Deletes a specified authorization key pair
---- @param input table|nil The input table for the delete_playback_key_pair command
+--- AWS ivs delete-playback-key-pair operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_playback_key_pair(input)
 	return common.execute_aws_command_with_input({ "ivs", "delete-playback-key-pair" }, input)
 end
 
---- Deletes the specified playback restriction policy
---- @param input table|nil The input table for the delete_playback_restriction_policy command
+--- AWS ivs delete-playback-restriction-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_playback_restriction_policy(input)
 	return common.execute_aws_command_with_input({ "ivs", "delete-playback-restriction-policy" }, input)
 end
 
---- Deletes the recording configuration for the specified ARN
---- @param input table|nil The input table for the delete_recording_configuration command
+--- AWS ivs delete-recording-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recording_configuration(input)
 	return common.execute_aws_command_with_input({ "ivs", "delete-recording-configuration" }, input)
 end
 
---- Deletes the stream key for the specified ARN, so it can no longer be used to stream
---- @param input table|nil The input table for the delete_stream_key command
+--- AWS ivs delete-stream-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stream_key(input)
 	return common.execute_aws_command_with_input({ "ivs", "delete-stream-key" }, input)
 end
 
---- Gets the channel configuration for the specified channel ARN
---- @param input table|nil The input table for the get_channel command
+--- AWS ivs get-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_channel(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-channel" }, input)
 end
 
---- Gets a specified playback authorization key pair and returns the arn and fingerprint
---- @param input table|nil The input table for the get_playback_key_pair command
+--- AWS ivs get-playback-key-pair operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_playback_key_pair(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-playback-key-pair" }, input)
 end
 
---- Gets the specified playback restriction policy
---- @param input table|nil The input table for the get_playback_restriction_policy command
+--- AWS ivs get-playback-restriction-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_playback_restriction_policy(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-playback-restriction-policy" }, input)
 end
 
---- Gets the recording configuration for the specified ARN
---- @param input table|nil The input table for the get_recording_configuration command
+--- AWS ivs get-recording-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recording_configuration(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-recording-configuration" }, input)
 end
 
---- Gets information about the active (live) stream on a specified channel
---- @param input table|nil The input table for the get_stream command
+--- AWS ivs get-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stream(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-stream" }, input)
 end
 
---- Gets stream-key information for a specified ARN
---- @param input table|nil The input table for the get_stream_key command
+--- AWS ivs get-stream-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stream_key(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-stream-key" }, input)
 end
 
---- Gets metadata on a specified stream
---- @param input table|nil The input table for the get_stream_session command
+--- AWS ivs get-stream-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stream_session(input)
 	return common.execute_aws_command_with_input({ "ivs", "get-stream-session" }, input)
 end
 
---- Imports the public portion of a new key pair and returns its arn and fingerprint
---- @param input table|nil The input table for the import_playback_key_pair command
+--- AWS ivs help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ivs", "help" }, input)
+end
+
+--- AWS ivs import-playback-key-pair operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_playback_key_pair(input)
 	return common.execute_aws_command_with_input({ "ivs", "import-playback-key-pair" }, input)
 end
 
---- Gets summary information about all channels in your account, in the Amazon Web Services region where the API request is processed
---- @param input table|nil The input table for the list_channels command
+--- AWS ivs list-channels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_channels(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-channels" }, input)
 end
 
---- Gets summary information about playback key pairs
---- @param input table|nil The input table for the list_playback_key_pairs command
+--- AWS ivs list-playback-key-pairs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_playback_key_pairs(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-playback-key-pairs" }, input)
 end
 
---- Gets summary information about playback restriction policies
---- @param input table|nil The input table for the list_playback_restriction_policies command
+--- AWS ivs list-playback-restriction-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_playback_restriction_policies(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-playback-restriction-policies" }, input)
 end
 
---- Gets summary information about all recording configurations in your account, in the Amazon Web Services region where the API request is processed
---- @param input table|nil The input table for the list_recording_configurations command
+--- AWS ivs list-recording-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recording_configurations(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-recording-configurations" }, input)
 end
 
---- Gets summary information about stream keys for the specified channel
---- @param input table|nil The input table for the list_stream_keys command
+--- AWS ivs list-stream-keys operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_keys(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-stream-keys" }, input)
 end
 
---- Gets a summary of current and previous streams for a specified channel in your account, in the AWS region where the API request is processed
---- @param input table|nil The input table for the list_stream_sessions command
+--- AWS ivs list-stream-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_sessions(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-stream-sessions" }, input)
 end
 
---- Gets summary information about live streams in your account, in the Amazon Web Services region where the API request is processed
---- @param input table|nil The input table for the list_streams command
+--- AWS ivs list-streams operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_streams(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-streams" }, input)
 end
 
---- Gets information about Amazon Web Services tags for the specified ARN
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS ivs list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ivs", "list-tags-for-resource" }, input)
 end
 
---- Inserts metadata into the active stream of the specified channel
---- @param input table|nil The input table for the put_metadata command
+--- AWS ivs put-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metadata(input)
 	return common.execute_aws_command_with_input({ "ivs", "put-metadata" }, input)
 end
 
---- Starts the process of revoking the viewer session associated with a specified channel ARN and viewer ID
---- @param input table|nil The input table for the start_viewer_session_revocation command
+--- AWS ivs start-viewer-session-revocation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_viewer_session_revocation(input)
 	return common.execute_aws_command_with_input({ "ivs", "start-viewer-session-revocation" }, input)
 end
 
---- Disconnects the incoming RTMPS stream for the specified channel
---- @param input table|nil The input table for the stop_stream command
+--- AWS ivs stop-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_stream(input)
 	return common.execute_aws_command_with_input({ "ivs", "stop-stream" }, input)
 end
 
---- Adds or updates tags for the Amazon Web Services resource with the specified ARN
---- @param input table|nil The input table for the tag_resource command
+--- AWS ivs tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ivs", "tag-resource" }, input)
 end
 
---- Removes tags from the resource with the specified ARN
---- @param input table|nil The input table for the untag_resource command
+--- AWS ivs untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ivs", "untag-resource" }, input)
 end
 
---- Updates a channel's configuration
---- @param input table|nil The input table for the update_channel command
+--- AWS ivs update-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_channel(input)
 	return common.execute_aws_command_with_input({ "ivs", "update-channel" }, input)
 end
 
---- Updates a specified playback restriction policy
---- @param input table|nil The input table for the update_playback_restriction_policy command
+--- AWS ivs update-playback-restriction-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_playback_restriction_policy(input)
 	return common.execute_aws_command_with_input({ "ivs", "update-playback-restriction-policy" }, input)

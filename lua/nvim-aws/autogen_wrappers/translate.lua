@@ -6,134 +6,141 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS TRANSLATE service functions
 local M = {}
 
---- Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3
---- @param input table|nil The input table for the create_parallel_data command
+--- AWS translate create-parallel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_parallel_data(input)
 	return common.execute_aws_command_with_input({ "translate", "create-parallel-data" }, input)
 end
 
---- Deletes a parallel data resource in Amazon Translate
---- @param input table|nil The input table for the delete_parallel_data command
+--- AWS translate delete-parallel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_parallel_data(input)
 	return common.execute_aws_command_with_input({ "translate", "delete-parallel-data" }, input)
 end
 
---- A synchronous action that deletes a custom terminology
---- @param input table|nil The input table for the delete_terminology command
+--- AWS translate delete-terminology operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_terminology(input)
 	return common.execute_aws_command_with_input({ "translate", "delete-terminology" }, input)
 end
 
---- Gets the properties associated with an asynchronous batch translation job including name, ID, status, source and target languages, input/output S3 buckets, and so on
---- @param input table|nil The input table for the describe_text_translation_job command
+--- AWS translate describe-text-translation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_text_translation_job(input)
 	return common.execute_aws_command_with_input({ "translate", "describe-text-translation-job" }, input)
 end
 
---- Provides information about a parallel data resource
---- @param input table|nil The input table for the get_parallel_data command
+--- AWS translate get-parallel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parallel_data(input)
 	return common.execute_aws_command_with_input({ "translate", "get-parallel-data" }, input)
 end
 
---- Retrieves a custom terminology
---- @param input table|nil The input table for the get_terminology command
+--- AWS translate get-terminology operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_terminology(input)
 	return common.execute_aws_command_with_input({ "translate", "get-terminology" }, input)
 end
 
---- Creates or updates a custom terminology, depending on whether one already exists for the given terminology name
---- @param input table|nil The input table for the import_terminology command
+--- AWS translate help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "translate", "help" }, input)
+end
+
+--- AWS translate import-terminology operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_terminology(input)
 	return common.execute_aws_command_with_input({ "translate", "import-terminology" }, input)
 end
 
---- Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports
---- @param input table|nil The input table for the list_languages command
+--- AWS translate list-languages operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_languages(input)
 	return common.execute_aws_command_with_input({ "translate", "list-languages" }, input)
 end
 
---- Provides a list of your parallel data resources in Amazon Translate
---- @param input table|nil The input table for the list_parallel_data command
+--- AWS translate list-parallel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_parallel_data(input)
 	return common.execute_aws_command_with_input({ "translate", "list-parallel-data" }, input)
 end
 
---- Lists all tags associated with a given Amazon Translate resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS translate list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "translate", "list-tags-for-resource" }, input)
 end
 
---- Provides a list of custom terminologies associated with your account
---- @param input table|nil The input table for the list_terminologies command
+--- AWS translate list-terminologies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_terminologies(input)
 	return common.execute_aws_command_with_input({ "translate", "list-terminologies" }, input)
 end
 
---- Gets a list of the batch translation jobs that you have submitted
---- @param input table|nil The input table for the list_text_translation_jobs command
+--- AWS translate list-text-translation-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_text_translation_jobs(input)
 	return common.execute_aws_command_with_input({ "translate", "list-text-translation-jobs" }, input)
 end
 
---- Starts an asynchronous batch translation job
---- @param input table|nil The input table for the start_text_translation_job command
+--- AWS translate start-text-translation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_text_translation_job(input)
 	return common.execute_aws_command_with_input({ "translate", "start-text-translation-job" }, input)
 end
 
---- Stops an asynchronous batch translation job that is in progress
---- @param input table|nil The input table for the stop_text_translation_job command
+--- AWS translate stop-text-translation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_text_translation_job(input)
 	return common.execute_aws_command_with_input({ "translate", "stop-text-translation-job" }, input)
 end
 
---- Associates a specific tag with a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS translate tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "translate", "tag-resource" }, input)
 end
 
---- Translates the input document from the source language to the target language
---- @param input table|nil The input table for the translate_document command
+--- AWS translate translate-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.translate_document(input)
 	return common.execute_aws_command_with_input({ "translate", "translate-document" }, input)
 end
 
---- Translates input text from the source language to the target language
---- @param input table|nil The input table for the translate_text command
+--- AWS translate translate-text operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.translate_text(input)
 	return common.execute_aws_command_with_input({ "translate", "translate-text" }, input)
 end
 
---- Removes a specific tag associated with an Amazon Translate resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS translate untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "translate", "untag-resource" }, input)
 end
 
---- Updates a previously created parallel data resource by importing a new input file from Amazon S3
---- @param input table|nil The input table for the update_parallel_data command
+--- AWS translate update-parallel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_parallel_data(input)
 	return common.execute_aws_command_with_input({ "translate", "update-parallel-data" }, input)

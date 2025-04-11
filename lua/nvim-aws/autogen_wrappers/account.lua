@@ -6,85 +6,92 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ACCOUNT service functions
 local M = {}
 
---- Accepts the request that originated from StartPrimaryEmailUpdate to update the primary email address (also known as the root user email address) for the specified account
---- @param input table|nil The input table for the accept_primary_email_update command
+--- AWS account accept-primary-email-update operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_primary_email_update(input)
 	return common.execute_aws_command_with_input({ "account", "accept-primary-email-update" }, input)
 end
 
---- Deletes the specified alternate contact from an Amazon Web Services account
---- @param input table|nil The input table for the delete_alternate_contact command
+--- AWS account delete-alternate-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alternate_contact(input)
 	return common.execute_aws_command_with_input({ "account", "delete-alternate-contact" }, input)
 end
 
---- Disables (opts-out) a particular Region for an account
---- @param input table|nil The input table for the disable_region command
+--- AWS account disable-region operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_region(input)
 	return common.execute_aws_command_with_input({ "account", "disable-region" }, input)
 end
 
---- Enables (opts-in) a particular Region for an account
---- @param input table|nil The input table for the enable_region command
+--- AWS account enable-region operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_region(input)
 	return common.execute_aws_command_with_input({ "account", "enable-region" }, input)
 end
 
---- Retrieves the specified alternate contact attached to an Amazon Web Services account
---- @param input table|nil The input table for the get_alternate_contact command
+--- AWS account get-alternate-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_alternate_contact(input)
 	return common.execute_aws_command_with_input({ "account", "get-alternate-contact" }, input)
 end
 
---- Retrieves the primary contact information of an Amazon Web Services account
---- @param input table|nil The input table for the get_contact_information command
+--- AWS account get-contact-information operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_contact_information(input)
 	return common.execute_aws_command_with_input({ "account", "get-contact-information" }, input)
 end
 
---- Retrieves the primary email address for the specified account
---- @param input table|nil The input table for the get_primary_email command
+--- AWS account get-primary-email operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_primary_email(input)
 	return common.execute_aws_command_with_input({ "account", "get-primary-email" }, input)
 end
 
---- Retrieves the opt-in status of a particular Region
---- @param input table|nil The input table for the get_region_opt_status command
+--- AWS account get-region-opt-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_region_opt_status(input)
 	return common.execute_aws_command_with_input({ "account", "get-region-opt-status" }, input)
 end
 
---- Lists all the Regions for a given account and their respective opt-in statuses
---- @param input table|nil The input table for the list_regions command
+--- AWS account help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "account", "help" }, input)
+end
+
+--- AWS account list-regions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_regions(input)
 	return common.execute_aws_command_with_input({ "account", "list-regions" }, input)
 end
 
---- Modifies the specified alternate contact attached to an Amazon Web Services account
---- @param input table|nil The input table for the put_alternate_contact command
+--- AWS account put-alternate-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_alternate_contact(input)
 	return common.execute_aws_command_with_input({ "account", "put-alternate-contact" }, input)
 end
 
---- Updates the primary contact information of an Amazon Web Services account
---- @param input table|nil The input table for the put_contact_information command
+--- AWS account put-contact-information operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_contact_information(input)
 	return common.execute_aws_command_with_input({ "account", "put-contact-information" }, input)
 end
 
---- Starts the process to update the primary email address for the specified account
---- @param input table|nil The input table for the start_primary_email_update command
+--- AWS account start-primary-email-update operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_primary_email_update(input)
 	return common.execute_aws_command_with_input({ "account", "start-primary-email-update" }, input)

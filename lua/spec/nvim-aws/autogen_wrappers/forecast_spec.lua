@@ -220,6 +220,11 @@ describe("AWS forecast service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_dataset_groups", function()
 		local result = service.list_dataset_groups()
 		assert.is_true(result.success)

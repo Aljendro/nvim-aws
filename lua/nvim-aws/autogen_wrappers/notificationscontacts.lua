@@ -6,64 +6,71 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS NOTIFICATIONSCONTACTS service functions
 local M = {}
 
---- Activates an email contact using an activation code
---- @param input table|nil The input table for the activate_email_contact command
+--- AWS notificationscontacts activate-email-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_email_contact(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "activate-email-contact" }, input)
 end
 
---- Creates an email contact for the provided email address
---- @param input table|nil The input table for the create_email_contact command
+--- AWS notificationscontacts create-email-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_email_contact(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "create-email-contact" }, input)
 end
 
---- Deletes an email contact
---- @param input table|nil The input table for the delete_email_contact command
+--- AWS notificationscontacts delete-email-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_email_contact(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "delete-email-contact" }, input)
 end
 
---- Returns an email contact
---- @param input table|nil The input table for the get_email_contact command
+--- AWS notificationscontacts get-email-contact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_email_contact(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "get-email-contact" }, input)
 end
 
---- Lists all email contacts created under the Account
---- @param input table|nil The input table for the list_email_contacts command
+--- AWS notificationscontacts help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "notificationscontacts", "help" }, input)
+end
+
+--- AWS notificationscontacts list-email-contacts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_email_contacts(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "list-email-contacts" }, input)
 end
 
---- Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS notificationscontacts list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "list-tags-for-resource" }, input)
 end
 
---- Sends an activation email to the email address associated with the specified email contact
---- @param input table|nil The input table for the send_activation_code command
+--- AWS notificationscontacts send-activation-code operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_activation_code(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "send-activation-code" }, input)
 end
 
---- Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the tag_resource command
+--- AWS notificationscontacts tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "tag-resource" }, input)
 end
 
---- Detaches a key-value pair from a resource, as identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the untag_resource command
+--- AWS notificationscontacts untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "notificationscontacts", "untag-resource" }, input)

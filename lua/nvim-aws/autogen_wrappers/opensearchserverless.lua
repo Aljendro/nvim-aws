@@ -6,260 +6,267 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS OPENSEARCHSERVERLESS service functions
 local M = {}
 
---- Returns attributes for one or more collections, including the collection endpoint and the OpenSearch Dashboards endpoint
---- @param input table|nil The input table for the batch_get_collection command
+--- AWS opensearchserverless batch-get-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_collection(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-collection" }, input)
 end
 
---- Returns a list of successful and failed retrievals for the OpenSearch Serverless indexes
---- @param input table|nil The input table for the batch_get_effective_lifecycle_policy command
+--- AWS opensearchserverless batch-get-effective-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_effective_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-effective-lifecycle-policy" }, input)
 end
 
---- Returns one or more configured OpenSearch Serverless lifecycle policies
---- @param input table|nil The input table for the batch_get_lifecycle_policy command
+--- AWS opensearchserverless batch-get-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-lifecycle-policy" }, input)
 end
 
---- Returns attributes for one or more VPC endpoints associated with the current account
---- @param input table|nil The input table for the batch_get_vpc_endpoint command
+--- AWS opensearchserverless batch-get-vpc-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_vpc_endpoint(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-vpc-endpoint" }, input)
 end
 
---- Creates a data access policy for OpenSearch Serverless
---- @param input table|nil The input table for the create_access_policy command
+--- AWS opensearchserverless create-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-access-policy" }, input)
 end
 
---- Creates a new OpenSearch Serverless collection
---- @param input table|nil The input table for the create_collection command
+--- AWS opensearchserverless create-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_collection(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-collection" }, input)
 end
 
---- Creates a lifecyle policy to be applied to OpenSearch Serverless indexes
---- @param input table|nil The input table for the create_lifecycle_policy command
+--- AWS opensearchserverless create-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-lifecycle-policy" }, input)
 end
 
---- Specifies a security configuration for OpenSearch Serverless
---- @param input table|nil The input table for the create_security_config command
+--- AWS opensearchserverless create-security-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_security_config(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-security-config" }, input)
 end
 
---- Creates a security policy to be used by one or more OpenSearch Serverless collections
---- @param input table|nil The input table for the create_security_policy command
+--- AWS opensearchserverless create-security-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_security_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-security-policy" }, input)
 end
 
---- Creates an OpenSearch Serverless-managed interface VPC endpoint
---- @param input table|nil The input table for the create_vpc_endpoint command
+--- AWS opensearchserverless create-vpc-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_endpoint(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "create-vpc-endpoint" }, input)
 end
 
---- Deletes an OpenSearch Serverless access policy
---- @param input table|nil The input table for the delete_access_policy command
+--- AWS opensearchserverless delete-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-access-policy" }, input)
 end
 
---- Deletes an OpenSearch Serverless collection
---- @param input table|nil The input table for the delete_collection command
+--- AWS opensearchserverless delete-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_collection(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-collection" }, input)
 end
 
---- Deletes an OpenSearch Serverless lifecycle policy
---- @param input table|nil The input table for the delete_lifecycle_policy command
+--- AWS opensearchserverless delete-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-lifecycle-policy" }, input)
 end
 
---- Deletes a security configuration for OpenSearch Serverless
---- @param input table|nil The input table for the delete_security_config command
+--- AWS opensearchserverless delete-security-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_security_config(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-security-config" }, input)
 end
 
---- Deletes an OpenSearch Serverless security policy
---- @param input table|nil The input table for the delete_security_policy command
+--- AWS opensearchserverless delete-security-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_security_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-security-policy" }, input)
 end
 
---- Deletes an OpenSearch Serverless-managed interface endpoint
---- @param input table|nil The input table for the delete_vpc_endpoint command
+--- AWS opensearchserverless delete-vpc-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_endpoint(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-vpc-endpoint" }, input)
 end
 
---- Returns an OpenSearch Serverless access policy
---- @param input table|nil The input table for the get_access_policy command
+--- AWS opensearchserverless get-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_access_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-access-policy" }, input)
 end
 
---- Returns account-level settings related to OpenSearch Serverless
---- @param input table|nil The input table for the get_account_settings command
+--- AWS opensearchserverless get-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-account-settings" }, input)
 end
 
---- Returns statistical information about your OpenSearch Serverless access policies, security configurations, and security policies
---- @param input table|nil The input table for the get_policies_stats command
+--- AWS opensearchserverless get-policies-stats operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policies_stats(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-policies-stats" }, input)
 end
 
---- Returns information about an OpenSearch Serverless security configuration
---- @param input table|nil The input table for the get_security_config command
+--- AWS opensearchserverless get-security-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_security_config(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-security-config" }, input)
 end
 
---- Returns information about a configured OpenSearch Serverless security policy
---- @param input table|nil The input table for the get_security_policy command
+--- AWS opensearchserverless get-security-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_security_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "get-security-policy" }, input)
 end
 
---- Returns information about a list of OpenSearch Serverless access policies
---- @param input table|nil The input table for the list_access_policies command
+--- AWS opensearchserverless help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "opensearchserverless", "help" }, input)
+end
+
+--- AWS opensearchserverless list-access-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_policies(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-access-policies" }, input)
 end
 
---- Lists all OpenSearch Serverless collections
---- @param input table|nil The input table for the list_collections command
+--- AWS opensearchserverless list-collections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collections(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-collections" }, input)
 end
 
---- Returns a list of OpenSearch Serverless lifecycle policies
---- @param input table|nil The input table for the list_lifecycle_policies command
+--- AWS opensearchserverless list-lifecycle-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lifecycle_policies(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-lifecycle-policies" }, input)
 end
 
---- Returns information about configured OpenSearch Serverless security configurations
---- @param input table|nil The input table for the list_security_configs command
+--- AWS opensearchserverless list-security-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_security_configs(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-security-configs" }, input)
 end
 
---- Returns information about configured OpenSearch Serverless security policies
---- @param input table|nil The input table for the list_security_policies command
+--- AWS opensearchserverless list-security-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_security_policies(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-security-policies" }, input)
 end
 
---- Returns the tags for an OpenSearch Serverless resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS opensearchserverless list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-tags-for-resource" }, input)
 end
 
---- Returns the OpenSearch Serverless-managed interface VPC endpoints associated with the current account
---- @param input table|nil The input table for the list_vpc_endpoints command
+--- AWS opensearchserverless list-vpc-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vpc_endpoints(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "list-vpc-endpoints" }, input)
 end
 
---- Associates tags with an OpenSearch Serverless resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS opensearchserverless tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "tag-resource" }, input)
 end
 
---- Removes a tag or set of tags from an OpenSearch Serverless resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS opensearchserverless untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "untag-resource" }, input)
 end
 
---- Updates an OpenSearch Serverless access policy
---- @param input table|nil The input table for the update_access_policy command
+--- AWS opensearchserverless update-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_access_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-access-policy" }, input)
 end
 
---- Update the OpenSearch Serverless settings for the current Amazon Web Services account
---- @param input table|nil The input table for the update_account_settings command
+--- AWS opensearchserverless update-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_settings(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-account-settings" }, input)
 end
 
---- Updates an OpenSearch Serverless collection
---- @param input table|nil The input table for the update_collection command
+--- AWS opensearchserverless update-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_collection(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-collection" }, input)
 end
 
---- Updates an OpenSearch Serverless access policy
---- @param input table|nil The input table for the update_lifecycle_policy command
+--- AWS opensearchserverless update-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-lifecycle-policy" }, input)
 end
 
---- Updates a security configuration for OpenSearch Serverless
---- @param input table|nil The input table for the update_security_config command
+--- AWS opensearchserverless update-security-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_security_config(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-security-config" }, input)
 end
 
---- Updates an OpenSearch Serverless security policy
---- @param input table|nil The input table for the update_security_policy command
+--- AWS opensearchserverless update-security-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_security_policy(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-security-policy" }, input)
 end
 
---- Updates an OpenSearch Serverless-managed interface endpoint
---- @param input table|nil The input table for the update_vpc_endpoint command
+--- AWS opensearchserverless update-vpc-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vpc_endpoint(input)
 	return common.execute_aws_command_with_input({ "opensearchserverless", "update-vpc-endpoint" }, input)

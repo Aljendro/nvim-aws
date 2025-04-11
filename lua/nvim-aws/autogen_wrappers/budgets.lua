@@ -6,183 +6,190 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BUDGETS service functions
 local M = {}
 
---- Creates a budget and, if included, notifications and subscribers
---- @param input table|nil The input table for the create_budget command
+--- AWS budgets create-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "create-budget" }, input)
 end
 
---- Creates a budget action
---- @param input table|nil The input table for the create_budget_action command
+--- AWS budgets create-budget-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "create-budget-action" }, input)
 end
 
---- Creates a notification
---- @param input table|nil The input table for the create_notification command
+--- AWS budgets create-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_notification(input)
 	return common.execute_aws_command_with_input({ "budgets", "create-notification" }, input)
 end
 
---- Creates a subscriber
---- @param input table|nil The input table for the create_subscriber command
+--- AWS budgets create-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscriber(input)
 	return common.execute_aws_command_with_input({ "budgets", "create-subscriber" }, input)
 end
 
---- Deletes a budget
---- @param input table|nil The input table for the delete_budget command
+--- AWS budgets delete-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "delete-budget" }, input)
 end
 
---- Deletes a budget action
---- @param input table|nil The input table for the delete_budget_action command
+--- AWS budgets delete-budget-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "delete-budget-action" }, input)
 end
 
---- Deletes a notification
---- @param input table|nil The input table for the delete_notification command
+--- AWS budgets delete-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_notification(input)
 	return common.execute_aws_command_with_input({ "budgets", "delete-notification" }, input)
 end
 
---- Deletes a subscriber
---- @param input table|nil The input table for the delete_subscriber command
+--- AWS budgets delete-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscriber(input)
 	return common.execute_aws_command_with_input({ "budgets", "delete-subscriber" }, input)
 end
 
---- Describes a budget
---- @param input table|nil The input table for the describe_budget command
+--- AWS budgets describe-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget" }, input)
 end
 
---- Describes a budget action detail
---- @param input table|nil The input table for the describe_budget_action command
+--- AWS budgets describe-budget-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-action" }, input)
 end
 
---- Describes a budget action history detail
---- @param input table|nil The input table for the describe_budget_action_histories command
+--- AWS budgets describe-budget-action-histories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_action_histories(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-action-histories" }, input)
 end
 
---- Describes all of the budget actions for an account
---- @param input table|nil The input table for the describe_budget_actions_for_account command
+--- AWS budgets describe-budget-actions-for-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_actions_for_account(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-actions-for-account" }, input)
 end
 
---- Describes all of the budget actions for a budget
---- @param input table|nil The input table for the describe_budget_actions_for_budget command
+--- AWS budgets describe-budget-actions-for-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_actions_for_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-actions-for-budget" }, input)
 end
 
---- Lists the budget names and notifications that are associated with an account
---- @param input table|nil The input table for the describe_budget_notifications_for_account command
+--- AWS budgets describe-budget-notifications-for-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_notifications_for_account(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-notifications-for-account" }, input)
 end
 
---- Describes the history for DAILY, MONTHLY, and QUARTERLY budgets
---- @param input table|nil The input table for the describe_budget_performance_history command
+--- AWS budgets describe-budget-performance-history operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budget_performance_history(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budget-performance-history" }, input)
 end
 
---- Lists the budgets that are associated with an account
---- @param input table|nil The input table for the describe_budgets command
+--- AWS budgets describe-budgets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_budgets(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-budgets" }, input)
 end
 
---- Lists the notifications that are associated with a budget
---- @param input table|nil The input table for the describe_notifications_for_budget command
+--- AWS budgets describe-notifications-for-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_notifications_for_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-notifications-for-budget" }, input)
 end
 
---- Lists the subscribers that are associated with a notification
---- @param input table|nil The input table for the describe_subscribers_for_notification command
+--- AWS budgets describe-subscribers-for-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_subscribers_for_notification(input)
 	return common.execute_aws_command_with_input({ "budgets", "describe-subscribers-for-notification" }, input)
 end
 
---- Executes a budget action
---- @param input table|nil The input table for the execute_budget_action command
+--- AWS budgets execute-budget-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.execute_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "execute-budget-action" }, input)
 end
 
---- Lists tags associated with a budget or budget action resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS budgets help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "budgets", "help" }, input)
+end
+
+--- AWS budgets list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "budgets", "list-tags-for-resource" }, input)
 end
 
---- Creates tags for a budget or budget action resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS budgets tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "budgets", "tag-resource" }, input)
 end
 
---- Deletes tags associated with a budget or budget action resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS budgets untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "budgets", "untag-resource" }, input)
 end
 
---- Updates a budget
---- @param input table|nil The input table for the update_budget command
+--- AWS budgets update-budget operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_budget(input)
 	return common.execute_aws_command_with_input({ "budgets", "update-budget" }, input)
 end
 
---- Updates a budget action
---- @param input table|nil The input table for the update_budget_action command
+--- AWS budgets update-budget-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_budget_action(input)
 	return common.execute_aws_command_with_input({ "budgets", "update-budget-action" }, input)
 end
 
---- Updates a notification
---- @param input table|nil The input table for the update_notification command
+--- AWS budgets update-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_notification(input)
 	return common.execute_aws_command_with_input({ "budgets", "update-notification" }, input)
 end
 
---- Updates a subscriber
---- @param input table|nil The input table for the update_subscriber command
+--- AWS budgets update-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscriber(input)
 	return common.execute_aws_command_with_input({ "budgets", "update-subscriber" }, input)

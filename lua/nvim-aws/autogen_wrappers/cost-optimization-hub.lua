@@ -6,50 +6,57 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS COST-OPTIMIZATION-HUB service functions
 local M = {}
 
---- Returns a set of preferences for an account in order to add account-specific preferences into the service
---- @param input table|nil The input table for the get_preferences command
+--- AWS cost-optimization-hub get-preferences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_preferences(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "get-preferences" }, input)
 end
 
---- Returns both the current and recommended resource configuration and the estimated cost impact for a recommendation
---- @param input table|nil The input table for the get_recommendation command
+--- AWS cost-optimization-hub get-recommendation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recommendation(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "get-recommendation" }, input)
 end
 
---- Retrieves the enrollment status for an account
---- @param input table|nil The input table for the list_enrollment_statuses command
+--- AWS cost-optimization-hub help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cost-optimization-hub", "help" }, input)
+end
+
+--- AWS cost-optimization-hub list-enrollment-statuses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_enrollment_statuses(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-enrollment-statuses" }, input)
 end
 
---- Returns a concise representation of savings estimates for resources
---- @param input table|nil The input table for the list_recommendation_summaries command
+--- AWS cost-optimization-hub list-recommendation-summaries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendation_summaries(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendation-summaries" }, input)
 end
 
---- Returns a list of recommendations
---- @param input table|nil The input table for the list_recommendations command
+--- AWS cost-optimization-hub list-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendations(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendations" }, input)
 end
 
---- Updates the enrollment (opt in and opt out) status of an account to the Cost Optimization Hub service
---- @param input table|nil The input table for the update_enrollment_status command
+--- AWS cost-optimization-hub update-enrollment-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_enrollment_status(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "update-enrollment-status" }, input)
 end
 
---- Updates a set of preferences for an account in order to add account-specific preferences into the service
---- @param input table|nil The input table for the update_preferences command
+--- AWS cost-optimization-hub update-preferences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_preferences(input)
 	return common.execute_aws_command_with_input({ "cost-optimization-hub", "update-preferences" }, input)

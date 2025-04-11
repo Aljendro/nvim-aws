@@ -6,211 +6,218 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS B2BI service functions
 local M = {}
 
---- Instantiates a capability based on the specified parameters
---- @param input table|nil The input table for the create_capability command
+--- AWS b2bi create-capability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_capability(input)
 	return common.execute_aws_command_with_input({ "b2bi", "create-capability" }, input)
 end
 
---- Creates a partnership between a customer and a trading partner, based on the supplied parameters
---- @param input table|nil The input table for the create_partnership command
+--- AWS b2bi create-partnership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_partnership(input)
 	return common.execute_aws_command_with_input({ "b2bi", "create-partnership" }, input)
 end
 
---- Creates a customer profile
---- @param input table|nil The input table for the create_profile command
+--- AWS b2bi create-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile(input)
 	return common.execute_aws_command_with_input({ "b2bi", "create-profile" }, input)
 end
 
---- Amazon Web Services B2B Data Interchange uses a mapping template in JSONata or XSLT format to transform a customer input file into a JSON or XML file that can be converted to EDI
---- @param input table|nil The input table for the create_starter_mapping_template command
+--- AWS b2bi create-starter-mapping-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_starter_mapping_template(input)
 	return common.execute_aws_command_with_input({ "b2bi", "create-starter-mapping-template" }, input)
 end
 
---- Creates a transformer
---- @param input table|nil The input table for the create_transformer command
+--- AWS b2bi create-transformer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_transformer(input)
 	return common.execute_aws_command_with_input({ "b2bi", "create-transformer" }, input)
 end
 
---- Deletes the specified capability
---- @param input table|nil The input table for the delete_capability command
+--- AWS b2bi delete-capability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_capability(input)
 	return common.execute_aws_command_with_input({ "b2bi", "delete-capability" }, input)
 end
 
---- Deletes the specified partnership
---- @param input table|nil The input table for the delete_partnership command
+--- AWS b2bi delete-partnership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_partnership(input)
 	return common.execute_aws_command_with_input({ "b2bi", "delete-partnership" }, input)
 end
 
---- Deletes the specified profile
---- @param input table|nil The input table for the delete_profile command
+--- AWS b2bi delete-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_profile(input)
 	return common.execute_aws_command_with_input({ "b2bi", "delete-profile" }, input)
 end
 
---- Deletes the specified transformer
---- @param input table|nil The input table for the delete_transformer command
+--- AWS b2bi delete-transformer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_transformer(input)
 	return common.execute_aws_command_with_input({ "b2bi", "delete-transformer" }, input)
 end
 
---- Takes sample input and output documents and uses Amazon Bedrock to generate a mapping automatically
---- @param input table|nil The input table for the generate_mapping command
+--- AWS b2bi generate-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_mapping(input)
 	return common.execute_aws_command_with_input({ "b2bi", "generate-mapping" }, input)
 end
 
---- Retrieves the details for the specified capability
---- @param input table|nil The input table for the get_capability command
+--- AWS b2bi get-capability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_capability(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-capability" }, input)
 end
 
---- Retrieves the details for a partnership, based on the partner and profile IDs specified
---- @param input table|nil The input table for the get_partnership command
+--- AWS b2bi get-partnership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_partnership(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-partnership" }, input)
 end
 
---- Retrieves the details for the profile specified by the profile ID
---- @param input table|nil The input table for the get_profile command
+--- AWS b2bi get-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_profile(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-profile" }, input)
 end
 
---- Retrieves the details for the transformer specified by the transformer ID
---- @param input table|nil The input table for the get_transformer command
+--- AWS b2bi get-transformer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_transformer(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-transformer" }, input)
 end
 
---- Returns the details of the transformer run, based on the Transformer job ID
---- @param input table|nil The input table for the get_transformer_job command
+--- AWS b2bi get-transformer-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_transformer_job(input)
 	return common.execute_aws_command_with_input({ "b2bi", "get-transformer-job" }, input)
 end
 
---- Lists the capabilities associated with your Amazon Web Services account for your current or specified region
---- @param input table|nil The input table for the list_capabilities command
+--- AWS b2bi help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "b2bi", "help" }, input)
+end
+
+--- AWS b2bi list-capabilities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_capabilities(input)
 	return common.execute_aws_command_with_input({ "b2bi", "list-capabilities" }, input)
 end
 
---- Lists the partnerships associated with your Amazon Web Services account for your current or specified region
---- @param input table|nil The input table for the list_partnerships command
+--- AWS b2bi list-partnerships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_partnerships(input)
 	return common.execute_aws_command_with_input({ "b2bi", "list-partnerships" }, input)
 end
 
---- Lists the profiles associated with your Amazon Web Services account for your current or specified region
---- @param input table|nil The input table for the list_profiles command
+--- AWS b2bi list-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profiles(input)
 	return common.execute_aws_command_with_input({ "b2bi", "list-profiles" }, input)
 end
 
---- Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS b2bi list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "b2bi", "list-tags-for-resource" }, input)
 end
 
---- Lists the available transformers
---- @param input table|nil The input table for the list_transformers command
+--- AWS b2bi list-transformers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_transformers(input)
 	return common.execute_aws_command_with_input({ "b2bi", "list-transformers" }, input)
 end
 
---- Runs a job, using a transformer, to parse input EDI (electronic data interchange) file into the output structures used by Amazon Web Services B2B Data Interchange
---- @param input table|nil The input table for the start_transformer_job command
+--- AWS b2bi start-transformer-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_transformer_job(input)
 	return common.execute_aws_command_with_input({ "b2bi", "start-transformer-job" }, input)
 end
 
---- Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the tag_resource command
+--- AWS b2bi tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "b2bi", "tag-resource" }, input)
 end
 
---- This operation mimics the latter half of a typical Outbound EDI request
---- @param input table|nil The input table for the test_conversion command
+--- AWS b2bi test-conversion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_conversion(input)
 	return common.execute_aws_command_with_input({ "b2bi", "test-conversion" }, input)
 end
 
---- Maps the input file according to the provided template file
---- @param input table|nil The input table for the test_mapping command
+--- AWS b2bi test-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_mapping(input)
 	return common.execute_aws_command_with_input({ "b2bi", "test-mapping" }, input)
 end
 
---- Parses the input EDI (electronic data interchange) file
---- @param input table|nil The input table for the test_parsing command
+--- AWS b2bi test-parsing operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_parsing(input)
 	return common.execute_aws_command_with_input({ "b2bi", "test-parsing" }, input)
 end
 
---- Detaches a key-value pair from the specified resource, as identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the untag_resource command
+--- AWS b2bi untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "b2bi", "untag-resource" }, input)
 end
 
---- Updates some of the parameters for a capability, based on the specified parameters
---- @param input table|nil The input table for the update_capability command
+--- AWS b2bi update-capability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_capability(input)
 	return common.execute_aws_command_with_input({ "b2bi", "update-capability" }, input)
 end
 
---- Updates some of the parameters for a partnership between a customer and trading partner
---- @param input table|nil The input table for the update_partnership command
+--- AWS b2bi update-partnership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_partnership(input)
 	return common.execute_aws_command_with_input({ "b2bi", "update-partnership" }, input)
 end
 
---- Updates the specified parameters for a profile
---- @param input table|nil The input table for the update_profile command
+--- AWS b2bi update-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_profile(input)
 	return common.execute_aws_command_with_input({ "b2bi", "update-profile" }, input)
 end
 
---- Updates the specified parameters for a transformer
---- @param input table|nil The input table for the update_transformer command
+--- AWS b2bi update-transformer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_transformer(input)
 	return common.execute_aws_command_with_input({ "b2bi", "update-transformer" }, input)

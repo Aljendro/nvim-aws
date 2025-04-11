@@ -35,11 +35,6 @@ describe("AWS iot service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with attach_principal_policy", function()
-		local result = service.attach_principal_policy()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with attach_security_profile", function()
 		local result = service.attach_security_profile()
 		assert.is_true(result.success)
@@ -610,11 +605,6 @@ describe("AWS iot service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with detach_principal_policy", function()
-		local result = service.detach_principal_policy()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with detach_security_profile", function()
 		local result = service.detach_security_profile()
 		assert.is_true(result.success)
@@ -747,6 +737,11 @@ describe("AWS iot service testing", function()
 
 	it("should generate a cli skeleton with get_v2_logging_options", function()
 		local result = service.get_v2_logging_options()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -920,18 +915,8 @@ describe("AWS iot service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_policy_principals", function()
-		local result = service.list_policy_principals()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_policy_versions", function()
 		local result = service.list_policy_versions()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_principal_policies", function()
-		local result = service.list_principal_policies()
 		assert.is_true(result.success)
 	end)
 

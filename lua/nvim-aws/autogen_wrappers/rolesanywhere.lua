@@ -6,211 +6,218 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ROLESANYWHERE service functions
 local M = {}
 
---- Creates a profile, a list of the roles that Roles Anywhere service is trusted to assume
---- @param input table|nil The input table for the create_profile command
+--- AWS rolesanywhere create-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "create-profile" }, input)
 end
 
---- Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate authority (CA)
---- @param input table|nil The input table for the create_trust_anchor command
+--- AWS rolesanywhere create-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "create-trust-anchor" }, input)
 end
 
---- Delete an entry from the attribute mapping rules enforced by a given profile
---- @param input table|nil The input table for the delete_attribute_mapping command
+--- AWS rolesanywhere delete-attribute-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_attribute_mapping(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-attribute-mapping" }, input)
 end
 
---- Deletes a certificate revocation list (CRL)
---- @param input table|nil The input table for the delete_crl command
+--- AWS rolesanywhere delete-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-crl" }, input)
 end
 
---- Deletes a profile
---- @param input table|nil The input table for the delete_profile command
+--- AWS rolesanywhere delete-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-profile" }, input)
 end
 
---- Deletes a trust anchor
---- @param input table|nil The input table for the delete_trust_anchor command
+--- AWS rolesanywhere delete-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-trust-anchor" }, input)
 end
 
---- Disables a certificate revocation list (CRL)
---- @param input table|nil The input table for the disable_crl command
+--- AWS rolesanywhere disable-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-crl" }, input)
 end
 
---- Disables a profile
---- @param input table|nil The input table for the disable_profile command
+--- AWS rolesanywhere disable-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-profile" }, input)
 end
 
---- Disables a trust anchor
---- @param input table|nil The input table for the disable_trust_anchor command
+--- AWS rolesanywhere disable-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-trust-anchor" }, input)
 end
 
---- Enables a certificate revocation list (CRL)
---- @param input table|nil The input table for the enable_crl command
+--- AWS rolesanywhere enable-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-crl" }, input)
 end
 
---- Enables temporary credential requests for a profile
---- @param input table|nil The input table for the enable_profile command
+--- AWS rolesanywhere enable-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-profile" }, input)
 end
 
---- Enables a trust anchor
---- @param input table|nil The input table for the enable_trust_anchor command
+--- AWS rolesanywhere enable-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-trust-anchor" }, input)
 end
 
---- Gets a certificate revocation list (CRL)
---- @param input table|nil The input table for the get_crl command
+--- AWS rolesanywhere get-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "get-crl" }, input)
 end
 
---- Gets a profile
---- @param input table|nil The input table for the get_profile command
+--- AWS rolesanywhere get-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "get-profile" }, input)
 end
 
---- Gets a subject, which associates a certificate identity with authentication attempts
---- @param input table|nil The input table for the get_subject command
+--- AWS rolesanywhere get-subject operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subject(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "get-subject" }, input)
 end
 
---- Gets a trust anchor
---- @param input table|nil The input table for the get_trust_anchor command
+--- AWS rolesanywhere get-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "get-trust-anchor" }, input)
 end
 
---- Imports the certificate revocation list (CRL)
---- @param input table|nil The input table for the import_crl command
+--- AWS rolesanywhere help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "rolesanywhere", "help" }, input)
+end
+
+--- AWS rolesanywhere import-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "import-crl" }, input)
 end
 
---- Lists all certificate revocation lists (CRL) in the authenticated account and Amazon Web Services Region
---- @param input table|nil The input table for the list_crls command
+--- AWS rolesanywhere list-crls operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_crls(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "list-crls" }, input)
 end
 
---- Lists all profiles in the authenticated account and Amazon Web Services Region
---- @param input table|nil The input table for the list_profiles command
+--- AWS rolesanywhere list-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_profiles(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "list-profiles" }, input)
 end
 
---- Lists the subjects in the authenticated account and Amazon Web Services Region
---- @param input table|nil The input table for the list_subjects command
+--- AWS rolesanywhere list-subjects operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subjects(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "list-subjects" }, input)
 end
 
---- Lists the tags attached to the resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS rolesanywhere list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "list-tags-for-resource" }, input)
 end
 
---- Lists the trust anchors in the authenticated account and Amazon Web Services Region
---- @param input table|nil The input table for the list_trust_anchors command
+--- AWS rolesanywhere list-trust-anchors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_trust_anchors(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "list-trust-anchors" }, input)
 end
 
---- Put an entry in the attribute mapping rules that will be enforced by a given profile
---- @param input table|nil The input table for the put_attribute_mapping command
+--- AWS rolesanywhere put-attribute-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_attribute_mapping(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "put-attribute-mapping" }, input)
 end
 
---- Attaches a list of notification settings to a trust anchor
---- @param input table|nil The input table for the put_notification_settings command
+--- AWS rolesanywhere put-notification-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_notification_settings(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "put-notification-settings" }, input)
 end
 
---- Resets the custom notification setting to IAM Roles Anywhere default setting
---- @param input table|nil The input table for the reset_notification_settings command
+--- AWS rolesanywhere reset-notification-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_notification_settings(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "reset-notification-settings" }, input)
 end
 
---- Attaches tags to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS rolesanywhere tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "tag-resource" }, input)
 end
 
---- Removes tags from the resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS rolesanywhere untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "untag-resource" }, input)
 end
 
---- Updates the certificate revocation list (CRL)
---- @param input table|nil The input table for the update_crl command
+--- AWS rolesanywhere update-crl operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_crl(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "update-crl" }, input)
 end
 
---- Updates a profile, a list of the roles that IAM Roles Anywhere service is trusted to assume
---- @param input table|nil The input table for the update_profile command
+--- AWS rolesanywhere update-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_profile(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "update-profile" }, input)
 end
 
---- Updates a trust anchor
---- @param input table|nil The input table for the update_trust_anchor command
+--- AWS rolesanywhere update-trust-anchor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_trust_anchor(input)
 	return common.execute_aws_command_with_input({ "rolesanywhere", "update-trust-anchor" }, input)

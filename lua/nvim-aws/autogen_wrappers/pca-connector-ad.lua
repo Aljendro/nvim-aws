@@ -6,176 +6,183 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PCA-CONNECTOR-AD service functions
 local M = {}
 
---- Creates a connector between Amazon Web Services Private CA and an Active Directory
---- @param input table|nil The input table for the create_connector command
+--- AWS pca-connector-ad create-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connector(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "create-connector" }, input)
 end
 
---- Creates a directory registration that authorizes communication between Amazon Web Services Private CA and an Active Directory
---- @param input table|nil The input table for the create_directory_registration command
+--- AWS pca-connector-ad create-directory-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_directory_registration(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "create-directory-registration" }, input)
 end
 
---- Creates a service principal name (SPN) for the service account in Active Directory
---- @param input table|nil The input table for the create_service_principal_name command
+--- AWS pca-connector-ad create-service-principal-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service_principal_name(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "create-service-principal-name" }, input)
 end
 
---- Creates an Active Directory compatible certificate template
---- @param input table|nil The input table for the create_template command
+--- AWS pca-connector-ad create-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "create-template" }, input)
 end
 
---- Create a group access control entry
---- @param input table|nil The input table for the create_template_group_access_control_entry command
+--- AWS pca-connector-ad create-template-group-access-control-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template_group_access_control_entry(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "create-template-group-access-control-entry" }, input)
 end
 
---- Deletes a connector for Active Directory
---- @param input table|nil The input table for the delete_connector command
+--- AWS pca-connector-ad delete-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connector(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "delete-connector" }, input)
 end
 
---- Deletes a directory registration
---- @param input table|nil The input table for the delete_directory_registration command
+--- AWS pca-connector-ad delete-directory-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_directory_registration(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "delete-directory-registration" }, input)
 end
 
---- Deletes the service principal name (SPN) used by a connector to authenticate with your Active Directory
---- @param input table|nil The input table for the delete_service_principal_name command
+--- AWS pca-connector-ad delete-service-principal-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service_principal_name(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "delete-service-principal-name" }, input)
 end
 
---- Deletes a template
---- @param input table|nil The input table for the delete_template command
+--- AWS pca-connector-ad delete-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "delete-template" }, input)
 end
 
---- Deletes a group access control entry
---- @param input table|nil The input table for the delete_template_group_access_control_entry command
+--- AWS pca-connector-ad delete-template-group-access-control-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template_group_access_control_entry(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "delete-template-group-access-control-entry" }, input)
 end
 
---- Lists information about your connector
---- @param input table|nil The input table for the get_connector command
+--- AWS pca-connector-ad get-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connector(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-connector" }, input)
 end
 
---- A structure that contains information about your directory registration
---- @param input table|nil The input table for the get_directory_registration command
+--- AWS pca-connector-ad get-directory-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_directory_registration(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-directory-registration" }, input)
 end
 
---- Lists the service principal name that the connector uses to authenticate with Active Directory
---- @param input table|nil The input table for the get_service_principal_name command
+--- AWS pca-connector-ad get-service-principal-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_principal_name(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-service-principal-name" }, input)
 end
 
---- Retrieves a certificate template that the connector uses to issue certificates from a private CA
---- @param input table|nil The input table for the get_template command
+--- AWS pca-connector-ad get-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_template(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-template" }, input)
 end
 
---- Retrieves the group access control entries for a template
---- @param input table|nil The input table for the get_template_group_access_control_entry command
+--- AWS pca-connector-ad get-template-group-access-control-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_template_group_access_control_entry(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "get-template-group-access-control-entry" }, input)
 end
 
---- Lists the connectors that you created by using the https://docs
---- @param input table|nil The input table for the list_connectors command
+--- AWS pca-connector-ad help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "pca-connector-ad", "help" }, input)
+end
+
+--- AWS pca-connector-ad list-connectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connectors(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-connectors" }, input)
 end
 
---- Lists the directory registrations that you created by using the https://docs
---- @param input table|nil The input table for the list_directory_registrations command
+--- AWS pca-connector-ad list-directory-registrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_directory_registrations(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-directory-registrations" }, input)
 end
 
---- Lists the service principal names that the connector uses to authenticate with Active Directory
---- @param input table|nil The input table for the list_service_principal_names command
+--- AWS pca-connector-ad list-service-principal-names operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_principal_names(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-service-principal-names" }, input)
 end
 
---- Lists the tags, if any, that are associated with your resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS pca-connector-ad list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-tags-for-resource" }, input)
 end
 
---- Lists group access control entries you created
---- @param input table|nil The input table for the list_template_group_access_control_entries command
+--- AWS pca-connector-ad list-template-group-access-control-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_template_group_access_control_entries(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-template-group-access-control-entries" }, input)
 end
 
---- Lists the templates, if any, that are associated with a connector
---- @param input table|nil The input table for the list_templates command
+--- AWS pca-connector-ad list-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_templates(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "list-templates" }, input)
 end
 
---- Adds one or more tags to your resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS pca-connector-ad tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "tag-resource" }, input)
 end
 
---- Removes one or more tags from your resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS pca-connector-ad untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "untag-resource" }, input)
 end
 
---- Update template configuration to define the information included in certificates
---- @param input table|nil The input table for the update_template command
+--- AWS pca-connector-ad update-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "update-template" }, input)
 end
 
---- Update a group access control entry you created using CreateTemplateGroupAccessControlEntry
---- @param input table|nil The input table for the update_template_group_access_control_entry command
+--- AWS pca-connector-ad update-template-group-access-control-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template_group_access_control_entry(input)
 	return common.execute_aws_command_with_input({ "pca-connector-ad", "update-template-group-access-control-entry" }, input)

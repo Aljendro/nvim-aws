@@ -40,6 +40,11 @@ describe("AWS cloud9 service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_environments", function()
 		local result = service.list_environments()
 		assert.is_true(result.success)

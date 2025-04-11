@@ -6,239 +6,246 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS IOTANALYTICS service functions
 local M = {}
 
---- Sends messages to a channel
---- @param input table|nil The input table for the batch_put_message command
+--- AWS iotanalytics batch-put-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_put_message(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "batch-put-message" }, input)
 end
 
---- Cancels the reprocessing of data through the pipeline
---- @param input table|nil The input table for the cancel_pipeline_reprocessing command
+--- AWS iotanalytics cancel-pipeline-reprocessing operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_pipeline_reprocessing(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "cancel-pipeline-reprocessing" }, input)
 end
 
---- Used to create a channel
---- @param input table|nil The input table for the create_channel command
+--- AWS iotanalytics create-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_channel(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "create-channel" }, input)
 end
 
---- Used to create a dataset
---- @param input table|nil The input table for the create_dataset command
+--- AWS iotanalytics create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "create-dataset" }, input)
 end
 
---- Creates the content of a dataset by applying a queryAction (a SQL query) or a containerAction (executing a containerized application)
---- @param input table|nil The input table for the create_dataset_content command
+--- AWS iotanalytics create-dataset-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset_content(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "create-dataset-content" }, input)
 end
 
---- Creates a data store, which is a repository for messages
---- @param input table|nil The input table for the create_datastore command
+--- AWS iotanalytics create-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_datastore(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "create-datastore" }, input)
 end
 
---- Creates a pipeline
---- @param input table|nil The input table for the create_pipeline command
+--- AWS iotanalytics create-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pipeline(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "create-pipeline" }, input)
 end
 
---- Deletes the specified channel
---- @param input table|nil The input table for the delete_channel command
+--- AWS iotanalytics delete-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_channel(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "delete-channel" }, input)
 end
 
---- Deletes the specified dataset
---- @param input table|nil The input table for the delete_dataset command
+--- AWS iotanalytics delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "delete-dataset" }, input)
 end
 
---- Deletes the content of the specified dataset
---- @param input table|nil The input table for the delete_dataset_content command
+--- AWS iotanalytics delete-dataset-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset_content(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "delete-dataset-content" }, input)
 end
 
---- Deletes the specified data store
---- @param input table|nil The input table for the delete_datastore command
+--- AWS iotanalytics delete-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_datastore(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "delete-datastore" }, input)
 end
 
---- Deletes the specified pipeline
---- @param input table|nil The input table for the delete_pipeline command
+--- AWS iotanalytics delete-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pipeline(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "delete-pipeline" }, input)
 end
 
---- Retrieves information about a channel
---- @param input table|nil The input table for the describe_channel command
+--- AWS iotanalytics describe-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_channel(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "describe-channel" }, input)
 end
 
---- Retrieves information about a dataset
---- @param input table|nil The input table for the describe_dataset command
+--- AWS iotanalytics describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "describe-dataset" }, input)
 end
 
---- Retrieves information about a data store
---- @param input table|nil The input table for the describe_datastore command
+--- AWS iotanalytics describe-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_datastore(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "describe-datastore" }, input)
 end
 
---- Retrieves the current settings of the IoT Analytics logging options
---- @param input table|nil The input table for the describe_logging_options command
+--- AWS iotanalytics describe-logging-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_logging_options(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "describe-logging-options" }, input)
 end
 
---- Retrieves information about a pipeline
---- @param input table|nil The input table for the describe_pipeline command
+--- AWS iotanalytics describe-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pipeline(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "describe-pipeline" }, input)
 end
 
---- Retrieves the contents of a dataset as presigned URIs
---- @param input table|nil The input table for the get_dataset_content command
+--- AWS iotanalytics get-dataset-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dataset_content(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "get-dataset-content" }, input)
 end
 
---- Retrieves a list of channels
---- @param input table|nil The input table for the list_channels command
+--- AWS iotanalytics help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "iotanalytics", "help" }, input)
+end
+
+--- AWS iotanalytics list-channels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_channels(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-channels" }, input)
 end
 
---- Lists information about dataset contents that have been created
---- @param input table|nil The input table for the list_dataset_contents command
+--- AWS iotanalytics list-dataset-contents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_contents(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-dataset-contents" }, input)
 end
 
---- Retrieves information about datasets
---- @param input table|nil The input table for the list_datasets command
+--- AWS iotanalytics list-datasets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-datasets" }, input)
 end
 
---- Retrieves a list of data stores
---- @param input table|nil The input table for the list_datastores command
+--- AWS iotanalytics list-datastores operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datastores(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-datastores" }, input)
 end
 
---- Retrieves a list of pipelines
---- @param input table|nil The input table for the list_pipelines command
+--- AWS iotanalytics list-pipelines operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pipelines(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-pipelines" }, input)
 end
 
---- Lists the tags (metadata) that you have assigned to the resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS iotanalytics list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "list-tags-for-resource" }, input)
 end
 
---- Sets or updates the IoT Analytics logging options
---- @param input table|nil The input table for the put_logging_options command
+--- AWS iotanalytics put-logging-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_logging_options(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "put-logging-options" }, input)
 end
 
---- Simulates the results of running a pipeline activity on a message payload
---- @param input table|nil The input table for the run_pipeline_activity command
+--- AWS iotanalytics run-pipeline-activity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.run_pipeline_activity(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "run-pipeline-activity" }, input)
 end
 
---- Retrieves a sample of messages from the specified channel ingested during the specified timeframe
---- @param input table|nil The input table for the sample_channel_data command
+--- AWS iotanalytics sample-channel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.sample_channel_data(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "sample-channel-data" }, input)
 end
 
---- Starts the reprocessing of raw message data through the pipeline
---- @param input table|nil The input table for the start_pipeline_reprocessing command
+--- AWS iotanalytics start-pipeline-reprocessing operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_pipeline_reprocessing(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "start-pipeline-reprocessing" }, input)
 end
 
---- Adds to or modifies the tags of the given resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS iotanalytics tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "tag-resource" }, input)
 end
 
---- Removes the given tags (metadata) from the resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS iotanalytics untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "untag-resource" }, input)
 end
 
---- Used to update the settings of a channel
---- @param input table|nil The input table for the update_channel command
+--- AWS iotanalytics update-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_channel(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "update-channel" }, input)
 end
 
---- Updates the settings of a dataset
---- @param input table|nil The input table for the update_dataset command
+--- AWS iotanalytics update-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "update-dataset" }, input)
 end
 
---- Used to update the settings of a data store
---- @param input table|nil The input table for the update_datastore command
+--- AWS iotanalytics update-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_datastore(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "update-datastore" }, input)
 end
 
---- Updates the settings of a pipeline
---- @param input table|nil The input table for the update_pipeline command
+--- AWS iotanalytics update-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pipeline(input)
 	return common.execute_aws_command_with_input({ "iotanalytics", "update-pipeline" }, input)

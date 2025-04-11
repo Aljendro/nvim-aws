@@ -245,6 +245,11 @@ describe("AWS waf-regional service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_activated_rules_in_rule_group", function()
 		local result = service.list_activated_rules_in_rule_group()
 		assert.is_true(result.success)
@@ -320,8 +325,8 @@ describe("AWS waf-regional service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_web_ac_ls", function()
-		local result = service.list_web_ac_ls()
+	it("should generate a cli skeleton with list_web_acls", function()
+		local result = service.list_web_acls()
 		assert.is_true(result.success)
 	end)
 

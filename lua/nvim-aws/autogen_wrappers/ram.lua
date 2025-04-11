@@ -6,239 +6,246 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS RAM service functions
 local M = {}
 
---- Accepts an invitation to a resource share from another Amazon Web Services account
---- @param input table|nil The input table for the accept_resource_share_invitation command
+--- AWS ram accept-resource-share-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_resource_share_invitation(input)
 	return common.execute_aws_command_with_input({ "ram", "accept-resource-share-invitation" }, input)
 end
 
---- Adds the specified list of principals and list of resources to a resource share
---- @param input table|nil The input table for the associate_resource_share command
+--- AWS ram associate-resource-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_resource_share(input)
 	return common.execute_aws_command_with_input({ "ram", "associate-resource-share" }, input)
 end
 
---- Adds or replaces the RAM permission for a resource type included in a resource share
---- @param input table|nil The input table for the associate_resource_share_permission command
+--- AWS ram associate-resource-share-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_resource_share_permission(input)
 	return common.execute_aws_command_with_input({ "ram", "associate-resource-share-permission" }, input)
 end
 
---- Creates a customer managed permission for a specified resource type that you can attach to resource shares
---- @param input table|nil The input table for the create_permission command
+--- AWS ram create-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_permission(input)
 	return common.execute_aws_command_with_input({ "ram", "create-permission" }, input)
 end
 
---- Creates a new version of the specified customer managed permission
---- @param input table|nil The input table for the create_permission_version command
+--- AWS ram create-permission-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_permission_version(input)
 	return common.execute_aws_command_with_input({ "ram", "create-permission-version" }, input)
 end
 
---- Creates a resource share
---- @param input table|nil The input table for the create_resource_share command
+--- AWS ram create-resource-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_share(input)
 	return common.execute_aws_command_with_input({ "ram", "create-resource-share" }, input)
 end
 
---- Deletes the specified customer managed permission in the Amazon Web Services Region in which you call this operation
---- @param input table|nil The input table for the delete_permission command
+--- AWS ram delete-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_permission(input)
 	return common.execute_aws_command_with_input({ "ram", "delete-permission" }, input)
 end
 
---- Deletes one version of a customer managed permission
---- @param input table|nil The input table for the delete_permission_version command
+--- AWS ram delete-permission-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_permission_version(input)
 	return common.execute_aws_command_with_input({ "ram", "delete-permission-version" }, input)
 end
 
---- Deletes the specified resource share
---- @param input table|nil The input table for the delete_resource_share command
+--- AWS ram delete-resource-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_share(input)
 	return common.execute_aws_command_with_input({ "ram", "delete-resource-share" }, input)
 end
 
---- Removes the specified principals or resources from participating in the specified resource share
---- @param input table|nil The input table for the disassociate_resource_share command
+--- AWS ram disassociate-resource-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_resource_share(input)
 	return common.execute_aws_command_with_input({ "ram", "disassociate-resource-share" }, input)
 end
 
---- Removes a managed permission from a resource share
---- @param input table|nil The input table for the disassociate_resource_share_permission command
+--- AWS ram disassociate-resource-share-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_resource_share_permission(input)
 	return common.execute_aws_command_with_input({ "ram", "disassociate-resource-share-permission" }, input)
 end
 
---- Enables resource sharing within your organization in Organizations
---- @param input table|nil The input table for the enable_sharing_with_aws_organization command
+--- AWS ram enable-sharing-with-aws-organization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_sharing_with_aws_organization(input)
 	return common.execute_aws_command_with_input({ "ram", "enable-sharing-with-aws-organization" }, input)
 end
 
---- Retrieves the contents of a managed permission in JSON format
---- @param input table|nil The input table for the get_permission command
+--- AWS ram get-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_permission(input)
 	return common.execute_aws_command_with_input({ "ram", "get-permission" }, input)
 end
 
---- Retrieves the resource policies for the specified resources that you own and have shared
---- @param input table|nil The input table for the get_resource_policies command
+--- AWS ram get-resource-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policies(input)
 	return common.execute_aws_command_with_input({ "ram", "get-resource-policies" }, input)
 end
 
---- Retrieves the lists of resources and principals that associated for resource shares that you own
---- @param input table|nil The input table for the get_resource_share_associations command
+--- AWS ram get-resource-share-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_share_associations(input)
 	return common.execute_aws_command_with_input({ "ram", "get-resource-share-associations" }, input)
 end
 
---- Retrieves details about invitations that you have received for resource shares
---- @param input table|nil The input table for the get_resource_share_invitations command
+--- AWS ram get-resource-share-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_share_invitations(input)
 	return common.execute_aws_command_with_input({ "ram", "get-resource-share-invitations" }, input)
 end
 
---- Retrieves details about the resource shares that you own or that are shared with you
---- @param input table|nil The input table for the get_resource_shares command
+--- AWS ram get-resource-shares operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_shares(input)
 	return common.execute_aws_command_with_input({ "ram", "get-resource-shares" }, input)
 end
 
---- Lists the resources in a resource share that is shared with you but for which the invitation is still PENDING
---- @param input table|nil The input table for the list_pending_invitation_resources command
+--- AWS ram help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ram", "help" }, input)
+end
+
+--- AWS ram list-pending-invitation-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pending_invitation_resources(input)
 	return common.execute_aws_command_with_input({ "ram", "list-pending-invitation-resources" }, input)
 end
 
---- Lists information about the managed permission and its associations to any resource shares that use this managed permission
---- @param input table|nil The input table for the list_permission_associations command
+--- AWS ram list-permission-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_permission_associations(input)
 	return common.execute_aws_command_with_input({ "ram", "list-permission-associations" }, input)
 end
 
---- Lists the available versions of the specified RAM permission
---- @param input table|nil The input table for the list_permission_versions command
+--- AWS ram list-permission-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_permission_versions(input)
 	return common.execute_aws_command_with_input({ "ram", "list-permission-versions" }, input)
 end
 
---- Retrieves a list of available RAM permissions that you can use for the supported resource types
---- @param input table|nil The input table for the list_permissions command
+--- AWS ram list-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_permissions(input)
 	return common.execute_aws_command_with_input({ "ram", "list-permissions" }, input)
 end
 
---- Lists the principals that you are sharing resources with or that are sharing resources with you
---- @param input table|nil The input table for the list_principals command
+--- AWS ram list-principals operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_principals(input)
 	return common.execute_aws_command_with_input({ "ram", "list-principals" }, input)
 end
 
---- Retrieves the current status of the asynchronous tasks performed by RAM when you perform the ReplacePermissionAssociationsWork operation
---- @param input table|nil The input table for the list_replace_permission_associations_work command
+--- AWS ram list-replace-permission-associations-work operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_replace_permission_associations_work(input)
 	return common.execute_aws_command_with_input({ "ram", "list-replace-permission-associations-work" }, input)
 end
 
---- Lists the RAM permissions that are associated with a resource share
---- @param input table|nil The input table for the list_resource_share_permissions command
+--- AWS ram list-resource-share-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_share_permissions(input)
 	return common.execute_aws_command_with_input({ "ram", "list-resource-share-permissions" }, input)
 end
 
---- Lists the resource types that can be shared by RAM
---- @param input table|nil The input table for the list_resource_types command
+--- AWS ram list-resource-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_types(input)
 	return common.execute_aws_command_with_input({ "ram", "list-resource-types" }, input)
 end
 
---- Lists the resources that you added to a resource share or the resources that are shared with you
---- @param input table|nil The input table for the list_resources command
+--- AWS ram list-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resources(input)
 	return common.execute_aws_command_with_input({ "ram", "list-resources" }, input)
 end
 
---- When you attach a resource-based policy to a resource, RAM automatically creates a resource share of featureSet=CREATED_FROM_POLICY with a managed permission that has the same IAM permissions as the original resource-based policy
---- @param input table|nil The input table for the promote_permission_created_from_policy command
+--- AWS ram promote-permission-created-from-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.promote_permission_created_from_policy(input)
 	return common.execute_aws_command_with_input({ "ram", "promote-permission-created-from-policy" }, input)
 end
 
---- When you attach a resource-based policy to a resource, RAM automatically creates a resource share of featureSet=CREATED_FROM_POLICY with a managed permission that has the same IAM permissions as the original resource-based policy
---- @param input table|nil The input table for the promote_resource_share_created_from_policy command
+--- AWS ram promote-resource-share-created-from-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.promote_resource_share_created_from_policy(input)
 	return common.execute_aws_command_with_input({ "ram", "promote-resource-share-created-from-policy" }, input)
 end
 
---- Rejects an invitation to a resource share from another Amazon Web Services account
---- @param input table|nil The input table for the reject_resource_share_invitation command
+--- AWS ram reject-resource-share-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_resource_share_invitation(input)
 	return common.execute_aws_command_with_input({ "ram", "reject-resource-share-invitation" }, input)
 end
 
---- Updates all resource shares that use a managed permission to a different managed permission
---- @param input table|nil The input table for the replace_permission_associations command
+--- AWS ram replace-permission-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.replace_permission_associations(input)
 	return common.execute_aws_command_with_input({ "ram", "replace-permission-associations" }, input)
 end
 
---- Designates the specified version number as the default version for the specified customer managed permission
---- @param input table|nil The input table for the set_default_permission_version command
+--- AWS ram set-default-permission-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_default_permission_version(input)
 	return common.execute_aws_command_with_input({ "ram", "set-default-permission-version" }, input)
 end
 
---- Adds the specified tag keys and values to a resource share or managed permission
---- @param input table|nil The input table for the tag_resource command
+--- AWS ram tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ram", "tag-resource" }, input)
 end
 
---- Removes the specified tag key and value pairs from the specified resource share or managed permission
---- @param input table|nil The input table for the untag_resource command
+--- AWS ram untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ram", "untag-resource" }, input)
 end
 
---- Modifies some of the properties of the specified resource share
---- @param input table|nil The input table for the update_resource_share command
+--- AWS ram update-resource-share operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_share(input)
 	return common.execute_aws_command_with_input({ "ram", "update-resource-share" }, input)

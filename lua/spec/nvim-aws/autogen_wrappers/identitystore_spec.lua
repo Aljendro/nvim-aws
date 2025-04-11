@@ -65,6 +65,11 @@ describe("AWS identitystore service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with is_member_in_groups", function()
 		local result = service.is_member_in_groups()
 		assert.is_true(result.success)

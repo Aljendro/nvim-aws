@@ -6,309 +6,316 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS WORKDOCS service functions
 local M = {}
 
---- Aborts the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload
---- @param input table|nil The input table for the abort_document_version_upload command
+--- AWS workdocs abort-document-version-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.abort_document_version_upload(input)
 	return common.execute_aws_command_with_input({ "workdocs", "abort-document-version-upload" }, input)
 end
 
---- Activates the specified user
---- @param input table|nil The input table for the activate_user command
+--- AWS workdocs activate-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "activate-user" }, input)
 end
 
---- Creates a set of permissions for the specified folder or document
---- @param input table|nil The input table for the add_resource_permissions command
+--- AWS workdocs add-resource-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_resource_permissions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "add-resource-permissions" }, input)
 end
 
---- Adds a new comment to the specified document version
---- @param input table|nil The input table for the create_comment command
+--- AWS workdocs create-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_comment(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-comment" }, input)
 end
 
---- Adds one or more custom properties to the specified resource (a folder, document, or version)
---- @param input table|nil The input table for the create_custom_metadata command
+--- AWS workdocs create-custom-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_metadata(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-custom-metadata" }, input)
 end
 
---- Creates a folder with the specified name and parent folder
---- @param input table|nil The input table for the create_folder command
+--- AWS workdocs create-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_folder(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-folder" }, input)
 end
 
---- Adds the specified list of labels to the given resource (a document or folder)
---- @param input table|nil The input table for the create_labels command
+--- AWS workdocs create-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_labels(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-labels" }, input)
 end
 
---- Configure Amazon WorkDocs to use Amazon SNS notifications
---- @param input table|nil The input table for the create_notification_subscription command
+--- AWS workdocs create-notification-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_notification_subscription(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-notification-subscription" }, input)
 end
 
---- Creates a user in a Simple AD or Microsoft AD directory
---- @param input table|nil The input table for the create_user command
+--- AWS workdocs create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "create-user" }, input)
 end
 
---- Deactivates the specified user, which revokes the user's access to Amazon WorkDocs
---- @param input table|nil The input table for the deactivate_user command
+--- AWS workdocs deactivate-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deactivate_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "deactivate-user" }, input)
 end
 
---- Deletes the specified comment from the document version
---- @param input table|nil The input table for the delete_comment command
+--- AWS workdocs delete-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_comment(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-comment" }, input)
 end
 
---- Deletes custom metadata from the specified resource
---- @param input table|nil The input table for the delete_custom_metadata command
+--- AWS workdocs delete-custom-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_metadata(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-custom-metadata" }, input)
 end
 
---- Permanently deletes the specified document and its associated metadata
---- @param input table|nil The input table for the delete_document command
+--- AWS workdocs delete-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_document(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-document" }, input)
 end
 
---- Deletes a specific version of a document
---- @param input table|nil The input table for the delete_document_version command
+--- AWS workdocs delete-document-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_document_version(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-document-version" }, input)
 end
 
---- Permanently deletes the specified folder and its contents
---- @param input table|nil The input table for the delete_folder command
+--- AWS workdocs delete-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_folder(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-folder" }, input)
 end
 
---- Deletes the contents of the specified folder
---- @param input table|nil The input table for the delete_folder_contents command
+--- AWS workdocs delete-folder-contents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_folder_contents(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-folder-contents" }, input)
 end
 
---- Deletes the specified list of labels from a resource
---- @param input table|nil The input table for the delete_labels command
+--- AWS workdocs delete-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_labels(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-labels" }, input)
 end
 
---- Deletes the specified subscription from the specified organization
---- @param input table|nil The input table for the delete_notification_subscription command
+--- AWS workdocs delete-notification-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_notification_subscription(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-notification-subscription" }, input)
 end
 
---- Deletes the specified user from a Simple AD or Microsoft AD directory
---- @param input table|nil The input table for the delete_user command
+--- AWS workdocs delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "delete-user" }, input)
 end
 
---- Describes the user activities in a specified time period
---- @param input table|nil The input table for the describe_activities command
+--- AWS workdocs describe-activities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_activities(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-activities" }, input)
 end
 
---- List all the comments for the specified document version
---- @param input table|nil The input table for the describe_comments command
+--- AWS workdocs describe-comments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_comments(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-comments" }, input)
 end
 
---- Retrieves the document versions for the specified document
---- @param input table|nil The input table for the describe_document_versions command
+--- AWS workdocs describe-document-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_document_versions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-document-versions" }, input)
 end
 
---- Describes the contents of the specified folder, including its documents and subfolders
---- @param input table|nil The input table for the describe_folder_contents command
+--- AWS workdocs describe-folder-contents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_folder_contents(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-folder-contents" }, input)
 end
 
---- Describes the groups specified by the query
---- @param input table|nil The input table for the describe_groups command
+--- AWS workdocs describe-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_groups(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-groups" }, input)
 end
 
---- Lists the specified notification subscriptions
---- @param input table|nil The input table for the describe_notification_subscriptions command
+--- AWS workdocs describe-notification-subscriptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_notification_subscriptions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-notification-subscriptions" }, input)
 end
 
---- Describes the permissions of a specified resource
---- @param input table|nil The input table for the describe_resource_permissions command
+--- AWS workdocs describe-resource-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource_permissions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-resource-permissions" }, input)
 end
 
---- Describes the current user's special folders; the RootFolder and the RecycleBin
---- @param input table|nil The input table for the describe_root_folders command
+--- AWS workdocs describe-root-folders operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_root_folders(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-root-folders" }, input)
 end
 
---- Describes the specified users
---- @param input table|nil The input table for the describe_users command
+--- AWS workdocs describe-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_users(input)
 	return common.execute_aws_command_with_input({ "workdocs", "describe-users" }, input)
 end
 
---- Retrieves details of the current user for whom the authentication token was generated
---- @param input table|nil The input table for the get_current_user command
+--- AWS workdocs get-current-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_current_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-current-user" }, input)
 end
 
---- Retrieves details of a document
---- @param input table|nil The input table for the get_document command
+--- AWS workdocs get-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-document" }, input)
 end
 
---- Retrieves the path information (the hierarchy from the root folder) for the requested document
---- @param input table|nil The input table for the get_document_path command
+--- AWS workdocs get-document-path operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document_path(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-document-path" }, input)
 end
 
---- Retrieves version metadata for the specified document
---- @param input table|nil The input table for the get_document_version command
+--- AWS workdocs get-document-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document_version(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-document-version" }, input)
 end
 
---- Retrieves the metadata of the specified folder
---- @param input table|nil The input table for the get_folder command
+--- AWS workdocs get-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_folder(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-folder" }, input)
 end
 
---- Retrieves the path information (the hierarchy from the root folder) for the specified folder
---- @param input table|nil The input table for the get_folder_path command
+--- AWS workdocs get-folder-path operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_folder_path(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-folder-path" }, input)
 end
 
---- Retrieves a collection of resources, including folders and documents
---- @param input table|nil The input table for the get_resources command
+--- AWS workdocs get-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resources(input)
 	return common.execute_aws_command_with_input({ "workdocs", "get-resources" }, input)
 end
 
---- Creates a new document object and version object
---- @param input table|nil The input table for the initiate_document_version_upload command
+--- AWS workdocs help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "workdocs", "help" }, input)
+end
+
+--- AWS workdocs initiate-document-version-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_document_version_upload(input)
 	return common.execute_aws_command_with_input({ "workdocs", "initiate-document-version-upload" }, input)
 end
 
---- Removes all the permissions from the specified resource
---- @param input table|nil The input table for the remove_all_resource_permissions command
+--- AWS workdocs remove-all-resource-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_all_resource_permissions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "remove-all-resource-permissions" }, input)
 end
 
---- Removes the permission for the specified principal from the specified resource
---- @param input table|nil The input table for the remove_resource_permission command
+--- AWS workdocs remove-resource-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_resource_permission(input)
 	return common.execute_aws_command_with_input({ "workdocs", "remove-resource-permission" }, input)
 end
 
---- Recovers a deleted version of an Amazon WorkDocs document
---- @param input table|nil The input table for the restore_document_versions command
+--- AWS workdocs restore-document-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_document_versions(input)
 	return common.execute_aws_command_with_input({ "workdocs", "restore-document-versions" }, input)
 end
 
---- Searches metadata and the content of folders, documents, document versions, and comments
---- @param input table|nil The input table for the search_resources command
+--- AWS workdocs search-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_resources(input)
 	return common.execute_aws_command_with_input({ "workdocs", "search-resources" }, input)
 end
 
---- Updates the specified attributes of a document
---- @param input table|nil The input table for the update_document command
+--- AWS workdocs update-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_document(input)
 	return common.execute_aws_command_with_input({ "workdocs", "update-document" }, input)
 end
 
---- Changes the status of the document version to ACTIVE
---- @param input table|nil The input table for the update_document_version command
+--- AWS workdocs update-document-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_document_version(input)
 	return common.execute_aws_command_with_input({ "workdocs", "update-document-version" }, input)
 end
 
---- Updates the specified attributes of the specified folder
---- @param input table|nil The input table for the update_folder command
+--- AWS workdocs update-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_folder(input)
 	return common.execute_aws_command_with_input({ "workdocs", "update-folder" }, input)
 end
 
---- Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site
---- @param input table|nil The input table for the update_user command
+--- AWS workdocs update-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "workdocs", "update-user" }, input)

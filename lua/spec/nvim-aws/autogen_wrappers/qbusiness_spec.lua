@@ -25,11 +25,6 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with chat", function()
-		local result = service.chat()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with chat_sync", function()
 		local result = service.chat_sync()
 		assert.is_true(result.success)
@@ -40,6 +35,31 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_data_accessor", function()
+		local result = service.create_data_accessor()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_data_source", function()
+		local result = service.create_data_source()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_index", function()
+		local result = service.create_index()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_plugin", function()
+		local result = service.create_plugin()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_retriever", function()
+		local result = service.create_retriever()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with create_subscription", function()
 		local result = service.create_subscription()
 		assert.is_true(result.success)
@@ -47,6 +67,11 @@ describe("AWS qbusiness service testing", function()
 
 	it("should generate a cli skeleton with create_user", function()
 		local result = service.create_user()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_web_experience", function()
+		local result = service.create_web_experience()
 		assert.is_true(result.success)
 	end)
 
@@ -70,13 +95,43 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_data_accessor", function()
+		local result = service.delete_data_accessor()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_data_source", function()
+		local result = service.delete_data_source()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_group", function()
 		local result = service.delete_group()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_index", function()
+		local result = service.delete_index()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_plugin", function()
+		local result = service.delete_plugin()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_retriever", function()
+		local result = service.delete_retriever()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_user", function()
 		local result = service.delete_user()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_web_experience", function()
+		local result = service.delete_web_experience()
 		assert.is_true(result.success)
 	end)
 
@@ -95,8 +150,23 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_data_accessor", function()
+		local result = service.get_data_accessor()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_data_source", function()
+		local result = service.get_data_source()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_group", function()
 		local result = service.get_group()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_index", function()
+		local result = service.get_index()
 		assert.is_true(result.success)
 	end)
 
@@ -105,13 +175,33 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_plugin", function()
+		local result = service.get_plugin()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_policy", function()
 		local result = service.get_policy()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_retriever", function()
+		local result = service.get_retriever()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_user", function()
 		local result = service.get_user()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_web_experience", function()
+		local result = service.get_web_experience()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -130,8 +220,18 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_data_accessors", function()
+		local result = service.list_data_accessors()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_data_source_sync_jobs", function()
 		local result = service.list_data_source_sync_jobs()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_data_sources", function()
+		local result = service.list_data_sources()
 		assert.is_true(result.success)
 	end)
 
@@ -142,6 +242,11 @@ describe("AWS qbusiness service testing", function()
 
 	it("should generate a cli skeleton with list_groups", function()
 		local result = service.list_groups()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_indices", function()
+		local result = service.list_indices()
 		assert.is_true(result.success)
 	end)
 
@@ -165,6 +270,16 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_plugins", function()
+		local result = service.list_plugins()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_retrievers", function()
+		local result = service.list_retrievers()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_subscriptions", function()
 		local result = service.list_subscriptions()
 		assert.is_true(result.success)
@@ -172,6 +287,11 @@ describe("AWS qbusiness service testing", function()
 
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_web_experiences", function()
+		local result = service.list_web_experiences()
 		assert.is_true(result.success)
 	end)
 
@@ -220,6 +340,31 @@ describe("AWS qbusiness service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with update_data_accessor", function()
+		local result = service.update_data_accessor()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_data_source", function()
+		local result = service.update_data_source()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_index", function()
+		local result = service.update_index()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_plugin", function()
+		local result = service.update_plugin()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_retriever", function()
+		local result = service.update_retriever()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with update_subscription", function()
 		local result = service.update_subscription()
 		assert.is_true(result.success)
@@ -227,6 +372,11 @@ describe("AWS qbusiness service testing", function()
 
 	it("should generate a cli skeleton with update_user", function()
 		local result = service.update_user()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_web_experience", function()
+		local result = service.update_web_experience()
 		assert.is_true(result.success)
 	end)
 

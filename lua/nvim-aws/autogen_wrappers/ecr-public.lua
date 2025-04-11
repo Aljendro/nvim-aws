@@ -6,162 +6,169 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ECR-PUBLIC service functions
 local M = {}
 
---- Checks the availability of one or more image layers that are within a repository in a public registry
---- @param input table|nil The input table for the batch_check_layer_availability command
+--- AWS ecr-public batch-check-layer-availability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_check_layer_availability(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "batch-check-layer-availability" }, input)
 end
 
---- Deletes a list of specified images that are within a repository in a public registry
---- @param input table|nil The input table for the batch_delete_image command
+--- AWS ecr-public batch-delete-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_image(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "batch-delete-image" }, input)
 end
 
---- Informs Amazon ECR that the image layer upload is complete for a specified public registry, repository name, and upload ID
---- @param input table|nil The input table for the complete_layer_upload command
+--- AWS ecr-public complete-layer-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_layer_upload(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "complete-layer-upload" }, input)
 end
 
---- Creates a repository in a public registry
---- @param input table|nil The input table for the create_repository command
+--- AWS ecr-public create-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "create-repository" }, input)
 end
 
---- Deletes a repository in a public registry
---- @param input table|nil The input table for the delete_repository command
+--- AWS ecr-public delete-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "delete-repository" }, input)
 end
 
---- Deletes the repository policy that's associated with the specified repository
---- @param input table|nil The input table for the delete_repository_policy command
+--- AWS ecr-public delete-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "delete-repository-policy" }, input)
 end
 
---- Returns the image tag details for a repository in a public registry
---- @param input table|nil The input table for the describe_image_tags command
+--- AWS ecr-public describe-image-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_image_tags(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "describe-image-tags" }, input)
 end
 
---- Returns metadata that's related to the images in a repository in a public registry
---- @param input table|nil The input table for the describe_images command
+--- AWS ecr-public describe-images operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_images(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "describe-images" }, input)
 end
 
---- Returns details for a public registry
---- @param input table|nil The input table for the describe_registries command
+--- AWS ecr-public describe-registries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registries(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "describe-registries" }, input)
 end
 
---- Describes repositories that are in a public registry
---- @param input table|nil The input table for the describe_repositories command
+--- AWS ecr-public describe-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_repositories(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "describe-repositories" }, input)
 end
 
---- Retrieves an authorization token
---- @param input table|nil The input table for the get_authorization_token command
+--- AWS ecr-public get-authorization-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorization_token(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "get-authorization-token" }, input)
 end
 
---- Retrieves catalog metadata for a public registry
---- @param input table|nil The input table for the get_registry_catalog_data command
+--- AWS ecr-public get-registry-catalog-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_registry_catalog_data(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "get-registry-catalog-data" }, input)
 end
 
---- Retrieve catalog metadata for a repository in a public registry
---- @param input table|nil The input table for the get_repository_catalog_data command
+--- AWS ecr-public get-repository-catalog-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_catalog_data(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "get-repository-catalog-data" }, input)
 end
 
---- Retrieves the repository policy for the specified repository
---- @param input table|nil The input table for the get_repository_policy command
+--- AWS ecr-public get-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "get-repository-policy" }, input)
 end
 
---- Notifies Amazon ECR that you intend to upload an image layer
---- @param input table|nil The input table for the initiate_layer_upload command
+--- AWS ecr-public help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ecr-public", "help" }, input)
+end
+
+--- AWS ecr-public initiate-layer-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.initiate_layer_upload(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "initiate-layer-upload" }, input)
 end
 
---- List the tags for an Amazon ECR Public resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS ecr-public list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "list-tags-for-resource" }, input)
 end
 
---- Creates or updates the image manifest and tags that are associated with an image
---- @param input table|nil The input table for the put_image command
+--- AWS ecr-public put-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "put-image" }, input)
 end
 
---- Create or update the catalog data for a public registry
---- @param input table|nil The input table for the put_registry_catalog_data command
+--- AWS ecr-public put-registry-catalog-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_registry_catalog_data(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "put-registry-catalog-data" }, input)
 end
 
---- Creates or updates the catalog data for a repository in a public registry
---- @param input table|nil The input table for the put_repository_catalog_data command
+--- AWS ecr-public put-repository-catalog-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_repository_catalog_data(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "put-repository-catalog-data" }, input)
 end
 
---- Applies a repository policy to the specified public repository to control access permissions
---- @param input table|nil The input table for the set_repository_policy command
+--- AWS ecr-public set-repository-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_repository_policy(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "set-repository-policy" }, input)
 end
 
---- Associates the specified tags to a resource with the specified resourceArn
---- @param input table|nil The input table for the tag_resource command
+--- AWS ecr-public tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "tag-resource" }, input)
 end
 
---- Deletes specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS ecr-public untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "untag-resource" }, input)
 end
 
---- Uploads an image layer part to Amazon ECR
---- @param input table|nil The input table for the upload_layer_part command
+--- AWS ecr-public upload-layer-part operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.upload_layer_part(input)
 	return common.execute_aws_command_with_input({ "ecr-public", "upload-layer-part" }, input)

@@ -6,162 +6,169 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SQS service functions
 local M = {}
 
---- Adds a permission to a queue for a specific principal
---- @param input table|nil The input table for the add_permission command
+--- AWS sqs add-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_permission(input)
 	return common.execute_aws_command_with_input({ "sqs", "add-permission" }, input)
 end
 
---- Cancels a specified message movement task
---- @param input table|nil The input table for the cancel_message_move_task command
+--- AWS sqs cancel-message-move-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_message_move_task(input)
 	return common.execute_aws_command_with_input({ "sqs", "cancel-message-move-task" }, input)
 end
 
---- Changes the visibility timeout of a specified message in a queue to a new value
---- @param input table|nil The input table for the change_message_visibility command
+--- AWS sqs change-message-visibility operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.change_message_visibility(input)
 	return common.execute_aws_command_with_input({ "sqs", "change-message-visibility" }, input)
 end
 
---- Changes the visibility timeout of multiple messages
---- @param input table|nil The input table for the change_message_visibility_batch command
+--- AWS sqs change-message-visibility-batch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.change_message_visibility_batch(input)
 	return common.execute_aws_command_with_input({ "sqs", "change-message-visibility-batch" }, input)
 end
 
---- Creates a new standard or FIFO queue
---- @param input table|nil The input table for the create_queue command
+--- AWS sqs create-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_queue(input)
 	return common.execute_aws_command_with_input({ "sqs", "create-queue" }, input)
 end
 
---- Deletes the specified message from the specified queue
---- @param input table|nil The input table for the delete_message command
+--- AWS sqs delete-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_message(input)
 	return common.execute_aws_command_with_input({ "sqs", "delete-message" }, input)
 end
 
---- Deletes up to ten messages from the specified queue
---- @param input table|nil The input table for the delete_message_batch command
+--- AWS sqs delete-message-batch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_message_batch(input)
 	return common.execute_aws_command_with_input({ "sqs", "delete-message-batch" }, input)
 end
 
---- Deletes the queue specified by the QueueUrl, regardless of the queue's contents
---- @param input table|nil The input table for the delete_queue command
+--- AWS sqs delete-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_queue(input)
 	return common.execute_aws_command_with_input({ "sqs", "delete-queue" }, input)
 end
 
---- Gets attributes for the specified queue
---- @param input table|nil The input table for the get_queue_attributes command
+--- AWS sqs get-queue-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_queue_attributes(input)
 	return common.execute_aws_command_with_input({ "sqs", "get-queue-attributes" }, input)
 end
 
---- The GetQueueUrl API returns the URL of an existing Amazon SQS queue
---- @param input table|nil The input table for the get_queue_url command
+--- AWS sqs get-queue-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_queue_url(input)
 	return common.execute_aws_command_with_input({ "sqs", "get-queue-url" }, input)
 end
 
---- Returns a list of your queues that have the RedrivePolicy queue attribute configured with a dead-letter queue
---- @param input table|nil The input table for the list_dead_letter_source_queues command
+--- AWS sqs help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "sqs", "help" }, input)
+end
+
+--- AWS sqs list-dead-letter-source-queues operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dead_letter_source_queues(input)
 	return common.execute_aws_command_with_input({ "sqs", "list-dead-letter-source-queues" }, input)
 end
 
---- Gets the most recent message movement tasks (up to 10) under a specific source queue
---- @param input table|nil The input table for the list_message_move_tasks command
+--- AWS sqs list-message-move-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_message_move_tasks(input)
 	return common.execute_aws_command_with_input({ "sqs", "list-message-move-tasks" }, input)
 end
 
---- List all cost allocation tags added to the specified Amazon SQS queue
---- @param input table|nil The input table for the list_queue_tags command
+--- AWS sqs list-queue-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queue_tags(input)
 	return common.execute_aws_command_with_input({ "sqs", "list-queue-tags" }, input)
 end
 
---- Returns a list of your queues in the current region
---- @param input table|nil The input table for the list_queues command
+--- AWS sqs list-queues operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queues(input)
 	return common.execute_aws_command_with_input({ "sqs", "list-queues" }, input)
 end
 
---- Deletes available messages in a queue (including in-flight messages) specified by the QueueURL parameter
---- @param input table|nil The input table for the purge_queue command
+--- AWS sqs purge-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purge_queue(input)
 	return common.execute_aws_command_with_input({ "sqs", "purge-queue" }, input)
 end
 
---- Retrieves one or more messages (up to 10), from the specified queue
---- @param input table|nil The input table for the receive_message command
+--- AWS sqs receive-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.receive_message(input)
 	return common.execute_aws_command_with_input({ "sqs", "receive-message" }, input)
 end
 
---- Revokes any permissions in the queue policy that matches the specified Label parameter
---- @param input table|nil The input table for the remove_permission command
+--- AWS sqs remove-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_permission(input)
 	return common.execute_aws_command_with_input({ "sqs", "remove-permission" }, input)
 end
 
---- Delivers a message to the specified queue
---- @param input table|nil The input table for the send_message command
+--- AWS sqs send-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_message(input)
 	return common.execute_aws_command_with_input({ "sqs", "send-message" }, input)
 end
 
---- You can use SendMessageBatch to send up to 10 messages to the specified queue by assigning either identical or different values to each message (or by not assigning values at all)
---- @param input table|nil The input table for the send_message_batch command
+--- AWS sqs send-message-batch operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_message_batch(input)
 	return common.execute_aws_command_with_input({ "sqs", "send-message-batch" }, input)
 end
 
---- Sets the value of one or more queue attributes, like a policy
---- @param input table|nil The input table for the set_queue_attributes command
+--- AWS sqs set-queue-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_queue_attributes(input)
 	return common.execute_aws_command_with_input({ "sqs", "set-queue-attributes" }, input)
 end
 
---- Starts an asynchronous task to move messages from a specified source queue to a specified destination queue
---- @param input table|nil The input table for the start_message_move_task command
+--- AWS sqs start-message-move-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_message_move_task(input)
 	return common.execute_aws_command_with_input({ "sqs", "start-message-move-task" }, input)
 end
 
---- Add cost allocation tags to the specified Amazon SQS queue
---- @param input table|nil The input table for the tag_queue command
+--- AWS sqs tag-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_queue(input)
 	return common.execute_aws_command_with_input({ "sqs", "tag-queue" }, input)
 end
 
---- Remove cost allocation tags from the specified Amazon SQS queue
---- @param input table|nil The input table for the untag_queue command
+--- AWS sqs untag-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_queue(input)
 	return common.execute_aws_command_with_input({ "sqs", "untag-queue" }, input)

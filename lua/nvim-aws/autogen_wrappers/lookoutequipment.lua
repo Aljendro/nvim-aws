@@ -6,344 +6,351 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LOOKOUTEQUIPMENT service functions
 local M = {}
 
---- Creates a container for a collection of data being ingested for analysis
---- @param input table|nil The input table for the create_dataset command
+--- AWS lookoutequipment create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-dataset" }, input)
 end
 
---- Creates a scheduled inference
---- @param input table|nil The input table for the create_inference_scheduler command
+--- AWS lookoutequipment create-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-inference-scheduler" }, input)
 end
 
---- Creates a label for an event
---- @param input table|nil The input table for the create_label command
+--- AWS lookoutequipment create-label operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_label(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-label" }, input)
 end
 
---- Creates a group of labels
---- @param input table|nil The input table for the create_label_group command
+--- AWS lookoutequipment create-label-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_label_group(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-label-group" }, input)
 end
 
---- Creates a machine learning model for data inference
---- @param input table|nil The input table for the create_model command
+--- AWS lookoutequipment create-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-model" }, input)
 end
 
---- Creates a retraining scheduler on the specified model
---- @param input table|nil The input table for the create_retraining_scheduler command
+--- AWS lookoutequipment create-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "create-retraining-scheduler" }, input)
 end
 
---- Deletes a dataset and associated artifacts
---- @param input table|nil The input table for the delete_dataset command
+--- AWS lookoutequipment delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-dataset" }, input)
 end
 
---- Deletes an inference scheduler that has been set up
---- @param input table|nil The input table for the delete_inference_scheduler command
+--- AWS lookoutequipment delete-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-inference-scheduler" }, input)
 end
 
---- Deletes a label
---- @param input table|nil The input table for the delete_label command
+--- AWS lookoutequipment delete-label operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_label(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-label" }, input)
 end
 
---- Deletes a group of labels
---- @param input table|nil The input table for the delete_label_group command
+--- AWS lookoutequipment delete-label-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_label_group(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-label-group" }, input)
 end
 
---- Deletes a machine learning model currently available for Amazon Lookout for Equipment
---- @param input table|nil The input table for the delete_model command
+--- AWS lookoutequipment delete-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_model(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-model" }, input)
 end
 
---- Deletes the resource policy attached to the resource
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS lookoutequipment delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-resource-policy" }, input)
 end
 
---- Deletes a retraining scheduler from a model
---- @param input table|nil The input table for the delete_retraining_scheduler command
+--- AWS lookoutequipment delete-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-retraining-scheduler" }, input)
 end
 
---- Provides information on a specific data ingestion job such as creation time, dataset ARN, and status
---- @param input table|nil The input table for the describe_data_ingestion_job command
+--- AWS lookoutequipment describe-data-ingestion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-data-ingestion-job" }, input)
 end
 
---- Provides a JSON description of the data in each time series dataset, including names, column names, and data types
---- @param input table|nil The input table for the describe_dataset command
+--- AWS lookoutequipment describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-dataset" }, input)
 end
 
---- Specifies information about the inference scheduler being used, including name, model, status, and associated metadata
---- @param input table|nil The input table for the describe_inference_scheduler command
+--- AWS lookoutequipment describe-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-inference-scheduler" }, input)
 end
 
---- Returns the name of the label
---- @param input table|nil The input table for the describe_label command
+--- AWS lookoutequipment describe-label operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_label(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-label" }, input)
 end
 
---- Returns information about the label group
---- @param input table|nil The input table for the describe_label_group command
+--- AWS lookoutequipment describe-label-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_label_group(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-label-group" }, input)
 end
 
---- Provides a JSON containing the overall information about a specific machine learning model, including model name and ARN, dataset, training and evaluation information, status, and so on
---- @param input table|nil The input table for the describe_model command
+--- AWS lookoutequipment describe-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_model(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-model" }, input)
 end
 
---- Retrieves information about a specific machine learning model version
---- @param input table|nil The input table for the describe_model_version command
+--- AWS lookoutequipment describe-model-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_model_version(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-model-version" }, input)
 end
 
---- Provides the details of a resource policy attached to a resource
---- @param input table|nil The input table for the describe_resource_policy command
+--- AWS lookoutequipment describe-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_resource_policy(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-resource-policy" }, input)
 end
 
---- Provides a description of the retraining scheduler, including information such as the model name and retraining parameters
---- @param input table|nil The input table for the describe_retraining_scheduler command
+--- AWS lookoutequipment describe-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-retraining-scheduler" }, input)
 end
 
---- Imports a dataset
---- @param input table|nil The input table for the import_dataset command
+--- AWS lookoutequipment help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "lookoutequipment", "help" }, input)
+end
+
+--- AWS lookoutequipment import-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "import-dataset" }, input)
 end
 
---- Imports a model that has been trained successfully
---- @param input table|nil The input table for the import_model_version command
+--- AWS lookoutequipment import-model-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_model_version(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "import-model-version" }, input)
 end
 
---- Provides a list of all data ingestion jobs, including dataset name and ARN, S3 location of the input data, status, and so on
---- @param input table|nil The input table for the list_data_ingestion_jobs command
+--- AWS lookoutequipment list-data-ingestion-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_ingestion_jobs(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-data-ingestion-jobs" }, input)
 end
 
---- Lists all datasets currently available in your account, filtering on the dataset name
---- @param input table|nil The input table for the list_datasets command
+--- AWS lookoutequipment list-datasets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datasets(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-datasets" }, input)
 end
 
---- Lists all inference events that have been found for the specified inference scheduler
---- @param input table|nil The input table for the list_inference_events command
+--- AWS lookoutequipment list-inference-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_inference_events(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-events" }, input)
 end
 
---- Lists all inference executions that have been performed by the specified inference scheduler
---- @param input table|nil The input table for the list_inference_executions command
+--- AWS lookoutequipment list-inference-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_inference_executions(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-executions" }, input)
 end
 
---- Retrieves a list of all inference schedulers currently available for your account
---- @param input table|nil The input table for the list_inference_schedulers command
+--- AWS lookoutequipment list-inference-schedulers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_inference_schedulers(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-schedulers" }, input)
 end
 
---- Returns a list of the label groups
---- @param input table|nil The input table for the list_label_groups command
+--- AWS lookoutequipment list-label-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_label_groups(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-label-groups" }, input)
 end
 
---- Provides a list of labels
---- @param input table|nil The input table for the list_labels command
+--- AWS lookoutequipment list-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_labels(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-labels" }, input)
 end
 
---- Generates a list of all model versions for a given model, including the model version, model version ARN, and status
---- @param input table|nil The input table for the list_model_versions command
+--- AWS lookoutequipment list-model-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_versions(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-model-versions" }, input)
 end
 
---- Generates a list of all models in the account, including model name and ARN, dataset, and status
---- @param input table|nil The input table for the list_models command
+--- AWS lookoutequipment list-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_models(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-models" }, input)
 end
 
---- Lists all retraining schedulers in your account, filtering by model name prefix and status
---- @param input table|nil The input table for the list_retraining_schedulers command
+--- AWS lookoutequipment list-retraining-schedulers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_retraining_schedulers(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-retraining-schedulers" }, input)
 end
 
---- Lists statistics about the data collected for each of the sensors that have been successfully ingested in the particular dataset
---- @param input table|nil The input table for the list_sensor_statistics command
+--- AWS lookoutequipment list-sensor-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sensor_statistics(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-sensor-statistics" }, input)
 end
 
---- Lists all the tags for a specified resource, including key and value
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS lookoutequipment list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "list-tags-for-resource" }, input)
 end
 
---- Creates a resource control policy for a given resource
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS lookoutequipment put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "put-resource-policy" }, input)
 end
 
---- Starts a data ingestion job
---- @param input table|nil The input table for the start_data_ingestion_job command
+--- AWS lookoutequipment start-data-ingestion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_data_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "start-data-ingestion-job" }, input)
 end
 
---- Starts an inference scheduler
---- @param input table|nil The input table for the start_inference_scheduler command
+--- AWS lookoutequipment start-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "start-inference-scheduler" }, input)
 end
 
---- Starts a retraining scheduler
---- @param input table|nil The input table for the start_retraining_scheduler command
+--- AWS lookoutequipment start-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "start-retraining-scheduler" }, input)
 end
 
---- Stops an inference scheduler
---- @param input table|nil The input table for the stop_inference_scheduler command
+--- AWS lookoutequipment stop-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "stop-inference-scheduler" }, input)
 end
 
---- Stops a retraining scheduler
---- @param input table|nil The input table for the stop_retraining_scheduler command
+--- AWS lookoutequipment stop-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "stop-retraining-scheduler" }, input)
 end
 
---- Associates a given tag to a resource in your account
---- @param input table|nil The input table for the tag_resource command
+--- AWS lookoutequipment tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "tag-resource" }, input)
 end
 
---- Removes a specific tag from a given resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS lookoutequipment untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "untag-resource" }, input)
 end
 
---- Sets the active model version for a given machine learning model
---- @param input table|nil The input table for the update_active_model_version command
+--- AWS lookoutequipment update-active-model-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_active_model_version(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "update-active-model-version" }, input)
 end
 
---- Updates an inference scheduler
---- @param input table|nil The input table for the update_inference_scheduler command
+--- AWS lookoutequipment update-inference-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_inference_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "update-inference-scheduler" }, input)
 end
 
---- Updates the label group
---- @param input table|nil The input table for the update_label_group command
+--- AWS lookoutequipment update-label-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_label_group(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "update-label-group" }, input)
 end
 
---- Updates a model in the account
---- @param input table|nil The input table for the update_model command
+--- AWS lookoutequipment update-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_model(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "update-model" }, input)
 end
 
---- Updates a retraining scheduler
---- @param input table|nil The input table for the update_retraining_scheduler command
+--- AWS lookoutequipment update-retraining-scheduler operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_retraining_scheduler(input)
 	return common.execute_aws_command_with_input({ "lookoutequipment", "update-retraining-scheduler" }, input)

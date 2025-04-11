@@ -15,28 +15,13 @@ describe("AWS bedrock-runtime service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with converse_stream", function()
-		local result = service.converse_stream()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_async_invoke", function()
 		local result = service.get_async_invoke()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with invoke_model", function()
-		local result = service.invoke_model()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with invoke_model_with_bidirectional_stream", function()
-		local result = service.invoke_model_with_bidirectional_stream()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with invoke_model_with_response_stream", function()
-		local result = service.invoke_model_with_response_stream()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

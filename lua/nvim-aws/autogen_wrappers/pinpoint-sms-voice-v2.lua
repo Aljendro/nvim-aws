@@ -6,631 +6,638 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PINPOINT-SMS-VOICE-V2 service functions
 local M = {}
 
---- Associates the specified origination identity with a pool
---- @param input table|nil The input table for the associate_origination_identity command
+--- AWS pinpoint-sms-voice-v2 associate-origination-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_origination_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "associate-origination-identity" }, input)
 end
 
---- Associate a protect configuration with a configuration set
---- @param input table|nil The input table for the associate_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 associate-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "associate-protect-configuration" }, input)
 end
 
---- Creates a new configuration set
---- @param input table|nil The input table for the create_configuration_set command
+--- AWS pinpoint-sms-voice-v2 create-configuration-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-configuration-set" }, input)
 end
 
---- Creates a new event destination in a configuration set
---- @param input table|nil The input table for the create_event_destination command
+--- AWS pinpoint-sms-voice-v2 create-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-event-destination" }, input)
 end
 
---- Creates a new opt-out list
---- @param input table|nil The input table for the create_opt_out_list command
+--- AWS pinpoint-sms-voice-v2 create-opt-out-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_opt_out_list(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-opt-out-list" }, input)
 end
 
---- Creates a new pool and associates the specified origination identity to the pool
---- @param input table|nil The input table for the create_pool command
+--- AWS pinpoint-sms-voice-v2 create-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-pool" }, input)
 end
 
---- Create a new protect configuration
---- @param input table|nil The input table for the create_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 create-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-protect-configuration" }, input)
 end
 
---- Creates a new registration based on the RegistrationType field
---- @param input table|nil The input table for the create_registration command
+--- AWS pinpoint-sms-voice-v2 create-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration" }, input)
 end
 
---- Associate the registration with an origination identity such as a phone number or sender ID
---- @param input table|nil The input table for the create_registration_association command
+--- AWS pinpoint-sms-voice-v2 create-registration-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registration_association(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-association" }, input)
 end
 
---- Create a new registration attachment to use for uploading a file or a URL to a file
---- @param input table|nil The input table for the create_registration_attachment command
+--- AWS pinpoint-sms-voice-v2 create-registration-attachment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registration_attachment(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-attachment" }, input)
 end
 
---- Create a new version of the registration and increase the VersionNumber
---- @param input table|nil The input table for the create_registration_version command
+--- AWS pinpoint-sms-voice-v2 create-registration-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registration_version(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-version" }, input)
 end
 
---- You can only send messages to verified destination numbers when your account is in the sandbox
---- @param input table|nil The input table for the create_verified_destination_number command
+--- AWS pinpoint-sms-voice-v2 create-verified-destination-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_verified_destination_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-verified-destination-number" }, input)
 end
 
---- Removes the current account default protect configuration
---- @param input table|nil The input table for the delete_account_default_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 delete-account-default-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account_default_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-account-default-protect-configuration" }, input)
 end
 
---- Deletes an existing configuration set
---- @param input table|nil The input table for the delete_configuration_set command
+--- AWS pinpoint-sms-voice-v2 delete-configuration-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-configuration-set" }, input)
 end
 
---- Deletes an existing default message type on a configuration set
---- @param input table|nil The input table for the delete_default_message_type command
+--- AWS pinpoint-sms-voice-v2 delete-default-message-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_default_message_type(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-default-message-type" }, input)
 end
 
---- Deletes an existing default sender ID on a configuration set
---- @param input table|nil The input table for the delete_default_sender_id command
+--- AWS pinpoint-sms-voice-v2 delete-default-sender-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_default_sender_id(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-default-sender-id" }, input)
 end
 
---- Deletes an existing event destination
---- @param input table|nil The input table for the delete_event_destination command
+--- AWS pinpoint-sms-voice-v2 delete-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-event-destination" }, input)
 end
 
---- Deletes an existing keyword from an origination phone number or pool
---- @param input table|nil The input table for the delete_keyword command
+--- AWS pinpoint-sms-voice-v2 delete-keyword operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_keyword(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-keyword" }, input)
 end
 
---- Deletes an account-level monthly spending limit override for sending multimedia messages (MMS)
---- @param input table|nil The input table for the delete_media_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 delete-media-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_media_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-media-message-spend-limit-override" }, input)
 end
 
---- Deletes an existing opt-out list
---- @param input table|nil The input table for the delete_opt_out_list command
+--- AWS pinpoint-sms-voice-v2 delete-opt-out-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_opt_out_list(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-opt-out-list" }, input)
 end
 
---- Deletes an existing opted out destination phone number from the specified opt-out list
---- @param input table|nil The input table for the delete_opted_out_number command
+--- AWS pinpoint-sms-voice-v2 delete-opted-out-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_opted_out_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-opted-out-number" }, input)
 end
 
---- Deletes an existing pool
---- @param input table|nil The input table for the delete_pool command
+--- AWS pinpoint-sms-voice-v2 delete-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-pool" }, input)
 end
 
---- Permanently delete the protect configuration
---- @param input table|nil The input table for the delete_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 delete-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-protect-configuration" }, input)
 end
 
---- Permanently delete the protect configuration rule set number override
---- @param input table|nil The input table for the delete_protect_configuration_rule_set_number_override command
+--- AWS pinpoint-sms-voice-v2 delete-protect-configuration-rule-set-number-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_protect_configuration_rule_set_number_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-protect-configuration-rule-set-number-override" }, input)
 end
 
---- Permanently delete an existing registration from your account
---- @param input table|nil The input table for the delete_registration command
+--- AWS pinpoint-sms-voice-v2 delete-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration" }, input)
 end
 
---- Permanently delete the specified registration attachment
---- @param input table|nil The input table for the delete_registration_attachment command
+--- AWS pinpoint-sms-voice-v2 delete-registration-attachment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registration_attachment(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration-attachment" }, input)
 end
 
---- Delete the value in a registration form field
---- @param input table|nil The input table for the delete_registration_field_value command
+--- AWS pinpoint-sms-voice-v2 delete-registration-field-value operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registration_field_value(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration-field-value" }, input)
 end
 
---- Deletes the resource-based policy document attached to the AWS End User Messaging SMS and Voice resource
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS pinpoint-sms-voice-v2 delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-resource-policy" }, input)
 end
 
---- Deletes an account-level monthly spending limit override for sending text messages
---- @param input table|nil The input table for the delete_text_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 delete-text-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_text_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-text-message-spend-limit-override" }, input)
 end
 
---- Delete a verified destination phone number
---- @param input table|nil The input table for the delete_verified_destination_number command
+--- AWS pinpoint-sms-voice-v2 delete-verified-destination-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_verified_destination_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-verified-destination-number" }, input)
 end
 
---- Deletes an account level monthly spend limit override for sending voice messages
---- @param input table|nil The input table for the delete_voice_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 delete-voice-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_voice_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-voice-message-spend-limit-override" }, input)
 end
 
---- Describes attributes of your Amazon Web Services account
---- @param input table|nil The input table for the describe_account_attributes command
+--- AWS pinpoint-sms-voice-v2 describe-account-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-account-attributes" }, input)
 end
 
---- Describes the current AWS End User Messaging SMS and Voice SMS Voice V2 resource quotas for your account
---- @param input table|nil The input table for the describe_account_limits command
+--- AWS pinpoint-sms-voice-v2 describe-account-limits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_limits(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-account-limits" }, input)
 end
 
---- Describes the specified configuration sets or all in your account
---- @param input table|nil The input table for the describe_configuration_sets command
+--- AWS pinpoint-sms-voice-v2 describe-configuration-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_configuration_sets(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-configuration-sets" }, input)
 end
 
---- Describes the specified keywords or all keywords on your origination phone number or pool
---- @param input table|nil The input table for the describe_keywords command
+--- AWS pinpoint-sms-voice-v2 describe-keywords operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_keywords(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-keywords" }, input)
 end
 
---- Describes the specified opt-out list or all opt-out lists in your account
---- @param input table|nil The input table for the describe_opt_out_lists command
+--- AWS pinpoint-sms-voice-v2 describe-opt-out-lists operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_opt_out_lists(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-opt-out-lists" }, input)
 end
 
---- Describes the specified opted out destination numbers or all opted out destination numbers in an opt-out list
---- @param input table|nil The input table for the describe_opted_out_numbers command
+--- AWS pinpoint-sms-voice-v2 describe-opted-out-numbers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_opted_out_numbers(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-opted-out-numbers" }, input)
 end
 
---- Describes the specified origination phone number, or all the phone numbers in your account
---- @param input table|nil The input table for the describe_phone_numbers command
+--- AWS pinpoint-sms-voice-v2 describe-phone-numbers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_phone_numbers(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-phone-numbers" }, input)
 end
 
---- Retrieves the specified pools or all pools associated with your Amazon Web Services account
---- @param input table|nil The input table for the describe_pools command
+--- AWS pinpoint-sms-voice-v2 describe-pools operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pools(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-pools" }, input)
 end
 
---- Retrieves the protect configurations that match any of filters
---- @param input table|nil The input table for the describe_protect_configurations command
+--- AWS pinpoint-sms-voice-v2 describe-protect-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_protect_configurations(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-protect-configurations" }, input)
 end
 
---- Retrieves the specified registration attachments or all registration attachments associated with your Amazon Web Services account
---- @param input table|nil The input table for the describe_registration_attachments command
+--- AWS pinpoint-sms-voice-v2 describe-registration-attachments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_attachments(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-attachments" }, input)
 end
 
---- Retrieves the specified registration type field definitions
---- @param input table|nil The input table for the describe_registration_field_definitions command
+--- AWS pinpoint-sms-voice-v2 describe-registration-field-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_field_definitions(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-field-definitions" }, input)
 end
 
---- Retrieves the specified registration field values
---- @param input table|nil The input table for the describe_registration_field_values command
+--- AWS pinpoint-sms-voice-v2 describe-registration-field-values operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_field_values(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-field-values" }, input)
 end
 
---- Retrieves the specified registration section definitions
---- @param input table|nil The input table for the describe_registration_section_definitions command
+--- AWS pinpoint-sms-voice-v2 describe-registration-section-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_section_definitions(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-section-definitions" }, input)
 end
 
---- Retrieves the specified registration type definitions
---- @param input table|nil The input table for the describe_registration_type_definitions command
+--- AWS pinpoint-sms-voice-v2 describe-registration-type-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_type_definitions(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-type-definitions" }, input)
 end
 
---- Retrieves the specified registration version
---- @param input table|nil The input table for the describe_registration_versions command
+--- AWS pinpoint-sms-voice-v2 describe-registration-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registration_versions(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-versions" }, input)
 end
 
---- Retrieves the specified registrations
---- @param input table|nil The input table for the describe_registrations command
+--- AWS pinpoint-sms-voice-v2 describe-registrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registrations(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registrations" }, input)
 end
 
---- Describes the specified SenderIds or all SenderIds associated with your Amazon Web Services account
---- @param input table|nil The input table for the describe_sender_ids command
+--- AWS pinpoint-sms-voice-v2 describe-sender-ids operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_sender_ids(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-sender-ids" }, input)
 end
 
---- Describes the current monthly spend limits for sending voice and text messages
---- @param input table|nil The input table for the describe_spend_limits command
+--- AWS pinpoint-sms-voice-v2 describe-spend-limits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_spend_limits(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-spend-limits" }, input)
 end
 
---- Retrieves the specified verified destination numbers
---- @param input table|nil The input table for the describe_verified_destination_numbers command
+--- AWS pinpoint-sms-voice-v2 describe-verified-destination-numbers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_verified_destination_numbers(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-verified-destination-numbers" }, input)
 end
 
---- Removes the specified origination identity from an existing pool
---- @param input table|nil The input table for the disassociate_origination_identity command
+--- AWS pinpoint-sms-voice-v2 disassociate-origination-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_origination_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "disassociate-origination-identity" }, input)
 end
 
---- Disassociate a protect configuration from a configuration set
---- @param input table|nil The input table for the disassociate_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 disassociate-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "disassociate-protect-configuration" }, input)
 end
 
---- Discard the current version of the registration
---- @param input table|nil The input table for the discard_registration_version command
+--- AWS pinpoint-sms-voice-v2 discard-registration-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.discard_registration_version(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "discard-registration-version" }, input)
 end
 
---- Retrieve the CountryRuleSet for the specified NumberCapability from a protect configuration
---- @param input table|nil The input table for the get_protect_configuration_country_rule_set command
+--- AWS pinpoint-sms-voice-v2 get-protect-configuration-country-rule-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_protect_configuration_country_rule_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "get-protect-configuration-country-rule-set" }, input)
 end
 
---- Retrieves the JSON text of the resource-based policy document attached to the AWS End User Messaging SMS and Voice resource
---- @param input table|nil The input table for the get_resource_policy command
+--- AWS pinpoint-sms-voice-v2 get-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "get-resource-policy" }, input)
 end
 
---- Lists all associated origination identities in your pool
---- @param input table|nil The input table for the list_pool_origination_identities command
+--- AWS pinpoint-sms-voice-v2 help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "help" }, input)
+end
+
+--- AWS pinpoint-sms-voice-v2 list-pool-origination-identities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pool_origination_identities(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-pool-origination-identities" }, input)
 end
 
---- Retrieve all of the protect configuration rule set number overrides that match the filters
---- @param input table|nil The input table for the list_protect_configuration_rule_set_number_overrides command
+--- AWS pinpoint-sms-voice-v2 list-protect-configuration-rule-set-number-overrides operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protect_configuration_rule_set_number_overrides(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-protect-configuration-rule-set-number-overrides" }, input)
 end
 
---- Retrieve all of the origination identities that are associated with a registration
---- @param input table|nil The input table for the list_registration_associations command
+--- AWS pinpoint-sms-voice-v2 list-registration-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_registration_associations(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-registration-associations" }, input)
 end
 
---- List all tags associated with a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS pinpoint-sms-voice-v2 list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-tags-for-resource" }, input)
 end
 
---- Creates or updates a keyword configuration on an origination phone number or pool
---- @param input table|nil The input table for the put_keyword command
+--- AWS pinpoint-sms-voice-v2 put-keyword operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_keyword(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-keyword" }, input)
 end
 
---- Set the MessageFeedbackStatus as RECEIVED or FAILED for the passed in MessageId
---- @param input table|nil The input table for the put_message_feedback command
+--- AWS pinpoint-sms-voice-v2 put-message-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_message_feedback(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-message-feedback" }, input)
 end
 
---- Creates an opted out destination phone number in the opt-out list
---- @param input table|nil The input table for the put_opted_out_number command
+--- AWS pinpoint-sms-voice-v2 put-opted-out-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_opted_out_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-opted-out-number" }, input)
 end
 
---- Create or update a RuleSetNumberOverride and associate it with a protect configuration
---- @param input table|nil The input table for the put_protect_configuration_rule_set_number_override command
+--- AWS pinpoint-sms-voice-v2 put-protect-configuration-rule-set-number-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_protect_configuration_rule_set_number_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-protect-configuration-rule-set-number-override" }, input)
 end
 
---- Creates or updates a field value for a registration
---- @param input table|nil The input table for the put_registration_field_value command
+--- AWS pinpoint-sms-voice-v2 put-registration-field-value operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_registration_field_value(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-registration-field-value" }, input)
 end
 
---- Attaches a resource-based policy to a AWS End User Messaging SMS and Voice resource(phone number, sender Id, phone poll, or opt-out list) that is used for sharing the resource
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS pinpoint-sms-voice-v2 put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-resource-policy" }, input)
 end
 
---- Releases an existing origination phone number in your account
---- @param input table|nil The input table for the release_phone_number command
+--- AWS pinpoint-sms-voice-v2 release-phone-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.release_phone_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "release-phone-number" }, input)
 end
 
---- Releases an existing sender ID in your account
---- @param input table|nil The input table for the release_sender_id command
+--- AWS pinpoint-sms-voice-v2 release-sender-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.release_sender_id(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "release-sender-id" }, input)
 end
 
---- Request an origination phone number for use in your account
---- @param input table|nil The input table for the request_phone_number command
+--- AWS pinpoint-sms-voice-v2 request-phone-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.request_phone_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "request-phone-number" }, input)
 end
 
---- Request a new sender ID that doesn't require registration
---- @param input table|nil The input table for the request_sender_id command
+--- AWS pinpoint-sms-voice-v2 request-sender-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.request_sender_id(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "request-sender-id" }, input)
 end
 
---- Before you can send test messages to a verified destination phone number you need to opt-in the verified destination phone number
---- @param input table|nil The input table for the send_destination_number_verification_code command
+--- AWS pinpoint-sms-voice-v2 send-destination-number-verification-code operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_destination_number_verification_code(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-destination-number-verification-code" }, input)
 end
 
---- Creates a new multimedia message (MMS) and sends it to a recipient's phone number
---- @param input table|nil The input table for the send_media_message command
+--- AWS pinpoint-sms-voice-v2 send-media-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_media_message(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-media-message" }, input)
 end
 
---- Creates a new text message and sends it to a recipient's phone number
---- @param input table|nil The input table for the send_text_message command
+--- AWS pinpoint-sms-voice-v2 send-text-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_text_message(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-text-message" }, input)
 end
 
---- Allows you to send a request that sends a voice message
---- @param input table|nil The input table for the send_voice_message command
+--- AWS pinpoint-sms-voice-v2 send-voice-message operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_voice_message(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-voice-message" }, input)
 end
 
---- Set a protect configuration as your account default
---- @param input table|nil The input table for the set_account_default_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 set-account-default-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_account_default_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-account-default-protect-configuration" }, input)
 end
 
---- Sets a configuration set's default for message feedback
---- @param input table|nil The input table for the set_default_message_feedback_enabled command
+--- AWS pinpoint-sms-voice-v2 set-default-message-feedback-enabled operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_default_message_feedback_enabled(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-message-feedback-enabled" }, input)
 end
 
---- Sets the default message type on a configuration set
---- @param input table|nil The input table for the set_default_message_type command
+--- AWS pinpoint-sms-voice-v2 set-default-message-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_default_message_type(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-message-type" }, input)
 end
 
---- Sets default sender ID on a configuration set
---- @param input table|nil The input table for the set_default_sender_id command
+--- AWS pinpoint-sms-voice-v2 set-default-sender-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_default_sender_id(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-sender-id" }, input)
 end
 
---- Sets an account level monthly spend limit override for sending MMS messages
---- @param input table|nil The input table for the set_media_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 set-media-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_media_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-media-message-spend-limit-override" }, input)
 end
 
---- Sets an account level monthly spend limit override for sending text messages
---- @param input table|nil The input table for the set_text_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 set-text-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_text_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-text-message-spend-limit-override" }, input)
 end
 
---- Sets an account level monthly spend limit override for sending voice messages
---- @param input table|nil The input table for the set_voice_message_spend_limit_override command
+--- AWS pinpoint-sms-voice-v2 set-voice-message-spend-limit-override operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_voice_message_spend_limit_override(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-voice-message-spend-limit-override" }, input)
 end
 
---- Submit the specified registration for review and approval
---- @param input table|nil The input table for the submit_registration_version command
+--- AWS pinpoint-sms-voice-v2 submit-registration-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.submit_registration_version(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "submit-registration-version" }, input)
 end
 
---- Adds or overwrites only the specified tags for the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS pinpoint-sms-voice-v2 tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "tag-resource" }, input)
 end
 
---- Removes the association of the specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS pinpoint-sms-voice-v2 untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "untag-resource" }, input)
 end
 
---- Updates an existing event destination in a configuration set
---- @param input table|nil The input table for the update_event_destination command
+--- AWS pinpoint-sms-voice-v2 update-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-event-destination" }, input)
 end
 
---- Updates the configuration of an existing origination phone number
---- @param input table|nil The input table for the update_phone_number command
+--- AWS pinpoint-sms-voice-v2 update-phone-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_phone_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-phone-number" }, input)
 end
 
---- Updates the configuration of an existing pool
---- @param input table|nil The input table for the update_pool command
+--- AWS pinpoint-sms-voice-v2 update-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-pool" }, input)
 end
 
---- Update the setting for an existing protect configuration
---- @param input table|nil The input table for the update_protect_configuration command
+--- AWS pinpoint-sms-voice-v2 update-protect-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_protect_configuration(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-protect-configuration" }, input)
 end
 
---- Update a country rule set to ALLOW or BLOCK messages to be sent to the specified destination counties
---- @param input table|nil The input table for the update_protect_configuration_country_rule_set command
+--- AWS pinpoint-sms-voice-v2 update-protect-configuration-country-rule-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_protect_configuration_country_rule_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-protect-configuration-country-rule-set" }, input)
 end
 
---- Updates the configuration of an existing sender ID
---- @param input table|nil The input table for the update_sender_id command
+--- AWS pinpoint-sms-voice-v2 update-sender-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sender_id(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-sender-id" }, input)
 end
 
---- Use the verification code that was received by the verified destination phone number to opt-in the verified destination phone number to receive more messages
---- @param input table|nil The input table for the verify_destination_number command
+--- AWS pinpoint-sms-voice-v2 verify-destination-number operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_destination_number(input)
 	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "verify-destination-number" }, input)

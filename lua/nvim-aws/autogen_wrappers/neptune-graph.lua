@@ -6,225 +6,225 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS NEPTUNE-GRAPH service functions
 local M = {}
 
---- Cancel the specified export task
---- @param input table|nil The input table for the cancel_export_task command
+--- AWS neptune-graph cancel-export-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_export_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "cancel-export-task" }, input)
 end
 
---- Deletes the specified import task
---- @param input table|nil The input table for the cancel_import_task command
+--- AWS neptune-graph cancel-import-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_import_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "cancel-import-task" }, input)
 end
 
---- Cancels a specified query
---- @param input table|nil The input table for the cancel_query command
+--- AWS neptune-graph cancel-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_query(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "cancel-query" }, input)
 end
 
---- Creates a new Neptune Analytics graph
---- @param input table|nil The input table for the create_graph command
+--- AWS neptune-graph create-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_graph(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "create-graph" }, input)
 end
 
---- Creates a snapshot of the specific graph
---- @param input table|nil The input table for the create_graph_snapshot command
+--- AWS neptune-graph create-graph-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_graph_snapshot(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "create-graph-snapshot" }, input)
 end
 
---- Creates a new Neptune Analytics graph and imports data into it, either from Amazon Simple Storage Service (S3) or from a Neptune database or a Neptune database snapshot
---- @param input table|nil The input table for the create_graph_using_import_task command
+--- AWS neptune-graph create-graph-using-import-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_graph_using_import_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "create-graph-using-import-task" }, input)
 end
 
---- Create a private graph endpoint to allow private access from to the graph from within a VPC
---- @param input table|nil The input table for the create_private_graph_endpoint command
+--- AWS neptune-graph create-private-graph-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_private_graph_endpoint(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "create-private-graph-endpoint" }, input)
 end
 
---- Deletes the specified graph
---- @param input table|nil The input table for the delete_graph command
+--- AWS neptune-graph delete-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_graph(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "delete-graph" }, input)
 end
 
---- Deletes the specifed graph snapshot
---- @param input table|nil The input table for the delete_graph_snapshot command
+--- AWS neptune-graph delete-graph-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_graph_snapshot(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "delete-graph-snapshot" }, input)
 end
 
---- Deletes a private graph endpoint
---- @param input table|nil The input table for the delete_private_graph_endpoint command
+--- AWS neptune-graph delete-private-graph-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_private_graph_endpoint(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "delete-private-graph-endpoint" }, input)
 end
 
---- Execute an openCypher query
---- @param input table|nil The input table for the execute_query command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.execute_query(input)
-	return common.execute_aws_command_with_input({ "neptune-graph", "execute-query" }, input)
-end
-
---- Retrieves a specified export task
---- @param input table|nil The input table for the get_export_task command
+--- AWS neptune-graph get-export-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_export_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-export-task" }, input)
 end
 
---- Gets information about a specified graph
---- @param input table|nil The input table for the get_graph command
+--- AWS neptune-graph get-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_graph(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-graph" }, input)
 end
 
---- Retrieves a specified graph snapshot
---- @param input table|nil The input table for the get_graph_snapshot command
+--- AWS neptune-graph get-graph-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_graph_snapshot(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-graph-snapshot" }, input)
 end
 
---- Gets a graph summary for a property graph
---- @param input table|nil The input table for the get_graph_summary command
+--- AWS neptune-graph get-graph-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_graph_summary(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-graph-summary" }, input)
 end
 
---- Retrieves a specified import task
---- @param input table|nil The input table for the get_import_task command
+--- AWS neptune-graph get-import-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_import_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-import-task" }, input)
 end
 
---- Retrieves information about a specified private endpoint
---- @param input table|nil The input table for the get_private_graph_endpoint command
+--- AWS neptune-graph get-private-graph-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_private_graph_endpoint(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-private-graph-endpoint" }, input)
 end
 
---- Retrieves the status of a specified query
---- @param input table|nil The input table for the get_query command
+--- AWS neptune-graph get-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "get-query" }, input)
 end
 
---- Retrieves a list of export tasks
---- @param input table|nil The input table for the list_export_tasks command
+--- AWS neptune-graph help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "neptune-graph", "help" }, input)
+end
+
+--- AWS neptune-graph list-export-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_export_tasks(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-export-tasks" }, input)
 end
 
---- Lists available snapshots of a specified Neptune Analytics graph
---- @param input table|nil The input table for the list_graph_snapshots command
+--- AWS neptune-graph list-graph-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_graph_snapshots(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-graph-snapshots" }, input)
 end
 
---- Lists available Neptune Analytics graphs
---- @param input table|nil The input table for the list_graphs command
+--- AWS neptune-graph list-graphs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_graphs(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-graphs" }, input)
 end
 
---- Lists import tasks
---- @param input table|nil The input table for the list_import_tasks command
+--- AWS neptune-graph list-import-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_import_tasks(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-import-tasks" }, input)
 end
 
---- Lists private endpoints for a specified Neptune Analytics graph
---- @param input table|nil The input table for the list_private_graph_endpoints command
+--- AWS neptune-graph list-private-graph-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_private_graph_endpoints(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-private-graph-endpoints" }, input)
 end
 
---- Lists active openCypher queries
---- @param input table|nil The input table for the list_queries command
+--- AWS neptune-graph list-queries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_queries(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-queries" }, input)
 end
 
---- Lists tags associated with a specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS neptune-graph list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "list-tags-for-resource" }, input)
 end
 
---- Empties the data from a specified Neptune Analytics graph
---- @param input table|nil The input table for the reset_graph command
+--- AWS neptune-graph reset-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_graph(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "reset-graph" }, input)
 end
 
---- Restores a graph from a snapshot
---- @param input table|nil The input table for the restore_graph_from_snapshot command
+--- AWS neptune-graph restore-graph-from-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_graph_from_snapshot(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "restore-graph-from-snapshot" }, input)
 end
 
---- Export data from an existing Neptune Analytics graph to Amazon S3
---- @param input table|nil The input table for the start_export_task command
+--- AWS neptune-graph start-export-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_export_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "start-export-task" }, input)
 end
 
---- Import data into existing Neptune Analytics graph from Amazon Simple Storage Service (S3)
---- @param input table|nil The input table for the start_import_task command
+--- AWS neptune-graph start-import-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_import_task(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "start-import-task" }, input)
 end
 
---- Adds tags to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS neptune-graph tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS neptune-graph untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "untag-resource" }, input)
 end
 
---- Updates the configuration of a specified Neptune Analytics graph
---- @param input table|nil The input table for the update_graph command
+--- AWS neptune-graph update-graph operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_graph(input)
 	return common.execute_aws_command_with_input({ "neptune-graph", "update-graph" }, input)

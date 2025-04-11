@@ -6,225 +6,232 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ROUTE53-RECOVERY-READINESS service functions
 local M = {}
 
---- Creates a cell in an account
---- @param input table|nil The input table for the create_cell command
+--- AWS route53-recovery-readiness create-cell operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cell(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-cell" }, input)
 end
 
---- Creates a cross-account readiness authorization
---- @param input table|nil The input table for the create_cross_account_authorization command
+--- AWS route53-recovery-readiness create-cross-account-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cross_account_authorization(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-cross-account-authorization" }, input)
 end
 
---- Creates a readiness check in an account
---- @param input table|nil The input table for the create_readiness_check command
+--- AWS route53-recovery-readiness create-readiness-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_readiness_check(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-readiness-check" }, input)
 end
 
---- Creates a recovery group in an account
---- @param input table|nil The input table for the create_recovery_group command
+--- AWS route53-recovery-readiness create-recovery-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_recovery_group(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-recovery-group" }, input)
 end
 
---- Creates a resource set
---- @param input table|nil The input table for the create_resource_set command
+--- AWS route53-recovery-readiness create-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_resource_set(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-resource-set" }, input)
 end
 
---- Delete a cell
---- @param input table|nil The input table for the delete_cell command
+--- AWS route53-recovery-readiness delete-cell operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cell(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-cell" }, input)
 end
 
---- Deletes cross account readiness authorization
---- @param input table|nil The input table for the delete_cross_account_authorization command
+--- AWS route53-recovery-readiness delete-cross-account-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cross_account_authorization(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-cross-account-authorization" }, input)
 end
 
---- Deletes a readiness check
---- @param input table|nil The input table for the delete_readiness_check command
+--- AWS route53-recovery-readiness delete-readiness-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_readiness_check(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-readiness-check" }, input)
 end
 
---- Deletes a recovery group
---- @param input table|nil The input table for the delete_recovery_group command
+--- AWS route53-recovery-readiness delete-recovery-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_recovery_group(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-recovery-group" }, input)
 end
 
---- Deletes a resource set
---- @param input table|nil The input table for the delete_resource_set command
+--- AWS route53-recovery-readiness delete-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_set(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-resource-set" }, input)
 end
 
---- Gets recommendations about architecture designs for improving resiliency for an application, based on a recovery group
---- @param input table|nil The input table for the get_architecture_recommendations command
+--- AWS route53-recovery-readiness get-architecture-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_architecture_recommendations(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-architecture-recommendations" }, input)
 end
 
---- Gets information about a cell including cell name, cell Amazon Resource Name (ARN), ARNs of nested cells for this cell, and a list of those cell ARNs with their associated recovery group ARNs
---- @param input table|nil The input table for the get_cell command
+--- AWS route53-recovery-readiness get-cell operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cell(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-cell" }, input)
 end
 
---- Gets readiness for a cell
---- @param input table|nil The input table for the get_cell_readiness_summary command
+--- AWS route53-recovery-readiness get-cell-readiness-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cell_readiness_summary(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-cell-readiness-summary" }, input)
 end
 
---- Gets details about a readiness check
---- @param input table|nil The input table for the get_readiness_check command
+--- AWS route53-recovery-readiness get-readiness-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_readiness_check(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check" }, input)
 end
 
---- Gets individual readiness status for a readiness check
---- @param input table|nil The input table for the get_readiness_check_resource_status command
+--- AWS route53-recovery-readiness get-readiness-check-resource-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_readiness_check_resource_status(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check-resource-status" }, input)
 end
 
---- Gets the readiness status for an individual readiness check
---- @param input table|nil The input table for the get_readiness_check_status command
+--- AWS route53-recovery-readiness get-readiness-check-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_readiness_check_status(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check-status" }, input)
 end
 
---- Gets details about a recovery group, including a list of the cells that are included in it
---- @param input table|nil The input table for the get_recovery_group command
+--- AWS route53-recovery-readiness get-recovery-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recovery_group(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-recovery-group" }, input)
 end
 
---- Displays a summary of information about a recovery group's readiness status
---- @param input table|nil The input table for the get_recovery_group_readiness_summary command
+--- AWS route53-recovery-readiness get-recovery-group-readiness-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recovery_group_readiness_summary(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-recovery-group-readiness-summary" }, input)
 end
 
---- Displays the details about a resource set, including a list of the resources in the set
---- @param input table|nil The input table for the get_resource_set command
+--- AWS route53-recovery-readiness get-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_set(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-resource-set" }, input)
 end
 
---- Lists the cells for an account
---- @param input table|nil The input table for the list_cells command
+--- AWS route53-recovery-readiness help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "help" }, input)
+end
+
+--- AWS route53-recovery-readiness list-cells operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cells(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-cells" }, input)
 end
 
---- Lists the cross-account readiness authorizations that are in place for an account
---- @param input table|nil The input table for the list_cross_account_authorizations command
+--- AWS route53-recovery-readiness list-cross-account-authorizations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cross_account_authorizations(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-cross-account-authorizations" }, input)
 end
 
---- Lists the readiness checks for an account
---- @param input table|nil The input table for the list_readiness_checks command
+--- AWS route53-recovery-readiness list-readiness-checks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_readiness_checks(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-readiness-checks" }, input)
 end
 
---- Lists the recovery groups in an account
---- @param input table|nil The input table for the list_recovery_groups command
+--- AWS route53-recovery-readiness list-recovery-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recovery_groups(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-recovery-groups" }, input)
 end
 
---- Lists the resource sets in an account
---- @param input table|nil The input table for the list_resource_sets command
+--- AWS route53-recovery-readiness list-resource-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_sets(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-resource-sets" }, input)
 end
 
---- Lists all readiness rules, or lists the readiness rules for a specific resource type
---- @param input table|nil The input table for the list_rules command
+--- AWS route53-recovery-readiness list-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rules(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-rules" }, input)
 end
 
---- Lists the tags for a resource
---- @param input table|nil The input table for the list_tags_for_resources command
+--- AWS route53-recovery-readiness list-tags-for-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resources(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-tags-for-resources" }, input)
 end
 
---- Adds a tag to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS route53-recovery-readiness tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "tag-resource" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS route53-recovery-readiness untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "untag-resource" }, input)
 end
 
---- Updates a cell to replace the list of nested cells with a new list of nested cells
---- @param input table|nil The input table for the update_cell command
+--- AWS route53-recovery-readiness update-cell operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cell(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-cell" }, input)
 end
 
---- Updates a readiness check
---- @param input table|nil The input table for the update_readiness_check command
+--- AWS route53-recovery-readiness update-readiness-check operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_readiness_check(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-readiness-check" }, input)
 end
 
---- Updates a recovery group
---- @param input table|nil The input table for the update_recovery_group command
+--- AWS route53-recovery-readiness update-recovery-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recovery_group(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-recovery-group" }, input)
 end
 
---- Updates a resource set
---- @param input table|nil The input table for the update_resource_set command
+--- AWS route53-recovery-readiness update-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_set(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-resource-set" }, input)

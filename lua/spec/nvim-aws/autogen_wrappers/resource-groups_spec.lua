@@ -55,6 +55,11 @@ describe("AWS resource-groups service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_group_resources", function()
 		local result = service.list_group_resources()
 		assert.is_true(result.success)

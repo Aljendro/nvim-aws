@@ -6,610 +6,617 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PROTON service functions
 local M = {}
 
---- In a management account, an environment account connection request is accepted
---- @param input table|nil The input table for the accept_environment_account_connection command
+--- AWS proton accept-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "accept-environment-account-connection" }, input)
 end
 
---- Attempts to cancel a component deployment (for a component that is in the IN_PROGRESS deployment status)
---- @param input table|nil The input table for the cancel_component_deployment command
+--- AWS proton cancel-component-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_component_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "cancel-component-deployment" }, input)
 end
 
---- Attempts to cancel an environment deployment on an UpdateEnvironment action, if the deployment is IN_PROGRESS
---- @param input table|nil The input table for the cancel_environment_deployment command
+--- AWS proton cancel-environment-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_environment_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "cancel-environment-deployment" }, input)
 end
 
---- Attempts to cancel a service instance deployment on an UpdateServiceInstance action, if the deployment is IN_PROGRESS
---- @param input table|nil The input table for the cancel_service_instance_deployment command
+--- AWS proton cancel-service-instance-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_service_instance_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "cancel-service-instance-deployment" }, input)
 end
 
---- Attempts to cancel a service pipeline deployment on an UpdateServicePipeline action, if the deployment is IN_PROGRESS
---- @param input table|nil The input table for the cancel_service_pipeline_deployment command
+--- AWS proton cancel-service-pipeline-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_service_pipeline_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "cancel-service-pipeline-deployment" }, input)
 end
 
---- Create an Proton component
---- @param input table|nil The input table for the create_component command
+--- AWS proton create-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_component(input)
 	return common.execute_aws_command_with_input({ "proton", "create-component" }, input)
 end
 
---- Deploy a new environment
---- @param input table|nil The input table for the create_environment command
+--- AWS proton create-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment(input)
 	return common.execute_aws_command_with_input({ "proton", "create-environment" }, input)
 end
 
---- Create an environment account connection in an environment account so that environment infrastructure resources can be provisioned in the environment account from a management account
---- @param input table|nil The input table for the create_environment_account_connection command
+--- AWS proton create-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "create-environment-account-connection" }, input)
 end
 
---- Create an environment template for Proton
---- @param input table|nil The input table for the create_environment_template command
+--- AWS proton create-environment-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_template(input)
 	return common.execute_aws_command_with_input({ "proton", "create-environment-template" }, input)
 end
 
---- Create a new major or minor version of an environment template
---- @param input table|nil The input table for the create_environment_template_version command
+--- AWS proton create-environment-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "create-environment-template-version" }, input)
 end
 
---- Create and register a link to a repository
---- @param input table|nil The input table for the create_repository command
+--- AWS proton create-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository(input)
 	return common.execute_aws_command_with_input({ "proton", "create-repository" }, input)
 end
 
---- Create an Proton service
---- @param input table|nil The input table for the create_service command
+--- AWS proton create-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service(input)
 	return common.execute_aws_command_with_input({ "proton", "create-service" }, input)
 end
 
---- Create a service instance
---- @param input table|nil The input table for the create_service_instance command
+--- AWS proton create-service-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service_instance(input)
 	return common.execute_aws_command_with_input({ "proton", "create-service-instance" }, input)
 end
 
---- Create the Proton Ops configuration file
---- @param input table|nil The input table for the create_service_sync_config command
+--- AWS proton create-service-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "create-service-sync-config" }, input)
 end
 
---- Create a service template
---- @param input table|nil The input table for the create_service_template command
+--- AWS proton create-service-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service_template(input)
 	return common.execute_aws_command_with_input({ "proton", "create-service-template" }, input)
 end
 
---- Create a new major or minor version of a service template
---- @param input table|nil The input table for the create_service_template_version command
+--- AWS proton create-service-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_service_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "create-service-template-version" }, input)
 end
 
---- Set up a template to create new template versions automatically by tracking a linked repository
---- @param input table|nil The input table for the create_template_sync_config command
+--- AWS proton create-template-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "create-template-sync-config" }, input)
 end
 
---- Delete an Proton component resource
---- @param input table|nil The input table for the delete_component command
+--- AWS proton delete-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_component(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-component" }, input)
 end
 
---- Delete the deployment
---- @param input table|nil The input table for the delete_deployment command
+--- AWS proton delete-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-deployment" }, input)
 end
 
---- Delete an environment
---- @param input table|nil The input table for the delete_environment command
+--- AWS proton delete-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-environment" }, input)
 end
 
---- In an environment account, delete an environment account connection
---- @param input table|nil The input table for the delete_environment_account_connection command
+--- AWS proton delete-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-environment-account-connection" }, input)
 end
 
---- If no other major or minor versions of an environment template exist, delete the environment template
---- @param input table|nil The input table for the delete_environment_template command
+--- AWS proton delete-environment-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_template(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-environment-template" }, input)
 end
 
---- If no other minor versions of an environment template exist, delete a major version of the environment template if it's not the Recommended version
---- @param input table|nil The input table for the delete_environment_template_version command
+--- AWS proton delete-environment-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-environment-template-version" }, input)
 end
 
---- De-register and unlink your repository
---- @param input table|nil The input table for the delete_repository command
+--- AWS proton delete-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-repository" }, input)
 end
 
---- Delete a service, with its instances and pipeline
---- @param input table|nil The input table for the delete_service command
+--- AWS proton delete-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-service" }, input)
 end
 
---- Delete the Proton Ops file
---- @param input table|nil The input table for the delete_service_sync_config command
+--- AWS proton delete-service-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-service-sync-config" }, input)
 end
 
---- If no other major or minor versions of the service template exist, delete the service template
---- @param input table|nil The input table for the delete_service_template command
+--- AWS proton delete-service-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service_template(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-service-template" }, input)
 end
 
---- If no other minor versions of a service template exist, delete a major version of the service template if it's not the Recommended version
---- @param input table|nil The input table for the delete_service_template_version command
+--- AWS proton delete-service-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_service_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-service-template-version" }, input)
 end
 
---- Delete a template sync configuration
---- @param input table|nil The input table for the delete_template_sync_config command
+--- AWS proton delete-template-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "delete-template-sync-config" }, input)
 end
 
---- Get detail data for Proton account-wide settings
---- @param input table|nil The input table for the get_account_settings command
+--- AWS proton get-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account_settings(input)
 	return common.execute_aws_command_with_input({ "proton", "get-account-settings" }, input)
 end
 
---- Get detailed data for a component
---- @param input table|nil The input table for the get_component command
+--- AWS proton get-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component(input)
 	return common.execute_aws_command_with_input({ "proton", "get-component" }, input)
 end
 
---- Get detailed data for a deployment
---- @param input table|nil The input table for the get_deployment command
+--- AWS proton get-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment(input)
 	return common.execute_aws_command_with_input({ "proton", "get-deployment" }, input)
 end
 
---- Get detailed data for an environment
---- @param input table|nil The input table for the get_environment command
+--- AWS proton get-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment(input)
 	return common.execute_aws_command_with_input({ "proton", "get-environment" }, input)
 end
 
---- In an environment account, get the detailed data for an environment account connection
---- @param input table|nil The input table for the get_environment_account_connection command
+--- AWS proton get-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "get-environment-account-connection" }, input)
 end
 
---- Get detailed data for an environment template
---- @param input table|nil The input table for the get_environment_template command
+--- AWS proton get-environment-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_template(input)
 	return common.execute_aws_command_with_input({ "proton", "get-environment-template" }, input)
 end
 
---- Get detailed data for a major or minor version of an environment template
---- @param input table|nil The input table for the get_environment_template_version command
+--- AWS proton get-environment-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "get-environment-template-version" }, input)
 end
 
---- Get detail data for a linked repository
---- @param input table|nil The input table for the get_repository command
+--- AWS proton get-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository(input)
 	return common.execute_aws_command_with_input({ "proton", "get-repository" }, input)
 end
 
---- Get the sync status of a repository used for Proton template sync
---- @param input table|nil The input table for the get_repository_sync_status command
+--- AWS proton get-repository-sync-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_sync_status(input)
 	return common.execute_aws_command_with_input({ "proton", "get-repository-sync-status" }, input)
 end
 
---- Get counts of Proton resources
---- @param input table|nil The input table for the get_resources_summary command
+--- AWS proton get-resources-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resources_summary(input)
 	return common.execute_aws_command_with_input({ "proton", "get-resources-summary" }, input)
 end
 
---- Get detailed data for a service
---- @param input table|nil The input table for the get_service command
+--- AWS proton get-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service" }, input)
 end
 
---- Get detailed data for a service instance
---- @param input table|nil The input table for the get_service_instance command
+--- AWS proton get-service-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_instance(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-instance" }, input)
 end
 
---- Get the status of the synced service instance
---- @param input table|nil The input table for the get_service_instance_sync_status command
+--- AWS proton get-service-instance-sync-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_instance_sync_status(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-instance-sync-status" }, input)
 end
 
---- Get detailed data for the service sync blocker summary
---- @param input table|nil The input table for the get_service_sync_blocker_summary command
+--- AWS proton get-service-sync-blocker-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_sync_blocker_summary(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-sync-blocker-summary" }, input)
 end
 
---- Get detailed information for the service sync configuration
---- @param input table|nil The input table for the get_service_sync_config command
+--- AWS proton get-service-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-sync-config" }, input)
 end
 
---- Get detailed data for a service template
---- @param input table|nil The input table for the get_service_template command
+--- AWS proton get-service-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_template(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-template" }, input)
 end
 
---- Get detailed data for a major or minor version of a service template
---- @param input table|nil The input table for the get_service_template_version command
+--- AWS proton get-service-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_service_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "get-service-template-version" }, input)
 end
 
---- Get detail data for a template sync configuration
---- @param input table|nil The input table for the get_template_sync_config command
+--- AWS proton get-template-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_template_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "get-template-sync-config" }, input)
 end
 
---- Get the status of a template sync
---- @param input table|nil The input table for the get_template_sync_status command
+--- AWS proton get-template-sync-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_template_sync_status(input)
 	return common.execute_aws_command_with_input({ "proton", "get-template-sync-status" }, input)
 end
 
---- Get a list of component Infrastructure as Code (IaC) outputs
---- @param input table|nil The input table for the list_component_outputs command
+--- AWS proton help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "proton", "help" }, input)
+end
+
+--- AWS proton list-component-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_component_outputs(input)
 	return common.execute_aws_command_with_input({ "proton", "list-component-outputs" }, input)
 end
 
---- List provisioned resources for a component with details
---- @param input table|nil The input table for the list_component_provisioned_resources command
+--- AWS proton list-component-provisioned-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_component_provisioned_resources(input)
 	return common.execute_aws_command_with_input({ "proton", "list-component-provisioned-resources" }, input)
 end
 
---- List components with summary data
---- @param input table|nil The input table for the list_components command
+--- AWS proton list-components operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_components(input)
 	return common.execute_aws_command_with_input({ "proton", "list-components" }, input)
 end
 
---- List deployments
---- @param input table|nil The input table for the list_deployments command
+--- AWS proton list-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_deployments(input)
 	return common.execute_aws_command_with_input({ "proton", "list-deployments" }, input)
 end
 
---- View a list of environment account connections
---- @param input table|nil The input table for the list_environment_account_connections command
+--- AWS proton list-environment-account-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_account_connections(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environment-account-connections" }, input)
 end
 
---- List the infrastructure as code outputs for your environment
---- @param input table|nil The input table for the list_environment_outputs command
+--- AWS proton list-environment-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_outputs(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environment-outputs" }, input)
 end
 
---- List the provisioned resources for your environment
---- @param input table|nil The input table for the list_environment_provisioned_resources command
+--- AWS proton list-environment-provisioned-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_provisioned_resources(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environment-provisioned-resources" }, input)
 end
 
---- List major or minor versions of an environment template with detail data
---- @param input table|nil The input table for the list_environment_template_versions command
+--- AWS proton list-environment-template-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_template_versions(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environment-template-versions" }, input)
 end
 
---- List environment templates
---- @param input table|nil The input table for the list_environment_templates command
+--- AWS proton list-environment-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_templates(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environment-templates" }, input)
 end
 
---- List environments with detail data summaries
---- @param input table|nil The input table for the list_environments command
+--- AWS proton list-environments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environments(input)
 	return common.execute_aws_command_with_input({ "proton", "list-environments" }, input)
 end
 
---- List linked repositories with detail data
---- @param input table|nil The input table for the list_repositories command
+--- AWS proton list-repositories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repositories(input)
 	return common.execute_aws_command_with_input({ "proton", "list-repositories" }, input)
 end
 
---- List repository sync definitions with detail data
---- @param input table|nil The input table for the list_repository_sync_definitions command
+--- AWS proton list-repository-sync-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_sync_definitions(input)
 	return common.execute_aws_command_with_input({ "proton", "list-repository-sync-definitions" }, input)
 end
 
---- Get a list service of instance Infrastructure as Code (IaC) outputs
---- @param input table|nil The input table for the list_service_instance_outputs command
+--- AWS proton list-service-instance-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_instance_outputs(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-instance-outputs" }, input)
 end
 
---- List provisioned resources for a service instance with details
---- @param input table|nil The input table for the list_service_instance_provisioned_resources command
+--- AWS proton list-service-instance-provisioned-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_instance_provisioned_resources(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-instance-provisioned-resources" }, input)
 end
 
---- List service instances with summary data
---- @param input table|nil The input table for the list_service_instances command
+--- AWS proton list-service-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_instances(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-instances" }, input)
 end
 
---- Get a list of service pipeline Infrastructure as Code (IaC) outputs
---- @param input table|nil The input table for the list_service_pipeline_outputs command
+--- AWS proton list-service-pipeline-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_pipeline_outputs(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-pipeline-outputs" }, input)
 end
 
---- List provisioned resources for a service and pipeline with details
---- @param input table|nil The input table for the list_service_pipeline_provisioned_resources command
+--- AWS proton list-service-pipeline-provisioned-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_pipeline_provisioned_resources(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-pipeline-provisioned-resources" }, input)
 end
 
---- List major or minor versions of a service template with detail data
---- @param input table|nil The input table for the list_service_template_versions command
+--- AWS proton list-service-template-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_template_versions(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-template-versions" }, input)
 end
 
---- List service templates with detail data
---- @param input table|nil The input table for the list_service_templates command
+--- AWS proton list-service-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_service_templates(input)
 	return common.execute_aws_command_with_input({ "proton", "list-service-templates" }, input)
 end
 
---- List services with summaries of detail data
---- @param input table|nil The input table for the list_services command
+--- AWS proton list-services operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_services(input)
 	return common.execute_aws_command_with_input({ "proton", "list-services" }, input)
 end
 
---- List tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS proton list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "proton", "list-tags-for-resource" }, input)
 end
 
---- Notify Proton of status changes to a provisioned resource when you use self-managed provisioning
---- @param input table|nil The input table for the notify_resource_deployment_status_change command
+--- AWS proton notify-resource-deployment-status-change operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_resource_deployment_status_change(input)
 	return common.execute_aws_command_with_input({ "proton", "notify-resource-deployment-status-change" }, input)
 end
 
---- In a management account, reject an environment account connection from another environment account
---- @param input table|nil The input table for the reject_environment_account_connection command
+--- AWS proton reject-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "reject-environment-account-connection" }, input)
 end
 
---- Tag a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS proton tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "proton", "tag-resource" }, input)
 end
 
---- Remove a customer tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS proton untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "proton", "untag-resource" }, input)
 end
 
---- Update Proton settings that are used for multiple services in the Amazon Web Services account
---- @param input table|nil The input table for the update_account_settings command
+--- AWS proton update-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_settings(input)
 	return common.execute_aws_command_with_input({ "proton", "update-account-settings" }, input)
 end
 
---- Update a component
---- @param input table|nil The input table for the update_component command
+--- AWS proton update-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_component(input)
 	return common.execute_aws_command_with_input({ "proton", "update-component" }, input)
 end
 
---- Update an environment
---- @param input table|nil The input table for the update_environment command
+--- AWS proton update-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment(input)
 	return common.execute_aws_command_with_input({ "proton", "update-environment" }, input)
 end
 
---- In an environment account, update an environment account connection to use a new IAM role
---- @param input table|nil The input table for the update_environment_account_connection command
+--- AWS proton update-environment-account-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_account_connection(input)
 	return common.execute_aws_command_with_input({ "proton", "update-environment-account-connection" }, input)
 end
 
---- Update an environment template
---- @param input table|nil The input table for the update_environment_template command
+--- AWS proton update-environment-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_template(input)
 	return common.execute_aws_command_with_input({ "proton", "update-environment-template" }, input)
 end
 
---- Update a major or minor version of an environment template
---- @param input table|nil The input table for the update_environment_template_version command
+--- AWS proton update-environment-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "update-environment-template-version" }, input)
 end
 
---- Edit a service description or use a spec to add and delete service instances
---- @param input table|nil The input table for the update_service command
+--- AWS proton update-service operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service" }, input)
 end
 
---- Update a service instance
---- @param input table|nil The input table for the update_service_instance command
+--- AWS proton update-service-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_instance(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-instance" }, input)
 end
 
---- Update the service pipeline
---- @param input table|nil The input table for the update_service_pipeline command
+--- AWS proton update-service-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_pipeline(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-pipeline" }, input)
 end
 
---- Update the service sync blocker by resolving it
---- @param input table|nil The input table for the update_service_sync_blocker command
+--- AWS proton update-service-sync-blocker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_sync_blocker(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-sync-blocker" }, input)
 end
 
---- Update the Proton Ops config file
---- @param input table|nil The input table for the update_service_sync_config command
+--- AWS proton update-service-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-sync-config" }, input)
 end
 
---- Update a service template
---- @param input table|nil The input table for the update_service_template command
+--- AWS proton update-service-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_template(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-template" }, input)
 end
 
---- Update a major or minor version of a service template
---- @param input table|nil The input table for the update_service_template_version command
+--- AWS proton update-service-template-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_template_version(input)
 	return common.execute_aws_command_with_input({ "proton", "update-service-template-version" }, input)
 end
 
---- Update template sync configuration parameters, except for the templateName and templateType
---- @param input table|nil The input table for the update_template_sync_config command
+--- AWS proton update-template-sync-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "update-template-sync-config" }, input)

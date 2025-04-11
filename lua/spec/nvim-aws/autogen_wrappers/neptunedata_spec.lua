@@ -60,23 +60,8 @@ describe("AWS neptunedata service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with execute_gremlin_explain_query", function()
-		local result = service.execute_gremlin_explain_query()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with execute_gremlin_profile_query", function()
-		local result = service.execute_gremlin_profile_query()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with execute_gremlin_query", function()
 		local result = service.execute_gremlin_query()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with execute_open_cypher_explain_query", function()
-		local result = service.execute_open_cypher_explain_query()
 		assert.is_true(result.success)
 	end)
 
@@ -152,6 +137,11 @@ describe("AWS neptunedata service testing", function()
 
 	it("should generate a cli skeleton with get_sparql_stream", function()
 		local result = service.get_sparql_stream()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

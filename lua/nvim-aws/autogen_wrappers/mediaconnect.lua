@@ -6,365 +6,372 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEDIACONNECT service functions
 local M = {}
 
---- Adds outputs to an existing bridge
---- @param input table|nil The input table for the add_bridge_outputs command
+--- AWS mediaconnect add-bridge-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_bridge_outputs(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-bridge-outputs" }, input)
 end
 
---- Adds sources to an existing bridge
---- @param input table|nil The input table for the add_bridge_sources command
+--- AWS mediaconnect add-bridge-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_bridge_sources(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-bridge-sources" }, input)
 end
 
---- Adds media streams to an existing flow
---- @param input table|nil The input table for the add_flow_media_streams command
+--- AWS mediaconnect add-flow-media-streams operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_flow_media_streams(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-flow-media-streams" }, input)
 end
 
---- Adds outputs to an existing flow
---- @param input table|nil The input table for the add_flow_outputs command
+--- AWS mediaconnect add-flow-outputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_flow_outputs(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-flow-outputs" }, input)
 end
 
---- Adds sources to a flow
---- @param input table|nil The input table for the add_flow_sources command
+--- AWS mediaconnect add-flow-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_flow_sources(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-flow-sources" }, input)
 end
 
---- Adds VPC interfaces to a flow
---- @param input table|nil The input table for the add_flow_vpc_interfaces command
+--- AWS mediaconnect add-flow-vpc-interfaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_flow_vpc_interfaces(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "add-flow-vpc-interfaces" }, input)
 end
 
---- Creates a new bridge
---- @param input table|nil The input table for the create_bridge command
+--- AWS mediaconnect create-bridge operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bridge(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "create-bridge" }, input)
 end
 
---- Creates a new flow
---- @param input table|nil The input table for the create_flow command
+--- AWS mediaconnect create-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "create-flow" }, input)
 end
 
---- Creates a new gateway
---- @param input table|nil The input table for the create_gateway command
+--- AWS mediaconnect create-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_gateway(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "create-gateway" }, input)
 end
 
---- Deletes a bridge
---- @param input table|nil The input table for the delete_bridge command
+--- AWS mediaconnect delete-bridge operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bridge(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "delete-bridge" }, input)
 end
 
---- Deletes a flow
---- @param input table|nil The input table for the delete_flow command
+--- AWS mediaconnect delete-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "delete-flow" }, input)
 end
 
---- Deletes a gateway
---- @param input table|nil The input table for the delete_gateway command
+--- AWS mediaconnect delete-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_gateway(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "delete-gateway" }, input)
 end
 
---- Deregisters an instance
---- @param input table|nil The input table for the deregister_gateway_instance command
+--- AWS mediaconnect deregister-gateway-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_gateway_instance(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "deregister-gateway-instance" }, input)
 end
 
---- Displays the details of a bridge
---- @param input table|nil The input table for the describe_bridge command
+--- AWS mediaconnect describe-bridge operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_bridge(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-bridge" }, input)
 end
 
---- Displays the details of a flow
---- @param input table|nil The input table for the describe_flow command
+--- AWS mediaconnect describe-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-flow" }, input)
 end
 
---- The DescribeFlowSourceMetadata API is used to view information about the flow's source transport stream and programs
---- @param input table|nil The input table for the describe_flow_source_metadata command
+--- AWS mediaconnect describe-flow-source-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flow_source_metadata(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-flow-source-metadata" }, input)
 end
 
---- Describes the thumbnail for the flow source
---- @param input table|nil The input table for the describe_flow_source_thumbnail command
+--- AWS mediaconnect describe-flow-source-thumbnail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_flow_source_thumbnail(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-flow-source-thumbnail" }, input)
 end
 
---- Displays the details of a gateway
---- @param input table|nil The input table for the describe_gateway command
+--- AWS mediaconnect describe-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_gateway(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-gateway" }, input)
 end
 
---- Displays the details of an instance
---- @param input table|nil The input table for the describe_gateway_instance command
+--- AWS mediaconnect describe-gateway-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_gateway_instance(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-gateway-instance" }, input)
 end
 
---- Displays the details of an offering
---- @param input table|nil The input table for the describe_offering command
+--- AWS mediaconnect describe-offering operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_offering(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-offering" }, input)
 end
 
---- Displays the details of a reservation
---- @param input table|nil The input table for the describe_reservation command
+--- AWS mediaconnect describe-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reservation(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "describe-reservation" }, input)
 end
 
---- Grants entitlements to an existing flow
---- @param input table|nil The input table for the grant_flow_entitlements command
+--- AWS mediaconnect grant-flow-entitlements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.grant_flow_entitlements(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "grant-flow-entitlements" }, input)
 end
 
---- Displays a list of bridges that are associated with this account and an optionally specified Amazon Resource Name (ARN)
---- @param input table|nil The input table for the list_bridges command
+--- AWS mediaconnect help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mediaconnect", "help" }, input)
+end
+
+--- AWS mediaconnect list-bridges operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bridges(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-bridges" }, input)
 end
 
---- Displays a list of all entitlements that have been granted to this account
---- @param input table|nil The input table for the list_entitlements command
+--- AWS mediaconnect list-entitlements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entitlements(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-entitlements" }, input)
 end
 
---- Displays a list of flows that are associated with this account
---- @param input table|nil The input table for the list_flows command
+--- AWS mediaconnect list-flows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flows(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-flows" }, input)
 end
 
---- Displays a list of instances associated with the Amazon Web Services account
---- @param input table|nil The input table for the list_gateway_instances command
+--- AWS mediaconnect list-gateway-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_gateway_instances(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-gateway-instances" }, input)
 end
 
---- Displays a list of gateways that are associated with this account
---- @param input table|nil The input table for the list_gateways command
+--- AWS mediaconnect list-gateways operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_gateways(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-gateways" }, input)
 end
 
---- Displays a list of all offerings that are available to this account in the current Amazon Web Services Region
---- @param input table|nil The input table for the list_offerings command
+--- AWS mediaconnect list-offerings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_offerings(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-offerings" }, input)
 end
 
---- Displays a list of all reservations that have been purchased by this account in the current Amazon Web Services Region
---- @param input table|nil The input table for the list_reservations command
+--- AWS mediaconnect list-reservations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_reservations(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-reservations" }, input)
 end
 
---- List all tags on a MediaConnect resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS mediaconnect list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "list-tags-for-resource" }, input)
 end
 
---- Submits a request to purchase an offering
---- @param input table|nil The input table for the purchase_offering command
+--- AWS mediaconnect purchase-offering operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purchase_offering(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "purchase-offering" }, input)
 end
 
---- Removes an output from a bridge
---- @param input table|nil The input table for the remove_bridge_output command
+--- AWS mediaconnect remove-bridge-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_bridge_output(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-bridge-output" }, input)
 end
 
---- Removes a source from a bridge
---- @param input table|nil The input table for the remove_bridge_source command
+--- AWS mediaconnect remove-bridge-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_bridge_source(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-bridge-source" }, input)
 end
 
---- Removes a media stream from a flow
---- @param input table|nil The input table for the remove_flow_media_stream command
+--- AWS mediaconnect remove-flow-media-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_flow_media_stream(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-flow-media-stream" }, input)
 end
 
---- Removes an output from an existing flow
---- @param input table|nil The input table for the remove_flow_output command
+--- AWS mediaconnect remove-flow-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_flow_output(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-flow-output" }, input)
 end
 
---- Removes a source from an existing flow
---- @param input table|nil The input table for the remove_flow_source command
+--- AWS mediaconnect remove-flow-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_flow_source(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-flow-source" }, input)
 end
 
---- Removes a VPC Interface from an existing flow
---- @param input table|nil The input table for the remove_flow_vpc_interface command
+--- AWS mediaconnect remove-flow-vpc-interface operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_flow_vpc_interface(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "remove-flow-vpc-interface" }, input)
 end
 
---- Revokes an entitlement from a flow
---- @param input table|nil The input table for the revoke_flow_entitlement command
+--- AWS mediaconnect revoke-flow-entitlement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_flow_entitlement(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "revoke-flow-entitlement" }, input)
 end
 
---- Starts a flow
---- @param input table|nil The input table for the start_flow command
+--- AWS mediaconnect start-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "start-flow" }, input)
 end
 
---- Stops a flow
---- @param input table|nil The input table for the stop_flow command
+--- AWS mediaconnect stop-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "stop-flow" }, input)
 end
 
---- Associates the specified tags to a resource with the specified resourceArn
---- @param input table|nil The input table for the tag_resource command
+--- AWS mediaconnect tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "tag-resource" }, input)
 end
 
---- Deletes specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS mediaconnect untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "untag-resource" }, input)
 end
 
---- Updates the bridge
---- @param input table|nil The input table for the update_bridge command
+--- AWS mediaconnect update-bridge operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bridge(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-bridge" }, input)
 end
 
---- Updates an existing bridge output
---- @param input table|nil The input table for the update_bridge_output command
+--- AWS mediaconnect update-bridge-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bridge_output(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-bridge-output" }, input)
 end
 
---- Updates an existing bridge source
---- @param input table|nil The input table for the update_bridge_source command
+--- AWS mediaconnect update-bridge-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bridge_source(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-bridge-source" }, input)
 end
 
---- Updates the bridge state
---- @param input table|nil The input table for the update_bridge_state command
+--- AWS mediaconnect update-bridge-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bridge_state(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-bridge-state" }, input)
 end
 
---- Updates an existing flow
---- @param input table|nil The input table for the update_flow command
+--- AWS mediaconnect update-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-flow" }, input)
 end
 
---- Updates an entitlement
---- @param input table|nil The input table for the update_flow_entitlement command
+--- AWS mediaconnect update-flow-entitlement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow_entitlement(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-flow-entitlement" }, input)
 end
 
---- Updates an existing media stream
---- @param input table|nil The input table for the update_flow_media_stream command
+--- AWS mediaconnect update-flow-media-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow_media_stream(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-flow-media-stream" }, input)
 end
 
---- Updates an existing flow output
---- @param input table|nil The input table for the update_flow_output command
+--- AWS mediaconnect update-flow-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow_output(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-flow-output" }, input)
 end
 
---- Updates the source of a flow
---- @param input table|nil The input table for the update_flow_source command
+--- AWS mediaconnect update-flow-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow_source(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-flow-source" }, input)
 end
 
---- Updates an existing gateway instance
---- @param input table|nil The input table for the update_gateway_instance command
+--- AWS mediaconnect update-gateway-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_gateway_instance(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-gateway-instance" }, input)

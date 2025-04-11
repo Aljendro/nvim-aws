@@ -105,6 +105,11 @@ describe("AWS amplifybackend service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_backend_auth", function()
 		local result = service.import_backend_auth()
 		assert.is_true(result.success)

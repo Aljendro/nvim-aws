@@ -60,6 +60,11 @@ describe("AWS mediastore service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_containers", function()
 		local result = service.list_containers()
 		assert.is_true(result.success)

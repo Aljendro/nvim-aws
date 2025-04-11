@@ -20,13 +20,13 @@ describe("AWS service-quotas service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_aws_default_service_quota", function()
-		local result = service.get_aws_default_service_quota()
+	it("should generate a cli skeleton with get_association_for_service_quota_template", function()
+		local result = service.get_association_for_service_quota_template()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_association_for_service_quota_template", function()
-		local result = service.get_association_for_service_quota_template()
+	it("should generate a cli skeleton with get_aws_default_service_quota", function()
+		local result = service.get_aws_default_service_quota()
 		assert.is_true(result.success)
 	end)
 
@@ -42,6 +42,11 @@ describe("AWS service-quotas service testing", function()
 
 	it("should generate a cli skeleton with get_service_quota_increase_request_from_template", function()
 		local result = service.get_service_quota_increase_request_from_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

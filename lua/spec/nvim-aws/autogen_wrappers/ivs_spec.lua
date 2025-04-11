@@ -100,6 +100,11 @@ describe("AWS ivs service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_playback_key_pair", function()
 		local result = service.import_playback_key_pair()
 		assert.is_true(result.success)

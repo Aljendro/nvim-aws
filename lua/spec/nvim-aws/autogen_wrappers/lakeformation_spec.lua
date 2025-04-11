@@ -40,16 +40,6 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with create_lf_tag", function()
-		local result = service.create_lf_tag()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with create_lf_tag_expression", function()
-		local result = service.create_lf_tag_expression()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with create_lake_formation_identity_center_configuration", function()
 		local result = service.create_lake_formation_identity_center_configuration()
 		assert.is_true(result.success)
@@ -60,18 +50,18 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_lf_tag", function()
+		local result = service.create_lf_tag()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_lf_tag_expression", function()
+		local result = service.create_lf_tag_expression()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_data_cells_filter", function()
 		local result = service.delete_data_cells_filter()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with delete_lf_tag", function()
-		local result = service.delete_lf_tag()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with delete_lf_tag_expression", function()
-		local result = service.delete_lf_tag_expression()
 		assert.is_true(result.success)
 	end)
 
@@ -82,6 +72,16 @@ describe("AWS lakeformation service testing", function()
 
 	it("should generate a cli skeleton with delete_lake_formation_opt_in", function()
 		local result = service.delete_lake_formation_opt_in()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_lf_tag", function()
+		local result = service.delete_lf_tag()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_lf_tag_expression", function()
+		local result = service.delete_lf_tag_expression()
 		assert.is_true(result.success)
 	end)
 
@@ -175,11 +175,6 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_work_unit_results", function()
-		local result = service.get_work_unit_results()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_work_units", function()
 		local result = service.get_work_units()
 		assert.is_true(result.success)
@@ -190,8 +185,18 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_data_cells_filter", function()
 		local result = service.list_data_cells_filter()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_lake_formation_opt_ins", function()
+		local result = service.list_lake_formation_opt_ins()
 		assert.is_true(result.success)
 	end)
 
@@ -202,11 +207,6 @@ describe("AWS lakeformation service testing", function()
 
 	it("should generate a cli skeleton with list_lf_tags", function()
 		local result = service.list_lf_tags()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_lake_formation_opt_ins", function()
-		local result = service.list_lake_formation_opt_ins()
 		assert.is_true(result.success)
 	end)
 
@@ -275,6 +275,11 @@ describe("AWS lakeformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with update_lake_formation_identity_center_configuration", function()
+		local result = service.update_lake_formation_identity_center_configuration()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with update_lf_tag", function()
 		local result = service.update_lf_tag()
 		assert.is_true(result.success)
@@ -282,11 +287,6 @@ describe("AWS lakeformation service testing", function()
 
 	it("should generate a cli skeleton with update_lf_tag_expression", function()
 		local result = service.update_lf_tag_expression()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with update_lake_formation_identity_center_configuration", function()
-		local result = service.update_lake_formation_identity_center_configuration()
 		assert.is_true(result.success)
 	end)
 

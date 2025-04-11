@@ -180,6 +180,11 @@ describe("AWS workdocs service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with initiate_document_version_upload", function()
 		local result = service.initiate_document_version_upload()
 		assert.is_true(result.success)

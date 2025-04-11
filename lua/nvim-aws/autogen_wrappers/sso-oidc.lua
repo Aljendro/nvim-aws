@@ -6,29 +6,36 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SSO-OIDC service functions
 local M = {}
 
---- Creates and returns access and refresh tokens for clients that are authenticated using client secrets
---- @param input table|nil The input table for the create_token command
+--- AWS sso-oidc create-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_token(input)
 	return common.execute_aws_command_with_input({ "sso-oidc", "create-token" }, input)
 end
 
---- Creates and returns access and refresh tokens for clients and applications that are authenticated using IAM entities
---- @param input table|nil The input table for the create_token_with_iam command
+--- AWS sso-oidc create-token-with-iam operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_token_with_iam(input)
 	return common.execute_aws_command_with_input({ "sso-oidc", "create-token-with-iam" }, input)
 end
 
---- Registers a public client with IAM Identity Center
---- @param input table|nil The input table for the register_client command
+--- AWS sso-oidc help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "sso-oidc", "help" }, input)
+end
+
+--- AWS sso-oidc register-client operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_client(input)
 	return common.execute_aws_command_with_input({ "sso-oidc", "register-client" }, input)
 end
 
---- Initiates device authorization by requesting a pair of verification codes from the authorization service
---- @param input table|nil The input table for the start_device_authorization command
+--- AWS sso-oidc start-device-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_device_authorization(input)
 	return common.execute_aws_command_with_input({ "sso-oidc", "start-device-authorization" }, input)

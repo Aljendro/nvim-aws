@@ -6,36 +6,43 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CONTROLCATALOG service functions
 local M = {}
 
---- Returns details about a specific control, most notably a list of Amazon Web Services Regions where this control is supported
---- @param input table|nil The input table for the get_control command
+--- AWS controlcatalog get-control operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_control(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "get-control" }, input)
 end
 
---- Returns a paginated list of common controls from the Amazon Web Services Control Catalog
---- @param input table|nil The input table for the list_common_controls command
+--- AWS controlcatalog help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "controlcatalog", "help" }, input)
+end
+
+--- AWS controlcatalog list-common-controls operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_common_controls(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "list-common-controls" }, input)
 end
 
---- Returns a paginated list of all available controls in the Amazon Web Services Control Catalog library
---- @param input table|nil The input table for the list_controls command
+--- AWS controlcatalog list-controls operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_controls(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "list-controls" }, input)
 end
 
---- Returns a paginated list of domains from the Amazon Web Services Control Catalog
---- @param input table|nil The input table for the list_domains command
+--- AWS controlcatalog list-domains operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domains(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "list-domains" }, input)
 end
 
---- Returns a paginated list of objectives from the Amazon Web Services Control Catalog
---- @param input table|nil The input table for the list_objectives command
+--- AWS controlcatalog list-objectives operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_objectives(input)
 	return common.execute_aws_command_with_input({ "controlcatalog", "list-objectives" }, input)

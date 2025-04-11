@@ -6,526 +6,533 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS IMAGEBUILDER service functions
 local M = {}
 
---- CancelImageCreation cancels the creation of Image
---- @param input table|nil The input table for the cancel_image_creation command
+--- AWS imagebuilder cancel-image-creation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_image_creation(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "cancel-image-creation" }, input)
 end
 
---- Cancel a specific image lifecycle policy runtime instance
---- @param input table|nil The input table for the cancel_lifecycle_execution command
+--- AWS imagebuilder cancel-lifecycle-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_lifecycle_execution(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "cancel-lifecycle-execution" }, input)
 end
 
---- Creates a new component that can be used to build, validate, test, and assess your image
---- @param input table|nil The input table for the create_component command
+--- AWS imagebuilder create-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_component(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-component" }, input)
 end
 
---- Creates a new container recipe
---- @param input table|nil The input table for the create_container_recipe command
+--- AWS imagebuilder create-container-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-container-recipe" }, input)
 end
 
---- Creates a new distribution configuration
---- @param input table|nil The input table for the create_distribution_configuration command
+--- AWS imagebuilder create-distribution-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_distribution_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-distribution-configuration" }, input)
 end
 
---- Creates a new image
---- @param input table|nil The input table for the create_image command
+--- AWS imagebuilder create-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_image(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-image" }, input)
 end
 
---- Creates a new image pipeline
---- @param input table|nil The input table for the create_image_pipeline command
+--- AWS imagebuilder create-image-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_image_pipeline(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-image-pipeline" }, input)
 end
 
---- Creates a new image recipe
---- @param input table|nil The input table for the create_image_recipe command
+--- AWS imagebuilder create-image-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_image_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-image-recipe" }, input)
 end
 
---- Creates a new infrastructure configuration
---- @param input table|nil The input table for the create_infrastructure_configuration command
+--- AWS imagebuilder create-infrastructure-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_infrastructure_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-infrastructure-configuration" }, input)
 end
 
---- Create a lifecycle policy resource
---- @param input table|nil The input table for the create_lifecycle_policy command
+--- AWS imagebuilder create-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-lifecycle-policy" }, input)
 end
 
---- Create a new workflow or a new version of an existing workflow
---- @param input table|nil The input table for the create_workflow command
+--- AWS imagebuilder create-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workflow(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "create-workflow" }, input)
 end
 
---- Deletes a component build version
---- @param input table|nil The input table for the delete_component command
+--- AWS imagebuilder delete-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_component(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-component" }, input)
 end
 
---- Deletes a container recipe
---- @param input table|nil The input table for the delete_container_recipe command
+--- AWS imagebuilder delete-container-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-container-recipe" }, input)
 end
 
---- Deletes a distribution configuration
---- @param input table|nil The input table for the delete_distribution_configuration command
+--- AWS imagebuilder delete-distribution-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_distribution_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-distribution-configuration" }, input)
 end
 
---- Deletes an Image Builder image resource
---- @param input table|nil The input table for the delete_image command
+--- AWS imagebuilder delete-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-image" }, input)
 end
 
---- Deletes an image pipeline
---- @param input table|nil The input table for the delete_image_pipeline command
+--- AWS imagebuilder delete-image-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image_pipeline(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-image-pipeline" }, input)
 end
 
---- Deletes an image recipe
---- @param input table|nil The input table for the delete_image_recipe command
+--- AWS imagebuilder delete-image-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-image-recipe" }, input)
 end
 
---- Deletes an infrastructure configuration
---- @param input table|nil The input table for the delete_infrastructure_configuration command
+--- AWS imagebuilder delete-infrastructure-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_infrastructure_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-infrastructure-configuration" }, input)
 end
 
---- Delete the specified lifecycle policy resource
---- @param input table|nil The input table for the delete_lifecycle_policy command
+--- AWS imagebuilder delete-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-lifecycle-policy" }, input)
 end
 
---- Deletes a specific workflow resource
---- @param input table|nil The input table for the delete_workflow command
+--- AWS imagebuilder delete-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workflow(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "delete-workflow" }, input)
 end
 
---- Gets a component object
---- @param input table|nil The input table for the get_component command
+--- AWS imagebuilder get-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-component" }, input)
 end
 
---- Gets a component policy
---- @param input table|nil The input table for the get_component_policy command
+--- AWS imagebuilder get-component-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-component-policy" }, input)
 end
 
---- Retrieves a container recipe
---- @param input table|nil The input table for the get_container_recipe command
+--- AWS imagebuilder get-container-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-container-recipe" }, input)
 end
 
---- Retrieves the policy for a container recipe
---- @param input table|nil The input table for the get_container_recipe_policy command
+--- AWS imagebuilder get-container-recipe-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_recipe_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-container-recipe-policy" }, input)
 end
 
---- Gets a distribution configuration
---- @param input table|nil The input table for the get_distribution_configuration command
+--- AWS imagebuilder get-distribution-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_distribution_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-distribution-configuration" }, input)
 end
 
---- Gets an image
---- @param input table|nil The input table for the get_image command
+--- AWS imagebuilder get-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-image" }, input)
 end
 
---- Gets an image pipeline
---- @param input table|nil The input table for the get_image_pipeline command
+--- AWS imagebuilder get-image-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image_pipeline(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-image-pipeline" }, input)
 end
 
---- Gets an image policy
---- @param input table|nil The input table for the get_image_policy command
+--- AWS imagebuilder get-image-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-image-policy" }, input)
 end
 
---- Gets an image recipe
---- @param input table|nil The input table for the get_image_recipe command
+--- AWS imagebuilder get-image-recipe operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image_recipe(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-image-recipe" }, input)
 end
 
---- Gets an image recipe policy
---- @param input table|nil The input table for the get_image_recipe_policy command
+--- AWS imagebuilder get-image-recipe-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image_recipe_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-image-recipe-policy" }, input)
 end
 
---- Gets an infrastructure configuration
---- @param input table|nil The input table for the get_infrastructure_configuration command
+--- AWS imagebuilder get-infrastructure-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_infrastructure_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-infrastructure-configuration" }, input)
 end
 
---- Get the runtime information that was logged for a specific runtime instance of the lifecycle policy
---- @param input table|nil The input table for the get_lifecycle_execution command
+--- AWS imagebuilder get-lifecycle-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_execution(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-lifecycle-execution" }, input)
 end
 
---- Get details for the specified image lifecycle policy
---- @param input table|nil The input table for the get_lifecycle_policy command
+--- AWS imagebuilder get-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-lifecycle-policy" }, input)
 end
 
---- Verify the subscription and perform resource dependency checks on the requested Amazon Web Services Marketplace resource
---- @param input table|nil The input table for the get_marketplace_resource command
+--- AWS imagebuilder get-marketplace-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_marketplace_resource(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-marketplace-resource" }, input)
 end
 
---- Get a workflow resource object
---- @param input table|nil The input table for the get_workflow command
+--- AWS imagebuilder get-workflow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-workflow" }, input)
 end
 
---- Get the runtime information that was logged for a specific runtime instance of the workflow
---- @param input table|nil The input table for the get_workflow_execution command
+--- AWS imagebuilder get-workflow-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow_execution(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-workflow-execution" }, input)
 end
 
---- Get the runtime information that was logged for a specific runtime instance of the workflow step
---- @param input table|nil The input table for the get_workflow_step_execution command
+--- AWS imagebuilder get-workflow-step-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workflow_step_execution(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "get-workflow-step-execution" }, input)
 end
 
---- Imports a component and transforms its data into a component document
---- @param input table|nil The input table for the import_component command
+--- AWS imagebuilder help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "imagebuilder", "help" }, input)
+end
+
+--- AWS imagebuilder import-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_component(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "import-component" }, input)
 end
 
---- Import a Windows operating system image from a verified Microsoft ISO disk file
---- @param input table|nil The input table for the import_disk_image command
+--- AWS imagebuilder import-disk-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_disk_image(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "import-disk-image" }, input)
 end
 
---- When you export your virtual machine (VM) from its virtualization environment, that process creates a set of one or more disk container files that act as snapshots of your VM’s environment, settings, and data
---- @param input table|nil The input table for the import_vm_image command
+--- AWS imagebuilder import-vm-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_vm_image(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "import-vm-image" }, input)
 end
 
---- Returns the list of component build versions for the specified component version Amazon Resource Name (ARN)
---- @param input table|nil The input table for the list_component_build_versions command
+--- AWS imagebuilder list-component-build-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_component_build_versions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-component-build-versions" }, input)
 end
 
---- Returns the list of components that can be filtered by name, or by using the listed filters to streamline results
---- @param input table|nil The input table for the list_components command
+--- AWS imagebuilder list-components operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_components(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-components" }, input)
 end
 
---- Returns a list of container recipes
---- @param input table|nil The input table for the list_container_recipes command
+--- AWS imagebuilder list-container-recipes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_container_recipes(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-container-recipes" }, input)
 end
 
---- Returns a list of distribution configurations
---- @param input table|nil The input table for the list_distribution_configurations command
+--- AWS imagebuilder list-distribution-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_distribution_configurations(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-distribution-configurations" }, input)
 end
 
---- Returns a list of image build versions
---- @param input table|nil The input table for the list_image_build_versions command
+--- AWS imagebuilder list-image-build-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_build_versions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-build-versions" }, input)
 end
 
---- List the Packages that are associated with an Image Build Version, as determined by Amazon Web Services Systems Manager Inventory at build time
---- @param input table|nil The input table for the list_image_packages command
+--- AWS imagebuilder list-image-packages operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_packages(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-packages" }, input)
 end
 
---- Returns a list of images created by the specified pipeline
---- @param input table|nil The input table for the list_image_pipeline_images command
+--- AWS imagebuilder list-image-pipeline-images operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_pipeline_images(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-pipeline-images" }, input)
 end
 
---- Returns a list of image pipelines
---- @param input table|nil The input table for the list_image_pipelines command
+--- AWS imagebuilder list-image-pipelines operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_pipelines(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-pipelines" }, input)
 end
 
---- Returns a list of image recipes
---- @param input table|nil The input table for the list_image_recipes command
+--- AWS imagebuilder list-image-recipes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_recipes(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-recipes" }, input)
 end
 
---- Returns a list of image scan aggregations for your account
---- @param input table|nil The input table for the list_image_scan_finding_aggregations command
+--- AWS imagebuilder list-image-scan-finding-aggregations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_scan_finding_aggregations(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-scan-finding-aggregations" }, input)
 end
 
---- Returns a list of image scan findings for your account
---- @param input table|nil The input table for the list_image_scan_findings command
+--- AWS imagebuilder list-image-scan-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_scan_findings(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-image-scan-findings" }, input)
 end
 
---- Returns the list of images that you have access to
---- @param input table|nil The input table for the list_images command
+--- AWS imagebuilder list-images operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_images(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-images" }, input)
 end
 
---- Returns a list of infrastructure configurations
---- @param input table|nil The input table for the list_infrastructure_configurations command
+--- AWS imagebuilder list-infrastructure-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_infrastructure_configurations(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-infrastructure-configurations" }, input)
 end
 
---- List resources that the runtime instance of the image lifecycle identified for lifecycle actions
---- @param input table|nil The input table for the list_lifecycle_execution_resources command
+--- AWS imagebuilder list-lifecycle-execution-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lifecycle_execution_resources(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-lifecycle-execution-resources" }, input)
 end
 
---- Get the lifecycle runtime history for the specified resource
---- @param input table|nil The input table for the list_lifecycle_executions command
+--- AWS imagebuilder list-lifecycle-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lifecycle_executions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-lifecycle-executions" }, input)
 end
 
---- Get a list of lifecycle policies in your Amazon Web Services account
---- @param input table|nil The input table for the list_lifecycle_policies command
+--- AWS imagebuilder list-lifecycle-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lifecycle_policies(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-lifecycle-policies" }, input)
 end
 
---- Returns the list of tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS imagebuilder list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-tags-for-resource" }, input)
 end
 
---- Get a list of workflow steps that are waiting for action for workflows in your Amazon Web Services account
---- @param input table|nil The input table for the list_waiting_workflow_steps command
+--- AWS imagebuilder list-waiting-workflow-steps operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_waiting_workflow_steps(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-waiting-workflow-steps" }, input)
 end
 
---- Returns a list of build versions for a specific workflow resource
---- @param input table|nil The input table for the list_workflow_build_versions command
+--- AWS imagebuilder list-workflow-build-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflow_build_versions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-workflow-build-versions" }, input)
 end
 
---- Returns a list of workflow runtime instance metadata objects for a specific image build version
---- @param input table|nil The input table for the list_workflow_executions command
+--- AWS imagebuilder list-workflow-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflow_executions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-workflow-executions" }, input)
 end
 
---- Returns runtime data for each step in a runtime instance of the workflow that you specify in the request
---- @param input table|nil The input table for the list_workflow_step_executions command
+--- AWS imagebuilder list-workflow-step-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflow_step_executions(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-workflow-step-executions" }, input)
 end
 
---- Lists workflow build versions based on filtering parameters
---- @param input table|nil The input table for the list_workflows command
+--- AWS imagebuilder list-workflows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workflows(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "list-workflows" }, input)
 end
 
---- Applies a policy to a component
---- @param input table|nil The input table for the put_component_policy command
+--- AWS imagebuilder put-component-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_component_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "put-component-policy" }, input)
 end
 
---- Applies a policy to a container image
---- @param input table|nil The input table for the put_container_recipe_policy command
+--- AWS imagebuilder put-container-recipe-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_container_recipe_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "put-container-recipe-policy" }, input)
 end
 
---- Applies a policy to an image
---- @param input table|nil The input table for the put_image_policy command
+--- AWS imagebuilder put-image-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "put-image-policy" }, input)
 end
 
---- Applies a policy to an image recipe
---- @param input table|nil The input table for the put_image_recipe_policy command
+--- AWS imagebuilder put-image-recipe-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_image_recipe_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "put-image-recipe-policy" }, input)
 end
 
---- Pauses or resumes image creation when the associated workflow runs a WaitForAction step
---- @param input table|nil The input table for the send_workflow_step_action command
+--- AWS imagebuilder send-workflow-step-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_workflow_step_action(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "send-workflow-step-action" }, input)
 end
 
---- Manually triggers a pipeline to create an image
---- @param input table|nil The input table for the start_image_pipeline_execution command
+--- AWS imagebuilder start-image-pipeline-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_image_pipeline_execution(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "start-image-pipeline-execution" }, input)
 end
 
---- Begin asynchronous resource state update for lifecycle changes to the specified image resources
---- @param input table|nil The input table for the start_resource_state_update command
+--- AWS imagebuilder start-resource-state-update operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_resource_state_update(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "start-resource-state-update" }, input)
 end
 
---- Adds a tag to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS imagebuilder tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "tag-resource" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS imagebuilder untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "untag-resource" }, input)
 end
 
---- Updates a new distribution configuration
---- @param input table|nil The input table for the update_distribution_configuration command
+--- AWS imagebuilder update-distribution-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_distribution_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "update-distribution-configuration" }, input)
 end
 
---- Updates an image pipeline
---- @param input table|nil The input table for the update_image_pipeline command
+--- AWS imagebuilder update-image-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_image_pipeline(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "update-image-pipeline" }, input)
 end
 
---- Updates a new infrastructure configuration
---- @param input table|nil The input table for the update_infrastructure_configuration command
+--- AWS imagebuilder update-infrastructure-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_infrastructure_configuration(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "update-infrastructure-configuration" }, input)
 end
 
---- Update the specified lifecycle policy
---- @param input table|nil The input table for the update_lifecycle_policy command
+--- AWS imagebuilder update-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "imagebuilder", "update-lifecycle-policy" }, input)

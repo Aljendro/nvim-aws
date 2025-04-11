@@ -85,6 +85,11 @@ describe("AWS snowball service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_cluster_jobs", function()
 		local result = service.list_cluster_jobs()
 		assert.is_true(result.success)

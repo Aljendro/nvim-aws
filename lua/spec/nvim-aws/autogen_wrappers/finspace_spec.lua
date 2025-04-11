@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.finspace")
 
 describe("AWS finspace service testing", function()
-	it("should generate a cli skeleton with create_environment", function()
-		local result = service.create_environment()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with create_kx_changeset", function()
 		local result = service.create_kx_changeset()
 		assert.is_true(result.success)
@@ -50,11 +45,6 @@ describe("AWS finspace service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with delete_environment", function()
-		local result = service.delete_environment()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with delete_kx_cluster", function()
 		local result = service.delete_kx_cluster()
 		assert.is_true(result.success)
@@ -92,11 +82,6 @@ describe("AWS finspace service testing", function()
 
 	it("should generate a cli skeleton with delete_kx_volume", function()
 		local result = service.delete_kx_volume()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_environment", function()
-		local result = service.get_environment()
 		assert.is_true(result.success)
 	end)
 
@@ -145,8 +130,8 @@ describe("AWS finspace service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_environments", function()
-		local result = service.list_environments()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -207,11 +192,6 @@ describe("AWS finspace service testing", function()
 
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with update_environment", function()
-		local result = service.update_environment()
 		assert.is_true(result.success)
 	end)
 

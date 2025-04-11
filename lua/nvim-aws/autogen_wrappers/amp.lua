@@ -6,99 +6,197 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS AMP service functions
 local M = {}
 
---- The CreateScraper operation creates a scraper to collect metrics
---- @param input table|nil The input table for the create_scraper command
+--- AWS amp create-alert-manager-definition operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_alert_manager_definition(input)
+	return common.execute_aws_command_with_input({ "amp", "create-alert-manager-definition" }, input)
+end
+
+--- AWS amp create-logging-configuration operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_logging_configuration(input)
+	return common.execute_aws_command_with_input({ "amp", "create-logging-configuration" }, input)
+end
+
+--- AWS amp create-rule-groups-namespace operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_rule_groups_namespace(input)
+	return common.execute_aws_command_with_input({ "amp", "create-rule-groups-namespace" }, input)
+end
+
+--- AWS amp create-scraper operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "create-scraper" }, input)
 end
 
---- Creates a Prometheus workspace
---- @param input table|nil The input table for the create_workspace command
+--- AWS amp create-workspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "create-workspace" }, input)
 end
 
---- The DeleteScraper operation deletes one scraper, and stops any metrics collection that the scraper performs
---- @param input table|nil The input table for the delete_scraper command
+--- AWS amp delete-alert-manager-definition operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_alert_manager_definition(input)
+	return common.execute_aws_command_with_input({ "amp", "delete-alert-manager-definition" }, input)
+end
+
+--- AWS amp delete-logging-configuration operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_logging_configuration(input)
+	return common.execute_aws_command_with_input({ "amp", "delete-logging-configuration" }, input)
+end
+
+--- AWS amp delete-rule-groups-namespace operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_rule_groups_namespace(input)
+	return common.execute_aws_command_with_input({ "amp", "delete-rule-groups-namespace" }, input)
+end
+
+--- AWS amp delete-scraper operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "delete-scraper" }, input)
 end
 
---- Deletes an existing workspace
---- @param input table|nil The input table for the delete_workspace command
+--- AWS amp delete-workspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "delete-workspace" }, input)
 end
 
---- The DescribeScraper operation displays information about an existing scraper
---- @param input table|nil The input table for the describe_scraper command
+--- AWS amp describe-alert-manager-definition operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.describe_alert_manager_definition(input)
+	return common.execute_aws_command_with_input({ "amp", "describe-alert-manager-definition" }, input)
+end
+
+--- AWS amp describe-logging-configuration operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.describe_logging_configuration(input)
+	return common.execute_aws_command_with_input({ "amp", "describe-logging-configuration" }, input)
+end
+
+--- AWS amp describe-rule-groups-namespace operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.describe_rule_groups_namespace(input)
+	return common.execute_aws_command_with_input({ "amp", "describe-rule-groups-namespace" }, input)
+end
+
+--- AWS amp describe-scraper operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "describe-scraper" }, input)
 end
 
---- Returns information about an existing workspace
---- @param input table|nil The input table for the describe_workspace command
+--- AWS amp describe-workspace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_workspace(input)
 	return common.execute_aws_command_with_input({ "amp", "describe-workspace" }, input)
 end
 
---- The GetDefaultScraperConfiguration operation returns the default scraper configuration used when Amazon EKS creates a scraper for you
---- @param input table|nil The input table for the get_default_scraper_configuration command
+--- AWS amp get-default-scraper-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_default_scraper_configuration(input)
 	return common.execute_aws_command_with_input({ "amp", "get-default-scraper-configuration" }, input)
 end
 
---- The ListScrapers operation lists all of the scrapers in your account
---- @param input table|nil The input table for the list_scrapers command
+--- AWS amp help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "amp", "help" }, input)
+end
+
+--- AWS amp list-rule-groups-namespaces operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_rule_groups_namespaces(input)
+	return common.execute_aws_command_with_input({ "amp", "list-rule-groups-namespaces" }, input)
+end
+
+--- AWS amp list-scrapers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scrapers(input)
 	return common.execute_aws_command_with_input({ "amp", "list-scrapers" }, input)
 end
 
---- The ListTagsForResource operation returns the tags that are associated with an Amazon Managed Service for Prometheus resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS amp list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "list-tags-for-resource" }, input)
 end
 
---- Lists all of the Amazon Managed Service for Prometheus workspaces in your account
---- @param input table|nil The input table for the list_workspaces command
+--- AWS amp list-workspaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workspaces(input)
 	return common.execute_aws_command_with_input({ "amp", "list-workspaces" }, input)
 end
 
---- The TagResource operation associates tags with an Amazon Managed Service for Prometheus resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS amp put-alert-manager-definition operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_alert_manager_definition(input)
+	return common.execute_aws_command_with_input({ "amp", "put-alert-manager-definition" }, input)
+end
+
+--- AWS amp put-rule-groups-namespace operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_rule_groups_namespace(input)
+	return common.execute_aws_command_with_input({ "amp", "put-rule-groups-namespace" }, input)
+end
+
+--- AWS amp tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "tag-resource" }, input)
 end
 
---- Removes the specified tags from an Amazon Managed Service for Prometheus resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS amp untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "amp", "untag-resource" }, input)
 end
 
---- Updates an existing scraper
---- @param input table|nil The input table for the update_scraper command
+--- AWS amp update-logging-configuration operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_logging_configuration(input)
+	return common.execute_aws_command_with_input({ "amp", "update-logging-configuration" }, input)
+end
+
+--- AWS amp update-scraper operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_scraper(input)
 	return common.execute_aws_command_with_input({ "amp", "update-scraper" }, input)
 end
 
---- Updates the alias of an existing workspace
---- @param input table|nil The input table for the update_workspace_alias command
+--- AWS amp update-workspace-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workspace_alias(input)
 	return common.execute_aws_command_with_input({ "amp", "update-workspace-alias" }, input)

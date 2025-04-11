@@ -6,148 +6,155 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SYNTHETICS service functions
 local M = {}
 
---- Associates a canary with a group
---- @param input table|nil The input table for the associate_resource command
+--- AWS synthetics associate-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_resource(input)
 	return common.execute_aws_command_with_input({ "synthetics", "associate-resource" }, input)
 end
 
---- Creates a canary
---- @param input table|nil The input table for the create_canary command
+--- AWS synthetics create-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "create-canary" }, input)
 end
 
---- Creates a group which you can use to associate canaries with each other, including cross-Region canaries
---- @param input table|nil The input table for the create_group command
+--- AWS synthetics create-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "synthetics", "create-group" }, input)
 end
 
---- Permanently deletes the specified canary
---- @param input table|nil The input table for the delete_canary command
+--- AWS synthetics delete-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "delete-canary" }, input)
 end
 
---- Deletes a group
---- @param input table|nil The input table for the delete_group command
+--- AWS synthetics delete-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "synthetics", "delete-group" }, input)
 end
 
---- This operation returns a list of the canaries in your account, along with full details about each canary
---- @param input table|nil The input table for the describe_canaries command
+--- AWS synthetics describe-canaries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_canaries(input)
 	return common.execute_aws_command_with_input({ "synthetics", "describe-canaries" }, input)
 end
 
---- Use this operation to see information from the most recent run of each canary that you have created
---- @param input table|nil The input table for the describe_canaries_last_run command
+--- AWS synthetics describe-canaries-last-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_canaries_last_run(input)
 	return common.execute_aws_command_with_input({ "synthetics", "describe-canaries-last-run" }, input)
 end
 
---- Returns a list of Synthetics canary runtime versions
---- @param input table|nil The input table for the describe_runtime_versions command
+--- AWS synthetics describe-runtime-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_runtime_versions(input)
 	return common.execute_aws_command_with_input({ "synthetics", "describe-runtime-versions" }, input)
 end
 
---- Removes a canary from a group
---- @param input table|nil The input table for the disassociate_resource command
+--- AWS synthetics disassociate-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_resource(input)
 	return common.execute_aws_command_with_input({ "synthetics", "disassociate-resource" }, input)
 end
 
---- Retrieves complete information about one canary
---- @param input table|nil The input table for the get_canary command
+--- AWS synthetics get-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "get-canary" }, input)
 end
 
---- Retrieves a list of runs for a specified canary
---- @param input table|nil The input table for the get_canary_runs command
+--- AWS synthetics get-canary-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_canary_runs(input)
 	return common.execute_aws_command_with_input({ "synthetics", "get-canary-runs" }, input)
 end
 
---- Returns information about one group
---- @param input table|nil The input table for the get_group command
+--- AWS synthetics get-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group(input)
 	return common.execute_aws_command_with_input({ "synthetics", "get-group" }, input)
 end
 
---- Returns a list of the groups that the specified canary is associated with
---- @param input table|nil The input table for the list_associated_groups command
+--- AWS synthetics help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "synthetics", "help" }, input)
+end
+
+--- AWS synthetics list-associated-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associated_groups(input)
 	return common.execute_aws_command_with_input({ "synthetics", "list-associated-groups" }, input)
 end
 
---- This operation returns a list of the ARNs of the canaries that are associated with the specified group
---- @param input table|nil The input table for the list_group_resources command
+--- AWS synthetics list-group-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_resources(input)
 	return common.execute_aws_command_with_input({ "synthetics", "list-group-resources" }, input)
 end
 
---- Returns a list of all groups in the account, displaying their names, unique IDs, and ARNs
---- @param input table|nil The input table for the list_groups command
+--- AWS synthetics list-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "synthetics", "list-groups" }, input)
 end
 
---- Displays the tags associated with a canary or group
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS synthetics list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "synthetics", "list-tags-for-resource" }, input)
 end
 
---- Use this operation to run a canary that has already been created
---- @param input table|nil The input table for the start_canary command
+--- AWS synthetics start-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "start-canary" }, input)
 end
 
---- Stops the canary to prevent all future runs
---- @param input table|nil The input table for the stop_canary command
+--- AWS synthetics stop-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "stop-canary" }, input)
 end
 
---- Assigns one or more tags (key-value pairs) to the specified canary or group
---- @param input table|nil The input table for the tag_resource command
+--- AWS synthetics tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "synthetics", "tag-resource" }, input)
 end
 
---- Removes one or more tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS synthetics untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "synthetics", "untag-resource" }, input)
 end
 
---- Updates the configuration of a canary that has already been created
---- @param input table|nil The input table for the update_canary command
+--- AWS synthetics update-canary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_canary(input)
 	return common.execute_aws_command_with_input({ "synthetics", "update-canary" }, input)

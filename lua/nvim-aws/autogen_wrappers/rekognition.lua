@@ -6,526 +6,533 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS REKOGNITION service functions
 local M = {}
 
---- Associates one or more faces with an existing UserID
---- @param input table|nil The input table for the associate_faces command
+--- AWS rekognition associate-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "associate-faces" }, input)
 end
 
---- Compares a face in the source input image with each of the 100 largest faces detected in the target input image
---- @param input table|nil The input table for the compare_faces command
+--- AWS rekognition compare-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.compare_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "compare-faces" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the copy_project_version command
+--- AWS rekognition copy-project-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_project_version(input)
 	return common.execute_aws_command_with_input({ "rekognition", "copy-project-version" }, input)
 end
 
---- Creates a collection in an AWS Region
---- @param input table|nil The input table for the create_collection command
+--- AWS rekognition create-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_collection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-collection" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the create_dataset command
+--- AWS rekognition create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-dataset" }, input)
 end
 
---- This API operation initiates a Face Liveness session
---- @param input table|nil The input table for the create_face_liveness_session command
+--- AWS rekognition create-face-liveness-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_face_liveness_session(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-face-liveness-session" }, input)
 end
 
---- Creates a new Amazon Rekognition project
---- @param input table|nil The input table for the create_project command
+--- AWS rekognition create-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-project" }, input)
 end
 
---- Creates a new version of Amazon Rekognition project (like a Custom Labels model or a custom adapter) and begins training
---- @param input table|nil The input table for the create_project_version command
+--- AWS rekognition create-project-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project_version(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-project-version" }, input)
 end
 
---- Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces or to detect labels in a streaming video
---- @param input table|nil The input table for the create_stream_processor command
+--- AWS rekognition create-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-stream-processor" }, input)
 end
 
---- Creates a new User within a collection specified by CollectionId
---- @param input table|nil The input table for the create_user command
+--- AWS rekognition create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "rekognition", "create-user" }, input)
 end
 
---- Deletes the specified collection
---- @param input table|nil The input table for the delete_collection command
+--- AWS rekognition delete-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_collection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-collection" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the delete_dataset command
+--- AWS rekognition delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-dataset" }, input)
 end
 
---- Deletes faces from a collection
---- @param input table|nil The input table for the delete_faces command
+--- AWS rekognition delete-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-faces" }, input)
 end
 
---- Deletes a Amazon Rekognition project
---- @param input table|nil The input table for the delete_project command
+--- AWS rekognition delete-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-project" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the delete_project_policy command
+--- AWS rekognition delete-project-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project_policy(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-project-policy" }, input)
 end
 
---- Deletes a Rekognition project model or project version, like a Amazon Rekognition Custom Labels model or a custom adapter
---- @param input table|nil The input table for the delete_project_version command
+--- AWS rekognition delete-project-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project_version(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-project-version" }, input)
 end
 
---- Deletes the stream processor identified by Name
---- @param input table|nil The input table for the delete_stream_processor command
+--- AWS rekognition delete-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-stream-processor" }, input)
 end
 
---- Deletes the specified UserID within the collection
---- @param input table|nil The input table for the delete_user command
+--- AWS rekognition delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "rekognition", "delete-user" }, input)
 end
 
---- Describes the specified collection
---- @param input table|nil The input table for the describe_collection command
+--- AWS rekognition describe-collection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_collection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "describe-collection" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the describe_dataset command
+--- AWS rekognition describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "rekognition", "describe-dataset" }, input)
 end
 
---- Lists and describes the versions of an Amazon Rekognition project
---- @param input table|nil The input table for the describe_project_versions command
+--- AWS rekognition describe-project-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_project_versions(input)
 	return common.execute_aws_command_with_input({ "rekognition", "describe-project-versions" }, input)
 end
 
---- Gets information about your Rekognition projects
---- @param input table|nil The input table for the describe_projects command
+--- AWS rekognition describe-projects operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_projects(input)
 	return common.execute_aws_command_with_input({ "rekognition", "describe-projects" }, input)
 end
 
---- Provides information about a stream processor created by CreateStreamProcessor
---- @param input table|nil The input table for the describe_stream_processor command
+--- AWS rekognition describe-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "describe-stream-processor" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the detect_custom_labels command
+--- AWS rekognition detect-custom-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_custom_labels(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-custom-labels" }, input)
 end
 
---- Detects faces within an image that is provided as input
---- @param input table|nil The input table for the detect_faces command
+--- AWS rekognition detect-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-faces" }, input)
 end
 
---- Detects instances of real-world entities within an image (JPEG or PNG) provided as input
---- @param input table|nil The input table for the detect_labels command
+--- AWS rekognition detect-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_labels(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-labels" }, input)
 end
 
---- Detects unsafe content in a specified JPEG or PNG format image
---- @param input table|nil The input table for the detect_moderation_labels command
+--- AWS rekognition detect-moderation-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_moderation_labels(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-moderation-labels" }, input)
 end
 
---- Detects Personal Protective Equipment (PPE) worn by people detected in an image
---- @param input table|nil The input table for the detect_protective_equipment command
+--- AWS rekognition detect-protective-equipment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_protective_equipment(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-protective-equipment" }, input)
 end
 
---- Detects text in the input image and converts it into machine-readable text
---- @param input table|nil The input table for the detect_text command
+--- AWS rekognition detect-text operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_text(input)
 	return common.execute_aws_command_with_input({ "rekognition", "detect-text" }, input)
 end
 
---- Removes the association between a Face supplied in an array of FaceIds and the User
---- @param input table|nil The input table for the disassociate_faces command
+--- AWS rekognition disassociate-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "disassociate-faces" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the distribute_dataset_entries command
+--- AWS rekognition distribute-dataset-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.distribute_dataset_entries(input)
 	return common.execute_aws_command_with_input({ "rekognition", "distribute-dataset-entries" }, input)
 end
 
---- Gets the name and additional information about a celebrity based on their Amazon Rekognition ID
---- @param input table|nil The input table for the get_celebrity_info command
+--- AWS rekognition get-celebrity-info operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_celebrity_info(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-celebrity-info" }, input)
 end
 
---- Gets the celebrity recognition results for a Amazon Rekognition Video analysis started by StartCelebrityRecognition
---- @param input table|nil The input table for the get_celebrity_recognition command
+--- AWS rekognition get-celebrity-recognition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_celebrity_recognition(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-celebrity-recognition" }, input)
 end
 
---- Gets the inappropriate, unwanted, or offensive content analysis results for a Amazon Rekognition Video analysis started by StartContentModeration
---- @param input table|nil The input table for the get_content_moderation command
+--- AWS rekognition get-content-moderation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_content_moderation(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-content-moderation" }, input)
 end
 
---- Gets face detection results for a Amazon Rekognition Video analysis started by StartFaceDetection
---- @param input table|nil The input table for the get_face_detection command
+--- AWS rekognition get-face-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_face_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-face-detection" }, input)
 end
 
---- Retrieves the results of a specific Face Liveness session
---- @param input table|nil The input table for the get_face_liveness_session_results command
+--- AWS rekognition get-face-liveness-session-results operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_face_liveness_session_results(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-face-liveness-session-results" }, input)
 end
 
---- Gets the face search results for Amazon Rekognition Video face search started by StartFaceSearch
---- @param input table|nil The input table for the get_face_search command
+--- AWS rekognition get-face-search operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_face_search(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-face-search" }, input)
 end
 
---- Gets the label detection results of a Amazon Rekognition Video analysis started by StartLabelDetection
---- @param input table|nil The input table for the get_label_detection command
+--- AWS rekognition get-label-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_label_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-label-detection" }, input)
 end
 
---- Retrieves the results for a given media analysis job
---- @param input table|nil The input table for the get_media_analysis_job command
+--- AWS rekognition get-media-analysis-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_media_analysis_job(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-media-analysis-job" }, input)
 end
 
---- Gets the path tracking results of a Amazon Rekognition Video analysis started by StartPersonTracking
---- @param input table|nil The input table for the get_person_tracking command
+--- AWS rekognition get-person-tracking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_person_tracking(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-person-tracking" }, input)
 end
 
---- Gets the segment detection results of a Amazon Rekognition Video analysis started by StartSegmentDetection
---- @param input table|nil The input table for the get_segment_detection command
+--- AWS rekognition get-segment-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_segment_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-segment-detection" }, input)
 end
 
---- Gets the text detection results of a Amazon Rekognition Video analysis started by StartTextDetection
---- @param input table|nil The input table for the get_text_detection command
+--- AWS rekognition get-text-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_text_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "get-text-detection" }, input)
 end
 
---- Detects faces in the input image and adds them to the specified collection
---- @param input table|nil The input table for the index_faces command
+--- AWS rekognition help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "rekognition", "help" }, input)
+end
+
+--- AWS rekognition index-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.index_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "index-faces" }, input)
 end
 
---- Returns list of collection IDs in your account
---- @param input table|nil The input table for the list_collections command
+--- AWS rekognition list-collections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collections(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-collections" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the list_dataset_entries command
+--- AWS rekognition list-dataset-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_entries(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-dataset-entries" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the list_dataset_labels command
+--- AWS rekognition list-dataset-labels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_labels(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-dataset-labels" }, input)
 end
 
---- Returns metadata for faces in the specified collection
---- @param input table|nil The input table for the list_faces command
+--- AWS rekognition list-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-faces" }, input)
 end
 
---- Returns a list of media analysis jobs
---- @param input table|nil The input table for the list_media_analysis_jobs command
+--- AWS rekognition list-media-analysis-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_media_analysis_jobs(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-media-analysis-jobs" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the list_project_policies command
+--- AWS rekognition list-project-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_project_policies(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-project-policies" }, input)
 end
 
---- Gets a list of stream processors that you have created with CreateStreamProcessor
---- @param input table|nil The input table for the list_stream_processors command
+--- AWS rekognition list-stream-processors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_stream_processors(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-stream-processors" }, input)
 end
 
---- Returns a list of tags in an Amazon Rekognition collection, stream processor, or Custom Labels model
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS rekognition list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-tags-for-resource" }, input)
 end
 
---- Returns metadata of the User such as UserID in the specified collection
---- @param input table|nil The input table for the list_users command
+--- AWS rekognition list-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "rekognition", "list-users" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the put_project_policy command
+--- AWS rekognition put-project-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_project_policy(input)
 	return common.execute_aws_command_with_input({ "rekognition", "put-project-policy" }, input)
 end
 
---- Returns an array of celebrities recognized in the input image
---- @param input table|nil The input table for the recognize_celebrities command
+--- AWS rekognition recognize-celebrities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.recognize_celebrities(input)
 	return common.execute_aws_command_with_input({ "rekognition", "recognize-celebrities" }, input)
 end
 
---- For a given input face ID, searches for matching faces in the collection the face belongs to
---- @param input table|nil The input table for the search_faces command
+--- AWS rekognition search-faces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_faces(input)
 	return common.execute_aws_command_with_input({ "rekognition", "search-faces" }, input)
 end
 
---- For a given input image, first detects the largest face in the image, and then searches the specified collection for matching faces
---- @param input table|nil The input table for the search_faces_by_image command
+--- AWS rekognition search-faces-by-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_faces_by_image(input)
 	return common.execute_aws_command_with_input({ "rekognition", "search-faces-by-image" }, input)
 end
 
---- Searches for UserIDs within a collection based on a FaceId or UserId
---- @param input table|nil The input table for the search_users command
+--- AWS rekognition search-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_users(input)
 	return common.execute_aws_command_with_input({ "rekognition", "search-users" }, input)
 end
 
---- Searches for UserIDs using a supplied image
---- @param input table|nil The input table for the search_users_by_image command
+--- AWS rekognition search-users-by-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_users_by_image(input)
 	return common.execute_aws_command_with_input({ "rekognition", "search-users-by-image" }, input)
 end
 
---- Starts asynchronous recognition of celebrities in a stored video
---- @param input table|nil The input table for the start_celebrity_recognition command
+--- AWS rekognition start-celebrity-recognition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_celebrity_recognition(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-celebrity-recognition" }, input)
 end
 
---- Starts asynchronous detection of inappropriate, unwanted, or offensive content in a stored video
---- @param input table|nil The input table for the start_content_moderation command
+--- AWS rekognition start-content-moderation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_content_moderation(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-content-moderation" }, input)
 end
 
---- Starts asynchronous detection of faces in a stored video
---- @param input table|nil The input table for the start_face_detection command
+--- AWS rekognition start-face-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_face_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-face-detection" }, input)
 end
 
---- Starts the asynchronous search for faces in a collection that match the faces of persons detected in a stored video
---- @param input table|nil The input table for the start_face_search command
+--- AWS rekognition start-face-search operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_face_search(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-face-search" }, input)
 end
 
---- Starts asynchronous detection of labels in a stored video
---- @param input table|nil The input table for the start_label_detection command
+--- AWS rekognition start-label-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_label_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-label-detection" }, input)
 end
 
---- Initiates a new media analysis job
---- @param input table|nil The input table for the start_media_analysis_job command
+--- AWS rekognition start-media-analysis-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_media_analysis_job(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-media-analysis-job" }, input)
 end
 
---- Starts the asynchronous tracking of a person's path in a stored video
---- @param input table|nil The input table for the start_person_tracking command
+--- AWS rekognition start-person-tracking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_person_tracking(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-person-tracking" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the start_project_version command
+--- AWS rekognition start-project-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_project_version(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-project-version" }, input)
 end
 
---- Starts asynchronous detection of segment detection in a stored video
---- @param input table|nil The input table for the start_segment_detection command
+--- AWS rekognition start-segment-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_segment_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-segment-detection" }, input)
 end
 
---- Starts processing a stream processor
---- @param input table|nil The input table for the start_stream_processor command
+--- AWS rekognition start-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-stream-processor" }, input)
 end
 
---- Starts asynchronous detection of text in a stored video
---- @param input table|nil The input table for the start_text_detection command
+--- AWS rekognition start-text-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_text_detection(input)
 	return common.execute_aws_command_with_input({ "rekognition", "start-text-detection" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the stop_project_version command
+--- AWS rekognition stop-project-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_project_version(input)
 	return common.execute_aws_command_with_input({ "rekognition", "stop-project-version" }, input)
 end
 
---- Stops a running stream processor that was created by CreateStreamProcessor
---- @param input table|nil The input table for the stop_stream_processor command
+--- AWS rekognition stop-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "stop-stream-processor" }, input)
 end
 
---- Adds one or more key-value tags to an Amazon Rekognition collection, stream processor, or Custom Labels model
---- @param input table|nil The input table for the tag_resource command
+--- AWS rekognition tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "rekognition", "tag-resource" }, input)
 end
 
---- Removes one or more tags from an Amazon Rekognition collection, stream processor, or Custom Labels model
---- @param input table|nil The input table for the untag_resource command
+--- AWS rekognition untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "rekognition", "untag-resource" }, input)
 end
 
---- This operation applies only to Amazon Rekognition Custom Labels
---- @param input table|nil The input table for the update_dataset_entries command
+--- AWS rekognition update-dataset-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset_entries(input)
 	return common.execute_aws_command_with_input({ "rekognition", "update-dataset-entries" }, input)
 end
 
---- Allows you to update a stream processor
---- @param input table|nil The input table for the update_stream_processor command
+--- AWS rekognition update-stream-processor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "update-stream-processor" }, input)

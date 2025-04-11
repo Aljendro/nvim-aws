@@ -10,13 +10,43 @@ describe("AWS wisdom service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_assistant_association", function()
+		local result = service.create_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_content", function()
+		local result = service.create_content()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with create_knowledge_base", function()
 		local result = service.create_knowledge_base()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_quick_response", function()
+		local result = service.create_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_session", function()
+		local result = service.create_session()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_assistant", function()
 		local result = service.delete_assistant()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_assistant_association", function()
+		local result = service.delete_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_content", function()
+		local result = service.delete_content()
 		assert.is_true(result.success)
 	end)
 
@@ -30,8 +60,28 @@ describe("AWS wisdom service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_quick_response", function()
+		local result = service.delete_quick_response()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_assistant", function()
 		local result = service.get_assistant()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_assistant_association", function()
+		local result = service.get_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_content", function()
+		local result = service.get_content()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_content_summary", function()
+		local result = service.get_content_summary()
 		assert.is_true(result.success)
 	end)
 
@@ -45,13 +95,33 @@ describe("AWS wisdom service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_recommendations", function()
-		local result = service.get_recommendations()
+	it("should generate a cli skeleton with get_quick_response", function()
+		local result = service.get_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_session", function()
+		local result = service.get_session()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_assistant_associations", function()
+		local result = service.list_assistant_associations()
 		assert.is_true(result.success)
 	end)
 
 	it("should generate a cli skeleton with list_assistants", function()
 		local result = service.list_assistants()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_contents", function()
+		local result = service.list_contents()
 		assert.is_true(result.success)
 	end)
 
@@ -65,6 +135,11 @@ describe("AWS wisdom service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_quick_responses", function()
+		local result = service.list_quick_responses()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
@@ -72,11 +147,6 @@ describe("AWS wisdom service testing", function()
 
 	it("should generate a cli skeleton with notify_recommendations_received", function()
 		local result = service.notify_recommendations_received()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with query_assistant", function()
-		local result = service.query_assistant()
 		assert.is_true(result.success)
 	end)
 
@@ -120,8 +190,18 @@ describe("AWS wisdom service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with update_content", function()
+		local result = service.update_content()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with update_knowledge_base_template_uri", function()
 		local result = service.update_knowledge_base_template_uri()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_quick_response", function()
+		local result = service.update_quick_response()
 		assert.is_true(result.success)
 	end)
 

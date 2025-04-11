@@ -65,6 +65,11 @@ describe("AWS acm-pca service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_certificate_authority_certificate", function()
 		local result = service.import_certificate_authority_certificate()
 		assert.is_true(result.success)

@@ -5,8 +5,58 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.qconnect")
 
 describe("AWS qconnect service testing", function()
+	it("should generate a cli skeleton with activate_message_template", function()
+		local result = service.activate_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_agent", function()
+		local result = service.create_ai_agent()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_agent_version", function()
+		local result = service.create_ai_agent_version()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_guardrail", function()
+		local result = service.create_ai_guardrail()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_guardrail_version", function()
+		local result = service.create_ai_guardrail_version()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_prompt", function()
+		local result = service.create_ai_prompt()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_ai_prompt_version", function()
+		local result = service.create_ai_prompt_version()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with create_assistant", function()
 		local result = service.create_assistant()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_assistant_association", function()
+		local result = service.create_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_content", function()
+		local result = service.create_content()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_content_association", function()
+		local result = service.create_content_association()
 		assert.is_true(result.success)
 	end)
 
@@ -15,8 +65,83 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_message_template", function()
+		local result = service.create_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_message_template_attachment", function()
+		local result = service.create_message_template_attachment()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_message_template_version", function()
+		local result = service.create_message_template_version()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_quick_response", function()
+		local result = service.create_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_session", function()
+		local result = service.create_session()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with deactivate_message_template", function()
+		local result = service.deactivate_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_agent", function()
+		local result = service.delete_ai_agent()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_agent_version", function()
+		local result = service.delete_ai_agent_version()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_guardrail", function()
+		local result = service.delete_ai_guardrail()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_guardrail_version", function()
+		local result = service.delete_ai_guardrail_version()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_prompt", function()
+		local result = service.delete_ai_prompt()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ai_prompt_version", function()
+		local result = service.delete_ai_prompt_version()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_assistant", function()
 		local result = service.delete_assistant()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_assistant_association", function()
+		local result = service.delete_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_content", function()
+		local result = service.delete_content()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_content_association", function()
+		local result = service.delete_content_association()
 		assert.is_true(result.success)
 	end)
 
@@ -30,8 +155,58 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_message_template", function()
+		local result = service.delete_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_message_template_attachment", function()
+		local result = service.delete_message_template_attachment()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_quick_response", function()
+		local result = service.delete_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_ai_agent", function()
+		local result = service.get_ai_agent()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_ai_guardrail", function()
+		local result = service.get_ai_guardrail()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_ai_prompt", function()
+		local result = service.get_ai_prompt()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_assistant", function()
 		local result = service.get_assistant()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_assistant_association", function()
+		local result = service.get_assistant_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_content", function()
+		local result = service.get_content()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_content_association", function()
+		local result = service.get_content_association()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_content_summary", function()
+		local result = service.get_content_summary()
 		assert.is_true(result.success)
 	end)
 
@@ -45,13 +220,78 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_recommendations", function()
-		local result = service.get_recommendations()
+	it("should generate a cli skeleton with get_message_template", function()
+		local result = service.get_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_next_message", function()
+		local result = service.get_next_message()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_quick_response", function()
+		local result = service.get_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_session", function()
+		local result = service.get_session()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_agent_versions", function()
+		local result = service.list_ai_agent_versions()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_agents", function()
+		local result = service.list_ai_agents()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_guardrail_versions", function()
+		local result = service.list_ai_guardrail_versions()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_guardrails", function()
+		local result = service.list_ai_guardrails()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_prompt_versions", function()
+		local result = service.list_ai_prompt_versions()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ai_prompts", function()
+		local result = service.list_ai_prompts()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_assistant_associations", function()
+		local result = service.list_assistant_associations()
 		assert.is_true(result.success)
 	end)
 
 	it("should generate a cli skeleton with list_assistants", function()
 		local result = service.list_assistants()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_content_associations", function()
+		local result = service.list_content_associations()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_contents", function()
+		local result = service.list_contents()
 		assert.is_true(result.success)
 	end)
 
@@ -62,6 +302,26 @@ describe("AWS qconnect service testing", function()
 
 	it("should generate a cli skeleton with list_knowledge_bases", function()
 		local result = service.list_knowledge_bases()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_message_template_versions", function()
+		local result = service.list_message_template_versions()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_message_templates", function()
+		local result = service.list_message_templates()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_messages", function()
+		local result = service.list_messages()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_quick_responses", function()
+		local result = service.list_quick_responses()
 		assert.is_true(result.success)
 	end)
 
@@ -80,11 +340,6 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with query_assistant", function()
-		local result = service.query_assistant()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with remove_assistant_ai_agent", function()
 		local result = service.remove_assistant_ai_agent()
 		assert.is_true(result.success)
@@ -92,6 +347,11 @@ describe("AWS qconnect service testing", function()
 
 	it("should generate a cli skeleton with remove_knowledge_base_template_uri", function()
 		local result = service.remove_knowledge_base_template_uri()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with render_message_template", function()
+		local result = service.render_message_template()
 		assert.is_true(result.success)
 	end)
 
@@ -115,6 +375,11 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with send_message", function()
+		local result = service.send_message()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with start_content_upload", function()
 		local result = service.start_content_upload()
 		assert.is_true(result.success)
@@ -135,13 +400,58 @@ describe("AWS qconnect service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with update_ai_agent", function()
+		local result = service.update_ai_agent()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_ai_guardrail", function()
+		local result = service.update_ai_guardrail()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_ai_prompt", function()
+		local result = service.update_ai_prompt()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with update_assistant_ai_agent", function()
 		local result = service.update_assistant_ai_agent()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with update_content", function()
+		local result = service.update_content()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with update_knowledge_base_template_uri", function()
 		local result = service.update_knowledge_base_template_uri()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_message_template", function()
+		local result = service.update_message_template()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_message_template_metadata", function()
+		local result = service.update_message_template_metadata()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_quick_response", function()
+		local result = service.update_quick_response()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_session", function()
+		local result = service.update_session()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_session_data", function()
+		local result = service.update_session_data()
 		assert.is_true(result.success)
 	end)
 

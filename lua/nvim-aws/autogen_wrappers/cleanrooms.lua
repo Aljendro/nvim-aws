@@ -6,589 +6,596 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLEANROOMS service functions
 local M = {}
 
---- Retrieves multiple analysis templates within a collaboration by their Amazon Resource Names (ARNs)
---- @param input table|nil The input table for the batch_get_collaboration_analysis_template command
+--- AWS cleanrooms batch-get-collaboration-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_collaboration_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "batch-get-collaboration-analysis-template" }, input)
 end
 
---- Retrieves multiple schemas by their identifiers
---- @param input table|nil The input table for the batch_get_schema command
+--- AWS cleanrooms batch-get-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_schema(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "batch-get-schema" }, input)
 end
 
---- Retrieves multiple analysis rule schemas
---- @param input table|nil The input table for the batch_get_schema_analysis_rule command
+--- AWS cleanrooms batch-get-schema-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_schema_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "batch-get-schema-analysis-rule" }, input)
 end
 
---- Creates a new analysis template
---- @param input table|nil The input table for the create_analysis_template command
+--- AWS cleanrooms create-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-analysis-template" }, input)
 end
 
---- Creates a new collaboration
---- @param input table|nil The input table for the create_collaboration command
+--- AWS cleanrooms create-collaboration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_collaboration(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-collaboration" }, input)
 end
 
---- Provides the details necessary to create a configured audience model association
---- @param input table|nil The input table for the create_configured_audience_model_association command
+--- AWS cleanrooms create-configured-audience-model-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_audience_model_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-configured-audience-model-association" }, input)
 end
 
---- Creates a new configured table resource
---- @param input table|nil The input table for the create_configured_table command
+--- AWS cleanrooms create-configured-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-configured-table" }, input)
 end
 
---- Creates a new analysis rule for a configured table
---- @param input table|nil The input table for the create_configured_table_analysis_rule command
+--- AWS cleanrooms create-configured-table-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_table_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-configured-table-analysis-rule" }, input)
 end
 
---- Creates a configured table association
---- @param input table|nil The input table for the create_configured_table_association command
+--- AWS cleanrooms create-configured-table-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_table_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-configured-table-association" }, input)
 end
 
---- Creates a new analysis rule for an associated configured table
---- @param input table|nil The input table for the create_configured_table_association_analysis_rule command
+--- AWS cleanrooms create-configured-table-association-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_table_association_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-configured-table-association-analysis-rule" }, input)
 end
 
---- Creates an ID mapping table
---- @param input table|nil The input table for the create_id_mapping_table command
+--- AWS cleanrooms create-id-mapping-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_id_mapping_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-id-mapping-table" }, input)
 end
 
---- Creates an ID namespace association
---- @param input table|nil The input table for the create_id_namespace_association command
+--- AWS cleanrooms create-id-namespace-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_id_namespace_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-id-namespace-association" }, input)
 end
 
---- Creates a membership for a specific collaboration identifier and joins the collaboration
---- @param input table|nil The input table for the create_membership command
+--- AWS cleanrooms create-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_membership(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-membership" }, input)
 end
 
---- Creates a privacy budget template for a specified membership
---- @param input table|nil The input table for the create_privacy_budget_template command
+--- AWS cleanrooms create-privacy-budget-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_privacy_budget_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "create-privacy-budget-template" }, input)
 end
 
---- Deletes an analysis template
---- @param input table|nil The input table for the delete_analysis_template command
+--- AWS cleanrooms delete-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-analysis-template" }, input)
 end
 
---- Deletes a collaboration
---- @param input table|nil The input table for the delete_collaboration command
+--- AWS cleanrooms delete-collaboration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_collaboration(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-collaboration" }, input)
 end
 
---- Provides the information necessary to delete a configured audience model association
---- @param input table|nil The input table for the delete_configured_audience_model_association command
+--- AWS cleanrooms delete-configured-audience-model-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_audience_model_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-configured-audience-model-association" }, input)
 end
 
---- Deletes a configured table
---- @param input table|nil The input table for the delete_configured_table command
+--- AWS cleanrooms delete-configured-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-configured-table" }, input)
 end
 
---- Deletes a configured table analysis rule
---- @param input table|nil The input table for the delete_configured_table_analysis_rule command
+--- AWS cleanrooms delete-configured-table-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_table_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-configured-table-analysis-rule" }, input)
 end
 
---- Deletes a configured table association
---- @param input table|nil The input table for the delete_configured_table_association command
+--- AWS cleanrooms delete-configured-table-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_table_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-configured-table-association" }, input)
 end
 
---- Deletes an analysis rule for a configured table association
---- @param input table|nil The input table for the delete_configured_table_association_analysis_rule command
+--- AWS cleanrooms delete-configured-table-association-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_table_association_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-configured-table-association-analysis-rule" }, input)
 end
 
---- Deletes an ID mapping table
---- @param input table|nil The input table for the delete_id_mapping_table command
+--- AWS cleanrooms delete-id-mapping-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_id_mapping_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-id-mapping-table" }, input)
 end
 
---- Deletes an ID namespace association
---- @param input table|nil The input table for the delete_id_namespace_association command
+--- AWS cleanrooms delete-id-namespace-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_id_namespace_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-id-namespace-association" }, input)
 end
 
---- Removes the specified member from a collaboration
---- @param input table|nil The input table for the delete_member command
+--- AWS cleanrooms delete-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_member(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-member" }, input)
 end
 
---- Deletes a specified membership
---- @param input table|nil The input table for the delete_membership command
+--- AWS cleanrooms delete-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_membership(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-membership" }, input)
 end
 
---- Deletes a privacy budget template for a specified membership
---- @param input table|nil The input table for the delete_privacy_budget_template command
+--- AWS cleanrooms delete-privacy-budget-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_privacy_budget_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "delete-privacy-budget-template" }, input)
 end
 
---- Retrieves an analysis template
---- @param input table|nil The input table for the get_analysis_template command
+--- AWS cleanrooms get-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-analysis-template" }, input)
 end
 
---- Returns metadata about a collaboration
---- @param input table|nil The input table for the get_collaboration command
+--- AWS cleanrooms get-collaboration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-collaboration" }, input)
 end
 
---- Retrieves an analysis template within a collaboration
---- @param input table|nil The input table for the get_collaboration_analysis_template command
+--- AWS cleanrooms get-collaboration-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-collaboration-analysis-template" }, input)
 end
 
---- Retrieves a configured audience model association within a collaboration
---- @param input table|nil The input table for the get_collaboration_configured_audience_model_association command
+--- AWS cleanrooms get-collaboration-configured-audience-model-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_configured_audience_model_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-collaboration-configured-audience-model-association" }, input)
 end
 
---- Retrieves an ID namespace association from a specific collaboration
---- @param input table|nil The input table for the get_collaboration_id_namespace_association command
+--- AWS cleanrooms get-collaboration-id-namespace-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_id_namespace_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-collaboration-id-namespace-association" }, input)
 end
 
---- Returns details about a specified privacy budget template
---- @param input table|nil The input table for the get_collaboration_privacy_budget_template command
+--- AWS cleanrooms get-collaboration-privacy-budget-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_privacy_budget_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-collaboration-privacy-budget-template" }, input)
 end
 
---- Returns information about a configured audience model association
---- @param input table|nil The input table for the get_configured_audience_model_association command
+--- AWS cleanrooms get-configured-audience-model-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_audience_model_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-configured-audience-model-association" }, input)
 end
 
---- Retrieves a configured table
---- @param input table|nil The input table for the get_configured_table command
+--- AWS cleanrooms get-configured-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-configured-table" }, input)
 end
 
---- Retrieves a configured table analysis rule
---- @param input table|nil The input table for the get_configured_table_analysis_rule command
+--- AWS cleanrooms get-configured-table-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_table_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-configured-table-analysis-rule" }, input)
 end
 
---- Retrieves a configured table association
---- @param input table|nil The input table for the get_configured_table_association command
+--- AWS cleanrooms get-configured-table-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_table_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-configured-table-association" }, input)
 end
 
---- Retrieves the analysis rule for a configured table association
---- @param input table|nil The input table for the get_configured_table_association_analysis_rule command
+--- AWS cleanrooms get-configured-table-association-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_table_association_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-configured-table-association-analysis-rule" }, input)
 end
 
---- Retrieves an ID mapping table
---- @param input table|nil The input table for the get_id_mapping_table command
+--- AWS cleanrooms get-id-mapping-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_id_mapping_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-id-mapping-table" }, input)
 end
 
---- Retrieves an ID namespace association
---- @param input table|nil The input table for the get_id_namespace_association command
+--- AWS cleanrooms get-id-namespace-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_id_namespace_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-id-namespace-association" }, input)
 end
 
---- Retrieves a specified membership for an identifier
---- @param input table|nil The input table for the get_membership command
+--- AWS cleanrooms get-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_membership(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-membership" }, input)
 end
 
---- Returns details for a specified privacy budget template
---- @param input table|nil The input table for the get_privacy_budget_template command
+--- AWS cleanrooms get-privacy-budget-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_privacy_budget_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-privacy-budget-template" }, input)
 end
 
---- Returns job processing metadata
---- @param input table|nil The input table for the get_protected_job command
+--- AWS cleanrooms get-protected-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_protected_job(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-protected-job" }, input)
 end
 
---- Returns query processing metadata
---- @param input table|nil The input table for the get_protected_query command
+--- AWS cleanrooms get-protected-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_protected_query(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-protected-query" }, input)
 end
 
---- Retrieves the schema for a relation within a collaboration
---- @param input table|nil The input table for the get_schema command
+--- AWS cleanrooms get-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-schema" }, input)
 end
 
---- Retrieves a schema analysis rule
---- @param input table|nil The input table for the get_schema_analysis_rule command
+--- AWS cleanrooms get-schema-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_schema_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "get-schema-analysis-rule" }, input)
 end
 
---- Lists analysis templates that the caller owns
---- @param input table|nil The input table for the list_analysis_templates command
+--- AWS cleanrooms help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cleanrooms", "help" }, input)
+end
+
+--- AWS cleanrooms list-analysis-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_analysis_templates(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-analysis-templates" }, input)
 end
 
---- Lists analysis templates within a collaboration
---- @param input table|nil The input table for the list_collaboration_analysis_templates command
+--- AWS cleanrooms list-collaboration-analysis-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_analysis_templates(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaboration-analysis-templates" }, input)
 end
 
---- Lists configured audience model associations within a collaboration
---- @param input table|nil The input table for the list_collaboration_configured_audience_model_associations command
+--- AWS cleanrooms list-collaboration-configured-audience-model-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_configured_audience_model_associations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaboration-configured-audience-model-associations" }, input)
 end
 
---- Returns a list of the ID namespace associations in a collaboration
---- @param input table|nil The input table for the list_collaboration_id_namespace_associations command
+--- AWS cleanrooms list-collaboration-id-namespace-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_id_namespace_associations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaboration-id-namespace-associations" }, input)
 end
 
---- Returns an array that summarizes each privacy budget template in a specified collaboration
---- @param input table|nil The input table for the list_collaboration_privacy_budget_templates command
+--- AWS cleanrooms list-collaboration-privacy-budget-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_privacy_budget_templates(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaboration-privacy-budget-templates" }, input)
 end
 
---- Returns an array that summarizes each privacy budget in a specified collaboration
---- @param input table|nil The input table for the list_collaboration_privacy_budgets command
+--- AWS cleanrooms list-collaboration-privacy-budgets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_privacy_budgets(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaboration-privacy-budgets" }, input)
 end
 
---- Lists collaborations the caller owns, is active in, or has been invited to
---- @param input table|nil The input table for the list_collaborations command
+--- AWS cleanrooms list-collaborations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaborations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-collaborations" }, input)
 end
 
---- Lists information about requested configured audience model associations
---- @param input table|nil The input table for the list_configured_audience_model_associations command
+--- AWS cleanrooms list-configured-audience-model-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_audience_model_associations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-configured-audience-model-associations" }, input)
 end
 
---- Lists configured table associations for a membership
---- @param input table|nil The input table for the list_configured_table_associations command
+--- AWS cleanrooms list-configured-table-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_table_associations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-configured-table-associations" }, input)
 end
 
---- Lists configured tables
---- @param input table|nil The input table for the list_configured_tables command
+--- AWS cleanrooms list-configured-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_tables(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-configured-tables" }, input)
 end
 
---- Returns a list of ID mapping tables
---- @param input table|nil The input table for the list_id_mapping_tables command
+--- AWS cleanrooms list-id-mapping-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_id_mapping_tables(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-id-mapping-tables" }, input)
 end
 
---- Returns a list of ID namespace associations
---- @param input table|nil The input table for the list_id_namespace_associations command
+--- AWS cleanrooms list-id-namespace-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_id_namespace_associations(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-id-namespace-associations" }, input)
 end
 
---- Lists all members within a collaboration
---- @param input table|nil The input table for the list_members command
+--- AWS cleanrooms list-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_members(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-members" }, input)
 end
 
---- Lists all memberships resources within the caller's account
---- @param input table|nil The input table for the list_memberships command
+--- AWS cleanrooms list-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_memberships(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-memberships" }, input)
 end
 
---- Returns detailed information about the privacy budget templates in a specified membership
---- @param input table|nil The input table for the list_privacy_budget_templates command
+--- AWS cleanrooms list-privacy-budget-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_privacy_budget_templates(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-privacy-budget-templates" }, input)
 end
 
---- Returns detailed information about the privacy budgets in a specified membership
---- @param input table|nil The input table for the list_privacy_budgets command
+--- AWS cleanrooms list-privacy-budgets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_privacy_budgets(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-privacy-budgets" }, input)
 end
 
---- Lists protected jobs, sorted by most recent job
---- @param input table|nil The input table for the list_protected_jobs command
+--- AWS cleanrooms list-protected-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protected_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-protected-jobs" }, input)
 end
 
---- Lists protected queries, sorted by the most recent query
---- @param input table|nil The input table for the list_protected_queries command
+--- AWS cleanrooms list-protected-queries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protected_queries(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-protected-queries" }, input)
 end
 
---- Lists the schemas for relations within a collaboration
---- @param input table|nil The input table for the list_schemas command
+--- AWS cleanrooms list-schemas operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schemas(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-schemas" }, input)
 end
 
---- Lists all of the tags that have been added to a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS cleanrooms list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "list-tags-for-resource" }, input)
 end
 
---- Defines the information that's necessary to populate an ID mapping table
---- @param input table|nil The input table for the populate_id_mapping_table command
+--- AWS cleanrooms populate-id-mapping-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.populate_id_mapping_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "populate-id-mapping-table" }, input)
 end
 
---- An estimate of the number of aggregation functions that the member who can query can run given epsilon and noise parameters
---- @param input table|nil The input table for the preview_privacy_impact command
+--- AWS cleanrooms preview-privacy-impact operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.preview_privacy_impact(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "preview-privacy-impact" }, input)
 end
 
---- Creates a protected job that is started by Clean Rooms
---- @param input table|nil The input table for the start_protected_job command
+--- AWS cleanrooms start-protected-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_protected_job(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "start-protected-job" }, input)
 end
 
---- Creates a protected query that is started by Clean Rooms
---- @param input table|nil The input table for the start_protected_query command
+--- AWS cleanrooms start-protected-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_protected_query(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "start-protected-query" }, input)
 end
 
---- Tags a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS cleanrooms tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "tag-resource" }, input)
 end
 
---- Removes a tag or list of tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS cleanrooms untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "untag-resource" }, input)
 end
 
---- Updates the analysis template metadata
---- @param input table|nil The input table for the update_analysis_template command
+--- AWS cleanrooms update-analysis-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_analysis_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-analysis-template" }, input)
 end
 
---- Updates collaboration metadata and can only be called by the collaboration owner
---- @param input table|nil The input table for the update_collaboration command
+--- AWS cleanrooms update-collaboration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_collaboration(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-collaboration" }, input)
 end
 
---- Provides the details necessary to update a configured audience model association
---- @param input table|nil The input table for the update_configured_audience_model_association command
+--- AWS cleanrooms update-configured-audience-model-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_audience_model_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-configured-audience-model-association" }, input)
 end
 
---- Updates a configured table
---- @param input table|nil The input table for the update_configured_table command
+--- AWS cleanrooms update-configured-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-configured-table" }, input)
 end
 
---- Updates a configured table analysis rule
---- @param input table|nil The input table for the update_configured_table_analysis_rule command
+--- AWS cleanrooms update-configured-table-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_table_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-configured-table-analysis-rule" }, input)
 end
 
---- Updates a configured table association
---- @param input table|nil The input table for the update_configured_table_association command
+--- AWS cleanrooms update-configured-table-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_table_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-configured-table-association" }, input)
 end
 
---- Updates the analysis rule for a configured table association
---- @param input table|nil The input table for the update_configured_table_association_analysis_rule command
+--- AWS cleanrooms update-configured-table-association-analysis-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_table_association_analysis_rule(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-configured-table-association-analysis-rule" }, input)
 end
 
---- Provides the details that are necessary to update an ID mapping table
---- @param input table|nil The input table for the update_id_mapping_table command
+--- AWS cleanrooms update-id-mapping-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_id_mapping_table(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-id-mapping-table" }, input)
 end
 
---- Provides the details that are necessary to update an ID namespace association
---- @param input table|nil The input table for the update_id_namespace_association command
+--- AWS cleanrooms update-id-namespace-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_id_namespace_association(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-id-namespace-association" }, input)
 end
 
---- Updates a membership
---- @param input table|nil The input table for the update_membership command
+--- AWS cleanrooms update-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_membership(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-membership" }, input)
 end
 
---- Updates the privacy budget template for the specified membership
---- @param input table|nil The input table for the update_privacy_budget_template command
+--- AWS cleanrooms update-privacy-budget-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_privacy_budget_template(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-privacy-budget-template" }, input)
 end
 
---- Updates the processing of a currently running job
---- @param input table|nil The input table for the update_protected_job command
+--- AWS cleanrooms update-protected-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_protected_job(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-protected-job" }, input)
 end
 
---- Updates the processing of a currently running query
---- @param input table|nil The input table for the update_protected_query command
+--- AWS cleanrooms update-protected-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_protected_query(input)
 	return common.execute_aws_command_with_input({ "cleanrooms", "update-protected-query" }, input)

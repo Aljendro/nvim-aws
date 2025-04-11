@@ -6,85 +6,92 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PAYMENT-CRYPTOGRAPHY-DATA service functions
 local M = {}
 
---- Decrypts ciphertext data to plaintext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV) encryption key scheme
---- @param input table|nil The input table for the decrypt_data command
+--- AWS payment-cryptography-data decrypt-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decrypt_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "decrypt-data" }, input)
 end
 
---- Encrypts plaintext data to ciphertext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV) encryption key scheme
---- @param input table|nil The input table for the encrypt_data command
+--- AWS payment-cryptography-data encrypt-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.encrypt_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "encrypt-data" }, input)
 end
 
---- Generates card-related validation data using algorithms such as Card Verification Values (CVV/CVV2), Dynamic Card Verification Values (dCVV/dCVV2), or Card Security Codes (CSC)
---- @param input table|nil The input table for the generate_card_validation_data command
+--- AWS payment-cryptography-data generate-card-validation-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_card_validation_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "generate-card-validation-data" }, input)
 end
 
---- Generates a Message Authentication Code (MAC) cryptogram within Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the generate_mac command
+--- AWS payment-cryptography-data generate-mac operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_mac(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "generate-mac" }, input)
 end
 
---- Generates an issuer script mac for EMV payment cards that use offline PINs as the cardholder verification method (CVM)
---- @param input table|nil The input table for the generate_mac_emv_pin_change command
+--- AWS payment-cryptography-data generate-mac-emv-pin-change operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_mac_emv_pin_change(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "generate-mac-emv-pin-change" }, input)
 end
 
---- Generates pin-related data such as PIN, PIN Verification Value (PVV), PIN Block, and PIN Offset during new card issuance or reissuance
---- @param input table|nil The input table for the generate_pin_data command
+--- AWS payment-cryptography-data generate-pin-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_pin_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "generate-pin-data" }, input)
 end
 
---- Re-encrypt ciphertext using DUKPT or Symmetric data encryption keys
---- @param input table|nil The input table for the re_encrypt_data command
+--- AWS payment-cryptography-data help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "payment-cryptography-data", "help" }, input)
+end
+
+--- AWS payment-cryptography-data re-encrypt-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.re_encrypt_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "re-encrypt-data" }, input)
 end
 
---- Translates encrypted PIN block from and to ISO 9564 formats 0,1,3,4
---- @param input table|nil The input table for the translate_pin_data command
+--- AWS payment-cryptography-data translate-pin-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.translate_pin_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "translate-pin-data" }, input)
 end
 
---- Verifies Authorization Request Cryptogram (ARQC) for a EMV chip payment card authorization
---- @param input table|nil The input table for the verify_auth_request_cryptogram command
+--- AWS payment-cryptography-data verify-auth-request-cryptogram operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_auth_request_cryptogram(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "verify-auth-request-cryptogram" }, input)
 end
 
---- Verifies card-related validation data using algorithms such as Card Verification Values (CVV/CVV2), Dynamic Card Verification Values (dCVV/dCVV2) and Card Security Codes (CSC)
---- @param input table|nil The input table for the verify_card_validation_data command
+--- AWS payment-cryptography-data verify-card-validation-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_card_validation_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "verify-card-validation-data" }, input)
 end
 
---- Verifies a Message Authentication Code (MAC)
---- @param input table|nil The input table for the verify_mac command
+--- AWS payment-cryptography-data verify-mac operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_mac(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "verify-mac" }, input)
 end
 
---- Verifies pin-related data such as PIN and PIN Offset using algorithms including VISA PVV and IBM3624
---- @param input table|nil The input table for the verify_pin_data command
+--- AWS payment-cryptography-data verify-pin-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.verify_pin_data(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography-data", "verify-pin-data" }, input)

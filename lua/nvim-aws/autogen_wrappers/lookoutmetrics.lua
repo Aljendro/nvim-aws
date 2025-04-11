@@ -6,211 +6,218 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LOOKOUTMETRICS service functions
 local M = {}
 
---- Activates an anomaly detector
---- @param input table|nil The input table for the activate_anomaly_detector command
+--- AWS lookoutmetrics activate-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.activate_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "activate-anomaly-detector" }, input)
 end
 
---- Runs a backtest for anomaly detection for the specified resource
---- @param input table|nil The input table for the back_test_anomaly_detector command
+--- AWS lookoutmetrics back-test-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.back_test_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "back-test-anomaly-detector" }, input)
 end
 
---- Creates an alert for an anomaly detector
---- @param input table|nil The input table for the create_alert command
+--- AWS lookoutmetrics create-alert operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_alert(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "create-alert" }, input)
 end
 
---- Creates an anomaly detector
---- @param input table|nil The input table for the create_anomaly_detector command
+--- AWS lookoutmetrics create-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "create-anomaly-detector" }, input)
 end
 
---- Creates a dataset
---- @param input table|nil The input table for the create_metric_set command
+--- AWS lookoutmetrics create-metric-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_metric_set(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "create-metric-set" }, input)
 end
 
---- Deactivates an anomaly detector
---- @param input table|nil The input table for the deactivate_anomaly_detector command
+--- AWS lookoutmetrics deactivate-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deactivate_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "deactivate-anomaly-detector" }, input)
 end
 
---- Deletes an alert
---- @param input table|nil The input table for the delete_alert command
+--- AWS lookoutmetrics delete-alert operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alert(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "delete-alert" }, input)
 end
 
---- Deletes a detector
---- @param input table|nil The input table for the delete_anomaly_detector command
+--- AWS lookoutmetrics delete-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "delete-anomaly-detector" }, input)
 end
 
---- Describes an alert
---- @param input table|nil The input table for the describe_alert command
+--- AWS lookoutmetrics describe-alert operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_alert(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "describe-alert" }, input)
 end
 
---- Returns information about the status of the specified anomaly detection jobs
---- @param input table|nil The input table for the describe_anomaly_detection_executions command
+--- AWS lookoutmetrics describe-anomaly-detection-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_anomaly_detection_executions(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "describe-anomaly-detection-executions" }, input)
 end
 
---- Describes a detector
---- @param input table|nil The input table for the describe_anomaly_detector command
+--- AWS lookoutmetrics describe-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "describe-anomaly-detector" }, input)
 end
 
---- Describes a dataset
---- @param input table|nil The input table for the describe_metric_set command
+--- AWS lookoutmetrics describe-metric-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_metric_set(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "describe-metric-set" }, input)
 end
 
---- Detects an Amazon S3 dataset's file format, interval, and offset
---- @param input table|nil The input table for the detect_metric_set_config command
+--- AWS lookoutmetrics detect-metric-set-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_metric_set_config(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "detect-metric-set-config" }, input)
 end
 
---- Returns details about a group of anomalous metrics
---- @param input table|nil The input table for the get_anomaly_group command
+--- AWS lookoutmetrics get-anomaly-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_anomaly_group(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "get-anomaly-group" }, input)
 end
 
---- Returns details about the requested data quality metrics
---- @param input table|nil The input table for the get_data_quality_metrics command
+--- AWS lookoutmetrics get-data-quality-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_quality_metrics(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "get-data-quality-metrics" }, input)
 end
 
---- Get feedback for an anomaly group
---- @param input table|nil The input table for the get_feedback command
+--- AWS lookoutmetrics get-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_feedback(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "get-feedback" }, input)
 end
 
---- Returns a selection of sample records from an Amazon S3 datasource
---- @param input table|nil The input table for the get_sample_data command
+--- AWS lookoutmetrics get-sample-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sample_data(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "get-sample-data" }, input)
 end
 
---- Lists the alerts attached to a detector
---- @param input table|nil The input table for the list_alerts command
+--- AWS lookoutmetrics help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "lookoutmetrics", "help" }, input)
+end
+
+--- AWS lookoutmetrics list-alerts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_alerts(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-alerts" }, input)
 end
 
---- Lists the detectors in the current AWS Region
---- @param input table|nil The input table for the list_anomaly_detectors command
+--- AWS lookoutmetrics list-anomaly-detectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomaly_detectors(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-anomaly-detectors" }, input)
 end
 
---- Returns a list of measures that are potential causes or effects of an anomaly group
---- @param input table|nil The input table for the list_anomaly_group_related_metrics command
+--- AWS lookoutmetrics list-anomaly-group-related-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomaly_group_related_metrics(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-anomaly-group-related-metrics" }, input)
 end
 
---- Returns a list of anomaly groups
---- @param input table|nil The input table for the list_anomaly_group_summaries command
+--- AWS lookoutmetrics list-anomaly-group-summaries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomaly_group_summaries(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-anomaly-group-summaries" }, input)
 end
 
---- Gets a list of anomalous metrics for a measure in an anomaly group
---- @param input table|nil The input table for the list_anomaly_group_time_series command
+--- AWS lookoutmetrics list-anomaly-group-time-series operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_anomaly_group_time_series(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-anomaly-group-time-series" }, input)
 end
 
---- Lists the datasets in the current AWS Region
---- @param input table|nil The input table for the list_metric_sets command
+--- AWS lookoutmetrics list-metric-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metric_sets(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-metric-sets" }, input)
 end
 
---- Gets a list of tags for a detector, dataset, or alert
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS lookoutmetrics list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "list-tags-for-resource" }, input)
 end
 
---- Add feedback for an anomalous metric
---- @param input table|nil The input table for the put_feedback command
+--- AWS lookoutmetrics put-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_feedback(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "put-feedback" }, input)
 end
 
---- Adds tags to a detector, dataset, or alert
---- @param input table|nil The input table for the tag_resource command
+--- AWS lookoutmetrics tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "tag-resource" }, input)
 end
 
---- Removes tags from a detector, dataset, or alert
---- @param input table|nil The input table for the untag_resource command
+--- AWS lookoutmetrics untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "untag-resource" }, input)
 end
 
---- Make changes to an existing alert
---- @param input table|nil The input table for the update_alert command
+--- AWS lookoutmetrics update-alert operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_alert(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "update-alert" }, input)
 end
 
---- Updates a detector
---- @param input table|nil The input table for the update_anomaly_detector command
+--- AWS lookoutmetrics update-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "update-anomaly-detector" }, input)
 end
 
---- Updates a dataset
---- @param input table|nil The input table for the update_metric_set command
+--- AWS lookoutmetrics update-metric-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_metric_set(input)
 	return common.execute_aws_command_with_input({ "lookoutmetrics", "update-metric-set" }, input)

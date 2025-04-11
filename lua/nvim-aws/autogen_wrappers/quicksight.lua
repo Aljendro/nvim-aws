@@ -6,1464 +6,1471 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS QUICKSIGHT service functions
 local M = {}
 
---- Creates new reviewed answers for a Q Topic
---- @param input table|nil The input table for the batch_create_topic_reviewed_answer command
+--- AWS quicksight batch-create-topic-reviewed-answer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_create_topic_reviewed_answer(input)
 	return common.execute_aws_command_with_input({ "quicksight", "batch-create-topic-reviewed-answer" }, input)
 end
 
---- Deletes reviewed answers for Q Topic
---- @param input table|nil The input table for the batch_delete_topic_reviewed_answer command
+--- AWS quicksight batch-delete-topic-reviewed-answer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_topic_reviewed_answer(input)
 	return common.execute_aws_command_with_input({ "quicksight", "batch-delete-topic-reviewed-answer" }, input)
 end
 
---- Cancels an ongoing ingestion of data into SPICE
---- @param input table|nil The input table for the cancel_ingestion command
+--- AWS quicksight cancel-ingestion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_ingestion(input)
 	return common.execute_aws_command_with_input({ "quicksight", "cancel-ingestion" }, input)
 end
 
---- Creates Amazon QuickSight customizations for the current Amazon Web Services Region
---- @param input table|nil The input table for the create_account_customization command
+--- AWS quicksight create-account-customization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_account_customization(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-account-customization" }, input)
 end
 
---- Creates an Amazon QuickSight account, or subscribes to Amazon QuickSight Q
---- @param input table|nil The input table for the create_account_subscription command
+--- AWS quicksight create-account-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_account_subscription(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-account-subscription" }, input)
 end
 
---- Creates an analysis in Amazon QuickSight
---- @param input table|nil The input table for the create_analysis command
+--- AWS quicksight create-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_analysis(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-analysis" }, input)
 end
 
---- Creates an Amazon QuickSight brand
---- @param input table|nil The input table for the create_brand command
+--- AWS quicksight create-brand operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_brand(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-brand" }, input)
 end
 
---- Creates a custom permissions profile
---- @param input table|nil The input table for the create_custom_permissions command
+--- AWS quicksight create-custom-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-custom-permissions" }, input)
 end
 
---- Creates a dashboard from either a template or directly with a DashboardDefinition
---- @param input table|nil The input table for the create_dashboard command
+--- AWS quicksight create-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dashboard(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-dashboard" }, input)
 end
 
---- Creates a dataset
---- @param input table|nil The input table for the create_data_set command
+--- AWS quicksight create-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_set(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-data-set" }, input)
 end
 
---- Creates a data source
---- @param input table|nil The input table for the create_data_source command
+--- AWS quicksight create-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-data-source" }, input)
 end
 
---- Creates an empty shared folder
---- @param input table|nil The input table for the create_folder command
+--- AWS quicksight create-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_folder(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-folder" }, input)
 end
 
---- Adds an asset, such as a dashboard, analysis, or dataset into a folder
---- @param input table|nil The input table for the create_folder_membership command
+--- AWS quicksight create-folder-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_folder_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-folder-membership" }, input)
 end
 
---- Use the CreateGroup operation to create a group in Amazon QuickSight
---- @param input table|nil The input table for the create_group command
+--- AWS quicksight create-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-group" }, input)
 end
 
---- Adds an Amazon QuickSight user to an Amazon QuickSight group
---- @param input table|nil The input table for the create_group_membership command
+--- AWS quicksight create-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-group-membership" }, input)
 end
 
---- Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the create_iam_policy_assignment command
+--- AWS quicksight create-iam-policy-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_iam_policy_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-iam-policy-assignment" }, input)
 end
 
---- Creates and starts a new SPICE ingestion for a dataset
---- @param input table|nil The input table for the create_ingestion command
+--- AWS quicksight create-ingestion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ingestion(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-ingestion" }, input)
 end
 
---- (Enterprise edition only) Creates a new namespace for you to use with Amazon QuickSight
---- @param input table|nil The input table for the create_namespace command
+--- AWS quicksight create-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_namespace(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-namespace" }, input)
 end
 
---- Creates a refresh schedule for a dataset
---- @param input table|nil The input table for the create_refresh_schedule command
+--- AWS quicksight create-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-refresh-schedule" }, input)
 end
 
---- Use CreateRoleMembership to add an existing Amazon QuickSight group to an existing role
---- @param input table|nil The input table for the create_role_membership command
+--- AWS quicksight create-role-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_role_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-role-membership" }, input)
 end
 
---- Creates a template either from a TemplateDefinition or from an existing Amazon QuickSight analysis or template
---- @param input table|nil The input table for the create_template command
+--- AWS quicksight create-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-template" }, input)
 end
 
---- Creates a template alias for a template
---- @param input table|nil The input table for the create_template_alias command
+--- AWS quicksight create-template-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_template_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-template-alias" }, input)
 end
 
---- Creates a theme
---- @param input table|nil The input table for the create_theme command
+--- AWS quicksight create-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_theme(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-theme" }, input)
 end
 
---- Creates a theme alias for a theme
---- @param input table|nil The input table for the create_theme_alias command
+--- AWS quicksight create-theme-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_theme_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-theme-alias" }, input)
 end
 
---- Creates a new Q topic
---- @param input table|nil The input table for the create_topic command
+--- AWS quicksight create-topic operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_topic(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-topic" }, input)
 end
 
---- Creates a topic refresh schedule
---- @param input table|nil The input table for the create_topic_refresh_schedule command
+--- AWS quicksight create-topic-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_topic_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-topic-refresh-schedule" }, input)
 end
 
---- Creates a new VPC connection
---- @param input table|nil The input table for the create_vpc_connection command
+--- AWS quicksight create-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "quicksight", "create-vpc-connection" }, input)
 end
 
---- Deletes all Amazon QuickSight customizations in this Amazon Web Services Region for the specified Amazon Web Services account and Amazon QuickSight namespace
---- @param input table|nil The input table for the delete_account_customization command
+--- AWS quicksight delete-account-customization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account_customization(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-account-customization" }, input)
 end
 
---- Use the DeleteAccountSubscription operation to delete an Amazon QuickSight account
---- @param input table|nil The input table for the delete_account_subscription command
+--- AWS quicksight delete-account-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_account_subscription(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-account-subscription" }, input)
 end
 
---- Deletes an analysis from Amazon QuickSight
---- @param input table|nil The input table for the delete_analysis command
+--- AWS quicksight delete-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_analysis(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-analysis" }, input)
 end
 
---- Deletes an Amazon QuickSight brand
---- @param input table|nil The input table for the delete_brand command
+--- AWS quicksight delete-brand operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_brand(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-brand" }, input)
 end
 
---- Deletes a brand assignment
---- @param input table|nil The input table for the delete_brand_assignment command
+--- AWS quicksight delete-brand-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_brand_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-brand-assignment" }, input)
 end
 
---- Deletes a custom permissions profile
---- @param input table|nil The input table for the delete_custom_permissions command
+--- AWS quicksight delete-custom-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-custom-permissions" }, input)
 end
 
---- Deletes a dashboard
---- @param input table|nil The input table for the delete_dashboard command
+--- AWS quicksight delete-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dashboard(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-dashboard" }, input)
 end
 
---- Deletes a dataset
---- @param input table|nil The input table for the delete_data_set command
+--- AWS quicksight delete-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_set(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-data-set" }, input)
 end
 
---- Deletes the dataset refresh properties of the dataset
---- @param input table|nil The input table for the delete_data_set_refresh_properties command
+--- AWS quicksight delete-data-set-refresh-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_set_refresh_properties(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-data-set-refresh-properties" }, input)
 end
 
---- Deletes the data source permanently
---- @param input table|nil The input table for the delete_data_source command
+--- AWS quicksight delete-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_source(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-data-source" }, input)
 end
 
---- Deletes a linked Amazon Q Business application from an Amazon QuickSight account
---- @param input table|nil The input table for the delete_default_q_business_application command
+--- AWS quicksight delete-default-q-business-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_default_q_business_application(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-default-q-business-application" }, input)
 end
 
---- Deletes an empty folder
---- @param input table|nil The input table for the delete_folder command
+--- AWS quicksight delete-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_folder(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-folder" }, input)
 end
 
---- Removes an asset, such as a dashboard, analysis, or dataset, from a folder
---- @param input table|nil The input table for the delete_folder_membership command
+--- AWS quicksight delete-folder-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_folder_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-folder-membership" }, input)
 end
 
---- Removes a user group from Amazon QuickSight
---- @param input table|nil The input table for the delete_group command
+--- AWS quicksight delete-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-group" }, input)
 end
 
---- Removes a user from a group so that the user is no longer a member of the group
---- @param input table|nil The input table for the delete_group_membership command
+--- AWS quicksight delete-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-group-membership" }, input)
 end
 
---- Deletes an existing IAM policy assignment
---- @param input table|nil The input table for the delete_iam_policy_assignment command
+--- AWS quicksight delete-iam-policy-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_iam_policy_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-iam-policy-assignment" }, input)
 end
 
---- Deletes all access scopes and authorized targets that are associated with a service from the Amazon QuickSight IAM Identity Center application
---- @param input table|nil The input table for the delete_identity_propagation_config command
+--- AWS quicksight delete-identity-propagation-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_identity_propagation_config(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-identity-propagation-config" }, input)
 end
 
---- Deletes a namespace and the users and groups that are associated with the namespace
---- @param input table|nil The input table for the delete_namespace command
+--- AWS quicksight delete-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_namespace(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-namespace" }, input)
 end
 
---- Deletes a refresh schedule from a dataset
---- @param input table|nil The input table for the delete_refresh_schedule command
+--- AWS quicksight delete-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-refresh-schedule" }, input)
 end
 
---- Removes custom permissions from the role
---- @param input table|nil The input table for the delete_role_custom_permission command
+--- AWS quicksight delete-role-custom-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_role_custom_permission(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-role-custom-permission" }, input)
 end
 
---- Removes a group from a role
---- @param input table|nil The input table for the delete_role_membership command
+--- AWS quicksight delete-role-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_role_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-role-membership" }, input)
 end
 
---- Deletes a template
---- @param input table|nil The input table for the delete_template command
+--- AWS quicksight delete-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-template" }, input)
 end
 
---- Deletes the item that the specified template alias points to
---- @param input table|nil The input table for the delete_template_alias command
+--- AWS quicksight delete-template-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_template_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-template-alias" }, input)
 end
 
---- Deletes a theme
---- @param input table|nil The input table for the delete_theme command
+--- AWS quicksight delete-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_theme(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-theme" }, input)
 end
 
---- Deletes the version of the theme that the specified theme alias points to
---- @param input table|nil The input table for the delete_theme_alias command
+--- AWS quicksight delete-theme-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_theme_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-theme-alias" }, input)
 end
 
---- Deletes a topic
---- @param input table|nil The input table for the delete_topic command
+--- AWS quicksight delete-topic operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_topic(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-topic" }, input)
 end
 
---- Deletes a topic refresh schedule
---- @param input table|nil The input table for the delete_topic_refresh_schedule command
+--- AWS quicksight delete-topic-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_topic_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-topic-refresh-schedule" }, input)
 end
 
---- Deletes the Amazon QuickSight user that is associated with the identity of the IAM user or role that's making the call
---- @param input table|nil The input table for the delete_user command
+--- AWS quicksight delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-user" }, input)
 end
 
---- Deletes a user identified by its principal ID
---- @param input table|nil The input table for the delete_user_by_principal_id command
+--- AWS quicksight delete-user-by-principal-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user_by_principal_id(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-user-by-principal-id" }, input)
 end
 
---- Deletes a custom permissions profile from a user
---- @param input table|nil The input table for the delete_user_custom_permission command
+--- AWS quicksight delete-user-custom-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user_custom_permission(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-user-custom-permission" }, input)
 end
 
---- Deletes a VPC connection
---- @param input table|nil The input table for the delete_vpc_connection command
+--- AWS quicksight delete-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "quicksight", "delete-vpc-connection" }, input)
 end
 
---- Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon QuickSight namespace in an Amazon Web Services Region
---- @param input table|nil The input table for the describe_account_customization command
+--- AWS quicksight describe-account-customization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_customization(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-account-customization" }, input)
 end
 
---- Describes the settings that were used when your Amazon QuickSight subscription was first created in this Amazon Web Services account
---- @param input table|nil The input table for the describe_account_settings command
+--- AWS quicksight describe-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_settings(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-account-settings" }, input)
 end
 
---- Use the DescribeAccountSubscription operation to receive a description of an Amazon QuickSight account's subscription
---- @param input table|nil The input table for the describe_account_subscription command
+--- AWS quicksight describe-account-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_account_subscription(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-account-subscription" }, input)
 end
 
---- Provides a summary of the metadata for an analysis
---- @param input table|nil The input table for the describe_analysis command
+--- AWS quicksight describe-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_analysis(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-analysis" }, input)
 end
 
---- Provides a detailed description of the definition of an analysis
---- @param input table|nil The input table for the describe_analysis_definition command
+--- AWS quicksight describe-analysis-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_analysis_definition(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-analysis-definition" }, input)
 end
 
---- Provides the read and write permissions for an analysis
---- @param input table|nil The input table for the describe_analysis_permissions command
+--- AWS quicksight describe-analysis-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_analysis_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-analysis-permissions" }, input)
 end
 
---- Describes an existing export job
---- @param input table|nil The input table for the describe_asset_bundle_export_job command
+--- AWS quicksight describe-asset-bundle-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_asset_bundle_export_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-asset-bundle-export-job" }, input)
 end
 
---- Describes an existing import job
---- @param input table|nil The input table for the describe_asset_bundle_import_job command
+--- AWS quicksight describe-asset-bundle-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_asset_bundle_import_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-asset-bundle-import-job" }, input)
 end
 
---- Describes a brand
---- @param input table|nil The input table for the describe_brand command
+--- AWS quicksight describe-brand operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_brand(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-brand" }, input)
 end
 
---- Describes a brand assignment
---- @param input table|nil The input table for the describe_brand_assignment command
+--- AWS quicksight describe-brand-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_brand_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-brand-assignment" }, input)
 end
 
---- Describes the published version of the brand
---- @param input table|nil The input table for the describe_brand_published_version command
+--- AWS quicksight describe-brand-published-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_brand_published_version(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-brand-published-version" }, input)
 end
 
---- Describes a custom permissions profile
---- @param input table|nil The input table for the describe_custom_permissions command
+--- AWS quicksight describe-custom-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_custom_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-custom-permissions" }, input)
 end
 
---- Provides a summary for a dashboard
---- @param input table|nil The input table for the describe_dashboard command
+--- AWS quicksight describe-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboard(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboard" }, input)
 end
 
---- Provides a detailed description of the definition of a dashboard
---- @param input table|nil The input table for the describe_dashboard_definition command
+--- AWS quicksight describe-dashboard-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboard_definition(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboard-definition" }, input)
 end
 
---- Describes read and write permissions for a dashboard
---- @param input table|nil The input table for the describe_dashboard_permissions command
+--- AWS quicksight describe-dashboard-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboard_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboard-permissions" }, input)
 end
 
---- Describes an existing snapshot job
---- @param input table|nil The input table for the describe_dashboard_snapshot_job command
+--- AWS quicksight describe-dashboard-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboard_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboard-snapshot-job" }, input)
 end
 
---- Describes the result of an existing snapshot job that has finished running
---- @param input table|nil The input table for the describe_dashboard_snapshot_job_result command
+--- AWS quicksight describe-dashboard-snapshot-job-result operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboard_snapshot_job_result(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboard-snapshot-job-result" }, input)
 end
 
---- Describes an existing dashboard QA configuration
---- @param input table|nil The input table for the describe_dashboards_qa_configuration command
+--- AWS quicksight describe-dashboards-qa-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dashboards_qa_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-dashboards-qa-configuration" }, input)
 end
 
---- Describes a dataset
---- @param input table|nil The input table for the describe_data_set command
+--- AWS quicksight describe-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_set(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-data-set" }, input)
 end
 
---- Describes the permissions on a dataset
---- @param input table|nil The input table for the describe_data_set_permissions command
+--- AWS quicksight describe-data-set-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_set_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-data-set-permissions" }, input)
 end
 
---- Describes the refresh properties of a dataset
---- @param input table|nil The input table for the describe_data_set_refresh_properties command
+--- AWS quicksight describe-data-set-refresh-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_set_refresh_properties(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-data-set-refresh-properties" }, input)
 end
 
---- Describes a data source
---- @param input table|nil The input table for the describe_data_source command
+--- AWS quicksight describe-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_source(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-data-source" }, input)
 end
 
---- Describes the resource permissions for a data source
---- @param input table|nil The input table for the describe_data_source_permissions command
+--- AWS quicksight describe-data-source-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_data_source_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-data-source-permissions" }, input)
 end
 
---- Describes a Amazon Q Business application that is linked to an Amazon QuickSight account
---- @param input table|nil The input table for the describe_default_q_business_application command
+--- AWS quicksight describe-default-q-business-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_default_q_business_application(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-default-q-business-application" }, input)
 end
 
---- Describes a folder
---- @param input table|nil The input table for the describe_folder command
+--- AWS quicksight describe-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_folder(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-folder" }, input)
 end
 
---- Describes permissions for a folder
---- @param input table|nil The input table for the describe_folder_permissions command
+--- AWS quicksight describe-folder-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_folder_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-folder-permissions" }, input)
 end
 
---- Describes the folder resolved permissions
---- @param input table|nil The input table for the describe_folder_resolved_permissions command
+--- AWS quicksight describe-folder-resolved-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_folder_resolved_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-folder-resolved-permissions" }, input)
 end
 
---- Returns an Amazon QuickSight group's description and Amazon Resource Name (ARN)
---- @param input table|nil The input table for the describe_group command
+--- AWS quicksight describe-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-group" }, input)
 end
 
---- Use the DescribeGroupMembership operation to determine if a user is a member of the specified group
---- @param input table|nil The input table for the describe_group_membership command
+--- AWS quicksight describe-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group_membership(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-group-membership" }, input)
 end
 
---- Describes an existing IAM policy assignment, as specified by the assignment name
---- @param input table|nil The input table for the describe_iam_policy_assignment command
+--- AWS quicksight describe-iam-policy-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_iam_policy_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-iam-policy-assignment" }, input)
 end
 
---- Describes a SPICE ingestion
---- @param input table|nil The input table for the describe_ingestion command
+--- AWS quicksight describe-ingestion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ingestion(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-ingestion" }, input)
 end
 
---- Provides a summary and status of IP rules
---- @param input table|nil The input table for the describe_ip_restriction command
+--- AWS quicksight describe-ip-restriction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ip_restriction(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-ip-restriction" }, input)
 end
 
---- Describes all customer managed key registrations in a Amazon QuickSight account
---- @param input table|nil The input table for the describe_key_registration command
+--- AWS quicksight describe-key-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_key_registration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-key-registration" }, input)
 end
 
---- Describes the current namespace
---- @param input table|nil The input table for the describe_namespace command
+--- AWS quicksight describe-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_namespace(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-namespace" }, input)
 end
 
---- Describes a personalization configuration
---- @param input table|nil The input table for the describe_q_personalization_configuration command
+--- AWS quicksight describe-q-personalization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_q_personalization_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-q-personalization-configuration" }, input)
 end
 
---- Describes the state of a Amazon QuickSight Q Search configuration
---- @param input table|nil The input table for the describe_quick_sight_q_search_configuration command
+--- AWS quicksight describe-quick-sight-q-search-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_quick_sight_q_search_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-quick-sight-q-search-configuration" }, input)
 end
 
---- Provides a summary of a refresh schedule
---- @param input table|nil The input table for the describe_refresh_schedule command
+--- AWS quicksight describe-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-refresh-schedule" }, input)
 end
 
---- Describes all custom permissions that are mapped to a role
---- @param input table|nil The input table for the describe_role_custom_permission command
+--- AWS quicksight describe-role-custom-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_role_custom_permission(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-role-custom-permission" }, input)
 end
 
---- Describes a template's metadata
---- @param input table|nil The input table for the describe_template command
+--- AWS quicksight describe-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_template(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-template" }, input)
 end
 
---- Describes the template alias for a template
---- @param input table|nil The input table for the describe_template_alias command
+--- AWS quicksight describe-template-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_template_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-template-alias" }, input)
 end
 
---- Provides a detailed description of the definition of a template
---- @param input table|nil The input table for the describe_template_definition command
+--- AWS quicksight describe-template-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_template_definition(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-template-definition" }, input)
 end
 
---- Describes read and write permissions on a template
---- @param input table|nil The input table for the describe_template_permissions command
+--- AWS quicksight describe-template-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_template_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-template-permissions" }, input)
 end
 
---- Describes a theme
---- @param input table|nil The input table for the describe_theme command
+--- AWS quicksight describe-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_theme(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-theme" }, input)
 end
 
---- Describes the alias for a theme
---- @param input table|nil The input table for the describe_theme_alias command
+--- AWS quicksight describe-theme-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_theme_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-theme-alias" }, input)
 end
 
---- Describes the read and write permissions for a theme
---- @param input table|nil The input table for the describe_theme_permissions command
+--- AWS quicksight describe-theme-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_theme_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-theme-permissions" }, input)
 end
 
---- Describes a topic
---- @param input table|nil The input table for the describe_topic command
+--- AWS quicksight describe-topic operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_topic(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-topic" }, input)
 end
 
---- Describes the permissions of a topic
---- @param input table|nil The input table for the describe_topic_permissions command
+--- AWS quicksight describe-topic-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_topic_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-topic-permissions" }, input)
 end
 
---- Describes the status of a topic refresh
---- @param input table|nil The input table for the describe_topic_refresh command
+--- AWS quicksight describe-topic-refresh operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_topic_refresh(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-topic-refresh" }, input)
 end
 
---- Deletes a topic refresh schedule
---- @param input table|nil The input table for the describe_topic_refresh_schedule command
+--- AWS quicksight describe-topic-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_topic_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-topic-refresh-schedule" }, input)
 end
 
---- Returns information about a user, given the user name
---- @param input table|nil The input table for the describe_user command
+--- AWS quicksight describe-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-user" }, input)
 end
 
---- Describes a VPC connection
---- @param input table|nil The input table for the describe_vpc_connection command
+--- AWS quicksight describe-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "quicksight", "describe-vpc-connection" }, input)
 end
 
---- Generates an embed URL that you can use to embed an Amazon QuickSight dashboard or visual in your website, without having to register any reader users
---- @param input table|nil The input table for the generate_embed_url_for_anonymous_user command
+--- AWS quicksight generate-embed-url-for-anonymous-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_embed_url_for_anonymous_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "generate-embed-url-for-anonymous-user" }, input)
 end
 
---- Generates an embed URL that you can use to embed an Amazon QuickSight experience in your website
---- @param input table|nil The input table for the generate_embed_url_for_registered_user command
+--- AWS quicksight generate-embed-url-for-registered-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_embed_url_for_registered_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "generate-embed-url-for-registered-user" }, input)
 end
 
---- Generates an embed URL that you can use to embed an Amazon QuickSight experience in your website
---- @param input table|nil The input table for the generate_embed_url_for_registered_user_with_identity command
+--- AWS quicksight generate-embed-url-for-registered-user-with-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_embed_url_for_registered_user_with_identity(input)
 	return common.execute_aws_command_with_input({ "quicksight", "generate-embed-url-for-registered-user-with-identity" }, input)
 end
 
---- Generates a temporary session URL and authorization code(bearer token) that you can use to embed an Amazon QuickSight read-only dashboard in your website or application
---- @param input table|nil The input table for the get_dashboard_embed_url command
+--- AWS quicksight get-dashboard-embed-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dashboard_embed_url(input)
 	return common.execute_aws_command_with_input({ "quicksight", "get-dashboard-embed-url" }, input)
 end
 
---- Generates a session URL and authorization code that you can use to embed the Amazon Amazon QuickSight console in your web server code
---- @param input table|nil The input table for the get_session_embed_url command
+--- AWS quicksight get-session-embed-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_session_embed_url(input)
 	return common.execute_aws_command_with_input({ "quicksight", "get-session-embed-url" }, input)
 end
 
---- Lists Amazon QuickSight analyses that exist in the specified Amazon Web Services account
---- @param input table|nil The input table for the list_analyses command
+--- AWS quicksight help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "quicksight", "help" }, input)
+end
+
+--- AWS quicksight list-analyses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_analyses(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-analyses" }, input)
 end
 
---- Lists all asset bundle export jobs that have been taken place in the last 14 days
---- @param input table|nil The input table for the list_asset_bundle_export_jobs command
+--- AWS quicksight list-asset-bundle-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_asset_bundle_export_jobs(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-asset-bundle-export-jobs" }, input)
 end
 
---- Lists all asset bundle import jobs that have taken place in the last 14 days
---- @param input table|nil The input table for the list_asset_bundle_import_jobs command
+--- AWS quicksight list-asset-bundle-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_asset_bundle_import_jobs(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-asset-bundle-import-jobs" }, input)
 end
 
---- Lists all brands in an Amazon QuickSight account
---- @param input table|nil The input table for the list_brands command
+--- AWS quicksight list-brands operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_brands(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-brands" }, input)
 end
 
---- Returns a list of all the custom permissions profiles
---- @param input table|nil The input table for the list_custom_permissions command
+--- AWS quicksight list-custom-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-custom-permissions" }, input)
 end
 
---- Lists all the versions of the dashboards in the Amazon QuickSight subscription
---- @param input table|nil The input table for the list_dashboard_versions command
+--- AWS quicksight list-dashboard-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dashboard_versions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-dashboard-versions" }, input)
 end
 
---- Lists dashboards in an Amazon Web Services account
---- @param input table|nil The input table for the list_dashboards command
+--- AWS quicksight list-dashboards operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dashboards(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-dashboards" }, input)
 end
 
---- Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region
---- @param input table|nil The input table for the list_data_sets command
+--- AWS quicksight list-data-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sets(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-data-sets" }, input)
 end
 
---- Lists data sources in current Amazon Web Services Region that belong to this Amazon Web Services account
---- @param input table|nil The input table for the list_data_sources command
+--- AWS quicksight list-data-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sources(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-data-sources" }, input)
 end
 
---- List all assets (DASHBOARD, ANALYSIS, and DATASET) in a folder
---- @param input table|nil The input table for the list_folder_members command
+--- AWS quicksight list-folder-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_folder_members(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-folder-members" }, input)
 end
 
---- Lists all folders in an account
---- @param input table|nil The input table for the list_folders command
+--- AWS quicksight list-folders operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_folders(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-folders" }, input)
 end
 
---- List all folders that a resource is a member of
---- @param input table|nil The input table for the list_folders_for_resource command
+--- AWS quicksight list-folders-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_folders_for_resource(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-folders-for-resource" }, input)
 end
 
---- Lists member users in a group
---- @param input table|nil The input table for the list_group_memberships command
+--- AWS quicksight list-group-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_memberships(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-group-memberships" }, input)
 end
 
---- Lists all user groups in Amazon QuickSight
---- @param input table|nil The input table for the list_groups command
+--- AWS quicksight list-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-groups" }, input)
 end
 
---- Lists the IAM policy assignments in the current Amazon QuickSight account
---- @param input table|nil The input table for the list_iam_policy_assignments command
+--- AWS quicksight list-iam-policy-assignments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_iam_policy_assignments(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-iam-policy-assignments" }, input)
 end
 
---- Lists all of the IAM policy assignments, including the Amazon Resource Names (ARNs), for the IAM policies assigned to the specified user and group, or groups that the user belongs to
---- @param input table|nil The input table for the list_iam_policy_assignments_for_user command
+--- AWS quicksight list-iam-policy-assignments-for-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_iam_policy_assignments_for_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-iam-policy-assignments-for-user" }, input)
 end
 
---- Lists all services and authorized targets that the Amazon QuickSight IAM Identity Center application can access
---- @param input table|nil The input table for the list_identity_propagation_configs command
+--- AWS quicksight list-identity-propagation-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_identity_propagation_configs(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-identity-propagation-configs" }, input)
 end
 
---- Lists the history of SPICE ingestions for a dataset
---- @param input table|nil The input table for the list_ingestions command
+--- AWS quicksight list-ingestions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingestions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-ingestions" }, input)
 end
 
---- Lists the namespaces for the specified Amazon Web Services account
---- @param input table|nil The input table for the list_namespaces command
+--- AWS quicksight list-namespaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_namespaces(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-namespaces" }, input)
 end
 
---- Lists the refresh schedules of a dataset
---- @param input table|nil The input table for the list_refresh_schedules command
+--- AWS quicksight list-refresh-schedules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_refresh_schedules(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-refresh-schedules" }, input)
 end
 
---- Lists all groups that are associated with a role
---- @param input table|nil The input table for the list_role_memberships command
+--- AWS quicksight list-role-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_role_memberships(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-role-memberships" }, input)
 end
 
---- Lists the tags assigned to a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS quicksight list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-tags-for-resource" }, input)
 end
 
---- Lists all the aliases of a template
---- @param input table|nil The input table for the list_template_aliases command
+--- AWS quicksight list-template-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_template_aliases(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-template-aliases" }, input)
 end
 
---- Lists all the versions of the templates in the current Amazon QuickSight account
---- @param input table|nil The input table for the list_template_versions command
+--- AWS quicksight list-template-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_template_versions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-template-versions" }, input)
 end
 
---- Lists all the templates in the current Amazon QuickSight account
---- @param input table|nil The input table for the list_templates command
+--- AWS quicksight list-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_templates(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-templates" }, input)
 end
 
---- Lists all the aliases of a theme
---- @param input table|nil The input table for the list_theme_aliases command
+--- AWS quicksight list-theme-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_theme_aliases(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-theme-aliases" }, input)
 end
 
---- Lists all the versions of the themes in the current Amazon Web Services account
---- @param input table|nil The input table for the list_theme_versions command
+--- AWS quicksight list-theme-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_theme_versions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-theme-versions" }, input)
 end
 
---- Lists all the themes in the current Amazon Web Services account
---- @param input table|nil The input table for the list_themes command
+--- AWS quicksight list-themes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_themes(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-themes" }, input)
 end
 
---- Lists all of the refresh schedules for a topic
---- @param input table|nil The input table for the list_topic_refresh_schedules command
+--- AWS quicksight list-topic-refresh-schedules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_topic_refresh_schedules(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-topic-refresh-schedules" }, input)
 end
 
---- Lists all reviewed answers for a Q Topic
---- @param input table|nil The input table for the list_topic_reviewed_answers command
+--- AWS quicksight list-topic-reviewed-answers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_topic_reviewed_answers(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-topic-reviewed-answers" }, input)
 end
 
---- Lists all of the topics within an account
---- @param input table|nil The input table for the list_topics command
+--- AWS quicksight list-topics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_topics(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-topics" }, input)
 end
 
---- Lists the Amazon QuickSight groups that an Amazon QuickSight user is a member of
---- @param input table|nil The input table for the list_user_groups command
+--- AWS quicksight list-user-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_user_groups(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-user-groups" }, input)
 end
 
---- Returns a list of all of the Amazon QuickSight users belonging to this account
---- @param input table|nil The input table for the list_users command
+--- AWS quicksight list-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-users" }, input)
 end
 
---- Lists all of the VPC connections in the current set Amazon Web Services Region of an Amazon Web Services account
---- @param input table|nil The input table for the list_vpc_connections command
+--- AWS quicksight list-vpc-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vpc_connections(input)
 	return common.execute_aws_command_with_input({ "quicksight", "list-vpc-connections" }, input)
 end
 
---- Predicts existing visuals or generates new visuals to answer a given query
---- @param input table|nil The input table for the predict_qa_results command
+--- AWS quicksight predict-qa-results operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.predict_qa_results(input)
 	return common.execute_aws_command_with_input({ "quicksight", "predict-qa-results" }, input)
 end
 
---- Creates or updates the dataset refresh properties for the dataset
---- @param input table|nil The input table for the put_data_set_refresh_properties command
+--- AWS quicksight put-data-set-refresh-properties operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_data_set_refresh_properties(input)
 	return common.execute_aws_command_with_input({ "quicksight", "put-data-set-refresh-properties" }, input)
 end
 
---- Creates an Amazon QuickSight user whose identity is associated with the Identity and Access Management (IAM) identity or role specified in the request
---- @param input table|nil The input table for the register_user command
+--- AWS quicksight register-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "register-user" }, input)
 end
 
---- Restores an analysis
---- @param input table|nil The input table for the restore_analysis command
+--- AWS quicksight restore-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_analysis(input)
 	return common.execute_aws_command_with_input({ "quicksight", "restore-analysis" }, input)
 end
 
---- Searches for analyses that belong to the user specified in the filter
---- @param input table|nil The input table for the search_analyses command
+--- AWS quicksight search-analyses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_analyses(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-analyses" }, input)
 end
 
---- Searches for dashboards that belong to a user
---- @param input table|nil The input table for the search_dashboards command
+--- AWS quicksight search-dashboards operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_dashboards(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-dashboards" }, input)
 end
 
---- Use the SearchDataSets operation to search for datasets that belong to an account
---- @param input table|nil The input table for the search_data_sets command
+--- AWS quicksight search-data-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_data_sets(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-data-sets" }, input)
 end
 
---- Use the SearchDataSources operation to search for data sources that belong to an account
---- @param input table|nil The input table for the search_data_sources command
+--- AWS quicksight search-data-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_data_sources(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-data-sources" }, input)
 end
 
---- Searches the subfolders in a folder
---- @param input table|nil The input table for the search_folders command
+--- AWS quicksight search-folders operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_folders(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-folders" }, input)
 end
 
---- Use the SearchGroups operation to search groups in a specified Amazon QuickSight namespace using the supplied filters
---- @param input table|nil The input table for the search_groups command
+--- AWS quicksight search-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_groups(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-groups" }, input)
 end
 
---- Searches for any Q topic that exists in an Amazon QuickSight account
---- @param input table|nil The input table for the search_topics command
+--- AWS quicksight search-topics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_topics(input)
 	return common.execute_aws_command_with_input({ "quicksight", "search-topics" }, input)
 end
 
---- Starts an Asset Bundle export job
---- @param input table|nil The input table for the start_asset_bundle_export_job command
+--- AWS quicksight start-asset-bundle-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_asset_bundle_export_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "start-asset-bundle-export-job" }, input)
 end
 
---- Starts an Asset Bundle import job
---- @param input table|nil The input table for the start_asset_bundle_import_job command
+--- AWS quicksight start-asset-bundle-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_asset_bundle_import_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "start-asset-bundle-import-job" }, input)
 end
 
---- Starts an asynchronous job that generates a snapshot of a dashboard's output
---- @param input table|nil The input table for the start_dashboard_snapshot_job command
+--- AWS quicksight start-dashboard-snapshot-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_dashboard_snapshot_job(input)
 	return common.execute_aws_command_with_input({ "quicksight", "start-dashboard-snapshot-job" }, input)
 end
 
---- Starts an asynchronous job that runs an existing dashboard schedule and sends the dashboard snapshot through email
---- @param input table|nil The input table for the start_dashboard_snapshot_job_schedule command
+--- AWS quicksight start-dashboard-snapshot-job-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_dashboard_snapshot_job_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "start-dashboard-snapshot-job-schedule" }, input)
 end
 
---- Assigns one or more tags (key-value pairs) to the specified Amazon QuickSight resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS quicksight tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "quicksight", "tag-resource" }, input)
 end
 
---- Removes a tag or tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS quicksight untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "quicksight", "untag-resource" }, input)
 end
 
---- Updates Amazon QuickSight customizations for the current Amazon Web Services Region
---- @param input table|nil The input table for the update_account_customization command
+--- AWS quicksight update-account-customization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_customization(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-account-customization" }, input)
 end
 
---- Updates the Amazon QuickSight settings in your Amazon Web Services account
---- @param input table|nil The input table for the update_account_settings command
+--- AWS quicksight update-account-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_account_settings(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-account-settings" }, input)
 end
 
---- Updates an analysis in Amazon QuickSight
---- @param input table|nil The input table for the update_analysis command
+--- AWS quicksight update-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_analysis(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-analysis" }, input)
 end
 
---- Updates the read and write permissions for an analysis
---- @param input table|nil The input table for the update_analysis_permissions command
+--- AWS quicksight update-analysis-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_analysis_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-analysis-permissions" }, input)
 end
 
---- Updates an Amazon QuickSight application with a token exchange grant
---- @param input table|nil The input table for the update_application_with_token_exchange_grant command
+--- AWS quicksight update-application-with-token-exchange-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application_with_token_exchange_grant(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-application-with-token-exchange-grant" }, input)
 end
 
---- Updates a brand
---- @param input table|nil The input table for the update_brand command
+--- AWS quicksight update-brand operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_brand(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-brand" }, input)
 end
 
---- Updates a brand assignment
---- @param input table|nil The input table for the update_brand_assignment command
+--- AWS quicksight update-brand-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_brand_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-brand-assignment" }, input)
 end
 
---- Updates the published version of a brand
---- @param input table|nil The input table for the update_brand_published_version command
+--- AWS quicksight update-brand-published-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_brand_published_version(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-brand-published-version" }, input)
 end
 
---- Updates a custom permissions profile
---- @param input table|nil The input table for the update_custom_permissions command
+--- AWS quicksight update-custom-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_custom_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-custom-permissions" }, input)
 end
 
---- Updates a dashboard in an Amazon Web Services account
---- @param input table|nil The input table for the update_dashboard command
+--- AWS quicksight update-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dashboard(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-dashboard" }, input)
 end
 
---- Updates the linked analyses on a dashboard
---- @param input table|nil The input table for the update_dashboard_links command
+--- AWS quicksight update-dashboard-links operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dashboard_links(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-dashboard-links" }, input)
 end
 
---- Updates read and write permissions on a dashboard
---- @param input table|nil The input table for the update_dashboard_permissions command
+--- AWS quicksight update-dashboard-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dashboard_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-dashboard-permissions" }, input)
 end
 
---- Updates the published version of a dashboard
---- @param input table|nil The input table for the update_dashboard_published_version command
+--- AWS quicksight update-dashboard-published-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dashboard_published_version(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-dashboard-published-version" }, input)
 end
 
---- Updates a Dashboard QA configuration
---- @param input table|nil The input table for the update_dashboards_qa_configuration command
+--- AWS quicksight update-dashboards-qa-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dashboards_qa_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-dashboards-qa-configuration" }, input)
 end
 
---- Updates a dataset
---- @param input table|nil The input table for the update_data_set command
+--- AWS quicksight update-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_set(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-data-set" }, input)
 end
 
---- Updates the permissions on a dataset
---- @param input table|nil The input table for the update_data_set_permissions command
+--- AWS quicksight update-data-set-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_set_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-data-set-permissions" }, input)
 end
 
---- Updates a data source
---- @param input table|nil The input table for the update_data_source command
+--- AWS quicksight update-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-data-source" }, input)
 end
 
---- Updates the permissions to a data source
---- @param input table|nil The input table for the update_data_source_permissions command
+--- AWS quicksight update-data-source-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-data-source-permissions" }, input)
 end
 
---- Updates a Amazon Q Business application that is linked to a Amazon QuickSight account
---- @param input table|nil The input table for the update_default_q_business_application command
+--- AWS quicksight update-default-q-business-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_default_q_business_application(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-default-q-business-application" }, input)
 end
 
---- Updates the name of a folder
---- @param input table|nil The input table for the update_folder command
+--- AWS quicksight update-folder operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_folder(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-folder" }, input)
 end
 
---- Updates permissions of a folder
---- @param input table|nil The input table for the update_folder_permissions command
+--- AWS quicksight update-folder-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_folder_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-folder-permissions" }, input)
 end
 
---- Changes a group description
---- @param input table|nil The input table for the update_group command
+--- AWS quicksight update-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-group" }, input)
 end
 
---- Updates an existing IAM policy assignment
---- @param input table|nil The input table for the update_iam_policy_assignment command
+--- AWS quicksight update-iam-policy-assignment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_iam_policy_assignment(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-iam-policy-assignment" }, input)
 end
 
---- Adds or updates services and authorized targets to configure what the Amazon QuickSight IAM Identity Center application can access
---- @param input table|nil The input table for the update_identity_propagation_config command
+--- AWS quicksight update-identity-propagation-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_identity_propagation_config(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-identity-propagation-config" }, input)
 end
 
---- Updates the content and status of IP rules
---- @param input table|nil The input table for the update_ip_restriction command
+--- AWS quicksight update-ip-restriction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ip_restriction(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-ip-restriction" }, input)
 end
 
---- Updates a customer managed key in a Amazon QuickSight account
---- @param input table|nil The input table for the update_key_registration command
+--- AWS quicksight update-key-registration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_key_registration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-key-registration" }, input)
 end
 
---- Use the UpdatePublicSharingSettings operation to turn on or turn off the public sharing settings of an Amazon QuickSight dashboard
---- @param input table|nil The input table for the update_public_sharing_settings command
+--- AWS quicksight update-public-sharing-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_public_sharing_settings(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-public-sharing-settings" }, input)
 end
 
---- Updates a personalization configuration
---- @param input table|nil The input table for the update_q_personalization_configuration command
+--- AWS quicksight update-q-personalization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_q_personalization_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-q-personalization-configuration" }, input)
 end
 
---- Updates the state of a Amazon QuickSight Q Search configuration
---- @param input table|nil The input table for the update_quick_sight_q_search_configuration command
+--- AWS quicksight update-quick-sight-q-search-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_quick_sight_q_search_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-quick-sight-q-search-configuration" }, input)
 end
 
---- Updates a refresh schedule for a dataset
---- @param input table|nil The input table for the update_refresh_schedule command
+--- AWS quicksight update-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-refresh-schedule" }, input)
 end
 
---- Updates the custom permissions that are associated with a role
---- @param input table|nil The input table for the update_role_custom_permission command
+--- AWS quicksight update-role-custom-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_role_custom_permission(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-role-custom-permission" }, input)
 end
 
---- Updates the SPICE capacity configuration for a Amazon QuickSight account
---- @param input table|nil The input table for the update_spice_capacity_configuration command
+--- AWS quicksight update-spice-capacity-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_spice_capacity_configuration(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-spice-capacity-configuration" }, input)
 end
 
---- Updates a template from an existing Amazon QuickSight analysis or another template
---- @param input table|nil The input table for the update_template command
+--- AWS quicksight update-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-template" }, input)
 end
 
---- Updates the template alias of a template
---- @param input table|nil The input table for the update_template_alias command
+--- AWS quicksight update-template-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-template-alias" }, input)
 end
 
---- Updates the resource permissions for a template
---- @param input table|nil The input table for the update_template_permissions command
+--- AWS quicksight update-template-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_template_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-template-permissions" }, input)
 end
 
---- Updates a theme
---- @param input table|nil The input table for the update_theme command
+--- AWS quicksight update-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_theme(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-theme" }, input)
 end
 
---- Updates an alias of a theme
---- @param input table|nil The input table for the update_theme_alias command
+--- AWS quicksight update-theme-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_theme_alias(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-theme-alias" }, input)
 end
 
---- Updates the resource permissions for a theme
---- @param input table|nil The input table for the update_theme_permissions command
+--- AWS quicksight update-theme-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_theme_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-theme-permissions" }, input)
 end
 
---- Updates a topic
---- @param input table|nil The input table for the update_topic command
+--- AWS quicksight update-topic operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_topic(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-topic" }, input)
 end
 
---- Updates the permissions of a topic
---- @param input table|nil The input table for the update_topic_permissions command
+--- AWS quicksight update-topic-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_topic_permissions(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-topic-permissions" }, input)
 end
 
---- Updates a topic refresh schedule
---- @param input table|nil The input table for the update_topic_refresh_schedule command
+--- AWS quicksight update-topic-refresh-schedule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_topic_refresh_schedule(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-topic-refresh-schedule" }, input)
 end
 
---- Updates an Amazon QuickSight user
---- @param input table|nil The input table for the update_user command
+--- AWS quicksight update-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-user" }, input)
 end
 
---- Updates a custom permissions profile for a user
---- @param input table|nil The input table for the update_user_custom_permission command
+--- AWS quicksight update-user-custom-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user_custom_permission(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-user-custom-permission" }, input)
 end
 
---- Updates a VPC connection
---- @param input table|nil The input table for the update_vpc_connection command
+--- AWS quicksight update-vpc-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vpc_connection(input)
 	return common.execute_aws_command_with_input({ "quicksight", "update-vpc-connection" }, input)

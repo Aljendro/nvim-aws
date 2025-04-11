@@ -100,6 +100,11 @@ describe("AWS securitylake service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_data_lake_exceptions", function()
 		local result = service.list_data_lake_exceptions()
 		assert.is_true(result.success)

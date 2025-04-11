@@ -20,6 +20,11 @@ describe("AWS geo-routes service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with optimize_waypoints", function()
 		local result = service.optimize_waypoints()
 		assert.is_true(result.success)

@@ -6,526 +6,533 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ELASTICACHE service functions
 local M = {}
 
---- A tag is a key-value pair where the key and value are case-sensitive
---- @param input table|nil The input table for the add_tags_to_resource command
+--- AWS elasticache add-tags-to-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_tags_to_resource(input)
 	return common.execute_aws_command_with_input({ "elasticache", "add-tags-to-resource" }, input)
 end
 
---- Allows network ingress to a cache security group
---- @param input table|nil The input table for the authorize_cache_security_group_ingress command
+--- AWS elasticache authorize-cache-security-group-ingress operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.authorize_cache_security_group_ingress(input)
 	return common.execute_aws_command_with_input({ "elasticache", "authorize-cache-security-group-ingress" }, input)
 end
 
---- Apply the service update
---- @param input table|nil The input table for the batch_apply_update_action command
+--- AWS elasticache batch-apply-update-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_apply_update_action(input)
 	return common.execute_aws_command_with_input({ "elasticache", "batch-apply-update-action" }, input)
 end
 
---- Stop the service update
---- @param input table|nil The input table for the batch_stop_update_action command
+--- AWS elasticache batch-stop-update-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_stop_update_action(input)
 	return common.execute_aws_command_with_input({ "elasticache", "batch-stop-update-action" }, input)
 end
 
---- Complete the migration of data
---- @param input table|nil The input table for the complete_migration command
+--- AWS elasticache complete-migration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_migration(input)
 	return common.execute_aws_command_with_input({ "elasticache", "complete-migration" }, input)
 end
 
---- Creates a copy of an existing serverless cache’s snapshot
---- @param input table|nil The input table for the copy_serverless_cache_snapshot command
+--- AWS elasticache copy-serverless-cache-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_serverless_cache_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "copy-serverless-cache-snapshot" }, input)
 end
 
---- Makes a copy of an existing snapshot
---- @param input table|nil The input table for the copy_snapshot command
+--- AWS elasticache copy-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "copy-snapshot" }, input)
 end
 
---- Creates a cluster
---- @param input table|nil The input table for the create_cache_cluster command
+--- AWS elasticache create-cache-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cache_cluster(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-cache-cluster" }, input)
 end
 
---- Creates a new Amazon ElastiCache cache parameter group
---- @param input table|nil The input table for the create_cache_parameter_group command
+--- AWS elasticache create-cache-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cache_parameter_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-cache-parameter-group" }, input)
 end
 
---- Creates a new cache security group
---- @param input table|nil The input table for the create_cache_security_group command
+--- AWS elasticache create-cache-security-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cache_security_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-cache-security-group" }, input)
 end
 
---- Creates a new cache subnet group
---- @param input table|nil The input table for the create_cache_subnet_group command
+--- AWS elasticache create-cache-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cache_subnet_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-cache-subnet-group" }, input)
 end
 
---- Global Datastore offers fully managed, fast, reliable and secure cross-region replication
---- @param input table|nil The input table for the create_global_replication_group command
+--- AWS elasticache create-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-global-replication-group" }, input)
 end
 
---- Creates a Valkey or Redis OSS (cluster mode disabled) or a Valkey or Redis OSS (cluster mode enabled) replication group
---- @param input table|nil The input table for the create_replication_group command
+--- AWS elasticache create-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-replication-group" }, input)
 end
 
---- Creates a serverless cache
---- @param input table|nil The input table for the create_serverless_cache command
+--- AWS elasticache create-serverless-cache operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_serverless_cache(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-serverless-cache" }, input)
 end
 
---- This API creates a copy of an entire ServerlessCache at a specific moment in time
---- @param input table|nil The input table for the create_serverless_cache_snapshot command
+--- AWS elasticache create-serverless-cache-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_serverless_cache_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-serverless-cache-snapshot" }, input)
 end
 
---- Creates a copy of an entire cluster or replication group at a specific moment in time
---- @param input table|nil The input table for the create_snapshot command
+--- AWS elasticache create-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-snapshot" }, input)
 end
 
---- For Valkey engine version 7
---- @param input table|nil The input table for the create_user command
+--- AWS elasticache create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-user" }, input)
 end
 
---- For Valkey engine version 7
---- @param input table|nil The input table for the create_user_group command
+--- AWS elasticache create-user-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "create-user-group" }, input)
 end
 
---- Decreases the number of node groups in a Global datastore
---- @param input table|nil The input table for the decrease_node_groups_in_global_replication_group command
+--- AWS elasticache decrease-node-groups-in-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decrease_node_groups_in_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "decrease-node-groups-in-global-replication-group" }, input)
 end
 
---- Dynamically decreases the number of replicas in a Valkey or Redis OSS (cluster mode disabled) replication group or the number of replica nodes in one or more node groups (shards) of a Valkey or Redis OSS (cluster mode enabled) replication group
---- @param input table|nil The input table for the decrease_replica_count command
+--- AWS elasticache decrease-replica-count operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decrease_replica_count(input)
 	return common.execute_aws_command_with_input({ "elasticache", "decrease-replica-count" }, input)
 end
 
---- Deletes a previously provisioned cluster
---- @param input table|nil The input table for the delete_cache_cluster command
+--- AWS elasticache delete-cache-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cache_cluster(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-cache-cluster" }, input)
 end
 
---- Deletes the specified cache parameter group
---- @param input table|nil The input table for the delete_cache_parameter_group command
+--- AWS elasticache delete-cache-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cache_parameter_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-cache-parameter-group" }, input)
 end
 
---- Deletes a cache security group
---- @param input table|nil The input table for the delete_cache_security_group command
+--- AWS elasticache delete-cache-security-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cache_security_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-cache-security-group" }, input)
 end
 
---- Deletes a cache subnet group
---- @param input table|nil The input table for the delete_cache_subnet_group command
+--- AWS elasticache delete-cache-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cache_subnet_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-cache-subnet-group" }, input)
 end
 
---- Deleting a Global datastore is a two-step process: First, you must DisassociateGlobalReplicationGroup to remove the secondary clusters in the Global datastore
---- @param input table|nil The input table for the delete_global_replication_group command
+--- AWS elasticache delete-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-global-replication-group" }, input)
 end
 
---- Deletes an existing replication group
---- @param input table|nil The input table for the delete_replication_group command
+--- AWS elasticache delete-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-replication-group" }, input)
 end
 
---- Deletes a specified existing serverless cache
---- @param input table|nil The input table for the delete_serverless_cache command
+--- AWS elasticache delete-serverless-cache operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_serverless_cache(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-serverless-cache" }, input)
 end
 
---- Deletes an existing serverless cache snapshot
---- @param input table|nil The input table for the delete_serverless_cache_snapshot command
+--- AWS elasticache delete-serverless-cache-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_serverless_cache_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-serverless-cache-snapshot" }, input)
 end
 
---- Deletes an existing snapshot
---- @param input table|nil The input table for the delete_snapshot command
+--- AWS elasticache delete-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-snapshot" }, input)
 end
 
---- For Valkey engine version 7
---- @param input table|nil The input table for the delete_user command
+--- AWS elasticache delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-user" }, input)
 end
 
---- For Valkey engine version 7
---- @param input table|nil The input table for the delete_user_group command
+--- AWS elasticache delete-user-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "delete-user-group" }, input)
 end
 
---- Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cache cluster if a cluster identifier is supplied
---- @param input table|nil The input table for the describe_cache_clusters command
+--- AWS elasticache describe-cache-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_clusters(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-clusters" }, input)
 end
 
---- Returns a list of the available cache engines and their versions
---- @param input table|nil The input table for the describe_cache_engine_versions command
+--- AWS elasticache describe-cache-engine-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_engine_versions(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-engine-versions" }, input)
 end
 
---- Returns a list of cache parameter group descriptions
---- @param input table|nil The input table for the describe_cache_parameter_groups command
+--- AWS elasticache describe-cache-parameter-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_parameter_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-parameter-groups" }, input)
 end
 
---- Returns the detailed parameter list for a particular cache parameter group
---- @param input table|nil The input table for the describe_cache_parameters command
+--- AWS elasticache describe-cache-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_parameters(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-parameters" }, input)
 end
 
---- Returns a list of cache security group descriptions
---- @param input table|nil The input table for the describe_cache_security_groups command
+--- AWS elasticache describe-cache-security-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_security_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-security-groups" }, input)
 end
 
---- Returns a list of cache subnet group descriptions
---- @param input table|nil The input table for the describe_cache_subnet_groups command
+--- AWS elasticache describe-cache-subnet-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cache_subnet_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-cache-subnet-groups" }, input)
 end
 
---- Returns the default engine and system parameter information for the specified cache engine
---- @param input table|nil The input table for the describe_engine_default_parameters command
+--- AWS elasticache describe-engine-default-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_engine_default_parameters(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-engine-default-parameters" }, input)
 end
 
---- Returns events related to clusters, cache security groups, and cache parameter groups
---- @param input table|nil The input table for the describe_events command
+--- AWS elasticache describe-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-events" }, input)
 end
 
---- Returns information about a particular global replication group
---- @param input table|nil The input table for the describe_global_replication_groups command
+--- AWS elasticache describe-global-replication-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_global_replication_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-global-replication-groups" }, input)
 end
 
---- Returns information about a particular replication group
---- @param input table|nil The input table for the describe_replication_groups command
+--- AWS elasticache describe-replication-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_replication_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-replication-groups" }, input)
 end
 
---- Returns information about reserved cache nodes for this account, or about a specified reserved cache node
---- @param input table|nil The input table for the describe_reserved_cache_nodes command
+--- AWS elasticache describe-reserved-cache-nodes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_cache_nodes(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-reserved-cache-nodes" }, input)
 end
 
---- Lists available reserved cache node offerings
---- @param input table|nil The input table for the describe_reserved_cache_nodes_offerings command
+--- AWS elasticache describe-reserved-cache-nodes-offerings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_reserved_cache_nodes_offerings(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-reserved-cache-nodes-offerings" }, input)
 end
 
---- Returns information about serverless cache snapshots
---- @param input table|nil The input table for the describe_serverless_cache_snapshots command
+--- AWS elasticache describe-serverless-cache-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_serverless_cache_snapshots(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-serverless-cache-snapshots" }, input)
 end
 
---- Returns information about a specific serverless cache
---- @param input table|nil The input table for the describe_serverless_caches command
+--- AWS elasticache describe-serverless-caches operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_serverless_caches(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-serverless-caches" }, input)
 end
 
---- Returns details of the service updates
---- @param input table|nil The input table for the describe_service_updates command
+--- AWS elasticache describe-service-updates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_service_updates(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-service-updates" }, input)
 end
 
---- Returns information about cluster or replication group snapshots
---- @param input table|nil The input table for the describe_snapshots command
+--- AWS elasticache describe-snapshots operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_snapshots(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-snapshots" }, input)
 end
 
---- Returns details of the update actions
---- @param input table|nil The input table for the describe_update_actions command
+--- AWS elasticache describe-update-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_update_actions(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-update-actions" }, input)
 end
 
---- Returns a list of user groups
---- @param input table|nil The input table for the describe_user_groups command
+--- AWS elasticache describe-user-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user_groups(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-user-groups" }, input)
 end
 
---- Returns a list of users
---- @param input table|nil The input table for the describe_users command
+--- AWS elasticache describe-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_users(input)
 	return common.execute_aws_command_with_input({ "elasticache", "describe-users" }, input)
 end
 
---- Remove a secondary cluster from the Global datastore using the Global datastore name
---- @param input table|nil The input table for the disassociate_global_replication_group command
+--- AWS elasticache disassociate-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "disassociate-global-replication-group" }, input)
 end
 
---- Provides the functionality to export the serverless cache snapshot data to Amazon S3
---- @param input table|nil The input table for the export_serverless_cache_snapshot command
+--- AWS elasticache export-serverless-cache-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_serverless_cache_snapshot(input)
 	return common.execute_aws_command_with_input({ "elasticache", "export-serverless-cache-snapshot" }, input)
 end
 
---- Used to failover the primary region to a secondary region
---- @param input table|nil The input table for the failover_global_replication_group command
+--- AWS elasticache failover-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.failover_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "failover-global-replication-group" }, input)
 end
 
---- Increase the number of node groups in the Global datastore
---- @param input table|nil The input table for the increase_node_groups_in_global_replication_group command
+--- AWS elasticache help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "elasticache", "help" }, input)
+end
+
+--- AWS elasticache increase-node-groups-in-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.increase_node_groups_in_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "increase-node-groups-in-global-replication-group" }, input)
 end
 
---- Dynamically increases the number of replicas in a Valkey or Redis OSS (cluster mode disabled) replication group or the number of replica nodes in one or more node groups (shards) of a Valkey or Redis OSS (cluster mode enabled) replication group
---- @param input table|nil The input table for the increase_replica_count command
+--- AWS elasticache increase-replica-count operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.increase_replica_count(input)
 	return common.execute_aws_command_with_input({ "elasticache", "increase-replica-count" }, input)
 end
 
---- Lists all available node types that you can scale with your cluster's replication group's current node type
---- @param input table|nil The input table for the list_allowed_node_type_modifications command
+--- AWS elasticache list-allowed-node-type-modifications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_allowed_node_type_modifications(input)
 	return common.execute_aws_command_with_input({ "elasticache", "list-allowed-node-type-modifications" }, input)
 end
 
---- Lists all tags currently on a named resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS elasticache list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "elasticache", "list-tags-for-resource" }, input)
 end
 
---- Modifies the settings for a cluster
---- @param input table|nil The input table for the modify_cache_cluster command
+--- AWS elasticache modify-cache-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cache_cluster(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-cache-cluster" }, input)
 end
 
---- Modifies the parameters of a cache parameter group
---- @param input table|nil The input table for the modify_cache_parameter_group command
+--- AWS elasticache modify-cache-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cache_parameter_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-cache-parameter-group" }, input)
 end
 
---- Modifies an existing cache subnet group
---- @param input table|nil The input table for the modify_cache_subnet_group command
+--- AWS elasticache modify-cache-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_cache_subnet_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-cache-subnet-group" }, input)
 end
 
---- Modifies the settings for a Global datastore
---- @param input table|nil The input table for the modify_global_replication_group command
+--- AWS elasticache modify-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-global-replication-group" }, input)
 end
 
---- Modifies the settings for a replication group
---- @param input table|nil The input table for the modify_replication_group command
+--- AWS elasticache modify-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-replication-group" }, input)
 end
 
---- Modifies a replication group's shards (node groups) by allowing you to add shards, remove shards, or rebalance the keyspaces among existing shards
---- @param input table|nil The input table for the modify_replication_group_shard_configuration command
+--- AWS elasticache modify-replication-group-shard-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_replication_group_shard_configuration(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-replication-group-shard-configuration" }, input)
 end
 
---- This API modifies the attributes of a serverless cache
---- @param input table|nil The input table for the modify_serverless_cache command
+--- AWS elasticache modify-serverless-cache operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_serverless_cache(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-serverless-cache" }, input)
 end
 
---- Changes user password(s) and/or access string
---- @param input table|nil The input table for the modify_user command
+--- AWS elasticache modify-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_user(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-user" }, input)
 end
 
---- Changes the list of users that belong to the user group
---- @param input table|nil The input table for the modify_user_group command
+--- AWS elasticache modify-user-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.modify_user_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "modify-user-group" }, input)
 end
 
---- Allows you to purchase a reserved cache node offering
---- @param input table|nil The input table for the purchase_reserved_cache_nodes_offering command
+--- AWS elasticache purchase-reserved-cache-nodes-offering operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.purchase_reserved_cache_nodes_offering(input)
 	return common.execute_aws_command_with_input({ "elasticache", "purchase-reserved-cache-nodes-offering" }, input)
 end
 
---- Redistribute slots to ensure uniform distribution across existing shards in the cluster
---- @param input table|nil The input table for the rebalance_slots_in_global_replication_group command
+--- AWS elasticache rebalance-slots-in-global-replication-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rebalance_slots_in_global_replication_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "rebalance-slots-in-global-replication-group" }, input)
 end
 
---- Reboots some, or all, of the cache nodes within a provisioned cluster
---- @param input table|nil The input table for the reboot_cache_cluster command
+--- AWS elasticache reboot-cache-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_cache_cluster(input)
 	return common.execute_aws_command_with_input({ "elasticache", "reboot-cache-cluster" }, input)
 end
 
---- Removes the tags identified by the TagKeys list from the named resource
---- @param input table|nil The input table for the remove_tags_from_resource command
+--- AWS elasticache remove-tags-from-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_tags_from_resource(input)
 	return common.execute_aws_command_with_input({ "elasticache", "remove-tags-from-resource" }, input)
 end
 
---- Modifies the parameters of a cache parameter group to the engine or system default value
---- @param input table|nil The input table for the reset_cache_parameter_group command
+--- AWS elasticache reset-cache-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_cache_parameter_group(input)
 	return common.execute_aws_command_with_input({ "elasticache", "reset-cache-parameter-group" }, input)
 end
 
---- Revokes ingress from a cache security group
---- @param input table|nil The input table for the revoke_cache_security_group_ingress command
+--- AWS elasticache revoke-cache-security-group-ingress operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_cache_security_group_ingress(input)
 	return common.execute_aws_command_with_input({ "elasticache", "revoke-cache-security-group-ingress" }, input)
 end
 
---- Start the migration of data
---- @param input table|nil The input table for the start_migration command
+--- AWS elasticache start-migration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_migration(input)
 	return common.execute_aws_command_with_input({ "elasticache", "start-migration" }, input)
 end
 
---- Represents the input of a TestFailover operation which tests automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console)
---- @param input table|nil The input table for the test_failover command
+--- AWS elasticache test-failover operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_failover(input)
 	return common.execute_aws_command_with_input({ "elasticache", "test-failover" }, input)
 end
 
---- Async API to test connection between source and target replication group
---- @param input table|nil The input table for the test_migration command
+--- AWS elasticache test-migration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_migration(input)
 	return common.execute_aws_command_with_input({ "elasticache", "test-migration" }, input)

@@ -6,519 +6,526 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS OPSWORKS service functions
 local M = {}
 
---- Assign a registered instance to a layer
---- @param input table|nil The input table for the assign_instance command
+--- AWS opsworks assign-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assign_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "assign-instance" }, input)
 end
 
---- Assigns one of the stack's registered Amazon EBS volumes to a specified instance
---- @param input table|nil The input table for the assign_volume command
+--- AWS opsworks assign-volume operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assign_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "assign-volume" }, input)
 end
 
---- Associates one of the stack's registered Elastic IP addresses with a specified instance
---- @param input table|nil The input table for the associate_elastic_ip command
+--- AWS opsworks associate-elastic-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_elastic_ip(input)
 	return common.execute_aws_command_with_input({ "opsworks", "associate-elastic-ip" }, input)
 end
 
---- Attaches an Elastic Load Balancing load balancer to a specified layer
---- @param input table|nil The input table for the attach_elastic_load_balancer command
+--- AWS opsworks attach-elastic-load-balancer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.attach_elastic_load_balancer(input)
 	return common.execute_aws_command_with_input({ "opsworks", "attach-elastic-load-balancer" }, input)
 end
 
---- Creates a clone of a specified stack
---- @param input table|nil The input table for the clone_stack command
+--- AWS opsworks clone-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.clone_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "clone-stack" }, input)
 end
 
---- Creates an app for a specified stack
---- @param input table|nil The input table for the create_app command
+--- AWS opsworks create-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-app" }, input)
 end
 
---- Runs deployment or stack commands
---- @param input table|nil The input table for the create_deployment command
+--- AWS opsworks create-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-deployment" }, input)
 end
 
---- Creates an instance in a specified stack
---- @param input table|nil The input table for the create_instance command
+--- AWS opsworks create-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-instance" }, input)
 end
 
---- Creates a layer
---- @param input table|nil The input table for the create_layer command
+--- AWS opsworks create-layer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_layer(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-layer" }, input)
 end
 
---- Creates a new stack
---- @param input table|nil The input table for the create_stack command
+--- AWS opsworks create-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-stack" }, input)
 end
 
---- Creates a new user profile
---- @param input table|nil The input table for the create_user_profile command
+--- AWS opsworks create-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user_profile(input)
 	return common.execute_aws_command_with_input({ "opsworks", "create-user-profile" }, input)
 end
 
---- Deletes a specified app
---- @param input table|nil The input table for the delete_app command
+--- AWS opsworks delete-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app(input)
 	return common.execute_aws_command_with_input({ "opsworks", "delete-app" }, input)
 end
 
---- Deletes a specified instance, which terminates the associated Amazon EC2 instance
---- @param input table|nil The input table for the delete_instance command
+--- AWS opsworks delete-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "delete-instance" }, input)
 end
 
---- Deletes a specified layer
---- @param input table|nil The input table for the delete_layer command
+--- AWS opsworks delete-layer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_layer(input)
 	return common.execute_aws_command_with_input({ "opsworks", "delete-layer" }, input)
 end
 
---- Deletes a specified stack
---- @param input table|nil The input table for the delete_stack command
+--- AWS opsworks delete-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "delete-stack" }, input)
 end
 
---- Deletes a user profile
---- @param input table|nil The input table for the delete_user_profile command
+--- AWS opsworks delete-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user_profile(input)
 	return common.execute_aws_command_with_input({ "opsworks", "delete-user-profile" }, input)
 end
 
---- Deregisters a specified Amazon ECS cluster from a stack
---- @param input table|nil The input table for the deregister_ecs_cluster command
+--- AWS opsworks deregister-ecs-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_ecs_cluster(input)
 	return common.execute_aws_command_with_input({ "opsworks", "deregister-ecs-cluster" }, input)
 end
 
---- Deregisters a specified Elastic IP address
---- @param input table|nil The input table for the deregister_elastic_ip command
+--- AWS opsworks deregister-elastic-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_elastic_ip(input)
 	return common.execute_aws_command_with_input({ "opsworks", "deregister-elastic-ip" }, input)
 end
 
---- Deregister an instance from OpsWorks Stacks
---- @param input table|nil The input table for the deregister_instance command
+--- AWS opsworks deregister-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "deregister-instance" }, input)
 end
 
---- Deregisters an Amazon RDS instance
---- @param input table|nil The input table for the deregister_rds_db_instance command
+--- AWS opsworks deregister-rds-db-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_rds_db_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "deregister-rds-db-instance" }, input)
 end
 
---- Deregisters an Amazon EBS volume
---- @param input table|nil The input table for the deregister_volume command
+--- AWS opsworks deregister-volume operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "deregister-volume" }, input)
 end
 
---- Describes the available OpsWorks Stacks agent versions
---- @param input table|nil The input table for the describe_agent_versions command
+--- AWS opsworks describe-agent-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_agent_versions(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-agent-versions" }, input)
 end
 
---- Requests a description of a specified set of apps
---- @param input table|nil The input table for the describe_apps command
+--- AWS opsworks describe-apps operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_apps(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-apps" }, input)
 end
 
---- Describes the results of specified commands
---- @param input table|nil The input table for the describe_commands command
+--- AWS opsworks describe-commands operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_commands(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-commands" }, input)
 end
 
---- Requests a description of a specified set of deployments
---- @param input table|nil The input table for the describe_deployments command
+--- AWS opsworks describe-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_deployments(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-deployments" }, input)
 end
 
---- Describes Amazon ECS clusters that are registered with a stack
---- @param input table|nil The input table for the describe_ecs_clusters command
+--- AWS opsworks describe-ecs-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ecs_clusters(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-ecs-clusters" }, input)
 end
 
---- Describes Elastic IP addresses
---- @param input table|nil The input table for the describe_elastic_ips command
+--- AWS opsworks describe-elastic-ips operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_elastic_ips(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-elastic-ips" }, input)
 end
 
---- Describes a stack's Elastic Load Balancing instances
---- @param input table|nil The input table for the describe_elastic_load_balancers command
+--- AWS opsworks describe-elastic-load-balancers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_elastic_load_balancers(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-elastic-load-balancers" }, input)
 end
 
---- Requests a description of a set of instances
---- @param input table|nil The input table for the describe_instances command
+--- AWS opsworks describe-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instances(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-instances" }, input)
 end
 
---- Requests a description of one or more layers in a specified stack
---- @param input table|nil The input table for the describe_layers command
+--- AWS opsworks describe-layers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_layers(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-layers" }, input)
 end
 
---- Describes load-based auto scaling configurations for specified layers
---- @param input table|nil The input table for the describe_load_based_auto_scaling command
+--- AWS opsworks describe-load-based-auto-scaling operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_load_based_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-load-based-auto-scaling" }, input)
 end
 
---- Describes a user's SSH information
+--- AWS opsworks describe-my-user-profile operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_my_user_profile(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-my-user-profile" }, input)
 end
 
---- Describes the operating systems that are supported by OpsWorks Stacks
+--- AWS opsworks describe-operating-systems operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_operating_systems(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-operating-systems" }, input)
 end
 
---- Describes the permissions for a specified stack
---- @param input table|nil The input table for the describe_permissions command
+--- AWS opsworks describe-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_permissions(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-permissions" }, input)
 end
 
---- Describe an instance's RAID arrays
---- @param input table|nil The input table for the describe_raid_arrays command
+--- AWS opsworks describe-raid-arrays operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_raid_arrays(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-raid-arrays" }, input)
 end
 
---- Describes Amazon RDS instances
---- @param input table|nil The input table for the describe_rds_db_instances command
+--- AWS opsworks describe-rds-db-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rds_db_instances(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-rds-db-instances" }, input)
 end
 
---- Describes OpsWorks Stacks service errors
---- @param input table|nil The input table for the describe_service_errors command
+--- AWS opsworks describe-service-errors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_service_errors(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-service-errors" }, input)
 end
 
---- Requests a description of a stack's provisioning parameters
---- @param input table|nil The input table for the describe_stack_provisioning_parameters command
+--- AWS opsworks describe-stack-provisioning-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stack_provisioning_parameters(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-stack-provisioning-parameters" }, input)
 end
 
---- Describes the number of layers and apps in a specified stack, and the number of instances in each state, such as running_setup or online
---- @param input table|nil The input table for the describe_stack_summary command
+--- AWS opsworks describe-stack-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stack_summary(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-stack-summary" }, input)
 end
 
---- Requests a description of one or more stacks
---- @param input table|nil The input table for the describe_stacks command
+--- AWS opsworks describe-stacks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_stacks(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-stacks" }, input)
 end
 
---- Describes time-based auto scaling configurations for specified instances
---- @param input table|nil The input table for the describe_time_based_auto_scaling command
+--- AWS opsworks describe-time-based-auto-scaling operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_time_based_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-time-based-auto-scaling" }, input)
 end
 
---- Describe specified users
---- @param input table|nil The input table for the describe_user_profiles command
+--- AWS opsworks describe-user-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user_profiles(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-user-profiles" }, input)
 end
 
---- Describes an instance's Amazon EBS volumes
---- @param input table|nil The input table for the describe_volumes command
+--- AWS opsworks describe-volumes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_volumes(input)
 	return common.execute_aws_command_with_input({ "opsworks", "describe-volumes" }, input)
 end
 
---- Detaches a specified Elastic Load Balancing instance from its layer
---- @param input table|nil The input table for the detach_elastic_load_balancer command
+--- AWS opsworks detach-elastic-load-balancer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detach_elastic_load_balancer(input)
 	return common.execute_aws_command_with_input({ "opsworks", "detach-elastic-load-balancer" }, input)
 end
 
---- Disassociates an Elastic IP address from its instance
---- @param input table|nil The input table for the disassociate_elastic_ip command
+--- AWS opsworks disassociate-elastic-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_elastic_ip(input)
 	return common.execute_aws_command_with_input({ "opsworks", "disassociate-elastic-ip" }, input)
 end
 
---- Gets a generated host name for the specified layer, based on the current host name theme
---- @param input table|nil The input table for the get_hostname_suggestion command
+--- AWS opsworks get-hostname-suggestion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_hostname_suggestion(input)
 	return common.execute_aws_command_with_input({ "opsworks", "get-hostname-suggestion" }, input)
 end
 
---- This action can be used only with Windows stacks
---- @param input table|nil The input table for the grant_access command
+--- AWS opsworks grant-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.grant_access(input)
 	return common.execute_aws_command_with_input({ "opsworks", "grant-access" }, input)
 end
 
---- Returns a list of tags that are applied to the specified stack or layer
---- @param input table|nil The input table for the list_tags command
+--- AWS opsworks help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "opsworks", "help" }, input)
+end
+
+--- AWS opsworks list-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "opsworks", "list-tags" }, input)
 end
 
---- Reboots a specified instance
---- @param input table|nil The input table for the reboot_instance command
+--- AWS opsworks reboot-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "reboot-instance" }, input)
 end
 
---- Registers a specified Amazon ECS cluster with a stack
---- @param input table|nil The input table for the register_ecs_cluster command
+--- AWS opsworks register-ecs-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_ecs_cluster(input)
 	return common.execute_aws_command_with_input({ "opsworks", "register-ecs-cluster" }, input)
 end
 
---- Registers an Elastic IP address with a specified stack
---- @param input table|nil The input table for the register_elastic_ip command
+--- AWS opsworks register-elastic-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_elastic_ip(input)
 	return common.execute_aws_command_with_input({ "opsworks", "register-elastic-ip" }, input)
 end
 
---- Registers instances that were created outside of OpsWorks Stacks with a specified stack
---- @param input table|nil The input table for the register_instance command
+--- AWS opsworks register-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "register-instance" }, input)
 end
 
---- Registers an Amazon RDS instance with a stack
---- @param input table|nil The input table for the register_rds_db_instance command
+--- AWS opsworks register-rds-db-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_rds_db_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "register-rds-db-instance" }, input)
 end
 
---- Registers an Amazon EBS volume with a specified stack
---- @param input table|nil The input table for the register_volume command
+--- AWS opsworks register-volume operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "register-volume" }, input)
 end
 
---- Specify the load-based auto scaling configuration for a specified layer
---- @param input table|nil The input table for the set_load_based_auto_scaling command
+--- AWS opsworks set-load-based-auto-scaling operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_load_based_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "opsworks", "set-load-based-auto-scaling" }, input)
 end
 
---- Specifies a user's permissions
---- @param input table|nil The input table for the set_permission command
+--- AWS opsworks set-permission operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_permission(input)
 	return common.execute_aws_command_with_input({ "opsworks", "set-permission" }, input)
 end
 
---- Specify the time-based auto scaling configuration for a specified instance
---- @param input table|nil The input table for the set_time_based_auto_scaling command
+--- AWS opsworks set-time-based-auto-scaling operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_time_based_auto_scaling(input)
 	return common.execute_aws_command_with_input({ "opsworks", "set-time-based-auto-scaling" }, input)
 end
 
---- Starts a specified instance
---- @param input table|nil The input table for the start_instance command
+--- AWS opsworks start-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "start-instance" }, input)
 end
 
---- Starts a stack's instances
---- @param input table|nil The input table for the start_stack command
+--- AWS opsworks start-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "start-stack" }, input)
 end
 
---- Stops a specified instance
---- @param input table|nil The input table for the stop_instance command
+--- AWS opsworks stop-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "stop-instance" }, input)
 end
 
---- Stops a specified stack
---- @param input table|nil The input table for the stop_stack command
+--- AWS opsworks stop-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "stop-stack" }, input)
 end
 
---- Apply cost-allocation tags to a specified stack or layer in OpsWorks Stacks
---- @param input table|nil The input table for the tag_resource command
+--- AWS opsworks tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "opsworks", "tag-resource" }, input)
 end
 
---- Unassigns a registered instance from all layers that are using the instance
---- @param input table|nil The input table for the unassign_instance command
+--- AWS opsworks unassign-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unassign_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "unassign-instance" }, input)
 end
 
---- Unassigns an assigned Amazon EBS volume
---- @param input table|nil The input table for the unassign_volume command
+--- AWS opsworks unassign-volume operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unassign_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "unassign-volume" }, input)
 end
 
---- Removes tags from a specified stack or layer
---- @param input table|nil The input table for the untag_resource command
+--- AWS opsworks untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "opsworks", "untag-resource" }, input)
 end
 
---- Updates a specified app
---- @param input table|nil The input table for the update_app command
+--- AWS opsworks update-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-app" }, input)
 end
 
---- Updates a registered Elastic IP address's name
---- @param input table|nil The input table for the update_elastic_ip command
+--- AWS opsworks update-elastic-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_elastic_ip(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-elastic-ip" }, input)
 end
 
---- Updates a specified instance
---- @param input table|nil The input table for the update_instance command
+--- AWS opsworks update-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-instance" }, input)
 end
 
---- Updates a specified layer
---- @param input table|nil The input table for the update_layer command
+--- AWS opsworks update-layer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_layer(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-layer" }, input)
 end
 
---- Updates a user's SSH public key
---- @param input table|nil The input table for the update_my_user_profile command
+--- AWS opsworks update-my-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_my_user_profile(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-my-user-profile" }, input)
 end
 
---- Updates an Amazon RDS instance
---- @param input table|nil The input table for the update_rds_db_instance command
+--- AWS opsworks update-rds-db-instance operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rds_db_instance(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-rds-db-instance" }, input)
 end
 
---- Updates a specified stack
---- @param input table|nil The input table for the update_stack command
+--- AWS opsworks update-stack operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stack(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-stack" }, input)
 end
 
---- Updates a specified user profile
---- @param input table|nil The input table for the update_user_profile command
+--- AWS opsworks update-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user_profile(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-user-profile" }, input)
 end
 
---- Updates an Amazon EBS volume's name or mount point
---- @param input table|nil The input table for the update_volume command
+--- AWS opsworks update-volume operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-volume" }, input)

@@ -6,15 +6,22 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS FORECASTQUERY service functions
 local M = {}
 
---- Retrieves a forecast for a single item, filtered by the supplied criteria
---- @param input table|nil The input table for the query_forecast command
+--- AWS forecastquery help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "forecastquery", "help" }, input)
+end
+
+--- AWS forecastquery query-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.query_forecast(input)
 	return common.execute_aws_command_with_input({ "forecastquery", "query-forecast" }, input)
 end
 
---- Retrieves a what-if forecast
---- @param input table|nil The input table for the query_what_if_forecast command
+--- AWS forecastquery query-what-if-forecast operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.query_what_if_forecast(input)
 	return common.execute_aws_command_with_input({ "forecastquery", "query-what-if-forecast" }, input)

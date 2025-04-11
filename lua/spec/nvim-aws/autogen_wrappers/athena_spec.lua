@@ -180,6 +180,11 @@ describe("AWS athena service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_notebook", function()
 		local result = service.import_notebook()
 		assert.is_true(result.success)

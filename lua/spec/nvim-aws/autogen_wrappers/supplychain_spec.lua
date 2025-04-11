@@ -60,6 +60,11 @@ describe("AWS supplychain service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_data_integration_flows", function()
 		local result = service.list_data_integration_flows()
 		assert.is_true(result.success)

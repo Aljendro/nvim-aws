@@ -6,246 +6,253 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS QAPPS service functions
 local M = {}
 
---- Associates a rating or review for a library item with the user submitting the request
---- @param input table|nil The input table for the associate_library_item_review command
+--- AWS qapps associate-library-item-review operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_library_item_review(input)
 	return common.execute_aws_command_with_input({ "qapps", "associate-library-item-review" }, input)
 end
 
---- This operation creates a link between the user's identity calling the operation and a specific Q App
---- @param input table|nil The input table for the associate_q_app_with_user command
+--- AWS qapps associate-q-app-with-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_q_app_with_user(input)
 	return common.execute_aws_command_with_input({ "qapps", "associate-q-app-with-user" }, input)
 end
 
---- Creates Categories for the Amazon Q Business application environment instance
---- @param input table|nil The input table for the batch_create_category command
+--- AWS qapps batch-create-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_create_category(input)
 	return common.execute_aws_command_with_input({ "qapps", "batch-create-category" }, input)
 end
 
---- Deletes Categories for the Amazon Q Business application environment instance
---- @param input table|nil The input table for the batch_delete_category command
+--- AWS qapps batch-delete-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_category(input)
 	return common.execute_aws_command_with_input({ "qapps", "batch-delete-category" }, input)
 end
 
---- Updates Categories for the Amazon Q Business application environment instance
---- @param input table|nil The input table for the batch_update_category command
+--- AWS qapps batch-update-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_category(input)
 	return common.execute_aws_command_with_input({ "qapps", "batch-update-category" }, input)
 end
 
---- Creates a new library item for an Amazon Q App, allowing it to be discovered and used by other allowed users
---- @param input table|nil The input table for the create_library_item command
+--- AWS qapps create-library-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_library_item(input)
 	return common.execute_aws_command_with_input({ "qapps", "create-library-item" }, input)
 end
 
---- Creates a presigned URL for an S3 POST operation to upload a file
---- @param input table|nil The input table for the create_presigned_url command
+--- AWS qapps create-presigned-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_presigned_url(input)
 	return common.execute_aws_command_with_input({ "qapps", "create-presigned-url" }, input)
 end
 
---- Creates a new Amazon Q App based on the provided definition
---- @param input table|nil The input table for the create_q_app command
+--- AWS qapps create-q-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_q_app(input)
 	return common.execute_aws_command_with_input({ "qapps", "create-q-app" }, input)
 end
 
---- Deletes a library item for an Amazon Q App, removing it from the library so it can no longer be discovered or used by other users
---- @param input table|nil The input table for the delete_library_item command
+--- AWS qapps delete-library-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_library_item(input)
 	return common.execute_aws_command_with_input({ "qapps", "delete-library-item" }, input)
 end
 
---- Deletes an Amazon Q App owned by the user
---- @param input table|nil The input table for the delete_q_app command
+--- AWS qapps delete-q-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_q_app(input)
 	return common.execute_aws_command_with_input({ "qapps", "delete-q-app" }, input)
 end
 
---- Describes read permissions for a Amazon Q App in Amazon Q Business application environment instance
---- @param input table|nil The input table for the describe_q_app_permissions command
+--- AWS qapps describe-q-app-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_q_app_permissions(input)
 	return common.execute_aws_command_with_input({ "qapps", "describe-q-app-permissions" }, input)
 end
 
---- Removes a rating or review previously submitted by the user for a library item
---- @param input table|nil The input table for the disassociate_library_item_review command
+--- AWS qapps disassociate-library-item-review operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_library_item_review(input)
 	return common.execute_aws_command_with_input({ "qapps", "disassociate-library-item-review" }, input)
 end
 
---- Disassociates a Q App from a user removing the user's access to run the Q App
---- @param input table|nil The input table for the disassociate_q_app_from_user command
+--- AWS qapps disassociate-q-app-from-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_q_app_from_user(input)
 	return common.execute_aws_command_with_input({ "qapps", "disassociate-q-app-from-user" }, input)
 end
 
---- Exports the collected data of a Q App data collection session
---- @param input table|nil The input table for the export_q_app_session_data command
+--- AWS qapps export-q-app-session-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_q_app_session_data(input)
 	return common.execute_aws_command_with_input({ "qapps", "export-q-app-session-data" }, input)
 end
 
---- Retrieves details about a library item for an Amazon Q App, including its metadata, categories, ratings, and usage statistics
---- @param input table|nil The input table for the get_library_item command
+--- AWS qapps get-library-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_library_item(input)
 	return common.execute_aws_command_with_input({ "qapps", "get-library-item" }, input)
 end
 
---- Retrieves the full details of an Q App, including its definition specifying the cards and flow
---- @param input table|nil The input table for the get_q_app command
+--- AWS qapps get-q-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_q_app(input)
 	return common.execute_aws_command_with_input({ "qapps", "get-q-app" }, input)
 end
 
---- Retrieves the current state and results for an active session of an Amazon Q App
---- @param input table|nil The input table for the get_q_app_session command
+--- AWS qapps get-q-app-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_q_app_session(input)
 	return common.execute_aws_command_with_input({ "qapps", "get-q-app-session" }, input)
 end
 
---- Retrieves the current configuration of a Q App session
---- @param input table|nil The input table for the get_q_app_session_metadata command
+--- AWS qapps get-q-app-session-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_q_app_session_metadata(input)
 	return common.execute_aws_command_with_input({ "qapps", "get-q-app-session-metadata" }, input)
 end
 
---- Uploads a file that can then be used either as a default in a FileUploadCard from Q App definition or as a file that is used inside a single Q App run
---- @param input table|nil The input table for the import_document command
+--- AWS qapps help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "qapps", "help" }, input)
+end
+
+--- AWS qapps import-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_document(input)
 	return common.execute_aws_command_with_input({ "qapps", "import-document" }, input)
 end
 
---- Lists the categories of a Amazon Q Business application environment instance
---- @param input table|nil The input table for the list_categories command
+--- AWS qapps list-categories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_categories(input)
 	return common.execute_aws_command_with_input({ "qapps", "list-categories" }, input)
 end
 
---- Lists the library items for Amazon Q Apps that are published and available for users in your Amazon Web Services account
---- @param input table|nil The input table for the list_library_items command
+--- AWS qapps list-library-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_library_items(input)
 	return common.execute_aws_command_with_input({ "qapps", "list-library-items" }, input)
 end
 
---- Lists the collected data of a Q App data collection session
---- @param input table|nil The input table for the list_q_app_session_data command
+--- AWS qapps list-q-app-session-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_q_app_session_data(input)
 	return common.execute_aws_command_with_input({ "qapps", "list-q-app-session-data" }, input)
 end
 
---- Lists the Amazon Q Apps owned by or associated with the user either because they created it or because they used it from the library in the past
---- @param input table|nil The input table for the list_q_apps command
+--- AWS qapps list-q-apps operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_q_apps(input)
 	return common.execute_aws_command_with_input({ "qapps", "list-q-apps" }, input)
 end
 
---- Lists the tags associated with an Amazon Q Apps resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS qapps list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "qapps", "list-tags-for-resource" }, input)
 end
 
---- Generates an Amazon Q App definition based on either a conversation or a problem statement provided as input
---- @param input table|nil The input table for the predict_q_app command
+--- AWS qapps predict-q-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.predict_q_app(input)
 	return common.execute_aws_command_with_input({ "qapps", "predict-q-app" }, input)
 end
 
---- Starts a new session for an Amazon Q App, allowing inputs to be provided and the app to be run
---- @param input table|nil The input table for the start_q_app_session command
+--- AWS qapps start-q-app-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_q_app_session(input)
 	return common.execute_aws_command_with_input({ "qapps", "start-q-app-session" }, input)
 end
 
---- Stops an active session for an Amazon Q App
---- @param input table|nil The input table for the stop_q_app_session command
+--- AWS qapps stop-q-app-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_q_app_session(input)
 	return common.execute_aws_command_with_input({ "qapps", "stop-q-app-session" }, input)
 end
 
---- Associates tags with an Amazon Q Apps resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS qapps tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "qapps", "tag-resource" }, input)
 end
 
---- Disassociates tags from an Amazon Q Apps resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS qapps untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "qapps", "untag-resource" }, input)
 end
 
---- Updates the library item for an Amazon Q App
---- @param input table|nil The input table for the update_library_item command
+--- AWS qapps update-library-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_library_item(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-library-item" }, input)
 end
 
---- Updates the verification status of a library item for an Amazon Q App
---- @param input table|nil The input table for the update_library_item_metadata command
+--- AWS qapps update-library-item-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_library_item_metadata(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-library-item-metadata" }, input)
 end
 
---- Updates an existing Amazon Q App, allowing modifications to its title, description, and definition
---- @param input table|nil The input table for the update_q_app command
+--- AWS qapps update-q-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_q_app(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-q-app" }, input)
 end
 
---- Updates read permissions for a Amazon Q App in Amazon Q Business application environment instance
---- @param input table|nil The input table for the update_q_app_permissions command
+--- AWS qapps update-q-app-permissions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_q_app_permissions(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-q-app-permissions" }, input)
 end
 
---- Updates the session for a given Q App sessionId
---- @param input table|nil The input table for the update_q_app_session command
+--- AWS qapps update-q-app-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_q_app_session(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-q-app-session" }, input)
 end
 
---- Updates the configuration metadata of a session for a given Q App sessionId
---- @param input table|nil The input table for the update_q_app_session_metadata command
+--- AWS qapps update-q-app-session-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_q_app_session_metadata(input)
 	return common.execute_aws_command_with_input({ "qapps", "update-q-app-session-metadata" }, input)

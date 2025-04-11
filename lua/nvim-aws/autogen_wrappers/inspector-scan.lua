@@ -6,8 +6,15 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS INSPECTOR-SCAN service functions
 local M = {}
 
---- Scans a provided CycloneDX 1
---- @param input table|nil The input table for the scan_sbom command
+--- AWS inspector-scan help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "inspector-scan", "help" }, input)
+end
+
+--- AWS inspector-scan scan-sbom operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.scan_sbom(input)
 	return common.execute_aws_command_with_input({ "inspector-scan", "scan-sbom" }, input)

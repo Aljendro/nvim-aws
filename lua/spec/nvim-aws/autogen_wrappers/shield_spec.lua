@@ -50,11 +50,6 @@ describe("AWS shield service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with delete_subscription", function()
-		local result = service.delete_subscription()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with describe_attack", function()
 		local result = service.describe_attack()
 		assert.is_true(result.success)
@@ -127,6 +122,11 @@ describe("AWS shield service testing", function()
 
 	it("should generate a cli skeleton with get_subscription_state", function()
 		local result = service.get_subscription_state()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

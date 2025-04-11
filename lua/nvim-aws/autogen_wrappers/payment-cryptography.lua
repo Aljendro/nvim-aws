@@ -6,141 +6,148 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PAYMENT-CRYPTOGRAPHY service functions
 local M = {}
 
---- Creates an alias, or a friendly name, for an Amazon Web Services Payment Cryptography key
---- @param input table|nil The input table for the create_alias command
+--- AWS payment-cryptography create-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_alias(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "create-alias" }, input)
 end
 
---- Creates an Amazon Web Services Payment Cryptography key, a logical representation of a cryptographic key, that is unique in your account and Amazon Web Services Region
---- @param input table|nil The input table for the create_key command
+--- AWS payment-cryptography create-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "create-key" }, input)
 end
 
---- Deletes the alias, but doesn't affect the underlying key
---- @param input table|nil The input table for the delete_alias command
+--- AWS payment-cryptography delete-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alias(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "delete-alias" }, input)
 end
 
---- Deletes the key material and metadata associated with Amazon Web Services Payment Cryptography key
---- @param input table|nil The input table for the delete_key command
+--- AWS payment-cryptography delete-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "delete-key" }, input)
 end
 
---- Exports a key from Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the export_key command
+--- AWS payment-cryptography export-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "export-key" }, input)
 end
 
---- Gets the Amazon Web Services Payment Cryptography key associated with the alias
---- @param input table|nil The input table for the get_alias command
+--- AWS payment-cryptography get-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_alias(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-alias" }, input)
 end
 
---- Gets the key material for an Amazon Web Services Payment Cryptography key, including the immutable and mutable data specified when the key was created
---- @param input table|nil The input table for the get_key command
+--- AWS payment-cryptography get-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-key" }, input)
 end
 
---- Gets the export token and the signing key certificate to initiate a TR-34 key export from Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the get_parameters_for_export command
+--- AWS payment-cryptography get-parameters-for-export operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameters_for_export(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-parameters-for-export" }, input)
 end
 
---- Gets the import token and the wrapping key certificate in PEM format (base64 encoded) to initiate a TR-34 WrappedKeyBlock or a RSA WrappedKeyCryptogram import into Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the get_parameters_for_import command
+--- AWS payment-cryptography get-parameters-for-import operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_parameters_for_import(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-parameters-for-import" }, input)
 end
 
---- Gets the public key certificate of the asymmetric key pair that exists within Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the get_public_key_certificate command
+--- AWS payment-cryptography get-public-key-certificate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_public_key_certificate(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "get-public-key-certificate" }, input)
 end
 
---- Imports symmetric keys and public key certificates in PEM format (base64 encoded) into Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the import_key command
+--- AWS payment-cryptography help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "payment-cryptography", "help" }, input)
+end
+
+--- AWS payment-cryptography import-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "import-key" }, input)
 end
 
---- Lists the aliases for all keys in the caller's Amazon Web Services account and Amazon Web Services Region
---- @param input table|nil The input table for the list_aliases command
+--- AWS payment-cryptography list-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_aliases(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "list-aliases" }, input)
 end
 
---- Lists the keys in the caller's Amazon Web Services account and Amazon Web Services Region
---- @param input table|nil The input table for the list_keys command
+--- AWS payment-cryptography list-keys operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_keys(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "list-keys" }, input)
 end
 
---- Lists the tags for an Amazon Web Services resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS payment-cryptography list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "list-tags-for-resource" }, input)
 end
 
---- Cancels a scheduled key deletion during the waiting period
---- @param input table|nil The input table for the restore_key command
+--- AWS payment-cryptography restore-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.restore_key(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "restore-key" }, input)
 end
 
---- Enables an Amazon Web Services Payment Cryptography key, which makes it active for cryptographic operations within Amazon Web Services Payment Cryptography Cross-account use: This operation can't be used across different Amazon Web Services accounts
---- @param input table|nil The input table for the start_key_usage command
+--- AWS payment-cryptography start-key-usage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_key_usage(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "start-key-usage" }, input)
 end
 
---- Disables an Amazon Web Services Payment Cryptography key, which makes it inactive within Amazon Web Services Payment Cryptography
---- @param input table|nil The input table for the stop_key_usage command
+--- AWS payment-cryptography stop-key-usage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_key_usage(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "stop-key-usage" }, input)
 end
 
---- Adds or edits tags on an Amazon Web Services Payment Cryptography key
---- @param input table|nil The input table for the tag_resource command
+--- AWS payment-cryptography tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "tag-resource" }, input)
 end
 
---- Deletes a tag from an Amazon Web Services Payment Cryptography key
---- @param input table|nil The input table for the untag_resource command
+--- AWS payment-cryptography untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "untag-resource" }, input)
 end
 
---- Associates an existing Amazon Web Services Payment Cryptography alias with a different key
---- @param input table|nil The input table for the update_alias command
+--- AWS payment-cryptography update-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_alias(input)
 	return common.execute_aws_command_with_input({ "payment-cryptography", "update-alias" }, input)

@@ -6,134 +6,141 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS IDENTITYSTORE service functions
 local M = {}
 
---- Creates a group within the specified identity store
---- @param input table|nil The input table for the create_group command
+--- AWS identitystore create-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group(input)
 	return common.execute_aws_command_with_input({ "identitystore", "create-group" }, input)
 end
 
---- Creates a relationship between a member and a group
---- @param input table|nil The input table for the create_group_membership command
+--- AWS identitystore create-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group_membership(input)
 	return common.execute_aws_command_with_input({ "identitystore", "create-group-membership" }, input)
 end
 
---- Creates a user within the specified identity store
---- @param input table|nil The input table for the create_user command
+--- AWS identitystore create-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user(input)
 	return common.execute_aws_command_with_input({ "identitystore", "create-user" }, input)
 end
 
---- Delete a group within an identity store given GroupId
---- @param input table|nil The input table for the delete_group command
+--- AWS identitystore delete-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group(input)
 	return common.execute_aws_command_with_input({ "identitystore", "delete-group" }, input)
 end
 
---- Delete a membership within a group given MembershipId
---- @param input table|nil The input table for the delete_group_membership command
+--- AWS identitystore delete-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_group_membership(input)
 	return common.execute_aws_command_with_input({ "identitystore", "delete-group-membership" }, input)
 end
 
---- Deletes a user within an identity store given UserId
---- @param input table|nil The input table for the delete_user command
+--- AWS identitystore delete-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_user(input)
 	return common.execute_aws_command_with_input({ "identitystore", "delete-user" }, input)
 end
 
---- Retrieves the group metadata and attributes from GroupId in an identity store
---- @param input table|nil The input table for the describe_group command
+--- AWS identitystore describe-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group(input)
 	return common.execute_aws_command_with_input({ "identitystore", "describe-group" }, input)
 end
 
---- Retrieves membership metadata and attributes from MembershipId in an identity store
---- @param input table|nil The input table for the describe_group_membership command
+--- AWS identitystore describe-group-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_group_membership(input)
 	return common.execute_aws_command_with_input({ "identitystore", "describe-group-membership" }, input)
 end
 
---- Retrieves the user metadata and attributes from the UserId in an identity store
---- @param input table|nil The input table for the describe_user command
+--- AWS identitystore describe-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_user(input)
 	return common.execute_aws_command_with_input({ "identitystore", "describe-user" }, input)
 end
 
---- Retrieves GroupId in an identity store
---- @param input table|nil The input table for the get_group_id command
+--- AWS identitystore get-group-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_id(input)
 	return common.execute_aws_command_with_input({ "identitystore", "get-group-id" }, input)
 end
 
---- Retrieves the MembershipId in an identity store
---- @param input table|nil The input table for the get_group_membership_id command
+--- AWS identitystore get-group-membership-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_membership_id(input)
 	return common.execute_aws_command_with_input({ "identitystore", "get-group-membership-id" }, input)
 end
 
---- Retrieves the UserId in an identity store
---- @param input table|nil The input table for the get_user_id command
+--- AWS identitystore get-user-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user_id(input)
 	return common.execute_aws_command_with_input({ "identitystore", "get-user-id" }, input)
 end
 
---- Checks the user's membership in all requested groups and returns if the member exists in all queried groups
---- @param input table|nil The input table for the is_member_in_groups command
+--- AWS identitystore help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "identitystore", "help" }, input)
+end
+
+--- AWS identitystore is-member-in-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.is_member_in_groups(input)
 	return common.execute_aws_command_with_input({ "identitystore", "is-member-in-groups" }, input)
 end
 
---- For the specified group in the specified identity store, returns the list of all GroupMembership objects and returns results in paginated form
---- @param input table|nil The input table for the list_group_memberships command
+--- AWS identitystore list-group-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_memberships(input)
 	return common.execute_aws_command_with_input({ "identitystore", "list-group-memberships" }, input)
 end
 
---- For the specified member in the specified identity store, returns the list of all GroupMembership objects and returns results in paginated form
---- @param input table|nil The input table for the list_group_memberships_for_member command
+--- AWS identitystore list-group-memberships-for-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_group_memberships_for_member(input)
 	return common.execute_aws_command_with_input({ "identitystore", "list-group-memberships-for-member" }, input)
 end
 
---- Lists all groups in the identity store
---- @param input table|nil The input table for the list_groups command
+--- AWS identitystore list-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_groups(input)
 	return common.execute_aws_command_with_input({ "identitystore", "list-groups" }, input)
 end
 
---- Lists all users in the identity store
---- @param input table|nil The input table for the list_users command
+--- AWS identitystore list-users operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_users(input)
 	return common.execute_aws_command_with_input({ "identitystore", "list-users" }, input)
 end
 
---- For the specified group in the specified identity store, updates the group metadata and attributes
---- @param input table|nil The input table for the update_group command
+--- AWS identitystore update-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group(input)
 	return common.execute_aws_command_with_input({ "identitystore", "update-group" }, input)
 end
 
---- For the specified user in the specified identity store, updates the user metadata and attributes
---- @param input table|nil The input table for the update_user command
+--- AWS identitystore update-user operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user(input)
 	return common.execute_aws_command_with_input({ "identitystore", "update-user" }, input)

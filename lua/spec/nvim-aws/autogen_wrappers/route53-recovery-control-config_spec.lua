@@ -70,6 +70,11 @@ describe("AWS route53-recovery-control-config service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_associated_route53_health_checks", function()
 		local result = service.list_associated_route53_health_checks()
 		assert.is_true(result.success)

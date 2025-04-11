@@ -15,6 +15,11 @@ describe("AWS sagemaker-edge service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with send_heartbeat", function()
 		local result = service.send_heartbeat()
 		assert.is_true(result.success)

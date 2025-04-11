@@ -6,43 +6,50 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLOUDFRONT-KEYVALUESTORE service functions
 local M = {}
 
---- Deletes the key value pair specified by the key
---- @param input table|nil The input table for the delete_key command
+--- AWS cloudfront-keyvaluestore delete-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "delete-key" }, input)
 end
 
---- Returns metadata information about Key Value Store
---- @param input table|nil The input table for the describe_key_value_store command
+--- AWS cloudfront-keyvaluestore describe-key-value-store operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_key_value_store(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "describe-key-value-store" }, input)
 end
 
---- Returns a key value pair
---- @param input table|nil The input table for the get_key command
+--- AWS cloudfront-keyvaluestore get-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "get-key" }, input)
 end
 
---- Returns a list of key value pairs
---- @param input table|nil The input table for the list_keys command
+--- AWS cloudfront-keyvaluestore help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "help" }, input)
+end
+
+--- AWS cloudfront-keyvaluestore list-keys operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_keys(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "list-keys" }, input)
 end
 
---- Creates a new key value pair or replaces the value of an existing key
---- @param input table|nil The input table for the put_key command
+--- AWS cloudfront-keyvaluestore put-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_key(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "put-key" }, input)
 end
 
---- Puts or Deletes multiple key value pairs in a single, all-or-nothing operation
---- @param input table|nil The input table for the update_keys command
+--- AWS cloudfront-keyvaluestore update-keys operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_keys(input)
 	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "update-keys" }, input)

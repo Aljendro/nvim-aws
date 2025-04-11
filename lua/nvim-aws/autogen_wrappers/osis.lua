@@ -6,99 +6,106 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS OSIS service functions
 local M = {}
 
---- Creates an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the create_pipeline command
+--- AWS osis create-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "create-pipeline" }, input)
 end
 
---- Deletes an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the delete_pipeline command
+--- AWS osis delete-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "delete-pipeline" }, input)
 end
 
---- Retrieves information about an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the get_pipeline command
+--- AWS osis get-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "get-pipeline" }, input)
 end
 
---- Retrieves information about a specific blueprint for OpenSearch Ingestion
---- @param input table|nil The input table for the get_pipeline_blueprint command
+--- AWS osis get-pipeline-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pipeline_blueprint(input)
 	return common.execute_aws_command_with_input({ "osis", "get-pipeline-blueprint" }, input)
 end
 
---- Returns progress information for the current change happening on an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the get_pipeline_change_progress command
+--- AWS osis get-pipeline-change-progress operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_pipeline_change_progress(input)
 	return common.execute_aws_command_with_input({ "osis", "get-pipeline-change-progress" }, input)
 end
 
---- Retrieves a list of all available blueprints for Data Prepper
---- @param input table|nil The input table for the list_pipeline_blueprints command
+--- AWS osis help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "osis", "help" }, input)
+end
+
+--- AWS osis list-pipeline-blueprints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pipeline_blueprints(input)
 	return common.execute_aws_command_with_input({ "osis", "list-pipeline-blueprints" }, input)
 end
 
---- Lists all OpenSearch Ingestion pipelines in the current Amazon Web Services account and Region
---- @param input table|nil The input table for the list_pipelines command
+--- AWS osis list-pipelines operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pipelines(input)
 	return common.execute_aws_command_with_input({ "osis", "list-pipelines" }, input)
 end
 
---- Lists all resource tags associated with an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS osis list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "osis", "list-tags-for-resource" }, input)
 end
 
---- Starts an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the start_pipeline command
+--- AWS osis start-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "start-pipeline" }, input)
 end
 
---- Stops an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the stop_pipeline command
+--- AWS osis stop-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "stop-pipeline" }, input)
 end
 
---- Tags an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the tag_resource command
+--- AWS osis tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "osis", "tag-resource" }, input)
 end
 
---- Removes one or more tags from an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the untag_resource command
+--- AWS osis untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "osis", "untag-resource" }, input)
 end
 
---- Updates an OpenSearch Ingestion pipeline
---- @param input table|nil The input table for the update_pipeline command
+--- AWS osis update-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "update-pipeline" }, input)
 end
 
---- Checks whether an OpenSearch Ingestion pipeline configuration is valid prior to creation
---- @param input table|nil The input table for the validate_pipeline command
+--- AWS osis validate-pipeline operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_pipeline(input)
 	return common.execute_aws_command_with_input({ "osis", "validate-pipeline" }, input)

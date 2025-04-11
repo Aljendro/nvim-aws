@@ -6,57 +6,64 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS IOTFLEETHUB service functions
 local M = {}
 
---- Creates a Fleet Hub for IoT Device Management web application
---- @param input table|nil The input table for the create_application command
+--- AWS iotfleethub create-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_application(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "create-application" }, input)
 end
 
---- Deletes a Fleet Hub for IoT Device Management web application
---- @param input table|nil The input table for the delete_application command
+--- AWS iotfleethub delete-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_application(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "delete-application" }, input)
 end
 
---- Gets information about a Fleet Hub for IoT Device Management web application
---- @param input table|nil The input table for the describe_application command
+--- AWS iotfleethub describe-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_application(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "describe-application" }, input)
 end
 
---- Gets a list of Fleet Hub for IoT Device Management web applications for the current account
---- @param input table|nil The input table for the list_applications command
+--- AWS iotfleethub help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "iotfleethub", "help" }, input)
+end
+
+--- AWS iotfleethub list-applications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_applications(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "list-applications" }, input)
 end
 
---- Lists the tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS iotfleethub list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "list-tags-for-resource" }, input)
 end
 
---- Adds to or modifies the tags of the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS iotfleethub tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "tag-resource" }, input)
 end
 
---- Removes the specified tags (metadata) from the resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS iotfleethub untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "untag-resource" }, input)
 end
 
---- Updates information about a Fleet Hub for IoT Device Management web application
---- @param input table|nil The input table for the update_application command
+--- AWS iotfleethub update-application operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_application(input)
 	return common.execute_aws_command_with_input({ "iotfleethub", "update-application" }, input)

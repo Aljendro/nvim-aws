@@ -285,11 +285,6 @@ describe("AWS cloudfront service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_function", function()
-		local result = service.get_function()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_invalidation", function()
 		local result = service.get_invalidation()
 		assert.is_true(result.success)
@@ -367,6 +362,11 @@ describe("AWS cloudfront service testing", function()
 
 	it("should generate a cli skeleton with get_vpc_origin", function()
 		local result = service.get_vpc_origin()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

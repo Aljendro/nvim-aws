@@ -6,148 +6,155 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEDIASTORE service functions
 local M = {}
 
---- Creates a storage container to hold objects
---- @param input table|nil The input table for the create_container command
+--- AWS mediastore create-container operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container(input)
 	return common.execute_aws_command_with_input({ "mediastore", "create-container" }, input)
 end
 
---- Deletes the specified container
---- @param input table|nil The input table for the delete_container command
+--- AWS mediastore delete-container operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container(input)
 	return common.execute_aws_command_with_input({ "mediastore", "delete-container" }, input)
 end
 
---- Deletes the access policy that is associated with the specified container
---- @param input table|nil The input table for the delete_container_policy command
+--- AWS mediastore delete-container-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "delete-container-policy" }, input)
 end
 
---- Deletes the cross-origin resource sharing (CORS) configuration information that is set for the container
---- @param input table|nil The input table for the delete_cors_policy command
+--- AWS mediastore delete-cors-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cors_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "delete-cors-policy" }, input)
 end
 
---- Removes an object lifecycle policy from a container
---- @param input table|nil The input table for the delete_lifecycle_policy command
+--- AWS mediastore delete-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "delete-lifecycle-policy" }, input)
 end
 
---- Deletes the metric policy that is associated with the specified container
---- @param input table|nil The input table for the delete_metric_policy command
+--- AWS mediastore delete-metric-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_metric_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "delete-metric-policy" }, input)
 end
 
---- Retrieves the properties of the requested container
---- @param input table|nil The input table for the describe_container command
+--- AWS mediastore describe-container operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_container(input)
 	return common.execute_aws_command_with_input({ "mediastore", "describe-container" }, input)
 end
 
---- Retrieves the access policy for the specified container
---- @param input table|nil The input table for the get_container_policy command
+--- AWS mediastore get-container-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_container_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "get-container-policy" }, input)
 end
 
---- Returns the cross-origin resource sharing (CORS) configuration information that is set for the container
---- @param input table|nil The input table for the get_cors_policy command
+--- AWS mediastore get-cors-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cors_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "get-cors-policy" }, input)
 end
 
---- Retrieves the object lifecycle policy that is assigned to a container
---- @param input table|nil The input table for the get_lifecycle_policy command
+--- AWS mediastore get-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "get-lifecycle-policy" }, input)
 end
 
---- Returns the metric policy for the specified container
---- @param input table|nil The input table for the get_metric_policy command
+--- AWS mediastore get-metric-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metric_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "get-metric-policy" }, input)
 end
 
---- Lists the properties of all containers in AWS Elemental MediaStore
---- @param input table|nil The input table for the list_containers command
+--- AWS mediastore help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mediastore", "help" }, input)
+end
+
+--- AWS mediastore list-containers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_containers(input)
 	return common.execute_aws_command_with_input({ "mediastore", "list-containers" }, input)
 end
 
---- Returns a list of the tags assigned to the specified container
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS mediastore list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediastore", "list-tags-for-resource" }, input)
 end
 
---- Creates an access policy for the specified container to restrict the users and clients that can access it
---- @param input table|nil The input table for the put_container_policy command
+--- AWS mediastore put-container-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_container_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "put-container-policy" }, input)
 end
 
---- Sets the cross-origin resource sharing (CORS) configuration on a container so that the container can service cross-origin requests
---- @param input table|nil The input table for the put_cors_policy command
+--- AWS mediastore put-cors-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_cors_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "put-cors-policy" }, input)
 end
 
---- Writes an object lifecycle policy to a container
---- @param input table|nil The input table for the put_lifecycle_policy command
+--- AWS mediastore put-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "put-lifecycle-policy" }, input)
 end
 
---- The metric policy that you want to add to the container
---- @param input table|nil The input table for the put_metric_policy command
+--- AWS mediastore put-metric-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metric_policy(input)
 	return common.execute_aws_command_with_input({ "mediastore", "put-metric-policy" }, input)
 end
 
---- Starts access logging on the specified container
---- @param input table|nil The input table for the start_access_logging command
+--- AWS mediastore start-access-logging operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_access_logging(input)
 	return common.execute_aws_command_with_input({ "mediastore", "start-access-logging" }, input)
 end
 
---- Stops access logging on the specified container
---- @param input table|nil The input table for the stop_access_logging command
+--- AWS mediastore stop-access-logging operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_access_logging(input)
 	return common.execute_aws_command_with_input({ "mediastore", "stop-access-logging" }, input)
 end
 
---- Adds tags to the specified AWS Elemental MediaStore container
---- @param input table|nil The input table for the tag_resource command
+--- AWS mediastore tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediastore", "tag-resource" }, input)
 end
 
---- Removes tags from the specified container
---- @param input table|nil The input table for the untag_resource command
+--- AWS mediastore untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediastore", "untag-resource" }, input)

@@ -6,183 +6,190 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS S3TABLES service functions
 local M = {}
 
---- Creates a namespace
---- @param input table|nil The input table for the create_namespace command
+--- AWS s3tables create-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_namespace(input)
 	return common.execute_aws_command_with_input({ "s3tables", "create-namespace" }, input)
 end
 
---- Creates a new table associated with the given namespace in a table bucket
---- @param input table|nil The input table for the create_table command
+--- AWS s3tables create-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table(input)
 	return common.execute_aws_command_with_input({ "s3tables", "create-table" }, input)
 end
 
---- Creates a table bucket
---- @param input table|nil The input table for the create_table_bucket command
+--- AWS s3tables create-table-bucket operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_table_bucket(input)
 	return common.execute_aws_command_with_input({ "s3tables", "create-table-bucket" }, input)
 end
 
---- Deletes a namespace
---- @param input table|nil The input table for the delete_namespace command
+--- AWS s3tables delete-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_namespace(input)
 	return common.execute_aws_command_with_input({ "s3tables", "delete-namespace" }, input)
 end
 
---- Deletes a table
---- @param input table|nil The input table for the delete_table command
+--- AWS s3tables delete-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table(input)
 	return common.execute_aws_command_with_input({ "s3tables", "delete-table" }, input)
 end
 
---- Deletes a table bucket
---- @param input table|nil The input table for the delete_table_bucket command
+--- AWS s3tables delete-table-bucket operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table_bucket(input)
 	return common.execute_aws_command_with_input({ "s3tables", "delete-table-bucket" }, input)
 end
 
---- Deletes a table bucket policy
---- @param input table|nil The input table for the delete_table_bucket_policy command
+--- AWS s3tables delete-table-bucket-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "delete-table-bucket-policy" }, input)
 end
 
---- Deletes a table policy
---- @param input table|nil The input table for the delete_table_policy command
+--- AWS s3tables delete-table-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_table_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "delete-table-policy" }, input)
 end
 
---- Gets details about a namespace
---- @param input table|nil The input table for the get_namespace command
+--- AWS s3tables get-namespace operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_namespace(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-namespace" }, input)
 end
 
---- Gets details about a table
---- @param input table|nil The input table for the get_table command
+--- AWS s3tables get-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table" }, input)
 end
 
---- Gets details on a table bucket
---- @param input table|nil The input table for the get_table_bucket command
+--- AWS s3tables get-table-bucket operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_bucket(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-bucket" }, input)
 end
 
---- Gets details about a maintenance configuration for a given table bucket
---- @param input table|nil The input table for the get_table_bucket_maintenance_configuration command
+--- AWS s3tables get-table-bucket-maintenance-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_bucket_maintenance_configuration(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-bucket-maintenance-configuration" }, input)
 end
 
---- Gets details about a table bucket policy
---- @param input table|nil The input table for the get_table_bucket_policy command
+--- AWS s3tables get-table-bucket-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-bucket-policy" }, input)
 end
 
---- Gets details about the maintenance configuration of a table
---- @param input table|nil The input table for the get_table_maintenance_configuration command
+--- AWS s3tables get-table-maintenance-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_maintenance_configuration(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-maintenance-configuration" }, input)
 end
 
---- Gets the status of a maintenance job for a table
---- @param input table|nil The input table for the get_table_maintenance_job_status command
+--- AWS s3tables get-table-maintenance-job-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_maintenance_job_status(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-maintenance-job-status" }, input)
 end
 
---- Gets the location of the table metadata
---- @param input table|nil The input table for the get_table_metadata_location command
+--- AWS s3tables get-table-metadata-location operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_metadata_location(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-metadata-location" }, input)
 end
 
---- Gets details about a table policy
---- @param input table|nil The input table for the get_table_policy command
+--- AWS s3tables get-table-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "get-table-policy" }, input)
 end
 
---- Lists the namespaces within a table bucket
---- @param input table|nil The input table for the list_namespaces command
+--- AWS s3tables help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "s3tables", "help" }, input)
+end
+
+--- AWS s3tables list-namespaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_namespaces(input)
 	return common.execute_aws_command_with_input({ "s3tables", "list-namespaces" }, input)
 end
 
---- Lists table buckets for your account
---- @param input table|nil The input table for the list_table_buckets command
+--- AWS s3tables list-table-buckets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_table_buckets(input)
 	return common.execute_aws_command_with_input({ "s3tables", "list-table-buckets" }, input)
 end
 
---- List tables in the given table bucket
---- @param input table|nil The input table for the list_tables command
+--- AWS s3tables list-tables operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tables(input)
 	return common.execute_aws_command_with_input({ "s3tables", "list-tables" }, input)
 end
 
---- Creates a new maintenance configuration or replaces an existing maintenance configuration for a table bucket
---- @param input table|nil The input table for the put_table_bucket_maintenance_configuration command
+--- AWS s3tables put-table-bucket-maintenance-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_table_bucket_maintenance_configuration(input)
 	return common.execute_aws_command_with_input({ "s3tables", "put-table-bucket-maintenance-configuration" }, input)
 end
 
---- Creates a new maintenance configuration or replaces an existing table bucket policy for a table bucket
---- @param input table|nil The input table for the put_table_bucket_policy command
+--- AWS s3tables put-table-bucket-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_table_bucket_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "put-table-bucket-policy" }, input)
 end
 
---- Creates a new maintenance configuration or replaces an existing maintenance configuration for a table
---- @param input table|nil The input table for the put_table_maintenance_configuration command
+--- AWS s3tables put-table-maintenance-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_table_maintenance_configuration(input)
 	return common.execute_aws_command_with_input({ "s3tables", "put-table-maintenance-configuration" }, input)
 end
 
---- Creates a new maintenance configuration or replaces an existing table policy for a table
---- @param input table|nil The input table for the put_table_policy command
+--- AWS s3tables put-table-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_table_policy(input)
 	return common.execute_aws_command_with_input({ "s3tables", "put-table-policy" }, input)
 end
 
---- Renames a table or a namespace
---- @param input table|nil The input table for the rename_table command
+--- AWS s3tables rename-table operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rename_table(input)
 	return common.execute_aws_command_with_input({ "s3tables", "rename-table" }, input)
 end
 
---- Updates the metadata location for a table
---- @param input table|nil The input table for the update_table_metadata_location command
+--- AWS s3tables update-table-metadata-location operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_table_metadata_location(input)
 	return common.execute_aws_command_with_input({ "s3tables", "update-table-metadata-location" }, input)

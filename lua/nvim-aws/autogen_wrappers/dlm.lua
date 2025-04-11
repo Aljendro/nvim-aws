@@ -6,57 +6,64 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DLM service functions
 local M = {}
 
---- Creates an Amazon Data Lifecycle Manager lifecycle policy
---- @param input table|nil The input table for the create_lifecycle_policy command
+--- AWS dlm create-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "create-lifecycle-policy" }, input)
 end
 
---- Deletes the specified lifecycle policy and halts the automated operations that the policy specified
---- @param input table|nil The input table for the delete_lifecycle_policy command
+--- AWS dlm delete-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "delete-lifecycle-policy" }, input)
 end
 
---- Gets summary information about all or the specified data lifecycle policies
---- @param input table|nil The input table for the get_lifecycle_policies command
+--- AWS dlm get-lifecycle-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policies(input)
 	return common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policies" }, input)
 end
 
---- Gets detailed information about the specified lifecycle policy
---- @param input table|nil The input table for the get_lifecycle_policy command
+--- AWS dlm get-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policy" }, input)
 end
 
---- Lists the tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS dlm help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "dlm", "help" }, input)
+end
+
+--- AWS dlm list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "dlm", "list-tags-for-resource" }, input)
 end
 
---- Adds the specified tags to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS dlm tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "dlm", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS dlm untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "dlm", "untag-resource" }, input)
 end
 
---- Updates the specified lifecycle policy
---- @param input table|nil The input table for the update_lifecycle_policy command
+--- AWS dlm update-lifecycle-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "update-lifecycle-policy" }, input)

@@ -30,11 +30,6 @@ describe("AWS comprehendmedical service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with detect_entities", function()
-		local result = service.detect_entities()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with detect_entities_v2", function()
 		local result = service.detect_entities_v2()
 		assert.is_true(result.success)
@@ -42,6 +37,11 @@ describe("AWS comprehendmedical service testing", function()
 
 	it("should generate a cli skeleton with detect_phi", function()
 		local result = service.detect_phi()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

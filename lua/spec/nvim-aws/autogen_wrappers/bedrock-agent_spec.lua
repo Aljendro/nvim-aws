@@ -40,6 +40,16 @@ describe("AWS bedrock-agent service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_flow_alias", function()
+		local result = service.create_flow_alias()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with create_flow_version", function()
+		local result = service.create_flow_version()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with create_knowledge_base", function()
 		local result = service.create_knowledge_base()
 		assert.is_true(result.success)
@@ -82,6 +92,16 @@ describe("AWS bedrock-agent service testing", function()
 
 	it("should generate a cli skeleton with delete_flow", function()
 		local result = service.delete_flow()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_flow_alias", function()
+		local result = service.delete_flow_alias()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_flow_version", function()
+		local result = service.delete_flow_version()
 		assert.is_true(result.success)
 	end)
 
@@ -150,6 +170,16 @@ describe("AWS bedrock-agent service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_flow_alias", function()
+		local result = service.get_flow_alias()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_flow_version", function()
+		local result = service.get_flow_version()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_ingestion_job", function()
 		local result = service.get_ingestion_job()
 		assert.is_true(result.success)
@@ -167,6 +197,11 @@ describe("AWS bedrock-agent service testing", function()
 
 	it("should generate a cli skeleton with get_prompt", function()
 		local result = service.get_prompt()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -207,6 +242,16 @@ describe("AWS bedrock-agent service testing", function()
 
 	it("should generate a cli skeleton with list_data_sources", function()
 		local result = service.list_data_sources()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_flow_aliases", function()
+		local result = service.list_flow_aliases()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_flow_versions", function()
+		local result = service.list_flow_versions()
 		assert.is_true(result.success)
 	end)
 
@@ -302,6 +347,11 @@ describe("AWS bedrock-agent service testing", function()
 
 	it("should generate a cli skeleton with update_flow", function()
 		local result = service.update_flow()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_flow_alias", function()
+		local result = service.update_flow_alias()
 		assert.is_true(result.success)
 	end)
 

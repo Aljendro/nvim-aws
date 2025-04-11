@@ -6,190 +6,197 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CODESTAR-CONNECTIONS service functions
 local M = {}
 
---- Creates a connection that can then be given to other Amazon Web Services services like CodePipeline so that it can access third-party code repositories
---- @param input table|nil The input table for the create_connection command
+--- AWS codestar-connections create-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "create-connection" }, input)
 end
 
---- Creates a resource that represents the infrastructure where a third-party provider is installed
---- @param input table|nil The input table for the create_host command
+--- AWS codestar-connections create-host operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_host(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "create-host" }, input)
 end
 
---- Creates a link to a specified external Git repository
---- @param input table|nil The input table for the create_repository_link command
+--- AWS codestar-connections create-repository-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_repository_link(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "create-repository-link" }, input)
 end
 
---- Creates a sync configuration which allows Amazon Web Services to sync content from a Git repository to update a specified Amazon Web Services resource
---- @param input table|nil The input table for the create_sync_configuration command
+--- AWS codestar-connections create-sync-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "create-sync-configuration" }, input)
 end
 
---- The connection to be deleted
---- @param input table|nil The input table for the delete_connection command
+--- AWS codestar-connections delete-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "delete-connection" }, input)
 end
 
---- The host to be deleted
---- @param input table|nil The input table for the delete_host command
+--- AWS codestar-connections delete-host operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_host(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "delete-host" }, input)
 end
 
---- Deletes the association between your connection and a specified external Git repository
---- @param input table|nil The input table for the delete_repository_link command
+--- AWS codestar-connections delete-repository-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_repository_link(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "delete-repository-link" }, input)
 end
 
---- Deletes the sync configuration for a specified repository and connection
---- @param input table|nil The input table for the delete_sync_configuration command
+--- AWS codestar-connections delete-sync-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "delete-sync-configuration" }, input)
 end
 
---- Returns the connection ARN and details such as status, owner, and provider type
---- @param input table|nil The input table for the get_connection command
+--- AWS codestar-connections get-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connection(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-connection" }, input)
 end
 
---- Returns the host ARN and details such as status, provider type, endpoint, and, if applicable, the VPC configuration
---- @param input table|nil The input table for the get_host command
+--- AWS codestar-connections get-host operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_host(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-host" }, input)
 end
 
---- Returns details about a repository link
---- @param input table|nil The input table for the get_repository_link command
+--- AWS codestar-connections get-repository-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_link(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-repository-link" }, input)
 end
 
---- Returns details about the sync status for a repository
---- @param input table|nil The input table for the get_repository_sync_status command
+--- AWS codestar-connections get-repository-sync-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_repository_sync_status(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-repository-sync-status" }, input)
 end
 
---- Returns the status of the sync with the Git repository for a specific Amazon Web Services resource
---- @param input table|nil The input table for the get_resource_sync_status command
+--- AWS codestar-connections get-resource-sync-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_sync_status(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-resource-sync-status" }, input)
 end
 
---- Returns a list of the most recent sync blockers
---- @param input table|nil The input table for the get_sync_blocker_summary command
+--- AWS codestar-connections get-sync-blocker-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sync_blocker_summary(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-sync-blocker-summary" }, input)
 end
 
---- Returns details about a sync configuration, including the sync type and resource name
---- @param input table|nil The input table for the get_sync_configuration command
+--- AWS codestar-connections get-sync-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "get-sync-configuration" }, input)
 end
 
---- Lists the connections associated with your account
---- @param input table|nil The input table for the list_connections command
+--- AWS codestar-connections help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "codestar-connections", "help" }, input)
+end
+
+--- AWS codestar-connections list-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connections(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-connections" }, input)
 end
 
---- Lists the hosts associated with your account
---- @param input table|nil The input table for the list_hosts command
+--- AWS codestar-connections list-hosts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_hosts(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-hosts" }, input)
 end
 
---- Lists the repository links created for connections in your account
---- @param input table|nil The input table for the list_repository_links command
+--- AWS codestar-connections list-repository-links operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_links(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-repository-links" }, input)
 end
 
---- Lists the repository sync definitions for repository links in your account
---- @param input table|nil The input table for the list_repository_sync_definitions command
+--- AWS codestar-connections list-repository-sync-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_sync_definitions(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-repository-sync-definitions" }, input)
 end
 
---- Returns a list of sync configurations for a specified repository
---- @param input table|nil The input table for the list_sync_configurations command
+--- AWS codestar-connections list-sync-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sync_configurations(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-sync-configurations" }, input)
 end
 
---- Gets the set of key-value pairs (metadata) that are used to manage the resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS codestar-connections list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "list-tags-for-resource" }, input)
 end
 
---- Adds to or modifies the tags of the given resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS codestar-connections tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "tag-resource" }, input)
 end
 
---- Removes tags from an Amazon Web Services resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS codestar-connections untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "untag-resource" }, input)
 end
 
---- Updates a specified host with the provided configurations
---- @param input table|nil The input table for the update_host command
+--- AWS codestar-connections update-host operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_host(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "update-host" }, input)
 end
 
---- Updates the association between your connection and a specified external Git repository
---- @param input table|nil The input table for the update_repository_link command
+--- AWS codestar-connections update-repository-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_repository_link(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "update-repository-link" }, input)
 end
 
---- Allows you to update the status of a sync blocker, resolving the blocker and allowing syncing to continue
---- @param input table|nil The input table for the update_sync_blocker command
+--- AWS codestar-connections update-sync-blocker operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sync_blocker(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "update-sync-blocker" }, input)
 end
 
---- Updates the sync configuration for your connection and a specified external Git repository
---- @param input table|nil The input table for the update_sync_configuration command
+--- AWS codestar-connections update-sync-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sync_configuration(input)
 	return common.execute_aws_command_with_input({ "codestar-connections", "update-sync-configuration" }, input)

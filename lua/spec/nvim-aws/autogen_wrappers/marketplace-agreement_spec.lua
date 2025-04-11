@@ -15,6 +15,11 @@ describe("AWS marketplace-agreement service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with search_agreements", function()
 		local result = service.search_agreements()
 		assert.is_true(result.success)

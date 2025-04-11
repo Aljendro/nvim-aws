@@ -80,6 +80,11 @@ describe("AWS kinesis service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with increase_stream_retention_period", function()
 		local result = service.increase_stream_retention_period()
 		assert.is_true(result.success)
@@ -147,11 +152,6 @@ describe("AWS kinesis service testing", function()
 
 	it("should generate a cli skeleton with stop_stream_encryption", function()
 		local result = service.stop_stream_encryption()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with subscribe_to_shard", function()
-		local result = service.subscribe_to_shard()
 		assert.is_true(result.success)
 	end)
 

@@ -6,141 +6,260 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BCM-PRICING-CALCULATOR service functions
 local M = {}
 
---- Create a Bill estimate from a Bill scenario
---- @param input table|nil The input table for the create_bill_estimate command
+--- AWS bcm-pricing-calculator batch-create-bill-scenario-commitment-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_create_bill_scenario_commitment_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-create-bill-scenario-commitment-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-create-bill-scenario-usage-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_create_bill_scenario_usage_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-create-bill-scenario-usage-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-create-workload-estimate-usage operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_create_workload_estimate_usage(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-create-workload-estimate-usage" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-delete-bill-scenario-commitment-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_delete_bill_scenario_commitment_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-delete-bill-scenario-commitment-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-delete-bill-scenario-usage-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_delete_bill_scenario_usage_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-delete-bill-scenario-usage-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-delete-workload-estimate-usage operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_delete_workload_estimate_usage(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-delete-workload-estimate-usage" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-update-bill-scenario-commitment-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_update_bill_scenario_commitment_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-update-bill-scenario-commitment-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-update-bill-scenario-usage-modification operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_update_bill_scenario_usage_modification(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-update-bill-scenario-usage-modification" }, input)
+end
+
+--- AWS bcm-pricing-calculator batch-update-workload-estimate-usage operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.batch_update_workload_estimate_usage(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "batch-update-workload-estimate-usage" }, input)
+end
+
+--- AWS bcm-pricing-calculator create-bill-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bill_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "create-bill-estimate" }, input)
 end
 
---- Creates a new bill scenario to model potential changes to Amazon Web Services usage and costs
---- @param input table|nil The input table for the create_bill_scenario command
+--- AWS bcm-pricing-calculator create-bill-scenario operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_bill_scenario(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "create-bill-scenario" }, input)
 end
 
---- Creates a new workload estimate to model costs for a specific workload
---- @param input table|nil The input table for the create_workload_estimate command
+--- AWS bcm-pricing-calculator create-workload-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_workload_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "create-workload-estimate" }, input)
 end
 
---- Deletes an existing bill estimate
---- @param input table|nil The input table for the delete_bill_estimate command
+--- AWS bcm-pricing-calculator delete-bill-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bill_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "delete-bill-estimate" }, input)
 end
 
---- Deletes an existing bill scenario
---- @param input table|nil The input table for the delete_bill_scenario command
+--- AWS bcm-pricing-calculator delete-bill-scenario operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_bill_scenario(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "delete-bill-scenario" }, input)
 end
 
---- Deletes an existing workload estimate
---- @param input table|nil The input table for the delete_workload_estimate command
+--- AWS bcm-pricing-calculator delete-workload-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_workload_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "delete-workload-estimate" }, input)
 end
 
---- Retrieves details of a specific bill estimate
---- @param input table|nil The input table for the get_bill_estimate command
+--- AWS bcm-pricing-calculator get-bill-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bill_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "get-bill-estimate" }, input)
 end
 
---- Retrieves details of a specific bill scenario
---- @param input table|nil The input table for the get_bill_scenario command
+--- AWS bcm-pricing-calculator get-bill-scenario operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bill_scenario(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "get-bill-scenario" }, input)
 end
 
---- Retrieves the current preferences for Pricing Calculator
---- @param input table|nil The input table for the get_preferences command
+--- AWS bcm-pricing-calculator get-preferences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_preferences(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "get-preferences" }, input)
 end
 
---- Retrieves details of a specific workload estimate
---- @param input table|nil The input table for the get_workload_estimate command
+--- AWS bcm-pricing-calculator get-workload-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_workload_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "get-workload-estimate" }, input)
 end
 
---- Lists all bill estimates for the account
---- @param input table|nil The input table for the list_bill_estimates command
+--- AWS bcm-pricing-calculator help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "help" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-estimate-commitments operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_estimate_commitments(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-estimate-commitments" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-estimate-input-commitment-modifications operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_estimate_input_commitment_modifications(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-estimate-input-commitment-modifications" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-estimate-input-usage-modifications operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_estimate_input_usage_modifications(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-estimate-input-usage-modifications" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-estimate-line-items operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_estimate_line_items(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-estimate-line-items" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-estimates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bill_estimates(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-estimates" }, input)
 end
 
---- Lists all bill scenarios for the account
---- @param input table|nil The input table for the list_bill_scenarios command
+--- AWS bcm-pricing-calculator list-bill-scenario-commitment-modifications operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_scenario_commitment_modifications(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-scenario-commitment-modifications" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-scenario-usage-modifications operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_bill_scenario_usage_modifications(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-scenario-usage-modifications" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-bill-scenarios operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_bill_scenarios(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-bill-scenarios" }, input)
 end
 
---- Lists all tags associated with a specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS bcm-pricing-calculator list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-tags-for-resource" }, input)
 end
 
---- Lists all workload estimates for the account
---- @param input table|nil The input table for the list_workload_estimates command
+--- AWS bcm-pricing-calculator list-workload-estimate-usage operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_workload_estimate_usage(input)
+	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-workload-estimate-usage" }, input)
+end
+
+--- AWS bcm-pricing-calculator list-workload-estimates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_workload_estimates(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "list-workload-estimates" }, input)
 end
 
---- Adds one or more tags to a specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS bcm-pricing-calculator tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "tag-resource" }, input)
 end
 
---- Removes one or more tags from a specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS bcm-pricing-calculator untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "untag-resource" }, input)
 end
 
---- Updates an existing bill estimate
---- @param input table|nil The input table for the update_bill_estimate command
+--- AWS bcm-pricing-calculator update-bill-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bill_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "update-bill-estimate" }, input)
 end
 
---- Updates an existing bill scenario
---- @param input table|nil The input table for the update_bill_scenario command
+--- AWS bcm-pricing-calculator update-bill-scenario operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_bill_scenario(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "update-bill-scenario" }, input)
 end
 
---- Updates the preferences for Pricing Calculator
---- @param input table|nil The input table for the update_preferences command
+--- AWS bcm-pricing-calculator update-preferences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_preferences(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "update-preferences" }, input)
 end
 
---- Updates an existing workload estimate
---- @param input table|nil The input table for the update_workload_estimate command
+--- AWS bcm-pricing-calculator update-workload-estimate operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_workload_estimate(input)
 	return common.execute_aws_command_with_input({ "bcm-pricing-calculator", "update-workload-estimate" }, input)

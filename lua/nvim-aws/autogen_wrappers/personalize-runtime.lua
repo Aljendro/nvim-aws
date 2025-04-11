@@ -6,25 +6,32 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PERSONALIZE-RUNTIME service functions
 local M = {}
 
---- Returns a list of recommended actions in sorted in descending order by prediction score
---- @param input table|nil The input table for the get_action_recommendations command
+--- AWS personalize-runtime get-action-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_action_recommendations(input)
 	return common.execute_aws_command_with_input({ "personalize-runtime", "get-action-recommendations" }, input)
 end
 
---- Re-ranks a list of recommended items for the given user
---- @param input table|nil The input table for the get_personalized_ranking command
+--- AWS personalize-runtime get-personalized-ranking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_personalized_ranking(input)
 	return common.execute_aws_command_with_input({ "personalize-runtime", "get-personalized-ranking" }, input)
 end
 
---- Returns a list of recommended items
---- @param input table|nil The input table for the get_recommendations command
+--- AWS personalize-runtime get-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recommendations(input)
 	return common.execute_aws_command_with_input({ "personalize-runtime", "get-recommendations" }, input)
+end
+
+--- AWS personalize-runtime help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "personalize-runtime", "help" }, input)
 end
 
 return M

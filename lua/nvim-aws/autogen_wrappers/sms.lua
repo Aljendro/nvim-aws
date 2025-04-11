@@ -6,246 +6,253 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SMS service functions
 local M = {}
 
---- Creates an application
---- @param input table|nil The input table for the create_app command
+--- AWS sms create-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_app(input)
 	return common.execute_aws_command_with_input({ "sms", "create-app" }, input)
 end
 
---- Creates a replication job
---- @param input table|nil The input table for the create_replication_job command
+--- AWS sms create-replication-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replication_job(input)
 	return common.execute_aws_command_with_input({ "sms", "create-replication-job" }, input)
 end
 
---- Deletes the specified application
---- @param input table|nil The input table for the delete_app command
+--- AWS sms delete-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-app" }, input)
 end
 
---- Deletes the launch configuration for the specified application
---- @param input table|nil The input table for the delete_app_launch_configuration command
+--- AWS sms delete-app-launch-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-app-launch-configuration" }, input)
 end
 
---- Deletes the replication configuration for the specified application
---- @param input table|nil The input table for the delete_app_replication_configuration command
+--- AWS sms delete-app-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-app-replication-configuration" }, input)
 end
 
---- Deletes the validation configuration for the specified application
---- @param input table|nil The input table for the delete_app_validation_configuration command
+--- AWS sms delete-app-validation-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_app_validation_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-app-validation-configuration" }, input)
 end
 
---- Deletes the specified replication job
---- @param input table|nil The input table for the delete_replication_job command
+--- AWS sms delete-replication-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replication_job(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-replication-job" }, input)
 end
 
---- Deletes all servers from your server catalog
---- @param input table|nil The input table for the delete_server_catalog command
+--- AWS sms delete-server-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_server_catalog(input)
 	return common.execute_aws_command_with_input({ "sms", "delete-server-catalog" }, input)
 end
 
---- Disassociates the specified connector from Server Migration Service
---- @param input table|nil The input table for the disassociate_connector command
+--- AWS sms disassociate-connector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_connector(input)
 	return common.execute_aws_command_with_input({ "sms", "disassociate-connector" }, input)
 end
 
---- Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket
---- @param input table|nil The input table for the generate_change_set command
+--- AWS sms generate-change-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_change_set(input)
 	return common.execute_aws_command_with_input({ "sms", "generate-change-set" }, input)
 end
 
---- Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket
---- @param input table|nil The input table for the generate_template command
+--- AWS sms generate-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_template(input)
 	return common.execute_aws_command_with_input({ "sms", "generate-template" }, input)
 end
 
---- Retrieve information about the specified application
---- @param input table|nil The input table for the get_app command
+--- AWS sms get-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app(input)
 	return common.execute_aws_command_with_input({ "sms", "get-app" }, input)
 end
 
---- Retrieves the application launch configuration associated with the specified application
---- @param input table|nil The input table for the get_app_launch_configuration command
+--- AWS sms get-app-launch-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "get-app-launch-configuration" }, input)
 end
 
---- Retrieves the application replication configuration associated with the specified application
---- @param input table|nil The input table for the get_app_replication_configuration command
+--- AWS sms get-app-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "get-app-replication-configuration" }, input)
 end
 
---- Retrieves information about a configuration for validating an application
---- @param input table|nil The input table for the get_app_validation_configuration command
+--- AWS sms get-app-validation-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_validation_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "get-app-validation-configuration" }, input)
 end
 
---- Retrieves output from validating an application
---- @param input table|nil The input table for the get_app_validation_output command
+--- AWS sms get-app-validation-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_app_validation_output(input)
 	return common.execute_aws_command_with_input({ "sms", "get-app-validation-output" }, input)
 end
 
---- Describes the connectors registered with the Server Migration Service
---- @param input table|nil The input table for the get_connectors command
+--- AWS sms get-connectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connectors(input)
 	return common.execute_aws_command_with_input({ "sms", "get-connectors" }, input)
 end
 
---- Describes the specified replication job or all of your replication jobs
---- @param input table|nil The input table for the get_replication_jobs command
+--- AWS sms get-replication-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_replication_jobs(input)
 	return common.execute_aws_command_with_input({ "sms", "get-replication-jobs" }, input)
 end
 
---- Describes the replication runs for the specified replication job
---- @param input table|nil The input table for the get_replication_runs command
+--- AWS sms get-replication-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_replication_runs(input)
 	return common.execute_aws_command_with_input({ "sms", "get-replication-runs" }, input)
 end
 
---- Describes the servers in your server catalog
---- @param input table|nil The input table for the get_servers command
+--- AWS sms get-servers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_servers(input)
 	return common.execute_aws_command_with_input({ "sms", "get-servers" }, input)
 end
 
---- Allows application import from Migration Hub
---- @param input table|nil The input table for the import_app_catalog command
+--- AWS sms help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "sms", "help" }, input)
+end
+
+--- AWS sms import-app-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_app_catalog(input)
 	return common.execute_aws_command_with_input({ "sms", "import-app-catalog" }, input)
 end
 
---- Gathers a complete list of on-premises servers
---- @param input table|nil The input table for the import_server_catalog command
+--- AWS sms import-server-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_server_catalog(input)
 	return common.execute_aws_command_with_input({ "sms", "import-server-catalog" }, input)
 end
 
---- Launches the specified application as a stack in CloudFormation
---- @param input table|nil The input table for the launch_app command
+--- AWS sms launch-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.launch_app(input)
 	return common.execute_aws_command_with_input({ "sms", "launch-app" }, input)
 end
 
---- Retrieves summaries for all applications
---- @param input table|nil The input table for the list_apps command
+--- AWS sms list-apps operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_apps(input)
 	return common.execute_aws_command_with_input({ "sms", "list-apps" }, input)
 end
 
---- Provides information to Server Migration Service about whether application validation is successful
---- @param input table|nil The input table for the notify_app_validation_output command
+--- AWS sms notify-app-validation-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_app_validation_output(input)
 	return common.execute_aws_command_with_input({ "sms", "notify-app-validation-output" }, input)
 end
 
---- Creates or updates the launch configuration for the specified application
---- @param input table|nil The input table for the put_app_launch_configuration command
+--- AWS sms put-app-launch-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_app_launch_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "put-app-launch-configuration" }, input)
 end
 
---- Creates or updates the replication configuration for the specified application
---- @param input table|nil The input table for the put_app_replication_configuration command
+--- AWS sms put-app-replication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_app_replication_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "put-app-replication-configuration" }, input)
 end
 
---- Creates or updates a validation configuration for the specified application
---- @param input table|nil The input table for the put_app_validation_configuration command
+--- AWS sms put-app-validation-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_app_validation_configuration(input)
 	return common.execute_aws_command_with_input({ "sms", "put-app-validation-configuration" }, input)
 end
 
---- Starts replicating the specified application by creating replication jobs for each server in the application
---- @param input table|nil The input table for the start_app_replication command
+--- AWS sms start-app-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_app_replication(input)
 	return common.execute_aws_command_with_input({ "sms", "start-app-replication" }, input)
 end
 
---- Starts an on-demand replication run for the specified application
---- @param input table|nil The input table for the start_on_demand_app_replication command
+--- AWS sms start-on-demand-app-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_on_demand_app_replication(input)
 	return common.execute_aws_command_with_input({ "sms", "start-on-demand-app-replication" }, input)
 end
 
---- Starts an on-demand replication run for the specified replication job
---- @param input table|nil The input table for the start_on_demand_replication_run command
+--- AWS sms start-on-demand-replication-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_on_demand_replication_run(input)
 	return common.execute_aws_command_with_input({ "sms", "start-on-demand-replication-run" }, input)
 end
 
---- Stops replicating the specified application by deleting the replication job for each server in the application
---- @param input table|nil The input table for the stop_app_replication command
+--- AWS sms stop-app-replication operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_app_replication(input)
 	return common.execute_aws_command_with_input({ "sms", "stop-app-replication" }, input)
 end
 
---- Terminates the stack for the specified application
---- @param input table|nil The input table for the terminate_app command
+--- AWS sms terminate-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_app(input)
 	return common.execute_aws_command_with_input({ "sms", "terminate-app" }, input)
 end
 
---- Updates the specified application
---- @param input table|nil The input table for the update_app command
+--- AWS sms update-app operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_app(input)
 	return common.execute_aws_command_with_input({ "sms", "update-app" }, input)
 end
 
---- Updates the specified settings for the specified replication job
---- @param input table|nil The input table for the update_replication_job command
+--- AWS sms update-replication-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_job(input)
 	return common.execute_aws_command_with_input({ "sms", "update-replication-job" }, input)

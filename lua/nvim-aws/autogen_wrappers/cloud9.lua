@@ -6,92 +6,99 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLOUD9 service functions
 local M = {}
 
---- Creates an Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then connects from the instance to the environment
---- @param input table|nil The input table for the create_environment_ec2 command
+--- AWS cloud9 create-environment-ec2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_ec2(input)
 	return common.execute_aws_command_with_input({ "cloud9", "create-environment-ec2" }, input)
 end
 
---- Adds an environment member to an Cloud9 development environment
---- @param input table|nil The input table for the create_environment_membership command
+--- AWS cloud9 create-environment-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_membership(input)
 	return common.execute_aws_command_with_input({ "cloud9", "create-environment-membership" }, input)
 end
 
---- Deletes an Cloud9 development environment
---- @param input table|nil The input table for the delete_environment command
+--- AWS cloud9 delete-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment(input)
 	return common.execute_aws_command_with_input({ "cloud9", "delete-environment" }, input)
 end
 
---- Deletes an environment member from a development environment
---- @param input table|nil The input table for the delete_environment_membership command
+--- AWS cloud9 delete-environment-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_membership(input)
 	return common.execute_aws_command_with_input({ "cloud9", "delete-environment-membership" }, input)
 end
 
---- Gets information about environment members for an Cloud9 development environment
---- @param input table|nil The input table for the describe_environment_memberships command
+--- AWS cloud9 describe-environment-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_memberships(input)
 	return common.execute_aws_command_with_input({ "cloud9", "describe-environment-memberships" }, input)
 end
 
---- Gets status information for an Cloud9 development environment
---- @param input table|nil The input table for the describe_environment_status command
+--- AWS cloud9 describe-environment-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environment_status(input)
 	return common.execute_aws_command_with_input({ "cloud9", "describe-environment-status" }, input)
 end
 
---- Gets information about Cloud9 development environments
---- @param input table|nil The input table for the describe_environments command
+--- AWS cloud9 describe-environments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_environments(input)
 	return common.execute_aws_command_with_input({ "cloud9", "describe-environments" }, input)
 end
 
---- Gets a list of Cloud9 development environment identifiers
---- @param input table|nil The input table for the list_environments command
+--- AWS cloud9 help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cloud9", "help" }, input)
+end
+
+--- AWS cloud9 list-environments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environments(input)
 	return common.execute_aws_command_with_input({ "cloud9", "list-environments" }, input)
 end
 
---- Gets a list of the tags associated with an Cloud9 development environment
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS cloud9 list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cloud9", "list-tags-for-resource" }, input)
 end
 
---- Adds tags to an Cloud9 development environment
---- @param input table|nil The input table for the tag_resource command
+--- AWS cloud9 tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cloud9", "tag-resource" }, input)
 end
 
---- Removes tags from an Cloud9 development environment
---- @param input table|nil The input table for the untag_resource command
+--- AWS cloud9 untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cloud9", "untag-resource" }, input)
 end
 
---- Changes the settings of an existing Cloud9 development environment
---- @param input table|nil The input table for the update_environment command
+--- AWS cloud9 update-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment(input)
 	return common.execute_aws_command_with_input({ "cloud9", "update-environment" }, input)
 end
 
---- Changes the settings of an existing environment member for an Cloud9 development environment
---- @param input table|nil The input table for the update_environment_membership command
+--- AWS cloud9 update-environment-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_membership(input)
 	return common.execute_aws_command_with_input({ "cloud9", "update-environment-membership" }, input)

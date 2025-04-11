@@ -215,6 +215,11 @@ describe("AWS customer-profiles service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_account_integrations", function()
 		local result = service.list_account_integrations()
 		assert.is_true(result.success)

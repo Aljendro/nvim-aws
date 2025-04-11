@@ -85,6 +85,11 @@ describe("AWS codepipeline service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_action_executions", function()
 		local result = service.list_action_executions()
 		assert.is_true(result.success)

@@ -6,414 +6,421 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BEDROCK service functions
 local M = {}
 
---- Deletes a batch of evaluation jobs
---- @param input table|nil The input table for the batch_delete_evaluation_job command
+--- AWS bedrock batch-delete-evaluation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_delete_evaluation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "batch-delete-evaluation-job" }, input)
 end
 
---- Creates an evaluation job
---- @param input table|nil The input table for the create_evaluation_job command
+--- AWS bedrock create-evaluation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_evaluation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-evaluation-job" }, input)
 end
 
---- Creates a guardrail to block topics and to implement safeguards for your generative AI applications
---- @param input table|nil The input table for the create_guardrail command
+--- AWS bedrock create-guardrail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_guardrail(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-guardrail" }, input)
 end
 
---- Creates a version of the guardrail
---- @param input table|nil The input table for the create_guardrail_version command
+--- AWS bedrock create-guardrail-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_guardrail_version(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-guardrail-version" }, input)
 end
 
---- Creates an application inference profile to track metrics and costs when invoking a model
---- @param input table|nil The input table for the create_inference_profile command
+--- AWS bedrock create-inference-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_inference_profile(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-inference-profile" }, input)
 end
 
---- Creates an endpoint for a model from Amazon Bedrock Marketplace
---- @param input table|nil The input table for the create_marketplace_model_endpoint command
+--- AWS bedrock create-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-marketplace-model-endpoint" }, input)
 end
 
---- Copies a model to another region so that it can be used there
---- @param input table|nil The input table for the create_model_copy_job command
+--- AWS bedrock create-model-copy-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model_copy_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-model-copy-job" }, input)
 end
 
---- Creates a fine-tuning job to customize a base model
---- @param input table|nil The input table for the create_model_customization_job command
+--- AWS bedrock create-model-customization-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model_customization_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-model-customization-job" }, input)
 end
 
---- Creates a model import job to import model that you have customized in other environments, such as Amazon SageMaker
---- @param input table|nil The input table for the create_model_import_job command
+--- AWS bedrock create-model-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model_import_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-model-import-job" }, input)
 end
 
---- Creates a batch inference job to invoke a model on multiple prompts
---- @param input table|nil The input table for the create_model_invocation_job command
+--- AWS bedrock create-model-invocation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model_invocation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-model-invocation-job" }, input)
 end
 
---- Creates a prompt router that manages the routing of requests between multiple foundation models based on the routing criteria
---- @param input table|nil The input table for the create_prompt_router command
+--- AWS bedrock create-prompt-router operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prompt_router(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-prompt-router" }, input)
 end
 
---- Creates dedicated throughput for a base or custom model with the model units and for the duration that you specify
---- @param input table|nil The input table for the create_provisioned_model_throughput command
+--- AWS bedrock create-provisioned-model-throughput operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_provisioned_model_throughput(input)
 	return common.execute_aws_command_with_input({ "bedrock", "create-provisioned-model-throughput" }, input)
 end
 
---- Deletes a custom model that you created earlier
---- @param input table|nil The input table for the delete_custom_model command
+--- AWS bedrock delete-custom-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_model(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-custom-model" }, input)
 end
 
---- Deletes a guardrail
---- @param input table|nil The input table for the delete_guardrail command
+--- AWS bedrock delete-guardrail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_guardrail(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-guardrail" }, input)
 end
 
---- Deletes a custom model that you imported earlier
---- @param input table|nil The input table for the delete_imported_model command
+--- AWS bedrock delete-imported-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_imported_model(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-imported-model" }, input)
 end
 
---- Deletes an application inference profile
---- @param input table|nil The input table for the delete_inference_profile command
+--- AWS bedrock delete-inference-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_inference_profile(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-inference-profile" }, input)
 end
 
---- Deletes an endpoint for a model from Amazon Bedrock Marketplace
---- @param input table|nil The input table for the delete_marketplace_model_endpoint command
+--- AWS bedrock delete-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-marketplace-model-endpoint" }, input)
 end
 
---- Delete the invocation logging
---- @param input table|nil The input table for the delete_model_invocation_logging_configuration command
+--- AWS bedrock delete-model-invocation-logging-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_model_invocation_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-model-invocation-logging-configuration" }, input)
 end
 
---- Deletes a specified prompt router
---- @param input table|nil The input table for the delete_prompt_router command
+--- AWS bedrock delete-prompt-router operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_prompt_router(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-prompt-router" }, input)
 end
 
---- Deletes a Provisioned Throughput
---- @param input table|nil The input table for the delete_provisioned_model_throughput command
+--- AWS bedrock delete-provisioned-model-throughput operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_provisioned_model_throughput(input)
 	return common.execute_aws_command_with_input({ "bedrock", "delete-provisioned-model-throughput" }, input)
 end
 
---- Deregisters an endpoint for a model from Amazon Bedrock Marketplace
---- @param input table|nil The input table for the deregister_marketplace_model_endpoint command
+--- AWS bedrock deregister-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "deregister-marketplace-model-endpoint" }, input)
 end
 
---- Get the properties associated with a Amazon Bedrock custom model that you have created
---- @param input table|nil The input table for the get_custom_model command
+--- AWS bedrock get-custom-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_custom_model(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-custom-model" }, input)
 end
 
---- Gets information about an evaluation job, such as the status of the job
---- @param input table|nil The input table for the get_evaluation_job command
+--- AWS bedrock get-evaluation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_evaluation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-evaluation-job" }, input)
 end
 
---- Get details about a Amazon Bedrock foundation model
---- @param input table|nil The input table for the get_foundation_model command
+--- AWS bedrock get-foundation-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_foundation_model(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-foundation-model" }, input)
 end
 
---- Gets details about a guardrail
---- @param input table|nil The input table for the get_guardrail command
+--- AWS bedrock get-guardrail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_guardrail(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-guardrail" }, input)
 end
 
---- Gets properties associated with a customized model you imported
---- @param input table|nil The input table for the get_imported_model command
+--- AWS bedrock get-imported-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_imported_model(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-imported-model" }, input)
 end
 
---- Gets information about an inference profile
---- @param input table|nil The input table for the get_inference_profile command
+--- AWS bedrock get-inference-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_inference_profile(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-inference-profile" }, input)
 end
 
---- Retrieves details about a specific endpoint for a model from Amazon Bedrock Marketplace
---- @param input table|nil The input table for the get_marketplace_model_endpoint command
+--- AWS bedrock get-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-marketplace-model-endpoint" }, input)
 end
 
---- Retrieves information about a model copy job
---- @param input table|nil The input table for the get_model_copy_job command
+--- AWS bedrock get-model-copy-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_copy_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-model-copy-job" }, input)
 end
 
---- Retrieves the properties associated with a model-customization job, including the status of the job
---- @param input table|nil The input table for the get_model_customization_job command
+--- AWS bedrock get-model-customization-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_customization_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-model-customization-job" }, input)
 end
 
---- Retrieves the properties associated with import model job, including the status of the job
---- @param input table|nil The input table for the get_model_import_job command
+--- AWS bedrock get-model-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_import_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-model-import-job" }, input)
 end
 
---- Gets details about a batch inference job
---- @param input table|nil The input table for the get_model_invocation_job command
+--- AWS bedrock get-model-invocation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_invocation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-model-invocation-job" }, input)
 end
 
---- Get the current configuration values for model invocation logging
---- @param input table|nil The input table for the get_model_invocation_logging_configuration command
+--- AWS bedrock get-model-invocation-logging-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_invocation_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-model-invocation-logging-configuration" }, input)
 end
 
---- Retrieves details about a prompt router
---- @param input table|nil The input table for the get_prompt_router command
+--- AWS bedrock get-prompt-router operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_prompt_router(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-prompt-router" }, input)
 end
 
---- Returns details for a Provisioned Throughput
---- @param input table|nil The input table for the get_provisioned_model_throughput command
+--- AWS bedrock get-provisioned-model-throughput operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_provisioned_model_throughput(input)
 	return common.execute_aws_command_with_input({ "bedrock", "get-provisioned-model-throughput" }, input)
 end
 
---- Returns a list of the custom models that you have created with the CreateModelCustomizationJob operation
---- @param input table|nil The input table for the list_custom_models command
+--- AWS bedrock help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "bedrock", "help" }, input)
+end
+
+--- AWS bedrock list-custom-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_models(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-custom-models" }, input)
 end
 
---- Lists all existing evaluation jobs
---- @param input table|nil The input table for the list_evaluation_jobs command
+--- AWS bedrock list-evaluation-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_evaluation_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-evaluation-jobs" }, input)
 end
 
---- Lists Amazon Bedrock foundation models that you can use
---- @param input table|nil The input table for the list_foundation_models command
+--- AWS bedrock list-foundation-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_foundation_models(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-foundation-models" }, input)
 end
 
---- Lists details about all the guardrails in an account
---- @param input table|nil The input table for the list_guardrails command
+--- AWS bedrock list-guardrails operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_guardrails(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-guardrails" }, input)
 end
 
---- Returns a list of models you've imported
---- @param input table|nil The input table for the list_imported_models command
+--- AWS bedrock list-imported-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_imported_models(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-imported-models" }, input)
 end
 
---- Returns a list of inference profiles that you can use
---- @param input table|nil The input table for the list_inference_profiles command
+--- AWS bedrock list-inference-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_inference_profiles(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-inference-profiles" }, input)
 end
 
---- Lists the endpoints for models from Amazon Bedrock Marketplace in your Amazon Web Services account
---- @param input table|nil The input table for the list_marketplace_model_endpoints command
+--- AWS bedrock list-marketplace-model-endpoints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_marketplace_model_endpoints(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-marketplace-model-endpoints" }, input)
 end
 
---- Returns a list of model copy jobs that you have submitted
---- @param input table|nil The input table for the list_model_copy_jobs command
+--- AWS bedrock list-model-copy-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_copy_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-model-copy-jobs" }, input)
 end
 
---- Returns a list of model customization jobs that you have submitted
---- @param input table|nil The input table for the list_model_customization_jobs command
+--- AWS bedrock list-model-customization-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_customization_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-model-customization-jobs" }, input)
 end
 
---- Returns a list of import jobs you've submitted
---- @param input table|nil The input table for the list_model_import_jobs command
+--- AWS bedrock list-model-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_import_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-model-import-jobs" }, input)
 end
 
---- Lists all batch inference jobs in the account
---- @param input table|nil The input table for the list_model_invocation_jobs command
+--- AWS bedrock list-model-invocation-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_invocation_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-model-invocation-jobs" }, input)
 end
 
---- Retrieves a list of prompt routers
---- @param input table|nil The input table for the list_prompt_routers command
+--- AWS bedrock list-prompt-routers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_prompt_routers(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-prompt-routers" }, input)
 end
 
---- Lists the Provisioned Throughputs in the account
---- @param input table|nil The input table for the list_provisioned_model_throughputs command
+--- AWS bedrock list-provisioned-model-throughputs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_provisioned_model_throughputs(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-provisioned-model-throughputs" }, input)
 end
 
---- List the tags associated with the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS bedrock list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock", "list-tags-for-resource" }, input)
 end
 
---- Set the configuration values for model invocation logging
---- @param input table|nil The input table for the put_model_invocation_logging_configuration command
+--- AWS bedrock put-model-invocation-logging-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_model_invocation_logging_configuration(input)
 	return common.execute_aws_command_with_input({ "bedrock", "put-model-invocation-logging-configuration" }, input)
 end
 
---- Registers an existing Amazon SageMaker endpoint with Amazon Bedrock Marketplace, allowing it to be used with Amazon Bedrock APIs
---- @param input table|nil The input table for the register_marketplace_model_endpoint command
+--- AWS bedrock register-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "register-marketplace-model-endpoint" }, input)
 end
 
---- Stops an evaluation job that is current being created or running
---- @param input table|nil The input table for the stop_evaluation_job command
+--- AWS bedrock stop-evaluation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_evaluation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "stop-evaluation-job" }, input)
 end
 
---- Stops an active model customization job
---- @param input table|nil The input table for the stop_model_customization_job command
+--- AWS bedrock stop-model-customization-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_model_customization_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "stop-model-customization-job" }, input)
 end
 
---- Stops a batch inference job
---- @param input table|nil The input table for the stop_model_invocation_job command
+--- AWS bedrock stop-model-invocation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_model_invocation_job(input)
 	return common.execute_aws_command_with_input({ "bedrock", "stop-model-invocation-job" }, input)
 end
 
---- Associate tags with a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS bedrock tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock", "tag-resource" }, input)
 end
 
---- Remove one or more tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS bedrock untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock", "untag-resource" }, input)
 end
 
---- Updates a guardrail with the values you specify
---- @param input table|nil The input table for the update_guardrail command
+--- AWS bedrock update-guardrail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_guardrail(input)
 	return common.execute_aws_command_with_input({ "bedrock", "update-guardrail" }, input)
 end
 
---- Updates the configuration of an existing endpoint for a model from Amazon Bedrock Marketplace
---- @param input table|nil The input table for the update_marketplace_model_endpoint command
+--- AWS bedrock update-marketplace-model-endpoint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_marketplace_model_endpoint(input)
 	return common.execute_aws_command_with_input({ "bedrock", "update-marketplace-model-endpoint" }, input)
 end
 
---- Updates the name or associated model for a Provisioned Throughput
---- @param input table|nil The input table for the update_provisioned_model_throughput command
+--- AWS bedrock update-provisioned-model-throughput operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_provisioned_model_throughput(input)
 	return common.execute_aws_command_with_input({ "bedrock", "update-provisioned-model-throughput" }, input)

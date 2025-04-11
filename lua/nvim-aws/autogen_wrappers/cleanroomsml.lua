@@ -6,407 +6,414 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLEANROOMSML service functions
 local M = {}
 
---- Submits a request to cancel the trained model job
---- @param input table|nil The input table for the cancel_trained_model command
+--- AWS cleanroomsml cancel-trained-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_trained_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "cancel-trained-model" }, input)
 end
 
---- Submits a request to cancel a trained model inference job
---- @param input table|nil The input table for the cancel_trained_model_inference_job command
+--- AWS cleanroomsml cancel-trained-model-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_trained_model_inference_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "cancel-trained-model-inference-job" }, input)
 end
 
---- Defines the information necessary to create an audience model
---- @param input table|nil The input table for the create_audience_model command
+--- AWS cleanroomsml create-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-audience-model" }, input)
 end
 
---- Defines the information necessary to create a configured audience model
---- @param input table|nil The input table for the create_configured_audience_model command
+--- AWS cleanroomsml create-configured-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-audience-model" }, input)
 end
 
---- Creates a configured model algorithm using a container image stored in an ECR repository
---- @param input table|nil The input table for the create_configured_model_algorithm command
+--- AWS cleanroomsml create-configured-model-algorithm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_model_algorithm(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-model-algorithm" }, input)
 end
 
---- Associates a configured model algorithm to a collaboration for use by any member of the collaboration
---- @param input table|nil The input table for the create_configured_model_algorithm_association command
+--- AWS cleanroomsml create-configured-model-algorithm-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configured_model_algorithm_association(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-model-algorithm-association" }, input)
 end
 
---- Provides the information to create an ML input channel
---- @param input table|nil The input table for the create_ml_input_channel command
+--- AWS cleanroomsml create-ml-input-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ml_input_channel(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-ml-input-channel" }, input)
 end
 
---- Creates a trained model from an associated configured model algorithm using data from any member of the collaboration
---- @param input table|nil The input table for the create_trained_model command
+--- AWS cleanroomsml create-trained-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_trained_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-trained-model" }, input)
 end
 
---- Defines the information necessary to create a training dataset
---- @param input table|nil The input table for the create_training_dataset command
+--- AWS cleanroomsml create-training-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_training_dataset(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "create-training-dataset" }, input)
 end
 
---- Deletes the specified audience generation job, and removes all data associated with the job
---- @param input table|nil The input table for the delete_audience_generation_job command
+--- AWS cleanroomsml delete-audience-generation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_audience_generation_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-audience-generation-job" }, input)
 end
 
---- Specifies an audience model that you want to delete
---- @param input table|nil The input table for the delete_audience_model command
+--- AWS cleanroomsml delete-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-audience-model" }, input)
 end
 
---- Deletes the specified configured audience model
---- @param input table|nil The input table for the delete_configured_audience_model command
+--- AWS cleanroomsml delete-configured-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-audience-model" }, input)
 end
 
---- Deletes the specified configured audience model policy
---- @param input table|nil The input table for the delete_configured_audience_model_policy command
+--- AWS cleanroomsml delete-configured-audience-model-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_audience_model_policy(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-audience-model-policy" }, input)
 end
 
---- Deletes a configured model algorithm
---- @param input table|nil The input table for the delete_configured_model_algorithm command
+--- AWS cleanroomsml delete-configured-model-algorithm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_model_algorithm(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-model-algorithm" }, input)
 end
 
---- Deletes a configured model algorithm association
---- @param input table|nil The input table for the delete_configured_model_algorithm_association command
+--- AWS cleanroomsml delete-configured-model-algorithm-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configured_model_algorithm_association(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-model-algorithm-association" }, input)
 end
 
---- Deletes a ML modeling configuration
---- @param input table|nil The input table for the delete_ml_configuration command
+--- AWS cleanroomsml delete-ml-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ml_configuration(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-ml-configuration" }, input)
 end
 
---- Provides the information necessary to delete an ML input channel
---- @param input table|nil The input table for the delete_ml_input_channel_data command
+--- AWS cleanroomsml delete-ml-input-channel-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_ml_input_channel_data(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-ml-input-channel-data" }, input)
 end
 
---- Deletes the output of a trained model
---- @param input table|nil The input table for the delete_trained_model_output command
+--- AWS cleanroomsml delete-trained-model-output operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_trained_model_output(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-trained-model-output" }, input)
 end
 
---- Specifies a training dataset that you want to delete
---- @param input table|nil The input table for the delete_training_dataset command
+--- AWS cleanroomsml delete-training-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_training_dataset(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-training-dataset" }, input)
 end
 
---- Returns information about an audience generation job
---- @param input table|nil The input table for the get_audience_generation_job command
+--- AWS cleanroomsml get-audience-generation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_audience_generation_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-audience-generation-job" }, input)
 end
 
---- Returns information about an audience model
---- @param input table|nil The input table for the get_audience_model command
+--- AWS cleanroomsml get-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-audience-model" }, input)
 end
 
---- Returns information about the configured model algorithm association in a collaboration
---- @param input table|nil The input table for the get_collaboration_configured_model_algorithm_association command
+--- AWS cleanroomsml get-collaboration-configured-model-algorithm-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_configured_model_algorithm_association(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-configured-model-algorithm-association" }, input)
 end
 
---- Returns information about a specific ML input channel in a collaboration
---- @param input table|nil The input table for the get_collaboration_ml_input_channel command
+--- AWS cleanroomsml get-collaboration-ml-input-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_ml_input_channel(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-ml-input-channel" }, input)
 end
 
---- Returns information about a trained model in a collaboration
---- @param input table|nil The input table for the get_collaboration_trained_model command
+--- AWS cleanroomsml get-collaboration-trained-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_collaboration_trained_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-trained-model" }, input)
 end
 
---- Returns information about a specified configured audience model
---- @param input table|nil The input table for the get_configured_audience_model command
+--- AWS cleanroomsml get-configured-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-audience-model" }, input)
 end
 
---- Returns information about a configured audience model policy
---- @param input table|nil The input table for the get_configured_audience_model_policy command
+--- AWS cleanroomsml get-configured-audience-model-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_audience_model_policy(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-audience-model-policy" }, input)
 end
 
---- Returns information about a configured model algorithm
---- @param input table|nil The input table for the get_configured_model_algorithm command
+--- AWS cleanroomsml get-configured-model-algorithm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_model_algorithm(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-model-algorithm" }, input)
 end
 
---- Returns information about a configured model algorithm association
---- @param input table|nil The input table for the get_configured_model_algorithm_association command
+--- AWS cleanroomsml get-configured-model-algorithm-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configured_model_algorithm_association(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-model-algorithm-association" }, input)
 end
 
---- Returns information about a specific ML configuration
---- @param input table|nil The input table for the get_ml_configuration command
+--- AWS cleanroomsml get-ml-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ml_configuration(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-ml-configuration" }, input)
 end
 
---- Returns information about an ML input channel
---- @param input table|nil The input table for the get_ml_input_channel command
+--- AWS cleanroomsml get-ml-input-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ml_input_channel(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-ml-input-channel" }, input)
 end
 
---- Returns information about a trained model
---- @param input table|nil The input table for the get_trained_model command
+--- AWS cleanroomsml get-trained-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trained_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-trained-model" }, input)
 end
 
---- Returns information about a trained model inference job
---- @param input table|nil The input table for the get_trained_model_inference_job command
+--- AWS cleanroomsml get-trained-model-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_trained_model_inference_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-trained-model-inference-job" }, input)
 end
 
---- Returns information about a training dataset
---- @param input table|nil The input table for the get_training_dataset command
+--- AWS cleanroomsml get-training-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_training_dataset(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "get-training-dataset" }, input)
 end
 
---- Returns a list of the audience export jobs
---- @param input table|nil The input table for the list_audience_export_jobs command
+--- AWS cleanroomsml help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cleanroomsml", "help" }, input)
+end
+
+--- AWS cleanroomsml list-audience-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_audience_export_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-export-jobs" }, input)
 end
 
---- Returns a list of audience generation jobs
---- @param input table|nil The input table for the list_audience_generation_jobs command
+--- AWS cleanroomsml list-audience-generation-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_audience_generation_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-generation-jobs" }, input)
 end
 
---- Returns a list of audience models
---- @param input table|nil The input table for the list_audience_models command
+--- AWS cleanroomsml list-audience-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_audience_models(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-models" }, input)
 end
 
---- Returns a list of the configured model algorithm associations in a collaboration
---- @param input table|nil The input table for the list_collaboration_configured_model_algorithm_associations command
+--- AWS cleanroomsml list-collaboration-configured-model-algorithm-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_configured_model_algorithm_associations(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-configured-model-algorithm-associations" }, input)
 end
 
---- Returns a list of the ML input channels in a collaboration
---- @param input table|nil The input table for the list_collaboration_ml_input_channels command
+--- AWS cleanroomsml list-collaboration-ml-input-channels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_ml_input_channels(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-ml-input-channels" }, input)
 end
 
---- Returns a list of the export jobs for a trained model in a collaboration
---- @param input table|nil The input table for the list_collaboration_trained_model_export_jobs command
+--- AWS cleanroomsml list-collaboration-trained-model-export-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_trained_model_export_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-model-export-jobs" }, input)
 end
 
---- Returns a list of trained model inference jobs in a specified collaboration
---- @param input table|nil The input table for the list_collaboration_trained_model_inference_jobs command
+--- AWS cleanroomsml list-collaboration-trained-model-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_trained_model_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-model-inference-jobs" }, input)
 end
 
---- Returns a list of the trained models in a collaboration
---- @param input table|nil The input table for the list_collaboration_trained_models command
+--- AWS cleanroomsml list-collaboration-trained-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_collaboration_trained_models(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-models" }, input)
 end
 
---- Returns a list of the configured audience models
---- @param input table|nil The input table for the list_configured_audience_models command
+--- AWS cleanroomsml list-configured-audience-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_audience_models(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-audience-models" }, input)
 end
 
---- Returns a list of configured model algorithm associations
---- @param input table|nil The input table for the list_configured_model_algorithm_associations command
+--- AWS cleanroomsml list-configured-model-algorithm-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_model_algorithm_associations(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-model-algorithm-associations" }, input)
 end
 
---- Returns a list of configured model algorithms
---- @param input table|nil The input table for the list_configured_model_algorithms command
+--- AWS cleanroomsml list-configured-model-algorithms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configured_model_algorithms(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-model-algorithms" }, input)
 end
 
---- Returns a list of ML input channels
---- @param input table|nil The input table for the list_ml_input_channels command
+--- AWS cleanroomsml list-ml-input-channels operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ml_input_channels(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-ml-input-channels" }, input)
 end
 
---- Returns a list of tags for a provided resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS cleanroomsml list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-tags-for-resource" }, input)
 end
 
---- Returns a list of trained model inference jobs that match the request parameters
---- @param input table|nil The input table for the list_trained_model_inference_jobs command
+--- AWS cleanroomsml list-trained-model-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_trained_model_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-trained-model-inference-jobs" }, input)
 end
 
---- Returns a list of trained models
---- @param input table|nil The input table for the list_trained_models command
+--- AWS cleanroomsml list-trained-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_trained_models(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-trained-models" }, input)
 end
 
---- Returns a list of training datasets
---- @param input table|nil The input table for the list_training_datasets command
+--- AWS cleanroomsml list-training-datasets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_training_datasets(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "list-training-datasets" }, input)
 end
 
---- Create or update the resource policy for a configured audience model
---- @param input table|nil The input table for the put_configured_audience_model_policy command
+--- AWS cleanroomsml put-configured-audience-model-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configured_audience_model_policy(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "put-configured-audience-model-policy" }, input)
 end
 
---- Assigns information about an ML configuration
---- @param input table|nil The input table for the put_ml_configuration command
+--- AWS cleanroomsml put-ml-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_ml_configuration(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "put-ml-configuration" }, input)
 end
 
---- Export an audience of a specified size after you have generated an audience
---- @param input table|nil The input table for the start_audience_export_job command
+--- AWS cleanroomsml start-audience-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_audience_export_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "start-audience-export-job" }, input)
 end
 
---- Information necessary to start the audience generation job
---- @param input table|nil The input table for the start_audience_generation_job command
+--- AWS cleanroomsml start-audience-generation-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_audience_generation_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "start-audience-generation-job" }, input)
 end
 
---- Provides the information necessary to start a trained model export job
---- @param input table|nil The input table for the start_trained_model_export_job command
+--- AWS cleanroomsml start-trained-model-export-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_trained_model_export_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "start-trained-model-export-job" }, input)
 end
 
---- Defines the information necessary to begin a trained model inference job
---- @param input table|nil The input table for the start_trained_model_inference_job command
+--- AWS cleanroomsml start-trained-model-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_trained_model_inference_job(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "start-trained-model-inference-job" }, input)
 end
 
---- Adds metadata tags to a specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS cleanroomsml tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "tag-resource" }, input)
 end
 
---- Removes metadata tags from a specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS cleanroomsml untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "untag-resource" }, input)
 end
 
---- Provides the information necessary to update a configured audience model
---- @param input table|nil The input table for the update_configured_audience_model command
+--- AWS cleanroomsml update-configured-audience-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configured_audience_model(input)
 	return common.execute_aws_command_with_input({ "cleanroomsml", "update-configured-audience-model" }, input)

@@ -6,176 +6,183 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS NETWORKFLOWMONITOR service functions
 local M = {}
 
---- Create a monitor for specific network flows between local and remote resources, so that you can monitor network performance for one or several of your workloads
---- @param input table|nil The input table for the create_monitor command
+--- AWS networkflowmonitor create-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_monitor(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "create-monitor" }, input)
 end
 
---- Create a scope of resources that you want to be available for Network Flow Monitor to generate metrics for, when you have active agents on those resources sending metrics reports to the Network Flow Monitor backend
---- @param input table|nil The input table for the create_scope command
+--- AWS networkflowmonitor create-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_scope(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "create-scope" }, input)
 end
 
---- Deletes a monitor in Network Flow Monitor
---- @param input table|nil The input table for the delete_monitor command
+--- AWS networkflowmonitor delete-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_monitor(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "delete-monitor" }, input)
 end
 
---- Deletes a scope that has been defined
---- @param input table|nil The input table for the delete_scope command
+--- AWS networkflowmonitor delete-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scope(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "delete-scope" }, input)
 end
 
---- Gets information about a monitor in Network Flow Monitor based on a monitor name
---- @param input table|nil The input table for the get_monitor command
+--- AWS networkflowmonitor get-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_monitor(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-monitor" }, input)
 end
 
---- Return the data for a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the get_query_results_monitor_top_contributors command
+--- AWS networkflowmonitor get-query-results-monitor-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_results_monitor_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-results-monitor-top-contributors" }, input)
 end
 
---- Return the data for a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the get_query_results_workload_insights_top_contributors command
+--- AWS networkflowmonitor get-query-results-workload-insights-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_results_workload_insights_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-results-workload-insights-top-contributors" }, input)
 end
 
---- Return the data for a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the get_query_results_workload_insights_top_contributors_data command
+--- AWS networkflowmonitor get-query-results-workload-insights-top-contributors-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_results_workload_insights_top_contributors_data(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-results-workload-insights-top-contributors-data" }, input)
 end
 
---- Returns the current status of a query for the Network Flow Monitor query interface, for a specified query ID and monitor
---- @param input table|nil The input table for the get_query_status_monitor_top_contributors command
+--- AWS networkflowmonitor get-query-status-monitor-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_status_monitor_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-status-monitor-top-contributors" }, input)
 end
 
---- Return the data for a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the get_query_status_workload_insights_top_contributors command
+--- AWS networkflowmonitor get-query-status-workload-insights-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_status_workload_insights_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-status-workload-insights-top-contributors" }, input)
 end
 
---- Returns the current status of a query for the Network Flow Monitor query interface, for a specified query ID and monitor
---- @param input table|nil The input table for the get_query_status_workload_insights_top_contributors_data command
+--- AWS networkflowmonitor get-query-status-workload-insights-top-contributors-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_status_workload_insights_top_contributors_data(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-query-status-workload-insights-top-contributors-data" }, input)
 end
 
---- Gets information about a scope, including the name, status, tags, and target details
---- @param input table|nil The input table for the get_scope command
+--- AWS networkflowmonitor get-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_scope(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "get-scope" }, input)
 end
 
---- List all monitors in an account
---- @param input table|nil The input table for the list_monitors command
+--- AWS networkflowmonitor help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "networkflowmonitor", "help" }, input)
+end
+
+--- AWS networkflowmonitor list-monitors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_monitors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "list-monitors" }, input)
 end
 
---- List all the scopes for an account
---- @param input table|nil The input table for the list_scopes command
+--- AWS networkflowmonitor list-scopes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scopes(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "list-scopes" }, input)
 end
 
---- Returns all the tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS networkflowmonitor list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "list-tags-for-resource" }, input)
 end
 
---- Start a query to return the data with the Network Flow Monitor query interface
---- @param input table|nil The input table for the start_query_monitor_top_contributors command
+--- AWS networkflowmonitor start-query-monitor-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_query_monitor_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "start-query-monitor-top-contributors" }, input)
 end
 
---- Start a query to return the data with the Network Flow Monitor query interface
---- @param input table|nil The input table for the start_query_workload_insights_top_contributors command
+--- AWS networkflowmonitor start-query-workload-insights-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_query_workload_insights_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "start-query-workload-insights-top-contributors" }, input)
 end
 
---- Start a query to return the with the Network Flow Monitor query interface
---- @param input table|nil The input table for the start_query_workload_insights_top_contributors_data command
+--- AWS networkflowmonitor start-query-workload-insights-top-contributors-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_query_workload_insights_top_contributors_data(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "start-query-workload-insights-top-contributors-data" }, input)
 end
 
---- Stop a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the stop_query_monitor_top_contributors command
+--- AWS networkflowmonitor stop-query-monitor-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_query_monitor_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "stop-query-monitor-top-contributors" }, input)
 end
 
---- Stop a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the stop_query_workload_insights_top_contributors command
+--- AWS networkflowmonitor stop-query-workload-insights-top-contributors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_query_workload_insights_top_contributors(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "stop-query-workload-insights-top-contributors" }, input)
 end
 
---- Return the data for a query with the Network Flow Monitor query interface
---- @param input table|nil The input table for the stop_query_workload_insights_top_contributors_data command
+--- AWS networkflowmonitor stop-query-workload-insights-top-contributors-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_query_workload_insights_top_contributors_data(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "stop-query-workload-insights-top-contributors-data" }, input)
 end
 
---- Adds a tag to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS networkflowmonitor tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "tag-resource" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS networkflowmonitor untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "untag-resource" }, input)
 end
 
---- Update a monitor to add or remove local or remote resources
---- @param input table|nil The input table for the update_monitor command
+--- AWS networkflowmonitor update-monitor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_monitor(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "update-monitor" }, input)
 end
 
---- Update a scope to add or remove resources that you want to be available for Network Flow Monitor to generate metrics for, when you have active agents on those resources sending metrics reports to the Network Flow Monitor backend
---- @param input table|nil The input table for the update_scope command
+--- AWS networkflowmonitor update-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_scope(input)
 	return common.execute_aws_command_with_input({ "networkflowmonitor", "update-scope" }, input)

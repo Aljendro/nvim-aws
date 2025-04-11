@@ -10,16 +10,6 @@ describe("AWS emr service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with add_instance_groups", function()
-		local result = service.add_instance_groups()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with add_job_flow_steps", function()
-		local result = service.add_job_flow_steps()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with add_tags", function()
 		local result = service.add_tags()
 		assert.is_true(result.success)
@@ -57,16 +47,6 @@ describe("AWS emr service testing", function()
 
 	it("should generate a cli skeleton with delete_studio_session_mapping", function()
 		local result = service.delete_studio_session_mapping()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with describe_cluster", function()
-		local result = service.describe_cluster()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with describe_job_flows", function()
-		local result = service.describe_job_flows()
 		assert.is_true(result.success)
 	end)
 
@@ -120,8 +100,8 @@ describe("AWS emr service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_bootstrap_actions", function()
-		local result = service.list_bootstrap_actions()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -132,11 +112,6 @@ describe("AWS emr service testing", function()
 
 	it("should generate a cli skeleton with list_instance_fleets", function()
 		local result = service.list_instance_fleets()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_instance_groups", function()
-		local result = service.list_instance_groups()
 		assert.is_true(result.success)
 	end)
 
@@ -235,31 +210,6 @@ describe("AWS emr service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with run_job_flow", function()
-		local result = service.run_job_flow()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with set_keep_job_flow_alive_when_no_steps", function()
-		local result = service.set_keep_job_flow_alive_when_no_steps()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with set_termination_protection", function()
-		local result = service.set_termination_protection()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with set_unhealthy_node_replacement", function()
-		local result = service.set_unhealthy_node_replacement()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with set_visible_to_all_users", function()
-		local result = service.set_visible_to_all_users()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with start_notebook_execution", function()
 		local result = service.start_notebook_execution()
 		assert.is_true(result.success)
@@ -267,11 +217,6 @@ describe("AWS emr service testing", function()
 
 	it("should generate a cli skeleton with stop_notebook_execution", function()
 		local result = service.stop_notebook_execution()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with terminate_job_flows", function()
-		local result = service.terminate_job_flows()
 		assert.is_true(result.success)
 	end)
 

@@ -145,11 +145,6 @@ describe("AWS apigatewayv2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with export_api", function()
-		local result = service.export_api()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_api", function()
 		local result = service.get_api()
 		assert.is_true(result.success)
@@ -277,6 +272,11 @@ describe("AWS apigatewayv2 service testing", function()
 
 	it("should generate a cli skeleton with get_vpc_links", function()
 		local result = service.get_vpc_links()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

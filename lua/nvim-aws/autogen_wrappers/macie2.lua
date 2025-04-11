@@ -6,568 +6,575 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MACIE2 service functions
 local M = {}
 
---- Accepts an Amazon Macie membership invitation that was received from a specific account
---- @param input table|nil The input table for the accept_invitation command
+--- AWS macie2 accept-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_invitation(input)
 	return common.execute_aws_command_with_input({ "macie2", "accept-invitation" }, input)
 end
 
---- Retrieves information about one or more custom data identifiers
---- @param input table|nil The input table for the batch_get_custom_data_identifiers command
+--- AWS macie2 batch-get-custom-data-identifiers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_custom_data_identifiers(input)
 	return common.execute_aws_command_with_input({ "macie2", "batch-get-custom-data-identifiers" }, input)
 end
 
---- Changes the status of automated sensitive data discovery for one or more accounts
---- @param input table|nil The input table for the batch_update_automated_discovery_accounts command
+--- AWS macie2 batch-update-automated-discovery-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_automated_discovery_accounts(input)
 	return common.execute_aws_command_with_input({ "macie2", "batch-update-automated-discovery-accounts" }, input)
 end
 
---- Creates and defines the settings for an allow list
---- @param input table|nil The input table for the create_allow_list command
+--- AWS macie2 create-allow-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_allow_list(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-allow-list" }, input)
 end
 
---- Creates and defines the settings for a classification job
---- @param input table|nil The input table for the create_classification_job command
+--- AWS macie2 create-classification-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_classification_job(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-classification-job" }, input)
 end
 
---- Creates and defines the criteria and other settings for a custom data identifier
---- @param input table|nil The input table for the create_custom_data_identifier command
+--- AWS macie2 create-custom-data-identifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_data_identifier(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-custom-data-identifier" }, input)
 end
 
---- Creates and defines the criteria and other settings for a findings filter
---- @param input table|nil The input table for the create_findings_filter command
+--- AWS macie2 create-findings-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_findings_filter(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-findings-filter" }, input)
 end
 
---- Sends an Amazon Macie membership invitation to one or more accounts
---- @param input table|nil The input table for the create_invitations command
+--- AWS macie2 create-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_invitations(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-invitations" }, input)
 end
 
---- Associates an account with an Amazon Macie administrator account
---- @param input table|nil The input table for the create_member command
+--- AWS macie2 create-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_member(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-member" }, input)
 end
 
---- Creates sample findings
---- @param input table|nil The input table for the create_sample_findings command
+--- AWS macie2 create-sample-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sample_findings(input)
 	return common.execute_aws_command_with_input({ "macie2", "create-sample-findings" }, input)
 end
 
---- Declines Amazon Macie membership invitations that were received from specific accounts
---- @param input table|nil The input table for the decline_invitations command
+--- AWS macie2 decline-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decline_invitations(input)
 	return common.execute_aws_command_with_input({ "macie2", "decline-invitations" }, input)
 end
 
---- Deletes an allow list
---- @param input table|nil The input table for the delete_allow_list command
+--- AWS macie2 delete-allow-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_allow_list(input)
 	return common.execute_aws_command_with_input({ "macie2", "delete-allow-list" }, input)
 end
 
---- Soft deletes a custom data identifier
---- @param input table|nil The input table for the delete_custom_data_identifier command
+--- AWS macie2 delete-custom-data-identifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_data_identifier(input)
 	return common.execute_aws_command_with_input({ "macie2", "delete-custom-data-identifier" }, input)
 end
 
---- Deletes a findings filter
---- @param input table|nil The input table for the delete_findings_filter command
+--- AWS macie2 delete-findings-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_findings_filter(input)
 	return common.execute_aws_command_with_input({ "macie2", "delete-findings-filter" }, input)
 end
 
---- Deletes Amazon Macie membership invitations that were received from specific accounts
---- @param input table|nil The input table for the delete_invitations command
+--- AWS macie2 delete-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_invitations(input)
 	return common.execute_aws_command_with_input({ "macie2", "delete-invitations" }, input)
 end
 
---- Deletes the association between an Amazon Macie administrator account and an account
---- @param input table|nil The input table for the delete_member command
+--- AWS macie2 delete-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_member(input)
 	return common.execute_aws_command_with_input({ "macie2", "delete-member" }, input)
 end
 
---- Retrieves (queries) statistical data and other information about one or more S3 buckets that Amazon Macie monitors and analyzes for an account
---- @param input table|nil The input table for the describe_buckets command
+--- AWS macie2 describe-buckets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_buckets(input)
 	return common.execute_aws_command_with_input({ "macie2", "describe-buckets" }, input)
 end
 
---- Retrieves the status and settings for a classification job
---- @param input table|nil The input table for the describe_classification_job command
+--- AWS macie2 describe-classification-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_classification_job(input)
 	return common.execute_aws_command_with_input({ "macie2", "describe-classification-job" }, input)
 end
 
---- Retrieves the Amazon Macie configuration settings for an organization in Organizations
---- @param input table|nil The input table for the describe_organization_configuration command
+--- AWS macie2 describe-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "describe-organization-configuration" }, input)
 end
 
---- Disables Amazon Macie and deletes all settings and resources for a Macie account
---- @param input table|nil The input table for the disable_macie command
+--- AWS macie2 disable-macie operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_macie(input)
 	return common.execute_aws_command_with_input({ "macie2", "disable-macie" }, input)
 end
 
---- Disables an account as the delegated Amazon Macie administrator account for an organization in Organizations
---- @param input table|nil The input table for the disable_organization_admin_account command
+--- AWS macie2 disable-organization-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "disable-organization-admin-account" }, input)
 end
 
---- Disassociates a member account from its Amazon Macie administrator account
---- @param input table|nil The input table for the disassociate_from_administrator_account command
+--- AWS macie2 disassociate-from-administrator-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_from_administrator_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "disassociate-from-administrator-account" }, input)
 end
 
---- (Deprecated) Disassociates a member account from its Amazon Macie administrator account
---- @param input table|nil The input table for the disassociate_from_master_account command
+--- AWS macie2 disassociate-from-master-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_from_master_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "disassociate-from-master-account" }, input)
 end
 
---- Disassociates an Amazon Macie administrator account from a member account
---- @param input table|nil The input table for the disassociate_member command
+--- AWS macie2 disassociate-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_member(input)
 	return common.execute_aws_command_with_input({ "macie2", "disassociate-member" }, input)
 end
 
---- Enables Amazon Macie and specifies the configuration settings for a Macie account
---- @param input table|nil The input table for the enable_macie command
+--- AWS macie2 enable-macie operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_macie(input)
 	return common.execute_aws_command_with_input({ "macie2", "enable-macie" }, input)
 end
 
---- Designates an account as the delegated Amazon Macie administrator account for an organization in Organizations
---- @param input table|nil The input table for the enable_organization_admin_account command
+--- AWS macie2 enable-organization-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "enable-organization-admin-account" }, input)
 end
 
---- Retrieves information about the Amazon Macie administrator account for an account
---- @param input table|nil The input table for the get_administrator_account command
+--- AWS macie2 get-administrator-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_administrator_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-administrator-account" }, input)
 end
 
---- Retrieves the settings and status of an allow list
---- @param input table|nil The input table for the get_allow_list command
+--- AWS macie2 get-allow-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_allow_list(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-allow-list" }, input)
 end
 
---- Retrieves the configuration settings and status of automated sensitive data discovery for an organization or standalone account
---- @param input table|nil The input table for the get_automated_discovery_configuration command
+--- AWS macie2 get-automated-discovery-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_automated_discovery_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-automated-discovery-configuration" }, input)
 end
 
---- Retrieves (queries) aggregated statistical data about all the S3 buckets that Amazon Macie monitors and analyzes for an account
---- @param input table|nil The input table for the get_bucket_statistics command
+--- AWS macie2 get-bucket-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_bucket_statistics(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-bucket-statistics" }, input)
 end
 
---- Retrieves the configuration settings for storing data classification results
---- @param input table|nil The input table for the get_classification_export_configuration command
+--- AWS macie2 get-classification-export-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_classification_export_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-classification-export-configuration" }, input)
 end
 
---- Retrieves the classification scope settings for an account
---- @param input table|nil The input table for the get_classification_scope command
+--- AWS macie2 get-classification-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_classification_scope(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-classification-scope" }, input)
 end
 
---- Retrieves the criteria and other settings for a custom data identifier
---- @param input table|nil The input table for the get_custom_data_identifier command
+--- AWS macie2 get-custom-data-identifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_custom_data_identifier(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-custom-data-identifier" }, input)
 end
 
---- Retrieves (queries) aggregated statistical data about findings
---- @param input table|nil The input table for the get_finding_statistics command
+--- AWS macie2 get-finding-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_finding_statistics(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-finding-statistics" }, input)
 end
 
---- Retrieves the details of one or more findings
---- @param input table|nil The input table for the get_findings command
+--- AWS macie2 get-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_findings(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-findings" }, input)
 end
 
---- Retrieves the criteria and other settings for a findings filter
---- @param input table|nil The input table for the get_findings_filter command
+--- AWS macie2 get-findings-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_findings_filter(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-findings-filter" }, input)
 end
 
---- Retrieves the configuration settings for publishing findings to Security Hub
---- @param input table|nil The input table for the get_findings_publication_configuration command
+--- AWS macie2 get-findings-publication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_findings_publication_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-findings-publication-configuration" }, input)
 end
 
---- Retrieves the count of Amazon Macie membership invitations that were received by an account
---- @param input table|nil The input table for the get_invitations_count command
+--- AWS macie2 get-invitations-count operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_invitations_count(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-invitations-count" }, input)
 end
 
---- Retrieves the status and configuration settings for an Amazon Macie account
---- @param input table|nil The input table for the get_macie_session command
+--- AWS macie2 get-macie-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_macie_session(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-macie-session" }, input)
 end
 
---- (Deprecated) Retrieves information about the Amazon Macie administrator account for an account
---- @param input table|nil The input table for the get_master_account command
+--- AWS macie2 get-master-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_master_account(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-master-account" }, input)
 end
 
---- Retrieves information about an account that's associated with an Amazon Macie administrator account
---- @param input table|nil The input table for the get_member command
+--- AWS macie2 get-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_member(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-member" }, input)
 end
 
---- Retrieves (queries) sensitive data discovery statistics and the sensitivity score for an S3 bucket
---- @param input table|nil The input table for the get_resource_profile command
+--- AWS macie2 get-resource-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_profile(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-resource-profile" }, input)
 end
 
---- Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by findings
---- @param input table|nil The input table for the get_reveal_configuration command
+--- AWS macie2 get-reveal-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_reveal_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-reveal-configuration" }, input)
 end
 
---- Retrieves occurrences of sensitive data reported by a finding
---- @param input table|nil The input table for the get_sensitive_data_occurrences command
+--- AWS macie2 get-sensitive-data-occurrences operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sensitive_data_occurrences(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-sensitive-data-occurrences" }, input)
 end
 
---- Checks whether occurrences of sensitive data can be retrieved for a finding
---- @param input table|nil The input table for the get_sensitive_data_occurrences_availability command
+--- AWS macie2 get-sensitive-data-occurrences-availability operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sensitive_data_occurrences_availability(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-sensitive-data-occurrences-availability" }, input)
 end
 
---- Retrieves the settings for the sensitivity inspection template for an account
---- @param input table|nil The input table for the get_sensitivity_inspection_template command
+--- AWS macie2 get-sensitivity-inspection-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_sensitivity_inspection_template(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-sensitivity-inspection-template" }, input)
 end
 
---- Retrieves (queries) quotas and aggregated usage data for one or more accounts
---- @param input table|nil The input table for the get_usage_statistics command
+--- AWS macie2 get-usage-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_statistics(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-usage-statistics" }, input)
 end
 
---- Retrieves (queries) aggregated usage data for an account
---- @param input table|nil The input table for the get_usage_totals command
+--- AWS macie2 get-usage-totals operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_totals(input)
 	return common.execute_aws_command_with_input({ "macie2", "get-usage-totals" }, input)
 end
 
---- Retrieves a subset of information about all the allow lists for an account
---- @param input table|nil The input table for the list_allow_lists command
+--- AWS macie2 help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "macie2", "help" }, input)
+end
+
+--- AWS macie2 list-allow-lists operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_allow_lists(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-allow-lists" }, input)
 end
 
---- Retrieves the status of automated sensitive data discovery for one or more accounts
---- @param input table|nil The input table for the list_automated_discovery_accounts command
+--- AWS macie2 list-automated-discovery-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_automated_discovery_accounts(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-automated-discovery-accounts" }, input)
 end
 
---- Retrieves a subset of information about one or more classification jobs
---- @param input table|nil The input table for the list_classification_jobs command
+--- AWS macie2 list-classification-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_classification_jobs(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-classification-jobs" }, input)
 end
 
---- Retrieves a subset of information about the classification scope for an account
---- @param input table|nil The input table for the list_classification_scopes command
+--- AWS macie2 list-classification-scopes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_classification_scopes(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-classification-scopes" }, input)
 end
 
---- Retrieves a subset of information about the custom data identifiers for an account
---- @param input table|nil The input table for the list_custom_data_identifiers command
+--- AWS macie2 list-custom-data-identifiers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_data_identifiers(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-custom-data-identifiers" }, input)
 end
 
---- Retrieves a subset of information about one or more findings
---- @param input table|nil The input table for the list_findings command
+--- AWS macie2 list-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_findings(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-findings" }, input)
 end
 
---- Retrieves a subset of information about all the findings filters for an account
---- @param input table|nil The input table for the list_findings_filters command
+--- AWS macie2 list-findings-filters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_findings_filters(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-findings-filters" }, input)
 end
 
---- Retrieves information about Amazon Macie membership invitations that were received by an account
---- @param input table|nil The input table for the list_invitations command
+--- AWS macie2 list-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_invitations(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-invitations" }, input)
 end
 
---- Retrieves information about all the managed data identifiers that Amazon Macie currently provides
---- @param input table|nil The input table for the list_managed_data_identifiers command
+--- AWS macie2 list-managed-data-identifiers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_managed_data_identifiers(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-managed-data-identifiers" }, input)
 end
 
---- Retrieves information about the accounts that are associated with an Amazon Macie administrator account
---- @param input table|nil The input table for the list_members command
+--- AWS macie2 list-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_members(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-members" }, input)
 end
 
---- Retrieves information about the delegated Amazon Macie administrator account for an organization in Organizations
---- @param input table|nil The input table for the list_organization_admin_accounts command
+--- AWS macie2 list-organization-admin-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_admin_accounts(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-organization-admin-accounts" }, input)
 end
 
---- Retrieves information about objects that Amazon Macie selected from an S3 bucket for automated sensitive data discovery
---- @param input table|nil The input table for the list_resource_profile_artifacts command
+--- AWS macie2 list-resource-profile-artifacts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_profile_artifacts(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-resource-profile-artifacts" }, input)
 end
 
---- Retrieves information about the types and amount of sensitive data that Amazon Macie found in an S3 bucket
---- @param input table|nil The input table for the list_resource_profile_detections command
+--- AWS macie2 list-resource-profile-detections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_profile_detections(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-resource-profile-detections" }, input)
 end
 
---- Retrieves a subset of information about the sensitivity inspection template for an account
---- @param input table|nil The input table for the list_sensitivity_inspection_templates command
+--- AWS macie2 list-sensitivity-inspection-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sensitivity_inspection_templates(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-sensitivity-inspection-templates" }, input)
 end
 
---- Retrieves the tags (keys and values) that are associated with an Amazon Macie resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS macie2 list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "macie2", "list-tags-for-resource" }, input)
 end
 
---- Adds or updates the configuration settings for storing data classification results
---- @param input table|nil The input table for the put_classification_export_configuration command
+--- AWS macie2 put-classification-export-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_classification_export_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "put-classification-export-configuration" }, input)
 end
 
---- Updates the configuration settings for publishing findings to Security Hub
---- @param input table|nil The input table for the put_findings_publication_configuration command
+--- AWS macie2 put-findings-publication-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_findings_publication_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "put-findings-publication-configuration" }, input)
 end
 
---- Retrieves (queries) statistical data and other information about Amazon Web Services resources that Amazon Macie monitors and analyzes for an account
---- @param input table|nil The input table for the search_resources command
+--- AWS macie2 search-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_resources(input)
 	return common.execute_aws_command_with_input({ "macie2", "search-resources" }, input)
 end
 
---- Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS macie2 tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "macie2", "tag-resource" }, input)
 end
 
---- Tests criteria for a custom data identifier
---- @param input table|nil The input table for the test_custom_data_identifier command
+--- AWS macie2 test-custom-data-identifier operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_custom_data_identifier(input)
 	return common.execute_aws_command_with_input({ "macie2", "test-custom-data-identifier" }, input)
 end
 
---- Removes one or more tags (keys and values) from an Amazon Macie resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS macie2 untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "macie2", "untag-resource" }, input)
 end
 
---- Updates the settings for an allow list
---- @param input table|nil The input table for the update_allow_list command
+--- AWS macie2 update-allow-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_allow_list(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-allow-list" }, input)
 end
 
---- Changes the configuration settings and status of automated sensitive data discovery for an organization or standalone account
---- @param input table|nil The input table for the update_automated_discovery_configuration command
+--- AWS macie2 update-automated-discovery-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_automated_discovery_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-automated-discovery-configuration" }, input)
 end
 
---- Changes the status of a classification job
---- @param input table|nil The input table for the update_classification_job command
+--- AWS macie2 update-classification-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_classification_job(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-classification-job" }, input)
 end
 
---- Updates the classification scope settings for an account
---- @param input table|nil The input table for the update_classification_scope command
+--- AWS macie2 update-classification-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_classification_scope(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-classification-scope" }, input)
 end
 
---- Updates the criteria and other settings for a findings filter
---- @param input table|nil The input table for the update_findings_filter command
+--- AWS macie2 update-findings-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_findings_filter(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-findings-filter" }, input)
 end
 
---- Suspends or re-enables Amazon Macie, or updates the configuration settings for a Macie account
---- @param input table|nil The input table for the update_macie_session command
+--- AWS macie2 update-macie-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_macie_session(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-macie-session" }, input)
 end
 
---- Enables an Amazon Macie administrator to suspend or re-enable Macie for a member account
---- @param input table|nil The input table for the update_member_session command
+--- AWS macie2 update-member-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_member_session(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-member-session" }, input)
 end
 
---- Updates the Amazon Macie configuration settings for an organization in Organizations
---- @param input table|nil The input table for the update_organization_configuration command
+--- AWS macie2 update-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-organization-configuration" }, input)
 end
 
---- Updates the sensitivity score for an S3 bucket
---- @param input table|nil The input table for the update_resource_profile command
+--- AWS macie2 update-resource-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_profile(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-resource-profile" }, input)
 end
 
---- Updates the sensitivity scoring settings for an S3 bucket
---- @param input table|nil The input table for the update_resource_profile_detections command
+--- AWS macie2 update-resource-profile-detections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resource_profile_detections(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-resource-profile-detections" }, input)
 end
 
---- Updates the status and configuration settings for retrieving occurrences of sensitive data reported by findings
---- @param input table|nil The input table for the update_reveal_configuration command
+--- AWS macie2 update-reveal-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_reveal_configuration(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-reveal-configuration" }, input)
 end
 
---- Updates the settings for the sensitivity inspection template for an account
---- @param input table|nil The input table for the update_sensitivity_inspection_template command
+--- AWS macie2 update-sensitivity-inspection-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_sensitivity_inspection_template(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-sensitivity-inspection-template" }, input)

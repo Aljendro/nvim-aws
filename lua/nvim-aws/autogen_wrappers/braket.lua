@@ -6,85 +6,99 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BRAKET service functions
 local M = {}
 
---- Cancels an Amazon Braket job
---- @param input table|nil The input table for the cancel_job command
+--- AWS braket cancel-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_job(input)
 	return common.execute_aws_command_with_input({ "braket", "cancel-job" }, input)
 end
 
---- Cancels the specified task
---- @param input table|nil The input table for the cancel_quantum_task command
+--- AWS braket cancel-quantum-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_quantum_task(input)
 	return common.execute_aws_command_with_input({ "braket", "cancel-quantum-task" }, input)
 end
 
---- Creates an Amazon Braket job
---- @param input table|nil The input table for the create_job command
+--- AWS braket create-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job(input)
 	return common.execute_aws_command_with_input({ "braket", "create-job" }, input)
 end
 
---- Creates a quantum task
---- @param input table|nil The input table for the create_quantum_task command
+--- AWS braket create-quantum-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_quantum_task(input)
 	return common.execute_aws_command_with_input({ "braket", "create-quantum-task" }, input)
 end
 
---- Retrieves the devices available in Amazon Braket
---- @param input table|nil The input table for the get_device command
+--- AWS braket get-device operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_device(input)
 	return common.execute_aws_command_with_input({ "braket", "get-device" }, input)
 end
 
---- Retrieves the specified Amazon Braket job
---- @param input table|nil The input table for the get_job command
+--- AWS braket get-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job(input)
 	return common.execute_aws_command_with_input({ "braket", "get-job" }, input)
 end
 
---- Retrieves the specified quantum task
---- @param input table|nil The input table for the get_quantum_task command
+--- AWS braket get-quantum-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_quantum_task(input)
 	return common.execute_aws_command_with_input({ "braket", "get-quantum-task" }, input)
 end
 
---- Shows the tags associated with this resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS braket help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "braket", "help" }, input)
+end
+
+--- AWS braket list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "braket", "list-tags-for-resource" }, input)
 end
 
---- Searches for devices using the specified filters
---- @param input table|nil The input table for the search_devices command
+--- AWS braket search-devices operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_devices(input)
 	return common.execute_aws_command_with_input({ "braket", "search-devices" }, input)
 end
 
---- Searches for tasks that match the specified filter values
---- @param input table|nil The input table for the search_quantum_tasks command
+--- AWS braket search-jobs operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.search_jobs(input)
+	return common.execute_aws_command_with_input({ "braket", "search-jobs" }, input)
+end
+
+--- AWS braket search-quantum-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_quantum_tasks(input)
 	return common.execute_aws_command_with_input({ "braket", "search-quantum-tasks" }, input)
 end
 
---- Add a tag to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS braket tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "braket", "tag-resource" }, input)
 end
 
---- Remove tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS braket untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "braket", "untag-resource" }, input)

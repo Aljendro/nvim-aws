@@ -6,127 +6,120 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEDICAL-IMAGING service functions
 local M = {}
 
---- Copy an image set
---- @param input table|nil The input table for the copy_image_set command
+--- AWS medical-imaging copy-image-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.copy_image_set(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "copy-image-set" }, input)
 end
 
---- Create a data store
---- @param input table|nil The input table for the create_datastore command
+--- AWS medical-imaging create-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_datastore(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "create-datastore" }, input)
 end
 
---- Delete a data store
---- @param input table|nil The input table for the delete_datastore command
+--- AWS medical-imaging delete-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_datastore(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "delete-datastore" }, input)
 end
 
---- Delete an image set
---- @param input table|nil The input table for the delete_image_set command
+--- AWS medical-imaging delete-image-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_image_set(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "delete-image-set" }, input)
 end
 
---- Get the import job properties to learn more about the job or job progress
---- @param input table|nil The input table for the get_dicom_import_job command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_dicom_import_job(input)
-	return common.execute_aws_command_with_input({ "medical-imaging", "get-dicom-import-job" }, input)
-end
-
---- Get data store properties
---- @param input table|nil The input table for the get_datastore command
+--- AWS medical-imaging get-datastore operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_datastore(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "get-datastore" }, input)
 end
 
---- Get an image frame (pixel data) for an image set
---- @param input table|nil The input table for the get_image_frame command
+--- AWS medical-imaging get-dicom-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_image_frame(input)
-	return common.execute_aws_command_with_input({ "medical-imaging", "get-image-frame" }, input)
+function M.get_dicom_import_job(input)
+	return common.execute_aws_command_with_input({ "medical-imaging", "get-dicom-import-job" }, input)
 end
 
---- Get image set properties
---- @param input table|nil The input table for the get_image_set command
+--- AWS medical-imaging get-image-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_image_set(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "get-image-set" }, input)
 end
 
---- Get metadata attributes for an image set
---- @param input table|nil The input table for the get_image_set_metadata command
+--- AWS medical-imaging help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_image_set_metadata(input)
-	return common.execute_aws_command_with_input({ "medical-imaging", "get-image-set-metadata" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "medical-imaging", "help" }, input)
 end
 
---- List import jobs created for a specific data store
---- @param input table|nil The input table for the list_dicom_import_jobs command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_dicom_import_jobs(input)
-	return common.execute_aws_command_with_input({ "medical-imaging", "list-dicom-import-jobs" }, input)
-end
-
---- List data stores
---- @param input table|nil The input table for the list_datastores command
+--- AWS medical-imaging list-datastores operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_datastores(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "list-datastores" }, input)
 end
 
---- List image set versions
---- @param input table|nil The input table for the list_image_set_versions command
+--- AWS medical-imaging list-dicom-import-jobs operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_dicom_import_jobs(input)
+	return common.execute_aws_command_with_input({ "medical-imaging", "list-dicom-import-jobs" }, input)
+end
+
+--- AWS medical-imaging list-image-set-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_image_set_versions(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "list-image-set-versions" }, input)
 end
 
---- Lists all tags associated with a medical imaging resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS medical-imaging list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "list-tags-for-resource" }, input)
 end
 
---- Search image sets based on defined input attributes
---- @param input table|nil The input table for the search_image_sets command
+--- AWS medical-imaging search-image-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_image_sets(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "search-image-sets" }, input)
 end
 
---- Start importing bulk data into an ACTIVE data store
---- @param input table|nil The input table for the start_dicom_import_job command
+--- AWS medical-imaging start-dicom-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_dicom_import_job(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "start-dicom-import-job" }, input)
 end
 
---- Adds a user-specifed key and value tag to a medical imaging resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS medical-imaging tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "tag-resource" }, input)
 end
 
---- Removes tags from a medical imaging resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS medical-imaging untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "untag-resource" }, input)
 end
 
---- Update image set metadata attributes
---- @param input table|nil The input table for the update_image_set_metadata command
+--- AWS medical-imaging update-image-set-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_image_set_metadata(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "update-image-set-metadata" }, input)

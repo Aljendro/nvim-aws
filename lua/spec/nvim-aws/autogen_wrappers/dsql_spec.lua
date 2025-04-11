@@ -10,13 +10,28 @@ describe("AWS dsql service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_multi_region_clusters", function()
+		local result = service.create_multi_region_clusters()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_multi_region_clusters", function()
+		local result = service.delete_multi_region_clusters()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_cluster", function()
 		local result = service.get_cluster()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

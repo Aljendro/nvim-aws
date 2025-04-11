@@ -6,18 +6,25 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SAGEMAKER-METRICS service functions
 local M = {}
 
---- Used to retrieve training metrics from SageMaker
---- @param input table|nil The input table for the batch_get_metrics command
+--- AWS sagemaker-metrics batch-get-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_metrics(input)
 	return common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-get-metrics" }, input)
 end
 
---- Used to ingest training metrics into SageMaker
---- @param input table|nil The input table for the batch_put_metrics command
+--- AWS sagemaker-metrics batch-put-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_put_metrics(input)
 	return common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-put-metrics" }, input)
+end
+
+--- AWS sagemaker-metrics help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "sagemaker-metrics", "help" }, input)
 end
 
 return M

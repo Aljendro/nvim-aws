@@ -6,176 +6,183 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS TEXTRACT service functions
 local M = {}
 
---- Analyzes an input document for relationships between detected items
---- @param input table|nil The input table for the analyze_document command
+--- AWS textract analyze-document operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.analyze_document(input)
 	return common.execute_aws_command_with_input({ "textract", "analyze-document" }, input)
 end
 
---- AnalyzeExpense synchronously analyzes an input document for financially related relationships between text
---- @param input table|nil The input table for the analyze_expense command
+--- AWS textract analyze-expense operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.analyze_expense(input)
 	return common.execute_aws_command_with_input({ "textract", "analyze-expense" }, input)
 end
 
---- Analyzes identity documents for relevant information
---- @param input table|nil The input table for the analyze_id command
+--- AWS textract analyze-id operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.analyze_id(input)
 	return common.execute_aws_command_with_input({ "textract", "analyze-id" }, input)
 end
 
---- Creates an adapter, which can be fine-tuned for enhanced performance on user provided documents
---- @param input table|nil The input table for the create_adapter command
+--- AWS textract create-adapter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_adapter(input)
 	return common.execute_aws_command_with_input({ "textract", "create-adapter" }, input)
 end
 
---- Creates a new version of an adapter
---- @param input table|nil The input table for the create_adapter_version command
+--- AWS textract create-adapter-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_adapter_version(input)
 	return common.execute_aws_command_with_input({ "textract", "create-adapter-version" }, input)
 end
 
---- Deletes an Amazon Textract adapter
---- @param input table|nil The input table for the delete_adapter command
+--- AWS textract delete-adapter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_adapter(input)
 	return common.execute_aws_command_with_input({ "textract", "delete-adapter" }, input)
 end
 
---- Deletes an Amazon Textract adapter version
---- @param input table|nil The input table for the delete_adapter_version command
+--- AWS textract delete-adapter-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_adapter_version(input)
 	return common.execute_aws_command_with_input({ "textract", "delete-adapter-version" }, input)
 end
 
---- Detects text in the input document
---- @param input table|nil The input table for the detect_document_text command
+--- AWS textract detect-document-text operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_document_text(input)
 	return common.execute_aws_command_with_input({ "textract", "detect-document-text" }, input)
 end
 
---- Gets configuration information for an adapter specified by an AdapterId, returning information on AdapterName, Description, CreationTime, AutoUpdate status, and FeatureTypes
---- @param input table|nil The input table for the get_adapter command
+--- AWS textract get-adapter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_adapter(input)
 	return common.execute_aws_command_with_input({ "textract", "get-adapter" }, input)
 end
 
---- Gets configuration information for the specified adapter version, including: AdapterId, AdapterVersion, FeatureTypes, Status, StatusMessage, DatasetConfig, KMSKeyId, OutputConfig, Tags and EvaluationMetrics
---- @param input table|nil The input table for the get_adapter_version command
+--- AWS textract get-adapter-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_adapter_version(input)
 	return common.execute_aws_command_with_input({ "textract", "get-adapter-version" }, input)
 end
 
---- Gets the results for an Amazon Textract asynchronous operation that analyzes text in a document
---- @param input table|nil The input table for the get_document_analysis command
+--- AWS textract get-document-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "get-document-analysis" }, input)
 end
 
---- Gets the results for an Amazon Textract asynchronous operation that detects text in a document
---- @param input table|nil The input table for the get_document_text_detection command
+--- AWS textract get-document-text-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_document_text_detection(input)
 	return common.execute_aws_command_with_input({ "textract", "get-document-text-detection" }, input)
 end
 
---- Gets the results for an Amazon Textract asynchronous operation that analyzes invoices and receipts
---- @param input table|nil The input table for the get_expense_analysis command
+--- AWS textract get-expense-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_expense_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "get-expense-analysis" }, input)
 end
 
---- Gets the results for an Amazon Textract asynchronous operation that analyzes text in a lending document
---- @param input table|nil The input table for the get_lending_analysis command
+--- AWS textract get-lending-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lending_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "get-lending-analysis" }, input)
 end
 
---- Gets summarized results for the StartLendingAnalysis operation, which analyzes text in a lending document
---- @param input table|nil The input table for the get_lending_analysis_summary command
+--- AWS textract get-lending-analysis-summary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lending_analysis_summary(input)
 	return common.execute_aws_command_with_input({ "textract", "get-lending-analysis-summary" }, input)
 end
 
---- List all version of an adapter that meet the specified filtration criteria
---- @param input table|nil The input table for the list_adapter_versions command
+--- AWS textract help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "textract", "help" }, input)
+end
+
+--- AWS textract list-adapter-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_adapter_versions(input)
 	return common.execute_aws_command_with_input({ "textract", "list-adapter-versions" }, input)
 end
 
---- Lists all adapters that match the specified filtration criteria
---- @param input table|nil The input table for the list_adapters command
+--- AWS textract list-adapters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_adapters(input)
 	return common.execute_aws_command_with_input({ "textract", "list-adapters" }, input)
 end
 
---- Lists all tags for an Amazon Textract resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS textract list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "textract", "list-tags-for-resource" }, input)
 end
 
---- Starts the asynchronous analysis of an input document for relationships between detected items such as key-value pairs, tables, and selection elements
---- @param input table|nil The input table for the start_document_analysis command
+--- AWS textract start-document-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_document_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "start-document-analysis" }, input)
 end
 
---- Starts the asynchronous detection of text in a document
---- @param input table|nil The input table for the start_document_text_detection command
+--- AWS textract start-document-text-detection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_document_text_detection(input)
 	return common.execute_aws_command_with_input({ "textract", "start-document-text-detection" }, input)
 end
 
---- Starts the asynchronous analysis of invoices or receipts for data like contact information, items purchased, and vendor names
---- @param input table|nil The input table for the start_expense_analysis command
+--- AWS textract start-expense-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_expense_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "start-expense-analysis" }, input)
 end
 
---- Starts the classification and analysis of an input document
---- @param input table|nil The input table for the start_lending_analysis command
+--- AWS textract start-lending-analysis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_lending_analysis(input)
 	return common.execute_aws_command_with_input({ "textract", "start-lending-analysis" }, input)
 end
 
---- Adds one or more tags to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS textract tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "textract", "tag-resource" }, input)
 end
 
---- Removes any tags with the specified keys from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS textract untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "textract", "untag-resource" }, input)
 end
 
---- Update the configuration for an adapter
---- @param input table|nil The input table for the update_adapter command
+--- AWS textract update-adapter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_adapter(input)
 	return common.execute_aws_command_with_input({ "textract", "update-adapter" }, input)

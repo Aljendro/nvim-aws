@@ -6,302 +6,309 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS TRANSCRIBE service functions
 local M = {}
 
---- Creates a new Call Analytics category
---- @param input table|nil The input table for the create_call_analytics_category command
+--- AWS transcribe create-call-analytics-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_call_analytics_category(input)
 	return common.execute_aws_command_with_input({ "transcribe", "create-call-analytics-category" }, input)
 end
 
---- Creates a new custom language model
---- @param input table|nil The input table for the create_language_model command
+--- AWS transcribe create-language-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_language_model(input)
 	return common.execute_aws_command_with_input({ "transcribe", "create-language-model" }, input)
 end
 
---- Creates a new custom medical vocabulary
---- @param input table|nil The input table for the create_medical_vocabulary command
+--- AWS transcribe create-medical-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_medical_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "create-medical-vocabulary" }, input)
 end
 
---- Creates a new custom vocabulary
---- @param input table|nil The input table for the create_vocabulary command
+--- AWS transcribe create-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "create-vocabulary" }, input)
 end
 
---- Creates a new custom vocabulary filter
---- @param input table|nil The input table for the create_vocabulary_filter command
+--- AWS transcribe create-vocabulary-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vocabulary_filter(input)
 	return common.execute_aws_command_with_input({ "transcribe", "create-vocabulary-filter" }, input)
 end
 
---- Deletes a Call Analytics category
---- @param input table|nil The input table for the delete_call_analytics_category command
+--- AWS transcribe delete-call-analytics-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_call_analytics_category(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-call-analytics-category" }, input)
 end
 
---- Deletes a Call Analytics job
---- @param input table|nil The input table for the delete_call_analytics_job command
+--- AWS transcribe delete-call-analytics-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_call_analytics_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-call-analytics-job" }, input)
 end
 
---- Deletes a custom language model
---- @param input table|nil The input table for the delete_language_model command
+--- AWS transcribe delete-language-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_language_model(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-language-model" }, input)
 end
 
---- Deletes a Medical Scribe job
---- @param input table|nil The input table for the delete_medical_scribe_job command
+--- AWS transcribe delete-medical-scribe-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_medical_scribe_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-medical-scribe-job" }, input)
 end
 
---- Deletes a medical transcription job
---- @param input table|nil The input table for the delete_medical_transcription_job command
+--- AWS transcribe delete-medical-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_medical_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-medical-transcription-job" }, input)
 end
 
---- Deletes a custom medical vocabulary
---- @param input table|nil The input table for the delete_medical_vocabulary command
+--- AWS transcribe delete-medical-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_medical_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-medical-vocabulary" }, input)
 end
 
---- Deletes a transcription job
---- @param input table|nil The input table for the delete_transcription_job command
+--- AWS transcribe delete-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-transcription-job" }, input)
 end
 
---- Deletes a custom vocabulary
---- @param input table|nil The input table for the delete_vocabulary command
+--- AWS transcribe delete-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-vocabulary" }, input)
 end
 
---- Deletes a custom vocabulary filter
---- @param input table|nil The input table for the delete_vocabulary_filter command
+--- AWS transcribe delete-vocabulary-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vocabulary_filter(input)
 	return common.execute_aws_command_with_input({ "transcribe", "delete-vocabulary-filter" }, input)
 end
 
---- Provides information about the specified custom language model
---- @param input table|nil The input table for the describe_language_model command
+--- AWS transcribe describe-language-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_language_model(input)
 	return common.execute_aws_command_with_input({ "transcribe", "describe-language-model" }, input)
 end
 
---- Provides information about the specified Call Analytics category
---- @param input table|nil The input table for the get_call_analytics_category command
+--- AWS transcribe get-call-analytics-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_call_analytics_category(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-call-analytics-category" }, input)
 end
 
---- Provides information about the specified Call Analytics job
---- @param input table|nil The input table for the get_call_analytics_job command
+--- AWS transcribe get-call-analytics-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_call_analytics_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-call-analytics-job" }, input)
 end
 
---- Provides information about the specified Medical Scribe job
---- @param input table|nil The input table for the get_medical_scribe_job command
+--- AWS transcribe get-medical-scribe-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_medical_scribe_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-medical-scribe-job" }, input)
 end
 
---- Provides information about the specified medical transcription job
---- @param input table|nil The input table for the get_medical_transcription_job command
+--- AWS transcribe get-medical-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_medical_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-medical-transcription-job" }, input)
 end
 
---- Provides information about the specified custom medical vocabulary
---- @param input table|nil The input table for the get_medical_vocabulary command
+--- AWS transcribe get-medical-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_medical_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-medical-vocabulary" }, input)
 end
 
---- Provides information about the specified transcription job
---- @param input table|nil The input table for the get_transcription_job command
+--- AWS transcribe get-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-transcription-job" }, input)
 end
 
---- Provides information about the specified custom vocabulary
---- @param input table|nil The input table for the get_vocabulary command
+--- AWS transcribe get-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-vocabulary" }, input)
 end
 
---- Provides information about the specified custom vocabulary filter
---- @param input table|nil The input table for the get_vocabulary_filter command
+--- AWS transcribe get-vocabulary-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vocabulary_filter(input)
 	return common.execute_aws_command_with_input({ "transcribe", "get-vocabulary-filter" }, input)
 end
 
---- Provides a list of Call Analytics categories, including all rules that make up each category
---- @param input table|nil The input table for the list_call_analytics_categories command
+--- AWS transcribe help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "transcribe", "help" }, input)
+end
+
+--- AWS transcribe list-call-analytics-categories operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_call_analytics_categories(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-call-analytics-categories" }, input)
 end
 
---- Provides a list of Call Analytics jobs that match the specified criteria
---- @param input table|nil The input table for the list_call_analytics_jobs command
+--- AWS transcribe list-call-analytics-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_call_analytics_jobs(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-call-analytics-jobs" }, input)
 end
 
---- Provides a list of custom language models that match the specified criteria
---- @param input table|nil The input table for the list_language_models command
+--- AWS transcribe list-language-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_language_models(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-language-models" }, input)
 end
 
---- Provides a list of Medical Scribe jobs that match the specified criteria
---- @param input table|nil The input table for the list_medical_scribe_jobs command
+--- AWS transcribe list-medical-scribe-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_medical_scribe_jobs(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-medical-scribe-jobs" }, input)
 end
 
---- Provides a list of medical transcription jobs that match the specified criteria
---- @param input table|nil The input table for the list_medical_transcription_jobs command
+--- AWS transcribe list-medical-transcription-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_medical_transcription_jobs(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-medical-transcription-jobs" }, input)
 end
 
---- Provides a list of custom medical vocabularies that match the specified criteria
---- @param input table|nil The input table for the list_medical_vocabularies command
+--- AWS transcribe list-medical-vocabularies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_medical_vocabularies(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-medical-vocabularies" }, input)
 end
 
---- Lists all tags associated with the specified transcription job, vocabulary, model, or resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS transcribe list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-tags-for-resource" }, input)
 end
 
---- Provides a list of transcription jobs that match the specified criteria
---- @param input table|nil The input table for the list_transcription_jobs command
+--- AWS transcribe list-transcription-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_transcription_jobs(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-transcription-jobs" }, input)
 end
 
---- Provides a list of custom vocabularies that match the specified criteria
---- @param input table|nil The input table for the list_vocabularies command
+--- AWS transcribe list-vocabularies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vocabularies(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-vocabularies" }, input)
 end
 
---- Provides a list of custom vocabulary filters that match the specified criteria
---- @param input table|nil The input table for the list_vocabulary_filters command
+--- AWS transcribe list-vocabulary-filters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_vocabulary_filters(input)
 	return common.execute_aws_command_with_input({ "transcribe", "list-vocabulary-filters" }, input)
 end
 
---- Transcribes the audio from a customer service call and applies any additional Request Parameters you choose to include in your request
---- @param input table|nil The input table for the start_call_analytics_job command
+--- AWS transcribe start-call-analytics-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_call_analytics_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "start-call-analytics-job" }, input)
 end
 
---- Transcribes patient-clinician conversations and generates clinical notes
---- @param input table|nil The input table for the start_medical_scribe_job command
+--- AWS transcribe start-medical-scribe-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_medical_scribe_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "start-medical-scribe-job" }, input)
 end
 
---- Transcribes the audio from a medical dictation or conversation and applies any additional Request Parameters you choose to include in your request
---- @param input table|nil The input table for the start_medical_transcription_job command
+--- AWS transcribe start-medical-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_medical_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "start-medical-transcription-job" }, input)
 end
 
---- Transcribes the audio from a media file and applies any additional Request Parameters you choose to include in your request
---- @param input table|nil The input table for the start_transcription_job command
+--- AWS transcribe start-transcription-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_transcription_job(input)
 	return common.execute_aws_command_with_input({ "transcribe", "start-transcription-job" }, input)
 end
 
---- Adds one or more custom tags, each in the form of a key:value pair, to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS transcribe tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "transcribe", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified Amazon Transcribe resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS transcribe untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "transcribe", "untag-resource" }, input)
 end
 
---- Updates the specified Call Analytics category with new rules
---- @param input table|nil The input table for the update_call_analytics_category command
+--- AWS transcribe update-call-analytics-category operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_call_analytics_category(input)
 	return common.execute_aws_command_with_input({ "transcribe", "update-call-analytics-category" }, input)
 end
 
---- Updates an existing custom medical vocabulary with new values
---- @param input table|nil The input table for the update_medical_vocabulary command
+--- AWS transcribe update-medical-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_medical_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "update-medical-vocabulary" }, input)
 end
 
---- Updates an existing custom vocabulary with new values
---- @param input table|nil The input table for the update_vocabulary command
+--- AWS transcribe update-vocabulary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vocabulary(input)
 	return common.execute_aws_command_with_input({ "transcribe", "update-vocabulary" }, input)
 end
 
---- Updates an existing custom vocabulary filter with a new list of words
---- @param input table|nil The input table for the update_vocabulary_filter command
+--- AWS transcribe update-vocabulary-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vocabulary_filter(input)
 	return common.execute_aws_command_with_input({ "transcribe", "update-vocabulary-filter" }, input)

@@ -6,442 +6,512 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BEDROCK-AGENT service functions
 local M = {}
 
---- Makes an agent a collaborator for another agent
---- @param input table|nil The input table for the associate_agent_collaborator command
+--- AWS bedrock-agent associate-agent-collaborator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "associate-agent-collaborator" }, input)
 end
 
---- Associates a knowledge base with an agent
---- @param input table|nil The input table for the associate_agent_knowledge_base command
+--- AWS bedrock-agent associate-agent-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "associate-agent-knowledge-base" }, input)
 end
 
---- Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers
---- @param input table|nil The input table for the create_agent command
+--- AWS bedrock-agent create-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent" }, input)
 end
 
---- Creates an action group for an agent
---- @param input table|nil The input table for the create_agent_action_group command
+--- AWS bedrock-agent create-agent-action-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent-action-group" }, input)
 end
 
---- Creates an alias of an agent that can be used to deploy the agent
---- @param input table|nil The input table for the create_agent_alias command
+--- AWS bedrock-agent create-agent-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-agent-alias" }, input)
 end
 
---- Connects a knowledge base to a data source
---- @param input table|nil The input table for the create_data_source command
+--- AWS bedrock-agent create-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-data-source" }, input)
 end
 
---- Creates a prompt flow that you can use to send an input through various steps to yield an output
---- @param input table|nil The input table for the create_flow command
+--- AWS bedrock-agent create-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-flow" }, input)
 end
 
---- Creates a knowledge base
---- @param input table|nil The input table for the create_knowledge_base command
+--- AWS bedrock-agent create-flow-alias operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_flow_alias(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "create-flow-alias" }, input)
+end
+
+--- AWS bedrock-agent create-flow-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_flow_version(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "create-flow-version" }, input)
+end
+
+--- AWS bedrock-agent create-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-knowledge-base" }, input)
 end
 
---- Creates a prompt in your prompt library that you can add to a flow
---- @param input table|nil The input table for the create_prompt command
+--- AWS bedrock-agent create-prompt operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-prompt" }, input)
 end
 
---- Creates a static snapshot of your prompt that can be deployed to production
---- @param input table|nil The input table for the create_prompt_version command
+--- AWS bedrock-agent create-prompt-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prompt_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "create-prompt-version" }, input)
 end
 
---- Deletes an agent
---- @param input table|nil The input table for the delete_agent command
+--- AWS bedrock-agent delete-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent" }, input)
 end
 
---- Deletes an action group in an agent
---- @param input table|nil The input table for the delete_agent_action_group command
+--- AWS bedrock-agent delete-agent-action-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-action-group" }, input)
 end
 
---- Deletes an alias of an agent
---- @param input table|nil The input table for the delete_agent_alias command
+--- AWS bedrock-agent delete-agent-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-alias" }, input)
 end
 
---- Deletes a version of an agent
---- @param input table|nil The input table for the delete_agent_version command
+--- AWS bedrock-agent delete-agent-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-agent-version" }, input)
 end
 
---- Deletes a data source from a knowledge base
---- @param input table|nil The input table for the delete_data_source command
+--- AWS bedrock-agent delete-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-data-source" }, input)
 end
 
---- Deletes a flow
---- @param input table|nil The input table for the delete_flow command
+--- AWS bedrock-agent delete-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-flow" }, input)
 end
 
---- Deletes a knowledge base
---- @param input table|nil The input table for the delete_knowledge_base command
+--- AWS bedrock-agent delete-flow-alias operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_flow_alias(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-flow-alias" }, input)
+end
+
+--- AWS bedrock-agent delete-flow-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_flow_version(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-flow-version" }, input)
+end
+
+--- AWS bedrock-agent delete-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-knowledge-base" }, input)
 end
 
---- Deletes documents from a data source and syncs the changes to the knowledge base that is connected to it
---- @param input table|nil The input table for the delete_knowledge_base_documents command
+--- AWS bedrock-agent delete-knowledge-base-documents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-knowledge-base-documents" }, input)
 end
 
---- Deletes a prompt or a version of it, depending on whether you include the promptVersion field or not
---- @param input table|nil The input table for the delete_prompt command
+--- AWS bedrock-agent delete-prompt operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "delete-prompt" }, input)
 end
 
---- Disassociates an agent collaborator
---- @param input table|nil The input table for the disassociate_agent_collaborator command
+--- AWS bedrock-agent disassociate-agent-collaborator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "disassociate-agent-collaborator" }, input)
 end
 
---- Disassociates a knowledge base from an agent
---- @param input table|nil The input table for the disassociate_agent_knowledge_base command
+--- AWS bedrock-agent disassociate-agent-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "disassociate-agent-knowledge-base" }, input)
 end
 
---- Gets information about an agent
---- @param input table|nil The input table for the get_agent command
+--- AWS bedrock-agent get-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent" }, input)
 end
 
---- Gets information about an action group for an agent
---- @param input table|nil The input table for the get_agent_action_group command
+--- AWS bedrock-agent get-agent-action-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-action-group" }, input)
 end
 
---- Gets information about an alias of an agent
---- @param input table|nil The input table for the get_agent_alias command
+--- AWS bedrock-agent get-agent-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-alias" }, input)
 end
 
---- Retrieves information about an agent's collaborator
---- @param input table|nil The input table for the get_agent_collaborator command
+--- AWS bedrock-agent get-agent-collaborator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-collaborator" }, input)
 end
 
---- Gets information about a knowledge base associated with an agent
---- @param input table|nil The input table for the get_agent_knowledge_base command
+--- AWS bedrock-agent get-agent-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-knowledge-base" }, input)
 end
 
---- Gets details about a version of an agent
---- @param input table|nil The input table for the get_agent_version command
+--- AWS bedrock-agent get-agent-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_agent_version(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-agent-version" }, input)
 end
 
---- Gets information about a data source
---- @param input table|nil The input table for the get_data_source command
+--- AWS bedrock-agent get-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-data-source" }, input)
 end
 
---- Retrieves information about a flow
---- @param input table|nil The input table for the get_flow command
+--- AWS bedrock-agent get-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-flow" }, input)
 end
 
---- Gets information about a data ingestion job
---- @param input table|nil The input table for the get_ingestion_job command
+--- AWS bedrock-agent get-flow-alias operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_flow_alias(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "get-flow-alias" }, input)
+end
+
+--- AWS bedrock-agent get-flow-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_flow_version(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "get-flow-version" }, input)
+end
+
+--- AWS bedrock-agent get-ingestion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-ingestion-job" }, input)
 end
 
---- Gets information about a knoweldge base
---- @param input table|nil The input table for the get_knowledge_base command
+--- AWS bedrock-agent get-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-knowledge-base" }, input)
 end
 
---- Retrieves specific documents from a data source that is connected to a knowledge base
---- @param input table|nil The input table for the get_knowledge_base_documents command
+--- AWS bedrock-agent get-knowledge-base-documents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-knowledge-base-documents" }, input)
 end
 
---- Retrieves information about the working draft (DRAFT version) of a prompt or a version of it, depending on whether you include the promptVersion field or not
---- @param input table|nil The input table for the get_prompt command
+--- AWS bedrock-agent get-prompt operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "get-prompt" }, input)
 end
 
---- Ingests documents directly into the knowledge base that is connected to the data source
---- @param input table|nil The input table for the ingest_knowledge_base_documents command
+--- AWS bedrock-agent help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "help" }, input)
+end
+
+--- AWS bedrock-agent ingest-knowledge-base-documents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.ingest_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "ingest-knowledge-base-documents" }, input)
 end
 
---- Lists the action groups for an agent and information about each one
---- @param input table|nil The input table for the list_agent_action_groups command
+--- AWS bedrock-agent list-agent-action-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_action_groups(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-action-groups" }, input)
 end
 
---- Lists the aliases of an agent and information about each one
---- @param input table|nil The input table for the list_agent_aliases command
+--- AWS bedrock-agent list-agent-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_aliases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-aliases" }, input)
 end
 
---- Retrieve a list of an agent's collaborators
---- @param input table|nil The input table for the list_agent_collaborators command
+--- AWS bedrock-agent list-agent-collaborators operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_collaborators(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-collaborators" }, input)
 end
 
---- Lists knowledge bases associated with an agent and information about each one
---- @param input table|nil The input table for the list_agent_knowledge_bases command
+--- AWS bedrock-agent list-agent-knowledge-bases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-knowledge-bases" }, input)
 end
 
---- Lists the versions of an agent and information about each version
---- @param input table|nil The input table for the list_agent_versions command
+--- AWS bedrock-agent list-agent-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agent_versions(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agent-versions" }, input)
 end
 
---- Lists the agents belonging to an account and information about each agent
---- @param input table|nil The input table for the list_agents command
+--- AWS bedrock-agent list-agents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-agents" }, input)
 end
 
---- Lists the data sources in a knowledge base and information about each one
---- @param input table|nil The input table for the list_data_sources command
+--- AWS bedrock-agent list-data-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sources(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-data-sources" }, input)
 end
 
---- Returns a list of flows and information about each flow
---- @param input table|nil The input table for the list_flows command
+--- AWS bedrock-agent list-flow-aliases operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_flow_aliases(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "list-flow-aliases" }, input)
+end
+
+--- AWS bedrock-agent list-flow-versions operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_flow_versions(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "list-flow-versions" }, input)
+end
+
+--- AWS bedrock-agent list-flows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_flows(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-flows" }, input)
 end
 
---- Lists the data ingestion jobs for a data source
---- @param input table|nil The input table for the list_ingestion_jobs command
+--- AWS bedrock-agent list-ingestion-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_ingestion_jobs(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-ingestion-jobs" }, input)
 end
 
---- Retrieves all the documents contained in a data source that is connected to a knowledge base
---- @param input table|nil The input table for the list_knowledge_base_documents command
+--- AWS bedrock-agent list-knowledge-base-documents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_base_documents(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-knowledge-base-documents" }, input)
 end
 
---- Lists the knowledge bases in an account
---- @param input table|nil The input table for the list_knowledge_bases command
+--- AWS bedrock-agent list-knowledge-bases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-knowledge-bases" }, input)
 end
 
---- Returns either information about the working draft (DRAFT version) of each prompt in an account, or information about of all versions of a prompt, depending on whether you include the promptIdentifier field or not
---- @param input table|nil The input table for the list_prompts command
+--- AWS bedrock-agent list-prompts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_prompts(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-prompts" }, input)
 end
 
---- List all the tags for the resource you specify
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS bedrock-agent list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "list-tags-for-resource" }, input)
 end
 
---- Creates a DRAFT version of the agent that can be used for internal testing
---- @param input table|nil The input table for the prepare_agent command
+--- AWS bedrock-agent prepare-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.prepare_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "prepare-agent" }, input)
 end
 
---- Prepares the DRAFT version of a flow so that it can be invoked
---- @param input table|nil The input table for the prepare_flow command
+--- AWS bedrock-agent prepare-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.prepare_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "prepare-flow" }, input)
 end
 
---- Begins a data ingestion job
---- @param input table|nil The input table for the start_ingestion_job command
+--- AWS bedrock-agent start-ingestion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "start-ingestion-job" }, input)
 end
 
---- Stops a currently running data ingestion job
---- @param input table|nil The input table for the stop_ingestion_job command
+--- AWS bedrock-agent stop-ingestion-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_ingestion_job(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "stop-ingestion-job" }, input)
 end
 
---- Associate tags with a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS bedrock-agent tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "tag-resource" }, input)
 end
 
---- Remove tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS bedrock-agent untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "untag-resource" }, input)
 end
 
---- Updates the configuration of an agent
---- @param input table|nil The input table for the update_agent command
+--- AWS bedrock-agent update-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent" }, input)
 end
 
---- Updates the configuration for an action group for an agent
---- @param input table|nil The input table for the update_agent_action_group command
+--- AWS bedrock-agent update-agent-action-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_action_group(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-action-group" }, input)
 end
 
---- Updates configurations for an alias of an agent
---- @param input table|nil The input table for the update_agent_alias command
+--- AWS bedrock-agent update-agent-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_alias(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-alias" }, input)
 end
 
---- Updates an agent's collaborator
---- @param input table|nil The input table for the update_agent_collaborator command
+--- AWS bedrock-agent update-agent-collaborator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_collaborator(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-collaborator" }, input)
 end
 
---- Updates the configuration for a knowledge base that has been associated with an agent
---- @param input table|nil The input table for the update_agent_knowledge_base command
+--- AWS bedrock-agent update-agent-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-agent-knowledge-base" }, input)
 end
 
---- Updates the configurations for a data source connector
---- @param input table|nil The input table for the update_data_source command
+--- AWS bedrock-agent update-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-data-source" }, input)
 end
 
---- Modifies a flow
---- @param input table|nil The input table for the update_flow command
+--- AWS bedrock-agent update-flow operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_flow(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-flow" }, input)
 end
 
---- Updates the configuration of a knowledge base with the fields that you specify
---- @param input table|nil The input table for the update_knowledge_base command
+--- AWS bedrock-agent update-flow-alias operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_flow_alias(input)
+	return common.execute_aws_command_with_input({ "bedrock-agent", "update-flow-alias" }, input)
+end
+
+--- AWS bedrock-agent update-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-knowledge-base" }, input)
 end
 
---- Modifies a prompt in your prompt library
---- @param input table|nil The input table for the update_prompt command
+--- AWS bedrock-agent update-prompt operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_prompt(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "update-prompt" }, input)
 end
 
---- Validates the definition of a flow
---- @param input table|nil The input table for the validate_flow_definition command
+--- AWS bedrock-agent validate-flow-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_flow_definition(input)
 	return common.execute_aws_command_with_input({ "bedrock-agent", "validate-flow-definition" }, input)

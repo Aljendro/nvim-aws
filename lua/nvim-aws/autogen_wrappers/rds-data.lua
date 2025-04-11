@@ -6,43 +6,43 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS RDS-DATA service functions
 local M = {}
 
---- Runs a batch SQL statement over an array of data
---- @param input table|nil The input table for the batch_execute_statement command
+--- AWS rds-data batch-execute-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_execute_statement(input)
 	return common.execute_aws_command_with_input({ "rds-data", "batch-execute-statement" }, input)
 end
 
---- Starts a SQL transaction
---- @param input table|nil The input table for the begin_transaction command
+--- AWS rds-data begin-transaction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.begin_transaction(input)
 	return common.execute_aws_command_with_input({ "rds-data", "begin-transaction" }, input)
 end
 
---- Ends a SQL transaction started with the BeginTransaction operation and commits the changes
---- @param input table|nil The input table for the commit_transaction command
+--- AWS rds-data commit-transaction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.commit_transaction(input)
 	return common.execute_aws_command_with_input({ "rds-data", "commit-transaction" }, input)
 end
 
---- Runs one or more SQL statements
---- @param input table|nil The input table for the execute_sql command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.execute_sql(input)
-	return common.execute_aws_command_with_input({ "rds-data", "execute-sql" }, input)
-end
-
---- Runs a SQL statement against a database
---- @param input table|nil The input table for the execute_statement command
+--- AWS rds-data execute-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.execute_statement(input)
 	return common.execute_aws_command_with_input({ "rds-data", "execute-statement" }, input)
 end
 
---- Performs a rollback of a transaction
---- @param input table|nil The input table for the rollback_transaction command
+--- AWS rds-data help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "rds-data", "help" }, input)
+end
+
+--- AWS rds-data rollback-transaction operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.rollback_transaction(input)
 	return common.execute_aws_command_with_input({ "rds-data", "rollback-transaction" }, input)

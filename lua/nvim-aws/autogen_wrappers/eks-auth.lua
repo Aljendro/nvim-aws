@@ -6,11 +6,18 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS EKS-AUTH service functions
 local M = {}
 
---- The Amazon EKS Auth API and the AssumeRoleForPodIdentity action are only used by the EKS Pod Identity Agent
---- @param input table|nil The input table for the assume_role_for_pod_identity command
+--- AWS eks-auth assume-role-for-pod-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.assume_role_for_pod_identity(input)
 	return common.execute_aws_command_with_input({ "eks-auth", "assume-role-for-pod-identity" }, input)
+end
+
+--- AWS eks-auth help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "eks-auth", "help" }, input)
 end
 
 return M

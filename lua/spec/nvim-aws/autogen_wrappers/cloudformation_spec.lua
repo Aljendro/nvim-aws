@@ -245,6 +245,11 @@ describe("AWS cloudformation service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_stacks_to_stack_set", function()
 		local result = service.import_stacks_to_stack_set()
 		assert.is_true(result.success)

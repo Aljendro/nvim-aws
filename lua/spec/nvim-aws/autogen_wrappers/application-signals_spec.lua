@@ -35,6 +35,11 @@ describe("AWS application-signals service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_service_dependencies", function()
 		local result = service.list_service_dependencies()
 		assert.is_true(result.success)

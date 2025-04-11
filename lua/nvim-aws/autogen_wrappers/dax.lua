@@ -6,148 +6,155 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DAX service functions
 local M = {}
 
---- Creates a DAX cluster
---- @param input table|nil The input table for the create_cluster command
+--- AWS dax create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "dax", "create-cluster" }, input)
 end
 
---- Creates a new parameter group
---- @param input table|nil The input table for the create_parameter_group command
+--- AWS dax create-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_parameter_group(input)
 	return common.execute_aws_command_with_input({ "dax", "create-parameter-group" }, input)
 end
 
---- Creates a new subnet group
---- @param input table|nil The input table for the create_subnet_group command
+--- AWS dax create-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subnet_group(input)
 	return common.execute_aws_command_with_input({ "dax", "create-subnet-group" }, input)
 end
 
---- Removes one or more nodes from a DAX cluster
---- @param input table|nil The input table for the decrease_replication_factor command
+--- AWS dax decrease-replication-factor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decrease_replication_factor(input)
 	return common.execute_aws_command_with_input({ "dax", "decrease-replication-factor" }, input)
 end
 
---- Deletes a previously provisioned DAX cluster
---- @param input table|nil The input table for the delete_cluster command
+--- AWS dax delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "dax", "delete-cluster" }, input)
 end
 
---- Deletes the specified parameter group
---- @param input table|nil The input table for the delete_parameter_group command
+--- AWS dax delete-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_parameter_group(input)
 	return common.execute_aws_command_with_input({ "dax", "delete-parameter-group" }, input)
 end
 
---- Deletes a subnet group
---- @param input table|nil The input table for the delete_subnet_group command
+--- AWS dax delete-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subnet_group(input)
 	return common.execute_aws_command_with_input({ "dax", "delete-subnet-group" }, input)
 end
 
---- Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX cluster if a cluster identifier is supplied
---- @param input table|nil The input table for the describe_clusters command
+--- AWS dax describe-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_clusters(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-clusters" }, input)
 end
 
---- Returns the default system parameter information for the DAX caching software
---- @param input table|nil The input table for the describe_default_parameters command
+--- AWS dax describe-default-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_default_parameters(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-default-parameters" }, input)
 end
 
---- Returns events related to DAX clusters and parameter groups
---- @param input table|nil The input table for the describe_events command
+--- AWS dax describe-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_events(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-events" }, input)
 end
 
---- Returns a list of parameter group descriptions
---- @param input table|nil The input table for the describe_parameter_groups command
+--- AWS dax describe-parameter-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_parameter_groups(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-parameter-groups" }, input)
 end
 
---- Returns the detailed parameter list for a particular parameter group
---- @param input table|nil The input table for the describe_parameters command
+--- AWS dax describe-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_parameters(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-parameters" }, input)
 end
 
---- Returns a list of subnet group descriptions
---- @param input table|nil The input table for the describe_subnet_groups command
+--- AWS dax describe-subnet-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_subnet_groups(input)
 	return common.execute_aws_command_with_input({ "dax", "describe-subnet-groups" }, input)
 end
 
---- Adds one or more nodes to a DAX cluster
---- @param input table|nil The input table for the increase_replication_factor command
+--- AWS dax help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "dax", "help" }, input)
+end
+
+--- AWS dax increase-replication-factor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.increase_replication_factor(input)
 	return common.execute_aws_command_with_input({ "dax", "increase-replication-factor" }, input)
 end
 
---- List all of the tags for a DAX cluster
---- @param input table|nil The input table for the list_tags command
+--- AWS dax list-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags(input)
 	return common.execute_aws_command_with_input({ "dax", "list-tags" }, input)
 end
 
---- Reboots a single node of a DAX cluster
---- @param input table|nil The input table for the reboot_node command
+--- AWS dax reboot-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reboot_node(input)
 	return common.execute_aws_command_with_input({ "dax", "reboot-node" }, input)
 end
 
---- Associates a set of tags with a DAX resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS dax tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "dax", "tag-resource" }, input)
 end
 
---- Removes the association of tags from a DAX resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS dax untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "dax", "untag-resource" }, input)
 end
 
---- Modifies the settings for a DAX cluster
---- @param input table|nil The input table for the update_cluster command
+--- AWS dax update-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster(input)
 	return common.execute_aws_command_with_input({ "dax", "update-cluster" }, input)
 end
 
---- Modifies the parameters of a parameter group
---- @param input table|nil The input table for the update_parameter_group command
+--- AWS dax update-parameter-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_parameter_group(input)
 	return common.execute_aws_command_with_input({ "dax", "update-parameter-group" }, input)
 end
 
---- Modifies an existing subnet group
---- @param input table|nil The input table for the update_subnet_group command
+--- AWS dax update-subnet-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subnet_group(input)
 	return common.execute_aws_command_with_input({ "dax", "update-subnet-group" }, input)

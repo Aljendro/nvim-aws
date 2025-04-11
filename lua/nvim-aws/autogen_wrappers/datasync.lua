@@ -6,463 +6,470 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DATASYNC service functions
 local M = {}
 
---- Creates an Amazon Web Services resource for an on-premises storage system that you want DataSync Discovery to collect information about
---- @param input table|nil The input table for the add_storage_system command
+--- AWS datasync add-storage-system operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_storage_system(input)
 	return common.execute_aws_command_with_input({ "datasync", "add-storage-system" }, input)
 end
 
---- Stops an DataSync task execution that's in progress
---- @param input table|nil The input table for the cancel_task_execution command
+--- AWS datasync cancel-task-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_task_execution(input)
 	return common.execute_aws_command_with_input({ "datasync", "cancel-task-execution" }, input)
 end
 
---- Activates an DataSync agent that you deploy in your storage environment
---- @param input table|nil The input table for the create_agent command
+--- AWS datasync create-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_agent(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-agent" }, input)
 end
 
---- Creates a transfer location for a Microsoft Azure Blob Storage container
---- @param input table|nil The input table for the create_location_azure_blob command
+--- AWS datasync create-location-azure-blob operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_azure_blob(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-azure-blob" }, input)
 end
 
---- Creates a transfer location for an Amazon EFS file system
---- @param input table|nil The input table for the create_location_efs command
+--- AWS datasync create-location-efs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_efs(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-efs" }, input)
 end
 
---- Creates a transfer location for an Amazon FSx for Lustre file system
---- @param input table|nil The input table for the create_location_fsx_lustre command
+--- AWS datasync create-location-fsx-lustre operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_fsx_lustre(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-lustre" }, input)
 end
 
---- Creates a transfer location for an Amazon FSx for NetApp ONTAP file system
---- @param input table|nil The input table for the create_location_fsx_ontap command
+--- AWS datasync create-location-fsx-ontap operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_fsx_ontap(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-ontap" }, input)
 end
 
---- Creates a transfer location for an Amazon FSx for OpenZFS file system
---- @param input table|nil The input table for the create_location_fsx_open_zfs command
+--- AWS datasync create-location-fsx-open-zfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_fsx_open_zfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-open-zfs" }, input)
 end
 
---- Creates a transfer location for an Amazon FSx for Windows File Server file system
---- @param input table|nil The input table for the create_location_fsx_windows command
+--- AWS datasync create-location-fsx-windows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_fsx_windows(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-windows" }, input)
 end
 
---- Creates a transfer location for a Hadoop Distributed File System (HDFS)
---- @param input table|nil The input table for the create_location_hdfs command
+--- AWS datasync create-location-hdfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_hdfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-hdfs" }, input)
 end
 
---- Creates a transfer location for a Network File System (NFS) file server
---- @param input table|nil The input table for the create_location_nfs command
+--- AWS datasync create-location-nfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_nfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-nfs" }, input)
 end
 
---- Creates a transfer location for an object storage system
---- @param input table|nil The input table for the create_location_object_storage command
+--- AWS datasync create-location-object-storage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_object_storage(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-object-storage" }, input)
 end
 
---- Creates a transfer location for an Amazon S3 bucket
---- @param input table|nil The input table for the create_location_s3 command
+--- AWS datasync create-location-s3 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_s3(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-s3" }, input)
 end
 
---- Creates a transfer location for a Server Message Block (SMB) file server
---- @param input table|nil The input table for the create_location_smb command
+--- AWS datasync create-location-smb operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location_smb(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-location-smb" }, input)
 end
 
---- Configures a task, which defines where and how DataSync transfers your data
---- @param input table|nil The input table for the create_task command
+--- AWS datasync create-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_task(input)
 	return common.execute_aws_command_with_input({ "datasync", "create-task" }, input)
 end
 
---- Removes an DataSync agent resource from your Amazon Web Services account
---- @param input table|nil The input table for the delete_agent command
+--- AWS datasync delete-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_agent(input)
 	return common.execute_aws_command_with_input({ "datasync", "delete-agent" }, input)
 end
 
---- Deletes a transfer location resource from DataSync
---- @param input table|nil The input table for the delete_location command
+--- AWS datasync delete-location operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_location(input)
 	return common.execute_aws_command_with_input({ "datasync", "delete-location" }, input)
 end
 
---- Deletes a transfer task resource from DataSync
---- @param input table|nil The input table for the delete_task command
+--- AWS datasync delete-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_task(input)
 	return common.execute_aws_command_with_input({ "datasync", "delete-task" }, input)
 end
 
---- Returns information about an DataSync agent, such as its name, service endpoint type, and status
---- @param input table|nil The input table for the describe_agent command
+--- AWS datasync describe-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_agent(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-agent" }, input)
 end
 
---- Returns information about a DataSync discovery job
---- @param input table|nil The input table for the describe_discovery_job command
+--- AWS datasync describe-discovery-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_discovery_job(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-discovery-job" }, input)
 end
 
---- Provides details about how an DataSync transfer location for Microsoft Azure Blob Storage is configured
---- @param input table|nil The input table for the describe_location_azure_blob command
+--- AWS datasync describe-location-azure-blob operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_azure_blob(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-azure-blob" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an Amazon EFS file system is configured
---- @param input table|nil The input table for the describe_location_efs command
+--- AWS datasync describe-location-efs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_efs(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-efs" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an Amazon FSx for Lustre file system is configured
---- @param input table|nil The input table for the describe_location_fsx_lustre command
+--- AWS datasync describe-location-fsx-lustre operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_fsx_lustre(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-lustre" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an Amazon FSx for NetApp ONTAP file system is configured
---- @param input table|nil The input table for the describe_location_fsx_ontap command
+--- AWS datasync describe-location-fsx-ontap operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_fsx_ontap(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-ontap" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an Amazon FSx for OpenZFS file system is configured
---- @param input table|nil The input table for the describe_location_fsx_open_zfs command
+--- AWS datasync describe-location-fsx-open-zfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_fsx_open_zfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-open-zfs" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an Amazon FSx for Windows File Server file system is configured
---- @param input table|nil The input table for the describe_location_fsx_windows command
+--- AWS datasync describe-location-fsx-windows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_fsx_windows(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-windows" }, input)
 end
 
---- Provides details about how an DataSync transfer location for a Hadoop Distributed File System (HDFS) is configured
---- @param input table|nil The input table for the describe_location_hdfs command
+--- AWS datasync describe-location-hdfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_hdfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-hdfs" }, input)
 end
 
---- Provides details about how an DataSync transfer location for a Network File System (NFS) file server is configured
---- @param input table|nil The input table for the describe_location_nfs command
+--- AWS datasync describe-location-nfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_nfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-nfs" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an object storage system is configured
---- @param input table|nil The input table for the describe_location_object_storage command
+--- AWS datasync describe-location-object-storage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_object_storage(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-object-storage" }, input)
 end
 
---- Provides details about how an DataSync transfer location for an S3 bucket is configured
---- @param input table|nil The input table for the describe_location_s3 command
+--- AWS datasync describe-location-s3 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_s3(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-s3" }, input)
 end
 
---- Provides details about how an DataSync transfer location for a Server Message Block (SMB) file server is configured
---- @param input table|nil The input table for the describe_location_smb command
+--- AWS datasync describe-location-smb operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_location_smb(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-location-smb" }, input)
 end
 
---- Returns information about an on-premises storage system that you're using with DataSync Discovery
---- @param input table|nil The input table for the describe_storage_system command
+--- AWS datasync describe-storage-system operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_storage_system(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system" }, input)
 end
 
---- Returns information, including performance data and capacity usage, which DataSync Discovery collects about a specific resource in your-premises storage system
---- @param input table|nil The input table for the describe_storage_system_resource_metrics command
+--- AWS datasync describe-storage-system-resource-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_storage_system_resource_metrics(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system-resource-metrics" }, input)
 end
 
---- Returns information that DataSync Discovery collects about resources in your on-premises storage system
---- @param input table|nil The input table for the describe_storage_system_resources command
+--- AWS datasync describe-storage-system-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_storage_system_resources(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system-resources" }, input)
 end
 
---- Provides information about a task, which defines where and how DataSync transfers your data
---- @param input table|nil The input table for the describe_task command
+--- AWS datasync describe-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_task(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-task" }, input)
 end
 
---- Provides information about an execution of your DataSync task
---- @param input table|nil The input table for the describe_task_execution command
+--- AWS datasync describe-task-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_task_execution(input)
 	return common.execute_aws_command_with_input({ "datasync", "describe-task-execution" }, input)
 end
 
---- Creates recommendations about where to migrate your data to in Amazon Web Services
---- @param input table|nil The input table for the generate_recommendations command
+--- AWS datasync generate-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.generate_recommendations(input)
 	return common.execute_aws_command_with_input({ "datasync", "generate-recommendations" }, input)
 end
 
---- Returns a list of DataSync agents that belong to an Amazon Web Services account in the Amazon Web Services Region specified in the request
---- @param input table|nil The input table for the list_agents command
+--- AWS datasync help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "datasync", "help" }, input)
+end
+
+--- AWS datasync list-agents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_agents(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-agents" }, input)
 end
 
---- Provides a list of the existing discovery jobs in the Amazon Web Services Region and Amazon Web Services account where you're using DataSync Discovery
---- @param input table|nil The input table for the list_discovery_jobs command
+--- AWS datasync list-discovery-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_discovery_jobs(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-discovery-jobs" }, input)
 end
 
---- Returns a list of source and destination locations
---- @param input table|nil The input table for the list_locations command
+--- AWS datasync list-locations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_locations(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-locations" }, input)
 end
 
---- Lists the on-premises storage systems that you're using with DataSync Discovery
---- @param input table|nil The input table for the list_storage_systems command
+--- AWS datasync list-storage-systems operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_storage_systems(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-storage-systems" }, input)
 end
 
---- Returns all the tags associated with an Amazon Web Services resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS datasync list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-tags-for-resource" }, input)
 end
 
---- Returns a list of executions for an DataSync transfer task
---- @param input table|nil The input table for the list_task_executions command
+--- AWS datasync list-task-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_task_executions(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-task-executions" }, input)
 end
 
---- Returns a list of the DataSync tasks you created
---- @param input table|nil The input table for the list_tasks command
+--- AWS datasync list-tasks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tasks(input)
 	return common.execute_aws_command_with_input({ "datasync", "list-tasks" }, input)
 end
 
---- Permanently removes a storage system resource from DataSync Discovery, including the associated discovery jobs, collected data, and recommendations
---- @param input table|nil The input table for the remove_storage_system command
+--- AWS datasync remove-storage-system operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_storage_system(input)
 	return common.execute_aws_command_with_input({ "datasync", "remove-storage-system" }, input)
 end
 
---- Runs a DataSync discovery job on your on-premises storage system
---- @param input table|nil The input table for the start_discovery_job command
+--- AWS datasync start-discovery-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_discovery_job(input)
 	return common.execute_aws_command_with_input({ "datasync", "start-discovery-job" }, input)
 end
 
---- Starts an DataSync transfer task
---- @param input table|nil The input table for the start_task_execution command
+--- AWS datasync start-task-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_task_execution(input)
 	return common.execute_aws_command_with_input({ "datasync", "start-task-execution" }, input)
 end
 
---- Stops a running DataSync discovery job
---- @param input table|nil The input table for the stop_discovery_job command
+--- AWS datasync stop-discovery-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_discovery_job(input)
 	return common.execute_aws_command_with_input({ "datasync", "stop-discovery-job" }, input)
 end
 
---- Applies a tag to an Amazon Web Services resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS datasync tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "datasync", "tag-resource" }, input)
 end
 
---- Removes tags from an Amazon Web Services resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS datasync untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "datasync", "untag-resource" }, input)
 end
 
---- Updates the name of an DataSync agent
---- @param input table|nil The input table for the update_agent command
+--- AWS datasync update-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_agent(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-agent" }, input)
 end
 
---- Edits a DataSync discovery job configuration
---- @param input table|nil The input table for the update_discovery_job command
+--- AWS datasync update-discovery-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_discovery_job(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-discovery-job" }, input)
 end
 
---- Modifies the following configurations of the Microsoft Azure Blob Storage transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_azure_blob command
+--- AWS datasync update-location-azure-blob operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_azure_blob(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-azure-blob" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon EFS transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_efs command
+--- AWS datasync update-location-efs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_efs(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-efs" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon FSx for Lustre transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_fsx_lustre command
+--- AWS datasync update-location-fsx-lustre operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_fsx_lustre(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-lustre" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon FSx for NetApp ONTAP transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_fsx_ontap command
+--- AWS datasync update-location-fsx-ontap operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_fsx_ontap(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-ontap" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon FSx for OpenZFS transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_fsx_open_zfs command
+--- AWS datasync update-location-fsx-open-zfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_fsx_open_zfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-open-zfs" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon FSx for Windows File Server transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_fsx_windows command
+--- AWS datasync update-location-fsx-windows operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_fsx_windows(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-windows" }, input)
 end
 
---- Modifies the following configuration parameters of the Hadoop Distributed File System (HDFS) transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_hdfs command
+--- AWS datasync update-location-hdfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_hdfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-hdfs" }, input)
 end
 
---- Modifies the following configuration parameters of the Network File System (NFS) transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_nfs command
+--- AWS datasync update-location-nfs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_nfs(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-nfs" }, input)
 end
 
---- Modifies the following configuration parameters of the object storage transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_object_storage command
+--- AWS datasync update-location-object-storage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_object_storage(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-object-storage" }, input)
 end
 
---- Modifies the following configuration parameters of the Amazon S3 transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_s3 command
+--- AWS datasync update-location-s3 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_s3(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-s3" }, input)
 end
 
---- Modifies the following configuration parameters of the Server Message Block (SMB) transfer location that you're using with DataSync
---- @param input table|nil The input table for the update_location_smb command
+--- AWS datasync update-location-smb operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_location_smb(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-location-smb" }, input)
 end
 
---- Modifies some configurations of an on-premises storage system resource that you're using with DataSync Discovery
---- @param input table|nil The input table for the update_storage_system command
+--- AWS datasync update-storage-system operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_storage_system(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-storage-system" }, input)
 end
 
---- Updates the configuration of a task, which defines where and how DataSync transfers your data
---- @param input table|nil The input table for the update_task command
+--- AWS datasync update-task operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_task(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-task" }, input)
 end
 
---- Updates the configuration of a running DataSync task execution
---- @param input table|nil The input table for the update_task_execution command
+--- AWS datasync update-task-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_task_execution(input)
 	return common.execute_aws_command_with_input({ "datasync", "update-task-execution" }, input)

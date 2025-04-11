@@ -6,260 +6,267 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DATAEXCHANGE service functions
 local M = {}
 
---- This operation accepts a data grant
---- @param input table|nil The input table for the accept_data_grant command
+--- AWS dataexchange accept-data-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_data_grant(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "accept-data-grant" }, input)
 end
 
---- This operation cancels a job
---- @param input table|nil The input table for the cancel_job command
+--- AWS dataexchange cancel-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_job(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "cancel-job" }, input)
 end
 
---- This operation creates a data grant
---- @param input table|nil The input table for the create_data_grant command
+--- AWS dataexchange create-data-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_grant(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "create-data-grant" }, input)
 end
 
---- This operation creates a data set
---- @param input table|nil The input table for the create_data_set command
+--- AWS dataexchange create-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_set(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "create-data-set" }, input)
 end
 
---- This operation creates an event action
---- @param input table|nil The input table for the create_event_action command
+--- AWS dataexchange create-event-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_event_action(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "create-event-action" }, input)
 end
 
---- This operation creates a job
---- @param input table|nil The input table for the create_job command
+--- AWS dataexchange create-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_job(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "create-job" }, input)
 end
 
---- This operation creates a revision for a data set
---- @param input table|nil The input table for the create_revision command
+--- AWS dataexchange create-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_revision(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "create-revision" }, input)
 end
 
---- This operation deletes an asset
---- @param input table|nil The input table for the delete_asset command
+--- AWS dataexchange delete-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_asset(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "delete-asset" }, input)
 end
 
---- This operation deletes a data grant
---- @param input table|nil The input table for the delete_data_grant command
+--- AWS dataexchange delete-data-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_grant(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "delete-data-grant" }, input)
 end
 
---- This operation deletes a data set
---- @param input table|nil The input table for the delete_data_set command
+--- AWS dataexchange delete-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_set(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "delete-data-set" }, input)
 end
 
---- This operation deletes the event action
---- @param input table|nil The input table for the delete_event_action command
+--- AWS dataexchange delete-event-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_event_action(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "delete-event-action" }, input)
 end
 
---- This operation deletes a revision
---- @param input table|nil The input table for the delete_revision command
+--- AWS dataexchange delete-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_revision(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "delete-revision" }, input)
 end
 
---- This operation returns information about an asset
---- @param input table|nil The input table for the get_asset command
+--- AWS dataexchange get-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_asset(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-asset" }, input)
 end
 
---- This operation returns information about a data grant
---- @param input table|nil The input table for the get_data_grant command
+--- AWS dataexchange get-data-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_grant(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-data-grant" }, input)
 end
 
---- This operation returns information about a data set
---- @param input table|nil The input table for the get_data_set command
+--- AWS dataexchange get-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_set(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-data-set" }, input)
 end
 
---- This operation retrieves information about an event action
---- @param input table|nil The input table for the get_event_action command
+--- AWS dataexchange get-event-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_event_action(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-event-action" }, input)
 end
 
---- This operation returns information about a job
---- @param input table|nil The input table for the get_job command
+--- AWS dataexchange get-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-job" }, input)
 end
 
---- This operation returns information about a received data grant
---- @param input table|nil The input table for the get_received_data_grant command
+--- AWS dataexchange get-received-data-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_received_data_grant(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-received-data-grant" }, input)
 end
 
---- This operation returns information about a revision
---- @param input table|nil The input table for the get_revision command
+--- AWS dataexchange get-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_revision(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "get-revision" }, input)
 end
 
---- This operation returns information about all data grants
---- @param input table|nil The input table for the list_data_grants command
+--- AWS dataexchange help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "dataexchange", "help" }, input)
+end
+
+--- AWS dataexchange list-data-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_grants(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-data-grants" }, input)
 end
 
---- This operation lists a data set's revisions sorted by CreatedAt in descending order
---- @param input table|nil The input table for the list_data_set_revisions command
+--- AWS dataexchange list-data-set-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_set_revisions(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-data-set-revisions" }, input)
 end
 
---- This operation lists your data sets
---- @param input table|nil The input table for the list_data_sets command
+--- AWS dataexchange list-data-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sets(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-data-sets" }, input)
 end
 
---- This operation lists your event actions
---- @param input table|nil The input table for the list_event_actions command
+--- AWS dataexchange list-event-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_event_actions(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-event-actions" }, input)
 end
 
---- This operation lists your jobs sorted by CreatedAt in descending order
---- @param input table|nil The input table for the list_jobs command
+--- AWS dataexchange list-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_jobs(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-jobs" }, input)
 end
 
---- This operation returns information about all received data grants
---- @param input table|nil The input table for the list_received_data_grants command
+--- AWS dataexchange list-received-data-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_received_data_grants(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-received-data-grants" }, input)
 end
 
---- This operation lists a revision's assets sorted alphabetically in descending order
---- @param input table|nil The input table for the list_revision_assets command
+--- AWS dataexchange list-revision-assets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_revision_assets(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-revision-assets" }, input)
 end
 
---- This operation lists the tags on the resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS dataexchange list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "list-tags-for-resource" }, input)
 end
 
---- This operation revokes subscribers' access to a revision
---- @param input table|nil The input table for the revoke_revision command
+--- AWS dataexchange revoke-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_revision(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "revoke-revision" }, input)
 end
 
---- This operation invokes an API Gateway API asset
---- @param input table|nil The input table for the send_api_asset command
+--- AWS dataexchange send-api-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_api_asset(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "send-api-asset" }, input)
 end
 
---- The type of event associated with the data set
---- @param input table|nil The input table for the send_data_set_notification command
+--- AWS dataexchange send-data-set-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_data_set_notification(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "send-data-set-notification" }, input)
 end
 
---- This operation starts a job
---- @param input table|nil The input table for the start_job command
+--- AWS dataexchange start-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_job(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "start-job" }, input)
 end
 
---- This operation tags a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS dataexchange tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "tag-resource" }, input)
 end
 
---- This operation removes one or more tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS dataexchange untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "untag-resource" }, input)
 end
 
---- This operation updates an asset
---- @param input table|nil The input table for the update_asset command
+--- AWS dataexchange update-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_asset(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "update-asset" }, input)
 end
 
---- This operation updates a data set
---- @param input table|nil The input table for the update_data_set command
+--- AWS dataexchange update-data-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_set(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "update-data-set" }, input)
 end
 
---- This operation updates the event action
---- @param input table|nil The input table for the update_event_action command
+--- AWS dataexchange update-event-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_event_action(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "update-event-action" }, input)
 end
 
---- This operation updates a revision
---- @param input table|nil The input table for the update_revision command
+--- AWS dataexchange update-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_revision(input)
 	return common.execute_aws_command_with_input({ "dataexchange", "update-revision" }, input)

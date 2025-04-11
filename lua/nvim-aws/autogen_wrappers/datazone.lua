@@ -6,1079 +6,1107 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DATAZONE service functions
 local M = {}
 
---- Accepts automatically generated business-friendly metadata for your Amazon DataZone assets
---- @param input table|nil The input table for the accept_predictions command
+--- AWS datazone accept-predictions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_predictions(input)
 	return common.execute_aws_command_with_input({ "datazone", "accept-predictions" }, input)
 end
 
---- Accepts a subscription request to a specific asset
---- @param input table|nil The input table for the accept_subscription_request command
+--- AWS datazone accept-subscription-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_subscription_request(input)
 	return common.execute_aws_command_with_input({ "datazone", "accept-subscription-request" }, input)
 end
 
---- Adds the owner of an entity (a domain unit)
---- @param input table|nil The input table for the add_entity_owner command
+--- AWS datazone add-entity-owner operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_entity_owner(input)
 	return common.execute_aws_command_with_input({ "datazone", "add-entity-owner" }, input)
 end
 
---- Adds a policy grant (an authorization policy) to a specified entity, including domain units, environment blueprint configurations, or environment profiles
---- @param input table|nil The input table for the add_policy_grant command
+--- AWS datazone add-policy-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.add_policy_grant(input)
 	return common.execute_aws_command_with_input({ "datazone", "add-policy-grant" }, input)
 end
 
---- Associates the environment role in Amazon DataZone
---- @param input table|nil The input table for the associate_environment_role command
+--- AWS datazone associate-environment-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_environment_role(input)
 	return common.execute_aws_command_with_input({ "datazone", "associate-environment-role" }, input)
 end
 
---- Cancels the metadata generation run
---- @param input table|nil The input table for the cancel_metadata_generation_run command
+--- AWS datazone cancel-metadata-generation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_metadata_generation_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "cancel-metadata-generation-run" }, input)
 end
 
---- Cancels the subscription to the specified asset
---- @param input table|nil The input table for the cancel_subscription command
+--- AWS datazone cancel-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_subscription(input)
 	return common.execute_aws_command_with_input({ "datazone", "cancel-subscription" }, input)
 end
 
---- Creates an asset in Amazon DataZone catalog
---- @param input table|nil The input table for the create_asset command
+--- AWS datazone create-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_asset(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-asset" }, input)
 end
 
---- Creates a data asset filter
---- @param input table|nil The input table for the create_asset_filter command
+--- AWS datazone create-asset-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_asset_filter(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-asset-filter" }, input)
 end
 
---- Creates a revision of the asset
---- @param input table|nil The input table for the create_asset_revision command
+--- AWS datazone create-asset-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_asset_revision(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-asset-revision" }, input)
 end
 
---- Creates a custom asset type
---- @param input table|nil The input table for the create_asset_type command
+--- AWS datazone create-asset-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_asset_type(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-asset-type" }, input)
 end
 
---- Creates a new connection
---- @param input table|nil The input table for the create_connection command
+--- AWS datazone create-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_connection(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-connection" }, input)
 end
 
---- Creates a data product
---- @param input table|nil The input table for the create_data_product command
+--- AWS datazone create-data-product operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_product(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-data-product" }, input)
 end
 
---- Creates a data product revision
---- @param input table|nil The input table for the create_data_product_revision command
+--- AWS datazone create-data-product-revision operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_product_revision(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-data-product-revision" }, input)
 end
 
---- Creates an Amazon DataZone data source
---- @param input table|nil The input table for the create_data_source command
+--- AWS datazone create-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_source(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-data-source" }, input)
 end
 
---- Creates an Amazon DataZone domain
---- @param input table|nil The input table for the create_domain command
+--- AWS datazone create-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-domain" }, input)
 end
 
---- Creates a domain unit in Amazon DataZone
---- @param input table|nil The input table for the create_domain_unit command
+--- AWS datazone create-domain-unit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain_unit(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-domain-unit" }, input)
 end
 
---- Create an Amazon DataZone environment
---- @param input table|nil The input table for the create_environment command
+--- AWS datazone create-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-environment" }, input)
 end
 
---- Creates an action for the environment, for example, creates a console link for an analytics tool that is available in this environment
---- @param input table|nil The input table for the create_environment_action command
+--- AWS datazone create-environment-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_action(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-environment-action" }, input)
 end
 
---- Creates an Amazon DataZone environment profile
---- @param input table|nil The input table for the create_environment_profile command
+--- AWS datazone create-environment-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_environment_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-environment-profile" }, input)
 end
 
---- Creates a metadata form type
---- @param input table|nil The input table for the create_form_type command
+--- AWS datazone create-form-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_form_type(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-form-type" }, input)
 end
 
---- Creates an Amazon DataZone business glossary
---- @param input table|nil The input table for the create_glossary command
+--- AWS datazone create-glossary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_glossary(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-glossary" }, input)
 end
 
---- Creates a business glossary term
---- @param input table|nil The input table for the create_glossary_term command
+--- AWS datazone create-glossary-term operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_glossary_term(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-glossary-term" }, input)
 end
 
---- Creates a group profile in Amazon DataZone
---- @param input table|nil The input table for the create_group_profile command
+--- AWS datazone create-group-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_group_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-group-profile" }, input)
 end
 
---- Publishes a listing (a record of an asset at a given time) or removes a listing from the catalog
---- @param input table|nil The input table for the create_listing_change_set command
+--- AWS datazone create-listing-change-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_listing_change_set(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-listing-change-set" }, input)
 end
 
---- Creates an Amazon DataZone project
---- @param input table|nil The input table for the create_project command
+--- AWS datazone create-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-project" }, input)
 end
 
---- Creates a project membership in Amazon DataZone
---- @param input table|nil The input table for the create_project_membership command
+--- AWS datazone create-project-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project_membership(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-project-membership" }, input)
 end
 
---- Creates a project profile
---- @param input table|nil The input table for the create_project_profile command
+--- AWS datazone create-project-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-project-profile" }, input)
 end
 
---- Creates a rule in Amazon DataZone
---- @param input table|nil The input table for the create_rule command
+--- AWS datazone create-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rule(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-rule" }, input)
 end
 
---- Creates a subsscription grant in Amazon DataZone
---- @param input table|nil The input table for the create_subscription_grant command
+--- AWS datazone create-subscription-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription_grant(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-subscription-grant" }, input)
 end
 
---- Creates a subscription request in Amazon DataZone
---- @param input table|nil The input table for the create_subscription_request command
+--- AWS datazone create-subscription-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription_request(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-subscription-request" }, input)
 end
 
---- Creates a subscription target in Amazon DataZone
---- @param input table|nil The input table for the create_subscription_target command
+--- AWS datazone create-subscription-target operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscription_target(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-subscription-target" }, input)
 end
 
---- Creates a user profile in Amazon DataZone
---- @param input table|nil The input table for the create_user_profile command
+--- AWS datazone create-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_user_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "create-user-profile" }, input)
 end
 
---- Deletes an asset in Amazon DataZone
---- @param input table|nil The input table for the delete_asset command
+--- AWS datazone delete-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_asset(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-asset" }, input)
 end
 
---- Deletes an asset filter
---- @param input table|nil The input table for the delete_asset_filter command
+--- AWS datazone delete-asset-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_asset_filter(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-asset-filter" }, input)
 end
 
---- Deletes and connection
---- @param input table|nil The input table for the delete_connection command
+--- AWS datazone delete-asset-type operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_asset_type(input)
+	return common.execute_aws_command_with_input({ "datazone", "delete-asset-type" }, input)
+end
+
+--- AWS datazone delete-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_connection(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-connection" }, input)
 end
 
---- Deletes a data product in Amazon DataZone
---- @param input table|nil The input table for the delete_data_product command
+--- AWS datazone delete-data-product operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_product(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-data-product" }, input)
 end
 
---- Deletes a data source in Amazon DataZone
---- @param input table|nil The input table for the delete_data_source command
+--- AWS datazone delete-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_source(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-data-source" }, input)
 end
 
---- Deletes a Amazon DataZone domain
---- @param input table|nil The input table for the delete_domain command
+--- AWS datazone delete-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-domain" }, input)
 end
 
---- Deletes a domain unit
---- @param input table|nil The input table for the delete_domain_unit command
+--- AWS datazone delete-domain-unit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain_unit(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-domain-unit" }, input)
 end
 
---- Deletes an environment in Amazon DataZone
---- @param input table|nil The input table for the delete_environment command
+--- AWS datazone delete-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-environment" }, input)
 end
 
---- Deletes an action for the environment, for example, deletes a console link for an analytics tool that is available in this environment
---- @param input table|nil The input table for the delete_environment_action command
+--- AWS datazone delete-environment-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_action(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-environment-action" }, input)
 end
 
---- Deletes the blueprint configuration in Amazon DataZone
---- @param input table|nil The input table for the delete_environment_blueprint_configuration command
+--- AWS datazone delete-environment-blueprint-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_blueprint_configuration(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-environment-blueprint-configuration" }, input)
 end
 
---- Deletes an environment profile in Amazon DataZone
---- @param input table|nil The input table for the delete_environment_profile command
+--- AWS datazone delete-environment-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_environment_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-environment-profile" }, input)
 end
 
---- Deletes a business glossary in Amazon DataZone
---- @param input table|nil The input table for the delete_glossary command
+--- AWS datazone delete-form-type operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_form_type(input)
+	return common.execute_aws_command_with_input({ "datazone", "delete-form-type" }, input)
+end
+
+--- AWS datazone delete-glossary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_glossary(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-glossary" }, input)
 end
 
---- Deletes a business glossary term in Amazon DataZone
---- @param input table|nil The input table for the delete_glossary_term command
+--- AWS datazone delete-glossary-term operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_glossary_term(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-glossary-term" }, input)
 end
 
---- Deletes a listing (a record of an asset at a given time)
---- @param input table|nil The input table for the delete_listing command
+--- AWS datazone delete-listing operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_listing(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-listing" }, input)
 end
 
---- Deletes a project in Amazon DataZone
---- @param input table|nil The input table for the delete_project command
+--- AWS datazone delete-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-project" }, input)
 end
 
---- Deletes project membership in Amazon DataZone
---- @param input table|nil The input table for the delete_project_membership command
+--- AWS datazone delete-project-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project_membership(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-project-membership" }, input)
 end
 
---- Deletes a project profile
---- @param input table|nil The input table for the delete_project_profile command
+--- AWS datazone delete-project-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-project-profile" }, input)
 end
 
---- Deletes a rule in Amazon DataZone
---- @param input table|nil The input table for the delete_rule command
+--- AWS datazone delete-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-rule" }, input)
 end
 
---- Deletes and subscription grant in Amazon DataZone
---- @param input table|nil The input table for the delete_subscription_grant command
+--- AWS datazone delete-subscription-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscription_grant(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-grant" }, input)
 end
 
---- Deletes a subscription request in Amazon DataZone
---- @param input table|nil The input table for the delete_subscription_request command
+--- AWS datazone delete-subscription-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscription_request(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-request" }, input)
 end
 
---- Deletes a subscription target in Amazon DataZone
---- @param input table|nil The input table for the delete_subscription_target command
+--- AWS datazone delete-subscription-target operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscription_target(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-target" }, input)
 end
 
---- Deletes the specified time series form for the specified asset
---- @param input table|nil The input table for the delete_time_series_data_points command
+--- AWS datazone delete-time-series-data-points operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_time_series_data_points(input)
 	return common.execute_aws_command_with_input({ "datazone", "delete-time-series-data-points" }, input)
 end
 
---- Disassociates the environment role in Amazon DataZone
---- @param input table|nil The input table for the disassociate_environment_role command
+--- AWS datazone disassociate-environment-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_environment_role(input)
 	return common.execute_aws_command_with_input({ "datazone", "disassociate-environment-role" }, input)
 end
 
---- Gets an Amazon DataZone asset
---- @param input table|nil The input table for the get_asset command
+--- AWS datazone get-asset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_asset(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-asset" }, input)
 end
 
---- Gets an asset filter
---- @param input table|nil The input table for the get_asset_filter command
+--- AWS datazone get-asset-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_asset_filter(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-asset-filter" }, input)
 end
 
---- Gets a connection
---- @param input table|nil The input table for the get_connection command
+--- AWS datazone get-asset-type operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_asset_type(input)
+	return common.execute_aws_command_with_input({ "datazone", "get-asset-type" }, input)
+end
+
+--- AWS datazone get-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_connection(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-connection" }, input)
 end
 
---- Gets the data product
---- @param input table|nil The input table for the get_data_product command
+--- AWS datazone get-data-product operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_product(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-data-product" }, input)
 end
 
---- Gets an Amazon DataZone data source
---- @param input table|nil The input table for the get_data_source command
+--- AWS datazone get-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_source(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-data-source" }, input)
 end
 
---- Gets an Amazon DataZone data source run
---- @param input table|nil The input table for the get_data_source_run command
+--- AWS datazone get-data-source-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_source_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-data-source-run" }, input)
 end
 
---- Gets an Amazon DataZone domain
---- @param input table|nil The input table for the get_domain command
+--- AWS datazone get-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-domain" }, input)
 end
 
---- Gets the details of the specified domain unit
---- @param input table|nil The input table for the get_domain_unit command
+--- AWS datazone get-domain-unit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_unit(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-domain-unit" }, input)
 end
 
---- Gets an Amazon DataZone environment
---- @param input table|nil The input table for the get_environment command
+--- AWS datazone get-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment" }, input)
 end
 
---- Gets the specified environment action
---- @param input table|nil The input table for the get_environment_action command
+--- AWS datazone get-environment-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_action(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment-action" }, input)
 end
 
---- Gets an Amazon DataZone blueprint
---- @param input table|nil The input table for the get_environment_blueprint command
+--- AWS datazone get-environment-blueprint operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_blueprint(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment-blueprint" }, input)
 end
 
---- Gets the blueprint configuration in Amazon DataZone
---- @param input table|nil The input table for the get_environment_blueprint_configuration command
+--- AWS datazone get-environment-blueprint-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_blueprint_configuration(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment-blueprint-configuration" }, input)
 end
 
---- Gets the credentials of an environment in Amazon DataZone
---- @param input table|nil The input table for the get_environment_credentials command
+--- AWS datazone get-environment-credentials operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_credentials(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment-credentials" }, input)
 end
 
---- Gets an evinronment profile in Amazon DataZone
---- @param input table|nil The input table for the get_environment_profile command
+--- AWS datazone get-environment-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_environment_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-environment-profile" }, input)
 end
 
---- Gets a business glossary in Amazon DataZone
---- @param input table|nil The input table for the get_glossary command
+--- AWS datazone get-form-type operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_form_type(input)
+	return common.execute_aws_command_with_input({ "datazone", "get-form-type" }, input)
+end
+
+--- AWS datazone get-glossary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_glossary(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-glossary" }, input)
 end
 
---- Gets a business glossary term in Amazon DataZone
---- @param input table|nil The input table for the get_glossary_term command
+--- AWS datazone get-glossary-term operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_glossary_term(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-glossary-term" }, input)
 end
 
---- Gets a group profile in Amazon DataZone
---- @param input table|nil The input table for the get_group_profile command
+--- AWS datazone get-group-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_group_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-group-profile" }, input)
 end
 
---- Gets the data portal URL for the specified Amazon DataZone domain
---- @param input table|nil The input table for the get_iam_portal_login_url command
+--- AWS datazone get-iam-portal-login-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_iam_portal_login_url(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-iam-portal-login-url" }, input)
 end
 
---- The details of the job run
---- @param input table|nil The input table for the get_job_run command
+--- AWS datazone get-job-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_job_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-job-run" }, input)
 end
 
---- Describes the lineage event
---- @param input table|nil The input table for the get_lineage_event command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_lineage_event(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-lineage-event" }, input)
-end
-
---- Gets the data lineage node
---- @param input table|nil The input table for the get_lineage_node command
+--- AWS datazone get-lineage-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_lineage_node(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-lineage-node" }, input)
 end
 
---- Gets a listing (a record of an asset at a given time)
---- @param input table|nil The input table for the get_listing command
+--- AWS datazone get-listing operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_listing(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-listing" }, input)
 end
 
---- Gets a metadata generation run in Amazon DataZone
---- @param input table|nil The input table for the get_metadata_generation_run command
+--- AWS datazone get-metadata-generation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metadata_generation_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-metadata-generation-run" }, input)
 end
 
---- Gets a project in Amazon DataZone
---- @param input table|nil The input table for the get_project command
+--- AWS datazone get-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_project(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-project" }, input)
 end
 
---- The details of the project profile
---- @param input table|nil The input table for the get_project_profile command
+--- AWS datazone get-project-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_project_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-project-profile" }, input)
 end
 
---- Gets the details of a rule in Amazon DataZone
---- @param input table|nil The input table for the get_rule command
+--- AWS datazone get-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_rule(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-rule" }, input)
 end
 
---- Gets a subscription in Amazon DataZone
---- @param input table|nil The input table for the get_subscription command
+--- AWS datazone get-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-subscription" }, input)
 end
 
---- Gets the subscription grant in Amazon DataZone
---- @param input table|nil The input table for the get_subscription_grant command
+--- AWS datazone get-subscription-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_grant(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-subscription-grant" }, input)
 end
 
---- Gets the details of the specified subscription request
---- @param input table|nil The input table for the get_subscription_request_details command
+--- AWS datazone get-subscription-request-details operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_request_details(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-subscription-request-details" }, input)
 end
 
---- Gets the subscription target in Amazon DataZone
---- @param input table|nil The input table for the get_subscription_target command
+--- AWS datazone get-subscription-target operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscription_target(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-subscription-target" }, input)
 end
 
---- Gets the existing data point for the asset
---- @param input table|nil The input table for the get_time_series_data_point command
+--- AWS datazone get-time-series-data-point operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_time_series_data_point(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-time-series-data-point" }, input)
 end
 
---- Gets a user profile in Amazon DataZone
---- @param input table|nil The input table for the get_user_profile command
+--- AWS datazone get-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_user_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "get-user-profile" }, input)
 end
 
---- Lists asset filters
---- @param input table|nil The input table for the list_asset_filters command
+--- AWS datazone help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "datazone", "help" }, input)
+end
+
+--- AWS datazone list-asset-filters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_asset_filters(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-asset-filters" }, input)
 end
 
---- Lists the revisions for the asset
---- @param input table|nil The input table for the list_asset_revisions command
+--- AWS datazone list-asset-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_asset_revisions(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-asset-revisions" }, input)
 end
 
---- Lists connections
---- @param input table|nil The input table for the list_connections command
+--- AWS datazone list-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_connections(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-connections" }, input)
 end
 
---- Lists data product revisions
---- @param input table|nil The input table for the list_data_product_revisions command
+--- AWS datazone list-data-product-revisions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_product_revisions(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-data-product-revisions" }, input)
 end
 
---- Lists data source run activities
---- @param input table|nil The input table for the list_data_source_run_activities command
+--- AWS datazone list-data-source-run-activities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_source_run_activities(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-data-source-run-activities" }, input)
 end
 
---- Lists data source runs in Amazon DataZone
---- @param input table|nil The input table for the list_data_source_runs command
+--- AWS datazone list-data-source-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_source_runs(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-data-source-runs" }, input)
 end
 
---- Lists data sources in Amazon DataZone
---- @param input table|nil The input table for the list_data_sources command
+--- AWS datazone list-data-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_sources(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-data-sources" }, input)
 end
 
---- Lists child domain units for the specified parent domain unit
---- @param input table|nil The input table for the list_domain_units_for_parent command
+--- AWS datazone list-domain-units-for-parent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domain_units_for_parent(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-domain-units-for-parent" }, input)
 end
 
---- Lists Amazon DataZone domains
---- @param input table|nil The input table for the list_domains command
+--- AWS datazone list-domains operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domains(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-domains" }, input)
 end
 
---- Lists the entity (domain units) owners
---- @param input table|nil The input table for the list_entity_owners command
+--- AWS datazone list-entity-owners operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entity_owners(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-entity-owners" }, input)
 end
 
---- Lists existing environment actions
---- @param input table|nil The input table for the list_environment_actions command
+--- AWS datazone list-environment-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_actions(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-environment-actions" }, input)
 end
 
---- Lists blueprint configurations for a Amazon DataZone environment
---- @param input table|nil The input table for the list_environment_blueprint_configurations command
+--- AWS datazone list-environment-blueprint-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_blueprint_configurations(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-environment-blueprint-configurations" }, input)
 end
 
---- Lists blueprints in an Amazon DataZone environment
---- @param input table|nil The input table for the list_environment_blueprints command
+--- AWS datazone list-environment-blueprints operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_blueprints(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-environment-blueprints" }, input)
 end
 
---- Lists Amazon DataZone environment profiles
---- @param input table|nil The input table for the list_environment_profiles command
+--- AWS datazone list-environment-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environment_profiles(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-environment-profiles" }, input)
 end
 
---- Lists Amazon DataZone environments
---- @param input table|nil The input table for the list_environments command
+--- AWS datazone list-environments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_environments(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-environments" }, input)
 end
 
---- Lists job runs
---- @param input table|nil The input table for the list_job_runs command
+--- AWS datazone list-job-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_job_runs(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-job-runs" }, input)
 end
 
---- Lists lineage events
---- @param input table|nil The input table for the list_lineage_events command
+--- AWS datazone list-lineage-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lineage_events(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-lineage-events" }, input)
 end
 
---- Lists the history of the specified data lineage node
---- @param input table|nil The input table for the list_lineage_node_history command
+--- AWS datazone list-lineage-node-history operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_lineage_node_history(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-lineage-node-history" }, input)
 end
 
---- Lists all metadata generation runs
---- @param input table|nil The input table for the list_metadata_generation_runs command
+--- AWS datazone list-metadata-generation-runs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metadata_generation_runs(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-metadata-generation-runs" }, input)
 end
 
---- Lists all Amazon DataZone notifications
---- @param input table|nil The input table for the list_notifications command
+--- AWS datazone list-notifications operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notifications(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-notifications" }, input)
 end
 
---- Lists policy grants
---- @param input table|nil The input table for the list_policy_grants command
+--- AWS datazone list-policy-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_policy_grants(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-policy-grants" }, input)
 end
 
---- Lists all members of the specified project
---- @param input table|nil The input table for the list_project_memberships command
+--- AWS datazone list-project-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_project_memberships(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-project-memberships" }, input)
 end
 
---- Lists project profiles
---- @param input table|nil The input table for the list_project_profiles command
+--- AWS datazone list-project-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_project_profiles(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-project-profiles" }, input)
 end
 
---- Lists Amazon DataZone projects
---- @param input table|nil The input table for the list_projects command
+--- AWS datazone list-projects operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_projects(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-projects" }, input)
 end
 
---- Lists existing rules
---- @param input table|nil The input table for the list_rules command
+--- AWS datazone list-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rules(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-rules" }, input)
 end
 
---- Lists subscription grants
---- @param input table|nil The input table for the list_subscription_grants command
+--- AWS datazone list-subscription-grants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscription_grants(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-subscription-grants" }, input)
 end
 
---- Lists Amazon DataZone subscription requests
---- @param input table|nil The input table for the list_subscription_requests command
+--- AWS datazone list-subscription-requests operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscription_requests(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-subscription-requests" }, input)
 end
 
---- Lists subscription targets in Amazon DataZone
---- @param input table|nil The input table for the list_subscription_targets command
+--- AWS datazone list-subscription-targets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscription_targets(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-subscription-targets" }, input)
 end
 
---- Lists subscriptions in Amazon DataZone
---- @param input table|nil The input table for the list_subscriptions command
+--- AWS datazone list-subscriptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscriptions(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-subscriptions" }, input)
 end
 
---- Lists tags for the specified resource in Amazon DataZone
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS datazone list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-tags-for-resource" }, input)
 end
 
---- Lists time series data points
---- @param input table|nil The input table for the list_time_series_data_points command
+--- AWS datazone list-time-series-data-points operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_time_series_data_points(input)
 	return common.execute_aws_command_with_input({ "datazone", "list-time-series-data-points" }, input)
 end
 
---- Posts a data lineage event
---- @param input table|nil The input table for the post_lineage_event command
+--- AWS datazone post-lineage-event operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.post_lineage_event(input)
 	return common.execute_aws_command_with_input({ "datazone", "post-lineage-event" }, input)
 end
 
---- Posts time series data points to Amazon DataZone for the specified asset
---- @param input table|nil The input table for the post_time_series_data_points command
+--- AWS datazone post-time-series-data-points operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.post_time_series_data_points(input)
 	return common.execute_aws_command_with_input({ "datazone", "post-time-series-data-points" }, input)
 end
 
---- Writes the configuration for the specified environment blueprint in Amazon DataZone
---- @param input table|nil The input table for the put_environment_blueprint_configuration command
+--- AWS datazone put-environment-blueprint-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_environment_blueprint_configuration(input)
 	return common.execute_aws_command_with_input({ "datazone", "put-environment-blueprint-configuration" }, input)
 end
 
---- Rejects automatically generated business-friendly metadata for your Amazon DataZone assets
---- @param input table|nil The input table for the reject_predictions command
+--- AWS datazone reject-predictions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_predictions(input)
 	return common.execute_aws_command_with_input({ "datazone", "reject-predictions" }, input)
 end
 
---- Rejects the specified subscription request
---- @param input table|nil The input table for the reject_subscription_request command
+--- AWS datazone reject-subscription-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_subscription_request(input)
 	return common.execute_aws_command_with_input({ "datazone", "reject-subscription-request" }, input)
 end
 
---- Removes an owner from an entity
---- @param input table|nil The input table for the remove_entity_owner command
+--- AWS datazone remove-entity-owner operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_entity_owner(input)
 	return common.execute_aws_command_with_input({ "datazone", "remove-entity-owner" }, input)
 end
 
---- Removes a policy grant
---- @param input table|nil The input table for the remove_policy_grant command
+--- AWS datazone remove-policy-grant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_policy_grant(input)
 	return common.execute_aws_command_with_input({ "datazone", "remove-policy-grant" }, input)
 end
 
---- Revokes a specified subscription in Amazon DataZone
---- @param input table|nil The input table for the revoke_subscription command
+--- AWS datazone revoke-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.revoke_subscription(input)
 	return common.execute_aws_command_with_input({ "datazone", "revoke-subscription" }, input)
 end
 
---- Searches for assets in Amazon DataZone
---- @param input table|nil The input table for the search command
+--- AWS datazone search operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search(input)
 	return common.execute_aws_command_with_input({ "datazone", "search" }, input)
 end
 
---- Searches group profiles in Amazon DataZone
---- @param input table|nil The input table for the search_group_profiles command
+--- AWS datazone search-group-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_group_profiles(input)
 	return common.execute_aws_command_with_input({ "datazone", "search-group-profiles" }, input)
 end
 
---- Searches listings (records of an asset at a given time) in Amazon DataZone
---- @param input table|nil The input table for the search_listings command
+--- AWS datazone search-listings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_listings(input)
 	return common.execute_aws_command_with_input({ "datazone", "search-listings" }, input)
 end
 
---- Searches for types in Amazon DataZone
---- @param input table|nil The input table for the search_types command
+--- AWS datazone search-types operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_types(input)
 	return common.execute_aws_command_with_input({ "datazone", "search-types" }, input)
 end
 
---- Searches user profiles in Amazon DataZone
---- @param input table|nil The input table for the search_user_profiles command
+--- AWS datazone search-user-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_user_profiles(input)
 	return common.execute_aws_command_with_input({ "datazone", "search-user-profiles" }, input)
 end
 
---- Start the run of the specified data source in Amazon DataZone
---- @param input table|nil The input table for the start_data_source_run command
+--- AWS datazone start-data-source-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_data_source_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "start-data-source-run" }, input)
 end
 
---- Starts the metadata generation run
---- @param input table|nil The input table for the start_metadata_generation_run command
+--- AWS datazone start-metadata-generation-run operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_metadata_generation_run(input)
 	return common.execute_aws_command_with_input({ "datazone", "start-metadata-generation-run" }, input)
 end
 
---- Tags a resource in Amazon DataZone
---- @param input table|nil The input table for the tag_resource command
+--- AWS datazone tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "datazone", "tag-resource" }, input)
 end
 
---- Untags a resource in Amazon DataZone
---- @param input table|nil The input table for the untag_resource command
+--- AWS datazone untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "datazone", "untag-resource" }, input)
 end
 
---- Updates an asset filter
---- @param input table|nil The input table for the update_asset_filter command
+--- AWS datazone update-asset-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_asset_filter(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-asset-filter" }, input)
 end
 
---- Updates a connection
---- @param input table|nil The input table for the update_connection command
+--- AWS datazone update-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_connection(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-connection" }, input)
 end
 
---- Updates the specified data source in Amazon DataZone
---- @param input table|nil The input table for the update_data_source command
+--- AWS datazone update-data-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_source(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-data-source" }, input)
 end
 
---- Updates a Amazon DataZone domain
---- @param input table|nil The input table for the update_domain command
+--- AWS datazone update-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-domain" }, input)
 end
 
---- Updates the domain unit
---- @param input table|nil The input table for the update_domain_unit command
+--- AWS datazone update-domain-unit operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_unit(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-domain-unit" }, input)
 end
 
---- Updates the specified environment in Amazon DataZone
---- @param input table|nil The input table for the update_environment command
+--- AWS datazone update-environment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-environment" }, input)
 end
 
---- Updates an environment action
---- @param input table|nil The input table for the update_environment_action command
+--- AWS datazone update-environment-action operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_action(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-environment-action" }, input)
 end
 
---- Updates the specified environment profile in Amazon DataZone
---- @param input table|nil The input table for the update_environment_profile command
+--- AWS datazone update-environment-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_environment_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-environment-profile" }, input)
 end
 
---- Updates the business glossary in Amazon DataZone
---- @param input table|nil The input table for the update_glossary command
+--- AWS datazone update-glossary operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_glossary(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-glossary" }, input)
 end
 
---- Updates a business glossary term in Amazon DataZone
---- @param input table|nil The input table for the update_glossary_term command
+--- AWS datazone update-glossary-term operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_glossary_term(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-glossary-term" }, input)
 end
 
---- Updates the specified group profile in Amazon DataZone
---- @param input table|nil The input table for the update_group_profile command
+--- AWS datazone update-group-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_group_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-group-profile" }, input)
 end
 
---- Updates the specified project in Amazon DataZone
---- @param input table|nil The input table for the update_project command
+--- AWS datazone update-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-project" }, input)
 end
 
---- Updates a project profile
---- @param input table|nil The input table for the update_project_profile command
+--- AWS datazone update-project-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_project_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-project-profile" }, input)
 end
 
---- Updates a rule
---- @param input table|nil The input table for the update_rule command
+--- AWS datazone update-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rule(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-rule" }, input)
 end
 
---- Updates the status of the specified subscription grant status in Amazon DataZone
---- @param input table|nil The input table for the update_subscription_grant_status command
+--- AWS datazone update-subscription-grant-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription_grant_status(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-subscription-grant-status" }, input)
 end
 
---- Updates a specified subscription request in Amazon DataZone
---- @param input table|nil The input table for the update_subscription_request command
+--- AWS datazone update-subscription-request operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription_request(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-subscription-request" }, input)
 end
 
---- Updates the specified subscription target in Amazon DataZone
---- @param input table|nil The input table for the update_subscription_target command
+--- AWS datazone update-subscription-target operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscription_target(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-subscription-target" }, input)
 end
 
---- Updates the specified user profile in Amazon DataZone
---- @param input table|nil The input table for the update_user_profile command
+--- AWS datazone update-user-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_user_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-user-profile" }, input)

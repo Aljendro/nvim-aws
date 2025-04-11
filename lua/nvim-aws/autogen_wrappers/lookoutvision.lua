@@ -6,155 +6,162 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS LOOKOUTVISION service functions
 local M = {}
 
---- Creates a new dataset in an Amazon Lookout for Vision project
---- @param input table|nil The input table for the create_dataset command
+--- AWS lookoutvision create-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "create-dataset" }, input)
 end
 
---- Creates a new version of a model within an an Amazon Lookout for Vision project
---- @param input table|nil The input table for the create_model command
+--- AWS lookoutvision create-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "create-model" }, input)
 end
 
---- Creates an empty Amazon Lookout for Vision project
---- @param input table|nil The input table for the create_project command
+--- AWS lookoutvision create-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_project(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "create-project" }, input)
 end
 
---- Deletes an existing Amazon Lookout for Vision dataset
---- @param input table|nil The input table for the delete_dataset command
+--- AWS lookoutvision delete-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "delete-dataset" }, input)
 end
 
---- Deletes an Amazon Lookout for Vision model
---- @param input table|nil The input table for the delete_model command
+--- AWS lookoutvision delete-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_model(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "delete-model" }, input)
 end
 
---- Deletes an Amazon Lookout for Vision project
---- @param input table|nil The input table for the delete_project command
+--- AWS lookoutvision delete-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_project(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "delete-project" }, input)
 end
 
---- Describe an Amazon Lookout for Vision dataset
---- @param input table|nil The input table for the describe_dataset command
+--- AWS lookoutvision describe-dataset operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_dataset(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "describe-dataset" }, input)
 end
 
---- Describes a version of an Amazon Lookout for Vision model
---- @param input table|nil The input table for the describe_model command
+--- AWS lookoutvision describe-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_model(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "describe-model" }, input)
 end
 
---- Describes an Amazon Lookout for Vision model packaging job
---- @param input table|nil The input table for the describe_model_packaging_job command
+--- AWS lookoutvision describe-model-packaging-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_model_packaging_job(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "describe-model-packaging-job" }, input)
 end
 
---- Describes an Amazon Lookout for Vision project
---- @param input table|nil The input table for the describe_project command
+--- AWS lookoutvision describe-project operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_project(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "describe-project" }, input)
 end
 
---- Detects anomalies in an image that you supply
---- @param input table|nil The input table for the detect_anomalies command
+--- AWS lookoutvision detect-anomalies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_anomalies(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "detect-anomalies" }, input)
 end
 
---- Lists the JSON Lines within a dataset
---- @param input table|nil The input table for the list_dataset_entries command
+--- AWS lookoutvision help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "lookoutvision", "help" }, input)
+end
+
+--- AWS lookoutvision list-dataset-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dataset_entries(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "list-dataset-entries" }, input)
 end
 
---- Lists the model packaging jobs created for an Amazon Lookout for Vision project
---- @param input table|nil The input table for the list_model_packaging_jobs command
+--- AWS lookoutvision list-model-packaging-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_model_packaging_jobs(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "list-model-packaging-jobs" }, input)
 end
 
---- Lists the versions of a model in an Amazon Lookout for Vision project
---- @param input table|nil The input table for the list_models command
+--- AWS lookoutvision list-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_models(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "list-models" }, input)
 end
 
---- Lists the Amazon Lookout for Vision projects in your AWS account that are in the AWS Region in which you call ListProjects
---- @param input table|nil The input table for the list_projects command
+--- AWS lookoutvision list-projects operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_projects(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "list-projects" }, input)
 end
 
---- Returns a list of tags attached to the specified Amazon Lookout for Vision model
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS lookoutvision list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "list-tags-for-resource" }, input)
 end
 
---- Starts the running of the version of an Amazon Lookout for Vision model
---- @param input table|nil The input table for the start_model command
+--- AWS lookoutvision start-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_model(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "start-model" }, input)
 end
 
---- Starts an Amazon Lookout for Vision model packaging job
---- @param input table|nil The input table for the start_model_packaging_job command
+--- AWS lookoutvision start-model-packaging-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_model_packaging_job(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "start-model-packaging-job" }, input)
 end
 
---- Stops the hosting of a running model
---- @param input table|nil The input table for the stop_model command
+--- AWS lookoutvision stop-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_model(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "stop-model" }, input)
 end
 
---- Adds one or more key-value tags to an Amazon Lookout for Vision model
---- @param input table|nil The input table for the tag_resource command
+--- AWS lookoutvision tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "tag-resource" }, input)
 end
 
---- Removes one or more tags from an Amazon Lookout for Vision model
---- @param input table|nil The input table for the untag_resource command
+--- AWS lookoutvision untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "untag-resource" }, input)
 end
 
---- Adds or updates one or more JSON Line entries in a dataset
---- @param input table|nil The input table for the update_dataset_entries command
+--- AWS lookoutvision update-dataset-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_dataset_entries(input)
 	return common.execute_aws_command_with_input({ "lookoutvision", "update-dataset-entries" }, input)

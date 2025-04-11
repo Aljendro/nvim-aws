@@ -6,11 +6,11 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KINESIS-VIDEO-MEDIA service functions
 local M = {}
 
---- Use this API to retrieve media content from a Kinesis video stream
---- @param input table|nil The input table for the get_media command
+--- AWS kinesis-video-media help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_media(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-media", "get-media" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "kinesis-video-media", "help" }, input)
 end
 
 return M

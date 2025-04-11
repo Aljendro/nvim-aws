@@ -1,35 +1,4 @@
-import os
-import json
 import pytest
-from pathlib import Path
-
-
-@pytest.fixture
-def sample_model_path(tmp_path):
-    """Create a sample AWS service model JSON file for testing."""
-    model_file = tmp_path / "test-service.json"
-
-    model_data = {
-        "shapes": {
-            "TestService": {
-                "type": "service",
-                "operations": [{"target": "#TestOperation"}],
-            },
-            "#TestOperation": {
-                "type": "operation",
-                "traits": {"smithy.api#documentation": "Test operation documentation."},
-                "input": {"target": "#TestInput"},
-                "output": {"target": "#TestOutput"},
-            },
-            "#TestInput": {"type": "structure"},
-            "#TestOutput": {"type": "structure"},
-        }
-    }
-
-    with open(model_file, "w") as f:
-        json.dump(model_data, f)
-
-    return str(model_file)
 
 
 @pytest.fixture

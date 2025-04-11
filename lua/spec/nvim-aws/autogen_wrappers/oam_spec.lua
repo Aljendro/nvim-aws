@@ -40,6 +40,11 @@ describe("AWS oam service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_attached_links", function()
 		local result = service.list_attached_links()
 		assert.is_true(result.success)

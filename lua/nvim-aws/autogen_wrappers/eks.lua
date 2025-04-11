@@ -6,400 +6,407 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS EKS service functions
 local M = {}
 
---- Associates an access policy and its scope to an access entry
---- @param input table|nil The input table for the associate_access_policy command
+--- AWS eks associate-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_access_policy(input)
 	return common.execute_aws_command_with_input({ "eks", "associate-access-policy" }, input)
 end
 
---- Associates an encryption configuration to an existing cluster
---- @param input table|nil The input table for the associate_encryption_config command
+--- AWS eks associate-encryption-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_encryption_config(input)
 	return common.execute_aws_command_with_input({ "eks", "associate-encryption-config" }, input)
 end
 
---- Associates an identity provider configuration to a cluster
---- @param input table|nil The input table for the associate_identity_provider_config command
+--- AWS eks associate-identity-provider-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_identity_provider_config(input)
 	return common.execute_aws_command_with_input({ "eks", "associate-identity-provider-config" }, input)
 end
 
---- Creates an access entry
---- @param input table|nil The input table for the create_access_entry command
+--- AWS eks create-access-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_access_entry(input)
 	return common.execute_aws_command_with_input({ "eks", "create-access-entry" }, input)
 end
 
---- Creates an Amazon EKS add-on
---- @param input table|nil The input table for the create_addon command
+--- AWS eks create-addon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_addon(input)
 	return common.execute_aws_command_with_input({ "eks", "create-addon" }, input)
 end
 
---- Creates an Amazon EKS control plane
---- @param input table|nil The input table for the create_cluster command
+--- AWS eks create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "eks", "create-cluster" }, input)
 end
 
---- Creates an EKS Anywhere subscription
---- @param input table|nil The input table for the create_eks_anywhere_subscription command
+--- AWS eks create-eks-anywhere-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_eks_anywhere_subscription(input)
 	return common.execute_aws_command_with_input({ "eks", "create-eks-anywhere-subscription" }, input)
 end
 
---- Creates an Fargate profile for your Amazon EKS cluster
---- @param input table|nil The input table for the create_fargate_profile command
+--- AWS eks create-fargate-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fargate_profile(input)
 	return common.execute_aws_command_with_input({ "eks", "create-fargate-profile" }, input)
 end
 
---- Creates a managed node group for an Amazon EKS cluster
---- @param input table|nil The input table for the create_nodegroup command
+--- AWS eks create-nodegroup operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_nodegroup(input)
 	return common.execute_aws_command_with_input({ "eks", "create-nodegroup" }, input)
 end
 
---- Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with EKS Pod Identity
---- @param input table|nil The input table for the create_pod_identity_association command
+--- AWS eks create-pod-identity-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pod_identity_association(input)
 	return common.execute_aws_command_with_input({ "eks", "create-pod-identity-association" }, input)
 end
 
---- Deletes an access entry
---- @param input table|nil The input table for the delete_access_entry command
+--- AWS eks delete-access-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_entry(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-access-entry" }, input)
 end
 
---- Deletes an Amazon EKS add-on
---- @param input table|nil The input table for the delete_addon command
+--- AWS eks delete-addon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_addon(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-addon" }, input)
 end
 
---- Deletes an Amazon EKS cluster control plane
---- @param input table|nil The input table for the delete_cluster command
+--- AWS eks delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-cluster" }, input)
 end
 
---- Deletes an expired or inactive subscription
---- @param input table|nil The input table for the delete_eks_anywhere_subscription command
+--- AWS eks delete-eks-anywhere-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_eks_anywhere_subscription(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-eks-anywhere-subscription" }, input)
 end
 
---- Deletes an Fargate profile
---- @param input table|nil The input table for the delete_fargate_profile command
+--- AWS eks delete-fargate-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fargate_profile(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-fargate-profile" }, input)
 end
 
---- Deletes a managed node group
---- @param input table|nil The input table for the delete_nodegroup command
+--- AWS eks delete-nodegroup operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_nodegroup(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-nodegroup" }, input)
 end
 
---- Deletes a EKS Pod Identity association
---- @param input table|nil The input table for the delete_pod_identity_association command
+--- AWS eks delete-pod-identity-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pod_identity_association(input)
 	return common.execute_aws_command_with_input({ "eks", "delete-pod-identity-association" }, input)
 end
 
---- Deregisters a connected cluster to remove it from the Amazon EKS control plane
---- @param input table|nil The input table for the deregister_cluster command
+--- AWS eks deregister-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_cluster(input)
 	return common.execute_aws_command_with_input({ "eks", "deregister-cluster" }, input)
 end
 
---- Describes an access entry
---- @param input table|nil The input table for the describe_access_entry command
+--- AWS eks describe-access-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_access_entry(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-access-entry" }, input)
 end
 
---- Describes an Amazon EKS add-on
---- @param input table|nil The input table for the describe_addon command
+--- AWS eks describe-addon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_addon(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-addon" }, input)
 end
 
---- Returns configuration options
---- @param input table|nil The input table for the describe_addon_configuration command
+--- AWS eks describe-addon-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_addon_configuration(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-addon-configuration" }, input)
 end
 
---- Describes the versions for an add-on
---- @param input table|nil The input table for the describe_addon_versions command
+--- AWS eks describe-addon-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_addon_versions(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-addon-versions" }, input)
 end
 
---- Describes an Amazon EKS cluster
---- @param input table|nil The input table for the describe_cluster command
+--- AWS eks describe-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-cluster" }, input)
 end
 
---- Lists available Kubernetes versions for Amazon EKS clusters
---- @param input table|nil The input table for the describe_cluster_versions command
+--- AWS eks describe-cluster-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_cluster_versions(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-cluster-versions" }, input)
 end
 
---- Returns descriptive information about a subscription
---- @param input table|nil The input table for the describe_eks_anywhere_subscription command
+--- AWS eks describe-eks-anywhere-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_eks_anywhere_subscription(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-eks-anywhere-subscription" }, input)
 end
 
---- Describes an Fargate profile
---- @param input table|nil The input table for the describe_fargate_profile command
+--- AWS eks describe-fargate-profile operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fargate_profile(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-fargate-profile" }, input)
 end
 
---- Describes an identity provider configuration
---- @param input table|nil The input table for the describe_identity_provider_config command
+--- AWS eks describe-identity-provider-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_identity_provider_config(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-identity-provider-config" }, input)
 end
 
---- Returns details about an insight that you specify using its ID
---- @param input table|nil The input table for the describe_insight command
+--- AWS eks describe-insight operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_insight(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-insight" }, input)
 end
 
---- Describes a managed node group
---- @param input table|nil The input table for the describe_nodegroup command
+--- AWS eks describe-nodegroup operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_nodegroup(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-nodegroup" }, input)
 end
 
---- Returns descriptive information about an EKS Pod Identity association
---- @param input table|nil The input table for the describe_pod_identity_association command
+--- AWS eks describe-pod-identity-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_pod_identity_association(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-pod-identity-association" }, input)
 end
 
---- Describes an update to an Amazon EKS resource
---- @param input table|nil The input table for the describe_update command
+--- AWS eks describe-update operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_update(input)
 	return common.execute_aws_command_with_input({ "eks", "describe-update" }, input)
 end
 
---- Disassociates an access policy from an access entry
---- @param input table|nil The input table for the disassociate_access_policy command
+--- AWS eks disassociate-access-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_access_policy(input)
 	return common.execute_aws_command_with_input({ "eks", "disassociate-access-policy" }, input)
 end
 
---- Disassociates an identity provider configuration from a cluster
---- @param input table|nil The input table for the disassociate_identity_provider_config command
+--- AWS eks disassociate-identity-provider-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_identity_provider_config(input)
 	return common.execute_aws_command_with_input({ "eks", "disassociate-identity-provider-config" }, input)
 end
 
---- Lists the access entries for your cluster
---- @param input table|nil The input table for the list_access_entries command
+--- AWS eks help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "eks", "help" }, input)
+end
+
+--- AWS eks list-access-entries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_entries(input)
 	return common.execute_aws_command_with_input({ "eks", "list-access-entries" }, input)
 end
 
---- Lists the available access policies
---- @param input table|nil The input table for the list_access_policies command
+--- AWS eks list-access-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_access_policies(input)
 	return common.execute_aws_command_with_input({ "eks", "list-access-policies" }, input)
 end
 
---- Lists the installed add-ons
---- @param input table|nil The input table for the list_addons command
+--- AWS eks list-addons operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_addons(input)
 	return common.execute_aws_command_with_input({ "eks", "list-addons" }, input)
 end
 
---- Lists the access policies associated with an access entry
---- @param input table|nil The input table for the list_associated_access_policies command
+--- AWS eks list-associated-access-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_associated_access_policies(input)
 	return common.execute_aws_command_with_input({ "eks", "list-associated-access-policies" }, input)
 end
 
---- Lists the Amazon EKS clusters in your Amazon Web Services account in the specified Amazon Web Services Region
---- @param input table|nil The input table for the list_clusters command
+--- AWS eks list-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_clusters(input)
 	return common.execute_aws_command_with_input({ "eks", "list-clusters" }, input)
 end
 
---- Displays the full description of the subscription
---- @param input table|nil The input table for the list_eks_anywhere_subscriptions command
+--- AWS eks list-eks-anywhere-subscriptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_eks_anywhere_subscriptions(input)
 	return common.execute_aws_command_with_input({ "eks", "list-eks-anywhere-subscriptions" }, input)
 end
 
---- Lists the Fargate profiles associated with the specified cluster in your Amazon Web Services account in the specified Amazon Web Services Region
---- @param input table|nil The input table for the list_fargate_profiles command
+--- AWS eks list-fargate-profiles operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fargate_profiles(input)
 	return common.execute_aws_command_with_input({ "eks", "list-fargate-profiles" }, input)
 end
 
---- Lists the identity provider configurations for your cluster
---- @param input table|nil The input table for the list_identity_provider_configs command
+--- AWS eks list-identity-provider-configs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_identity_provider_configs(input)
 	return common.execute_aws_command_with_input({ "eks", "list-identity-provider-configs" }, input)
 end
 
---- Returns a list of all insights checked for against the specified cluster
---- @param input table|nil The input table for the list_insights command
+--- AWS eks list-insights operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_insights(input)
 	return common.execute_aws_command_with_input({ "eks", "list-insights" }, input)
 end
 
---- Lists the managed node groups associated with the specified cluster in your Amazon Web Services account in the specified Amazon Web Services Region
---- @param input table|nil The input table for the list_nodegroups command
+--- AWS eks list-nodegroups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_nodegroups(input)
 	return common.execute_aws_command_with_input({ "eks", "list-nodegroups" }, input)
 end
 
---- List the EKS Pod Identity associations in a cluster
---- @param input table|nil The input table for the list_pod_identity_associations command
+--- AWS eks list-pod-identity-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pod_identity_associations(input)
 	return common.execute_aws_command_with_input({ "eks", "list-pod-identity-associations" }, input)
 end
 
---- List the tags for an Amazon EKS resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS eks list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "eks", "list-tags-for-resource" }, input)
 end
 
---- Lists the updates associated with an Amazon EKS resource in your Amazon Web Services account, in the specified Amazon Web Services Region
---- @param input table|nil The input table for the list_updates command
+--- AWS eks list-updates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_updates(input)
 	return common.execute_aws_command_with_input({ "eks", "list-updates" }, input)
 end
 
---- Connects a Kubernetes cluster to the Amazon EKS control plane
---- @param input table|nil The input table for the register_cluster command
+--- AWS eks register-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_cluster(input)
 	return common.execute_aws_command_with_input({ "eks", "register-cluster" }, input)
 end
 
---- Associates the specified tags to an Amazon EKS resource with the specified resourceArn
---- @param input table|nil The input table for the tag_resource command
+--- AWS eks tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "eks", "tag-resource" }, input)
 end
 
---- Deletes specified tags from an Amazon EKS resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS eks untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "eks", "untag-resource" }, input)
 end
 
---- Updates an access entry
---- @param input table|nil The input table for the update_access_entry command
+--- AWS eks update-access-entry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_access_entry(input)
 	return common.execute_aws_command_with_input({ "eks", "update-access-entry" }, input)
 end
 
---- Updates an Amazon EKS add-on
---- @param input table|nil The input table for the update_addon command
+--- AWS eks update-addon operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_addon(input)
 	return common.execute_aws_command_with_input({ "eks", "update-addon" }, input)
 end
 
---- Updates an Amazon EKS cluster configuration
---- @param input table|nil The input table for the update_cluster_config command
+--- AWS eks update-cluster-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster_config(input)
 	return common.execute_aws_command_with_input({ "eks", "update-cluster-config" }, input)
 end
 
---- Updates an Amazon EKS cluster to the specified Kubernetes version
---- @param input table|nil The input table for the update_cluster_version command
+--- AWS eks update-cluster-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster_version(input)
 	return common.execute_aws_command_with_input({ "eks", "update-cluster-version" }, input)
 end
 
---- Update an EKS Anywhere Subscription
---- @param input table|nil The input table for the update_eks_anywhere_subscription command
+--- AWS eks update-eks-anywhere-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_eks_anywhere_subscription(input)
 	return common.execute_aws_command_with_input({ "eks", "update-eks-anywhere-subscription" }, input)
 end
 
---- Updates an Amazon EKS managed node group configuration
---- @param input table|nil The input table for the update_nodegroup_config command
+--- AWS eks update-nodegroup-config operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_nodegroup_config(input)
 	return common.execute_aws_command_with_input({ "eks", "update-nodegroup-config" }, input)
 end
 
---- Updates the Kubernetes version or AMI version of an Amazon EKS managed node group
---- @param input table|nil The input table for the update_nodegroup_version command
+--- AWS eks update-nodegroup-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_nodegroup_version(input)
 	return common.execute_aws_command_with_input({ "eks", "update-nodegroup-version" }, input)
 end
 
---- Updates a EKS Pod Identity association
---- @param input table|nil The input table for the update_pod_identity_association command
+--- AWS eks update-pod-identity-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pod_identity_association(input)
 	return common.execute_aws_command_with_input({ "eks", "update-pod-identity-association" }, input)

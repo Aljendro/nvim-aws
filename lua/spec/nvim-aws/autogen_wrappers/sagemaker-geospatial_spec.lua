@@ -35,13 +35,13 @@ describe("AWS sagemaker-geospatial service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_tile", function()
-		local result = service.get_tile()
+	it("should generate a cli skeleton with get_vector_enrichment_job", function()
+		local result = service.get_vector_enrichment_job()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_vector_enrichment_job", function()
-		local result = service.get_vector_enrichment_job()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -70,11 +70,6 @@ describe("AWS glacier service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_job_output", function()
-		local result = service.get_job_output()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_vault_access_policy", function()
 		local result = service.get_vault_access_policy()
 		assert.is_true(result.success)
@@ -87,6 +82,11 @@ describe("AWS glacier service testing", function()
 
 	it("should generate a cli skeleton with get_vault_notifications", function()
 		local result = service.get_vault_notifications()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

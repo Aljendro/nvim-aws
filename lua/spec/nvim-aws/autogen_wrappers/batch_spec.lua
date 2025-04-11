@@ -90,6 +90,11 @@ describe("AWS batch service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_consumable_resources", function()
 		local result = service.list_consumable_resources()
 		assert.is_true(result.success)

@@ -6,477 +6,484 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ATHENA service functions
 local M = {}
 
---- Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID strings
---- @param input table|nil The input table for the batch_get_named_query command
+--- AWS athena batch-get-named-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_named_query(input)
 	return common.execute_aws_command_with_input({ "athena", "batch-get-named-query" }, input)
 end
 
---- Returns the details of a single prepared statement or a list of up to 256 prepared statements for the array of prepared statement names that you provide
---- @param input table|nil The input table for the batch_get_prepared_statement command
+--- AWS athena batch-get-prepared-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_prepared_statement(input)
 	return common.execute_aws_command_with_input({ "athena", "batch-get-prepared-statement" }, input)
 end
 
---- Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of query execution ID strings
---- @param input table|nil The input table for the batch_get_query_execution command
+--- AWS athena batch-get-query-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_query_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "batch-get-query-execution" }, input)
 end
 
---- Cancels the capacity reservation with the specified name
---- @param input table|nil The input table for the cancel_capacity_reservation command
+--- AWS athena cancel-capacity-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "athena", "cancel-capacity-reservation" }, input)
 end
 
---- Creates a capacity reservation with the specified name and number of requested data processing units
---- @param input table|nil The input table for the create_capacity_reservation command
+--- AWS athena create-capacity-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "athena", "create-capacity-reservation" }, input)
 end
 
---- Creates (registers) a data catalog with the specified name and properties
---- @param input table|nil The input table for the create_data_catalog command
+--- AWS athena create-data-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_catalog(input)
 	return common.execute_aws_command_with_input({ "athena", "create-data-catalog" }, input)
 end
 
---- Creates a named query in the specified workgroup
---- @param input table|nil The input table for the create_named_query command
+--- AWS athena create-named-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_named_query(input)
 	return common.execute_aws_command_with_input({ "athena", "create-named-query" }, input)
 end
 
---- Creates an empty ipynb file in the specified Apache Spark enabled workgroup
---- @param input table|nil The input table for the create_notebook command
+--- AWS athena create-notebook operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_notebook(input)
 	return common.execute_aws_command_with_input({ "athena", "create-notebook" }, input)
 end
 
---- Creates a prepared statement for use with SQL queries in Athena
---- @param input table|nil The input table for the create_prepared_statement command
+--- AWS athena create-prepared-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_prepared_statement(input)
 	return common.execute_aws_command_with_input({ "athena", "create-prepared-statement" }, input)
 end
 
---- Gets an authentication token and the URL at which the notebook can be accessed
---- @param input table|nil The input table for the create_presigned_notebook_url command
+--- AWS athena create-presigned-notebook-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_presigned_notebook_url(input)
 	return common.execute_aws_command_with_input({ "athena", "create-presigned-notebook-url" }, input)
 end
 
---- Creates a workgroup with the specified name
---- @param input table|nil The input table for the create_work_group command
+--- AWS athena create-work-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_work_group(input)
 	return common.execute_aws_command_with_input({ "athena", "create-work-group" }, input)
 end
 
---- Deletes a cancelled capacity reservation
---- @param input table|nil The input table for the delete_capacity_reservation command
+--- AWS athena delete-capacity-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-capacity-reservation" }, input)
 end
 
---- Deletes a data catalog
---- @param input table|nil The input table for the delete_data_catalog command
+--- AWS athena delete-data-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_catalog(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-data-catalog" }, input)
 end
 
---- Deletes the named query if you have access to the workgroup in which the query was saved
---- @param input table|nil The input table for the delete_named_query command
+--- AWS athena delete-named-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_named_query(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-named-query" }, input)
 end
 
---- Deletes the specified notebook
---- @param input table|nil The input table for the delete_notebook command
+--- AWS athena delete-notebook operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_notebook(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-notebook" }, input)
 end
 
---- Deletes the prepared statement with the specified name from the specified workgroup
---- @param input table|nil The input table for the delete_prepared_statement command
+--- AWS athena delete-prepared-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_prepared_statement(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-prepared-statement" }, input)
 end
 
---- Deletes the workgroup with the specified name
---- @param input table|nil The input table for the delete_work_group command
+--- AWS athena delete-work-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_work_group(input)
 	return common.execute_aws_command_with_input({ "athena", "delete-work-group" }, input)
 end
 
---- Exports the specified notebook and its metadata
---- @param input table|nil The input table for the export_notebook command
+--- AWS athena export-notebook operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_notebook(input)
 	return common.execute_aws_command_with_input({ "athena", "export-notebook" }, input)
 end
 
---- Describes a previously submitted calculation execution
---- @param input table|nil The input table for the get_calculation_execution command
+--- AWS athena get-calculation-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_calculation_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "get-calculation-execution" }, input)
 end
 
---- Retrieves the unencrypted code that was executed for the calculation
---- @param input table|nil The input table for the get_calculation_execution_code command
+--- AWS athena get-calculation-execution-code operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_calculation_execution_code(input)
 	return common.execute_aws_command_with_input({ "athena", "get-calculation-execution-code" }, input)
 end
 
---- Gets the status of a current calculation
---- @param input table|nil The input table for the get_calculation_execution_status command
+--- AWS athena get-calculation-execution-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_calculation_execution_status(input)
 	return common.execute_aws_command_with_input({ "athena", "get-calculation-execution-status" }, input)
 end
 
---- Gets the capacity assignment configuration for a capacity reservation, if one exists
---- @param input table|nil The input table for the get_capacity_assignment_configuration command
+--- AWS athena get-capacity-assignment-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_capacity_assignment_configuration(input)
 	return common.execute_aws_command_with_input({ "athena", "get-capacity-assignment-configuration" }, input)
 end
 
---- Returns information about the capacity reservation with the specified name
---- @param input table|nil The input table for the get_capacity_reservation command
+--- AWS athena get-capacity-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "athena", "get-capacity-reservation" }, input)
 end
 
---- Returns the specified data catalog
---- @param input table|nil The input table for the get_data_catalog command
+--- AWS athena get-data-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_catalog(input)
 	return common.execute_aws_command_with_input({ "athena", "get-data-catalog" }, input)
 end
 
---- Returns a database object for the specified database and data catalog
---- @param input table|nil The input table for the get_database command
+--- AWS athena get-database operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_database(input)
 	return common.execute_aws_command_with_input({ "athena", "get-database" }, input)
 end
 
---- Returns information about a single query
---- @param input table|nil The input table for the get_named_query command
+--- AWS athena get-named-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_named_query(input)
 	return common.execute_aws_command_with_input({ "athena", "get-named-query" }, input)
 end
 
---- Retrieves notebook metadata for the specified notebook ID
---- @param input table|nil The input table for the get_notebook_metadata command
+--- AWS athena get-notebook-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_notebook_metadata(input)
 	return common.execute_aws_command_with_input({ "athena", "get-notebook-metadata" }, input)
 end
 
---- Retrieves the prepared statement with the specified name from the specified workgroup
---- @param input table|nil The input table for the get_prepared_statement command
+--- AWS athena get-prepared-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_prepared_statement(input)
 	return common.execute_aws_command_with_input({ "athena", "get-prepared-statement" }, input)
 end
 
---- Returns information about a single execution of a query if you have access to the workgroup in which the query ran
---- @param input table|nil The input table for the get_query_execution command
+--- AWS athena get-query-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "get-query-execution" }, input)
 end
 
---- Streams the results of a single query execution specified by QueryExecutionId from the Athena query results location in Amazon S3
---- @param input table|nil The input table for the get_query_results command
+--- AWS athena get-query-results operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_results(input)
 	return common.execute_aws_command_with_input({ "athena", "get-query-results" }, input)
 end
 
---- Returns query execution runtime statistics related to a single execution of a query if you have access to the workgroup in which the query ran
---- @param input table|nil The input table for the get_query_runtime_statistics command
+--- AWS athena get-query-runtime-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_query_runtime_statistics(input)
 	return common.execute_aws_command_with_input({ "athena", "get-query-runtime-statistics" }, input)
 end
 
---- Gets the full details of a previously created session, including the session status and configuration
---- @param input table|nil The input table for the get_session command
+--- AWS athena get-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_session(input)
 	return common.execute_aws_command_with_input({ "athena", "get-session" }, input)
 end
 
---- Gets the current status of a session
---- @param input table|nil The input table for the get_session_status command
+--- AWS athena get-session-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_session_status(input)
 	return common.execute_aws_command_with_input({ "athena", "get-session-status" }, input)
 end
 
---- Returns table metadata for the specified catalog, database, and table
---- @param input table|nil The input table for the get_table_metadata command
+--- AWS athena get-table-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_table_metadata(input)
 	return common.execute_aws_command_with_input({ "athena", "get-table-metadata" }, input)
 end
 
---- Returns information about the workgroup with the specified name
---- @param input table|nil The input table for the get_work_group command
+--- AWS athena get-work-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_work_group(input)
 	return common.execute_aws_command_with_input({ "athena", "get-work-group" }, input)
 end
 
---- Imports a single ipynb file to a Spark enabled workgroup
---- @param input table|nil The input table for the import_notebook command
+--- AWS athena help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "athena", "help" }, input)
+end
+
+--- AWS athena import-notebook operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_notebook(input)
 	return common.execute_aws_command_with_input({ "athena", "import-notebook" }, input)
 end
 
---- Returns the supported DPU sizes for the supported application runtimes (for example, Athena notebook version 1)
---- @param input table|nil The input table for the list_application_dpu_sizes command
+--- AWS athena list-application-dpu-sizes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_application_dpu_sizes(input)
 	return common.execute_aws_command_with_input({ "athena", "list-application-dpu-sizes" }, input)
 end
 
---- Lists the calculations that have been submitted to a session in descending order
---- @param input table|nil The input table for the list_calculation_executions command
+--- AWS athena list-calculation-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_calculation_executions(input)
 	return common.execute_aws_command_with_input({ "athena", "list-calculation-executions" }, input)
 end
 
---- Lists the capacity reservations for the current account
---- @param input table|nil The input table for the list_capacity_reservations command
+--- AWS athena list-capacity-reservations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_capacity_reservations(input)
 	return common.execute_aws_command_with_input({ "athena", "list-capacity-reservations" }, input)
 end
 
---- Lists the data catalogs in the current Amazon Web Services account
---- @param input table|nil The input table for the list_data_catalogs command
+--- AWS athena list-data-catalogs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_catalogs(input)
 	return common.execute_aws_command_with_input({ "athena", "list-data-catalogs" }, input)
 end
 
---- Lists the databases in the specified data catalog
---- @param input table|nil The input table for the list_databases command
+--- AWS athena list-databases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_databases(input)
 	return common.execute_aws_command_with_input({ "athena", "list-databases" }, input)
 end
 
---- Returns a list of engine versions that are available to choose from, including the Auto option
---- @param input table|nil The input table for the list_engine_versions command
+--- AWS athena list-engine-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_engine_versions(input)
 	return common.execute_aws_command_with_input({ "athena", "list-engine-versions" }, input)
 end
 
---- Lists, in descending order, the executors that joined a session
---- @param input table|nil The input table for the list_executors command
+--- AWS athena list-executors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_executors(input)
 	return common.execute_aws_command_with_input({ "athena", "list-executors" }, input)
 end
 
---- Provides a list of available query IDs only for queries saved in the specified workgroup
---- @param input table|nil The input table for the list_named_queries command
+--- AWS athena list-named-queries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_named_queries(input)
 	return common.execute_aws_command_with_input({ "athena", "list-named-queries" }, input)
 end
 
---- Displays the notebook files for the specified workgroup in paginated format
---- @param input table|nil The input table for the list_notebook_metadata command
+--- AWS athena list-notebook-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notebook_metadata(input)
 	return common.execute_aws_command_with_input({ "athena", "list-notebook-metadata" }, input)
 end
 
---- Lists, in descending order, the sessions that have been created in a notebook that are in an active state like CREATING, CREATED, IDLE or BUSY
---- @param input table|nil The input table for the list_notebook_sessions command
+--- AWS athena list-notebook-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_notebook_sessions(input)
 	return common.execute_aws_command_with_input({ "athena", "list-notebook-sessions" }, input)
 end
 
---- Lists the prepared statements in the specified workgroup
---- @param input table|nil The input table for the list_prepared_statements command
+--- AWS athena list-prepared-statements operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_prepared_statements(input)
 	return common.execute_aws_command_with_input({ "athena", "list-prepared-statements" }, input)
 end
 
---- Provides a list of available query execution IDs for the queries in the specified workgroup
---- @param input table|nil The input table for the list_query_executions command
+--- AWS athena list-query-executions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_query_executions(input)
 	return common.execute_aws_command_with_input({ "athena", "list-query-executions" }, input)
 end
 
---- Lists the sessions in a workgroup that are in an active state like CREATING, CREATED, IDLE, or BUSY
---- @param input table|nil The input table for the list_sessions command
+--- AWS athena list-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_sessions(input)
 	return common.execute_aws_command_with_input({ "athena", "list-sessions" }, input)
 end
 
---- Lists the metadata for the tables in the specified data catalog database
---- @param input table|nil The input table for the list_table_metadata command
+--- AWS athena list-table-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_table_metadata(input)
 	return common.execute_aws_command_with_input({ "athena", "list-table-metadata" }, input)
 end
 
---- Lists the tags associated with an Athena resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS athena list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "athena", "list-tags-for-resource" }, input)
 end
 
---- Lists available workgroups for the account
---- @param input table|nil The input table for the list_work_groups command
+--- AWS athena list-work-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_work_groups(input)
 	return common.execute_aws_command_with_input({ "athena", "list-work-groups" }, input)
 end
 
---- Puts a new capacity assignment configuration for a specified capacity reservation
---- @param input table|nil The input table for the put_capacity_assignment_configuration command
+--- AWS athena put-capacity-assignment-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_capacity_assignment_configuration(input)
 	return common.execute_aws_command_with_input({ "athena", "put-capacity-assignment-configuration" }, input)
 end
 
---- Submits calculations for execution within a session
---- @param input table|nil The input table for the start_calculation_execution command
+--- AWS athena start-calculation-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_calculation_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "start-calculation-execution" }, input)
 end
 
---- Runs the SQL query statements contained in the Query
---- @param input table|nil The input table for the start_query_execution command
+--- AWS athena start-query-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_query_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "start-query-execution" }, input)
 end
 
---- Creates a session for running calculations within a workgroup
---- @param input table|nil The input table for the start_session command
+--- AWS athena start-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_session(input)
 	return common.execute_aws_command_with_input({ "athena", "start-session" }, input)
 end
 
---- Requests the cancellation of a calculation
---- @param input table|nil The input table for the stop_calculation_execution command
+--- AWS athena stop-calculation-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_calculation_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "stop-calculation-execution" }, input)
 end
 
---- Stops a query execution
---- @param input table|nil The input table for the stop_query_execution command
+--- AWS athena stop-query-execution operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_query_execution(input)
 	return common.execute_aws_command_with_input({ "athena", "stop-query-execution" }, input)
 end
 
---- Adds one or more tags to an Athena resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS athena tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "athena", "tag-resource" }, input)
 end
 
---- Terminates an active session
---- @param input table|nil The input table for the terminate_session command
+--- AWS athena terminate-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_session(input)
 	return common.execute_aws_command_with_input({ "athena", "terminate-session" }, input)
 end
 
---- Removes one or more tags from an Athena resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS athena untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "athena", "untag-resource" }, input)
 end
 
---- Updates the number of requested data processing units for the capacity reservation with the specified name
---- @param input table|nil The input table for the update_capacity_reservation command
+--- AWS athena update-capacity-reservation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_capacity_reservation(input)
 	return common.execute_aws_command_with_input({ "athena", "update-capacity-reservation" }, input)
 end
 
---- Updates the data catalog that has the specified name
---- @param input table|nil The input table for the update_data_catalog command
+--- AWS athena update-data-catalog operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_catalog(input)
 	return common.execute_aws_command_with_input({ "athena", "update-data-catalog" }, input)
 end
 
---- Updates a NamedQuery object
---- @param input table|nil The input table for the update_named_query command
+--- AWS athena update-named-query operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_named_query(input)
 	return common.execute_aws_command_with_input({ "athena", "update-named-query" }, input)
 end
 
---- Updates the contents of a Spark notebook
---- @param input table|nil The input table for the update_notebook command
+--- AWS athena update-notebook operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_notebook(input)
 	return common.execute_aws_command_with_input({ "athena", "update-notebook" }, input)
 end
 
---- Updates the metadata for a notebook
---- @param input table|nil The input table for the update_notebook_metadata command
+--- AWS athena update-notebook-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_notebook_metadata(input)
 	return common.execute_aws_command_with_input({ "athena", "update-notebook-metadata" }, input)
 end
 
---- Updates a prepared statement
---- @param input table|nil The input table for the update_prepared_statement command
+--- AWS athena update-prepared-statement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_prepared_statement(input)
 	return common.execute_aws_command_with_input({ "athena", "update-prepared-statement" }, input)
 end
 
---- Updates the workgroup with the specified name
---- @param input table|nil The input table for the update_work_group command
+--- AWS athena update-work-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_work_group(input)
 	return common.execute_aws_command_with_input({ "athena", "update-work-group" }, input)

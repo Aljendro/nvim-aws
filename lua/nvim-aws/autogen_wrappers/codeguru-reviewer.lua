@@ -6,99 +6,106 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CODEGURU-REVIEWER service functions
 local M = {}
 
---- Use to associate an Amazon Web Services CodeCommit repository or a repository managed by Amazon Web Services CodeStar Connections with Amazon CodeGuru Reviewer
---- @param input table|nil The input table for the associate_repository command
+--- AWS codeguru-reviewer associate-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_repository(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "associate-repository" }, input)
 end
 
---- Use to create a code review with a CodeReviewType of RepositoryAnalysis
---- @param input table|nil The input table for the create_code_review command
+--- AWS codeguru-reviewer create-code-review operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_code_review(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "create-code-review" }, input)
 end
 
---- Returns the metadata associated with the code review along with its status
---- @param input table|nil The input table for the describe_code_review command
+--- AWS codeguru-reviewer describe-code-review operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_code_review(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "describe-code-review" }, input)
 end
 
---- Describes the customer feedback for a CodeGuru Reviewer recommendation
---- @param input table|nil The input table for the describe_recommendation_feedback command
+--- AWS codeguru-reviewer describe-recommendation-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_recommendation_feedback(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "describe-recommendation-feedback" }, input)
 end
 
---- Returns a RepositoryAssociation object that contains information about the requested repository association
---- @param input table|nil The input table for the describe_repository_association command
+--- AWS codeguru-reviewer describe-repository-association operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_repository_association(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "describe-repository-association" }, input)
 end
 
---- Removes the association between Amazon CodeGuru Reviewer and a repository
---- @param input table|nil The input table for the disassociate_repository command
+--- AWS codeguru-reviewer disassociate-repository operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_repository(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "disassociate-repository" }, input)
 end
 
---- Lists all the code reviews that the customer has created in the past 90 days
---- @param input table|nil The input table for the list_code_reviews command
+--- AWS codeguru-reviewer help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "codeguru-reviewer", "help" }, input)
+end
+
+--- AWS codeguru-reviewer list-code-reviews operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_code_reviews(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "list-code-reviews" }, input)
 end
 
---- Returns a list of RecommendationFeedbackSummary objects that contain customer recommendation feedback for all CodeGuru Reviewer users
---- @param input table|nil The input table for the list_recommendation_feedback command
+--- AWS codeguru-reviewer list-recommendation-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendation_feedback(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "list-recommendation-feedback" }, input)
 end
 
---- Returns the list of all recommendations for a completed code review
---- @param input table|nil The input table for the list_recommendations command
+--- AWS codeguru-reviewer list-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendations(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "list-recommendations" }, input)
 end
 
---- Returns a list of RepositoryAssociationSummary objects that contain summary information about a repository association
---- @param input table|nil The input table for the list_repository_associations command
+--- AWS codeguru-reviewer list-repository-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_repository_associations(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "list-repository-associations" }, input)
 end
 
---- Returns the list of tags associated with an associated repository resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS codeguru-reviewer list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "list-tags-for-resource" }, input)
 end
 
---- Stores customer feedback for a CodeGuru Reviewer recommendation
---- @param input table|nil The input table for the put_recommendation_feedback command
+--- AWS codeguru-reviewer put-recommendation-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_recommendation_feedback(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "put-recommendation-feedback" }, input)
 end
 
---- Adds one or more tags to an associated repository
---- @param input table|nil The input table for the tag_resource command
+--- AWS codeguru-reviewer tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "tag-resource" }, input)
 end
 
---- Removes a tag from an associated repository
---- @param input table|nil The input table for the untag_resource command
+--- AWS codeguru-reviewer untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "codeguru-reviewer", "untag-resource" }, input)

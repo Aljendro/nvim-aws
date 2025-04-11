@@ -155,6 +155,11 @@ describe("AWS mgn service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with initialize_service", function()
 		local result = service.initialize_service()
 		assert.is_true(result.success)
@@ -255,6 +260,11 @@ describe("AWS mgn service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with start_cutover", function()
+		local result = service.start_cutover()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with start_export", function()
 		local result = service.start_export()
 		assert.is_true(result.success)
@@ -270,6 +280,11 @@ describe("AWS mgn service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with start_test", function()
+		local result = service.start_test()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with stop_replication", function()
 		local result = service.stop_replication()
 		assert.is_true(result.success)
@@ -277,6 +292,11 @@ describe("AWS mgn service testing", function()
 
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with terminate_target_instances", function()
+		local result = service.terminate_target_instances()
 		assert.is_true(result.success)
 	end)
 

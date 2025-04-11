@@ -6,172 +6,284 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS WISDOM service functions
 local M = {}
 
---- Creates an Amazon Connect Wisdom assistant
---- @param input table|nil The input table for the create_assistant command
+--- AWS wisdom create-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_assistant(input)
 	return common.execute_aws_command_with_input({ "wisdom", "create-assistant" }, input)
 end
 
---- Creates a knowledge base
---- @param input table|nil The input table for the create_knowledge_base command
+--- AWS wisdom create-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_assistant_association(input)
+	return common.execute_aws_command_with_input({ "wisdom", "create-assistant-association" }, input)
+end
+
+--- AWS wisdom create-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_content(input)
+	return common.execute_aws_command_with_input({ "wisdom", "create-content" }, input)
+end
+
+--- AWS wisdom create-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "wisdom", "create-knowledge-base" }, input)
 end
 
---- Deletes an assistant
---- @param input table|nil The input table for the delete_assistant command
+--- AWS wisdom create-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_quick_response(input)
+	return common.execute_aws_command_with_input({ "wisdom", "create-quick-response" }, input)
+end
+
+--- AWS wisdom create-session operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_session(input)
+	return common.execute_aws_command_with_input({ "wisdom", "create-session" }, input)
+end
+
+--- AWS wisdom delete-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assistant(input)
 	return common.execute_aws_command_with_input({ "wisdom", "delete-assistant" }, input)
 end
 
---- Deletes the quick response import job
---- @param input table|nil The input table for the delete_import_job command
+--- AWS wisdom delete-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_assistant_association(input)
+	return common.execute_aws_command_with_input({ "wisdom", "delete-assistant-association" }, input)
+end
+
+--- AWS wisdom delete-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_content(input)
+	return common.execute_aws_command_with_input({ "wisdom", "delete-content" }, input)
+end
+
+--- AWS wisdom delete-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_import_job(input)
 	return common.execute_aws_command_with_input({ "wisdom", "delete-import-job" }, input)
 end
 
---- Deletes the knowledge base
---- @param input table|nil The input table for the delete_knowledge_base command
+--- AWS wisdom delete-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "wisdom", "delete-knowledge-base" }, input)
 end
 
---- Retrieves information about an assistant
---- @param input table|nil The input table for the get_assistant command
+--- AWS wisdom delete-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_quick_response(input)
+	return common.execute_aws_command_with_input({ "wisdom", "delete-quick-response" }, input)
+end
+
+--- AWS wisdom get-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_assistant(input)
 	return common.execute_aws_command_with_input({ "wisdom", "get-assistant" }, input)
 end
 
---- Retrieves the started import job
---- @param input table|nil The input table for the get_import_job command
+--- AWS wisdom get-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_assistant_association(input)
+	return common.execute_aws_command_with_input({ "wisdom", "get-assistant-association" }, input)
+end
+
+--- AWS wisdom get-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_content(input)
+	return common.execute_aws_command_with_input({ "wisdom", "get-content" }, input)
+end
+
+--- AWS wisdom get-content-summary operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_content_summary(input)
+	return common.execute_aws_command_with_input({ "wisdom", "get-content-summary" }, input)
+end
+
+--- AWS wisdom get-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_import_job(input)
 	return common.execute_aws_command_with_input({ "wisdom", "get-import-job" }, input)
 end
 
---- Retrieves information about the knowledge base
---- @param input table|nil The input table for the get_knowledge_base command
+--- AWS wisdom get-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "wisdom", "get-knowledge-base" }, input)
 end
 
---- Retrieves recommendations for the specified session
---- @param input table|nil The input table for the get_recommendations command
+--- AWS wisdom get-quick-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_recommendations(input)
-	return common.execute_aws_command_with_input({ "wisdom", "get-recommendations" }, input)
+function M.get_quick_response(input)
+	return common.execute_aws_command_with_input({ "wisdom", "get-quick-response" }, input)
 end
 
---- Lists information about assistants
---- @param input table|nil The input table for the list_assistants command
+--- AWS wisdom get-session operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_session(input)
+	return common.execute_aws_command_with_input({ "wisdom", "get-session" }, input)
+end
+
+--- AWS wisdom help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "wisdom", "help" }, input)
+end
+
+--- AWS wisdom list-assistant-associations operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_assistant_associations(input)
+	return common.execute_aws_command_with_input({ "wisdom", "list-assistant-associations" }, input)
+end
+
+--- AWS wisdom list-assistants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assistants(input)
 	return common.execute_aws_command_with_input({ "wisdom", "list-assistants" }, input)
 end
 
---- Lists information about import jobs
---- @param input table|nil The input table for the list_import_jobs command
+--- AWS wisdom list-contents operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_contents(input)
+	return common.execute_aws_command_with_input({ "wisdom", "list-contents" }, input)
+end
+
+--- AWS wisdom list-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_import_jobs(input)
 	return common.execute_aws_command_with_input({ "wisdom", "list-import-jobs" }, input)
 end
 
---- Lists the knowledge bases
---- @param input table|nil The input table for the list_knowledge_bases command
+--- AWS wisdom list-knowledge-bases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "wisdom", "list-knowledge-bases" }, input)
 end
 
---- Lists the tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS wisdom list-quick-responses operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_quick_responses(input)
+	return common.execute_aws_command_with_input({ "wisdom", "list-quick-responses" }, input)
+end
+
+--- AWS wisdom list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "wisdom", "list-tags-for-resource" }, input)
 end
 
---- Removes the specified recommendations from the specified assistant's queue of newly available recommendations
---- @param input table|nil The input table for the notify_recommendations_received command
+--- AWS wisdom notify-recommendations-received operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_recommendations_received(input)
 	return common.execute_aws_command_with_input({ "wisdom", "notify-recommendations-received" }, input)
 end
 
---- Performs a manual search against the specified assistant
---- @param input table|nil The input table for the query_assistant command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.query_assistant(input)
-	return common.execute_aws_command_with_input({ "wisdom", "query-assistant" }, input)
-end
-
---- Removes a URI template from a knowledge base
---- @param input table|nil The input table for the remove_knowledge_base_template_uri command
+--- AWS wisdom remove-knowledge-base-template-uri operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_knowledge_base_template_uri(input)
 	return common.execute_aws_command_with_input({ "wisdom", "remove-knowledge-base-template-uri" }, input)
 end
 
---- Searches for content in a specified knowledge base
---- @param input table|nil The input table for the search_content command
+--- AWS wisdom search-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_content(input)
 	return common.execute_aws_command_with_input({ "wisdom", "search-content" }, input)
 end
 
---- Searches existing Wisdom quick responses in a Wisdom knowledge base
---- @param input table|nil The input table for the search_quick_responses command
+--- AWS wisdom search-quick-responses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_quick_responses(input)
 	return common.execute_aws_command_with_input({ "wisdom", "search-quick-responses" }, input)
 end
 
---- Searches for sessions
---- @param input table|nil The input table for the search_sessions command
+--- AWS wisdom search-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_sessions(input)
 	return common.execute_aws_command_with_input({ "wisdom", "search-sessions" }, input)
 end
 
---- Get a URL to upload content to a knowledge base
---- @param input table|nil The input table for the start_content_upload command
+--- AWS wisdom start-content-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_content_upload(input)
 	return common.execute_aws_command_with_input({ "wisdom", "start-content-upload" }, input)
 end
 
---- Start an asynchronous job to import Wisdom resources from an uploaded source file
---- @param input table|nil The input table for the start_import_job command
+--- AWS wisdom start-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_import_job(input)
 	return common.execute_aws_command_with_input({ "wisdom", "start-import-job" }, input)
 end
 
---- Adds the specified tags to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS wisdom tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "wisdom", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS wisdom untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "wisdom", "untag-resource" }, input)
 end
 
---- Updates the template URI of a knowledge base
---- @param input table|nil The input table for the update_knowledge_base_template_uri command
+--- AWS wisdom update-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_content(input)
+	return common.execute_aws_command_with_input({ "wisdom", "update-content" }, input)
+end
+
+--- AWS wisdom update-knowledge-base-template-uri operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_knowledge_base_template_uri(input)
 	return common.execute_aws_command_with_input({ "wisdom", "update-knowledge-base-template-uri" }, input)
+end
+
+--- AWS wisdom update-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_quick_response(input)
+	return common.execute_aws_command_with_input({ "wisdom", "update-quick-response" }, input)
 end
 
 return M

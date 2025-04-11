@@ -6,18 +6,25 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS EC2-INSTANCE-CONNECT service functions
 local M = {}
 
---- Pushes an SSH public key to the specified EC2 instance for use by the specified user
---- @param input table|nil The input table for the send_ssh_public_key command
+--- AWS ec2-instance-connect help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.send_ssh_public_key(input)
-	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-ssh-public-key" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ec2-instance-connect", "help" }, input)
 end
 
---- Pushes an SSH public key to the specified EC2 instance
---- @param input table|nil The input table for the send_serial_console_ssh_public_key command
+--- AWS ec2-instance-connect send-serial-console-ssh-public-key operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_serial_console_ssh_public_key(input)
 	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-serial-console-ssh-public-key" }, input)
+end
+
+--- AWS ec2-instance-connect send-ssh-public-key operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.send_ssh_public_key(input)
+	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-ssh-public-key" }, input)
 end
 
 return M

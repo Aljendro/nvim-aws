@@ -6,183 +6,183 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS COMPREHENDMEDICAL service functions
 local M = {}
 
---- Gets the properties associated with a medical entities detection job
---- @param input table|nil The input table for the describe_entities_detection_v2_job command
+--- AWS comprehendmedical describe-entities-detection-v2-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_entities_detection_v2_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "describe-entities-detection-v2-job" }, input)
 end
 
---- Gets the properties associated with an InferICD10CM job
---- @param input table|nil The input table for the describe_icd10_cm_inference_job command
+--- AWS comprehendmedical describe-icd10-cm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_icd10_cm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "describe-icd10-cm-inference-job" }, input)
 end
 
---- Gets the properties associated with a protected health information (PHI) detection job
---- @param input table|nil The input table for the describe_phi_detection_job command
+--- AWS comprehendmedical describe-phi-detection-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_phi_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "describe-phi-detection-job" }, input)
 end
 
---- Gets the properties associated with an InferRxNorm job
---- @param input table|nil The input table for the describe_rx_norm_inference_job command
+--- AWS comprehendmedical describe-rx-norm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_rx_norm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "describe-rx-norm-inference-job" }, input)
 end
 
---- Gets the properties associated with an InferSNOMEDCT job
---- @param input table|nil The input table for the describe_snomedct_inference_job command
+--- AWS comprehendmedical describe-snomedct-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_snomedct_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "describe-snomedct-inference-job" }, input)
 end
 
---- The DetectEntities operation is deprecated
---- @param input table|nil The input table for the detect_entities command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.detect_entities(input)
-	return common.execute_aws_command_with_input({ "comprehendmedical", "detect-entities" }, input)
-end
-
---- Inspects the clinical text for a variety of medical entities and returns specific information about them such as entity category, location, and confidence score on that information
---- @param input table|nil The input table for the detect_entities_v2 command
+--- AWS comprehendmedical detect-entities-v2 operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_entities_v2(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "detect-entities-v2" }, input)
 end
 
---- Inspects the clinical text for protected health information (PHI) entities and returns the entity category, location, and confidence score for each entity
---- @param input table|nil The input table for the detect_phi command
+--- AWS comprehendmedical detect-phi operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.detect_phi(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "detect-phi" }, input)
 end
 
---- InferICD10CM detects medical conditions as entities listed in a patient record and links those entities to normalized concept identifiers in the ICD-10-CM knowledge base from the Centers for Disease Control
---- @param input table|nil The input table for the infer_icd10_cm command
+--- AWS comprehendmedical help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "comprehendmedical", "help" }, input)
+end
+
+--- AWS comprehendmedical infer-icd10-cm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.infer_icd10_cm(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "infer-icd10-cm" }, input)
 end
 
---- InferRxNorm detects medications as entities listed in a patient record and links to the normalized concept identifiers in the RxNorm database from the National Library of Medicine
---- @param input table|nil The input table for the infer_rx_norm command
+--- AWS comprehendmedical infer-rx-norm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.infer_rx_norm(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "infer-rx-norm" }, input)
 end
 
---- InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized Nomenclature of Medicine, Clinical Terms (SNOMED-CT) ontology
---- @param input table|nil The input table for the infer_snomedct command
+--- AWS comprehendmedical infer-snomedct operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.infer_snomedct(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "infer-snomedct" }, input)
 end
 
---- Gets a list of medical entity detection jobs that you have submitted
---- @param input table|nil The input table for the list_entities_detection_v2_jobs command
+--- AWS comprehendmedical list-entities-detection-v2-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_entities_detection_v2_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "list-entities-detection-v2-jobs" }, input)
 end
 
---- Gets a list of InferICD10CM jobs that you have submitted
---- @param input table|nil The input table for the list_icd10_cm_inference_jobs command
+--- AWS comprehendmedical list-icd10-cm-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_icd10_cm_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "list-icd10-cm-inference-jobs" }, input)
 end
 
---- Gets a list of protected health information (PHI) detection jobs you have submitted
---- @param input table|nil The input table for the list_phi_detection_jobs command
+--- AWS comprehendmedical list-phi-detection-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_phi_detection_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "list-phi-detection-jobs" }, input)
 end
 
---- Gets a list of InferRxNorm jobs that you have submitted
---- @param input table|nil The input table for the list_rx_norm_inference_jobs command
+--- AWS comprehendmedical list-rx-norm-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rx_norm_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "list-rx-norm-inference-jobs" }, input)
 end
 
---- Gets a list of InferSNOMEDCT jobs a user has submitted
---- @param input table|nil The input table for the list_snomedct_inference_jobs command
+--- AWS comprehendmedical list-snomedct-inference-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_snomedct_inference_jobs(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "list-snomedct-inference-jobs" }, input)
 end
 
---- Starts an asynchronous medical entity detection job for a collection of documents
---- @param input table|nil The input table for the start_entities_detection_v2_job command
+--- AWS comprehendmedical start-entities-detection-v2-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_entities_detection_v2_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "start-entities-detection-v2-job" }, input)
 end
 
---- Starts an asynchronous job to detect medical conditions and link them to the ICD-10-CM ontology
---- @param input table|nil The input table for the start_icd10_cm_inference_job command
+--- AWS comprehendmedical start-icd10-cm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_icd10_cm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "start-icd10-cm-inference-job" }, input)
 end
 
---- Starts an asynchronous job to detect protected health information (PHI)
---- @param input table|nil The input table for the start_phi_detection_job command
+--- AWS comprehendmedical start-phi-detection-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_phi_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "start-phi-detection-job" }, input)
 end
 
---- Starts an asynchronous job to detect medication entities and link them to the RxNorm ontology
---- @param input table|nil The input table for the start_rx_norm_inference_job command
+--- AWS comprehendmedical start-rx-norm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_rx_norm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "start-rx-norm-inference-job" }, input)
 end
 
---- Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology
---- @param input table|nil The input table for the start_snomedct_inference_job command
+--- AWS comprehendmedical start-snomedct-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_snomedct_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "start-snomedct-inference-job" }, input)
 end
 
---- Stops a medical entities detection job in progress
---- @param input table|nil The input table for the stop_entities_detection_v2_job command
+--- AWS comprehendmedical stop-entities-detection-v2-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_entities_detection_v2_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "stop-entities-detection-v2-job" }, input)
 end
 
---- Stops an InferICD10CM inference job in progress
---- @param input table|nil The input table for the stop_icd10_cm_inference_job command
+--- AWS comprehendmedical stop-icd10-cm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_icd10_cm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "stop-icd10-cm-inference-job" }, input)
 end
 
---- Stops a protected health information (PHI) detection job in progress
---- @param input table|nil The input table for the stop_phi_detection_job command
+--- AWS comprehendmedical stop-phi-detection-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_phi_detection_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "stop-phi-detection-job" }, input)
 end
 
---- Stops an InferRxNorm inference job in progress
---- @param input table|nil The input table for the stop_rx_norm_inference_job command
+--- AWS comprehendmedical stop-rx-norm-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_rx_norm_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "stop-rx-norm-inference-job" }, input)
 end
 
---- Stops an InferSNOMEDCT inference job in progress
---- @param input table|nil The input table for the stop_snomedct_inference_job command
+--- AWS comprehendmedical stop-snomedct-inference-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_snomedct_inference_job(input)
 	return common.execute_aws_command_with_input({ "comprehendmedical", "stop-snomedct-inference-job" }, input)

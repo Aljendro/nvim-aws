@@ -6,36 +6,43 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PRICING service functions
 local M = {}
 
---- Returns the metadata for one service or a list of the metadata for all services
---- @param input table|nil The input table for the describe_services command
+--- AWS pricing describe-services operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_services(input)
 	return common.execute_aws_command_with_input({ "pricing", "describe-services" }, input)
 end
 
---- Returns a list of attribute values
---- @param input table|nil The input table for the get_attribute_values command
+--- AWS pricing get-attribute-values operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_attribute_values(input)
 	return common.execute_aws_command_with_input({ "pricing", "get-attribute-values" }, input)
 end
 
---- This feature is in preview release and is subject to change
---- @param input table|nil The input table for the get_price_list_file_url command
+--- AWS pricing get-price-list-file-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_price_list_file_url(input)
 	return common.execute_aws_command_with_input({ "pricing", "get-price-list-file-url" }, input)
 end
 
---- Returns a list of all products that match the filter criteria
---- @param input table|nil The input table for the get_products command
+--- AWS pricing get-products operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_products(input)
 	return common.execute_aws_command_with_input({ "pricing", "get-products" }, input)
 end
 
---- This feature is in preview release and is subject to change
---- @param input table|nil The input table for the list_price_lists command
+--- AWS pricing help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "pricing", "help" }, input)
+end
+
+--- AWS pricing list-price-lists operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_price_lists(input)
 	return common.execute_aws_command_with_input({ "pricing", "list-price-lists" }, input)

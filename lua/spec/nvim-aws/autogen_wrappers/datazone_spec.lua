@@ -180,6 +180,11 @@ describe("AWS datazone service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with delete_asset_type", function()
+		local result = service.delete_asset_type()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_connection", function()
 		local result = service.delete_connection()
 		assert.is_true(result.success)
@@ -222,6 +227,11 @@ describe("AWS datazone service testing", function()
 
 	it("should generate a cli skeleton with delete_environment_profile", function()
 		local result = service.delete_environment_profile()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_form_type", function()
+		local result = service.delete_form_type()
 		assert.is_true(result.success)
 	end)
 
@@ -295,6 +305,11 @@ describe("AWS datazone service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_asset_type", function()
+		local result = service.get_asset_type()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_connection", function()
 		local result = service.get_connection()
 		assert.is_true(result.success)
@@ -355,6 +370,11 @@ describe("AWS datazone service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_form_type", function()
+		local result = service.get_form_type()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_glossary", function()
 		local result = service.get_glossary()
 		assert.is_true(result.success)
@@ -377,11 +397,6 @@ describe("AWS datazone service testing", function()
 
 	it("should generate a cli skeleton with get_job_run", function()
 		local result = service.get_job_run()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_lineage_event", function()
-		local result = service.get_lineage_event()
 		assert.is_true(result.success)
 	end)
 
@@ -442,6 +457,11 @@ describe("AWS datazone service testing", function()
 
 	it("should generate a cli skeleton with get_user_profile", function()
 		local result = service.get_user_profile()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

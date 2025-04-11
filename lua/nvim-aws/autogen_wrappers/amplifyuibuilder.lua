@@ -6,176 +6,204 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS AMPLIFYUIBUILDER service functions
 local M = {}
 
---- Creates a new component for an Amplify app
---- @param input table|nil The input table for the create_component command
+--- AWS amplifyuibuilder create-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_component(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "create-component" }, input)
 end
 
---- Creates a new form for an Amplify app
---- @param input table|nil The input table for the create_form command
+--- AWS amplifyuibuilder create-form operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_form(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "create-form" }, input)
 end
 
---- Creates a theme to apply to the components in an Amplify app
---- @param input table|nil The input table for the create_theme command
+--- AWS amplifyuibuilder create-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_theme(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "create-theme" }, input)
 end
 
---- Deletes a component from an Amplify app
---- @param input table|nil The input table for the delete_component command
+--- AWS amplifyuibuilder delete-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_component(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "delete-component" }, input)
 end
 
---- Deletes a form from an Amplify app
---- @param input table|nil The input table for the delete_form command
+--- AWS amplifyuibuilder delete-form operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_form(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "delete-form" }, input)
 end
 
---- Deletes a theme from an Amplify app
---- @param input table|nil The input table for the delete_theme command
+--- AWS amplifyuibuilder delete-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_theme(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "delete-theme" }, input)
 end
 
---- This is for internal use
---- @param input table|nil The input table for the exchange_code_for_token command
+--- AWS amplifyuibuilder exchange-code-for-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.exchange_code_for_token(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "exchange-code-for-token" }, input)
 end
 
---- Returns an existing code generation job
---- @param input table|nil The input table for the get_codegen_job command
+--- AWS amplifyuibuilder export-components operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.export_components(input)
+	return common.execute_aws_command_with_input({ "amplifyuibuilder", "export-components" }, input)
+end
+
+--- AWS amplifyuibuilder export-forms operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.export_forms(input)
+	return common.execute_aws_command_with_input({ "amplifyuibuilder", "export-forms" }, input)
+end
+
+--- AWS amplifyuibuilder export-themes operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.export_themes(input)
+	return common.execute_aws_command_with_input({ "amplifyuibuilder", "export-themes" }, input)
+end
+
+--- AWS amplifyuibuilder get-codegen-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_codegen_job(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "get-codegen-job" }, input)
 end
 
---- Returns an existing component for an Amplify app
---- @param input table|nil The input table for the get_component command
+--- AWS amplifyuibuilder get-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_component(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "get-component" }, input)
 end
 
---- Returns an existing form for an Amplify app
---- @param input table|nil The input table for the get_form command
+--- AWS amplifyuibuilder get-form operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_form(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "get-form" }, input)
 end
 
---- Returns existing metadata for an Amplify app
---- @param input table|nil The input table for the get_metadata command
+--- AWS amplifyuibuilder get-metadata operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metadata(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "get-metadata" }, input)
 end
 
---- Returns an existing theme for an Amplify app
---- @param input table|nil The input table for the get_theme command
+--- AWS amplifyuibuilder get-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_theme(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "get-theme" }, input)
 end
 
---- Retrieves a list of code generation jobs for a specified Amplify app and backend environment
---- @param input table|nil The input table for the list_codegen_jobs command
+--- AWS amplifyuibuilder help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "amplifyuibuilder", "help" }, input)
+end
+
+--- AWS amplifyuibuilder list-codegen-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_codegen_jobs(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "list-codegen-jobs" }, input)
 end
 
---- Retrieves a list of components for a specified Amplify app and backend environment
---- @param input table|nil The input table for the list_components command
+--- AWS amplifyuibuilder list-components operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_components(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "list-components" }, input)
 end
 
---- Retrieves a list of forms for a specified Amplify app and backend environment
---- @param input table|nil The input table for the list_forms command
+--- AWS amplifyuibuilder list-forms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_forms(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "list-forms" }, input)
 end
 
---- Returns a list of tags for a specified Amazon Resource Name (ARN)
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS amplifyuibuilder list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "list-tags-for-resource" }, input)
 end
 
---- Retrieves a list of themes for a specified Amplify app and backend environment
---- @param input table|nil The input table for the list_themes command
+--- AWS amplifyuibuilder list-themes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_themes(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "list-themes" }, input)
 end
 
---- Stores the metadata information about a feature on a form
---- @param input table|nil The input table for the put_metadata_flag command
+--- AWS amplifyuibuilder put-metadata-flag operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metadata_flag(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "put-metadata-flag" }, input)
 end
 
---- This is for internal use
---- @param input table|nil The input table for the refresh_token command
+--- AWS amplifyuibuilder refresh-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.refresh_token(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "refresh-token" }, input)
 end
 
---- Starts a code generation job for a specified Amplify app and backend environment
---- @param input table|nil The input table for the start_codegen_job command
+--- AWS amplifyuibuilder start-codegen-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_codegen_job(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "start-codegen-job" }, input)
 end
 
---- Tags the resource with a tag key and value
---- @param input table|nil The input table for the tag_resource command
+--- AWS amplifyuibuilder tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "tag-resource" }, input)
 end
 
---- Untags a resource with a specified Amazon Resource Name (ARN)
---- @param input table|nil The input table for the untag_resource command
+--- AWS amplifyuibuilder untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "untag-resource" }, input)
 end
 
---- Updates an existing component
---- @param input table|nil The input table for the update_component command
+--- AWS amplifyuibuilder update-component operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_component(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "update-component" }, input)
 end
 
---- Updates an existing form
---- @param input table|nil The input table for the update_form command
+--- AWS amplifyuibuilder update-form operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_form(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "update-form" }, input)
 end
 
---- Updates an existing theme
---- @param input table|nil The input table for the update_theme command
+--- AWS amplifyuibuilder update-theme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_theme(input)
 	return common.execute_aws_command_with_input({ "amplifyuibuilder", "update-theme" }, input)

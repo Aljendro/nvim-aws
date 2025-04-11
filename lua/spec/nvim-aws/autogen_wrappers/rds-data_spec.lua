@@ -20,13 +20,13 @@ describe("AWS rds-data service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with execute_sql", function()
-		local result = service.execute_sql()
+	it("should generate a cli skeleton with execute_statement", function()
+		local result = service.execute_statement()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with execute_statement", function()
-		local result = service.execute_statement()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

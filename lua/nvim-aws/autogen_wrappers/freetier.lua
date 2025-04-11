@@ -6,11 +6,18 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS FREETIER service functions
 local M = {}
 
---- Returns a list of all Free Tier usage objects that match your filters
---- @param input table|nil The input table for the get_free_tier_usage command
+--- AWS freetier get-free-tier-usage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_free_tier_usage(input)
 	return common.execute_aws_command_with_input({ "freetier", "get-free-tier-usage" }, input)
+end
+
+--- AWS freetier help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "freetier", "help" }, input)
 end
 
 return M

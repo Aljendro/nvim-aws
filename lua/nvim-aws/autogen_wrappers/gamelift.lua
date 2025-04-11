@@ -6,827 +6,834 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS GAMELIFT service functions
 local M = {}
 
---- Registers a player's acceptance or rejection of a proposed FlexMatch match
---- @param input table|nil The input table for the accept_match command
+--- AWS gamelift accept-match operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_match(input)
 	return common.execute_aws_command_with_input({ "gamelift", "accept-match" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the claim_game_server command
+--- AWS gamelift claim-game-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.claim_game_server(input)
 	return common.execute_aws_command_with_input({ "gamelift", "claim-game-server" }, input)
 end
 
---- Creates an alias for a fleet
---- @param input table|nil The input table for the create_alias command
+--- AWS gamelift create-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_alias(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-alias" }, input)
 end
 
---- Creates a new Amazon GameLift build resource for your game server binary files
---- @param input table|nil The input table for the create_build command
+--- AWS gamelift create-build operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_build(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-build" }, input)
 end
 
---- Creates a managed fleet of Amazon Elastic Compute Cloud (Amazon EC2) instances to host your containerized game servers
---- @param input table|nil The input table for the create_container_fleet command
+--- AWS gamelift create-container-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-container-fleet" }, input)
 end
 
---- Creates a ContainerGroupDefinition that describes a set of containers for hosting your game server with Amazon GameLift managed containers hosting
---- @param input table|nil The input table for the create_container_group_definition command
+--- AWS gamelift create-container-group-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_container_group_definition(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-container-group-definition" }, input)
 end
 
---- Creates a fleet of compute resources to host your game servers
---- @param input table|nil The input table for the create_fleet command
+--- AWS gamelift create-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-fleet" }, input)
 end
 
---- Adds remote locations to an EC2 and begins populating the new locations with instances
---- @param input table|nil The input table for the create_fleet_locations command
+--- AWS gamelift create-fleet-locations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_fleet_locations(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-fleet-locations" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the create_game_server_group command
+--- AWS gamelift create-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-game-server-group" }, input)
 end
 
---- Creates a multiplayer game session for players in a specific fleet location
---- @param input table|nil The input table for the create_game_session command
+--- AWS gamelift create-game-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_game_session(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-game-session" }, input)
 end
 
---- Creates a placement queue that processes requests for new game sessions
---- @param input table|nil The input table for the create_game_session_queue command
+--- AWS gamelift create-game-session-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_game_session_queue(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-game-session-queue" }, input)
 end
 
---- Creates a custom location for use in an Anywhere fleet
---- @param input table|nil The input table for the create_location command
+--- AWS gamelift create-location operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_location(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-location" }, input)
 end
 
---- Defines a new matchmaking configuration for use with FlexMatch
---- @param input table|nil The input table for the create_matchmaking_configuration command
+--- AWS gamelift create-matchmaking-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_matchmaking_configuration(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-matchmaking-configuration" }, input)
 end
 
---- Creates a new rule set for FlexMatch matchmaking
---- @param input table|nil The input table for the create_matchmaking_rule_set command
+--- AWS gamelift create-matchmaking-rule-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_matchmaking_rule_set(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-matchmaking-rule-set" }, input)
 end
 
---- Reserves an open player slot in a game session for a player
---- @param input table|nil The input table for the create_player_session command
+--- AWS gamelift create-player-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_player_session(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-player-session" }, input)
 end
 
---- Reserves open slots in a game session for a group of players
---- @param input table|nil The input table for the create_player_sessions command
+--- AWS gamelift create-player-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_player_sessions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-player-sessions" }, input)
 end
 
---- Creates a new script record for your Amazon GameLift Realtime script
---- @param input table|nil The input table for the create_script command
+--- AWS gamelift create-script operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_script(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-script" }, input)
 end
 
---- Requests authorization to create or delete a peer connection between the VPC for your Amazon GameLift fleet and a virtual private cloud (VPC) in your Amazon Web Services account
---- @param input table|nil The input table for the create_vpc_peering_authorization command
+--- AWS gamelift create-vpc-peering-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_peering_authorization(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-vpc-peering-authorization" }, input)
 end
 
---- Establishes a VPC peering connection between a virtual private cloud (VPC) in an Amazon Web Services account with the VPC for your Amazon GameLift fleet
---- @param input table|nil The input table for the create_vpc_peering_connection command
+--- AWS gamelift create-vpc-peering-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_peering_connection(input)
 	return common.execute_aws_command_with_input({ "gamelift", "create-vpc-peering-connection" }, input)
 end
 
---- Deletes an alias
---- @param input table|nil The input table for the delete_alias command
+--- AWS gamelift delete-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alias(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-alias" }, input)
 end
 
---- Deletes a build
---- @param input table|nil The input table for the delete_build command
+--- AWS gamelift delete-build operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_build(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-build" }, input)
 end
 
---- Deletes all resources and information related to a container fleet and shuts down currently running fleet instances, including those in remote locations
---- @param input table|nil The input table for the delete_container_fleet command
+--- AWS gamelift delete-container-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-container-fleet" }, input)
 end
 
---- Deletes a container group definition
---- @param input table|nil The input table for the delete_container_group_definition command
+--- AWS gamelift delete-container-group-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_container_group_definition(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-container-group-definition" }, input)
 end
 
---- Deletes all resources and information related to a fleet and shuts down any currently running fleet instances, including those in remote locations
---- @param input table|nil The input table for the delete_fleet command
+--- AWS gamelift delete-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-fleet" }, input)
 end
 
---- Removes locations from a multi-location fleet
---- @param input table|nil The input table for the delete_fleet_locations command
+--- AWS gamelift delete-fleet-locations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_fleet_locations(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-fleet-locations" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the delete_game_server_group command
+--- AWS gamelift delete-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-game-server-group" }, input)
 end
 
---- Deletes a game session queue
---- @param input table|nil The input table for the delete_game_session_queue command
+--- AWS gamelift delete-game-session-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_game_session_queue(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-game-session-queue" }, input)
 end
 
---- Deletes a custom location
---- @param input table|nil The input table for the delete_location command
+--- AWS gamelift delete-location operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_location(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-location" }, input)
 end
 
---- Permanently removes a FlexMatch matchmaking configuration
---- @param input table|nil The input table for the delete_matchmaking_configuration command
+--- AWS gamelift delete-matchmaking-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_matchmaking_configuration(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-matchmaking-configuration" }, input)
 end
 
---- Deletes an existing matchmaking rule set
---- @param input table|nil The input table for the delete_matchmaking_rule_set command
+--- AWS gamelift delete-matchmaking-rule-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_matchmaking_rule_set(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-matchmaking-rule-set" }, input)
 end
 
---- Deletes a fleet scaling policy
---- @param input table|nil The input table for the delete_scaling_policy command
+--- AWS gamelift delete-scaling-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_scaling_policy(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-scaling-policy" }, input)
 end
 
---- Deletes a Realtime script
---- @param input table|nil The input table for the delete_script command
+--- AWS gamelift delete-script operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_script(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-script" }, input)
 end
 
---- Cancels a pending VPC peering authorization for the specified VPC
---- @param input table|nil The input table for the delete_vpc_peering_authorization command
+--- AWS gamelift delete-vpc-peering-authorization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_peering_authorization(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-vpc-peering-authorization" }, input)
 end
 
---- Removes a VPC peering connection
---- @param input table|nil The input table for the delete_vpc_peering_connection command
+--- AWS gamelift delete-vpc-peering-connection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_peering_connection(input)
 	return common.execute_aws_command_with_input({ "gamelift", "delete-vpc-peering-connection" }, input)
 end
 
---- Removes a compute resource from an Anywhere fleet
---- @param input table|nil The input table for the deregister_compute command
+--- AWS gamelift deregister-compute operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_compute(input)
 	return common.execute_aws_command_with_input({ "gamelift", "deregister-compute" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the deregister_game_server command
+--- AWS gamelift deregister-game-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_game_server(input)
 	return common.execute_aws_command_with_input({ "gamelift", "deregister-game-server" }, input)
 end
 
---- Retrieves properties for an alias
---- @param input table|nil The input table for the describe_alias command
+--- AWS gamelift describe-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_alias(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-alias" }, input)
 end
 
---- Retrieves properties for a custom game build
---- @param input table|nil The input table for the describe_build command
+--- AWS gamelift describe-build operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_build(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-build" }, input)
 end
 
---- Retrieves properties for a specific compute resource in an Amazon GameLift fleet
---- @param input table|nil The input table for the describe_compute command
+--- AWS gamelift describe-compute operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_compute(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-compute" }, input)
 end
 
---- Retrieves the properties for a container fleet
---- @param input table|nil The input table for the describe_container_fleet command
+--- AWS gamelift describe-container-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_container_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-container-fleet" }, input)
 end
 
---- Retrieves the properties of a container group definition, including all container definitions in the group
---- @param input table|nil The input table for the describe_container_group_definition command
+--- AWS gamelift describe-container-group-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_container_group_definition(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-container-group-definition" }, input)
 end
 
---- Retrieves the instance limits and current utilization for an Amazon Web Services Region or location
---- @param input table|nil The input table for the describe_ec2_instance_limits command
+--- AWS gamelift describe-ec2-instance-limits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_ec2_instance_limits(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-ec2-instance-limits" }, input)
 end
 
---- Retrieves core fleet-wide properties for fleets in an Amazon Web Services Region
---- @param input table|nil The input table for the describe_fleet_attributes command
+--- AWS gamelift describe-fleet-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_attributes(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-attributes" }, input)
 end
 
---- Retrieves the resource capacity settings for one or more fleets
---- @param input table|nil The input table for the describe_fleet_capacity command
+--- AWS gamelift describe-fleet-capacity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_capacity(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-capacity" }, input)
 end
 
---- Retrieves information about a managed container fleet deployment
---- @param input table|nil The input table for the describe_fleet_deployment command
+--- AWS gamelift describe-fleet-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_deployment(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-deployment" }, input)
 end
 
---- Retrieves entries from a fleet's event log
---- @param input table|nil The input table for the describe_fleet_events command
+--- AWS gamelift describe-fleet-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_events(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-events" }, input)
 end
 
---- Retrieves information on a fleet's remote locations, including life-cycle status and any suspended fleet activity
---- @param input table|nil The input table for the describe_fleet_location_attributes command
+--- AWS gamelift describe-fleet-location-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_location_attributes(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-attributes" }, input)
 end
 
---- Retrieves the resource capacity settings for a fleet location
---- @param input table|nil The input table for the describe_fleet_location_capacity command
+--- AWS gamelift describe-fleet-location-capacity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_location_capacity(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-capacity" }, input)
 end
 
---- Retrieves current usage data for a fleet location
---- @param input table|nil The input table for the describe_fleet_location_utilization command
+--- AWS gamelift describe-fleet-location-utilization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_location_utilization(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-utilization" }, input)
 end
 
---- Retrieves a fleet's inbound connection permissions
---- @param input table|nil The input table for the describe_fleet_port_settings command
+--- AWS gamelift describe-fleet-port-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_port_settings(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-port-settings" }, input)
 end
 
---- Retrieves utilization statistics for one or more fleets
---- @param input table|nil The input table for the describe_fleet_utilization command
+--- AWS gamelift describe-fleet-utilization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_fleet_utilization(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-utilization" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the describe_game_server command
+--- AWS gamelift describe-game-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_server(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the describe_game_server_group command
+--- AWS gamelift describe-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server-group" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the describe_game_server_instances command
+--- AWS gamelift describe-game-server-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_server_instances(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server-instances" }, input)
 end
 
---- Retrieves additional game session properties, including the game session protection policy in force, a set of one or more game sessions in a specific fleet location
---- @param input table|nil The input table for the describe_game_session_details command
+--- AWS gamelift describe-game-session-details operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_session_details(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-details" }, input)
 end
 
---- Retrieves information, including current status, about a game session placement request
---- @param input table|nil The input table for the describe_game_session_placement command
+--- AWS gamelift describe-game-session-placement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_session_placement(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-placement" }, input)
 end
 
---- Retrieves the properties for one or more game session queues
---- @param input table|nil The input table for the describe_game_session_queues command
+--- AWS gamelift describe-game-session-queues operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_session_queues(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-queues" }, input)
 end
 
---- Retrieves a set of one or more game sessions in a specific fleet location
---- @param input table|nil The input table for the describe_game_sessions command
+--- AWS gamelift describe-game-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_game_sessions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-game-sessions" }, input)
 end
 
---- Retrieves information about the EC2 instances in an Amazon GameLift managed fleet, including instance ID, connection data, and status
---- @param input table|nil The input table for the describe_instances command
+--- AWS gamelift describe-instances operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_instances(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-instances" }, input)
 end
 
---- Retrieves one or more matchmaking tickets
---- @param input table|nil The input table for the describe_matchmaking command
+--- AWS gamelift describe-matchmaking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_matchmaking(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking" }, input)
 end
 
---- Retrieves the details of FlexMatch matchmaking configurations
---- @param input table|nil The input table for the describe_matchmaking_configurations command
+--- AWS gamelift describe-matchmaking-configurations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_matchmaking_configurations(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking-configurations" }, input)
 end
 
---- Retrieves the details for FlexMatch matchmaking rule sets
---- @param input table|nil The input table for the describe_matchmaking_rule_sets command
+--- AWS gamelift describe-matchmaking-rule-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_matchmaking_rule_sets(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking-rule-sets" }, input)
 end
 
---- Retrieves properties for one or more player sessions
---- @param input table|nil The input table for the describe_player_sessions command
+--- AWS gamelift describe-player-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_player_sessions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-player-sessions" }, input)
 end
 
---- Retrieves a fleet's runtime configuration settings
---- @param input table|nil The input table for the describe_runtime_configuration command
+--- AWS gamelift describe-runtime-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_runtime_configuration(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-runtime-configuration" }, input)
 end
 
---- Retrieves all scaling policies applied to a fleet
---- @param input table|nil The input table for the describe_scaling_policies command
+--- AWS gamelift describe-scaling-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scaling_policies(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-scaling-policies" }, input)
 end
 
---- Retrieves properties for a Realtime script
---- @param input table|nil The input table for the describe_script command
+--- AWS gamelift describe-script operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_script(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-script" }, input)
 end
 
---- Retrieves valid VPC peering authorizations that are pending for the Amazon Web Services account
---- @param input table|nil The input table for the describe_vpc_peering_authorizations command
+--- AWS gamelift describe-vpc-peering-authorizations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vpc_peering_authorizations(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-vpc-peering-authorizations" }, input)
 end
 
---- Retrieves information on VPC peering connections
---- @param input table|nil The input table for the describe_vpc_peering_connections command
+--- AWS gamelift describe-vpc-peering-connections operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_vpc_peering_connections(input)
 	return common.execute_aws_command_with_input({ "gamelift", "describe-vpc-peering-connections" }, input)
 end
 
---- Requests authorization to remotely connect to a hosting resource in a Amazon GameLift managed fleet
---- @param input table|nil The input table for the get_compute_access command
+--- AWS gamelift get-compute-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compute_access(input)
 	return common.execute_aws_command_with_input({ "gamelift", "get-compute-access" }, input)
 end
 
---- Requests an authentication token from Amazon GameLift for a compute resource in an Amazon GameLift fleet
---- @param input table|nil The input table for the get_compute_auth_token command
+--- AWS gamelift get-compute-auth-token operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compute_auth_token(input)
 	return common.execute_aws_command_with_input({ "gamelift", "get-compute-auth-token" }, input)
 end
 
---- Retrieves the location of stored game session logs for a specified game session on Amazon GameLift managed fleets
---- @param input table|nil The input table for the get_game_session_log_url command
+--- AWS gamelift get-game-session-log-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_game_session_log_url(input)
 	return common.execute_aws_command_with_input({ "gamelift", "get-game-session-log-url" }, input)
 end
 
---- Requests authorization to remotely connect to an instance in an Amazon GameLift managed fleet
---- @param input table|nil The input table for the get_instance_access command
+--- AWS gamelift get-instance-access operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_instance_access(input)
 	return common.execute_aws_command_with_input({ "gamelift", "get-instance-access" }, input)
 end
 
---- Retrieves all aliases for this Amazon Web Services account
---- @param input table|nil The input table for the list_aliases command
+--- AWS gamelift help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "gamelift", "help" }, input)
+end
+
+--- AWS gamelift list-aliases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_aliases(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-aliases" }, input)
 end
 
---- Retrieves build resources for all builds associated with the Amazon Web Services account in use
---- @param input table|nil The input table for the list_builds command
+--- AWS gamelift list-builds operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_builds(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-builds" }, input)
 end
 
---- Retrieves information on the compute resources in an Amazon GameLift fleet
---- @param input table|nil The input table for the list_compute command
+--- AWS gamelift list-compute operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_compute(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-compute" }, input)
 end
 
---- Retrieves a collection of container fleet resources in an Amazon Web Services Region
---- @param input table|nil The input table for the list_container_fleets command
+--- AWS gamelift list-container-fleets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_container_fleets(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-container-fleets" }, input)
 end
 
---- Retrieves all versions of a container group definition
---- @param input table|nil The input table for the list_container_group_definition_versions command
+--- AWS gamelift list-container-group-definition-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_container_group_definition_versions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-container-group-definition-versions" }, input)
 end
 
---- Retrieves container group definitions for the Amazon Web Services account and Amazon Web Services Region
---- @param input table|nil The input table for the list_container_group_definitions command
+--- AWS gamelift list-container-group-definitions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_container_group_definitions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-container-group-definitions" }, input)
 end
 
---- Retrieves a collection of container fleet deployments in an Amazon Web Services Region
---- @param input table|nil The input table for the list_fleet_deployments command
+--- AWS gamelift list-fleet-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fleet_deployments(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-fleet-deployments" }, input)
 end
 
---- Retrieves a collection of fleet resources in an Amazon Web Services Region
---- @param input table|nil The input table for the list_fleets command
+--- AWS gamelift list-fleets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_fleets(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-fleets" }, input)
 end
 
---- Lists a game server groups
---- @param input table|nil The input table for the list_game_server_groups command
+--- AWS gamelift list-game-server-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_game_server_groups(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-game-server-groups" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the list_game_servers command
+--- AWS gamelift list-game-servers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_game_servers(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-game-servers" }, input)
 end
 
---- Lists all custom and Amazon Web Services locations
---- @param input table|nil The input table for the list_locations command
+--- AWS gamelift list-locations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_locations(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-locations" }, input)
 end
 
---- Retrieves script records for all Realtime scripts that are associated with the Amazon Web Services account in use
---- @param input table|nil The input table for the list_scripts command
+--- AWS gamelift list-scripts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_scripts(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-scripts" }, input)
 end
 
---- Retrieves all tags assigned to a Amazon GameLift resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS gamelift list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "gamelift", "list-tags-for-resource" }, input)
 end
 
---- Creates or updates a scaling policy for a fleet
---- @param input table|nil The input table for the put_scaling_policy command
+--- AWS gamelift put-scaling-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_scaling_policy(input)
 	return common.execute_aws_command_with_input({ "gamelift", "put-scaling-policy" }, input)
 end
 
---- Registers a compute resource in an Amazon GameLift Anywhere fleet
---- @param input table|nil The input table for the register_compute command
+--- AWS gamelift register-compute operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_compute(input)
 	return common.execute_aws_command_with_input({ "gamelift", "register-compute" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the register_game_server command
+--- AWS gamelift register-game-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_game_server(input)
 	return common.execute_aws_command_with_input({ "gamelift", "register-game-server" }, input)
 end
 
---- Retrieves a fresh set of credentials for use when uploading a new set of game build files to Amazon GameLift's Amazon S3
---- @param input table|nil The input table for the request_upload_credentials command
+--- AWS gamelift request-upload-credentials operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.request_upload_credentials(input)
 	return common.execute_aws_command_with_input({ "gamelift", "request-upload-credentials" }, input)
 end
 
---- Attempts to retrieve a fleet ID that is associated with an alias
---- @param input table|nil The input table for the resolve_alias command
+--- AWS gamelift resolve-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resolve_alias(input)
 	return common.execute_aws_command_with_input({ "gamelift", "resolve-alias" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the resume_game_server_group command
+--- AWS gamelift resume-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.resume_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "resume-game-server-group" }, input)
 end
 
---- Retrieves all active game sessions that match a set of search criteria and sorts them into a specified order
---- @param input table|nil The input table for the search_game_sessions command
+--- AWS gamelift search-game-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_game_sessions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "search-game-sessions" }, input)
 end
 
---- Resumes certain types of activity on fleet instances that were suspended with StopFleetActions
---- @param input table|nil The input table for the start_fleet_actions command
+--- AWS gamelift start-fleet-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_fleet_actions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "start-fleet-actions" }, input)
 end
 
---- Makes a request to start a new game session using a game session queue
---- @param input table|nil The input table for the start_game_session_placement command
+--- AWS gamelift start-game-session-placement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_game_session_placement(input)
 	return common.execute_aws_command_with_input({ "gamelift", "start-game-session-placement" }, input)
 end
 
---- Finds new players to fill open slots in currently running game sessions
---- @param input table|nil The input table for the start_match_backfill command
+--- AWS gamelift start-match-backfill operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_match_backfill(input)
 	return common.execute_aws_command_with_input({ "gamelift", "start-match-backfill" }, input)
 end
 
---- Uses FlexMatch to create a game match for a group of players based on custom matchmaking rules
---- @param input table|nil The input table for the start_matchmaking command
+--- AWS gamelift start-matchmaking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_matchmaking(input)
 	return common.execute_aws_command_with_input({ "gamelift", "start-matchmaking" }, input)
 end
 
---- Suspends certain types of activity in a fleet location
---- @param input table|nil The input table for the stop_fleet_actions command
+--- AWS gamelift stop-fleet-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_fleet_actions(input)
 	return common.execute_aws_command_with_input({ "gamelift", "stop-fleet-actions" }, input)
 end
 
---- Cancels a game session placement that's in PENDING status
---- @param input table|nil The input table for the stop_game_session_placement command
+--- AWS gamelift stop-game-session-placement operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_game_session_placement(input)
 	return common.execute_aws_command_with_input({ "gamelift", "stop-game-session-placement" }, input)
 end
 
---- Cancels a matchmaking ticket or match backfill ticket that is currently being processed
---- @param input table|nil The input table for the stop_matchmaking command
+--- AWS gamelift stop-matchmaking operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_matchmaking(input)
 	return common.execute_aws_command_with_input({ "gamelift", "stop-matchmaking" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the suspend_game_server_group command
+--- AWS gamelift suspend-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.suspend_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "suspend-game-server-group" }, input)
 end
 
---- Assigns a tag to an Amazon GameLift resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS gamelift tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "gamelift", "tag-resource" }, input)
 end
 
---- Ends a game session that's currently in progress
---- @param input table|nil The input table for the terminate_game_session command
+--- AWS gamelift terminate-game-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.terminate_game_session(input)
 	return common.execute_aws_command_with_input({ "gamelift", "terminate-game-session" }, input)
 end
 
---- Removes a tag assigned to a Amazon GameLift resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS gamelift untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "gamelift", "untag-resource" }, input)
 end
 
---- Updates properties for an alias
---- @param input table|nil The input table for the update_alias command
+--- AWS gamelift update-alias operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_alias(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-alias" }, input)
 end
 
---- Updates metadata in a build resource, including the build name and version
---- @param input table|nil The input table for the update_build command
+--- AWS gamelift update-build operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_build(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-build" }, input)
 end
 
---- Updates the properties of a managed container fleet
---- @param input table|nil The input table for the update_container_fleet command
+--- AWS gamelift update-container-fleet operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_container_fleet(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-container-fleet" }, input)
 end
 
---- Updates properties in an existing container group definition
---- @param input table|nil The input table for the update_container_group_definition command
+--- AWS gamelift update-container-group-definition operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_container_group_definition(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-container-group-definition" }, input)
 end
 
---- Updates a fleet's mutable attributes, such as game session protection and resource creation limits
---- @param input table|nil The input table for the update_fleet_attributes command
+--- AWS gamelift update-fleet-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_fleet_attributes(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-attributes" }, input)
 end
 
---- Updates capacity settings for a managed EC2 fleet or managed container fleet
---- @param input table|nil The input table for the update_fleet_capacity command
+--- AWS gamelift update-fleet-capacity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_fleet_capacity(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-capacity" }, input)
 end
 
---- Updates permissions that allow inbound traffic to connect to game sessions in the fleet
---- @param input table|nil The input table for the update_fleet_port_settings command
+--- AWS gamelift update-fleet-port-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_fleet_port_settings(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-port-settings" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the update_game_server command
+--- AWS gamelift update-game-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_game_server(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-game-server" }, input)
 end
 
---- This operation is used with the Amazon GameLift FleetIQ solution and game server groups
---- @param input table|nil The input table for the update_game_server_group command
+--- AWS gamelift update-game-server-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_game_server_group(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-game-server-group" }, input)
 end
 
---- Updates the mutable properties of a game session
---- @param input table|nil The input table for the update_game_session command
+--- AWS gamelift update-game-session operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_game_session(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-game-session" }, input)
 end
 
---- Updates the configuration of a game session queue, which determines how the queue processes new game session requests
---- @param input table|nil The input table for the update_game_session_queue command
+--- AWS gamelift update-game-session-queue operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_game_session_queue(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-game-session-queue" }, input)
 end
 
---- Updates settings for a FlexMatch matchmaking configuration
---- @param input table|nil The input table for the update_matchmaking_configuration command
+--- AWS gamelift update-matchmaking-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_matchmaking_configuration(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-matchmaking-configuration" }, input)
 end
 
---- Updates the runtime configuration for the specified fleet
---- @param input table|nil The input table for the update_runtime_configuration command
+--- AWS gamelift update-runtime-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_runtime_configuration(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-runtime-configuration" }, input)
 end
 
---- Updates Realtime script metadata and content
---- @param input table|nil The input table for the update_script command
+--- AWS gamelift update-script operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_script(input)
 	return common.execute_aws_command_with_input({ "gamelift", "update-script" }, input)
 end
 
---- Validates the syntax of a matchmaking rule or rule set
---- @param input table|nil The input table for the validate_matchmaking_rule_set command
+--- AWS gamelift validate-matchmaking-rule-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.validate_matchmaking_rule_set(input)
 	return common.execute_aws_command_with_input({ "gamelift", "validate-matchmaking-rule-set" }, input)

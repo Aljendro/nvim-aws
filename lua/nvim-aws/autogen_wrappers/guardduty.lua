@@ -6,519 +6,505 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS GUARDDUTY service functions
 local M = {}
 
---- Accepts the invitation to be a member account and get monitored by a GuardDuty administrator account that sent the invitation
---- @param input table|nil The input table for the accept_administrator_invitation command
+--- AWS guardduty accept-administrator-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.accept_administrator_invitation(input)
 	return common.execute_aws_command_with_input({ "guardduty", "accept-administrator-invitation" }, input)
 end
 
---- Accepts the invitation to be monitored by a GuardDuty administrator account
---- @param input table|nil The input table for the accept_invitation command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.accept_invitation(input)
-	return common.execute_aws_command_with_input({ "guardduty", "accept-invitation" }, input)
-end
-
---- Archives GuardDuty findings that are specified by the list of finding IDs
---- @param input table|nil The input table for the archive_findings command
+--- AWS guardduty archive-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.archive_findings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "archive-findings" }, input)
 end
 
---- Creates a single GuardDuty detector
---- @param input table|nil The input table for the create_detector command
+--- AWS guardduty create-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_detector(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-detector" }, input)
 end
 
---- Creates a filter using the specified finding criteria
---- @param input table|nil The input table for the create_filter command
+--- AWS guardduty create-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_filter(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-filter" }, input)
 end
 
---- Creates a new IPSet, which is called a trusted IP list in the console user interface
---- @param input table|nil The input table for the create_ip_set command
+--- AWS guardduty create-ip-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_ip_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-ip-set" }, input)
 end
 
---- Creates a new Malware Protection plan for the protected resource
---- @param input table|nil The input table for the create_malware_protection_plan command
+--- AWS guardduty create-malware-protection-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_malware_protection_plan(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-malware-protection-plan" }, input)
 end
 
---- Creates member accounts of the current Amazon Web Services account by specifying a list of Amazon Web Services account IDs
---- @param input table|nil The input table for the create_members command
+--- AWS guardduty create-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-members" }, input)
 end
 
---- Creates a publishing destination where you can export your GuardDuty findings
---- @param input table|nil The input table for the create_publishing_destination command
+--- AWS guardduty create-publishing-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_publishing_destination(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-publishing-destination" }, input)
 end
 
---- Generates sample findings of types specified by the list of finding types
---- @param input table|nil The input table for the create_sample_findings command
+--- AWS guardduty create-sample-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_sample_findings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-sample-findings" }, input)
 end
 
---- Creates a new ThreatIntelSet
---- @param input table|nil The input table for the create_threat_intel_set command
+--- AWS guardduty create-threat-intel-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_threat_intel_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "create-threat-intel-set" }, input)
 end
 
---- Declines invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs
---- @param input table|nil The input table for the decline_invitations command
+--- AWS guardduty decline-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.decline_invitations(input)
 	return common.execute_aws_command_with_input({ "guardduty", "decline-invitations" }, input)
 end
 
---- Deletes an Amazon GuardDuty detector that is specified by the detector ID
---- @param input table|nil The input table for the delete_detector command
+--- AWS guardduty delete-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_detector(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-detector" }, input)
 end
 
---- Deletes the filter specified by the filter name
---- @param input table|nil The input table for the delete_filter command
+--- AWS guardduty delete-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_filter(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-filter" }, input)
 end
 
---- Deletes the IPSet specified by the ipSetId
---- @param input table|nil The input table for the delete_ip_set command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-ip-set" }, input)
-end
-
---- Deletes invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs
---- @param input table|nil The input table for the delete_invitations command
+--- AWS guardduty delete-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_invitations(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-invitations" }, input)
 end
 
---- Deletes the Malware Protection plan ID associated with the Malware Protection plan resource
---- @param input table|nil The input table for the delete_malware_protection_plan command
+--- AWS guardduty delete-ip-set operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ip_set(input)
+	return common.execute_aws_command_with_input({ "guardduty", "delete-ip-set" }, input)
+end
+
+--- AWS guardduty delete-malware-protection-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_malware_protection_plan(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-malware-protection-plan" }, input)
 end
 
---- Deletes GuardDuty member accounts (to the current GuardDuty administrator account) specified by the account IDs
---- @param input table|nil The input table for the delete_members command
+--- AWS guardduty delete-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-members" }, input)
 end
 
---- Deletes the publishing definition with the specified destinationId
---- @param input table|nil The input table for the delete_publishing_destination command
+--- AWS guardduty delete-publishing-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_publishing_destination(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-publishing-destination" }, input)
 end
 
---- Deletes the ThreatIntelSet specified by the ThreatIntelSet ID
---- @param input table|nil The input table for the delete_threat_intel_set command
+--- AWS guardduty delete-threat-intel-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_threat_intel_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "delete-threat-intel-set" }, input)
 end
 
---- Returns a list of malware scans
---- @param input table|nil The input table for the describe_malware_scans command
+--- AWS guardduty describe-malware-scans operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_malware_scans(input)
 	return common.execute_aws_command_with_input({ "guardduty", "describe-malware-scans" }, input)
 end
 
---- Returns information about the account selected as the delegated administrator for GuardDuty
---- @param input table|nil The input table for the describe_organization_configuration command
+--- AWS guardduty describe-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "guardduty", "describe-organization-configuration" }, input)
 end
 
---- Returns information about the publishing destination specified by the provided destinationId
---- @param input table|nil The input table for the describe_publishing_destination command
+--- AWS guardduty describe-publishing-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_publishing_destination(input)
 	return common.execute_aws_command_with_input({ "guardduty", "describe-publishing-destination" }, input)
 end
 
---- Removes the existing GuardDuty delegated administrator of the organization
---- @param input table|nil The input table for the disable_organization_admin_account command
+--- AWS guardduty disable-organization-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "guardduty", "disable-organization-admin-account" }, input)
 end
 
---- Disassociates the current GuardDuty member account from its administrator account
---- @param input table|nil The input table for the disassociate_from_administrator_account command
+--- AWS guardduty disassociate-from-administrator-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_from_administrator_account(input)
 	return common.execute_aws_command_with_input({ "guardduty", "disassociate-from-administrator-account" }, input)
 end
 
---- Disassociates the current GuardDuty member account from its administrator account
---- @param input table|nil The input table for the disassociate_from_master_account command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.disassociate_from_master_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "disassociate-from-master-account" }, input)
-end
-
---- Disassociates GuardDuty member accounts (from the current administrator account) specified by the account IDs
---- @param input table|nil The input table for the disassociate_members command
+--- AWS guardduty disassociate-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "disassociate-members" }, input)
 end
 
---- Designates an Amazon Web Services account within the organization as your GuardDuty delegated administrator
---- @param input table|nil The input table for the enable_organization_admin_account command
+--- AWS guardduty enable-organization-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_organization_admin_account(input)
 	return common.execute_aws_command_with_input({ "guardduty", "enable-organization-admin-account" }, input)
 end
 
---- Provides the details of the GuardDuty administrator account associated with the current GuardDuty member account
---- @param input table|nil The input table for the get_administrator_account command
+--- AWS guardduty get-administrator-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_administrator_account(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-administrator-account" }, input)
 end
 
---- Retrieves aggregated statistics for your account
---- @param input table|nil The input table for the get_coverage_statistics command
+--- AWS guardduty get-coverage-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_coverage_statistics(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-coverage-statistics" }, input)
 end
 
---- Retrieves a GuardDuty detector specified by the detectorId
---- @param input table|nil The input table for the get_detector command
+--- AWS guardduty get-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_detector(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-detector" }, input)
 end
 
---- Returns the details of the filter specified by the filter name
---- @param input table|nil The input table for the get_filter command
+--- AWS guardduty get-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_filter(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-filter" }, input)
 end
 
---- Describes Amazon GuardDuty findings specified by finding IDs
---- @param input table|nil The input table for the get_findings command
+--- AWS guardduty get-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_findings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-findings" }, input)
 end
 
---- Lists GuardDuty findings statistics for the specified detector ID
---- @param input table|nil The input table for the get_findings_statistics command
+--- AWS guardduty get-findings-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_findings_statistics(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-findings-statistics" }, input)
 end
 
---- Retrieves the IPSet specified by the ipSetId
---- @param input table|nil The input table for the get_ip_set command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-ip-set" }, input)
-end
-
---- Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation
---- @param input table|nil The input table for the get_invitations_count command
+--- AWS guardduty get-invitations-count operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_invitations_count(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-invitations-count" }, input)
 end
 
---- Retrieves the Malware Protection plan details associated with a Malware Protection plan ID
---- @param input table|nil The input table for the get_malware_protection_plan command
+--- AWS guardduty get-ip-set operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ip_set(input)
+	return common.execute_aws_command_with_input({ "guardduty", "get-ip-set" }, input)
+end
+
+--- AWS guardduty get-malware-protection-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_malware_protection_plan(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-malware-protection-plan" }, input)
 end
 
---- Returns the details of the malware scan settings
---- @param input table|nil The input table for the get_malware_scan_settings command
+--- AWS guardduty get-malware-scan-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_malware_scan_settings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-malware-scan-settings" }, input)
 end
 
---- Provides the details for the GuardDuty administrator account associated with the current GuardDuty member account
---- @param input table|nil The input table for the get_master_account command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_master_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-master-account" }, input)
-end
-
---- Describes which data sources are enabled for the member account's detector
---- @param input table|nil The input table for the get_member_detectors command
+--- AWS guardduty get-member-detectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_member_detectors(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-member-detectors" }, input)
 end
 
---- Retrieves GuardDuty member accounts (of the current GuardDuty administrator account) specified by the account IDs
---- @param input table|nil The input table for the get_members command
+--- AWS guardduty get-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-members" }, input)
 end
 
---- Retrieves how many active member accounts have each feature enabled within GuardDuty
+--- AWS guardduty get-organization-statistics operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_statistics(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-organization-statistics" }, input)
 end
 
---- Provides the number of days left for each data source used in the free trial period
---- @param input table|nil The input table for the get_remaining_free_trial_days command
+--- AWS guardduty get-remaining-free-trial-days operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_remaining_free_trial_days(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-remaining-free-trial-days" }, input)
 end
 
---- Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID
---- @param input table|nil The input table for the get_threat_intel_set command
+--- AWS guardduty get-threat-intel-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_threat_intel_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-threat-intel-set" }, input)
 end
 
---- Lists Amazon GuardDuty usage statistics over the last 30 days for the specified detector ID
---- @param input table|nil The input table for the get_usage_statistics command
+--- AWS guardduty get-usage-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_usage_statistics(input)
 	return common.execute_aws_command_with_input({ "guardduty", "get-usage-statistics" }, input)
 end
 
---- Invites Amazon Web Services accounts to become members of an organization administered by the Amazon Web Services account that invokes this API
---- @param input table|nil The input table for the invite_members command
+--- AWS guardduty help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "guardduty", "help" }, input)
+end
+
+--- AWS guardduty invite-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.invite_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "invite-members" }, input)
 end
 
---- Lists coverage details for your GuardDuty account
---- @param input table|nil The input table for the list_coverage command
+--- AWS guardduty list-coverage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_coverage(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-coverage" }, input)
 end
 
---- Lists detectorIds of all the existing Amazon GuardDuty detector resources
---- @param input table|nil The input table for the list_detectors command
+--- AWS guardduty list-detectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_detectors(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-detectors" }, input)
 end
 
---- Returns a paginated list of the current filters
---- @param input table|nil The input table for the list_filters command
+--- AWS guardduty list-filters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_filters(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-filters" }, input)
 end
 
---- Lists GuardDuty findings for the specified detector ID
---- @param input table|nil The input table for the list_findings command
+--- AWS guardduty list-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_findings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-findings" }, input)
 end
 
---- Lists the IPSets of the GuardDuty service specified by the detector ID
---- @param input table|nil The input table for the list_ip_sets command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_ip_sets(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-ip-sets" }, input)
-end
-
---- Lists all GuardDuty membership invitations that were sent to the current Amazon Web Services account
---- @param input table|nil The input table for the list_invitations command
+--- AWS guardduty list-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_invitations(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-invitations" }, input)
 end
 
---- Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services account
---- @param input table|nil The input table for the list_malware_protection_plans command
+--- AWS guardduty list-ip-sets operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ip_sets(input)
+	return common.execute_aws_command_with_input({ "guardduty", "list-ip-sets" }, input)
+end
+
+--- AWS guardduty list-malware-protection-plans operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_malware_protection_plans(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-malware-protection-plans" }, input)
 end
 
---- Lists details about all member accounts for the current GuardDuty administrator account
---- @param input table|nil The input table for the list_members command
+--- AWS guardduty list-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-members" }, input)
 end
 
---- Lists the accounts designated as GuardDuty delegated administrators
---- @param input table|nil The input table for the list_organization_admin_accounts command
+--- AWS guardduty list-organization-admin-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_admin_accounts(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-organization-admin-accounts" }, input)
 end
 
---- Returns a list of publishing destinations associated with the specified detectorId
---- @param input table|nil The input table for the list_publishing_destinations command
+--- AWS guardduty list-publishing-destinations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_publishing_destinations(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-publishing-destinations" }, input)
 end
 
---- Lists tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS guardduty list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-tags-for-resource" }, input)
 end
 
---- Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID
---- @param input table|nil The input table for the list_threat_intel_sets command
+--- AWS guardduty list-threat-intel-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_threat_intel_sets(input)
 	return common.execute_aws_command_with_input({ "guardduty", "list-threat-intel-sets" }, input)
 end
 
---- Initiates the malware scan
---- @param input table|nil The input table for the start_malware_scan command
+--- AWS guardduty start-malware-scan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_malware_scan(input)
 	return common.execute_aws_command_with_input({ "guardduty", "start-malware-scan" }, input)
 end
 
---- Turns on GuardDuty monitoring of the specified member accounts
---- @param input table|nil The input table for the start_monitoring_members command
+--- AWS guardduty start-monitoring-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_monitoring_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "start-monitoring-members" }, input)
 end
 
---- Stops GuardDuty monitoring for the specified member accounts
---- @param input table|nil The input table for the stop_monitoring_members command
+--- AWS guardduty stop-monitoring-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_monitoring_members(input)
 	return common.execute_aws_command_with_input({ "guardduty", "stop-monitoring-members" }, input)
 end
 
---- Adds tags to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS guardduty tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "guardduty", "tag-resource" }, input)
 end
 
---- Unarchives GuardDuty findings specified by the findingIds
---- @param input table|nil The input table for the unarchive_findings command
+--- AWS guardduty unarchive-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unarchive_findings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "unarchive-findings" }, input)
 end
 
---- Removes tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS guardduty untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "guardduty", "untag-resource" }, input)
 end
 
---- Updates the GuardDuty detector specified by the detector ID
---- @param input table|nil The input table for the update_detector command
+--- AWS guardduty update-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_detector(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-detector" }, input)
 end
 
---- Updates the filter specified by the filter name
---- @param input table|nil The input table for the update_filter command
+--- AWS guardduty update-filter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_filter(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-filter" }, input)
 end
 
---- Marks the specified GuardDuty findings as useful or not useful
---- @param input table|nil The input table for the update_findings_feedback command
+--- AWS guardduty update-findings-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_findings_feedback(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-findings-feedback" }, input)
 end
 
---- Updates the IPSet specified by the IPSet ID
---- @param input table|nil The input table for the update_ip_set command
+--- AWS guardduty update-ip-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_ip_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-ip-set" }, input)
 end
 
---- Updates an existing Malware Protection plan resource
---- @param input table|nil The input table for the update_malware_protection_plan command
+--- AWS guardduty update-malware-protection-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_malware_protection_plan(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-malware-protection-plan" }, input)
 end
 
---- Updates the malware scan settings
---- @param input table|nil The input table for the update_malware_scan_settings command
+--- AWS guardduty update-malware-scan-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_malware_scan_settings(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-malware-scan-settings" }, input)
 end
 
---- Contains information on member accounts to be updated
---- @param input table|nil The input table for the update_member_detectors command
+--- AWS guardduty update-member-detectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_member_detectors(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-member-detectors" }, input)
 end
 
---- Configures the delegated administrator account with the provided values
---- @param input table|nil The input table for the update_organization_configuration command
+--- AWS guardduty update-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-organization-configuration" }, input)
 end
 
---- Updates information about the publishing destination specified by the destinationId
---- @param input table|nil The input table for the update_publishing_destination command
+--- AWS guardduty update-publishing-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_publishing_destination(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-publishing-destination" }, input)
 end
 
---- Updates the ThreatIntelSet specified by the ThreatIntelSet ID
---- @param input table|nil The input table for the update_threat_intel_set command
+--- AWS guardduty update-threat-intel-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_threat_intel_set(input)
 	return common.execute_aws_command_with_input({ "guardduty", "update-threat-intel-set" }, input)

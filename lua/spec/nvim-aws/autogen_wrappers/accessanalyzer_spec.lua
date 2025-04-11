@@ -40,8 +40,18 @@ describe("AWS accessanalyzer service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with create_archive_rule", function()
+		local result = service.create_archive_rule()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with delete_analyzer", function()
 		local result = service.delete_analyzer()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_archive_rule", function()
+		local result = service.delete_archive_rule()
 		assert.is_true(result.success)
 	end)
 
@@ -62,6 +72,11 @@ describe("AWS accessanalyzer service testing", function()
 
 	it("should generate a cli skeleton with get_analyzer", function()
 		local result = service.get_analyzer()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with get_archive_rule", function()
+		local result = service.get_archive_rule()
 		assert.is_true(result.success)
 	end)
 
@@ -90,6 +105,11 @@ describe("AWS accessanalyzer service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_access_preview_findings", function()
 		local result = service.list_access_preview_findings()
 		assert.is_true(result.success)
@@ -107,6 +127,11 @@ describe("AWS accessanalyzer service testing", function()
 
 	it("should generate a cli skeleton with list_analyzers", function()
 		local result = service.list_analyzers()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_archive_rules", function()
+		local result = service.list_archive_rules()
 		assert.is_true(result.success)
 	end)
 
@@ -152,6 +177,11 @@ describe("AWS accessanalyzer service testing", function()
 
 	it("should generate a cli skeleton with update_analyzer", function()
 		local result = service.update_analyzer()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with update_archive_rule", function()
+		local result = service.update_archive_rule()
 		assert.is_true(result.success)
 	end)
 

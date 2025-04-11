@@ -55,11 +55,6 @@ describe("AWS neptune-graph service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with execute_query", function()
-		local result = service.execute_query()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_export_task", function()
 		local result = service.get_export_task()
 		assert.is_true(result.success)
@@ -92,6 +87,11 @@ describe("AWS neptune-graph service testing", function()
 
 	it("should generate a cli skeleton with get_query", function()
 		local result = service.get_query()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

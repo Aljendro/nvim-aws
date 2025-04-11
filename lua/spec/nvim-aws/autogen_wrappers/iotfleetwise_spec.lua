@@ -150,6 +150,11 @@ describe("AWS iotfleetwise service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_decoder_manifest", function()
 		local result = service.import_decoder_manifest()
 		assert.is_true(result.success)
@@ -185,6 +190,11 @@ describe("AWS iotfleetwise service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with list_fleets_for_vehicle", function()
+		local result = service.list_fleets_for_vehicle()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_model_manifest_nodes", function()
 		local result = service.list_model_manifest_nodes()
 		assert.is_true(result.success)
@@ -217,6 +227,11 @@ describe("AWS iotfleetwise service testing", function()
 
 	it("should generate a cli skeleton with list_vehicles", function()
 		local result = service.list_vehicles()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_vehicles_in_fleet", function()
+		local result = service.list_vehicles_in_fleet()
 		assert.is_true(result.success)
 	end)
 

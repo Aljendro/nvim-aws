@@ -205,6 +205,11 @@ describe("AWS vpc-lattice service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_access_log_subscriptions", function()
 		local result = service.list_access_log_subscriptions()
 		assert.is_true(result.success)

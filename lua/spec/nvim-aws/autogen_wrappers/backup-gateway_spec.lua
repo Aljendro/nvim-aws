@@ -30,6 +30,11 @@ describe("AWS backup-gateway service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_bandwidth_rate_limit_schedule", function()
+		local result = service.get_bandwidth_rate_limit_schedule()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_gateway", function()
 		local result = service.get_gateway()
 		assert.is_true(result.success)
@@ -40,8 +45,18 @@ describe("AWS backup-gateway service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_hypervisor_property_mappings", function()
+		local result = service.get_hypervisor_property_mappings()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_virtual_machine", function()
 		local result = service.get_virtual_machine()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -67,6 +82,16 @@ describe("AWS backup-gateway service testing", function()
 
 	it("should generate a cli skeleton with list_virtual_machines", function()
 		local result = service.list_virtual_machines()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with put_bandwidth_rate_limit_schedule", function()
+		local result = service.put_bandwidth_rate_limit_schedule()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with put_hypervisor_property_mappings", function()
+		local result = service.put_hypervisor_property_mappings()
 		assert.is_true(result.success)
 	end)
 

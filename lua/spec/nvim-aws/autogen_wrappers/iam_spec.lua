@@ -105,11 +105,6 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with create_virtual_mfa_device", function()
-		local result = service.create_virtual_mfa_device()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with deactivate_mfa_device", function()
 		local result = service.deactivate_mfa_device()
 		assert.is_true(result.success)
@@ -185,11 +180,6 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with delete_ssh_public_key", function()
-		local result = service.delete_ssh_public_key()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with delete_server_certificate", function()
 		local result = service.delete_server_certificate()
 		assert.is_true(result.success)
@@ -207,6 +197,11 @@ describe("AWS iam service testing", function()
 
 	it("should generate a cli skeleton with delete_signing_certificate", function()
 		local result = service.delete_signing_certificate()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with delete_ssh_public_key", function()
+		local result = service.delete_ssh_public_key()
 		assert.is_true(result.success)
 	end)
 
@@ -380,11 +375,6 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_ssh_public_key", function()
-		local result = service.get_ssh_public_key()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_server_certificate", function()
 		local result = service.get_server_certificate()
 		assert.is_true(result.success)
@@ -405,6 +395,11 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_ssh_public_key", function()
+		local result = service.get_ssh_public_key()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_user", function()
 		local result = service.get_user()
 		assert.is_true(result.success)
@@ -412,6 +407,11 @@ describe("AWS iam service testing", function()
 
 	it("should generate a cli skeleton with get_user_policy", function()
 		local result = service.get_user_policy()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
@@ -545,11 +545,6 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with list_ssh_public_keys", function()
-		local result = service.list_ssh_public_keys()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with list_server_certificate_tags", function()
 		local result = service.list_server_certificate_tags()
 		assert.is_true(result.success)
@@ -567,6 +562,11 @@ describe("AWS iam service testing", function()
 
 	it("should generate a cli skeleton with list_signing_certificates", function()
 		local result = service.list_signing_certificates()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_ssh_public_keys", function()
+		local result = service.list_ssh_public_keys()
 		assert.is_true(result.success)
 	end)
 
@@ -785,11 +785,6 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with update_ssh_public_key", function()
-		local result = service.update_ssh_public_key()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with update_server_certificate", function()
 		local result = service.update_server_certificate()
 		assert.is_true(result.success)
@@ -805,13 +800,13 @@ describe("AWS iam service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with update_user", function()
-		local result = service.update_user()
+	it("should generate a cli skeleton with update_ssh_public_key", function()
+		local result = service.update_ssh_public_key()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with upload_ssh_public_key", function()
-		local result = service.upload_ssh_public_key()
+	it("should generate a cli skeleton with update_user", function()
+		local result = service.update_user()
 		assert.is_true(result.success)
 	end)
 
@@ -822,6 +817,11 @@ describe("AWS iam service testing", function()
 
 	it("should generate a cli skeleton with upload_signing_certificate", function()
 		local result = service.upload_signing_certificate()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with upload_ssh_public_key", function()
+		local result = service.upload_ssh_public_key()
 		assert.is_true(result.success)
 	end)
 

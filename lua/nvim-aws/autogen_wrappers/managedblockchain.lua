@@ -6,190 +6,197 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MANAGEDBLOCKCHAIN service functions
 local M = {}
 
---- Creates a new accessor for use with Amazon Managed Blockchain service that supports token based access
---- @param input table|nil The input table for the create_accessor command
+--- AWS managedblockchain create-accessor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_accessor(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "create-accessor" }, input)
 end
 
---- Creates a member within a Managed Blockchain network
---- @param input table|nil The input table for the create_member command
+--- AWS managedblockchain create-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_member(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "create-member" }, input)
 end
 
---- Creates a new blockchain network using Amazon Managed Blockchain
---- @param input table|nil The input table for the create_network command
+--- AWS managedblockchain create-network operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_network(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "create-network" }, input)
 end
 
---- Creates a node on the specified blockchain network
---- @param input table|nil The input table for the create_node command
+--- AWS managedblockchain create-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_node(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "create-node" }, input)
 end
 
---- Creates a proposal for a change to the network that other members of the network can vote on, for example, a proposal to add a new member to the network
---- @param input table|nil The input table for the create_proposal command
+--- AWS managedblockchain create-proposal operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_proposal(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "create-proposal" }, input)
 end
 
---- Deletes an accessor that your Amazon Web Services account owns
---- @param input table|nil The input table for the delete_accessor command
+--- AWS managedblockchain delete-accessor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_accessor(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "delete-accessor" }, input)
 end
 
---- Deletes a member
---- @param input table|nil The input table for the delete_member command
+--- AWS managedblockchain delete-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_member(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "delete-member" }, input)
 end
 
---- Deletes a node that your Amazon Web Services account owns
---- @param input table|nil The input table for the delete_node command
+--- AWS managedblockchain delete-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_node(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "delete-node" }, input)
 end
 
---- Returns detailed information about an accessor
---- @param input table|nil The input table for the get_accessor command
+--- AWS managedblockchain get-accessor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_accessor(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "get-accessor" }, input)
 end
 
---- Returns detailed information about a member
---- @param input table|nil The input table for the get_member command
+--- AWS managedblockchain get-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_member(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "get-member" }, input)
 end
 
---- Returns detailed information about a network
---- @param input table|nil The input table for the get_network command
+--- AWS managedblockchain get-network operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_network(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "get-network" }, input)
 end
 
---- Returns detailed information about a node
---- @param input table|nil The input table for the get_node command
+--- AWS managedblockchain get-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_node(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "get-node" }, input)
 end
 
---- Returns detailed information about a proposal
---- @param input table|nil The input table for the get_proposal command
+--- AWS managedblockchain get-proposal operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_proposal(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "get-proposal" }, input)
 end
 
---- Returns a list of the accessors and their properties
---- @param input table|nil The input table for the list_accessors command
+--- AWS managedblockchain help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "managedblockchain", "help" }, input)
+end
+
+--- AWS managedblockchain list-accessors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_accessors(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-accessors" }, input)
 end
 
---- Returns a list of all invitations for the current Amazon Web Services account
---- @param input table|nil The input table for the list_invitations command
+--- AWS managedblockchain list-invitations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_invitations(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-invitations" }, input)
 end
 
---- Returns a list of the members in a network and properties of their configurations
---- @param input table|nil The input table for the list_members command
+--- AWS managedblockchain list-members operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_members(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-members" }, input)
 end
 
---- Returns information about the networks in which the current Amazon Web Services account participates
---- @param input table|nil The input table for the list_networks command
+--- AWS managedblockchain list-networks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_networks(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-networks" }, input)
 end
 
---- Returns information about the nodes within a network
---- @param input table|nil The input table for the list_nodes command
+--- AWS managedblockchain list-nodes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_nodes(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-nodes" }, input)
 end
 
---- Returns the list of votes for a specified proposal, including the value of each vote and the unique identifier of the member that cast the vote
---- @param input table|nil The input table for the list_proposal_votes command
+--- AWS managedblockchain list-proposal-votes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_proposal_votes(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-proposal-votes" }, input)
 end
 
---- Returns a list of proposals for the network
---- @param input table|nil The input table for the list_proposals command
+--- AWS managedblockchain list-proposals operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_proposals(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-proposals" }, input)
 end
 
---- Returns a list of tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS managedblockchain list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "list-tags-for-resource" }, input)
 end
 
---- Rejects an invitation to join a network
---- @param input table|nil The input table for the reject_invitation command
+--- AWS managedblockchain reject-invitation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reject_invitation(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "reject-invitation" }, input)
 end
 
---- Adds or overwrites the specified tags for the specified Amazon Managed Blockchain resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS managedblockchain tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the Amazon Managed Blockchain resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS managedblockchain untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "untag-resource" }, input)
 end
 
---- Updates a member configuration with new parameters
---- @param input table|nil The input table for the update_member command
+--- AWS managedblockchain update-member operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_member(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "update-member" }, input)
 end
 
---- Updates a node configuration with new parameters
---- @param input table|nil The input table for the update_node command
+--- AWS managedblockchain update-node operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_node(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "update-node" }, input)
 end
 
---- Casts a vote for a specified ProposalId on behalf of a member
---- @param input table|nil The input table for the vote_on_proposal command
+--- AWS managedblockchain vote-on-proposal operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.vote_on_proposal(input)
 	return common.execute_aws_command_with_input({ "managedblockchain", "vote-on-proposal" }, input)

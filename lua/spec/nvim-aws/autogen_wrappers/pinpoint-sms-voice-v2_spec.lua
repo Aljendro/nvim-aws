@@ -280,6 +280,11 @@ describe("AWS pinpoint-sms-voice-v2 service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_pool_origination_identities", function()
 		local result = service.list_pool_origination_identities()
 		assert.is_true(result.success)

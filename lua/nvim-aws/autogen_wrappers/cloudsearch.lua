@@ -6,183 +6,190 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLOUDSEARCH service functions
 local M = {}
 
---- Indexes the search suggestions
---- @param input table|nil The input table for the build_suggesters command
+--- AWS cloudsearch build-suggesters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.build_suggesters(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "build-suggesters" }, input)
 end
 
---- Creates a new search domain
---- @param input table|nil The input table for the create_domain command
+--- AWS cloudsearch create-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "create-domain" }, input)
 end
 
---- Configures an analysis scheme that can be applied to a text or text-array field to define language-specific text processing options
---- @param input table|nil The input table for the define_analysis_scheme command
+--- AWS cloudsearch define-analysis-scheme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.define_analysis_scheme(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "define-analysis-scheme" }, input)
 end
 
---- Configures an Expression for the search domain
---- @param input table|nil The input table for the define_expression command
+--- AWS cloudsearch define-expression operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.define_expression(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "define-expression" }, input)
 end
 
---- Configures an IndexField for the search domain
---- @param input table|nil The input table for the define_index_field command
+--- AWS cloudsearch define-index-field operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.define_index_field(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "define-index-field" }, input)
 end
 
---- Configures a suggester for a domain
---- @param input table|nil The input table for the define_suggester command
+--- AWS cloudsearch define-suggester operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.define_suggester(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "define-suggester" }, input)
 end
 
---- Deletes an analysis scheme
---- @param input table|nil The input table for the delete_analysis_scheme command
+--- AWS cloudsearch delete-analysis-scheme operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_analysis_scheme(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "delete-analysis-scheme" }, input)
 end
 
---- Permanently deletes a search domain and all of its data
---- @param input table|nil The input table for the delete_domain command
+--- AWS cloudsearch delete-domain operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "delete-domain" }, input)
 end
 
---- Removes an Expression from the search domain
---- @param input table|nil The input table for the delete_expression command
+--- AWS cloudsearch delete-expression operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_expression(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "delete-expression" }, input)
 end
 
---- Removes an IndexField from the search domain
---- @param input table|nil The input table for the delete_index_field command
+--- AWS cloudsearch delete-index-field operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_index_field(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "delete-index-field" }, input)
 end
 
---- Deletes a suggester
---- @param input table|nil The input table for the delete_suggester command
+--- AWS cloudsearch delete-suggester operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_suggester(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "delete-suggester" }, input)
 end
 
---- Gets the analysis schemes configured for a domain
---- @param input table|nil The input table for the describe_analysis_schemes command
+--- AWS cloudsearch describe-analysis-schemes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_analysis_schemes(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-analysis-schemes" }, input)
 end
 
---- Gets the availability options configured for a domain
---- @param input table|nil The input table for the describe_availability_options command
+--- AWS cloudsearch describe-availability-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_availability_options(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-availability-options" }, input)
 end
 
---- Returns the domain's endpoint options, specifically whether all requests to the domain must arrive over HTTPS
---- @param input table|nil The input table for the describe_domain_endpoint_options command
+--- AWS cloudsearch describe-domain-endpoint-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_domain_endpoint_options(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-domain-endpoint-options" }, input)
 end
 
---- Gets information about the search domains owned by this account
---- @param input table|nil The input table for the describe_domains command
+--- AWS cloudsearch describe-domains operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_domains(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-domains" }, input)
 end
 
---- Gets the expressions configured for the search domain
---- @param input table|nil The input table for the describe_expressions command
+--- AWS cloudsearch describe-expressions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_expressions(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-expressions" }, input)
 end
 
---- Gets information about the index fields configured for the search domain
---- @param input table|nil The input table for the describe_index_fields command
+--- AWS cloudsearch describe-index-fields operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_index_fields(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-index-fields" }, input)
 end
 
---- Gets the scaling parameters configured for a domain
---- @param input table|nil The input table for the describe_scaling_parameters command
+--- AWS cloudsearch describe-scaling-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_scaling_parameters(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-scaling-parameters" }, input)
 end
 
---- Gets information about the access policies that control access to the domain's document and search endpoints
---- @param input table|nil The input table for the describe_service_access_policies command
+--- AWS cloudsearch describe-service-access-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_service_access_policies(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-service-access-policies" }, input)
 end
 
---- Gets the suggesters configured for a domain
---- @param input table|nil The input table for the describe_suggesters command
+--- AWS cloudsearch describe-suggesters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_suggesters(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "describe-suggesters" }, input)
 end
 
---- Tells the search domain to start indexing its documents using the latest indexing options
---- @param input table|nil The input table for the index_documents command
+--- AWS cloudsearch help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cloudsearch", "help" }, input)
+end
+
+--- AWS cloudsearch index-documents operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.index_documents(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "index-documents" }, input)
 end
 
---- Lists all search domains owned by an account
+--- AWS cloudsearch list-domain-names operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domain_names(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "list-domain-names" }, input)
 end
 
---- Configures the availability options for a domain
---- @param input table|nil The input table for the update_availability_options command
+--- AWS cloudsearch update-availability-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_availability_options(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "update-availability-options" }, input)
 end
 
---- Updates the domain's endpoint options, specifically whether all requests to the domain must arrive over HTTPS
---- @param input table|nil The input table for the update_domain_endpoint_options command
+--- AWS cloudsearch update-domain-endpoint-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_endpoint_options(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "update-domain-endpoint-options" }, input)
 end
 
---- Configures scaling parameters for a domain
---- @param input table|nil The input table for the update_scaling_parameters command
+--- AWS cloudsearch update-scaling-parameters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_scaling_parameters(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "update-scaling-parameters" }, input)
 end
 
---- Configures the access rules that control access to the domain's document and search endpoints
---- @param input table|nil The input table for the update_service_access_policies command
+--- AWS cloudsearch update-service-access-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_service_access_policies(input)
 	return common.execute_aws_command_with_input({ "cloudsearch", "update-service-access-policies" }, input)

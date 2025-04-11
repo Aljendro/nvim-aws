@@ -6,60 +6,221 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS MEDIAPACKAGEV2 service functions
 local M = {}
 
---- Create a channel group to group your channels and origin endpoints
---- @param input table|nil The input table for the create_channel_group command
+--- AWS mediapackagev2 cancel-harvest-job operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.cancel_harvest_job(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "cancel-harvest-job" }, input)
+end
+
+--- AWS mediapackagev2 create-channel operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_channel(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "create-channel" }, input)
+end
+
+--- AWS mediapackagev2 create-channel-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "create-channel-group" }, input)
 end
 
---- Delete a channel group
---- @param input table|nil The input table for the delete_channel_group command
+--- AWS mediapackagev2 create-harvest-job operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_harvest_job(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "create-harvest-job" }, input)
+end
+
+--- AWS mediapackagev2 create-origin-endpoint operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_origin_endpoint(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "create-origin-endpoint" }, input)
+end
+
+--- AWS mediapackagev2 delete-channel operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_channel(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-channel" }, input)
+end
+
+--- AWS mediapackagev2 delete-channel-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-channel-group" }, input)
 end
 
---- Retrieves the specified channel group that's configured in AWS Elemental MediaPackage, including the channels and origin endpoints that are associated with it
---- @param input table|nil The input table for the get_channel_group command
+--- AWS mediapackagev2 delete-channel-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_channel_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-channel-policy" }, input)
+end
+
+--- AWS mediapackagev2 delete-origin-endpoint operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_origin_endpoint(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-origin-endpoint" }, input)
+end
+
+--- AWS mediapackagev2 delete-origin-endpoint-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_origin_endpoint_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "delete-origin-endpoint-policy" }, input)
+end
+
+--- AWS mediapackagev2 get-channel operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_channel(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "get-channel" }, input)
+end
+
+--- AWS mediapackagev2 get-channel-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "get-channel-group" }, input)
 end
 
---- Retrieves all channel groups that are configured in Elemental MediaPackage
---- @param input table|nil The input table for the list_channel_groups command
+--- AWS mediapackagev2 get-channel-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_channel_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "get-channel-policy" }, input)
+end
+
+--- AWS mediapackagev2 get-harvest-job operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_harvest_job(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "get-harvest-job" }, input)
+end
+
+--- AWS mediapackagev2 get-origin-endpoint operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_origin_endpoint(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "get-origin-endpoint" }, input)
+end
+
+--- AWS mediapackagev2 get-origin-endpoint-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_origin_endpoint_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "get-origin-endpoint-policy" }, input)
+end
+
+--- AWS mediapackagev2 help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "help" }, input)
+end
+
+--- AWS mediapackagev2 list-channel-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_channel_groups(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "list-channel-groups" }, input)
 end
 
---- Lists the tags assigned to a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS mediapackagev2 list-channels operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_channels(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "list-channels" }, input)
+end
+
+--- AWS mediapackagev2 list-harvest-jobs operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_harvest_jobs(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "list-harvest-jobs" }, input)
+end
+
+--- AWS mediapackagev2 list-origin-endpoints operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_origin_endpoints(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "list-origin-endpoints" }, input)
+end
+
+--- AWS mediapackagev2 list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "list-tags-for-resource" }, input)
 end
 
---- Assigns one of more tags (key-value pairs) to the specified MediaPackage resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS mediapackagev2 put-channel-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_channel_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "put-channel-policy" }, input)
+end
+
+--- AWS mediapackagev2 put-origin-endpoint-policy operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_origin_endpoint_policy(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "put-origin-endpoint-policy" }, input)
+end
+
+--- AWS mediapackagev2 reset-channel-state operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.reset_channel_state(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "reset-channel-state" }, input)
+end
+
+--- AWS mediapackagev2 reset-origin-endpoint-state operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.reset_origin_endpoint_state(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "reset-origin-endpoint-state" }, input)
+end
+
+--- AWS mediapackagev2 tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "tag-resource" }, input)
 end
 
---- Removes one or more tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS mediapackagev2 untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "untag-resource" }, input)
 end
 
---- Update the specified channel group
---- @param input table|nil The input table for the update_channel_group command
+--- AWS mediapackagev2 update-channel operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_channel(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "update-channel" }, input)
+end
+
+--- AWS mediapackagev2 update-channel-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_channel_group(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "update-channel-group" }, input)
+end
+
+--- AWS mediapackagev2 update-origin-endpoint operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_origin_endpoint(input)
+	return common.execute_aws_command_with_input({ "mediapackagev2", "update-origin-endpoint" }, input)
 end
 
 return M

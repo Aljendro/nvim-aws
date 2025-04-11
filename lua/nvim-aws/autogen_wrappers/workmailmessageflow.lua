@@ -6,15 +6,15 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS WORKMAILMESSAGEFLOW service functions
 local M = {}
 
---- Retrieves the raw content of an in-transit email message, in MIME format
---- @param input table|nil The input table for the get_raw_message_content command
+--- AWS workmailmessageflow help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_raw_message_content(input)
-	return common.execute_aws_command_with_input({ "workmailmessageflow", "get-raw-message-content" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "workmailmessageflow", "help" }, input)
 end
 
---- Updates the raw content of an in-transit email message, in MIME format
---- @param input table|nil The input table for the put_raw_message_content command
+--- AWS workmailmessageflow put-raw-message-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_raw_message_content(input)
 	return common.execute_aws_command_with_input({ "workmailmessageflow", "put-raw-message-content" }, input)

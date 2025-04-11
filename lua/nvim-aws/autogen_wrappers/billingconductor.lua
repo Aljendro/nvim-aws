@@ -6,211 +6,232 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BILLINGCONDUCTOR service functions
 local M = {}
 
---- Connects an array of account IDs in a consolidated billing family to a predefined billing group
---- @param input table|nil The input table for the associate_accounts command
+--- AWS billingconductor associate-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_accounts(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "associate-accounts" }, input)
 end
 
---- Connects an array of PricingRuleArns to a defined PricingPlan
---- @param input table|nil The input table for the associate_pricing_rules command
+--- AWS billingconductor associate-pricing-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_pricing_rules(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "associate-pricing-rules" }, input)
 end
 
---- Associates a batch of resources to a percentage custom line item
---- @param input table|nil The input table for the batch_associate_resources_to_custom_line_item command
+--- AWS billingconductor batch-associate-resources-to-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_resources_to_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "batch-associate-resources-to-custom-line-item" }, input)
 end
 
---- Disassociates a batch of resources from a percentage custom line item
---- @param input table|nil The input table for the batch_disassociate_resources_from_custom_line_item command
+--- AWS billingconductor batch-disassociate-resources-from-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_resources_from_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "batch-disassociate-resources-from-custom-line-item" }, input)
 end
 
---- Creates a billing group that resembles a consolidated billing family that Amazon Web Services charges, based off of the predefined pricing plan computation
---- @param input table|nil The input table for the create_billing_group command
+--- AWS billingconductor create-billing-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_billing_group(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "create-billing-group" }, input)
 end
 
---- Creates a custom line item that can be used to create a one-time fixed charge that can be applied to a single billing group for the current or previous billing period
---- @param input table|nil The input table for the create_custom_line_item command
+--- AWS billingconductor create-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "create-custom-line-item" }, input)
 end
 
---- Creates a pricing plan that is used for computing Amazon Web Services charges for billing groups
---- @param input table|nil The input table for the create_pricing_plan command
+--- AWS billingconductor create-pricing-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pricing_plan(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "create-pricing-plan" }, input)
 end
 
---- Creates a pricing rule can be associated to a pricing plan, or a set of pricing plans
---- @param input table|nil The input table for the create_pricing_rule command
+--- AWS billingconductor create-pricing-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_pricing_rule(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "create-pricing-rule" }, input)
 end
 
---- Deletes a billing group
---- @param input table|nil The input table for the delete_billing_group command
+--- AWS billingconductor delete-billing-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_billing_group(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "delete-billing-group" }, input)
 end
 
---- Deletes the custom line item identified by the given ARN in the current, or previous billing period
---- @param input table|nil The input table for the delete_custom_line_item command
+--- AWS billingconductor delete-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "delete-custom-line-item" }, input)
 end
 
---- Deletes a pricing plan
---- @param input table|nil The input table for the delete_pricing_plan command
+--- AWS billingconductor delete-pricing-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pricing_plan(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "delete-pricing-plan" }, input)
 end
 
---- Deletes the pricing rule that's identified by the input Amazon Resource Name (ARN)
---- @param input table|nil The input table for the delete_pricing_rule command
+--- AWS billingconductor delete-pricing-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_pricing_rule(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "delete-pricing-rule" }, input)
 end
 
---- Removes the specified list of account IDs from the given billing group
---- @param input table|nil The input table for the disassociate_accounts command
+--- AWS billingconductor disassociate-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_accounts(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "disassociate-accounts" }, input)
 end
 
---- Disassociates a list of pricing rules from a pricing plan
---- @param input table|nil The input table for the disassociate_pricing_rules command
+--- AWS billingconductor disassociate-pricing-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_pricing_rules(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "disassociate-pricing-rules" }, input)
 end
 
---- Retrieves the margin summary report, which includes the Amazon Web Services cost and charged amount (pro forma cost) by Amazon Web Service for a specific billing group
---- @param input table|nil The input table for the get_billing_group_cost_report command
+--- AWS billingconductor get-billing-group-cost-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_billing_group_cost_report(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "get-billing-group-cost-report" }, input)
 end
 
---- This is a paginated call to list linked accounts that are linked to the payer account for the specified time period
---- @param input table|nil The input table for the list_account_associations command
+--- AWS billingconductor help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "billingconductor", "help" }, input)
+end
+
+--- AWS billingconductor list-account-associations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_account_associations(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-account-associations" }, input)
 end
 
---- A paginated call to retrieve a summary report of actual Amazon Web Services charges and the calculated Amazon Web Services charges based on the associated pricing plan of a billing group
---- @param input table|nil The input table for the list_billing_group_cost_reports command
+--- AWS billingconductor list-billing-group-cost-reports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_billing_group_cost_reports(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-billing-group-cost-reports" }, input)
 end
 
---- A paginated call to retrieve a list of billing groups for the given billing period
---- @param input table|nil The input table for the list_billing_groups command
+--- AWS billingconductor list-billing-groups operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_billing_groups(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-billing-groups" }, input)
 end
 
---- A paginated call to get a list of all custom line item versions
---- @param input table|nil The input table for the list_custom_line_item_versions command
+--- AWS billingconductor list-custom-line-item-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_line_item_versions(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-custom-line-item-versions" }, input)
 end
 
---- A paginated call to get a list of all custom line items (FFLIs) for the given billing period
---- @param input table|nil The input table for the list_custom_line_items command
+--- AWS billingconductor list-custom-line-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_custom_line_items(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-custom-line-items" }, input)
 end
 
---- A paginated call to get pricing plans for the given billing period
---- @param input table|nil The input table for the list_pricing_plans command
+--- AWS billingconductor list-pricing-plans operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pricing_plans(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-pricing-plans" }, input)
 end
 
---- Describes a pricing rule that can be associated to a pricing plan, or set of pricing plans
---- @param input table|nil The input table for the list_pricing_rules command
+--- AWS billingconductor list-pricing-plans-associated-with-pricing-rule operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_pricing_plans_associated_with_pricing_rule(input)
+	return common.execute_aws_command_with_input({ "billingconductor", "list-pricing-plans-associated-with-pricing-rule" }, input)
+end
+
+--- AWS billingconductor list-pricing-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_pricing_rules(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-pricing-rules" }, input)
 end
 
---- List the resources that are associated to a custom line item
---- @param input table|nil The input table for the list_resources_associated_to_custom_line_item command
+--- AWS billingconductor list-pricing-rules-associated-to-pricing-plan operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_pricing_rules_associated_to_pricing_plan(input)
+	return common.execute_aws_command_with_input({ "billingconductor", "list-pricing-rules-associated-to-pricing-plan" }, input)
+end
+
+--- AWS billingconductor list-resources-associated-to-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resources_associated_to_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-resources-associated-to-custom-line-item" }, input)
 end
 
---- A list the tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS billingconductor list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "list-tags-for-resource" }, input)
 end
 
---- Associates the specified tags to a resource with the specified resourceArn
---- @param input table|nil The input table for the tag_resource command
+--- AWS billingconductor tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "tag-resource" }, input)
 end
 
---- Deletes specified tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS billingconductor untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "untag-resource" }, input)
 end
 
---- This updates an existing billing group
---- @param input table|nil The input table for the update_billing_group command
+--- AWS billingconductor update-billing-group operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_billing_group(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "update-billing-group" }, input)
 end
 
---- Update an existing custom line item in the current or previous billing period
---- @param input table|nil The input table for the update_custom_line_item command
+--- AWS billingconductor update-custom-line-item operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_custom_line_item(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "update-custom-line-item" }, input)
 end
 
---- This updates an existing pricing plan
---- @param input table|nil The input table for the update_pricing_plan command
+--- AWS billingconductor update-pricing-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pricing_plan(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "update-pricing-plan" }, input)
 end
 
---- Updates an existing pricing rule
---- @param input table|nil The input table for the update_pricing_rule command
+--- AWS billingconductor update-pricing-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_pricing_rule(input)
 	return common.execute_aws_command_with_input({ "billingconductor", "update-pricing-rule" }, input)

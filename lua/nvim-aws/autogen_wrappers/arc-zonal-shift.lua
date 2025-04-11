@@ -6,92 +6,99 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS ARC-ZONAL-SHIFT service functions
 local M = {}
 
---- Cancel a zonal shift in Amazon Route 53 Application Recovery Controller
---- @param input table|nil The input table for the cancel_zonal_shift command
+--- AWS arc-zonal-shift cancel-zonal-shift operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_zonal_shift(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "cancel-zonal-shift" }, input)
 end
 
---- A practice run configuration for zonal autoshift is required when you enable zonal autoshift
---- @param input table|nil The input table for the create_practice_run_configuration command
+--- AWS arc-zonal-shift create-practice-run-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_practice_run_configuration(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "create-practice-run-configuration" }, input)
 end
 
---- Deletes the practice run configuration for a resource
---- @param input table|nil The input table for the delete_practice_run_configuration command
+--- AWS arc-zonal-shift delete-practice-run-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_practice_run_configuration(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "delete-practice-run-configuration" }, input)
 end
 
---- Returns the status of the autoshift observer notification
---- @param input table|nil The input table for the get_autoshift_observer_notification_status command
+--- AWS arc-zonal-shift get-autoshift-observer-notification-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_autoshift_observer_notification_status(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "get-autoshift-observer-notification-status" }, input)
 end
 
---- Get information about a resource that's been registered for zonal shifts with Amazon Route 53 Application Recovery Controller in this Amazon Web Services Region
---- @param input table|nil The input table for the get_managed_resource command
+--- AWS arc-zonal-shift get-managed-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_managed_resource(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "get-managed-resource" }, input)
 end
 
---- Returns the autoshifts for an Amazon Web Services Region
---- @param input table|nil The input table for the list_autoshifts command
+--- AWS arc-zonal-shift help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "arc-zonal-shift", "help" }, input)
+end
+
+--- AWS arc-zonal-shift list-autoshifts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_autoshifts(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "list-autoshifts" }, input)
 end
 
---- Lists all the resources in your Amazon Web Services account in this Amazon Web Services Region that are managed for zonal shifts in Amazon Route 53 Application Recovery Controller, and information about them
---- @param input table|nil The input table for the list_managed_resources command
+--- AWS arc-zonal-shift list-managed-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_managed_resources(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "list-managed-resources" }, input)
 end
 
---- Lists all active and completed zonal shifts in Amazon Route 53 Application Recovery Controller in your Amazon Web Services account in this Amazon Web Services Region
---- @param input table|nil The input table for the list_zonal_shifts command
+--- AWS arc-zonal-shift list-zonal-shifts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_zonal_shifts(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "list-zonal-shifts" }, input)
 end
 
---- You start a zonal shift to temporarily move load balancer traffic away from an Availability Zone in an Amazon Web Services Region, to help your application recover immediately, for example, from a developer's bad code deployment or from an Amazon Web Services infrastructure failure in a single Availability Zone
---- @param input table|nil The input table for the start_zonal_shift command
+--- AWS arc-zonal-shift start-zonal-shift operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_zonal_shift(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "start-zonal-shift" }, input)
 end
 
---- Update the status of autoshift observer notification
---- @param input table|nil The input table for the update_autoshift_observer_notification_status command
+--- AWS arc-zonal-shift update-autoshift-observer-notification-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_autoshift_observer_notification_status(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "update-autoshift-observer-notification-status" }, input)
 end
 
---- Update a practice run configuration to change one or more of the following: add, change, or remove the blocking alarm; change the outcome alarm; or add, change, or remove blocking dates or time windows
---- @param input table|nil The input table for the update_practice_run_configuration command
+--- AWS arc-zonal-shift update-practice-run-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_practice_run_configuration(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "update-practice-run-configuration" }, input)
 end
 
---- The zonal autoshift configuration for a resource includes the practice run configuration and the status for running autoshifts, zonal autoshift status
---- @param input table|nil The input table for the update_zonal_autoshift_configuration command
+--- AWS arc-zonal-shift update-zonal-autoshift-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_zonal_autoshift_configuration(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "update-zonal-autoshift-configuration" }, input)
 end
 
---- Update an active zonal shift in Amazon Route 53 Application Recovery Controller in your Amazon Web Services account
---- @param input table|nil The input table for the update_zonal_shift command
+--- AWS arc-zonal-shift update-zonal-shift operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_zonal_shift(input)
 	return common.execute_aws_command_with_input({ "arc-zonal-shift", "update-zonal-shift" }, input)

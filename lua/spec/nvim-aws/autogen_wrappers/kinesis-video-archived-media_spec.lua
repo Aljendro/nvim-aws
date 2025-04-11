@@ -5,11 +5,6 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.kinesis-video-archived-media")
 
 describe("AWS kinesis-video-archived-media service testing", function()
-	it("should generate a cli skeleton with get_clip", function()
-		local result = service.get_clip()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_dash_streaming_session_url", function()
 		local result = service.get_dash_streaming_session_url()
 		assert.is_true(result.success)
@@ -25,8 +20,8 @@ describe("AWS kinesis-video-archived-media service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_media_for_fragment_list", function()
-		local result = service.get_media_for_fragment_list()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

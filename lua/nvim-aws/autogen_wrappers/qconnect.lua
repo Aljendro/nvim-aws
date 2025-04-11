@@ -6,200 +6,634 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS QCONNECT service functions
 local M = {}
 
---- Creates an Amazon Q in Connect assistant
---- @param input table|nil The input table for the create_assistant command
+--- AWS qconnect activate-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.activate_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "activate-message-template" }, input)
+end
+
+--- AWS qconnect create-ai-agent operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_agent(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-agent" }, input)
+end
+
+--- AWS qconnect create-ai-agent-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_agent_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-agent-version" }, input)
+end
+
+--- AWS qconnect create-ai-guardrail operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_guardrail(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-guardrail" }, input)
+end
+
+--- AWS qconnect create-ai-guardrail-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_guardrail_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-guardrail-version" }, input)
+end
+
+--- AWS qconnect create-ai-prompt operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_prompt(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-prompt" }, input)
+end
+
+--- AWS qconnect create-ai-prompt-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_ai_prompt_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-ai-prompt-version" }, input)
+end
+
+--- AWS qconnect create-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_assistant(input)
 	return common.execute_aws_command_with_input({ "qconnect", "create-assistant" }, input)
 end
 
---- Creates a knowledge base
---- @param input table|nil The input table for the create_knowledge_base command
+--- AWS qconnect create-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_assistant_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-assistant-association" }, input)
+end
+
+--- AWS qconnect create-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_content(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-content" }, input)
+end
+
+--- AWS qconnect create-content-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_content_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-content-association" }, input)
+end
+
+--- AWS qconnect create-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "qconnect", "create-knowledge-base" }, input)
 end
 
---- Deletes an assistant
---- @param input table|nil The input table for the delete_assistant command
+--- AWS qconnect create-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-message-template" }, input)
+end
+
+--- AWS qconnect create-message-template-attachment operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_message_template_attachment(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-message-template-attachment" }, input)
+end
+
+--- AWS qconnect create-message-template-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_message_template_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-message-template-version" }, input)
+end
+
+--- AWS qconnect create-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_quick_response(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-quick-response" }, input)
+end
+
+--- AWS qconnect create-session operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_session(input)
+	return common.execute_aws_command_with_input({ "qconnect", "create-session" }, input)
+end
+
+--- AWS qconnect deactivate-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.deactivate_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "deactivate-message-template" }, input)
+end
+
+--- AWS qconnect delete-ai-agent operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_agent(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-agent" }, input)
+end
+
+--- AWS qconnect delete-ai-agent-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_agent_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-agent-version" }, input)
+end
+
+--- AWS qconnect delete-ai-guardrail operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_guardrail(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-guardrail" }, input)
+end
+
+--- AWS qconnect delete-ai-guardrail-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_guardrail_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-guardrail-version" }, input)
+end
+
+--- AWS qconnect delete-ai-prompt operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_prompt(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-prompt" }, input)
+end
+
+--- AWS qconnect delete-ai-prompt-version operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_ai_prompt_version(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-ai-prompt-version" }, input)
+end
+
+--- AWS qconnect delete-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_assistant(input)
 	return common.execute_aws_command_with_input({ "qconnect", "delete-assistant" }, input)
 end
 
---- Deletes the quick response import job
---- @param input table|nil The input table for the delete_import_job command
+--- AWS qconnect delete-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_assistant_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-assistant-association" }, input)
+end
+
+--- AWS qconnect delete-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_content(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-content" }, input)
+end
+
+--- AWS qconnect delete-content-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_content_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-content-association" }, input)
+end
+
+--- AWS qconnect delete-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_import_job(input)
 	return common.execute_aws_command_with_input({ "qconnect", "delete-import-job" }, input)
 end
 
---- Deletes the knowledge base
---- @param input table|nil The input table for the delete_knowledge_base command
+--- AWS qconnect delete-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "qconnect", "delete-knowledge-base" }, input)
 end
 
---- Retrieves information about an assistant
---- @param input table|nil The input table for the get_assistant command
+--- AWS qconnect delete-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-message-template" }, input)
+end
+
+--- AWS qconnect delete-message-template-attachment operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_message_template_attachment(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-message-template-attachment" }, input)
+end
+
+--- AWS qconnect delete-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_quick_response(input)
+	return common.execute_aws_command_with_input({ "qconnect", "delete-quick-response" }, input)
+end
+
+--- AWS qconnect get-ai-agent operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ai_agent(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-ai-agent" }, input)
+end
+
+--- AWS qconnect get-ai-guardrail operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ai_guardrail(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-ai-guardrail" }, input)
+end
+
+--- AWS qconnect get-ai-prompt operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_ai_prompt(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-ai-prompt" }, input)
+end
+
+--- AWS qconnect get-assistant operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_assistant(input)
 	return common.execute_aws_command_with_input({ "qconnect", "get-assistant" }, input)
 end
 
---- Retrieves the started import job
---- @param input table|nil The input table for the get_import_job command
+--- AWS qconnect get-assistant-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_assistant_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-assistant-association" }, input)
+end
+
+--- AWS qconnect get-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_content(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-content" }, input)
+end
+
+--- AWS qconnect get-content-association operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_content_association(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-content-association" }, input)
+end
+
+--- AWS qconnect get-content-summary operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_content_summary(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-content-summary" }, input)
+end
+
+--- AWS qconnect get-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_import_job(input)
 	return common.execute_aws_command_with_input({ "qconnect", "get-import-job" }, input)
 end
 
---- Retrieves information about the knowledge base
---- @param input table|nil The input table for the get_knowledge_base command
+--- AWS qconnect get-knowledge-base operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_knowledge_base(input)
 	return common.execute_aws_command_with_input({ "qconnect", "get-knowledge-base" }, input)
 end
 
---- This API will be discontinued starting June 1, 2024
---- @param input table|nil The input table for the get_recommendations command
+--- AWS qconnect get-message-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_recommendations(input)
-	return common.execute_aws_command_with_input({ "qconnect", "get-recommendations" }, input)
+function M.get_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-message-template" }, input)
 end
 
---- Lists information about assistants
---- @param input table|nil The input table for the list_assistants command
+--- AWS qconnect get-next-message operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_next_message(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-next-message" }, input)
+end
+
+--- AWS qconnect get-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_quick_response(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-quick-response" }, input)
+end
+
+--- AWS qconnect get-session operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_session(input)
+	return common.execute_aws_command_with_input({ "qconnect", "get-session" }, input)
+end
+
+--- AWS qconnect help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "qconnect", "help" }, input)
+end
+
+--- AWS qconnect list-ai-agent-versions operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_agent_versions(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-agent-versions" }, input)
+end
+
+--- AWS qconnect list-ai-agents operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_agents(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-agents" }, input)
+end
+
+--- AWS qconnect list-ai-guardrail-versions operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_guardrail_versions(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-guardrail-versions" }, input)
+end
+
+--- AWS qconnect list-ai-guardrails operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_guardrails(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-guardrails" }, input)
+end
+
+--- AWS qconnect list-ai-prompt-versions operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_prompt_versions(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-prompt-versions" }, input)
+end
+
+--- AWS qconnect list-ai-prompts operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_ai_prompts(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-ai-prompts" }, input)
+end
+
+--- AWS qconnect list-assistant-associations operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_assistant_associations(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-assistant-associations" }, input)
+end
+
+--- AWS qconnect list-assistants operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_assistants(input)
 	return common.execute_aws_command_with_input({ "qconnect", "list-assistants" }, input)
 end
 
---- Lists information about import jobs
---- @param input table|nil The input table for the list_import_jobs command
+--- AWS qconnect list-content-associations operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_content_associations(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-content-associations" }, input)
+end
+
+--- AWS qconnect list-contents operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_contents(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-contents" }, input)
+end
+
+--- AWS qconnect list-import-jobs operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_import_jobs(input)
 	return common.execute_aws_command_with_input({ "qconnect", "list-import-jobs" }, input)
 end
 
---- Lists the knowledge bases
---- @param input table|nil The input table for the list_knowledge_bases command
+--- AWS qconnect list-knowledge-bases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_knowledge_bases(input)
 	return common.execute_aws_command_with_input({ "qconnect", "list-knowledge-bases" }, input)
 end
 
---- Lists the tags for the specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS qconnect list-message-template-versions operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_message_template_versions(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-message-template-versions" }, input)
+end
+
+--- AWS qconnect list-message-templates operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_message_templates(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-message-templates" }, input)
+end
+
+--- AWS qconnect list-messages operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_messages(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-messages" }, input)
+end
+
+--- AWS qconnect list-quick-responses operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_quick_responses(input)
+	return common.execute_aws_command_with_input({ "qconnect", "list-quick-responses" }, input)
+end
+
+--- AWS qconnect list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "qconnect", "list-tags-for-resource" }, input)
 end
 
---- Removes the specified recommendations from the specified assistant's queue of newly available recommendations
---- @param input table|nil The input table for the notify_recommendations_received command
+--- AWS qconnect notify-recommendations-received operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.notify_recommendations_received(input)
 	return common.execute_aws_command_with_input({ "qconnect", "notify-recommendations-received" }, input)
 end
 
---- Provides feedback against the specified assistant for the specified target
---- @param input table|nil The input table for the put_feedback command
+--- AWS qconnect put-feedback operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_feedback(input)
 	return common.execute_aws_command_with_input({ "qconnect", "put-feedback" }, input)
 end
 
---- This API will be discontinued starting June 1, 2024
---- @param input table|nil The input table for the query_assistant command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.query_assistant(input)
-	return common.execute_aws_command_with_input({ "qconnect", "query-assistant" }, input)
-end
-
---- Removes the AI Agent that is set for use by default on an Amazon Q in Connect Assistant
---- @param input table|nil The input table for the remove_assistant_ai_agent command
+--- AWS qconnect remove-assistant-ai-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_assistant_ai_agent(input)
 	return common.execute_aws_command_with_input({ "qconnect", "remove-assistant-ai-agent" }, input)
 end
 
---- Removes a URI template from a knowledge base
---- @param input table|nil The input table for the remove_knowledge_base_template_uri command
+--- AWS qconnect remove-knowledge-base-template-uri operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.remove_knowledge_base_template_uri(input)
 	return common.execute_aws_command_with_input({ "qconnect", "remove-knowledge-base-template-uri" }, input)
 end
 
---- Searches for content in a specified knowledge base
---- @param input table|nil The input table for the search_content command
+--- AWS qconnect render-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.render_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "render-message-template" }, input)
+end
+
+--- AWS qconnect search-content operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_content(input)
 	return common.execute_aws_command_with_input({ "qconnect", "search-content" }, input)
 end
 
---- Searches for Amazon Q in Connect message templates in the specified knowledge base
---- @param input table|nil The input table for the search_message_templates command
+--- AWS qconnect search-message-templates operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_message_templates(input)
 	return common.execute_aws_command_with_input({ "qconnect", "search-message-templates" }, input)
 end
 
---- Searches existing Amazon Q in Connect quick responses in an Amazon Q in Connect knowledge base
---- @param input table|nil The input table for the search_quick_responses command
+--- AWS qconnect search-quick-responses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_quick_responses(input)
 	return common.execute_aws_command_with_input({ "qconnect", "search-quick-responses" }, input)
 end
 
---- Searches for sessions
---- @param input table|nil The input table for the search_sessions command
+--- AWS qconnect search-sessions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_sessions(input)
 	return common.execute_aws_command_with_input({ "qconnect", "search-sessions" }, input)
 end
 
---- Get a URL to upload content to a knowledge base
---- @param input table|nil The input table for the start_content_upload command
+--- AWS qconnect send-message operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.send_message(input)
+	return common.execute_aws_command_with_input({ "qconnect", "send-message" }, input)
+end
+
+--- AWS qconnect start-content-upload operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_content_upload(input)
 	return common.execute_aws_command_with_input({ "qconnect", "start-content-upload" }, input)
 end
 
---- Start an asynchronous job to import Amazon Q in Connect resources from an uploaded source file
---- @param input table|nil The input table for the start_import_job command
+--- AWS qconnect start-import-job operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_import_job(input)
 	return common.execute_aws_command_with_input({ "qconnect", "start-import-job" }, input)
 end
 
---- Adds the specified tags to the specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS qconnect tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "qconnect", "tag-resource" }, input)
 end
 
---- Removes the specified tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS qconnect untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "qconnect", "untag-resource" }, input)
 end
 
---- Updates the AI Agent that is set for use by default on an Amazon Q in Connect Assistant
---- @param input table|nil The input table for the update_assistant_ai_agent command
+--- AWS qconnect update-ai-agent operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_ai_agent(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-ai-agent" }, input)
+end
+
+--- AWS qconnect update-ai-guardrail operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_ai_guardrail(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-ai-guardrail" }, input)
+end
+
+--- AWS qconnect update-ai-prompt operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_ai_prompt(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-ai-prompt" }, input)
+end
+
+--- AWS qconnect update-assistant-ai-agent operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_assistant_ai_agent(input)
 	return common.execute_aws_command_with_input({ "qconnect", "update-assistant-ai-agent" }, input)
 end
 
---- Updates the template URI of a knowledge base
---- @param input table|nil The input table for the update_knowledge_base_template_uri command
+--- AWS qconnect update-content operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_content(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-content" }, input)
+end
+
+--- AWS qconnect update-knowledge-base-template-uri operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_knowledge_base_template_uri(input)
 	return common.execute_aws_command_with_input({ "qconnect", "update-knowledge-base-template-uri" }, input)
+end
+
+--- AWS qconnect update-message-template operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_message_template(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-message-template" }, input)
+end
+
+--- AWS qconnect update-message-template-metadata operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_message_template_metadata(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-message-template-metadata" }, input)
+end
+
+--- AWS qconnect update-quick-response operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_quick_response(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-quick-response" }, input)
+end
+
+--- AWS qconnect update-session operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_session(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-session" }, input)
+end
+
+--- AWS qconnect update-session-data operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_session_data(input)
+	return common.execute_aws_command_with_input({ "qconnect", "update-session-data" }, input)
 end
 
 return M

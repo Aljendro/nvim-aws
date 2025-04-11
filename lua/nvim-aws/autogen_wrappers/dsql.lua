@@ -6,57 +6,78 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS DSQL service functions
 local M = {}
 
---- Creates a cluster in Amazon Aurora DSQL
---- @param input table|nil The input table for the create_cluster command
+--- AWS dsql create-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "create-cluster" }, input)
 end
 
---- Deletes a cluster in Amazon Aurora DSQL
---- @param input table|nil The input table for the delete_cluster command
+--- AWS dsql create-multi-region-clusters operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_multi_region_clusters(input)
+	return common.execute_aws_command_with_input({ "dsql", "create-multi-region-clusters" }, input)
+end
+
+--- AWS dsql delete-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "delete-cluster" }, input)
 end
 
---- Retrieves information about a cluster
---- @param input table|nil The input table for the get_cluster command
+--- AWS dsql delete-multi-region-clusters operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_multi_region_clusters(input)
+	return common.execute_aws_command_with_input({ "dsql", "delete-multi-region-clusters" }, input)
+end
+
+--- AWS dsql get-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "get-cluster" }, input)
 end
 
---- Retrieves information about a list of clusters
---- @param input table|nil The input table for the list_clusters command
+--- AWS dsql help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "dsql", "help" }, input)
+end
+
+--- AWS dsql list-clusters operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_clusters(input)
 	return common.execute_aws_command_with_input({ "dsql", "list-clusters" }, input)
 end
 
---- Lists all of the tags for a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS dsql list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "dsql", "list-tags-for-resource" }, input)
 end
 
---- Tags a resource with a map of key and value pairs
---- @param input table|nil The input table for the tag_resource command
+--- AWS dsql tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "dsql", "tag-resource" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS dsql untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "dsql", "untag-resource" }, input)
 end
 
---- Updates a cluster
---- @param input table|nil The input table for the update_cluster command
+--- AWS dsql update-cluster operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "update-cluster" }, input)

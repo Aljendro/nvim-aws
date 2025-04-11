@@ -6,71 +6,78 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS RBIN service functions
 local M = {}
 
---- Creates a Recycle Bin retention rule
---- @param input table|nil The input table for the create_rule command
+--- AWS rbin create-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "create-rule" }, input)
 end
 
---- Deletes a Recycle Bin retention rule
---- @param input table|nil The input table for the delete_rule command
+--- AWS rbin delete-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "delete-rule" }, input)
 end
 
---- Gets information about a Recycle Bin retention rule
---- @param input table|nil The input table for the get_rule command
+--- AWS rbin get-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "get-rule" }, input)
 end
 
---- Lists the Recycle Bin retention rules in the Region
---- @param input table|nil The input table for the list_rules command
+--- AWS rbin help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "rbin", "help" }, input)
+end
+
+--- AWS rbin list-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_rules(input)
 	return common.execute_aws_command_with_input({ "rbin", "list-rules" }, input)
 end
 
---- Lists the tags assigned to a retention rule
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS rbin list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "rbin", "list-tags-for-resource" }, input)
 end
 
---- Locks a Region-level retention rule
---- @param input table|nil The input table for the lock_rule command
+--- AWS rbin lock-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.lock_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "lock-rule" }, input)
 end
 
---- Assigns tags to the specified retention rule
---- @param input table|nil The input table for the tag_resource command
+--- AWS rbin tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "rbin", "tag-resource" }, input)
 end
 
---- Unlocks a retention rule
---- @param input table|nil The input table for the unlock_rule command
+--- AWS rbin unlock-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.unlock_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "unlock-rule" }, input)
 end
 
---- Unassigns a tag from a retention rule
---- @param input table|nil The input table for the untag_resource command
+--- AWS rbin untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "rbin", "untag-resource" }, input)
 end
 
---- Updates an existing Recycle Bin retention rule
---- @param input table|nil The input table for the update_rule command
+--- AWS rbin update-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_rule(input)
 	return common.execute_aws_command_with_input({ "rbin", "update-rule" }, input)

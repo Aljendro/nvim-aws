@@ -6,267 +6,274 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS CLOUDWATCH service functions
 local M = {}
 
---- Deletes the specified alarms
---- @param input table|nil The input table for the delete_alarms command
+--- AWS cloudwatch delete-alarms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_alarms(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "delete-alarms" }, input)
 end
 
---- Deletes the specified anomaly detection model from your account
---- @param input table|nil The input table for the delete_anomaly_detector command
+--- AWS cloudwatch delete-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "delete-anomaly-detector" }, input)
 end
 
---- Deletes all dashboards that you specify
---- @param input table|nil The input table for the delete_dashboards command
+--- AWS cloudwatch delete-dashboards operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dashboards(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "delete-dashboards" }, input)
 end
 
---- Permanently deletes the specified Contributor Insights rules
---- @param input table|nil The input table for the delete_insight_rules command
+--- AWS cloudwatch delete-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "delete-insight-rules" }, input)
 end
 
---- Permanently deletes the metric stream that you specify
---- @param input table|nil The input table for the delete_metric_stream command
+--- AWS cloudwatch delete-metric-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_metric_stream(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "delete-metric-stream" }, input)
 end
 
---- Retrieves the history for the specified alarm
---- @param input table|nil The input table for the describe_alarm_history command
+--- AWS cloudwatch describe-alarm-history operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_alarm_history(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarm-history" }, input)
 end
 
---- Retrieves the specified alarms
---- @param input table|nil The input table for the describe_alarms command
+--- AWS cloudwatch describe-alarms operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_alarms(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarms" }, input)
 end
 
---- Retrieves the alarms for the specified metric
---- @param input table|nil The input table for the describe_alarms_for_metric command
+--- AWS cloudwatch describe-alarms-for-metric operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_alarms_for_metric(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarms-for-metric" }, input)
 end
 
---- Lists the anomaly detection models that you have created in your account
---- @param input table|nil The input table for the describe_anomaly_detectors command
+--- AWS cloudwatch describe-anomaly-detectors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_anomaly_detectors(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "describe-anomaly-detectors" }, input)
 end
 
---- Returns a list of all the Contributor Insights rules in your account
---- @param input table|nil The input table for the describe_insight_rules command
+--- AWS cloudwatch describe-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "describe-insight-rules" }, input)
 end
 
---- Disables the actions for the specified alarms
---- @param input table|nil The input table for the disable_alarm_actions command
+--- AWS cloudwatch disable-alarm-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_alarm_actions(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "disable-alarm-actions" }, input)
 end
 
---- Disables the specified Contributor Insights rules
---- @param input table|nil The input table for the disable_insight_rules command
+--- AWS cloudwatch disable-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disable_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "disable-insight-rules" }, input)
 end
 
---- Enables the actions for the specified alarms
---- @param input table|nil The input table for the enable_alarm_actions command
+--- AWS cloudwatch enable-alarm-actions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_alarm_actions(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "enable-alarm-actions" }, input)
 end
 
---- Enables the specified Contributor Insights rules
---- @param input table|nil The input table for the enable_insight_rules command
+--- AWS cloudwatch enable-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.enable_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "enable-insight-rules" }, input)
 end
 
---- Displays the details of the dashboard that you specify
---- @param input table|nil The input table for the get_dashboard command
+--- AWS cloudwatch get-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dashboard(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-dashboard" }, input)
 end
 
---- This operation returns the time series data collected by a Contributor Insights rule
---- @param input table|nil The input table for the get_insight_rule_report command
+--- AWS cloudwatch get-insight-rule-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_insight_rule_report(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-insight-rule-report" }, input)
 end
 
---- You can use the GetMetricData API to retrieve CloudWatch metric values
---- @param input table|nil The input table for the get_metric_data command
+--- AWS cloudwatch get-metric-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metric_data(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-data" }, input)
 end
 
---- Gets statistics for the specified metric
---- @param input table|nil The input table for the get_metric_statistics command
+--- AWS cloudwatch get-metric-statistics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metric_statistics(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-statistics" }, input)
 end
 
---- Returns information about the metric stream that you specify
---- @param input table|nil The input table for the get_metric_stream command
+--- AWS cloudwatch get-metric-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metric_stream(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-stream" }, input)
 end
 
---- You can use the GetMetricWidgetImage API to retrieve a snapshot graph of one or more Amazon CloudWatch metrics as a bitmap image
---- @param input table|nil The input table for the get_metric_widget_image command
+--- AWS cloudwatch get-metric-widget-image operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_metric_widget_image(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-widget-image" }, input)
 end
 
---- Returns a list of the dashboards for your account
---- @param input table|nil The input table for the list_dashboards command
+--- AWS cloudwatch help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "cloudwatch", "help" }, input)
+end
+
+--- AWS cloudwatch list-dashboards operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dashboards(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "list-dashboards" }, input)
 end
 
---- Returns a list that contains the number of managed Contributor Insights rules in your account
---- @param input table|nil The input table for the list_managed_insight_rules command
+--- AWS cloudwatch list-managed-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_managed_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "list-managed-insight-rules" }, input)
 end
 
---- Returns a list of metric streams in this account
---- @param input table|nil The input table for the list_metric_streams command
+--- AWS cloudwatch list-metric-streams operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metric_streams(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "list-metric-streams" }, input)
 end
 
---- List the specified metrics
---- @param input table|nil The input table for the list_metrics command
+--- AWS cloudwatch list-metrics operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_metrics(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "list-metrics" }, input)
 end
 
---- Displays the tags associated with a CloudWatch resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS cloudwatch list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "list-tags-for-resource" }, input)
 end
 
---- Creates an anomaly detection model for a CloudWatch metric
---- @param input table|nil The input table for the put_anomaly_detector command
+--- AWS cloudwatch put-anomaly-detector operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-anomaly-detector" }, input)
 end
 
---- Creates or updates a composite alarm
---- @param input table|nil The input table for the put_composite_alarm command
+--- AWS cloudwatch put-composite-alarm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_composite_alarm(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-composite-alarm" }, input)
 end
 
---- Creates a dashboard if it does not already exist, or updates an existing dashboard
---- @param input table|nil The input table for the put_dashboard command
+--- AWS cloudwatch put-dashboard operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_dashboard(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-dashboard" }, input)
 end
 
---- Creates a Contributor Insights rule
---- @param input table|nil The input table for the put_insight_rule command
+--- AWS cloudwatch put-insight-rule operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_insight_rule(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-insight-rule" }, input)
 end
 
---- Creates a managed Contributor Insights rule for a specified Amazon Web Services resource
---- @param input table|nil The input table for the put_managed_insight_rules command
+--- AWS cloudwatch put-managed-insight-rules operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_managed_insight_rules(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-managed-insight-rules" }, input)
 end
 
---- Creates or updates an alarm and associates it with the specified metric, metric math expression, anomaly detection model, or Metrics Insights query
---- @param input table|nil The input table for the put_metric_alarm command
+--- AWS cloudwatch put-metric-alarm operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metric_alarm(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-alarm" }, input)
 end
 
---- Publishes metric data to Amazon CloudWatch
---- @param input table|nil The input table for the put_metric_data command
+--- AWS cloudwatch put-metric-data operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metric_data(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-data" }, input)
 end
 
---- Creates or updates a metric stream
---- @param input table|nil The input table for the put_metric_stream command
+--- AWS cloudwatch put-metric-stream operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_metric_stream(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-stream" }, input)
 end
 
---- Temporarily sets the state of an alarm for testing purposes
---- @param input table|nil The input table for the set_alarm_state command
+--- AWS cloudwatch set-alarm-state operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.set_alarm_state(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "set-alarm-state" }, input)
 end
 
---- Starts the streaming of metrics for one or more of your metric streams
---- @param input table|nil The input table for the start_metric_streams command
+--- AWS cloudwatch start-metric-streams operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_metric_streams(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "start-metric-streams" }, input)
 end
 
---- Stops the streaming of metrics for one or more of your metric streams
---- @param input table|nil The input table for the stop_metric_streams command
+--- AWS cloudwatch stop-metric-streams operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_metric_streams(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "stop-metric-streams" }, input)
 end
 
---- Assigns one or more tags (key-value pairs) to the specified CloudWatch resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS cloudwatch tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "tag-resource" }, input)
 end
 
---- Removes one or more tags from the specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS cloudwatch untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "untag-resource" }, input)

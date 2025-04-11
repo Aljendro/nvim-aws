@@ -15,6 +15,11 @@ describe("AWS observabilityadmin service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_resource_telemetry", function()
 		local result = service.list_resource_telemetry()
 		assert.is_true(result.success)

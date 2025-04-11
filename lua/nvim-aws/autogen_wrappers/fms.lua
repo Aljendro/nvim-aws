@@ -6,295 +6,302 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS FMS service functions
 local M = {}
 
---- Sets a Firewall Manager default administrator account
---- @param input table|nil The input table for the associate_admin_account command
+--- AWS fms associate-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_admin_account(input)
 	return common.execute_aws_command_with_input({ "fms", "associate-admin-account" }, input)
 end
 
---- Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service
---- @param input table|nil The input table for the associate_third_party_firewall command
+--- AWS fms associate-third-party-firewall operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_third_party_firewall(input)
 	return common.execute_aws_command_with_input({ "fms", "associate-third-party-firewall" }, input)
 end
 
---- Associate resources to a Firewall Manager resource set
---- @param input table|nil The input table for the batch_associate_resource command
+--- AWS fms batch-associate-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_associate_resource(input)
 	return common.execute_aws_command_with_input({ "fms", "batch-associate-resource" }, input)
 end
 
---- Disassociates resources from a Firewall Manager resource set
---- @param input table|nil The input table for the batch_disassociate_resource command
+--- AWS fms batch-disassociate-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_disassociate_resource(input)
 	return common.execute_aws_command_with_input({ "fms", "batch-disassociate-resource" }, input)
 end
 
---- Permanently deletes an Firewall Manager applications list
---- @param input table|nil The input table for the delete_apps_list command
+--- AWS fms delete-apps-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_apps_list(input)
 	return common.execute_aws_command_with_input({ "fms", "delete-apps-list" }, input)
 end
 
---- Deletes an Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic that is used to record Firewall Manager SNS logs
---- @param input table|nil The input table for the delete_notification_channel command
+--- AWS fms delete-notification-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_notification_channel(input)
 	return common.execute_aws_command_with_input({ "fms", "delete-notification-channel" }, input)
 end
 
---- Permanently deletes an Firewall Manager policy
---- @param input table|nil The input table for the delete_policy command
+--- AWS fms delete-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_policy(input)
 	return common.execute_aws_command_with_input({ "fms", "delete-policy" }, input)
 end
 
---- Permanently deletes an Firewall Manager protocols list
---- @param input table|nil The input table for the delete_protocols_list command
+--- AWS fms delete-protocols-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_protocols_list(input)
 	return common.execute_aws_command_with_input({ "fms", "delete-protocols-list" }, input)
 end
 
---- Deletes the specified ResourceSet
---- @param input table|nil The input table for the delete_resource_set command
+--- AWS fms delete-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_set(input)
 	return common.execute_aws_command_with_input({ "fms", "delete-resource-set" }, input)
 end
 
---- Disassociates an Firewall Manager administrator account
---- @param input table|nil The input table for the disassociate_admin_account command
+--- AWS fms disassociate-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_admin_account(input)
 	return common.execute_aws_command_with_input({ "fms", "disassociate-admin-account" }, input)
 end
 
---- Disassociates a Firewall Manager policy administrator from a third-party firewall tenant
---- @param input table|nil The input table for the disassociate_third_party_firewall command
+--- AWS fms disassociate-third-party-firewall operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_third_party_firewall(input)
 	return common.execute_aws_command_with_input({ "fms", "disassociate-third-party-firewall" }, input)
 end
 
---- Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager default administrator
---- @param input table|nil The input table for the get_admin_account command
+--- AWS fms get-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_admin_account(input)
 	return common.execute_aws_command_with_input({ "fms", "get-admin-account" }, input)
 end
 
---- Returns information about the specified account's administrative scope
---- @param input table|nil The input table for the get_admin_scope command
+--- AWS fms get-admin-scope operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_admin_scope(input)
 	return common.execute_aws_command_with_input({ "fms", "get-admin-scope" }, input)
 end
 
---- Returns information about the specified Firewall Manager applications list
---- @param input table|nil The input table for the get_apps_list command
+--- AWS fms get-apps-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_apps_list(input)
 	return common.execute_aws_command_with_input({ "fms", "get-apps-list" }, input)
 end
 
---- Returns detailed compliance information about the specified member account
---- @param input table|nil The input table for the get_compliance_detail command
+--- AWS fms get-compliance-detail operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_compliance_detail(input)
 	return common.execute_aws_command_with_input({ "fms", "get-compliance-detail" }, input)
 end
 
---- Information about the Amazon Simple Notification Service (SNS) topic that is used to record Firewall Manager SNS logs
---- @param input table|nil The input table for the get_notification_channel command
+--- AWS fms get-notification-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_notification_channel(input)
 	return common.execute_aws_command_with_input({ "fms", "get-notification-channel" }, input)
 end
 
---- Returns information about the specified Firewall Manager policy
---- @param input table|nil The input table for the get_policy command
+--- AWS fms get-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_policy(input)
 	return common.execute_aws_command_with_input({ "fms", "get-policy" }, input)
 end
 
---- If you created a Shield Advanced policy, returns policy-level attack summary information in the event of a potential DDoS attack
---- @param input table|nil The input table for the get_protection_status command
+--- AWS fms get-protection-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_protection_status(input)
 	return common.execute_aws_command_with_input({ "fms", "get-protection-status" }, input)
 end
 
---- Returns information about the specified Firewall Manager protocols list
---- @param input table|nil The input table for the get_protocols_list command
+--- AWS fms get-protocols-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_protocols_list(input)
 	return common.execute_aws_command_with_input({ "fms", "get-protocols-list" }, input)
 end
 
---- Gets information about a specific resource set
---- @param input table|nil The input table for the get_resource_set command
+--- AWS fms get-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_set(input)
 	return common.execute_aws_command_with_input({ "fms", "get-resource-set" }, input)
 end
 
---- The onboarding status of a Firewall Manager admin account to third-party firewall vendor tenant
---- @param input table|nil The input table for the get_third_party_firewall_association_status command
+--- AWS fms get-third-party-firewall-association-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_third_party_firewall_association_status(input)
 	return common.execute_aws_command_with_input({ "fms", "get-third-party-firewall-association-status" }, input)
 end
 
---- Retrieves violations for a resource based on the specified Firewall Manager policy and Amazon Web Services account
---- @param input table|nil The input table for the get_violation_details command
+--- AWS fms get-violation-details operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_violation_details(input)
 	return common.execute_aws_command_with_input({ "fms", "get-violation-details" }, input)
 end
 
---- Returns a AdminAccounts object that lists the Firewall Manager administrators within the organization that are onboarded to Firewall Manager by AssociateAdminAccount
---- @param input table|nil The input table for the list_admin_accounts_for_organization command
+--- AWS fms help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "fms", "help" }, input)
+end
+
+--- AWS fms list-admin-accounts-for-organization operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_admin_accounts_for_organization(input)
 	return common.execute_aws_command_with_input({ "fms", "list-admin-accounts-for-organization" }, input)
 end
 
---- Lists the accounts that are managing the specified Organizations member account
---- @param input table|nil The input table for the list_admins_managing_account command
+--- AWS fms list-admins-managing-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_admins_managing_account(input)
 	return common.execute_aws_command_with_input({ "fms", "list-admins-managing-account" }, input)
 end
 
---- Returns an array of AppsListDataSummary objects
---- @param input table|nil The input table for the list_apps_lists command
+--- AWS fms list-apps-lists operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_apps_lists(input)
 	return common.execute_aws_command_with_input({ "fms", "list-apps-lists" }, input)
 end
 
---- Returns an array of PolicyComplianceStatus objects
---- @param input table|nil The input table for the list_compliance_status command
+--- AWS fms list-compliance-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_compliance_status(input)
 	return common.execute_aws_command_with_input({ "fms", "list-compliance-status" }, input)
 end
 
---- Returns an array of resources in the organization's accounts that are available to be associated with a resource set
---- @param input table|nil The input table for the list_discovered_resources command
+--- AWS fms list-discovered-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_discovered_resources(input)
 	return common.execute_aws_command_with_input({ "fms", "list-discovered-resources" }, input)
 end
 
---- Returns a MemberAccounts object that lists the member accounts in the administrator's Amazon Web Services organization
---- @param input table|nil The input table for the list_member_accounts command
+--- AWS fms list-member-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_member_accounts(input)
 	return common.execute_aws_command_with_input({ "fms", "list-member-accounts" }, input)
 end
 
---- Returns an array of PolicySummary objects
---- @param input table|nil The input table for the list_policies command
+--- AWS fms list-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_policies(input)
 	return common.execute_aws_command_with_input({ "fms", "list-policies" }, input)
 end
 
---- Returns an array of ProtocolsListDataSummary objects
---- @param input table|nil The input table for the list_protocols_lists command
+--- AWS fms list-protocols-lists operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_protocols_lists(input)
 	return common.execute_aws_command_with_input({ "fms", "list-protocols-lists" }, input)
 end
 
---- Returns an array of resources that are currently associated to a resource set
---- @param input table|nil The input table for the list_resource_set_resources command
+--- AWS fms list-resource-set-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_set_resources(input)
 	return common.execute_aws_command_with_input({ "fms", "list-resource-set-resources" }, input)
 end
 
---- Returns an array of ResourceSetSummary objects
---- @param input table|nil The input table for the list_resource_sets command
+--- AWS fms list-resource-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_resource_sets(input)
 	return common.execute_aws_command_with_input({ "fms", "list-resource-sets" }, input)
 end
 
---- Retrieves the list of tags for the specified Amazon Web Services resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS fms list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "fms", "list-tags-for-resource" }, input)
 end
 
---- Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall administrator's account
---- @param input table|nil The input table for the list_third_party_firewall_firewall_policies command
+--- AWS fms list-third-party-firewall-firewall-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_third_party_firewall_firewall_policies(input)
 	return common.execute_aws_command_with_input({ "fms", "list-third-party-firewall-firewall-policies" }, input)
 end
 
---- Creates or updates an Firewall Manager administrator account
---- @param input table|nil The input table for the put_admin_account command
+--- AWS fms put-admin-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_admin_account(input)
 	return common.execute_aws_command_with_input({ "fms", "put-admin-account" }, input)
 end
 
---- Creates an Firewall Manager applications list
---- @param input table|nil The input table for the put_apps_list command
+--- AWS fms put-apps-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_apps_list(input)
 	return common.execute_aws_command_with_input({ "fms", "put-apps-list" }, input)
 end
 
---- Designates the IAM role and Amazon Simple Notification Service (SNS) topic that Firewall Manager uses to record SNS logs
---- @param input table|nil The input table for the put_notification_channel command
+--- AWS fms put-notification-channel operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_notification_channel(input)
 	return common.execute_aws_command_with_input({ "fms", "put-notification-channel" }, input)
 end
 
---- Creates an Firewall Manager policy
---- @param input table|nil The input table for the put_policy command
+--- AWS fms put-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_policy(input)
 	return common.execute_aws_command_with_input({ "fms", "put-policy" }, input)
 end
 
---- Creates an Firewall Manager protocols list
---- @param input table|nil The input table for the put_protocols_list command
+--- AWS fms put-protocols-list operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_protocols_list(input)
 	return common.execute_aws_command_with_input({ "fms", "put-protocols-list" }, input)
 end
 
---- Creates the resource set
---- @param input table|nil The input table for the put_resource_set command
+--- AWS fms put-resource-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_set(input)
 	return common.execute_aws_command_with_input({ "fms", "put-resource-set" }, input)
 end
 
---- Adds one or more tags to an Amazon Web Services resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS fms tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "fms", "tag-resource" }, input)
 end
 
---- Removes one or more tags from an Amazon Web Services resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS fms untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "fms", "untag-resource" }, input)

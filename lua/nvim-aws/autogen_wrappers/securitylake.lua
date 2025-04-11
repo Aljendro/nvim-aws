@@ -6,218 +6,225 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SECURITYLAKE service functions
 local M = {}
 
---- Adds a natively supported Amazon Web Services service as an Amazon Security Lake source
---- @param input table|nil The input table for the create_aws_log_source command
+--- AWS securitylake create-aws-log-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_aws_log_source(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-aws-log-source" }, input)
 end
 
---- Adds a third-party custom source in Amazon Security Lake, from the Amazon Web Services Region where you want to create a custom source
---- @param input table|nil The input table for the create_custom_log_source command
+--- AWS securitylake create-custom-log-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_custom_log_source(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-custom-log-source" }, input)
 end
 
---- Initializes an Amazon Security Lake instance with the provided (or default) configuration
---- @param input table|nil The input table for the create_data_lake command
+--- AWS securitylake create-data-lake operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_lake(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake" }, input)
 end
 
---- Creates the specified notification subscription in Amazon Security Lake for the organization you specify
---- @param input table|nil The input table for the create_data_lake_exception_subscription command
+--- AWS securitylake create-data-lake-exception-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_lake_exception_subscription(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake-exception-subscription" }, input)
 end
 
---- Automatically enables Amazon Security Lake for new member accounts in your organization
---- @param input table|nil The input table for the create_data_lake_organization_configuration command
+--- AWS securitylake create-data-lake-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_data_lake_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake-organization-configuration" }, input)
 end
 
---- Creates a subscriber for accounts that are already enabled in Amazon Security Lake
---- @param input table|nil The input table for the create_subscriber command
+--- AWS securitylake create-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscriber(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-subscriber" }, input)
 end
 
---- Notifies the subscriber when new data is written to the data lake for the sources that the subscriber consumes in Security Lake
---- @param input table|nil The input table for the create_subscriber_notification command
+--- AWS securitylake create-subscriber-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_subscriber_notification(input)
 	return common.execute_aws_command_with_input({ "securitylake", "create-subscriber-notification" }, input)
 end
 
---- Removes a natively supported Amazon Web Services service as an Amazon Security Lake source
---- @param input table|nil The input table for the delete_aws_log_source command
+--- AWS securitylake delete-aws-log-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_aws_log_source(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-aws-log-source" }, input)
 end
 
---- Removes a custom log source from Amazon Security Lake, to stop sending data from the custom source to Security Lake
---- @param input table|nil The input table for the delete_custom_log_source command
+--- AWS securitylake delete-custom-log-source operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_custom_log_source(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-custom-log-source" }, input)
 end
 
---- When you disable Amazon Security Lake from your account, Security Lake is disabled in all Amazon Web Services Regions and it stops collecting data from your sources
---- @param input table|nil The input table for the delete_data_lake command
+--- AWS securitylake delete-data-lake operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_lake(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake" }, input)
 end
 
---- Deletes the specified notification subscription in Amazon Security Lake for the organization you specify
---- @param input table|nil The input table for the delete_data_lake_exception_subscription command
+--- AWS securitylake delete-data-lake-exception-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_lake_exception_subscription(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake-exception-subscription" }, input)
 end
 
---- Turns off automatic enablement of Amazon Security Lake for member accounts that are added to an organization in Organizations
---- @param input table|nil The input table for the delete_data_lake_organization_configuration command
+--- AWS securitylake delete-data-lake-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_data_lake_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake-organization-configuration" }, input)
 end
 
---- Deletes the subscription permission and all notification settings for accounts that are already enabled in Amazon Security Lake
---- @param input table|nil The input table for the delete_subscriber command
+--- AWS securitylake delete-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscriber(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-subscriber" }, input)
 end
 
---- Deletes the specified subscription notification in Amazon Security Lake for the organization you specify
---- @param input table|nil The input table for the delete_subscriber_notification command
+--- AWS securitylake delete-subscriber-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_subscriber_notification(input)
 	return common.execute_aws_command_with_input({ "securitylake", "delete-subscriber-notification" }, input)
 end
 
---- Deletes the Amazon Security Lake delegated administrator account for the organization
---- @param input table|nil The input table for the deregister_data_lake_delegated_administrator command
+--- AWS securitylake deregister-data-lake-delegated-administrator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_data_lake_delegated_administrator(input)
 	return common.execute_aws_command_with_input({ "securitylake", "deregister-data-lake-delegated-administrator" }, input)
 end
 
---- Retrieves the protocol and endpoint that were provided when subscribing to Amazon SNS topics for exception notifications
---- @param input table|nil The input table for the get_data_lake_exception_subscription command
+--- AWS securitylake get-data-lake-exception-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_lake_exception_subscription(input)
 	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-exception-subscription" }, input)
 end
 
---- Retrieves the configuration that will be automatically set up for accounts added to the organization after the organization has onboarded to Amazon Security Lake
---- @param input table|nil The input table for the get_data_lake_organization_configuration command
+--- AWS securitylake get-data-lake-organization-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_lake_organization_configuration(input)
 	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-organization-configuration" }, input)
 end
 
---- Retrieves a snapshot of the current Region, including whether Amazon Security Lake is enabled for those accounts and which sources Security Lake is collecting data from
---- @param input table|nil The input table for the get_data_lake_sources command
+--- AWS securitylake get-data-lake-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_data_lake_sources(input)
 	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-sources" }, input)
 end
 
---- Retrieves the subscription information for the specified subscription ID
---- @param input table|nil The input table for the get_subscriber command
+--- AWS securitylake get-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_subscriber(input)
 	return common.execute_aws_command_with_input({ "securitylake", "get-subscriber" }, input)
 end
 
---- Lists the Amazon Security Lake exceptions that you can use to find the source of problems and fix them
---- @param input table|nil The input table for the list_data_lake_exceptions command
+--- AWS securitylake help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "securitylake", "help" }, input)
+end
+
+--- AWS securitylake list-data-lake-exceptions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_lake_exceptions(input)
 	return common.execute_aws_command_with_input({ "securitylake", "list-data-lake-exceptions" }, input)
 end
 
---- Retrieves the Amazon Security Lake configuration object for the specified Amazon Web Services Regions
---- @param input table|nil The input table for the list_data_lakes command
+--- AWS securitylake list-data-lakes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_data_lakes(input)
 	return common.execute_aws_command_with_input({ "securitylake", "list-data-lakes" }, input)
 end
 
---- Retrieves the log sources
---- @param input table|nil The input table for the list_log_sources command
+--- AWS securitylake list-log-sources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_log_sources(input)
 	return common.execute_aws_command_with_input({ "securitylake", "list-log-sources" }, input)
 end
 
---- Lists all subscribers for the specific Amazon Security Lake account ID
---- @param input table|nil The input table for the list_subscribers command
+--- AWS securitylake list-subscribers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_subscribers(input)
 	return common.execute_aws_command_with_input({ "securitylake", "list-subscribers" }, input)
 end
 
---- Retrieves the tags (keys and values) that are associated with an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS securitylake list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "securitylake", "list-tags-for-resource" }, input)
 end
 
---- Designates the Amazon Security Lake delegated administrator account for the organization
---- @param input table|nil The input table for the register_data_lake_delegated_administrator command
+--- AWS securitylake register-data-lake-delegated-administrator operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_data_lake_delegated_administrator(input)
 	return common.execute_aws_command_with_input({ "securitylake", "register-data-lake-delegated-administrator" }, input)
 end
 
---- Adds or updates one or more tags that are associated with an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region
---- @param input table|nil The input table for the tag_resource command
+--- AWS securitylake tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "securitylake", "tag-resource" }, input)
 end
 
---- Removes one or more tags (keys and values) from an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region
---- @param input table|nil The input table for the untag_resource command
+--- AWS securitylake untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "securitylake", "untag-resource" }, input)
 end
 
---- You can use UpdateDataLake to specify where to store your security data, how it should be encrypted at rest and for how long
---- @param input table|nil The input table for the update_data_lake command
+--- AWS securitylake update-data-lake operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_lake(input)
 	return common.execute_aws_command_with_input({ "securitylake", "update-data-lake" }, input)
 end
 
---- Updates the specified notification subscription in Amazon Security Lake for the organization you specify
---- @param input table|nil The input table for the update_data_lake_exception_subscription command
+--- AWS securitylake update-data-lake-exception-subscription operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_data_lake_exception_subscription(input)
 	return common.execute_aws_command_with_input({ "securitylake", "update-data-lake-exception-subscription" }, input)
 end
 
---- Updates an existing subscription for the given Amazon Security Lake account ID
---- @param input table|nil The input table for the update_subscriber command
+--- AWS securitylake update-subscriber operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscriber(input)
 	return common.execute_aws_command_with_input({ "securitylake", "update-subscriber" }, input)
 end
 
---- Updates an existing notification method for the subscription (SQS or HTTPs endpoint) or switches the notification subscription endpoint for a subscriber
---- @param input table|nil The input table for the update_subscriber_notification command
+--- AWS securitylake update-subscriber-notification operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_subscriber_notification(input)
 	return common.execute_aws_command_with_input({ "securitylake", "update-subscriber-notification" }, input)

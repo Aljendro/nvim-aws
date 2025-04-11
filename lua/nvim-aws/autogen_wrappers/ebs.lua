@@ -6,43 +6,43 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS EBS service functions
 local M = {}
 
---- Seals and completes the snapshot after all of the required blocks of data have been written to it
---- @param input table|nil The input table for the complete_snapshot command
+--- AWS ebs complete-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.complete_snapshot(input)
 	return common.execute_aws_command_with_input({ "ebs", "complete-snapshot" }, input)
 end
 
---- Returns the data in a block in an Amazon Elastic Block Store snapshot
---- @param input table|nil The input table for the get_snapshot_block command
+--- AWS ebs help operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_snapshot_block(input)
-	return common.execute_aws_command_with_input({ "ebs", "get-snapshot-block" }, input)
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ebs", "help" }, input)
 end
 
---- Returns information about the blocks that are different between two Amazon Elastic Block Store snapshots of the same volume/snapshot lineage
---- @param input table|nil The input table for the list_changed_blocks command
+--- AWS ebs list-changed-blocks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_changed_blocks(input)
 	return common.execute_aws_command_with_input({ "ebs", "list-changed-blocks" }, input)
 end
 
---- Returns information about the blocks in an Amazon Elastic Block Store snapshot
---- @param input table|nil The input table for the list_snapshot_blocks command
+--- AWS ebs list-snapshot-blocks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_snapshot_blocks(input)
 	return common.execute_aws_command_with_input({ "ebs", "list-snapshot-blocks" }, input)
 end
 
---- Writes a block of data to a snapshot
---- @param input table|nil The input table for the put_snapshot_block command
+--- AWS ebs put-snapshot-block operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_snapshot_block(input)
 	return common.execute_aws_command_with_input({ "ebs", "put-snapshot-block" }, input)
 end
 
---- Creates a new Amazon EBS snapshot
---- @param input table|nil The input table for the start_snapshot command
+--- AWS ebs start-snapshot operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_snapshot(input)
 	return common.execute_aws_command_with_input({ "ebs", "start-snapshot" }, input)

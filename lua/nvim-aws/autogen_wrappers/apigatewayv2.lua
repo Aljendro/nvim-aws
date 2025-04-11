@@ -6,505 +6,505 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS APIGATEWAYV2 service functions
 local M = {}
 
---- Creates an Api resource
---- @param input table|nil The input table for the create_api command
+--- AWS apigatewayv2 create-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-api" }, input)
 end
 
---- Creates an API mapping
---- @param input table|nil The input table for the create_api_mapping command
+--- AWS apigatewayv2 create-api-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_api_mapping(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-api-mapping" }, input)
 end
 
---- Creates an Authorizer for an API
---- @param input table|nil The input table for the create_authorizer command
+--- AWS apigatewayv2 create-authorizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-authorizer" }, input)
 end
 
---- Creates a Deployment for an API
---- @param input table|nil The input table for the create_deployment command
+--- AWS apigatewayv2 create-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deployment(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-deployment" }, input)
 end
 
---- Creates a domain name
---- @param input table|nil The input table for the create_domain_name command
+--- AWS apigatewayv2 create-domain-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-domain-name" }, input)
 end
 
---- Creates an Integration
---- @param input table|nil The input table for the create_integration command
+--- AWS apigatewayv2 create-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-integration" }, input)
 end
 
---- Creates an IntegrationResponses
---- @param input table|nil The input table for the create_integration_response command
+--- AWS apigatewayv2 create-integration-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-integration-response" }, input)
 end
 
---- Creates a Model for an API
---- @param input table|nil The input table for the create_model command
+--- AWS apigatewayv2 create-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_model(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-model" }, input)
 end
 
---- Creates a Route for an API
---- @param input table|nil The input table for the create_route command
+--- AWS apigatewayv2 create-route operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_route(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-route" }, input)
 end
 
---- Creates a RouteResponse for a Route
---- @param input table|nil The input table for the create_route_response command
+--- AWS apigatewayv2 create-route-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_route_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-route-response" }, input)
 end
 
---- Creates a Stage for an API
---- @param input table|nil The input table for the create_stage command
+--- AWS apigatewayv2 create-stage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_stage(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-stage" }, input)
 end
 
---- Creates a VPC link
---- @param input table|nil The input table for the create_vpc_link command
+--- AWS apigatewayv2 create-vpc-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "create-vpc-link" }, input)
 end
 
---- Deletes the AccessLogSettings for a Stage
---- @param input table|nil The input table for the delete_access_log_settings command
+--- AWS apigatewayv2 delete-access-log-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_access_log_settings(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-access-log-settings" }, input)
 end
 
---- Deletes an Api resource
---- @param input table|nil The input table for the delete_api command
+--- AWS apigatewayv2 delete-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-api" }, input)
 end
 
---- Deletes an API mapping
---- @param input table|nil The input table for the delete_api_mapping command
+--- AWS apigatewayv2 delete-api-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_api_mapping(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-api-mapping" }, input)
 end
 
---- Deletes an Authorizer
---- @param input table|nil The input table for the delete_authorizer command
+--- AWS apigatewayv2 delete-authorizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-authorizer" }, input)
 end
 
---- Deletes a CORS configuration
---- @param input table|nil The input table for the delete_cors_configuration command
+--- AWS apigatewayv2 delete-cors-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_cors_configuration(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-cors-configuration" }, input)
 end
 
---- Deletes a Deployment
---- @param input table|nil The input table for the delete_deployment command
+--- AWS apigatewayv2 delete-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_deployment(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-deployment" }, input)
 end
 
---- Deletes a domain name
---- @param input table|nil The input table for the delete_domain_name command
+--- AWS apigatewayv2 delete-domain-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-domain-name" }, input)
 end
 
---- Deletes an Integration
---- @param input table|nil The input table for the delete_integration command
+--- AWS apigatewayv2 delete-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-integration" }, input)
 end
 
---- Deletes an IntegrationResponses
---- @param input table|nil The input table for the delete_integration_response command
+--- AWS apigatewayv2 delete-integration-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-integration-response" }, input)
 end
 
---- Deletes a Model
---- @param input table|nil The input table for the delete_model command
+--- AWS apigatewayv2 delete-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_model(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-model" }, input)
 end
 
---- Deletes a Route
---- @param input table|nil The input table for the delete_route command
+--- AWS apigatewayv2 delete-route operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_route(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-route" }, input)
 end
 
---- Deletes a route request parameter
---- @param input table|nil The input table for the delete_route_request_parameter command
+--- AWS apigatewayv2 delete-route-request-parameter operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_route_request_parameter(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-route-request-parameter" }, input)
 end
 
---- Deletes a RouteResponse
---- @param input table|nil The input table for the delete_route_response command
+--- AWS apigatewayv2 delete-route-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_route_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-route-response" }, input)
 end
 
---- Deletes the RouteSettings for a stage
---- @param input table|nil The input table for the delete_route_settings command
+--- AWS apigatewayv2 delete-route-settings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_route_settings(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-route-settings" }, input)
 end
 
---- Deletes a Stage
---- @param input table|nil The input table for the delete_stage command
+--- AWS apigatewayv2 delete-stage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_stage(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-stage" }, input)
 end
 
---- Deletes a VPC link
---- @param input table|nil The input table for the delete_vpc_link command
+--- AWS apigatewayv2 delete-vpc-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "delete-vpc-link" }, input)
 end
 
---- AWS Operation
---- @param input table|nil The input table for the export_api command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.export_api(input)
-	return common.execute_aws_command_with_input({ "apigatewayv2", "export-api" }, input)
-end
-
---- Gets an Api resource
---- @param input table|nil The input table for the get_api command
+--- AWS apigatewayv2 get-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-api" }, input)
 end
 
---- Gets an API mapping
---- @param input table|nil The input table for the get_api_mapping command
+--- AWS apigatewayv2 get-api-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_api_mapping(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-api-mapping" }, input)
 end
 
---- Gets API mappings
---- @param input table|nil The input table for the get_api_mappings command
+--- AWS apigatewayv2 get-api-mappings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_api_mappings(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-api-mappings" }, input)
 end
 
---- Gets a collection of Api resources
---- @param input table|nil The input table for the get_apis command
+--- AWS apigatewayv2 get-apis operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_apis(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-apis" }, input)
 end
 
---- Gets an Authorizer
---- @param input table|nil The input table for the get_authorizer command
+--- AWS apigatewayv2 get-authorizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-authorizer" }, input)
 end
 
---- Gets the Authorizers for an API
---- @param input table|nil The input table for the get_authorizers command
+--- AWS apigatewayv2 get-authorizers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_authorizers(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-authorizers" }, input)
 end
 
---- Gets a Deployment
---- @param input table|nil The input table for the get_deployment command
+--- AWS apigatewayv2 get-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployment(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-deployment" }, input)
 end
 
---- Gets the Deployments for an API
---- @param input table|nil The input table for the get_deployments command
+--- AWS apigatewayv2 get-deployments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deployments(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-deployments" }, input)
 end
 
---- Gets a domain name
---- @param input table|nil The input table for the get_domain_name command
+--- AWS apigatewayv2 get-domain-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-domain-name" }, input)
 end
 
---- Gets the domain names for an AWS account
---- @param input table|nil The input table for the get_domain_names command
+--- AWS apigatewayv2 get-domain-names operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_names(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-domain-names" }, input)
 end
 
---- Gets an Integration
---- @param input table|nil The input table for the get_integration command
+--- AWS apigatewayv2 get-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-integration" }, input)
 end
 
---- Gets an IntegrationResponses
---- @param input table|nil The input table for the get_integration_response command
+--- AWS apigatewayv2 get-integration-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-integration-response" }, input)
 end
 
---- Gets the IntegrationResponses for an Integration
---- @param input table|nil The input table for the get_integration_responses command
+--- AWS apigatewayv2 get-integration-responses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integration_responses(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-integration-responses" }, input)
 end
 
---- Gets the Integrations for an API
---- @param input table|nil The input table for the get_integrations command
+--- AWS apigatewayv2 get-integrations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_integrations(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-integrations" }, input)
 end
 
---- Gets a Model
---- @param input table|nil The input table for the get_model command
+--- AWS apigatewayv2 get-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-model" }, input)
 end
 
---- Gets a model template
---- @param input table|nil The input table for the get_model_template command
+--- AWS apigatewayv2 get-model-template operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_model_template(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-model-template" }, input)
 end
 
---- Gets the Models for an API
---- @param input table|nil The input table for the get_models command
+--- AWS apigatewayv2 get-models operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_models(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-models" }, input)
 end
 
---- Gets a Route
---- @param input table|nil The input table for the get_route command
+--- AWS apigatewayv2 get-route operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_route(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-route" }, input)
 end
 
---- Gets a RouteResponse
---- @param input table|nil The input table for the get_route_response command
+--- AWS apigatewayv2 get-route-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_route_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-route-response" }, input)
 end
 
---- Gets the RouteResponses for a Route
---- @param input table|nil The input table for the get_route_responses command
+--- AWS apigatewayv2 get-route-responses operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_route_responses(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-route-responses" }, input)
 end
 
---- Gets the Routes for an API
---- @param input table|nil The input table for the get_routes command
+--- AWS apigatewayv2 get-routes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_routes(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-routes" }, input)
 end
 
---- Gets a Stage
---- @param input table|nil The input table for the get_stage command
+--- AWS apigatewayv2 get-stage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stage(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-stage" }, input)
 end
 
---- Gets the Stages for an API
---- @param input table|nil The input table for the get_stages command
+--- AWS apigatewayv2 get-stages operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_stages(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-stages" }, input)
 end
 
---- Gets a collection of Tag resources
---- @param input table|nil The input table for the get_tags command
+--- AWS apigatewayv2 get-tags operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_tags(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-tags" }, input)
 end
 
---- Gets a VPC link
---- @param input table|nil The input table for the get_vpc_link command
+--- AWS apigatewayv2 get-vpc-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-vpc-link" }, input)
 end
 
---- Gets a collection of VPC links
---- @param input table|nil The input table for the get_vpc_links command
+--- AWS apigatewayv2 get-vpc-links operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_vpc_links(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "get-vpc-links" }, input)
 end
 
---- Imports an API
---- @param input table|nil The input table for the import_api command
+--- AWS apigatewayv2 help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "apigatewayv2", "help" }, input)
+end
+
+--- AWS apigatewayv2 import-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "import-api" }, input)
 end
 
---- Puts an Api resource
---- @param input table|nil The input table for the reimport_api command
+--- AWS apigatewayv2 reimport-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reimport_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "reimport-api" }, input)
 end
 
---- Resets all authorizer cache entries on a stage
---- @param input table|nil The input table for the reset_authorizers_cache command
+--- AWS apigatewayv2 reset-authorizers-cache operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.reset_authorizers_cache(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "reset-authorizers-cache" }, input)
 end
 
---- Creates a new Tag resource to represent a tag
---- @param input table|nil The input table for the tag_resource command
+--- AWS apigatewayv2 tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "tag-resource" }, input)
 end
 
---- Deletes a Tag
---- @param input table|nil The input table for the untag_resource command
+--- AWS apigatewayv2 untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "untag-resource" }, input)
 end
 
---- Updates an Api resource
---- @param input table|nil The input table for the update_api command
+--- AWS apigatewayv2 update-api operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_api(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-api" }, input)
 end
 
---- The API mapping
---- @param input table|nil The input table for the update_api_mapping command
+--- AWS apigatewayv2 update-api-mapping operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_api_mapping(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-api-mapping" }, input)
 end
 
---- Updates an Authorizer
---- @param input table|nil The input table for the update_authorizer command
+--- AWS apigatewayv2 update-authorizer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_authorizer(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-authorizer" }, input)
 end
 
---- Updates a Deployment
---- @param input table|nil The input table for the update_deployment command
+--- AWS apigatewayv2 update-deployment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_deployment(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-deployment" }, input)
 end
 
---- Updates a domain name
---- @param input table|nil The input table for the update_domain_name command
+--- AWS apigatewayv2 update-domain-name operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_domain_name(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-domain-name" }, input)
 end
 
---- Updates an Integration
---- @param input table|nil The input table for the update_integration command
+--- AWS apigatewayv2 update-integration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-integration" }, input)
 end
 
---- Updates an IntegrationResponses
---- @param input table|nil The input table for the update_integration_response command
+--- AWS apigatewayv2 update-integration-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_integration_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-integration-response" }, input)
 end
 
---- Updates a Model
---- @param input table|nil The input table for the update_model command
+--- AWS apigatewayv2 update-model operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_model(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-model" }, input)
 end
 
---- Updates a Route
---- @param input table|nil The input table for the update_route command
+--- AWS apigatewayv2 update-route operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_route(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-route" }, input)
 end
 
---- Updates a RouteResponse
---- @param input table|nil The input table for the update_route_response command
+--- AWS apigatewayv2 update-route-response operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_route_response(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-route-response" }, input)
 end
 
---- Updates a Stage
---- @param input table|nil The input table for the update_stage command
+--- AWS apigatewayv2 update-stage operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_stage(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-stage" }, input)
 end
 
---- Updates a VPC link
---- @param input table|nil The input table for the update_vpc_link command
+--- AWS apigatewayv2 update-vpc-link operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-vpc-link" }, input)

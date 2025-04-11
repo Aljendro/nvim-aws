@@ -55,11 +55,6 @@ describe("AWS mediaconvert service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with describe_endpoints", function()
-		local result = service.describe_endpoints()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with disassociate_certificate", function()
 		local result = service.disassociate_certificate()
 		assert.is_true(result.success)
@@ -87,6 +82,11 @@ describe("AWS mediaconvert service testing", function()
 
 	it("should generate a cli skeleton with get_queue", function()
 		local result = service.get_queue()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

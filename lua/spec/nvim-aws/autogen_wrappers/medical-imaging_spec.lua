@@ -25,18 +25,13 @@ describe("AWS medical-imaging service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_dicom_import_job", function()
-		local result = service.get_dicom_import_job()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with get_datastore", function()
 		local result = service.get_datastore()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_image_frame", function()
-		local result = service.get_image_frame()
+	it("should generate a cli skeleton with get_dicom_import_job", function()
+		local result = service.get_dicom_import_job()
 		assert.is_true(result.success)
 	end)
 
@@ -45,18 +40,18 @@ describe("AWS medical-imaging service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with get_image_set_metadata", function()
-		local result = service.get_image_set_metadata()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with list_dicom_import_jobs", function()
-		local result = service.list_dicom_import_jobs()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 
 	it("should generate a cli skeleton with list_datastores", function()
 		local result = service.list_datastores()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with list_dicom_import_jobs", function()
+		local result = service.list_dicom_import_jobs()
 		assert.is_true(result.success)
 	end)
 

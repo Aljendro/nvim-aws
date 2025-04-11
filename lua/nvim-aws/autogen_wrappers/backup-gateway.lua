@@ -6,148 +6,183 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS BACKUP-GATEWAY service functions
 local M = {}
 
---- Associates a backup gateway with your server
---- @param input table|nil The input table for the associate_gateway_to_server command
+--- AWS backup-gateway associate-gateway-to-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.associate_gateway_to_server(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "associate-gateway-to-server" }, input)
 end
 
---- Creates a backup gateway
---- @param input table|nil The input table for the create_gateway command
+--- AWS backup-gateway create-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_gateway(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "create-gateway" }, input)
 end
 
---- Deletes a backup gateway
---- @param input table|nil The input table for the delete_gateway command
+--- AWS backup-gateway delete-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_gateway(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "delete-gateway" }, input)
 end
 
---- Deletes a hypervisor
---- @param input table|nil The input table for the delete_hypervisor command
+--- AWS backup-gateway delete-hypervisor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_hypervisor(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "delete-hypervisor" }, input)
 end
 
---- Disassociates a backup gateway from the specified server
---- @param input table|nil The input table for the disassociate_gateway_from_server command
+--- AWS backup-gateway disassociate-gateway-from-server operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.disassociate_gateway_from_server(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "disassociate-gateway-from-server" }, input)
 end
 
---- By providing the ARN (Amazon Resource Name), this API returns the gateway
---- @param input table|nil The input table for the get_gateway command
+--- AWS backup-gateway get-bandwidth-rate-limit-schedule operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_bandwidth_rate_limit_schedule(input)
+	return common.execute_aws_command_with_input({ "backup-gateway", "get-bandwidth-rate-limit-schedule" }, input)
+end
+
+--- AWS backup-gateway get-gateway operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_gateway(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "get-gateway" }, input)
 end
 
---- This action requests information about the specified hypervisor to which the gateway will connect
---- @param input table|nil The input table for the get_hypervisor command
+--- AWS backup-gateway get-hypervisor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_hypervisor(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "get-hypervisor" }, input)
 end
 
---- By providing the ARN (Amazon Resource Name), this API returns the virtual machine
---- @param input table|nil The input table for the get_virtual_machine command
+--- AWS backup-gateway get-hypervisor-property-mappings operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_hypervisor_property_mappings(input)
+	return common.execute_aws_command_with_input({ "backup-gateway", "get-hypervisor-property-mappings" }, input)
+end
+
+--- AWS backup-gateway get-virtual-machine operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_virtual_machine(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "get-virtual-machine" }, input)
 end
 
---- Connect to a hypervisor by importing its configuration
---- @param input table|nil The input table for the import_hypervisor_configuration command
+--- AWS backup-gateway help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "backup-gateway", "help" }, input)
+end
+
+--- AWS backup-gateway import-hypervisor-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.import_hypervisor_configuration(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "import-hypervisor-configuration" }, input)
 end
 
---- Lists backup gateways owned by an Amazon Web Services account in an Amazon Web Services Region
---- @param input table|nil The input table for the list_gateways command
+--- AWS backup-gateway list-gateways operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_gateways(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "list-gateways" }, input)
 end
 
---- Lists your hypervisors
---- @param input table|nil The input table for the list_hypervisors command
+--- AWS backup-gateway list-hypervisors operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_hypervisors(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "list-hypervisors" }, input)
 end
 
---- Lists the tags applied to the resource identified by its Amazon Resource Name (ARN)
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS backup-gateway list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "list-tags-for-resource" }, input)
 end
 
---- Lists your virtual machines
---- @param input table|nil The input table for the list_virtual_machines command
+--- AWS backup-gateway list-virtual-machines operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_virtual_machines(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "list-virtual-machines" }, input)
 end
 
---- Set the maintenance start time for a gateway
---- @param input table|nil The input table for the put_maintenance_start_time command
+--- AWS backup-gateway put-bandwidth-rate-limit-schedule operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_bandwidth_rate_limit_schedule(input)
+	return common.execute_aws_command_with_input({ "backup-gateway", "put-bandwidth-rate-limit-schedule" }, input)
+end
+
+--- AWS backup-gateway put-hypervisor-property-mappings operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_hypervisor_property_mappings(input)
+	return common.execute_aws_command_with_input({ "backup-gateway", "put-hypervisor-property-mappings" }, input)
+end
+
+--- AWS backup-gateway put-maintenance-start-time operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_maintenance_start_time(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "put-maintenance-start-time" }, input)
 end
 
---- This action sends a request to sync metadata across the specified virtual machines
---- @param input table|nil The input table for the start_virtual_machines_metadata_sync command
+--- AWS backup-gateway start-virtual-machines-metadata-sync operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_virtual_machines_metadata_sync(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "start-virtual-machines-metadata-sync" }, input)
 end
 
---- Tag the resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS backup-gateway tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "tag-resource" }, input)
 end
 
---- Tests your hypervisor configuration to validate that backup gateway can connect with the hypervisor and its resources
---- @param input table|nil The input table for the test_hypervisor_configuration command
+--- AWS backup-gateway test-hypervisor-configuration operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.test_hypervisor_configuration(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "test-hypervisor-configuration" }, input)
 end
 
---- Removes tags from the resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS backup-gateway untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "untag-resource" }, input)
 end
 
---- Updates a gateway's name
---- @param input table|nil The input table for the update_gateway_information command
+--- AWS backup-gateway update-gateway-information operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_gateway_information(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "update-gateway-information" }, input)
 end
 
---- Updates the gateway virtual machine (VM) software
---- @param input table|nil The input table for the update_gateway_software_now command
+--- AWS backup-gateway update-gateway-software-now operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_gateway_software_now(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "update-gateway-software-now" }, input)
 end
 
---- Updates a hypervisor metadata, including its host, username, and password
---- @param input table|nil The input table for the update_hypervisor command
+--- AWS backup-gateway update-hypervisor operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_hypervisor(input)
 	return common.execute_aws_command_with_input({ "backup-gateway", "update-hypervisor" }, input)

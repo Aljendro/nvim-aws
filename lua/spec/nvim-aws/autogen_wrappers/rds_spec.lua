@@ -5,6 +5,11 @@ require("nvim-aws").setup()
 local service = require("nvim-aws.autogen_wrappers.rds")
 
 describe("AWS rds service testing", function()
+	it("should generate a cli skeleton with add_option_to_option_group", function()
+		local result = service.add_option_to_option_group()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with add_role_to_db_cluster", function()
 		local result = service.add_role_to_db_cluster()
 		assert.is_true(result.success)
@@ -530,6 +535,11 @@ describe("AWS rds service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
@@ -640,11 +650,6 @@ describe("AWS rds service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with modify_option_group", function()
-		local result = service.modify_option_group()
-		assert.is_true(result.success)
-	end)
-
 	it("should generate a cli skeleton with modify_tenant_database", function()
 		local result = service.modify_tenant_database()
 		assert.is_true(result.success)
@@ -687,6 +692,11 @@ describe("AWS rds service testing", function()
 
 	it("should generate a cli skeleton with remove_from_global_cluster", function()
 		local result = service.remove_from_global_cluster()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with remove_option_from_option_group", function()
+		local result = service.remove_option_from_option_group()
 		assert.is_true(result.success)
 	end)
 

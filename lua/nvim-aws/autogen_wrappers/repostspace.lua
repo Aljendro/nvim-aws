@@ -6,92 +6,99 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS REPOSTSPACE service functions
 local M = {}
 
---- Add role to multiple users or groups in a private re:Post
---- @param input table|nil The input table for the batch_add_role command
+--- AWS repostspace batch-add-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_add_role(input)
 	return common.execute_aws_command_with_input({ "repostspace", "batch-add-role" }, input)
 end
 
---- Remove role from multiple users or groups in a private re:Post
---- @param input table|nil The input table for the batch_remove_role command
+--- AWS repostspace batch-remove-role operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_remove_role(input)
 	return common.execute_aws_command_with_input({ "repostspace", "batch-remove-role" }, input)
 end
 
---- Creates an AWS re:Post Private private re:Post
---- @param input table|nil The input table for the create_space command
+--- AWS repostspace create-space operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_space(input)
 	return common.execute_aws_command_with_input({ "repostspace", "create-space" }, input)
 end
 
---- Deletes an AWS re:Post Private private re:Post
---- @param input table|nil The input table for the delete_space command
+--- AWS repostspace delete-space operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_space(input)
 	return common.execute_aws_command_with_input({ "repostspace", "delete-space" }, input)
 end
 
---- Removes the user or group from the list of administrators of the private re:Post
---- @param input table|nil The input table for the deregister_admin command
+--- AWS repostspace deregister-admin operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.deregister_admin(input)
 	return common.execute_aws_command_with_input({ "repostspace", "deregister-admin" }, input)
 end
 
---- Displays information about the AWS re:Post Private private re:Post
---- @param input table|nil The input table for the get_space command
+--- AWS repostspace get-space operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_space(input)
 	return common.execute_aws_command_with_input({ "repostspace", "get-space" }, input)
 end
 
---- Returns a list of AWS re:Post Private private re:Posts in the account with some information about each private re:Post
---- @param input table|nil The input table for the list_spaces command
+--- AWS repostspace help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "repostspace", "help" }, input)
+end
+
+--- AWS repostspace list-spaces operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_spaces(input)
 	return common.execute_aws_command_with_input({ "repostspace", "list-spaces" }, input)
 end
 
---- Returns the tags that are associated with the AWS re:Post Private resource specified by the resourceArn
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS repostspace list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "repostspace", "list-tags-for-resource" }, input)
 end
 
---- Adds a user or group to the list of administrators of the private re:Post
---- @param input table|nil The input table for the register_admin command
+--- AWS repostspace register-admin operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.register_admin(input)
 	return common.execute_aws_command_with_input({ "repostspace", "register-admin" }, input)
 end
 
---- Sends an invitation email to selected users and groups
---- @param input table|nil The input table for the send_invites command
+--- AWS repostspace send-invites operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_invites(input)
 	return common.execute_aws_command_with_input({ "repostspace", "send-invites" }, input)
 end
 
---- Associates tags with an AWS re:Post Private resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS repostspace tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "repostspace", "tag-resource" }, input)
 end
 
---- Removes the association of the tag with the AWS re:Post Private resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS repostspace untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "repostspace", "untag-resource" }, input)
 end
 
---- Modifies an existing AWS re:Post Private private re:Post
---- @param input table|nil The input table for the update_space command
+--- AWS repostspace update-space operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_space(input)
 	return common.execute_aws_command_with_input({ "repostspace", "update-space" }, input)

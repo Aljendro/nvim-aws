@@ -6,78 +6,85 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS TRUSTEDADVISOR service functions
 local M = {}
 
---- Update one or more exclusion status for a list of recommendation resources
---- @param input table|nil The input table for the batch_update_recommendation_resource_exclusion command
+--- AWS trustedadvisor batch-update-recommendation-resource-exclusion operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_update_recommendation_resource_exclusion(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "batch-update-recommendation-resource-exclusion" }, input)
 end
 
---- Get a specific recommendation within an AWS Organizations organization
---- @param input table|nil The input table for the get_organization_recommendation command
+--- AWS trustedadvisor get-organization-recommendation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_organization_recommendation(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "get-organization-recommendation" }, input)
 end
 
---- Get a specific Recommendation
---- @param input table|nil The input table for the get_recommendation command
+--- AWS trustedadvisor get-recommendation operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_recommendation(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "get-recommendation" }, input)
 end
 
---- List a filterable set of Checks
---- @param input table|nil The input table for the list_checks command
+--- AWS trustedadvisor help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "trustedadvisor", "help" }, input)
+end
+
+--- AWS trustedadvisor list-checks operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_checks(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-checks" }, input)
 end
 
---- Lists the accounts that own the resources for an organization aggregate recommendation
---- @param input table|nil The input table for the list_organization_recommendation_accounts command
+--- AWS trustedadvisor list-organization-recommendation-accounts operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_recommendation_accounts(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendation-accounts" }, input)
 end
 
---- List Resources of a Recommendation within an Organization
---- @param input table|nil The input table for the list_organization_recommendation_resources command
+--- AWS trustedadvisor list-organization-recommendation-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_recommendation_resources(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendation-resources" }, input)
 end
 
---- List a filterable set of Recommendations within an Organization
---- @param input table|nil The input table for the list_organization_recommendations command
+--- AWS trustedadvisor list-organization-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_organization_recommendations(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendations" }, input)
 end
 
---- List Resources of a Recommendation
---- @param input table|nil The input table for the list_recommendation_resources command
+--- AWS trustedadvisor list-recommendation-resources operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendation_resources(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-recommendation-resources" }, input)
 end
 
---- List a filterable set of Recommendations
---- @param input table|nil The input table for the list_recommendations command
+--- AWS trustedadvisor list-recommendations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_recommendations(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "list-recommendations" }, input)
 end
 
---- Update the lifecycle of a Recommendation within an Organization
---- @param input table|nil The input table for the update_organization_recommendation_lifecycle command
+--- AWS trustedadvisor update-organization-recommendation-lifecycle operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_organization_recommendation_lifecycle(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "update-organization-recommendation-lifecycle" }, input)
 end
 
---- Update the lifecyle of a Recommendation
---- @param input table|nil The input table for the update_recommendation_lifecycle command
+--- AWS trustedadvisor update-recommendation-lifecycle operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_recommendation_lifecycle(input)
 	return common.execute_aws_command_with_input({ "trustedadvisor", "update-recommendation-lifecycle" }, input)

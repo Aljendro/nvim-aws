@@ -6,218 +6,218 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SCHEMAS service functions
 local M = {}
 
---- Creates a discoverer
---- @param input table|nil The input table for the create_discoverer command
+--- AWS schemas create-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "create-discoverer" }, input)
 end
 
---- Creates a registry
---- @param input table|nil The input table for the create_registry command
+--- AWS schemas create-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_registry(input)
 	return common.execute_aws_command_with_input({ "schemas", "create-registry" }, input)
 end
 
---- Creates a schema definition
---- @param input table|nil The input table for the create_schema command
+--- AWS schemas create-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "create-schema" }, input)
 end
 
---- Deletes a discoverer
---- @param input table|nil The input table for the delete_discoverer command
+--- AWS schemas delete-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "delete-discoverer" }, input)
 end
 
---- Deletes a Registry
---- @param input table|nil The input table for the delete_registry command
+--- AWS schemas delete-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_registry(input)
 	return common.execute_aws_command_with_input({ "schemas", "delete-registry" }, input)
 end
 
---- Delete the resource-based policy attached to the specified registry
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS schemas delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "schemas", "delete-resource-policy" }, input)
 end
 
---- Delete a schema definition
---- @param input table|nil The input table for the delete_schema command
+--- AWS schemas delete-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "delete-schema" }, input)
 end
 
---- Delete the schema version definition
---- @param input table|nil The input table for the delete_schema_version command
+--- AWS schemas delete-schema-version operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_schema_version(input)
 	return common.execute_aws_command_with_input({ "schemas", "delete-schema-version" }, input)
 end
 
---- Describe the code binding URI
---- @param input table|nil The input table for the describe_code_binding command
+--- AWS schemas describe-code-binding operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_code_binding(input)
 	return common.execute_aws_command_with_input({ "schemas", "describe-code-binding" }, input)
 end
 
---- Describes the discoverer
---- @param input table|nil The input table for the describe_discoverer command
+--- AWS schemas describe-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "describe-discoverer" }, input)
 end
 
---- Describes the registry
---- @param input table|nil The input table for the describe_registry command
+--- AWS schemas describe-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_registry(input)
 	return common.execute_aws_command_with_input({ "schemas", "describe-registry" }, input)
 end
 
---- Retrieve the schema definition
---- @param input table|nil The input table for the describe_schema command
+--- AWS schemas describe-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.describe_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "describe-schema" }, input)
 end
 
---- AWS Operation
---- @param input table|nil The input table for the export_schema command
+--- AWS schemas export-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.export_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "export-schema" }, input)
 end
 
---- Get the code binding source URI
---- @param input table|nil The input table for the get_code_binding_source command
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_code_binding_source(input)
-	return common.execute_aws_command_with_input({ "schemas", "get-code-binding-source" }, input)
-end
-
---- Get the discovered schema that was generated based on sampled events
---- @param input table|nil The input table for the get_discovered_schema command
+--- AWS schemas get-discovered-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_discovered_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "get-discovered-schema" }, input)
 end
 
---- Retrieves the resource-based policy attached to a given registry
---- @param input table|nil The input table for the get_resource_policy command
+--- AWS schemas get-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policy(input)
 	return common.execute_aws_command_with_input({ "schemas", "get-resource-policy" }, input)
 end
 
---- List the discoverers
---- @param input table|nil The input table for the list_discoverers command
+--- AWS schemas help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "schemas", "help" }, input)
+end
+
+--- AWS schemas list-discoverers operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_discoverers(input)
 	return common.execute_aws_command_with_input({ "schemas", "list-discoverers" }, input)
 end
 
---- List the registries
---- @param input table|nil The input table for the list_registries command
+--- AWS schemas list-registries operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_registries(input)
 	return common.execute_aws_command_with_input({ "schemas", "list-registries" }, input)
 end
 
---- Provides a list of the schema versions and related information
---- @param input table|nil The input table for the list_schema_versions command
+--- AWS schemas list-schema-versions operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schema_versions(input)
 	return common.execute_aws_command_with_input({ "schemas", "list-schema-versions" }, input)
 end
 
---- List the schemas
---- @param input table|nil The input table for the list_schemas command
+--- AWS schemas list-schemas operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_schemas(input)
 	return common.execute_aws_command_with_input({ "schemas", "list-schemas" }, input)
 end
 
---- Get tags for resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS schemas list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "schemas", "list-tags-for-resource" }, input)
 end
 
---- Put code binding URI
---- @param input table|nil The input table for the put_code_binding command
+--- AWS schemas put-code-binding operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_code_binding(input)
 	return common.execute_aws_command_with_input({ "schemas", "put-code-binding" }, input)
 end
 
---- The name of the policy
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS schemas put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "schemas", "put-resource-policy" }, input)
 end
 
---- Search the schemas
---- @param input table|nil The input table for the search_schemas command
+--- AWS schemas search-schemas operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.search_schemas(input)
 	return common.execute_aws_command_with_input({ "schemas", "search-schemas" }, input)
 end
 
---- Starts the discoverer
---- @param input table|nil The input table for the start_discoverer command
+--- AWS schemas start-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "start-discoverer" }, input)
 end
 
---- Stops the discoverer
---- @param input table|nil The input table for the stop_discoverer command
+--- AWS schemas stop-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.stop_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "stop-discoverer" }, input)
 end
 
---- Add tags to a resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS schemas tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "schemas", "tag-resource" }, input)
 end
 
---- Removes tags from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS schemas untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "schemas", "untag-resource" }, input)
 end
 
---- Updates the discoverer
---- @param input table|nil The input table for the update_discoverer command
+--- AWS schemas update-discoverer operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_discoverer(input)
 	return common.execute_aws_command_with_input({ "schemas", "update-discoverer" }, input)
 end
 
---- Updates a registry
---- @param input table|nil The input table for the update_registry command
+--- AWS schemas update-registry operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_registry(input)
 	return common.execute_aws_command_with_input({ "schemas", "update-registry" }, input)
 end
 
---- Updates the schema definition Inactive schemas will be deleted after two years
---- @param input table|nil The input table for the update_schema command
+--- AWS schemas update-schema operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "update-schema" }, input)

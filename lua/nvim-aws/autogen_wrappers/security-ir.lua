@@ -6,155 +6,162 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SECURITY-IR service functions
 local M = {}
 
---- Grants permission to view an existing membership
---- @param input table|nil The input table for the batch_get_member_account_details command
+--- AWS security-ir batch-get-member-account-details operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_member_account_details(input)
 	return common.execute_aws_command_with_input({ "security-ir", "batch-get-member-account-details" }, input)
 end
 
---- Grants permissions to cancel an existing membership
---- @param input table|nil The input table for the cancel_membership command
+--- AWS security-ir cancel-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.cancel_membership(input)
 	return common.execute_aws_command_with_input({ "security-ir", "cancel-membership" }, input)
 end
 
---- Grants permission to close an existing case
---- @param input table|nil The input table for the close_case command
+--- AWS security-ir close-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.close_case(input)
 	return common.execute_aws_command_with_input({ "security-ir", "close-case" }, input)
 end
 
---- Grants permission to create a new case
---- @param input table|nil The input table for the create_case command
+--- AWS security-ir create-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_case(input)
 	return common.execute_aws_command_with_input({ "security-ir", "create-case" }, input)
 end
 
---- Grants permission to add a comment to an existing case
---- @param input table|nil The input table for the create_case_comment command
+--- AWS security-ir create-case-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_case_comment(input)
 	return common.execute_aws_command_with_input({ "security-ir", "create-case-comment" }, input)
 end
 
---- Grants permissions to create a new membership
---- @param input table|nil The input table for the create_membership command
+--- AWS security-ir create-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_membership(input)
 	return common.execute_aws_command_with_input({ "security-ir", "create-membership" }, input)
 end
 
---- Grant permission to view a designated case
---- @param input table|nil The input table for the get_case command
+--- AWS security-ir get-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_case(input)
 	return common.execute_aws_command_with_input({ "security-ir", "get-case" }, input)
 end
 
---- Grants permission to obtain an Amazon S3 presigned URL to download an attachment
---- @param input table|nil The input table for the get_case_attachment_download_url command
+--- AWS security-ir get-case-attachment-download-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_case_attachment_download_url(input)
 	return common.execute_aws_command_with_input({ "security-ir", "get-case-attachment-download-url" }, input)
 end
 
---- Grants permission to upload an attachment to a case
---- @param input table|nil The input table for the get_case_attachment_upload_url command
+--- AWS security-ir get-case-attachment-upload-url operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_case_attachment_upload_url(input)
 	return common.execute_aws_command_with_input({ "security-ir", "get-case-attachment-upload-url" }, input)
 end
 
---- Grants permission to get details of a designated service membership
---- @param input table|nil The input table for the get_membership command
+--- AWS security-ir get-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_membership(input)
 	return common.execute_aws_command_with_input({ "security-ir", "get-membership" }, input)
 end
 
---- Grants permissions to view the aidt log for edits made to a designated case
---- @param input table|nil The input table for the list_case_edits command
+--- AWS security-ir help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "security-ir", "help" }, input)
+end
+
+--- AWS security-ir list-case-edits operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_case_edits(input)
 	return common.execute_aws_command_with_input({ "security-ir", "list-case-edits" }, input)
 end
 
---- Grants permission to list all cases the requester has access to
---- @param input table|nil The input table for the list_cases command
+--- AWS security-ir list-cases operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_cases(input)
 	return common.execute_aws_command_with_input({ "security-ir", "list-cases" }, input)
 end
 
---- Grants permissions to list and view comments for a designated case
---- @param input table|nil The input table for the list_comments command
+--- AWS security-ir list-comments operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_comments(input)
 	return common.execute_aws_command_with_input({ "security-ir", "list-comments" }, input)
 end
 
---- Grants permission to query the memberships a principal has access to
---- @param input table|nil The input table for the list_memberships command
+--- AWS security-ir list-memberships operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_memberships(input)
 	return common.execute_aws_command_with_input({ "security-ir", "list-memberships" }, input)
 end
 
---- Grants permission to view currently configured tags on a resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS security-ir list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "security-ir", "list-tags-for-resource" }, input)
 end
 
---- Grants permission to add a tag(s) to a designated resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS security-ir tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "security-ir", "tag-resource" }, input)
 end
 
---- Grants permission to remove a tag(s) from a designate resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS security-ir untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "security-ir", "untag-resource" }, input)
 end
 
---- Grants permission to update an existing case
---- @param input table|nil The input table for the update_case command
+--- AWS security-ir update-case operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_case(input)
 	return common.execute_aws_command_with_input({ "security-ir", "update-case" }, input)
 end
 
---- Grants permission to update an existing case comment
---- @param input table|nil The input table for the update_case_comment command
+--- AWS security-ir update-case-comment operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_case_comment(input)
 	return common.execute_aws_command_with_input({ "security-ir", "update-case-comment" }, input)
 end
 
---- Grants permission to update the status for a designated cases
---- @param input table|nil The input table for the update_case_status command
+--- AWS security-ir update-case-status operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_case_status(input)
 	return common.execute_aws_command_with_input({ "security-ir", "update-case-status" }, input)
 end
 
---- Grants access to UpdateMembership to change membership configuration
---- @param input table|nil The input table for the update_membership command
+--- AWS security-ir update-membership operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_membership(input)
 	return common.execute_aws_command_with_input({ "security-ir", "update-membership" }, input)
 end
 
---- Grants permission to update the resolver type for a case
---- @param input table|nil The input table for the update_resolver_type command
+--- AWS security-ir update-resolver-type operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_resolver_type(input)
 	return common.execute_aws_command_with_input({ "security-ir", "update-resolver-type" }, input)

@@ -70,6 +70,11 @@ describe("AWS controltower service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_baselines", function()
 		local result = service.list_baselines()
 		assert.is_true(result.success)
@@ -117,6 +122,16 @@ describe("AWS controltower service testing", function()
 
 	it("should generate a cli skeleton with reset_landing_zone", function()
 		local result = service.reset_landing_zone()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with tag_resource", function()
+		local result = service.tag_resource()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with untag_resource", function()
+		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
 

@@ -175,18 +175,8 @@ describe("AWS lambda service testing", function()
 		assert.is_true(result.success)
 	end)
 
-	it("should generate a cli skeleton with invoke", function()
-		local result = service.invoke()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with invoke_async", function()
-		local result = service.invoke_async()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with invoke_with_response_stream", function()
-		local result = service.invoke_with_response_stream()
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -630,6 +630,11 @@ describe("AWS glue service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with get_mapping", function()
+		local result = service.get_mapping()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with get_ml_task_run", function()
 		local result = service.get_ml_task_run()
 		assert.is_true(result.success)
@@ -647,11 +652,6 @@ describe("AWS glue service testing", function()
 
 	it("should generate a cli skeleton with get_ml_transforms", function()
 		local result = service.get_ml_transforms()
-		assert.is_true(result.success)
-	end)
-
-	it("should generate a cli skeleton with get_mapping", function()
-		local result = service.get_mapping()
 		assert.is_true(result.success)
 	end)
 
@@ -817,6 +817,11 @@ describe("AWS glue service testing", function()
 
 	it("should generate a cli skeleton with get_workflow_runs", function()
 		local result = service.get_workflow_runs()
+		assert.is_true(result.success)
+	end)
+
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
 		assert.is_true(result.success)
 	end)
 

@@ -6,295 +6,302 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS PINPOINT-EMAIL service functions
 local M = {}
 
---- Create a configuration set
---- @param input table|nil The input table for the create_configuration_set command
+--- AWS pinpoint-email create-configuration-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "create-configuration-set" }, input)
 end
 
---- Create an event destination
---- @param input table|nil The input table for the create_configuration_set_event_destination command
+--- AWS pinpoint-email create-configuration-set-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_configuration_set_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "create-configuration-set-event-destination" }, input)
 end
 
---- Create a new pool of dedicated IP addresses
---- @param input table|nil The input table for the create_dedicated_ip_pool command
+--- AWS pinpoint-email create-dedicated-ip-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_dedicated_ip_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "create-dedicated-ip-pool" }, input)
 end
 
---- Create a new predictive inbox placement test
---- @param input table|nil The input table for the create_deliverability_test_report command
+--- AWS pinpoint-email create-deliverability-test-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_deliverability_test_report(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "create-deliverability-test-report" }, input)
 end
 
---- Verifies an email identity for use with Amazon Pinpoint
---- @param input table|nil The input table for the create_email_identity command
+--- AWS pinpoint-email create-email-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_email_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "create-email-identity" }, input)
 end
 
---- Delete an existing configuration set
---- @param input table|nil The input table for the delete_configuration_set command
+--- AWS pinpoint-email delete-configuration-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "delete-configuration-set" }, input)
 end
 
---- Delete an event destination
---- @param input table|nil The input table for the delete_configuration_set_event_destination command
+--- AWS pinpoint-email delete-configuration-set-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_configuration_set_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "delete-configuration-set-event-destination" }, input)
 end
 
---- Delete a dedicated IP pool
---- @param input table|nil The input table for the delete_dedicated_ip_pool command
+--- AWS pinpoint-email delete-dedicated-ip-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_dedicated_ip_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "delete-dedicated-ip-pool" }, input)
 end
 
---- Deletes an email identity that you previously verified for use with Amazon Pinpoint
---- @param input table|nil The input table for the delete_email_identity command
+--- AWS pinpoint-email delete-email-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_email_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "delete-email-identity" }, input)
 end
 
---- Obtain information about the email-sending status and capabilities of your Amazon Pinpoint account in the current AWS Region
---- @param input table|nil The input table for the get_account command
+--- AWS pinpoint-email get-account operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_account(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-account" }, input)
 end
 
---- Retrieve a list of the blacklists that your dedicated IP addresses appear on
---- @param input table|nil The input table for the get_blacklist_reports command
+--- AWS pinpoint-email get-blacklist-reports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_blacklist_reports(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-blacklist-reports" }, input)
 end
 
---- Get information about an existing configuration set, including the dedicated IP pool that it's associated with, whether or not it's enabled for sending email, and more
---- @param input table|nil The input table for the get_configuration_set command
+--- AWS pinpoint-email get-configuration-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configuration_set(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-configuration-set" }, input)
 end
 
---- Retrieve a list of event destinations that are associated with a configuration set
---- @param input table|nil The input table for the get_configuration_set_event_destinations command
+--- AWS pinpoint-email get-configuration-set-event-destinations operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_configuration_set_event_destinations(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-configuration-set-event-destinations" }, input)
 end
 
---- Get information about a dedicated IP address, including the name of the dedicated IP pool that it's associated with, as well information about the automatic warm-up process for the address
---- @param input table|nil The input table for the get_dedicated_ip command
+--- AWS pinpoint-email get-dedicated-ip operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dedicated_ip(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-dedicated-ip" }, input)
 end
 
---- List the dedicated IP addresses that are associated with your Amazon Pinpoint account
---- @param input table|nil The input table for the get_dedicated_ips command
+--- AWS pinpoint-email get-dedicated-ips operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_dedicated_ips(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-dedicated-ips" }, input)
 end
 
---- Retrieve information about the status of the Deliverability dashboard for your Amazon Pinpoint account
---- @param input table|nil The input table for the get_deliverability_dashboard_options command
+--- AWS pinpoint-email get-deliverability-dashboard-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deliverability_dashboard_options(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-deliverability-dashboard-options" }, input)
 end
 
---- Retrieve the results of a predictive inbox placement test
---- @param input table|nil The input table for the get_deliverability_test_report command
+--- AWS pinpoint-email get-deliverability-test-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_deliverability_test_report(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-deliverability-test-report" }, input)
 end
 
---- Retrieve all the deliverability data for a specific campaign
---- @param input table|nil The input table for the get_domain_deliverability_campaign command
+--- AWS pinpoint-email get-domain-deliverability-campaign operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_deliverability_campaign(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-domain-deliverability-campaign" }, input)
 end
 
---- Retrieve inbox placement and engagement rates for the domains that you use to send email
---- @param input table|nil The input table for the get_domain_statistics_report command
+--- AWS pinpoint-email get-domain-statistics-report operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_domain_statistics_report(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-domain-statistics-report" }, input)
 end
 
---- Provides information about a specific identity associated with your Amazon Pinpoint account, including the identity's verification status, its DKIM authentication status, and its custom Mail-From settings
---- @param input table|nil The input table for the get_email_identity command
+--- AWS pinpoint-email get-email-identity operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_email_identity(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "get-email-identity" }, input)
 end
 
---- List all of the configuration sets associated with your Amazon Pinpoint account in the current region
---- @param input table|nil The input table for the list_configuration_sets command
+--- AWS pinpoint-email help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "pinpoint-email", "help" }, input)
+end
+
+--- AWS pinpoint-email list-configuration-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_configuration_sets(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-configuration-sets" }, input)
 end
 
---- List all of the dedicated IP pools that exist in your Amazon Pinpoint account in the current AWS Region
---- @param input table|nil The input table for the list_dedicated_ip_pools command
+--- AWS pinpoint-email list-dedicated-ip-pools operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_dedicated_ip_pools(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-dedicated-ip-pools" }, input)
 end
 
---- Show a list of the predictive inbox placement tests that you've performed, regardless of their statuses
---- @param input table|nil The input table for the list_deliverability_test_reports command
+--- AWS pinpoint-email list-deliverability-test-reports operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_deliverability_test_reports(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-deliverability-test-reports" }, input)
 end
 
---- Retrieve deliverability data for all the campaigns that used a specific domain to send email during a specified time range
---- @param input table|nil The input table for the list_domain_deliverability_campaigns command
+--- AWS pinpoint-email list-domain-deliverability-campaigns operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_domain_deliverability_campaigns(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-domain-deliverability-campaigns" }, input)
 end
 
---- Returns a list of all of the email identities that are associated with your Amazon Pinpoint account
---- @param input table|nil The input table for the list_email_identities command
+--- AWS pinpoint-email list-email-identities operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_email_identities(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-email-identities" }, input)
 end
 
---- Retrieve a list of the tags (keys and values) that are associated with a specified resource
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS pinpoint-email list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "list-tags-for-resource" }, input)
 end
 
---- Enable or disable the automatic warm-up feature for dedicated IP addresses
---- @param input table|nil The input table for the put_account_dedicated_ip_warmup_attributes command
+--- AWS pinpoint-email put-account-dedicated-ip-warmup-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_dedicated_ip_warmup_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-account-dedicated-ip-warmup-attributes" }, input)
 end
 
---- Enable or disable the ability of your account to send email
---- @param input table|nil The input table for the put_account_sending_attributes command
+--- AWS pinpoint-email put-account-sending-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_account_sending_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-account-sending-attributes" }, input)
 end
 
---- Associate a configuration set with a dedicated IP pool
---- @param input table|nil The input table for the put_configuration_set_delivery_options command
+--- AWS pinpoint-email put-configuration-set-delivery-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_set_delivery_options(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-configuration-set-delivery-options" }, input)
 end
 
---- Enable or disable collection of reputation metrics for emails that you send using a particular configuration set in a specific AWS Region
---- @param input table|nil The input table for the put_configuration_set_reputation_options command
+--- AWS pinpoint-email put-configuration-set-reputation-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_set_reputation_options(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-configuration-set-reputation-options" }, input)
 end
 
---- Enable or disable email sending for messages that use a particular configuration set in a specific AWS Region
---- @param input table|nil The input table for the put_configuration_set_sending_options command
+--- AWS pinpoint-email put-configuration-set-sending-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_set_sending_options(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-configuration-set-sending-options" }, input)
 end
 
---- Specify a custom domain to use for open and click tracking elements in email that you send using Amazon Pinpoint
---- @param input table|nil The input table for the put_configuration_set_tracking_options command
+--- AWS pinpoint-email put-configuration-set-tracking-options operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_configuration_set_tracking_options(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-configuration-set-tracking-options" }, input)
 end
 
---- Move a dedicated IP address to an existing dedicated IP pool
---- @param input table|nil The input table for the put_dedicated_ip_in_pool command
+--- AWS pinpoint-email put-dedicated-ip-in-pool operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_dedicated_ip_in_pool(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-dedicated-ip-in-pool" }, input)
 end
 
---- 
---- @param input table|nil The input table for the put_dedicated_ip_warmup_attributes command
+--- AWS pinpoint-email put-dedicated-ip-warmup-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_dedicated_ip_warmup_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-dedicated-ip-warmup-attributes" }, input)
 end
 
---- Enable or disable the Deliverability dashboard for your Amazon Pinpoint account
---- @param input table|nil The input table for the put_deliverability_dashboard_option command
+--- AWS pinpoint-email put-deliverability-dashboard-option operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_deliverability_dashboard_option(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-deliverability-dashboard-option" }, input)
 end
 
---- Used to enable or disable DKIM authentication for an email identity
---- @param input table|nil The input table for the put_email_identity_dkim_attributes command
+--- AWS pinpoint-email put-email-identity-dkim-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_email_identity_dkim_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-email-identity-dkim-attributes" }, input)
 end
 
---- Used to enable or disable feedback forwarding for an identity
---- @param input table|nil The input table for the put_email_identity_feedback_attributes command
+--- AWS pinpoint-email put-email-identity-feedback-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_email_identity_feedback_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-email-identity-feedback-attributes" }, input)
 end
 
---- Used to enable or disable the custom Mail-From domain configuration for an email identity
---- @param input table|nil The input table for the put_email_identity_mail_from_attributes command
+--- AWS pinpoint-email put-email-identity-mail-from-attributes operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_email_identity_mail_from_attributes(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "put-email-identity-mail-from-attributes" }, input)
 end
 
---- Sends an email message
---- @param input table|nil The input table for the send_email command
+--- AWS pinpoint-email send-email operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.send_email(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "send-email" }, input)
 end
 
---- Add one or more tags (keys and values) to a specified resource
---- @param input table|nil The input table for the tag_resource command
+--- AWS pinpoint-email tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "tag-resource" }, input)
 end
 
---- Remove one or more tags (keys and values) from a specified resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS pinpoint-email untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "untag-resource" }, input)
 end
 
---- Update the configuration of an event destination for a configuration set
---- @param input table|nil The input table for the update_configuration_set_event_destination command
+--- AWS pinpoint-email update-configuration-set-event-destination operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_configuration_set_event_destination(input)
 	return common.execute_aws_command_with_input({ "pinpoint-email", "update-configuration-set-event-destination" }, input)

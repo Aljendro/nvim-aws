@@ -6,218 +6,225 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS SSM-INCIDENTS service functions
 local M = {}
 
---- Retrieves details about all specified findings for an incident, including descriptive details about each finding
---- @param input table|nil The input table for the batch_get_incident_findings command
+--- AWS ssm-incidents batch-get-incident-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.batch_get_incident_findings(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "batch-get-incident-findings" }, input)
 end
 
---- A replication set replicates and encrypts your data to the provided Regions with the provided KMS key
---- @param input table|nil The input table for the create_replication_set command
+--- AWS ssm-incidents create-replication-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_replication_set(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "create-replication-set" }, input)
 end
 
---- Creates a response plan that automates the initial response to incidents
---- @param input table|nil The input table for the create_response_plan command
+--- AWS ssm-incidents create-response-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_response_plan(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "create-response-plan" }, input)
 end
 
---- Creates a custom timeline event on the incident details page of an incident record
---- @param input table|nil The input table for the create_timeline_event command
+--- AWS ssm-incidents create-timeline-event operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.create_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "create-timeline-event" }, input)
 end
 
---- Delete an incident record from Incident Manager
---- @param input table|nil The input table for the delete_incident_record command
+--- AWS ssm-incidents delete-incident-record operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_incident_record(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-incident-record" }, input)
 end
 
---- Deletes all Regions in your replication set
---- @param input table|nil The input table for the delete_replication_set command
+--- AWS ssm-incidents delete-replication-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_replication_set(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-replication-set" }, input)
 end
 
---- Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource
---- @param input table|nil The input table for the delete_resource_policy command
+--- AWS ssm-incidents delete-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_resource_policy(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-resource-policy" }, input)
 end
 
---- Deletes the specified response plan
---- @param input table|nil The input table for the delete_response_plan command
+--- AWS ssm-incidents delete-response-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_response_plan(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-response-plan" }, input)
 end
 
---- Deletes a timeline event from an incident
---- @param input table|nil The input table for the delete_timeline_event command
+--- AWS ssm-incidents delete-timeline-event operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.delete_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-timeline-event" }, input)
 end
 
---- Returns the details for the specified incident record
---- @param input table|nil The input table for the get_incident_record command
+--- AWS ssm-incidents get-incident-record operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_incident_record(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-incident-record" }, input)
 end
 
---- Retrieve your Incident Manager replication set
---- @param input table|nil The input table for the get_replication_set command
+--- AWS ssm-incidents get-replication-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_replication_set(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-replication-set" }, input)
 end
 
---- Retrieves the resource policies attached to the specified response plan
---- @param input table|nil The input table for the get_resource_policies command
+--- AWS ssm-incidents get-resource-policies operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_resource_policies(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-resource-policies" }, input)
 end
 
---- Retrieves the details of the specified response plan
---- @param input table|nil The input table for the get_response_plan command
+--- AWS ssm-incidents get-response-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_response_plan(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-response-plan" }, input)
 end
 
---- Retrieves a timeline event based on its ID and incident record
---- @param input table|nil The input table for the get_timeline_event command
+--- AWS ssm-incidents get-timeline-event operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.get_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "get-timeline-event" }, input)
 end
 
---- Retrieves a list of the IDs of findings, plus their last modified times, that have been identified for a specified incident
---- @param input table|nil The input table for the list_incident_findings command
+--- AWS ssm-incidents help operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.help(input)
+	return common.execute_aws_command_with_input({ "ssm-incidents", "help" }, input)
+end
+
+--- AWS ssm-incidents list-incident-findings operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_incident_findings(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-incident-findings" }, input)
 end
 
---- Lists all incident records in your account
---- @param input table|nil The input table for the list_incident_records command
+--- AWS ssm-incidents list-incident-records operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_incident_records(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-incident-records" }, input)
 end
 
---- List all related items for an incident record
---- @param input table|nil The input table for the list_related_items command
+--- AWS ssm-incidents list-related-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_related_items(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-related-items" }, input)
 end
 
---- Lists details about the replication set configured in your account
---- @param input table|nil The input table for the list_replication_sets command
+--- AWS ssm-incidents list-replication-sets operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_replication_sets(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-replication-sets" }, input)
 end
 
---- Lists all response plans in your account
---- @param input table|nil The input table for the list_response_plans command
+--- AWS ssm-incidents list-response-plans operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_response_plans(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-response-plans" }, input)
 end
 
---- Lists the tags that are attached to the specified response plan or incident
---- @param input table|nil The input table for the list_tags_for_resource command
+--- AWS ssm-incidents list-tags-for-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_tags_for_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-tags-for-resource" }, input)
 end
 
---- Lists timeline events for the specified incident record
---- @param input table|nil The input table for the list_timeline_events command
+--- AWS ssm-incidents list-timeline-events operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_timeline_events(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "list-timeline-events" }, input)
 end
 
---- Adds a resource policy to the specified response plan
---- @param input table|nil The input table for the put_resource_policy command
+--- AWS ssm-incidents put-resource-policy operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.put_resource_policy(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "put-resource-policy" }, input)
 end
 
---- Used to start an incident from CloudWatch alarms, EventBridge events, or manually
---- @param input table|nil The input table for the start_incident command
+--- AWS ssm-incidents start-incident operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.start_incident(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "start-incident" }, input)
 end
 
---- Adds a tag to a response plan
---- @param input table|nil The input table for the tag_resource command
+--- AWS ssm-incidents tag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.tag_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "tag-resource" }, input)
 end
 
---- Removes a tag from a resource
---- @param input table|nil The input table for the untag_resource command
+--- AWS ssm-incidents untag-resource operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "untag-resource" }, input)
 end
 
---- Update deletion protection to either allow or deny deletion of the final Region in a replication set
---- @param input table|nil The input table for the update_deletion_protection command
+--- AWS ssm-incidents update-deletion-protection operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_deletion_protection(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-deletion-protection" }, input)
 end
 
---- Update the details of an incident record
---- @param input table|nil The input table for the update_incident_record command
+--- AWS ssm-incidents update-incident-record operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_incident_record(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-incident-record" }, input)
 end
 
---- Add or remove related items from the related items tab of an incident record
---- @param input table|nil The input table for the update_related_items command
+--- AWS ssm-incidents update-related-items operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_related_items(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-related-items" }, input)
 end
 
---- Add or delete Regions from your replication set
---- @param input table|nil The input table for the update_replication_set command
+--- AWS ssm-incidents update-replication-set operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_replication_set(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-replication-set" }, input)
 end
 
---- Updates the specified response plan
---- @param input table|nil The input table for the update_response_plan command
+--- AWS ssm-incidents update-response-plan operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_response_plan(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-response-plan" }, input)
 end
 
---- Updates a timeline event
---- @param input table|nil The input table for the update_timeline_event command
+--- AWS ssm-incidents update-timeline-event operation
+--- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.update_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-timeline-event" }, input)

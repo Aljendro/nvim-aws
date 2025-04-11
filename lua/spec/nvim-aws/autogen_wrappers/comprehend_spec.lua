@@ -215,6 +215,11 @@ describe("AWS comprehend service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with import_model", function()
 		local result = service.import_model()
 		assert.is_true(result.success)

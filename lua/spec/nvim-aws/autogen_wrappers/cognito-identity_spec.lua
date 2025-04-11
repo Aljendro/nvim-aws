@@ -60,6 +60,11 @@ describe("AWS cognito-identity service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_identities", function()
 		local result = service.list_identities()
 		assert.is_true(result.success)

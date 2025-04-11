@@ -15,6 +15,11 @@ describe("AWS apigatewaymanagementapi service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with post_to_connection", function()
 		local result = service.post_to_connection()
 		assert.is_true(result.success)

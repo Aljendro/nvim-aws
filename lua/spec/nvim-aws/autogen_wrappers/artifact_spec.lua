@@ -25,6 +25,11 @@ describe("AWS artifact service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_customer_agreements", function()
 		local result = service.list_customer_agreements()
 		assert.is_true(result.success)

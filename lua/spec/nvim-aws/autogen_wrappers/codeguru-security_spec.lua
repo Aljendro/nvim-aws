@@ -40,6 +40,11 @@ describe("AWS codeguru-security service testing", function()
 		assert.is_true(result.success)
 	end)
 
+	it("should generate a cli skeleton with help", function()
+		local result = service.help()
+		assert.is_true(result.success)
+	end)
+
 	it("should generate a cli skeleton with list_findings_metrics", function()
 		local result = service.list_findings_metrics()
 		assert.is_true(result.success)
