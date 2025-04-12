@@ -9,130 +9,104 @@ describe("AWS discovery service testing", function()
 		local result = service.associate_configuration_items_to_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete_agents", function()
 		local result = service.batch_delete_agents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete_import_data", function()
 		local result = service.batch_delete_import_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_application", function()
 		local result = service.create_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_tags", function()
 		local result = service.create_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_applications", function()
 		local result = service.delete_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tags", function()
 		local result = service.delete_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_agents", function()
 		local result = service.describe_agents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_batch_delete_configuration_task", function()
 		local result = service.describe_batch_delete_configuration_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_configurations", function()
 		local result = service.describe_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_continuous_exports", function()
 		local result = service.describe_continuous_exports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export_tasks", function()
 		local result = service.describe_export_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_import_tasks", function()
 		local result = service.describe_import_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tags", function()
 		local result = service.describe_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_configuration_items_from_application", function()
 		local result = service.disassociate_configuration_items_from_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_discovery_summary", function()
 		local result = service.get_discovery_summary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_configurations", function()
 		local result = service.list_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_server_neighbors", function()
 		local result = service.list_server_neighbors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_batch_delete_configuration_task", function()
 		local result = service.start_batch_delete_configuration_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_continuous_export", function()
 		local result = service.start_continuous_export()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_data_collection_by_agent_ids", function()
 		local result = service.start_data_collection_by_agent_ids()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_export_task", function()
 		local result = service.start_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_import_task", function()
 		local result = service.start_import_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_continuous_export", function()
 		local result = service.stop_continuous_export()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_data_collection_by_agent_ids", function()
 		local result = service.stop_data_collection_by_agent_ids()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application", function()
 		local result = service.update_application()
 		assert.is_true(result.success)
 	end)
-
 end)

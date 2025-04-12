@@ -9,15 +9,12 @@ describe("AWS lex-runtime service testing", function()
 		local result = service.delete_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_session", function()
 		local result = service.get_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with post_text", function()
 		local result = service.post_text()
 		assert.is_true(result.success)
 	end)
-
 end)

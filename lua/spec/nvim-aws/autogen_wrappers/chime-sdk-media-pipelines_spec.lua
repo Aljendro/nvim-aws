@@ -9,155 +9,124 @@ describe("AWS chime-sdk-media-pipelines service testing", function()
 		local result = service.create_media_capture_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_concatenation_pipeline", function()
 		local result = service.create_media_concatenation_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_insights_pipeline", function()
 		local result = service.create_media_insights_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_insights_pipeline_configuration", function()
 		local result = service.create_media_insights_pipeline_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_live_connector_pipeline", function()
 		local result = service.create_media_live_connector_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_pipeline_kinesis_video_stream_pool", function()
 		local result = service.create_media_pipeline_kinesis_video_stream_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_media_stream_pipeline", function()
 		local result = service.create_media_stream_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_media_capture_pipeline", function()
 		local result = service.delete_media_capture_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_media_insights_pipeline_configuration", function()
 		local result = service.delete_media_insights_pipeline_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_media_pipeline", function()
 		local result = service.delete_media_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_media_pipeline_kinesis_video_stream_pool", function()
 		local result = service.delete_media_pipeline_kinesis_video_stream_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_media_capture_pipeline", function()
 		local result = service.get_media_capture_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_media_insights_pipeline_configuration", function()
 		local result = service.get_media_insights_pipeline_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_media_pipeline", function()
 		local result = service.get_media_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_media_pipeline_kinesis_video_stream_pool", function()
 		local result = service.get_media_pipeline_kinesis_video_stream_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_speaker_search_task", function()
 		local result = service.get_speaker_search_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_voice_tone_analysis_task", function()
 		local result = service.get_voice_tone_analysis_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_media_capture_pipelines", function()
 		local result = service.list_media_capture_pipelines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_media_insights_pipeline_configurations", function()
 		local result = service.list_media_insights_pipeline_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_media_pipeline_kinesis_video_stream_pools", function()
 		local result = service.list_media_pipeline_kinesis_video_stream_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_media_pipelines", function()
 		local result = service.list_media_pipelines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_speaker_search_task", function()
 		local result = service.start_speaker_search_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_voice_tone_analysis_task", function()
 		local result = service.start_voice_tone_analysis_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_speaker_search_task", function()
 		local result = service.stop_speaker_search_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_voice_tone_analysis_task", function()
 		local result = service.stop_voice_tone_analysis_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_media_insights_pipeline_configuration", function()
 		local result = service.update_media_insights_pipeline_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_media_insights_pipeline_status", function()
 		local result = service.update_media_insights_pipeline_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_media_pipeline_kinesis_video_stream_pool", function()
 		local result = service.update_media_pipeline_kinesis_video_stream_pool()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,95 +9,76 @@ describe("AWS timestream-write service testing", function()
 		local result = service.create_batch_load_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_database", function()
 		local result = service.create_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_table", function()
 		local result = service.create_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_database", function()
 		local result = service.delete_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_table", function()
 		local result = service.delete_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_batch_load_task", function()
 		local result = service.describe_batch_load_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_database", function()
 		local result = service.describe_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoints", function()
 		local result = service.describe_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_table", function()
 		local result = service.describe_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_batch_load_tasks", function()
 		local result = service.list_batch_load_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_databases", function()
 		local result = service.list_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tables", function()
 		local result = service.list_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resume_batch_load_task", function()
 		local result = service.resume_batch_load_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_database", function()
 		local result = service.update_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_table", function()
 		local result = service.update_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with write_records", function()
 		local result = service.write_records()
 		assert.is_true(result.success)
 	end)
-
 end)

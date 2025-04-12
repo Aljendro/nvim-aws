@@ -9,20 +9,16 @@ describe("AWS route53-recovery-cluster service testing", function()
 		local result = service.get_routing_control_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_routing_controls", function()
 		local result = service.list_routing_controls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_routing_control_state", function()
 		local result = service.update_routing_control_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_routing_control_states", function()
 		local result = service.update_routing_control_states()
 		assert.is_true(result.success)
 	end)
-
 end)

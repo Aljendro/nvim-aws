@@ -9,60 +9,48 @@ describe("AWS account service testing", function()
 		local result = service.accept_primary_email_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_alternate_contact", function()
 		local result = service.delete_alternate_contact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_region", function()
 		local result = service.disable_region()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_region", function()
 		local result = service.enable_region()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_alternate_contact", function()
 		local result = service.get_alternate_contact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_contact_information", function()
 		local result = service.get_contact_information()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_primary_email", function()
 		local result = service.get_primary_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_region_opt_status", function()
 		local result = service.get_region_opt_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_regions", function()
 		local result = service.list_regions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_alternate_contact", function()
 		local result = service.put_alternate_contact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_contact_information", function()
 		local result = service.put_contact_information()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_primary_email_update", function()
 		local result = service.start_primary_email_update()
 		assert.is_true(result.success)
 	end)
-
 end)

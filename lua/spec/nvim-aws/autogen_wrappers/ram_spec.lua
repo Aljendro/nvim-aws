@@ -9,170 +9,136 @@ describe("AWS ram service testing", function()
 		local result = service.accept_resource_share_invitation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_resource_share", function()
 		local result = service.associate_resource_share()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_resource_share_permission", function()
 		local result = service.associate_resource_share_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_permission", function()
 		local result = service.create_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_permission_version", function()
 		local result = service.create_permission_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_resource_share", function()
 		local result = service.create_resource_share()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_permission", function()
 		local result = service.delete_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_permission_version", function()
 		local result = service.delete_permission_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_share", function()
 		local result = service.delete_resource_share()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_resource_share", function()
 		local result = service.disassociate_resource_share()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_resource_share_permission", function()
 		local result = service.disassociate_resource_share_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_sharing_with_aws_organization", function()
 		local result = service.enable_sharing_with_aws_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_permission", function()
 		local result = service.get_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policies", function()
 		local result = service.get_resource_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_share_associations", function()
 		local result = service.get_resource_share_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_share_invitations", function()
 		local result = service.get_resource_share_invitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_shares", function()
 		local result = service.get_resource_shares()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pending_invitation_resources", function()
 		local result = service.list_pending_invitation_resources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permission_associations", function()
 		local result = service.list_permission_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permission_versions", function()
 		local result = service.list_permission_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permissions", function()
 		local result = service.list_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_principals", function()
 		local result = service.list_principals()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_replace_permission_associations_work", function()
 		local result = service.list_replace_permission_associations_work()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_share_permissions", function()
 		local result = service.list_resource_share_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_types", function()
 		local result = service.list_resource_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resources", function()
 		local result = service.list_resources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with promote_permission_created_from_policy", function()
 		local result = service.promote_permission_created_from_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with promote_resource_share_created_from_policy", function()
 		local result = service.promote_resource_share_created_from_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_resource_share_invitation", function()
 		local result = service.reject_resource_share_invitation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_permission_associations", function()
 		local result = service.replace_permission_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_default_permission_version", function()
 		local result = service.set_default_permission_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_resource_share", function()
 		local result = service.update_resource_share()
 		assert.is_true(result.success)
 	end)
-
 end)

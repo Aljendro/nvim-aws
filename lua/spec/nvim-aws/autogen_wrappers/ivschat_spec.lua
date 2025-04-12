@@ -9,85 +9,68 @@ describe("AWS ivschat service testing", function()
 		local result = service.create_chat_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_logging_configuration", function()
 		local result = service.create_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_room", function()
 		local result = service.create_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_logging_configuration", function()
 		local result = service.delete_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_message", function()
 		local result = service.delete_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_room", function()
 		local result = service.delete_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disconnect_user", function()
 		local result = service.disconnect_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_logging_configuration", function()
 		local result = service.get_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_room", function()
 		local result = service.get_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_logging_configurations", function()
 		local result = service.list_logging_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rooms", function()
 		local result = service.list_rooms()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_event", function()
 		local result = service.send_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_logging_configuration", function()
 		local result = service.update_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_room", function()
 		local result = service.update_room()
 		assert.is_true(result.success)
 	end)
-
 end)

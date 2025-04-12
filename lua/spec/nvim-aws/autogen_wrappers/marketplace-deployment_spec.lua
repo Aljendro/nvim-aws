@@ -9,17 +9,14 @@ describe("AWS marketplace-deployment service testing", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_deployment_parameter", function()
 		local result = service.put_deployment_parameter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)

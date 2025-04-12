@@ -9,80 +9,64 @@ describe("AWS support service testing", function()
 		local result = service.add_attachments_to_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_communication_to_case", function()
 		local result = service.add_communication_to_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_case", function()
 		local result = service.create_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_attachment", function()
 		local result = service.describe_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cases", function()
 		local result = service.describe_cases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_communications", function()
 		local result = service.describe_communications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_create_case_options", function()
 		local result = service.describe_create_case_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_services", function()
 		local result = service.describe_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_severity_levels", function()
 		local result = service.describe_severity_levels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_supported_languages", function()
 		local result = service.describe_supported_languages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trusted_advisor_check_refresh_statuses", function()
 		local result = service.describe_trusted_advisor_check_refresh_statuses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trusted_advisor_check_result", function()
 		local result = service.describe_trusted_advisor_check_result()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trusted_advisor_check_summaries", function()
 		local result = service.describe_trusted_advisor_check_summaries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trusted_advisor_checks", function()
 		local result = service.describe_trusted_advisor_checks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with refresh_trusted_advisor_check", function()
 		local result = service.refresh_trusted_advisor_check()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resolve_case", function()
 		local result = service.resolve_case()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,115 +9,92 @@ describe("AWS cognito-identity service testing", function()
 		local result = service.create_identity_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_identities", function()
 		local result = service.delete_identities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_identity_pool", function()
 		local result = service.delete_identity_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_identity", function()
 		local result = service.describe_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_identity_pool", function()
 		local result = service.describe_identity_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_credentials_for_identity", function()
 		local result = service.get_credentials_for_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_id", function()
 		local result = service.get_id()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_pool_roles", function()
 		local result = service.get_identity_pool_roles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_open_id_token", function()
 		local result = service.get_open_id_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_open_id_token_for_developer_identity", function()
 		local result = service.get_open_id_token_for_developer_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_principal_tag_attribute_map", function()
 		local result = service.get_principal_tag_attribute_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_identities", function()
 		local result = service.list_identities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_identity_pools", function()
 		local result = service.list_identity_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with lookup_developer_identity", function()
 		local result = service.lookup_developer_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_developer_identities", function()
 		local result = service.merge_developer_identities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_pool_roles", function()
 		local result = service.set_identity_pool_roles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_principal_tag_attribute_map", function()
 		local result = service.set_principal_tag_attribute_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unlink_developer_identity", function()
 		local result = service.unlink_developer_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unlink_identity", function()
 		local result = service.unlink_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_identity_pool", function()
 		local result = service.update_identity_pool()
 		assert.is_true(result.success)
 	end)
-
 end)

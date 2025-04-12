@@ -9,310 +9,248 @@ describe("AWS chime service testing", function()
 		local result = service.associate_phone_number_with_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_signin_delegate_groups_with_account", function()
 		local result = service.associate_signin_delegate_groups_with_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_create_room_membership", function()
 		local result = service.batch_create_room_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete_phone_number", function()
 		local result = service.batch_delete_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_suspend_user", function()
 		local result = service.batch_suspend_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_unsuspend_user", function()
 		local result = service.batch_unsuspend_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_update_phone_number", function()
 		local result = service.batch_update_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_update_user", function()
 		local result = service.batch_update_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_account", function()
 		local result = service.create_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_bot", function()
 		local result = service.create_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_meeting_dial_out", function()
 		local result = service.create_meeting_dial_out()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_phone_number_order", function()
 		local result = service.create_phone_number_order()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_room", function()
 		local result = service.create_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_room_membership", function()
 		local result = service.create_room_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_user", function()
 		local result = service.create_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_account", function()
 		local result = service.delete_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_events_configuration", function()
 		local result = service.delete_events_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_phone_number", function()
 		local result = service.delete_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_room", function()
 		local result = service.delete_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_room_membership", function()
 		local result = service.delete_room_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_phone_number_from_user", function()
 		local result = service.disassociate_phone_number_from_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_signin_delegate_groups_from_account", function()
 		local result = service.disassociate_signin_delegate_groups_from_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account", function()
 		local result = service.get_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_settings", function()
 		local result = service.get_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_bot", function()
 		local result = service.get_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_events_configuration", function()
 		local result = service.get_events_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_global_settings", function()
 		local result = service.get_global_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_phone_number", function()
 		local result = service.get_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_phone_number_order", function()
 		local result = service.get_phone_number_order()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_phone_number_settings", function()
 		local result = service.get_phone_number_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_retention_settings", function()
 		local result = service.get_retention_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_room", function()
 		local result = service.get_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_user", function()
 		local result = service.get_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_user_settings", function()
 		local result = service.get_user_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with invite_users", function()
 		local result = service.invite_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_accounts", function()
 		local result = service.list_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_bots", function()
 		local result = service.list_bots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_phone_number_orders", function()
 		local result = service.list_phone_number_orders()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_phone_numbers", function()
 		local result = service.list_phone_numbers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_room_memberships", function()
 		local result = service.list_room_memberships()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rooms", function()
 		local result = service.list_rooms()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_supported_phone_number_countries", function()
 		local result = service.list_supported_phone_number_countries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_users", function()
 		local result = service.list_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with logout_user", function()
 		local result = service.logout_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_events_configuration", function()
 		local result = service.put_events_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_retention_settings", function()
 		local result = service.put_retention_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with redact_conversation_message", function()
 		local result = service.redact_conversation_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with redact_room_message", function()
 		local result = service.redact_room_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with regenerate_security_token", function()
 		local result = service.regenerate_security_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_personal_pin", function()
 		local result = service.reset_personal_pin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_phone_number", function()
 		local result = service.restore_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_available_phone_numbers", function()
 		local result = service.search_available_phone_numbers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account", function()
 		local result = service.update_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account_settings", function()
 		local result = service.update_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_bot", function()
 		local result = service.update_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_global_settings", function()
 		local result = service.update_global_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_phone_number", function()
 		local result = service.update_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_phone_number_settings", function()
 		local result = service.update_phone_number_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_room", function()
 		local result = service.update_room()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_room_membership", function()
 		local result = service.update_room_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_user", function()
 		local result = service.update_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_user_settings", function()
 		local result = service.update_user_settings()
 		assert.is_true(result.success)
 	end)
-
 end)

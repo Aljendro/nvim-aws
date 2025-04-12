@@ -9,25 +9,20 @@ describe("AWS controlcatalog service testing", function()
 		local result = service.get_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_common_controls", function()
 		local result = service.list_common_controls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_controls", function()
 		local result = service.list_controls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domains", function()
 		local result = service.list_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_objectives", function()
 		local result = service.list_objectives()
 		assert.is_true(result.success)
 	end)
-
 end)

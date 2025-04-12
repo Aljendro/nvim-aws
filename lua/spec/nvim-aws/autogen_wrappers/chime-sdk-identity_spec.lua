@@ -9,150 +9,120 @@ describe("AWS chime-sdk-identity service testing", function()
 		local result = service.create_app_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_instance_admin", function()
 		local result = service.create_app_instance_admin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_instance_bot", function()
 		local result = service.create_app_instance_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_instance_user", function()
 		local result = service.create_app_instance_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_instance", function()
 		local result = service.delete_app_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_instance_admin", function()
 		local result = service.delete_app_instance_admin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_instance_bot", function()
 		local result = service.delete_app_instance_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_instance_user", function()
 		local result = service.delete_app_instance_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_app_instance_user_endpoint", function()
 		local result = service.deregister_app_instance_user_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_instance", function()
 		local result = service.describe_app_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_instance_admin", function()
 		local result = service.describe_app_instance_admin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_instance_bot", function()
 		local result = service.describe_app_instance_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_instance_user", function()
 		local result = service.describe_app_instance_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_instance_user_endpoint", function()
 		local result = service.describe_app_instance_user_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_app_instance_retention_settings", function()
 		local result = service.get_app_instance_retention_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_instance_admins", function()
 		local result = service.list_app_instance_admins()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_instance_bots", function()
 		local result = service.list_app_instance_bots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_instance_user_endpoints", function()
 		local result = service.list_app_instance_user_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_instance_users", function()
 		local result = service.list_app_instance_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_instances", function()
 		local result = service.list_app_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_app_instance_retention_settings", function()
 		local result = service.put_app_instance_retention_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_app_instance_user_expiration_settings", function()
 		local result = service.put_app_instance_user_expiration_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_app_instance_user_endpoint", function()
 		local result = service.register_app_instance_user_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_instance", function()
 		local result = service.update_app_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_instance_bot", function()
 		local result = service.update_app_instance_bot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_instance_user", function()
 		local result = service.update_app_instance_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_instance_user_endpoint", function()
 		local result = service.update_app_instance_user_endpoint()
 		assert.is_true(result.success)
 	end)
-
 end)

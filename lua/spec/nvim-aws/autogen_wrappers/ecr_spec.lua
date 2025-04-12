@@ -9,245 +9,196 @@ describe("AWS ecr service testing", function()
 		local result = service.batch_check_layer_availability()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete_image", function()
 		local result = service.batch_delete_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_image", function()
 		local result = service.batch_get_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_repository_scanning_configuration", function()
 		local result = service.batch_get_repository_scanning_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with complete_layer_upload", function()
 		local result = service.complete_layer_upload()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_pull_through_cache_rule", function()
 		local result = service.create_pull_through_cache_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_repository", function()
 		local result = service.create_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_repository_creation_template", function()
 		local result = service.create_repository_creation_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_lifecycle_policy", function()
 		local result = service.delete_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_pull_through_cache_rule", function()
 		local result = service.delete_pull_through_cache_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_registry_policy", function()
 		local result = service.delete_registry_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_repository", function()
 		local result = service.delete_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_repository_creation_template", function()
 		local result = service.delete_repository_creation_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_repository_policy", function()
 		local result = service.delete_repository_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_image_replication_status", function()
 		local result = service.describe_image_replication_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_image_scan_findings", function()
 		local result = service.describe_image_scan_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_images", function()
 		local result = service.describe_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pull_through_cache_rules", function()
 		local result = service.describe_pull_through_cache_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_registry", function()
 		local result = service.describe_registry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_repositories", function()
 		local result = service.describe_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_repository_creation_templates", function()
 		local result = service.describe_repository_creation_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_setting", function()
 		local result = service.get_account_setting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_authorization_token", function()
 		local result = service.get_authorization_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_download_url_for_layer", function()
 		local result = service.get_download_url_for_layer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lifecycle_policy", function()
 		local result = service.get_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lifecycle_policy_preview", function()
 		local result = service.get_lifecycle_policy_preview()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_registry_policy", function()
 		local result = service.get_registry_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_registry_scanning_configuration", function()
 		local result = service.get_registry_scanning_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_repository_policy", function()
 		local result = service.get_repository_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with initiate_layer_upload", function()
 		local result = service.initiate_layer_upload()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_images", function()
 		local result = service.list_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_setting", function()
 		local result = service.put_account_setting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_image", function()
 		local result = service.put_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_image_scanning_configuration", function()
 		local result = service.put_image_scanning_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_image_tag_mutability", function()
 		local result = service.put_image_tag_mutability()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_lifecycle_policy", function()
 		local result = service.put_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_registry_policy", function()
 		local result = service.put_registry_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_registry_scanning_configuration", function()
 		local result = service.put_registry_scanning_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_replication_configuration", function()
 		local result = service.put_replication_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_repository_policy", function()
 		local result = service.set_repository_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_image_scan", function()
 		local result = service.start_image_scan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_lifecycle_policy_preview", function()
 		local result = service.start_lifecycle_policy_preview()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_through_cache_rule", function()
 		local result = service.update_pull_through_cache_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_repository_creation_template", function()
 		local result = service.update_repository_creation_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with upload_layer_part", function()
 		local result = service.upload_layer_part()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with validate_pull_through_cache_rule", function()
 		local result = service.validate_pull_through_cache_rule()
 		assert.is_true(result.success)
 	end)
-
 end)

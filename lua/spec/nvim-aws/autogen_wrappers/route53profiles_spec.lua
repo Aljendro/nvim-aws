@@ -9,80 +9,64 @@ describe("AWS route53profiles service testing", function()
 		local result = service.associate_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_resource_to_profile", function()
 		local result = service.associate_resource_to_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_profile", function()
 		local result = service.create_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_profile", function()
 		local result = service.delete_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_profile", function()
 		local result = service.disassociate_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_resource_from_profile", function()
 		local result = service.disassociate_resource_from_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_profile", function()
 		local result = service.get_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_profile_association", function()
 		local result = service.get_profile_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_profile_resource_association", function()
 		local result = service.get_profile_resource_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_profile_associations", function()
 		local result = service.list_profile_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_profile_resource_associations", function()
 		local result = service.list_profile_resource_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_profiles", function()
 		local result = service.list_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_profile_resource_association", function()
 		local result = service.update_profile_resource_association()
 		assert.is_true(result.success)
 	end)
-
 end)

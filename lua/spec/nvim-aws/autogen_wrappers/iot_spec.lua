@@ -9,1330 +9,1064 @@ describe("AWS iot service testing", function()
 		local result = service.accept_certificate_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_thing_to_billing_group", function()
 		local result = service.add_thing_to_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_thing_to_thing_group", function()
 		local result = service.add_thing_to_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_sbom_with_package_version", function()
 		local result = service.associate_sbom_with_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_targets_with_job", function()
 		local result = service.associate_targets_with_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_policy", function()
 		local result = service.attach_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_security_profile", function()
 		local result = service.attach_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_thing_principal", function()
 		local result = service.attach_thing_principal()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_audit_mitigation_actions_task", function()
 		local result = service.cancel_audit_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_audit_task", function()
 		local result = service.cancel_audit_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_certificate_transfer", function()
 		local result = service.cancel_certificate_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_detect_mitigation_actions_task", function()
 		local result = service.cancel_detect_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_job", function()
 		local result = service.cancel_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_job_execution", function()
 		local result = service.cancel_job_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with clear_default_authorizer", function()
 		local result = service.clear_default_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with confirm_topic_rule_destination", function()
 		local result = service.confirm_topic_rule_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_audit_suppression", function()
 		local result = service.create_audit_suppression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_authorizer", function()
 		local result = service.create_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_billing_group", function()
 		local result = service.create_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_certificate_from_csr", function()
 		local result = service.create_certificate_from_csr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_certificate_provider", function()
 		local result = service.create_certificate_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_command", function()
 		local result = service.create_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_custom_metric", function()
 		local result = service.create_custom_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_dimension", function()
 		local result = service.create_dimension()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain_configuration", function()
 		local result = service.create_domain_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_dynamic_thing_group", function()
 		local result = service.create_dynamic_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet_metric", function()
 		local result = service.create_fleet_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job", function()
 		local result = service.create_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job_template", function()
 		local result = service.create_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_keys_and_certificate", function()
 		local result = service.create_keys_and_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_mitigation_action", function()
 		local result = service.create_mitigation_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ota_update", function()
 		local result = service.create_ota_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_package", function()
 		local result = service.create_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_package_version", function()
 		local result = service.create_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_policy", function()
 		local result = service.create_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_policy_version", function()
 		local result = service.create_policy_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_provisioning_claim", function()
 		local result = service.create_provisioning_claim()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_provisioning_template", function()
 		local result = service.create_provisioning_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_provisioning_template_version", function()
 		local result = service.create_provisioning_template_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_role_alias", function()
 		local result = service.create_role_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_scheduled_audit", function()
 		local result = service.create_scheduled_audit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_security_profile", function()
 		local result = service.create_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_stream", function()
 		local result = service.create_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_thing", function()
 		local result = service.create_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_thing_group", function()
 		local result = service.create_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_thing_type", function()
 		local result = service.create_thing_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_topic_rule", function()
 		local result = service.create_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_topic_rule_destination", function()
 		local result = service.create_topic_rule_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_account_audit_configuration", function()
 		local result = service.delete_account_audit_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_audit_suppression", function()
 		local result = service.delete_audit_suppression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_authorizer", function()
 		local result = service.delete_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_billing_group", function()
 		local result = service.delete_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ca_certificate", function()
 		local result = service.delete_ca_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_certificate", function()
 		local result = service.delete_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_certificate_provider", function()
 		local result = service.delete_certificate_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_command", function()
 		local result = service.delete_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_command_execution", function()
 		local result = service.delete_command_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_custom_metric", function()
 		local result = service.delete_custom_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_dimension", function()
 		local result = service.delete_dimension()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain_configuration", function()
 		local result = service.delete_domain_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_dynamic_thing_group", function()
 		local result = service.delete_dynamic_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet_metric", function()
 		local result = service.delete_fleet_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job", function()
 		local result = service.delete_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job_execution", function()
 		local result = service.delete_job_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job_template", function()
 		local result = service.delete_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_mitigation_action", function()
 		local result = service.delete_mitigation_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ota_update", function()
 		local result = service.delete_ota_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_package", function()
 		local result = service.delete_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_package_version", function()
 		local result = service.delete_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_policy", function()
 		local result = service.delete_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_policy_version", function()
 		local result = service.delete_policy_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_provisioning_template", function()
 		local result = service.delete_provisioning_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_provisioning_template_version", function()
 		local result = service.delete_provisioning_template_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_registration_code", function()
 		local result = service.delete_registration_code()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_role_alias", function()
 		local result = service.delete_role_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_scheduled_audit", function()
 		local result = service.delete_scheduled_audit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_security_profile", function()
 		local result = service.delete_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_stream", function()
 		local result = service.delete_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_thing", function()
 		local result = service.delete_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_thing_group", function()
 		local result = service.delete_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_thing_type", function()
 		local result = service.delete_thing_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_topic_rule", function()
 		local result = service.delete_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_topic_rule_destination", function()
 		local result = service.delete_topic_rule_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_v2_logging_level", function()
 		local result = service.delete_v2_logging_level()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deprecate_thing_type", function()
 		local result = service.deprecate_thing_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_audit_configuration", function()
 		local result = service.describe_account_audit_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_audit_finding", function()
 		local result = service.describe_audit_finding()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_audit_mitigation_actions_task", function()
 		local result = service.describe_audit_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_audit_suppression", function()
 		local result = service.describe_audit_suppression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_audit_task", function()
 		local result = service.describe_audit_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_authorizer", function()
 		local result = service.describe_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_billing_group", function()
 		local result = service.describe_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ca_certificate", function()
 		local result = service.describe_ca_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_certificate", function()
 		local result = service.describe_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_certificate_provider", function()
 		local result = service.describe_certificate_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_custom_metric", function()
 		local result = service.describe_custom_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_default_authorizer", function()
 		local result = service.describe_default_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_detect_mitigation_actions_task", function()
 		local result = service.describe_detect_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_dimension", function()
 		local result = service.describe_dimension()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain_configuration", function()
 		local result = service.describe_domain_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoint", function()
 		local result = service.describe_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_event_configurations", function()
 		local result = service.describe_event_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_metric", function()
 		local result = service.describe_fleet_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_index", function()
 		local result = service.describe_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job", function()
 		local result = service.describe_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job_execution", function()
 		local result = service.describe_job_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job_template", function()
 		local result = service.describe_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_managed_job_template", function()
 		local result = service.describe_managed_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_mitigation_action", function()
 		local result = service.describe_mitigation_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_provisioning_template", function()
 		local result = service.describe_provisioning_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_provisioning_template_version", function()
 		local result = service.describe_provisioning_template_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_role_alias", function()
 		local result = service.describe_role_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_scheduled_audit", function()
 		local result = service.describe_scheduled_audit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_profile", function()
 		local result = service.describe_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_stream", function()
 		local result = service.describe_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_thing", function()
 		local result = service.describe_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_thing_group", function()
 		local result = service.describe_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_thing_registration_task", function()
 		local result = service.describe_thing_registration_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_thing_type", function()
 		local result = service.describe_thing_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_policy", function()
 		local result = service.detach_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_security_profile", function()
 		local result = service.detach_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_thing_principal", function()
 		local result = service.detach_thing_principal()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_topic_rule", function()
 		local result = service.disable_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_sbom_from_package_version", function()
 		local result = service.disassociate_sbom_from_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_topic_rule", function()
 		local result = service.enable_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_behavior_model_training_summaries", function()
 		local result = service.get_behavior_model_training_summaries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_buckets_aggregation", function()
 		local result = service.get_buckets_aggregation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cardinality", function()
 		local result = service.get_cardinality()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_command", function()
 		local result = service.get_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_command_execution", function()
 		local result = service.get_command_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_effective_policies", function()
 		local result = service.get_effective_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_indexing_configuration", function()
 		local result = service.get_indexing_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job_document", function()
 		local result = service.get_job_document()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_logging_options", function()
 		local result = service.get_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ota_update", function()
 		local result = service.get_ota_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_package", function()
 		local result = service.get_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_package_configuration", function()
 		local result = service.get_package_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_package_version", function()
 		local result = service.get_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_percentiles", function()
 		local result = service.get_percentiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_policy", function()
 		local result = service.get_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_policy_version", function()
 		local result = service.get_policy_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_registration_code", function()
 		local result = service.get_registration_code()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_statistics", function()
 		local result = service.get_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_thing_connectivity_data", function()
 		local result = service.get_thing_connectivity_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_topic_rule", function()
 		local result = service.get_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_topic_rule_destination", function()
 		local result = service.get_topic_rule_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_v2_logging_options", function()
 		local result = service.get_v2_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_active_violations", function()
 		local result = service.list_active_violations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_attached_policies", function()
 		local result = service.list_attached_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_audit_findings", function()
 		local result = service.list_audit_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_audit_mitigation_actions_executions", function()
 		local result = service.list_audit_mitigation_actions_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_audit_mitigation_actions_tasks", function()
 		local result = service.list_audit_mitigation_actions_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_audit_suppressions", function()
 		local result = service.list_audit_suppressions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_audit_tasks", function()
 		local result = service.list_audit_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_authorizers", function()
 		local result = service.list_authorizers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_billing_groups", function()
 		local result = service.list_billing_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ca_certificates", function()
 		local result = service.list_ca_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_certificate_providers", function()
 		local result = service.list_certificate_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_certificates", function()
 		local result = service.list_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_certificates_by_ca", function()
 		local result = service.list_certificates_by_ca()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_command_executions", function()
 		local result = service.list_command_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_commands", function()
 		local result = service.list_commands()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_custom_metrics", function()
 		local result = service.list_custom_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_detect_mitigation_actions_executions", function()
 		local result = service.list_detect_mitigation_actions_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_detect_mitigation_actions_tasks", function()
 		local result = service.list_detect_mitigation_actions_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_dimensions", function()
 		local result = service.list_dimensions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domain_configurations", function()
 		local result = service.list_domain_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fleet_metrics", function()
 		local result = service.list_fleet_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_indices", function()
 		local result = service.list_indices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_executions_for_job", function()
 		local result = service.list_job_executions_for_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_executions_for_thing", function()
 		local result = service.list_job_executions_for_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_templates", function()
 		local result = service.list_job_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_jobs", function()
 		local result = service.list_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_job_templates", function()
 		local result = service.list_managed_job_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_metric_values", function()
 		local result = service.list_metric_values()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_mitigation_actions", function()
 		local result = service.list_mitigation_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ota_updates", function()
 		local result = service.list_ota_updates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_outgoing_certificates", function()
 		local result = service.list_outgoing_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_package_versions", function()
 		local result = service.list_package_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_packages", function()
 		local result = service.list_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_policies", function()
 		local result = service.list_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_policy_versions", function()
 		local result = service.list_policy_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_principal_things", function()
 		local result = service.list_principal_things()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_principal_things_v2", function()
 		local result = service.list_principal_things_v2()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_provisioning_template_versions", function()
 		local result = service.list_provisioning_template_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_provisioning_templates", function()
 		local result = service.list_provisioning_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_related_resources_for_audit_finding", function()
 		local result = service.list_related_resources_for_audit_finding()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_role_aliases", function()
 		local result = service.list_role_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_sbom_validation_results", function()
 		local result = service.list_sbom_validation_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_scheduled_audits", function()
 		local result = service.list_scheduled_audits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_security_profiles", function()
 		local result = service.list_security_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_security_profiles_for_target", function()
 		local result = service.list_security_profiles_for_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_streams", function()
 		local result = service.list_streams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_targets_for_policy", function()
 		local result = service.list_targets_for_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_targets_for_security_profile", function()
 		local result = service.list_targets_for_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_groups", function()
 		local result = service.list_thing_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_groups_for_thing", function()
 		local result = service.list_thing_groups_for_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_principals", function()
 		local result = service.list_thing_principals()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_principals_v2", function()
 		local result = service.list_thing_principals_v2()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_registration_task_reports", function()
 		local result = service.list_thing_registration_task_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_registration_tasks", function()
 		local result = service.list_thing_registration_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_thing_types", function()
 		local result = service.list_thing_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_things", function()
 		local result = service.list_things()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_things_in_billing_group", function()
 		local result = service.list_things_in_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_things_in_thing_group", function()
 		local result = service.list_things_in_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_topic_rule_destinations", function()
 		local result = service.list_topic_rule_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_topic_rules", function()
 		local result = service.list_topic_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_v2_logging_levels", function()
 		local result = service.list_v2_logging_levels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_violation_events", function()
 		local result = service.list_violation_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_verification_state_on_violation", function()
 		local result = service.put_verification_state_on_violation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_ca_certificate", function()
 		local result = service.register_ca_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_certificate", function()
 		local result = service.register_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_certificate_without_ca", function()
 		local result = service.register_certificate_without_ca()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_thing", function()
 		local result = service.register_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_certificate_transfer", function()
 		local result = service.reject_certificate_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_thing_from_billing_group", function()
 		local result = service.remove_thing_from_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_thing_from_thing_group", function()
 		local result = service.remove_thing_from_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_topic_rule", function()
 		local result = service.replace_topic_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_index", function()
 		local result = service.search_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_default_authorizer", function()
 		local result = service.set_default_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_default_policy_version", function()
 		local result = service.set_default_policy_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_logging_options", function()
 		local result = service.set_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_v2_logging_level", function()
 		local result = service.set_v2_logging_level()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_v2_logging_options", function()
 		local result = service.set_v2_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_audit_mitigation_actions_task", function()
 		local result = service.start_audit_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_detect_mitigation_actions_task", function()
 		local result = service.start_detect_mitigation_actions_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_on_demand_audit_task", function()
 		local result = service.start_on_demand_audit_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_thing_registration_task", function()
 		local result = service.start_thing_registration_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_thing_registration_task", function()
 		local result = service.stop_thing_registration_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_authorization", function()
 		local result = service.test_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_invoke_authorizer", function()
 		local result = service.test_invoke_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with transfer_certificate", function()
 		local result = service.transfer_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account_audit_configuration", function()
 		local result = service.update_account_audit_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_audit_suppression", function()
 		local result = service.update_audit_suppression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_authorizer", function()
 		local result = service.update_authorizer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_billing_group", function()
 		local result = service.update_billing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_ca_certificate", function()
 		local result = service.update_ca_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_certificate", function()
 		local result = service.update_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_certificate_provider", function()
 		local result = service.update_certificate_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_command", function()
 		local result = service.update_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_custom_metric", function()
 		local result = service.update_custom_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_dimension", function()
 		local result = service.update_dimension()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_domain_configuration", function()
 		local result = service.update_domain_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_dynamic_thing_group", function()
 		local result = service.update_dynamic_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_configurations", function()
 		local result = service.update_event_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_fleet_metric", function()
 		local result = service.update_fleet_metric()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_indexing_configuration", function()
 		local result = service.update_indexing_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_job", function()
 		local result = service.update_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_mitigation_action", function()
 		local result = service.update_mitigation_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_package", function()
 		local result = service.update_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_package_configuration", function()
 		local result = service.update_package_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_package_version", function()
 		local result = service.update_package_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_provisioning_template", function()
 		local result = service.update_provisioning_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_role_alias", function()
 		local result = service.update_role_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_scheduled_audit", function()
 		local result = service.update_scheduled_audit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_security_profile", function()
 		local result = service.update_security_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_stream", function()
 		local result = service.update_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_thing", function()
 		local result = service.update_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_thing_group", function()
 		local result = service.update_thing_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_thing_groups_for_thing", function()
 		local result = service.update_thing_groups_for_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_thing_type", function()
 		local result = service.update_thing_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_topic_rule_destination", function()
 		local result = service.update_topic_rule_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with validate_security_profile_behaviors", function()
 		local result = service.validate_security_profile_behaviors()
 		assert.is_true(result.success)
 	end)
-
 end)

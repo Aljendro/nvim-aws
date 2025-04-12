@@ -9,5 +9,4 @@ describe("AWS eks-auth service testing", function()
 		local result = service.assume_role_for_pod_identity()
 		assert.is_true(result.success)
 	end)
-
 end)

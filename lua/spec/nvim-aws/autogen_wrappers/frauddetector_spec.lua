@@ -9,365 +9,292 @@ describe("AWS frauddetector service testing", function()
 		local result = service.batch_create_variable()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_variable", function()
 		local result = service.batch_get_variable()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_batch_import_job", function()
 		local result = service.cancel_batch_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_batch_prediction_job", function()
 		local result = service.cancel_batch_prediction_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_batch_import_job", function()
 		local result = service.create_batch_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_batch_prediction_job", function()
 		local result = service.create_batch_prediction_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_detector_version", function()
 		local result = service.create_detector_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_list", function()
 		local result = service.create_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model", function()
 		local result = service.create_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_version", function()
 		local result = service.create_model_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_rule", function()
 		local result = service.create_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_variable", function()
 		local result = service.create_variable()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_batch_import_job", function()
 		local result = service.delete_batch_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_batch_prediction_job", function()
 		local result = service.delete_batch_prediction_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_detector", function()
 		local result = service.delete_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_detector_version", function()
 		local result = service.delete_detector_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_entity_type", function()
 		local result = service.delete_entity_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event", function()
 		local result = service.delete_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_type", function()
 		local result = service.delete_event_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_events_by_event_type", function()
 		local result = service.delete_events_by_event_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_external_model", function()
 		local result = service.delete_external_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_label", function()
 		local result = service.delete_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_list", function()
 		local result = service.delete_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model", function()
 		local result = service.delete_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_version", function()
 		local result = service.delete_model_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_outcome", function()
 		local result = service.delete_outcome()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_rule", function()
 		local result = service.delete_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_variable", function()
 		local result = service.delete_variable()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_detector", function()
 		local result = service.describe_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_versions", function()
 		local result = service.describe_model_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_batch_import_jobs", function()
 		local result = service.get_batch_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_batch_prediction_jobs", function()
 		local result = service.get_batch_prediction_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_delete_events_by_event_type_status", function()
 		local result = service.get_delete_events_by_event_type_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_detector_version", function()
 		local result = service.get_detector_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_detectors", function()
 		local result = service.get_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_entity_types", function()
 		local result = service.get_entity_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event", function()
 		local result = service.get_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_prediction", function()
 		local result = service.get_event_prediction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_prediction_metadata", function()
 		local result = service.get_event_prediction_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_types", function()
 		local result = service.get_event_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_external_models", function()
 		local result = service.get_external_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_kms_encryption_key", function()
 		local result = service.get_kms_encryption_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_labels", function()
 		local result = service.get_labels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_list_elements", function()
 		local result = service.get_list_elements()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lists_metadata", function()
 		local result = service.get_lists_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_version", function()
 		local result = service.get_model_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_models", function()
 		local result = service.get_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_outcomes", function()
 		local result = service.get_outcomes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_rules", function()
 		local result = service.get_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_variables", function()
 		local result = service.get_variables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_predictions", function()
 		local result = service.list_event_predictions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_detector", function()
 		local result = service.put_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_entity_type", function()
 		local result = service.put_entity_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_event_type", function()
 		local result = service.put_event_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_external_model", function()
 		local result = service.put_external_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_kms_encryption_key", function()
 		local result = service.put_kms_encryption_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_label", function()
 		local result = service.put_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_outcome", function()
 		local result = service.put_outcome()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_event", function()
 		local result = service.send_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_detector_version", function()
 		local result = service.update_detector_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_detector_version_metadata", function()
 		local result = service.update_detector_version_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_detector_version_status", function()
 		local result = service.update_detector_version_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_label", function()
 		local result = service.update_event_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_list", function()
 		local result = service.update_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model", function()
 		local result = service.update_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model_version", function()
 		local result = service.update_model_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model_version_status", function()
 		local result = service.update_model_version_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_rule_metadata", function()
 		local result = service.update_rule_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_rule_version", function()
 		local result = service.update_rule_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_variable", function()
 		local result = service.update_variable()
 		assert.is_true(result.success)
 	end)
-
 end)

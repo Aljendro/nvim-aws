@@ -9,815 +9,652 @@ describe("AWS rds service testing", function()
 		local result = service.add_option_to_option_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_role_to_db_cluster", function()
 		local result = service.add_role_to_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_role_to_db_instance", function()
 		local result = service.add_role_to_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_source_identifier_to_subscription", function()
 		local result = service.add_source_identifier_to_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_tags_to_resource", function()
 		local result = service.add_tags_to_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with apply_pending_maintenance_action", function()
 		local result = service.apply_pending_maintenance_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with authorize_db_security_group_ingress", function()
 		local result = service.authorize_db_security_group_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with backtrack_db_cluster", function()
 		local result = service.backtrack_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_export_task", function()
 		local result = service.cancel_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_db_cluster_parameter_group", function()
 		local result = service.copy_db_cluster_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_db_cluster_snapshot", function()
 		local result = service.copy_db_cluster_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_db_parameter_group", function()
 		local result = service.copy_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_db_snapshot", function()
 		local result = service.copy_db_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_option_group", function()
 		local result = service.copy_option_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_blue_green_deployment", function()
 		local result = service.create_blue_green_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_custom_db_engine_version", function()
 		local result = service.create_custom_db_engine_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_cluster", function()
 		local result = service.create_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_cluster_endpoint", function()
 		local result = service.create_db_cluster_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_cluster_parameter_group", function()
 		local result = service.create_db_cluster_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_cluster_snapshot", function()
 		local result = service.create_db_cluster_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_instance", function()
 		local result = service.create_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_instance_read_replica", function()
 		local result = service.create_db_instance_read_replica()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_parameter_group", function()
 		local result = service.create_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_proxy", function()
 		local result = service.create_db_proxy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_proxy_endpoint", function()
 		local result = service.create_db_proxy_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_security_group", function()
 		local result = service.create_db_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_shard_group", function()
 		local result = service.create_db_shard_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_snapshot", function()
 		local result = service.create_db_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_subnet_group", function()
 		local result = service.create_db_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_subscription", function()
 		local result = service.create_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_global_cluster", function()
 		local result = service.create_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_integration", function()
 		local result = service.create_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_option_group", function()
 		local result = service.create_option_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_tenant_database", function()
 		local result = service.create_tenant_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_blue_green_deployment", function()
 		local result = service.delete_blue_green_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_custom_db_engine_version", function()
 		local result = service.delete_custom_db_engine_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster", function()
 		local result = service.delete_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster_automated_backup", function()
 		local result = service.delete_db_cluster_automated_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster_endpoint", function()
 		local result = service.delete_db_cluster_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster_parameter_group", function()
 		local result = service.delete_db_cluster_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster_snapshot", function()
 		local result = service.delete_db_cluster_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_instance", function()
 		local result = service.delete_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_instance_automated_backup", function()
 		local result = service.delete_db_instance_automated_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_parameter_group", function()
 		local result = service.delete_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_proxy", function()
 		local result = service.delete_db_proxy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_proxy_endpoint", function()
 		local result = service.delete_db_proxy_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_security_group", function()
 		local result = service.delete_db_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_shard_group", function()
 		local result = service.delete_db_shard_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_snapshot", function()
 		local result = service.delete_db_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_subnet_group", function()
 		local result = service.delete_db_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_subscription", function()
 		local result = service.delete_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_global_cluster", function()
 		local result = service.delete_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_integration", function()
 		local result = service.delete_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_option_group", function()
 		local result = service.delete_option_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tenant_database", function()
 		local result = service.delete_tenant_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_db_proxy_targets", function()
 		local result = service.deregister_db_proxy_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_attributes", function()
 		local result = service.describe_account_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_blue_green_deployments", function()
 		local result = service.describe_blue_green_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_certificates", function()
 		local result = service.describe_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_automated_backups", function()
 		local result = service.describe_db_cluster_automated_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_backtracks", function()
 		local result = service.describe_db_cluster_backtracks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_endpoints", function()
 		local result = service.describe_db_cluster_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_parameter_groups", function()
 		local result = service.describe_db_cluster_parameter_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_parameters", function()
 		local result = service.describe_db_cluster_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_snapshot_attributes", function()
 		local result = service.describe_db_cluster_snapshot_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_cluster_snapshots", function()
 		local result = service.describe_db_cluster_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_clusters", function()
 		local result = service.describe_db_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_engine_versions", function()
 		local result = service.describe_db_engine_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_instance_automated_backups", function()
 		local result = service.describe_db_instance_automated_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_instances", function()
 		local result = service.describe_db_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_log_files", function()
 		local result = service.describe_db_log_files()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_parameter_groups", function()
 		local result = service.describe_db_parameter_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_parameters", function()
 		local result = service.describe_db_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_proxies", function()
 		local result = service.describe_db_proxies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_proxy_endpoints", function()
 		local result = service.describe_db_proxy_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_proxy_target_groups", function()
 		local result = service.describe_db_proxy_target_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_proxy_targets", function()
 		local result = service.describe_db_proxy_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_recommendations", function()
 		local result = service.describe_db_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_security_groups", function()
 		local result = service.describe_db_security_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_shard_groups", function()
 		local result = service.describe_db_shard_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_snapshot_attributes", function()
 		local result = service.describe_db_snapshot_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_snapshot_tenant_databases", function()
 		local result = service.describe_db_snapshot_tenant_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_snapshots", function()
 		local result = service.describe_db_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_db_subnet_groups", function()
 		local result = service.describe_db_subnet_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_engine_default_cluster_parameters", function()
 		local result = service.describe_engine_default_cluster_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_engine_default_parameters", function()
 		local result = service.describe_engine_default_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_event_categories", function()
 		local result = service.describe_event_categories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_event_subscriptions", function()
 		local result = service.describe_event_subscriptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_events", function()
 		local result = service.describe_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export_tasks", function()
 		local result = service.describe_export_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_global_clusters", function()
 		local result = service.describe_global_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_integrations", function()
 		local result = service.describe_integrations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_option_group_options", function()
 		local result = service.describe_option_group_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_option_groups", function()
 		local result = service.describe_option_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_orderable_db_instance_options", function()
 		local result = service.describe_orderable_db_instance_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pending_maintenance_actions", function()
 		local result = service.describe_pending_maintenance_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_db_instances", function()
 		local result = service.describe_reserved_db_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_db_instances_offerings", function()
 		local result = service.describe_reserved_db_instances_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_source_regions", function()
 		local result = service.describe_source_regions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tenant_databases", function()
 		local result = service.describe_tenant_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_valid_db_instance_modifications", function()
 		local result = service.describe_valid_db_instance_modifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_http_endpoint", function()
 		local result = service.disable_http_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with download_db_log_file_portion", function()
 		local result = service.download_db_log_file_portion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_http_endpoint", function()
 		local result = service.enable_http_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with failover_db_cluster", function()
 		local result = service.failover_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with failover_global_cluster", function()
 		local result = service.failover_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_activity_stream", function()
 		local result = service.modify_activity_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_certificates", function()
 		local result = service.modify_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_current_db_cluster_capacity", function()
 		local result = service.modify_current_db_cluster_capacity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_custom_db_engine_version", function()
 		local result = service.modify_custom_db_engine_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_cluster", function()
 		local result = service.modify_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_cluster_endpoint", function()
 		local result = service.modify_db_cluster_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_cluster_parameter_group", function()
 		local result = service.modify_db_cluster_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_cluster_snapshot_attribute", function()
 		local result = service.modify_db_cluster_snapshot_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_instance", function()
 		local result = service.modify_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_parameter_group", function()
 		local result = service.modify_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_proxy", function()
 		local result = service.modify_db_proxy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_proxy_endpoint", function()
 		local result = service.modify_db_proxy_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_proxy_target_group", function()
 		local result = service.modify_db_proxy_target_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_recommendation", function()
 		local result = service.modify_db_recommendation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_shard_group", function()
 		local result = service.modify_db_shard_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_snapshot", function()
 		local result = service.modify_db_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_snapshot_attribute", function()
 		local result = service.modify_db_snapshot_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_db_subnet_group", function()
 		local result = service.modify_db_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_event_subscription", function()
 		local result = service.modify_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_global_cluster", function()
 		local result = service.modify_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_integration", function()
 		local result = service.modify_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_tenant_database", function()
 		local result = service.modify_tenant_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with promote_read_replica", function()
 		local result = service.promote_read_replica()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with promote_read_replica_db_cluster", function()
 		local result = service.promote_read_replica_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_reserved_db_instances_offering", function()
 		local result = service.purchase_reserved_db_instances_offering()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_db_cluster", function()
 		local result = service.reboot_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_db_instance", function()
 		local result = service.reboot_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_db_shard_group", function()
 		local result = service.reboot_db_shard_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_db_proxy_targets", function()
 		local result = service.register_db_proxy_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_from_global_cluster", function()
 		local result = service.remove_from_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_option_from_option_group", function()
 		local result = service.remove_option_from_option_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_role_from_db_cluster", function()
 		local result = service.remove_role_from_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_role_from_db_instance", function()
 		local result = service.remove_role_from_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_source_identifier_from_subscription", function()
 		local result = service.remove_source_identifier_from_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_tags_from_resource", function()
 		local result = service.remove_tags_from_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_db_cluster_parameter_group", function()
 		local result = service.reset_db_cluster_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_db_parameter_group", function()
 		local result = service.reset_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_cluster_from_s3", function()
 		local result = service.restore_db_cluster_from_s3()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_cluster_from_snapshot", function()
 		local result = service.restore_db_cluster_from_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_cluster_to_point_in_time", function()
 		local result = service.restore_db_cluster_to_point_in_time()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_instance_from_db_snapshot", function()
 		local result = service.restore_db_instance_from_db_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_instance_from_s3", function()
 		local result = service.restore_db_instance_from_s3()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_db_instance_to_point_in_time", function()
 		local result = service.restore_db_instance_to_point_in_time()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_db_security_group_ingress", function()
 		local result = service.revoke_db_security_group_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_activity_stream", function()
 		local result = service.start_activity_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_db_cluster", function()
 		local result = service.start_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_db_instance", function()
 		local result = service.start_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_db_instance_automated_backups_replication", function()
 		local result = service.start_db_instance_automated_backups_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_export_task", function()
 		local result = service.start_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_activity_stream", function()
 		local result = service.stop_activity_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_db_cluster", function()
 		local result = service.stop_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_db_instance", function()
 		local result = service.stop_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_db_instance_automated_backups_replication", function()
 		local result = service.stop_db_instance_automated_backups_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with switchover_blue_green_deployment", function()
 		local result = service.switchover_blue_green_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with switchover_global_cluster", function()
 		local result = service.switchover_global_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with switchover_read_replica", function()
 		local result = service.switchover_read_replica()
 		assert.is_true(result.success)
 	end)
-
 end)

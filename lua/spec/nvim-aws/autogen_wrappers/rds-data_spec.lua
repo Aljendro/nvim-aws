@@ -9,25 +9,20 @@ describe("AWS rds-data service testing", function()
 		local result = service.batch_execute_statement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with begin_transaction", function()
 		local result = service.begin_transaction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with commit_transaction", function()
 		local result = service.commit_transaction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with execute_statement", function()
 		local result = service.execute_statement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with rollback_transaction", function()
 		local result = service.rollback_transaction()
 		assert.is_true(result.success)
 	end)
-
 end)

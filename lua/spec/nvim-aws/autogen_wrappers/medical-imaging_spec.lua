@@ -9,80 +9,64 @@ describe("AWS medical-imaging service testing", function()
 		local result = service.copy_image_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_datastore", function()
 		local result = service.create_datastore()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_datastore", function()
 		local result = service.delete_datastore()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_image_set", function()
 		local result = service.delete_image_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_datastore", function()
 		local result = service.get_datastore()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dicom_import_job", function()
 		local result = service.get_dicom_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_image_set", function()
 		local result = service.get_image_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_datastores", function()
 		local result = service.list_datastores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_dicom_import_jobs", function()
 		local result = service.list_dicom_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_image_set_versions", function()
 		local result = service.list_image_set_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_image_sets", function()
 		local result = service.search_image_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_dicom_import_job", function()
 		local result = service.start_dicom_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_image_set_metadata", function()
 		local result = service.update_image_set_metadata()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,45 +9,36 @@ describe("AWS sts service testing", function()
 		local result = service.assume_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assume_role_with_saml", function()
 		local result = service.assume_role_with_saml()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assume_role_with_web_identity", function()
 		local result = service.assume_role_with_web_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assume_root", function()
 		local result = service.assume_root()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with decode_authorization_message", function()
 		local result = service.decode_authorization_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_access_key_info", function()
 		local result = service.get_access_key_info()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_caller_identity", function()
 		local result = service.get_caller_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_federation_token", function()
 		local result = service.get_federation_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_session_token", function()
 		local result = service.get_session_token()
 		assert.is_true(result.success)
 	end)
-
 end)

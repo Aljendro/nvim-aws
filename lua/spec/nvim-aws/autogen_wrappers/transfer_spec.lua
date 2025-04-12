@@ -9,355 +9,284 @@ describe("AWS transfer service testing", function()
 		local result = service.create_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_agreement", function()
 		local result = service.create_agreement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_connector", function()
 		local result = service.create_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_profile", function()
 		local result = service.create_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_server", function()
 		local result = service.create_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_user", function()
 		local result = service.create_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_web_app", function()
 		local result = service.create_web_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_workflow", function()
 		local result = service.create_workflow()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_access", function()
 		local result = service.delete_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_agreement", function()
 		local result = service.delete_agreement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_certificate", function()
 		local result = service.delete_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_connector", function()
 		local result = service.delete_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_host_key", function()
 		local result = service.delete_host_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_profile", function()
 		local result = service.delete_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_server", function()
 		local result = service.delete_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ssh_public_key", function()
 		local result = service.delete_ssh_public_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_user", function()
 		local result = service.delete_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_web_app", function()
 		local result = service.delete_web_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_web_app_customization", function()
 		local result = service.delete_web_app_customization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_workflow", function()
 		local result = service.delete_workflow()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_access", function()
 		local result = service.describe_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_agreement", function()
 		local result = service.describe_agreement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_certificate", function()
 		local result = service.describe_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_connector", function()
 		local result = service.describe_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_execution", function()
 		local result = service.describe_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_host_key", function()
 		local result = service.describe_host_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_profile", function()
 		local result = service.describe_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_policy", function()
 		local result = service.describe_security_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_server", function()
 		local result = service.describe_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_user", function()
 		local result = service.describe_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_web_app", function()
 		local result = service.describe_web_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_web_app_customization", function()
 		local result = service.describe_web_app_customization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_workflow", function()
 		local result = service.describe_workflow()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_certificate", function()
 		local result = service.import_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_host_key", function()
 		local result = service.import_host_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_ssh_public_key", function()
 		local result = service.import_ssh_public_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_accesses", function()
 		local result = service.list_accesses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_agreements", function()
 		local result = service.list_agreements()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_certificates", function()
 		local result = service.list_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_connectors", function()
 		local result = service.list_connectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_executions", function()
 		local result = service.list_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_file_transfer_results", function()
 		local result = service.list_file_transfer_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_host_keys", function()
 		local result = service.list_host_keys()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_profiles", function()
 		local result = service.list_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_security_policies", function()
 		local result = service.list_security_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_servers", function()
 		local result = service.list_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_users", function()
 		local result = service.list_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_web_apps", function()
 		local result = service.list_web_apps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_workflows", function()
 		local result = service.list_workflows()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_workflow_step_state", function()
 		local result = service.send_workflow_step_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_directory_listing", function()
 		local result = service.start_directory_listing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_file_transfer", function()
 		local result = service.start_file_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_remote_delete", function()
 		local result = service.start_remote_delete()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_remote_move", function()
 		local result = service.start_remote_move()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_server", function()
 		local result = service.start_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_server", function()
 		local result = service.stop_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_connection", function()
 		local result = service.test_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_identity_provider", function()
 		local result = service.test_identity_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_access", function()
 		local result = service.update_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_agreement", function()
 		local result = service.update_agreement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_certificate", function()
 		local result = service.update_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_connector", function()
 		local result = service.update_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_host_key", function()
 		local result = service.update_host_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_profile", function()
 		local result = service.update_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_server", function()
 		local result = service.update_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_user", function()
 		local result = service.update_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_web_app", function()
 		local result = service.update_web_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_web_app_customization", function()
 		local result = service.update_web_app_customization()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,25 +9,20 @@ describe("AWS bedrock-runtime service testing", function()
 		local result = service.apply_guardrail()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with converse", function()
 		local result = service.converse()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_async_invoke", function()
 		local result = service.get_async_invoke()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_async_invokes", function()
 		local result = service.list_async_invokes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_async_invoke", function()
 		local result = service.start_async_invoke()
 		assert.is_true(result.success)
 	end)
-
 end)

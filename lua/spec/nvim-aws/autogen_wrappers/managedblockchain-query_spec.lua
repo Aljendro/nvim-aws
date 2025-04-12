@@ -9,45 +9,36 @@ describe("AWS managedblockchain-query service testing", function()
 		local result = service.batch_get_token_balance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_asset_contract", function()
 		local result = service.get_asset_contract()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_token_balance", function()
 		local result = service.get_token_balance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transaction", function()
 		local result = service.get_transaction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_asset_contracts", function()
 		local result = service.list_asset_contracts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_filtered_transaction_events", function()
 		local result = service.list_filtered_transaction_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_token_balances", function()
 		local result = service.list_token_balances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_transaction_events", function()
 		local result = service.list_transaction_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_transactions", function()
 		local result = service.list_transactions()
 		assert.is_true(result.success)
 	end)
-
 end)

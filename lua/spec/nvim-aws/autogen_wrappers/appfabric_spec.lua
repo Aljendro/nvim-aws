@@ -9,130 +9,104 @@ describe("AWS appfabric service testing", function()
 		local result = service.batch_get_user_access_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with connect_app_authorization", function()
 		local result = service.connect_app_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_authorization", function()
 		local result = service.create_app_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_bundle", function()
 		local result = service.create_app_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ingestion", function()
 		local result = service.create_ingestion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ingestion_destination", function()
 		local result = service.create_ingestion_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_authorization", function()
 		local result = service.delete_app_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_bundle", function()
 		local result = service.delete_app_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ingestion", function()
 		local result = service.delete_ingestion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ingestion_destination", function()
 		local result = service.delete_ingestion_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_app_authorization", function()
 		local result = service.get_app_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_app_bundle", function()
 		local result = service.get_app_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ingestion", function()
 		local result = service.get_ingestion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ingestion_destination", function()
 		local result = service.get_ingestion_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_authorizations", function()
 		local result = service.list_app_authorizations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_bundles", function()
 		local result = service.list_app_bundles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ingestion_destinations", function()
 		local result = service.list_ingestion_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ingestions", function()
 		local result = service.list_ingestions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_ingestion", function()
 		local result = service.start_ingestion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_user_access_tasks", function()
 		local result = service.start_user_access_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_ingestion", function()
 		local result = service.stop_ingestion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_authorization", function()
 		local result = service.update_app_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_ingestion_destination", function()
 		local result = service.update_ingestion_destination()
 		assert.is_true(result.success)
 	end)
-
 end)

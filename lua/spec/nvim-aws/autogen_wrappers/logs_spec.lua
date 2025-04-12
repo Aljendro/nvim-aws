@@ -9,425 +9,340 @@ describe("AWS logs service testing", function()
 		local result = service.associate_kms_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_export_task", function()
 		local result = service.cancel_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_delivery", function()
 		local result = service.create_delivery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_export_task", function()
 		local result = service.create_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_log_anomaly_detector", function()
 		local result = service.create_log_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_log_group", function()
 		local result = service.create_log_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_log_stream", function()
 		local result = service.create_log_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_account_policy", function()
 		local result = service.delete_account_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_protection_policy", function()
 		local result = service.delete_data_protection_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_delivery", function()
 		local result = service.delete_delivery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_delivery_destination", function()
 		local result = service.delete_delivery_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_delivery_destination_policy", function()
 		local result = service.delete_delivery_destination_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_delivery_source", function()
 		local result = service.delete_delivery_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_destination", function()
 		local result = service.delete_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_index_policy", function()
 		local result = service.delete_index_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_integration", function()
 		local result = service.delete_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_log_anomaly_detector", function()
 		local result = service.delete_log_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_log_group", function()
 		local result = service.delete_log_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_log_stream", function()
 		local result = service.delete_log_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_metric_filter", function()
 		local result = service.delete_metric_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_query_definition", function()
 		local result = service.delete_query_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_policy", function()
 		local result = service.delete_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_retention_policy", function()
 		local result = service.delete_retention_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subscription_filter", function()
 		local result = service.delete_subscription_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transformer", function()
 		local result = service.delete_transformer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_policies", function()
 		local result = service.describe_account_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_configuration_templates", function()
 		local result = service.describe_configuration_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_deliveries", function()
 		local result = service.describe_deliveries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_delivery_destinations", function()
 		local result = service.describe_delivery_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_delivery_sources", function()
 		local result = service.describe_delivery_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_destinations", function()
 		local result = service.describe_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export_tasks", function()
 		local result = service.describe_export_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_field_indexes", function()
 		local result = service.describe_field_indexes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_index_policies", function()
 		local result = service.describe_index_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_log_groups", function()
 		local result = service.describe_log_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_log_streams", function()
 		local result = service.describe_log_streams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metric_filters", function()
 		local result = service.describe_metric_filters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_queries", function()
 		local result = service.describe_queries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_query_definitions", function()
 		local result = service.describe_query_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_resource_policies", function()
 		local result = service.describe_resource_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subscription_filters", function()
 		local result = service.describe_subscription_filters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_kms_key", function()
 		local result = service.disassociate_kms_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with filter_log_events", function()
 		local result = service.filter_log_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_protection_policy", function()
 		local result = service.get_data_protection_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_delivery", function()
 		local result = service.get_delivery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_delivery_destination", function()
 		local result = service.get_delivery_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_delivery_destination_policy", function()
 		local result = service.get_delivery_destination_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_delivery_source", function()
 		local result = service.get_delivery_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_integration", function()
 		local result = service.get_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_log_anomaly_detector", function()
 		local result = service.get_log_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_log_events", function()
 		local result = service.get_log_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_log_group_fields", function()
 		local result = service.get_log_group_fields()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_log_record", function()
 		local result = service.get_log_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_query_results", function()
 		local result = service.get_query_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transformer", function()
 		local result = service.get_transformer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_anomalies", function()
 		local result = service.list_anomalies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_integrations", function()
 		local result = service.list_integrations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_log_anomaly_detectors", function()
 		local result = service.list_log_anomaly_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_log_groups_for_query", function()
 		local result = service.list_log_groups_for_query()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_policy", function()
 		local result = service.put_account_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_data_protection_policy", function()
 		local result = service.put_data_protection_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_delivery_destination", function()
 		local result = service.put_delivery_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_delivery_destination_policy", function()
 		local result = service.put_delivery_destination_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_delivery_source", function()
 		local result = service.put_delivery_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_destination", function()
 		local result = service.put_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_destination_policy", function()
 		local result = service.put_destination_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_index_policy", function()
 		local result = service.put_index_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_integration", function()
 		local result = service.put_integration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_log_events", function()
 		local result = service.put_log_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_metric_filter", function()
 		local result = service.put_metric_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_query_definition", function()
 		local result = service.put_query_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_resource_policy", function()
 		local result = service.put_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_retention_policy", function()
 		local result = service.put_retention_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_subscription_filter", function()
 		local result = service.put_subscription_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_transformer", function()
 		local result = service.put_transformer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_query", function()
 		local result = service.start_query()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_query", function()
 		local result = service.stop_query()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_metric_filter", function()
 		local result = service.test_metric_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_transformer", function()
 		local result = service.test_transformer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_anomaly", function()
 		local result = service.update_anomaly()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_delivery_configuration", function()
 		local result = service.update_delivery_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_log_anomaly_detector", function()
 		local result = service.update_log_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 end)

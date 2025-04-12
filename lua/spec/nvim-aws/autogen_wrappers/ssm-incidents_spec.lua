@@ -9,155 +9,124 @@ describe("AWS ssm-incidents service testing", function()
 		local result = service.batch_get_incident_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_set", function()
 		local result = service.create_replication_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_response_plan", function()
 		local result = service.create_response_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_timeline_event", function()
 		local result = service.create_timeline_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_incident_record", function()
 		local result = service.delete_incident_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_set", function()
 		local result = service.delete_replication_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_policy", function()
 		local result = service.delete_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_response_plan", function()
 		local result = service.delete_response_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_timeline_event", function()
 		local result = service.delete_timeline_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_incident_record", function()
 		local result = service.get_incident_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_replication_set", function()
 		local result = service.get_replication_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policies", function()
 		local result = service.get_resource_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_response_plan", function()
 		local result = service.get_response_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_timeline_event", function()
 		local result = service.get_timeline_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_incident_findings", function()
 		local result = service.list_incident_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_incident_records", function()
 		local result = service.list_incident_records()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_related_items", function()
 		local result = service.list_related_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_replication_sets", function()
 		local result = service.list_replication_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_response_plans", function()
 		local result = service.list_response_plans()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_timeline_events", function()
 		local result = service.list_timeline_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_resource_policy", function()
 		local result = service.put_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_incident", function()
 		local result = service.start_incident()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_deletion_protection", function()
 		local result = service.update_deletion_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_incident_record", function()
 		local result = service.update_incident_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_related_items", function()
 		local result = service.update_related_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_replication_set", function()
 		local result = service.update_replication_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_response_plan", function()
 		local result = service.update_response_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_timeline_event", function()
 		local result = service.update_timeline_event()
 		assert.is_true(result.success)
 	end)
-
 end)

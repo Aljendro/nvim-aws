@@ -9,130 +9,104 @@ describe("AWS fis service testing", function()
 		local result = service.create_experiment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_target_account_configuration", function()
 		local result = service.create_target_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_experiment_template", function()
 		local result = service.delete_experiment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_target_account_configuration", function()
 		local result = service.delete_target_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_action", function()
 		local result = service.get_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_experiment", function()
 		local result = service.get_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_experiment_target_account_configuration", function()
 		local result = service.get_experiment_target_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_experiment_template", function()
 		local result = service.get_experiment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_safety_lever", function()
 		local result = service.get_safety_lever()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_target_account_configuration", function()
 		local result = service.get_target_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_target_resource_type", function()
 		local result = service.get_target_resource_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_actions", function()
 		local result = service.list_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_experiment_resolved_targets", function()
 		local result = service.list_experiment_resolved_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_experiment_target_account_configurations", function()
 		local result = service.list_experiment_target_account_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_experiment_templates", function()
 		local result = service.list_experiment_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_experiments", function()
 		local result = service.list_experiments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_target_account_configurations", function()
 		local result = service.list_target_account_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_target_resource_types", function()
 		local result = service.list_target_resource_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_experiment", function()
 		local result = service.start_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_experiment", function()
 		local result = service.stop_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_experiment_template", function()
 		local result = service.update_experiment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_safety_lever_state", function()
 		local result = service.update_safety_lever_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_target_account_configuration", function()
 		local result = service.update_target_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 end)

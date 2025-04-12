@@ -9,55 +9,44 @@ describe("AWS connectparticipant service testing", function()
 		local result = service.cancel_participant_authentication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with complete_attachment_upload", function()
 		local result = service.complete_attachment_upload()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_participant_connection", function()
 		local result = service.create_participant_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_view", function()
 		local result = service.describe_view()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disconnect_participant", function()
 		local result = service.disconnect_participant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_attachment", function()
 		local result = service.get_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_authentication_url", function()
 		local result = service.get_authentication_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transcript", function()
 		local result = service.get_transcript()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_event", function()
 		local result = service.send_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_message", function()
 		local result = service.send_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_attachment_upload", function()
 		local result = service.start_attachment_upload()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,40 +9,32 @@ describe("AWS observabilityadmin service testing", function()
 		local result = service.get_telemetry_evaluation_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_telemetry_evaluation_status_for_organization", function()
 		local result = service.get_telemetry_evaluation_status_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_telemetry", function()
 		local result = service.list_resource_telemetry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_telemetry_for_organization", function()
 		local result = service.list_resource_telemetry_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_telemetry_evaluation", function()
 		local result = service.start_telemetry_evaluation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_telemetry_evaluation_for_organization", function()
 		local result = service.start_telemetry_evaluation_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_telemetry_evaluation", function()
 		local result = service.stop_telemetry_evaluation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_telemetry_evaluation_for_organization", function()
 		local result = service.stop_telemetry_evaluation_for_organization()
 		assert.is_true(result.success)
 	end)
-
 end)

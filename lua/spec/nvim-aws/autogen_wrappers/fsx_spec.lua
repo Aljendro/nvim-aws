@@ -9,225 +9,180 @@ describe("AWS fsx service testing", function()
 		local result = service.associate_file_system_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_data_repository_task", function()
 		local result = service.cancel_data_repository_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_backup", function()
 		local result = service.copy_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_snapshot_and_update_volume", function()
 		local result = service.copy_snapshot_and_update_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_backup", function()
 		local result = service.create_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_repository_association", function()
 		local result = service.create_data_repository_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_repository_task", function()
 		local result = service.create_data_repository_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_file_cache", function()
 		local result = service.create_file_cache()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_file_system", function()
 		local result = service.create_file_system()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_file_system_from_backup", function()
 		local result = service.create_file_system_from_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_snapshot", function()
 		local result = service.create_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_storage_virtual_machine", function()
 		local result = service.create_storage_virtual_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_volume", function()
 		local result = service.create_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_volume_from_backup", function()
 		local result = service.create_volume_from_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_backup", function()
 		local result = service.delete_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_repository_association", function()
 		local result = service.delete_data_repository_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_file_cache", function()
 		local result = service.delete_file_cache()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_file_system", function()
 		local result = service.delete_file_system()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_snapshot", function()
 		local result = service.delete_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_storage_virtual_machine", function()
 		local result = service.delete_storage_virtual_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_volume", function()
 		local result = service.delete_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_backups", function()
 		local result = service.describe_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_data_repository_associations", function()
 		local result = service.describe_data_repository_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_data_repository_tasks", function()
 		local result = service.describe_data_repository_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_file_caches", function()
 		local result = service.describe_file_caches()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_file_system_aliases", function()
 		local result = service.describe_file_system_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_file_systems", function()
 		local result = service.describe_file_systems()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_shared_vpc_configuration", function()
 		local result = service.describe_shared_vpc_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_snapshots", function()
 		local result = service.describe_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_storage_virtual_machines", function()
 		local result = service.describe_storage_virtual_machines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_volumes", function()
 		local result = service.describe_volumes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_file_system_aliases", function()
 		local result = service.disassociate_file_system_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with release_file_system_nfs_v3_locks", function()
 		local result = service.release_file_system_nfs_v3_locks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_volume_from_snapshot", function()
 		local result = service.restore_volume_from_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_misconfigured_state_recovery", function()
 		local result = service.start_misconfigured_state_recovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_data_repository_association", function()
 		local result = service.update_data_repository_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_file_cache", function()
 		local result = service.update_file_cache()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_file_system", function()
 		local result = service.update_file_system()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_shared_vpc_configuration", function()
 		local result = service.update_shared_vpc_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_snapshot", function()
 		local result = service.update_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_storage_virtual_machine", function()
 		local result = service.update_storage_virtual_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_volume", function()
 		local result = service.update_volume()
 		assert.is_true(result.success)
 	end)
-
 end)

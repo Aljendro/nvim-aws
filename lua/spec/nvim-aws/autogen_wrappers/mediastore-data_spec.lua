@@ -9,20 +9,16 @@ describe("AWS mediastore-data service testing", function()
 		local result = service.delete_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_object", function()
 		local result = service.describe_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_items", function()
 		local result = service.list_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_object", function()
 		local result = service.put_object()
 		assert.is_true(result.success)
 	end)
-
 end)

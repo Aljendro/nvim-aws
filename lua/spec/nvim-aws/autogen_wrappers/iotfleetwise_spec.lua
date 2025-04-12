@@ -9,285 +9,228 @@ describe("AWS iotfleetwise service testing", function()
 		local result = service.associate_vehicle_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_create_vehicle", function()
 		local result = service.batch_create_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_update_vehicle", function()
 		local result = service.batch_update_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_campaign", function()
 		local result = service.create_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_decoder_manifest", function()
 		local result = service.create_decoder_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet", function()
 		local result = service.create_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_manifest", function()
 		local result = service.create_model_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_signal_catalog", function()
 		local result = service.create_signal_catalog()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_state_template", function()
 		local result = service.create_state_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vehicle", function()
 		local result = service.create_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_campaign", function()
 		local result = service.delete_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_decoder_manifest", function()
 		local result = service.delete_decoder_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet", function()
 		local result = service.delete_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_manifest", function()
 		local result = service.delete_model_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_signal_catalog", function()
 		local result = service.delete_signal_catalog()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_state_template", function()
 		local result = service.delete_state_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vehicle", function()
 		local result = service.delete_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_vehicle_fleet", function()
 		local result = service.disassociate_vehicle_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign", function()
 		local result = service.get_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_decoder_manifest", function()
 		local result = service.get_decoder_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_encryption_configuration", function()
 		local result = service.get_encryption_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_fleet", function()
 		local result = service.get_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_logging_options", function()
 		local result = service.get_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_manifest", function()
 		local result = service.get_model_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_register_account_status", function()
 		local result = service.get_register_account_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_signal_catalog", function()
 		local result = service.get_signal_catalog()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_state_template", function()
 		local result = service.get_state_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_vehicle", function()
 		local result = service.get_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_vehicle_status", function()
 		local result = service.get_vehicle_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_decoder_manifest", function()
 		local result = service.import_decoder_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_signal_catalog", function()
 		local result = service.import_signal_catalog()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_campaigns", function()
 		local result = service.list_campaigns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_decoder_manifest_network_interfaces", function()
 		local result = service.list_decoder_manifest_network_interfaces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_decoder_manifest_signals", function()
 		local result = service.list_decoder_manifest_signals()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_decoder_manifests", function()
 		local result = service.list_decoder_manifests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fleets", function()
 		local result = service.list_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fleets_for_vehicle", function()
 		local result = service.list_fleets_for_vehicle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_manifest_nodes", function()
 		local result = service.list_model_manifest_nodes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_manifests", function()
 		local result = service.list_model_manifests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signal_catalog_nodes", function()
 		local result = service.list_signal_catalog_nodes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signal_catalogs", function()
 		local result = service.list_signal_catalogs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_state_templates", function()
 		local result = service.list_state_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vehicles", function()
 		local result = service.list_vehicles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vehicles_in_fleet", function()
 		local result = service.list_vehicles_in_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_encryption_configuration", function()
 		local result = service.put_encryption_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_logging_options", function()
 		local result = service.put_logging_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_account", function()
 		local result = service.register_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_campaign", function()
 		local result = service.update_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_decoder_manifest", function()
 		local result = service.update_decoder_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_fleet", function()
 		local result = service.update_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model_manifest", function()
 		local result = service.update_model_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_signal_catalog", function()
 		local result = service.update_signal_catalog()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_state_template", function()
 		local result = service.update_state_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_vehicle", function()
 		local result = service.update_vehicle()
 		assert.is_true(result.success)
 	end)
-
 end)

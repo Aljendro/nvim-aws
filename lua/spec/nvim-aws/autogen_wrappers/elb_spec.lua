@@ -9,145 +9,116 @@ describe("AWS elb service testing", function()
 		local result = service.add_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with apply_security_groups_to_load_balancer", function()
 		local result = service.apply_security_groups_to_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_load_balancer_to_subnets", function()
 		local result = service.attach_load_balancer_to_subnets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with configure_health_check", function()
 		local result = service.configure_health_check()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_cookie_stickiness_policy", function()
 		local result = service.create_app_cookie_stickiness_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_lb_cookie_stickiness_policy", function()
 		local result = service.create_lb_cookie_stickiness_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer", function()
 		local result = service.create_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer_listeners", function()
 		local result = service.create_load_balancer_listeners()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer_policy", function()
 		local result = service.create_load_balancer_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer", function()
 		local result = service.delete_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer_listeners", function()
 		local result = service.delete_load_balancer_listeners()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer_policy", function()
 		local result = service.delete_load_balancer_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_instances_from_load_balancer", function()
 		local result = service.deregister_instances_from_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_limits", function()
 		local result = service.describe_account_limits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_health", function()
 		local result = service.describe_instance_health()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancer_attributes", function()
 		local result = service.describe_load_balancer_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancer_policies", function()
 		local result = service.describe_load_balancer_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancer_policy_types", function()
 		local result = service.describe_load_balancer_policy_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancers", function()
 		local result = service.describe_load_balancers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tags", function()
 		local result = service.describe_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_load_balancer_from_subnets", function()
 		local result = service.detach_load_balancer_from_subnets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_availability_zones_for_load_balancer", function()
 		local result = service.disable_availability_zones_for_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_availability_zones_for_load_balancer", function()
 		local result = service.enable_availability_zones_for_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_load_balancer_attributes", function()
 		local result = service.modify_load_balancer_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_instances_with_load_balancer", function()
 		local result = service.register_instances_with_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_tags", function()
 		local result = service.remove_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_load_balancer_listener_ssl_certificate", function()
 		local result = service.set_load_balancer_listener_ssl_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_load_balancer_policies_for_backend_server", function()
 		local result = service.set_load_balancer_policies_for_backend_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_load_balancer_policies_of_listener", function()
 		local result = service.set_load_balancer_policies_of_listener()
 		assert.is_true(result.success)
 	end)
-
 end)

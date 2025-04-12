@@ -9,560 +9,448 @@ describe("AWS dms service testing", function()
 		local result = service.add_tags_to_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with apply_pending_maintenance_action", function()
 		local result = service.apply_pending_maintenance_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_start_recommendations", function()
 		local result = service.batch_start_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_replication_task_assessment_run", function()
 		local result = service.cancel_replication_task_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_migration", function()
 		local result = service.create_data_migration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_provider", function()
 		local result = service.create_data_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_endpoint", function()
 		local result = service.create_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_subscription", function()
 		local result = service.create_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet_advisor_collector", function()
 		local result = service.create_fleet_advisor_collector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_profile", function()
 		local result = service.create_instance_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_migration_project", function()
 		local result = service.create_migration_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_config", function()
 		local result = service.create_replication_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_instance", function()
 		local result = service.create_replication_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_subnet_group", function()
 		local result = service.create_replication_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_task", function()
 		local result = service.create_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_certificate", function()
 		local result = service.delete_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_connection", function()
 		local result = service.delete_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_migration", function()
 		local result = service.delete_data_migration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_provider", function()
 		local result = service.delete_data_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_endpoint", function()
 		local result = service.delete_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_subscription", function()
 		local result = service.delete_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet_advisor_collector", function()
 		local result = service.delete_fleet_advisor_collector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet_advisor_databases", function()
 		local result = service.delete_fleet_advisor_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance_profile", function()
 		local result = service.delete_instance_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_migration_project", function()
 		local result = service.delete_migration_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_config", function()
 		local result = service.delete_replication_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_instance", function()
 		local result = service.delete_replication_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_subnet_group", function()
 		local result = service.delete_replication_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_task", function()
 		local result = service.delete_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_task_assessment_run", function()
 		local result = service.delete_replication_task_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_attributes", function()
 		local result = service.describe_account_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_applicable_individual_assessments", function()
 		local result = service.describe_applicable_individual_assessments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_certificates", function()
 		local result = service.describe_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_connections", function()
 		local result = service.describe_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_conversion_configuration", function()
 		local result = service.describe_conversion_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_data_migrations", function()
 		local result = service.describe_data_migrations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_data_providers", function()
 		local result = service.describe_data_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoint_settings", function()
 		local result = service.describe_endpoint_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoint_types", function()
 		local result = service.describe_endpoint_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoints", function()
 		local result = service.describe_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_engine_versions", function()
 		local result = service.describe_engine_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_event_categories", function()
 		local result = service.describe_event_categories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_event_subscriptions", function()
 		local result = service.describe_event_subscriptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_events", function()
 		local result = service.describe_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_extension_pack_associations", function()
 		local result = service.describe_extension_pack_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_advisor_collectors", function()
 		local result = service.describe_fleet_advisor_collectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_advisor_databases", function()
 		local result = service.describe_fleet_advisor_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_advisor_lsa_analysis", function()
 		local result = service.describe_fleet_advisor_lsa_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_advisor_schema_object_summary", function()
 		local result = service.describe_fleet_advisor_schema_object_summary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_advisor_schemas", function()
 		local result = service.describe_fleet_advisor_schemas()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_profiles", function()
 		local result = service.describe_instance_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metadata_model_assessments", function()
 		local result = service.describe_metadata_model_assessments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metadata_model_conversions", function()
 		local result = service.describe_metadata_model_conversions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metadata_model_exports_as_script", function()
 		local result = service.describe_metadata_model_exports_as_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metadata_model_exports_to_target", function()
 		local result = service.describe_metadata_model_exports_to_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metadata_model_imports", function()
 		local result = service.describe_metadata_model_imports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_migration_projects", function()
 		local result = service.describe_migration_projects()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_orderable_replication_instances", function()
 		local result = service.describe_orderable_replication_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pending_maintenance_actions", function()
 		local result = service.describe_pending_maintenance_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_recommendation_limitations", function()
 		local result = service.describe_recommendation_limitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_recommendations", function()
 		local result = service.describe_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_refresh_schemas_status", function()
 		local result = service.describe_refresh_schemas_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_configs", function()
 		local result = service.describe_replication_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_instance_task_logs", function()
 		local result = service.describe_replication_instance_task_logs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_instances", function()
 		local result = service.describe_replication_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_subnet_groups", function()
 		local result = service.describe_replication_subnet_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_table_statistics", function()
 		local result = service.describe_replication_table_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_task_assessment_results", function()
 		local result = service.describe_replication_task_assessment_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_task_assessment_runs", function()
 		local result = service.describe_replication_task_assessment_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_task_individual_assessments", function()
 		local result = service.describe_replication_task_individual_assessments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_tasks", function()
 		local result = service.describe_replication_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replications", function()
 		local result = service.describe_replications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_schemas", function()
 		local result = service.describe_schemas()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_table_statistics", function()
 		local result = service.describe_table_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_metadata_model_assessment", function()
 		local result = service.export_metadata_model_assessment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_certificate", function()
 		local result = service.import_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_conversion_configuration", function()
 		local result = service.modify_conversion_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_data_migration", function()
 		local result = service.modify_data_migration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_data_provider", function()
 		local result = service.modify_data_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_endpoint", function()
 		local result = service.modify_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_event_subscription", function()
 		local result = service.modify_event_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_profile", function()
 		local result = service.modify_instance_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_migration_project", function()
 		local result = service.modify_migration_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_replication_config", function()
 		local result = service.modify_replication_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_replication_instance", function()
 		local result = service.modify_replication_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_replication_subnet_group", function()
 		local result = service.modify_replication_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_replication_task", function()
 		local result = service.modify_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with move_replication_task", function()
 		local result = service.move_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_replication_instance", function()
 		local result = service.reboot_replication_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with refresh_schemas", function()
 		local result = service.refresh_schemas()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reload_replication_tables", function()
 		local result = service.reload_replication_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reload_tables", function()
 		local result = service.reload_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_tags_from_resource", function()
 		local result = service.remove_tags_from_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with run_fleet_advisor_lsa_analysis", function()
 		local result = service.run_fleet_advisor_lsa_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_data_migration", function()
 		local result = service.start_data_migration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_extension_pack_association", function()
 		local result = service.start_extension_pack_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_metadata_model_assessment", function()
 		local result = service.start_metadata_model_assessment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_metadata_model_conversion", function()
 		local result = service.start_metadata_model_conversion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_metadata_model_export_as_script", function()
 		local result = service.start_metadata_model_export_as_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_metadata_model_export_to_target", function()
 		local result = service.start_metadata_model_export_to_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_metadata_model_import", function()
 		local result = service.start_metadata_model_import()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_recommendations", function()
 		local result = service.start_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_replication", function()
 		local result = service.start_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_replication_task", function()
 		local result = service.start_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_replication_task_assessment", function()
 		local result = service.start_replication_task_assessment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_replication_task_assessment_run", function()
 		local result = service.start_replication_task_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_data_migration", function()
 		local result = service.stop_data_migration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_replication", function()
 		local result = service.stop_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_replication_task", function()
 		local result = service.stop_replication_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_connection", function()
 		local result = service.test_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subscriptions_to_event_bridge", function()
 		local result = service.update_subscriptions_to_event_bridge()
 		assert.is_true(result.success)
 	end)
-
 end)

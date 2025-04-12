@@ -9,80 +9,64 @@ describe("AWS chime-sdk-meetings service testing", function()
 		local result = service.batch_create_attendee()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_update_attendee_capabilities_except", function()
 		local result = service.batch_update_attendee_capabilities_except()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_attendee", function()
 		local result = service.create_attendee()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_meeting", function()
 		local result = service.create_meeting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_meeting_with_attendees", function()
 		local result = service.create_meeting_with_attendees()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_attendee", function()
 		local result = service.delete_attendee()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_meeting", function()
 		local result = service.delete_meeting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_attendee", function()
 		local result = service.get_attendee()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_meeting", function()
 		local result = service.get_meeting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_attendees", function()
 		local result = service.list_attendees()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_meeting_transcription", function()
 		local result = service.start_meeting_transcription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_meeting_transcription", function()
 		local result = service.stop_meeting_transcription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_attendee_capabilities", function()
 		local result = service.update_attendee_capabilities()
 		assert.is_true(result.success)
 	end)
-
 end)

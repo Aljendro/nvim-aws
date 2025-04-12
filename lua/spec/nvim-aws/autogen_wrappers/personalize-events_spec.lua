@@ -9,22 +9,18 @@ describe("AWS personalize-events service testing", function()
 		local result = service.put_action_interactions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_actions", function()
 		local result = service.put_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_events", function()
 		local result = service.put_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_items", function()
 		local result = service.put_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_users", function()
 		local result = service.put_users()
 		assert.is_true(result.success)

@@ -9,220 +9,176 @@ describe("AWS ce service testing", function()
 		local result = service.create_anomaly_monitor()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_anomaly_subscription", function()
 		local result = service.create_anomaly_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cost_category_definition", function()
 		local result = service.create_cost_category_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_anomaly_monitor", function()
 		local result = service.delete_anomaly_monitor()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_anomaly_subscription", function()
 		local result = service.delete_anomaly_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cost_category_definition", function()
 		local result = service.delete_cost_category_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cost_category_definition", function()
 		local result = service.describe_cost_category_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_anomalies", function()
 		local result = service.get_anomalies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_anomaly_monitors", function()
 		local result = service.get_anomaly_monitors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_anomaly_subscriptions", function()
 		local result = service.get_anomaly_subscriptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_approximate_usage_records", function()
 		local result = service.get_approximate_usage_records()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_commitment_purchase_analysis", function()
 		local result = service.get_commitment_purchase_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cost_and_usage", function()
 		local result = service.get_cost_and_usage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cost_and_usage_with_resources", function()
 		local result = service.get_cost_and_usage_with_resources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cost_categories", function()
 		local result = service.get_cost_categories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cost_forecast", function()
 		local result = service.get_cost_forecast()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dimension_values", function()
 		local result = service.get_dimension_values()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_reservation_coverage", function()
 		local result = service.get_reservation_coverage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_reservation_purchase_recommendation", function()
 		local result = service.get_reservation_purchase_recommendation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_reservation_utilization", function()
 		local result = service.get_reservation_utilization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_rightsizing_recommendation", function()
 		local result = service.get_rightsizing_recommendation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_savings_plan_purchase_recommendation_details", function()
 		local result = service.get_savings_plan_purchase_recommendation_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_savings_plans_coverage", function()
 		local result = service.get_savings_plans_coverage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_savings_plans_purchase_recommendation", function()
 		local result = service.get_savings_plans_purchase_recommendation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_savings_plans_utilization", function()
 		local result = service.get_savings_plans_utilization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_savings_plans_utilization_details", function()
 		local result = service.get_savings_plans_utilization_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_tags", function()
 		local result = service.get_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_usage_forecast", function()
 		local result = service.get_usage_forecast()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_commitment_purchase_analyses", function()
 		local result = service.list_commitment_purchase_analyses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cost_allocation_tag_backfill_history", function()
 		local result = service.list_cost_allocation_tag_backfill_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cost_allocation_tags", function()
 		local result = service.list_cost_allocation_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cost_category_definitions", function()
 		local result = service.list_cost_category_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_savings_plans_purchase_recommendation_generation", function()
 		local result = service.list_savings_plans_purchase_recommendation_generation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provide_anomaly_feedback", function()
 		local result = service.provide_anomaly_feedback()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_commitment_purchase_analysis", function()
 		local result = service.start_commitment_purchase_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_cost_allocation_tag_backfill", function()
 		local result = service.start_cost_allocation_tag_backfill()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_savings_plans_purchase_recommendation_generation", function()
 		local result = service.start_savings_plans_purchase_recommendation_generation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_anomaly_monitor", function()
 		local result = service.update_anomaly_monitor()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_anomaly_subscription", function()
 		local result = service.update_anomaly_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cost_allocation_tags_status", function()
 		local result = service.update_cost_allocation_tags_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cost_category_definition", function()
 		local result = service.update_cost_category_definition()
 		assert.is_true(result.success)
 	end)
-
 end)

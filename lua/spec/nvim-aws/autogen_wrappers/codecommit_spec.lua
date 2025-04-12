@@ -9,395 +9,316 @@ describe("AWS codecommit service testing", function()
 		local result = service.associate_approval_rule_template_with_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_associate_approval_rule_template_with_repositories", function()
 		local result = service.batch_associate_approval_rule_template_with_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_describe_merge_conflicts", function()
 		local result = service.batch_describe_merge_conflicts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_disassociate_approval_rule_template_from_repositories", function()
 		local result = service.batch_disassociate_approval_rule_template_from_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_commits", function()
 		local result = service.batch_get_commits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_repositories", function()
 		local result = service.batch_get_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_approval_rule_template", function()
 		local result = service.create_approval_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_branch", function()
 		local result = service.create_branch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_commit", function()
 		local result = service.create_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_pull_request", function()
 		local result = service.create_pull_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_pull_request_approval_rule", function()
 		local result = service.create_pull_request_approval_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_repository", function()
 		local result = service.create_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_unreferenced_merge_commit", function()
 		local result = service.create_unreferenced_merge_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_approval_rule_template", function()
 		local result = service.delete_approval_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_branch", function()
 		local result = service.delete_branch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_comment_content", function()
 		local result = service.delete_comment_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_file", function()
 		local result = service.delete_file()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_pull_request_approval_rule", function()
 		local result = service.delete_pull_request_approval_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_repository", function()
 		local result = service.delete_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_merge_conflicts", function()
 		local result = service.describe_merge_conflicts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pull_request_events", function()
 		local result = service.describe_pull_request_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_approval_rule_template_from_repository", function()
 		local result = service.disassociate_approval_rule_template_from_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with evaluate_pull_request_approval_rules", function()
 		local result = service.evaluate_pull_request_approval_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_approval_rule_template", function()
 		local result = service.get_approval_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_blob", function()
 		local result = service.get_blob()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_branch", function()
 		local result = service.get_branch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_comment", function()
 		local result = service.get_comment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_comment_reactions", function()
 		local result = service.get_comment_reactions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_comments_for_compared_commit", function()
 		local result = service.get_comments_for_compared_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_comments_for_pull_request", function()
 		local result = service.get_comments_for_pull_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_commit", function()
 		local result = service.get_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_differences", function()
 		local result = service.get_differences()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_file", function()
 		local result = service.get_file()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_folder", function()
 		local result = service.get_folder()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_merge_commit", function()
 		local result = service.get_merge_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_merge_conflicts", function()
 		local result = service.get_merge_conflicts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_merge_options", function()
 		local result = service.get_merge_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_pull_request", function()
 		local result = service.get_pull_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_pull_request_approval_states", function()
 		local result = service.get_pull_request_approval_states()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_pull_request_override_state", function()
 		local result = service.get_pull_request_override_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_repository", function()
 		local result = service.get_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_repository_triggers", function()
 		local result = service.get_repository_triggers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_approval_rule_templates", function()
 		local result = service.list_approval_rule_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_associated_approval_rule_templates_for_repository", function()
 		local result = service.list_associated_approval_rule_templates_for_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_branches", function()
 		local result = service.list_branches()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_file_commit_history", function()
 		local result = service.list_file_commit_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pull_requests", function()
 		local result = service.list_pull_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_repositories", function()
 		local result = service.list_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_repositories_for_approval_rule_template", function()
 		local result = service.list_repositories_for_approval_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_branches_by_fast_forward", function()
 		local result = service.merge_branches_by_fast_forward()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_branches_by_squash", function()
 		local result = service.merge_branches_by_squash()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_branches_by_three_way", function()
 		local result = service.merge_branches_by_three_way()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_pull_request_by_fast_forward", function()
 		local result = service.merge_pull_request_by_fast_forward()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_pull_request_by_squash", function()
 		local result = service.merge_pull_request_by_squash()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with merge_pull_request_by_three_way", function()
 		local result = service.merge_pull_request_by_three_way()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with override_pull_request_approval_rules", function()
 		local result = service.override_pull_request_approval_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with post_comment_for_compared_commit", function()
 		local result = service.post_comment_for_compared_commit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with post_comment_for_pull_request", function()
 		local result = service.post_comment_for_pull_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with post_comment_reply", function()
 		local result = service.post_comment_reply()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_comment_reaction", function()
 		local result = service.put_comment_reaction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_file", function()
 		local result = service.put_file()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_repository_triggers", function()
 		local result = service.put_repository_triggers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_repository_triggers", function()
 		local result = service.test_repository_triggers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_approval_rule_template_content", function()
 		local result = service.update_approval_rule_template_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_approval_rule_template_description", function()
 		local result = service.update_approval_rule_template_description()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_approval_rule_template_name", function()
 		local result = service.update_approval_rule_template_name()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_comment", function()
 		local result = service.update_comment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_default_branch", function()
 		local result = service.update_default_branch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_request_approval_rule_content", function()
 		local result = service.update_pull_request_approval_rule_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_request_approval_state", function()
 		local result = service.update_pull_request_approval_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_request_description", function()
 		local result = service.update_pull_request_description()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_request_status", function()
 		local result = service.update_pull_request_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pull_request_title", function()
 		local result = service.update_pull_request_title()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_repository_description", function()
 		local result = service.update_repository_description()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_repository_encryption_key", function()
 		local result = service.update_repository_encryption_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_repository_name", function()
 		local result = service.update_repository_name()
 		assert.is_true(result.success)
 	end)
-
 end)

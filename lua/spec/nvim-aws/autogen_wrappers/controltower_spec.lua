@@ -9,140 +9,112 @@ describe("AWS controltower service testing", function()
 		local result = service.create_landing_zone()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_landing_zone", function()
 		local result = service.delete_landing_zone()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_baseline", function()
 		local result = service.disable_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_control", function()
 		local result = service.disable_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_baseline", function()
 		local result = service.enable_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_control", function()
 		local result = service.enable_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_baseline", function()
 		local result = service.get_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_baseline_operation", function()
 		local result = service.get_baseline_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_control_operation", function()
 		local result = service.get_control_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_enabled_baseline", function()
 		local result = service.get_enabled_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_enabled_control", function()
 		local result = service.get_enabled_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_landing_zone", function()
 		local result = service.get_landing_zone()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_landing_zone_operation", function()
 		local result = service.get_landing_zone_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_baselines", function()
 		local result = service.list_baselines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_control_operations", function()
 		local result = service.list_control_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_enabled_baselines", function()
 		local result = service.list_enabled_baselines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_enabled_controls", function()
 		local result = service.list_enabled_controls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_landing_zone_operations", function()
 		local result = service.list_landing_zone_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_landing_zones", function()
 		local result = service.list_landing_zones()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_enabled_baseline", function()
 		local result = service.reset_enabled_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_enabled_control", function()
 		local result = service.reset_enabled_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_landing_zone", function()
 		local result = service.reset_landing_zone()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_enabled_baseline", function()
 		local result = service.update_enabled_baseline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_enabled_control", function()
 		local result = service.update_enabled_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_landing_zone", function()
 		local result = service.update_landing_zone()
 		assert.is_true(result.success)
 	end)
-
 end)

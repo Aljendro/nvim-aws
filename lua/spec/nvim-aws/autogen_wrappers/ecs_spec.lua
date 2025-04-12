@@ -9,295 +9,236 @@ describe("AWS ecs service testing", function()
 		local result = service.create_capacity_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cluster", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_service", function()
 		local result = service.create_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_task_set", function()
 		local result = service.create_task_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_account_setting", function()
 		local result = service.delete_account_setting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_attributes", function()
 		local result = service.delete_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_capacity_provider", function()
 		local result = service.delete_capacity_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_service", function()
 		local result = service.delete_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_task_definitions", function()
 		local result = service.delete_task_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_task_set", function()
 		local result = service.delete_task_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_container_instance", function()
 		local result = service.deregister_container_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_task_definition", function()
 		local result = service.deregister_task_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_providers", function()
 		local result = service.describe_capacity_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_clusters", function()
 		local result = service.describe_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_container_instances", function()
 		local result = service.describe_container_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_service_deployments", function()
 		local result = service.describe_service_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_service_revisions", function()
 		local result = service.describe_service_revisions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_services", function()
 		local result = service.describe_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_task_definition", function()
 		local result = service.describe_task_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_task_sets", function()
 		local result = service.describe_task_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tasks", function()
 		local result = service.describe_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with discover_poll_endpoint", function()
 		local result = service.discover_poll_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with execute_command", function()
 		local result = service.execute_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_task_protection", function()
 		local result = service.get_task_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_account_settings", function()
 		local result = service.list_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_attributes", function()
 		local result = service.list_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_clusters", function()
 		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_container_instances", function()
 		local result = service.list_container_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_service_deployments", function()
 		local result = service.list_service_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_services", function()
 		local result = service.list_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_services_by_namespace", function()
 		local result = service.list_services_by_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_task_definition_families", function()
 		local result = service.list_task_definition_families()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_task_definitions", function()
 		local result = service.list_task_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tasks", function()
 		local result = service.list_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_setting", function()
 		local result = service.put_account_setting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_setting_default", function()
 		local result = service.put_account_setting_default()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_attributes", function()
 		local result = service.put_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_cluster_capacity_providers", function()
 		local result = service.put_cluster_capacity_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_container_instance", function()
 		local result = service.register_container_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_task_definition", function()
 		local result = service.register_task_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with run_task", function()
 		local result = service.run_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_task", function()
 		local result = service.start_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_task", function()
 		local result = service.stop_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with submit_attachment_state_changes", function()
 		local result = service.submit_attachment_state_changes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with submit_container_state_change", function()
 		local result = service.submit_container_state_change()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with submit_task_state_change", function()
 		local result = service.submit_task_state_change()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_capacity_provider", function()
 		local result = service.update_capacity_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster_settings", function()
 		local result = service.update_cluster_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_container_agent", function()
 		local result = service.update_container_agent()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_container_instances_state", function()
 		local result = service.update_container_instances_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service", function()
 		local result = service.update_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service_primary_task_set", function()
 		local result = service.update_service_primary_task_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_task_protection", function()
 		local result = service.update_task_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_task_set", function()
 		local result = service.update_task_set()
 		assert.is_true(result.success)
 	end)
-
 end)

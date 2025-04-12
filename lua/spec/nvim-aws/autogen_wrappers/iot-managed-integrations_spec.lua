@@ -9,285 +9,228 @@ describe("AWS iot-managed-integrations service testing", function()
 		local result = service.create_credential_locker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_destination", function()
 		local result = service.create_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_log_configuration", function()
 		local result = service.create_event_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_managed_thing", function()
 		local result = service.create_managed_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_notification_configuration", function()
 		local result = service.create_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ota_task", function()
 		local result = service.create_ota_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ota_task_configuration", function()
 		local result = service.create_ota_task_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_provisioning_profile", function()
 		local result = service.create_provisioning_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_credential_locker", function()
 		local result = service.delete_credential_locker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_destination", function()
 		local result = service.delete_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_log_configuration", function()
 		local result = service.delete_event_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_managed_thing", function()
 		local result = service.delete_managed_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_notification_configuration", function()
 		local result = service.delete_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ota_task", function()
 		local result = service.delete_ota_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ota_task_configuration", function()
 		local result = service.delete_ota_task_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_provisioning_profile", function()
 		local result = service.delete_provisioning_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_credential_locker", function()
 		local result = service.get_credential_locker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_custom_endpoint", function()
 		local result = service.get_custom_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_default_encryption_configuration", function()
 		local result = service.get_default_encryption_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_destination", function()
 		local result = service.get_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_device_discovery", function()
 		local result = service.get_device_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_log_configuration", function()
 		local result = service.get_event_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_hub_configuration", function()
 		local result = service.get_hub_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_thing", function()
 		local result = service.get_managed_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_thing_capabilities", function()
 		local result = service.get_managed_thing_capabilities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_thing_connectivity_data", function()
 		local result = service.get_managed_thing_connectivity_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_thing_meta_data", function()
 		local result = service.get_managed_thing_meta_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_thing_state", function()
 		local result = service.get_managed_thing_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_notification_configuration", function()
 		local result = service.get_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ota_task", function()
 		local result = service.get_ota_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ota_task_configuration", function()
 		local result = service.get_ota_task_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_provisioning_profile", function()
 		local result = service.get_provisioning_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_runtime_log_configuration", function()
 		local result = service.get_runtime_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_schema_version", function()
 		local result = service.get_schema_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_credential_lockers", function()
 		local result = service.list_credential_lockers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_destinations", function()
 		local result = service.list_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_log_configurations", function()
 		local result = service.list_event_log_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_thing_schemas", function()
 		local result = service.list_managed_thing_schemas()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_things", function()
 		local result = service.list_managed_things()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notification_configurations", function()
 		local result = service.list_notification_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ota_task_configurations", function()
 		local result = service.list_ota_task_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ota_task_executions", function()
 		local result = service.list_ota_task_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ota_tasks", function()
 		local result = service.list_ota_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_provisioning_profiles", function()
 		local result = service.list_provisioning_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_schema_versions", function()
 		local result = service.list_schema_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_default_encryption_configuration", function()
 		local result = service.put_default_encryption_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_hub_configuration", function()
 		local result = service.put_hub_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_runtime_log_configuration", function()
 		local result = service.put_runtime_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_custom_endpoint", function()
 		local result = service.register_custom_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_runtime_log_configuration", function()
 		local result = service.reset_runtime_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_managed_thing_command", function()
 		local result = service.send_managed_thing_command()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_device_discovery", function()
 		local result = service.start_device_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_destination", function()
 		local result = service.update_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_log_configuration", function()
 		local result = service.update_event_log_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_managed_thing", function()
 		local result = service.update_managed_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notification_configuration", function()
 		local result = service.update_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_ota_task", function()
 		local result = service.update_ota_task()
 		assert.is_true(result.success)
 	end)
-
 end)

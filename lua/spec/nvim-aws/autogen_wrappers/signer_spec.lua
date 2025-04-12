@@ -9,95 +9,76 @@ describe("AWS signer service testing", function()
 		local result = service.add_profile_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_signing_profile", function()
 		local result = service.cancel_signing_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_signing_job", function()
 		local result = service.describe_signing_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_revocation_status", function()
 		local result = service.get_revocation_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_signing_platform", function()
 		local result = service.get_signing_platform()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_signing_profile", function()
 		local result = service.get_signing_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_profile_permissions", function()
 		local result = service.list_profile_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signing_jobs", function()
 		local result = service.list_signing_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signing_platforms", function()
 		local result = service.list_signing_platforms()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signing_profiles", function()
 		local result = service.list_signing_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_signing_profile", function()
 		local result = service.put_signing_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_profile_permission", function()
 		local result = service.remove_profile_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_signature", function()
 		local result = service.revoke_signature()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_signing_profile", function()
 		local result = service.revoke_signing_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with sign_payload", function()
 		local result = service.sign_payload()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_signing_job", function()
 		local result = service.start_signing_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

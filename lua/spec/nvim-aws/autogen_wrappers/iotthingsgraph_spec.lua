@@ -2,5 +2,7 @@
 -- AWS Service: iotthingsgraph
 
 require("nvim-aws").setup()
+local service = require("nvim-aws.autogen_wrappers.iotthingsgraph")
 
-describe("AWS iotthingsgraph service testing", function() end)
+describe("AWS iotthingsgraph service testing", function()
+end)

@@ -9,105 +9,84 @@ describe("AWS synthetics service testing", function()
 		local result = service.associate_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_canary", function()
 		local result = service.create_canary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_group", function()
 		local result = service.create_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_canary", function()
 		local result = service.delete_canary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_group", function()
 		local result = service.delete_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_canaries", function()
 		local result = service.describe_canaries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_canaries_last_run", function()
 		local result = service.describe_canaries_last_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_runtime_versions", function()
 		local result = service.describe_runtime_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_resource", function()
 		local result = service.disassociate_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_canary", function()
 		local result = service.get_canary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_canary_runs", function()
 		local result = service.get_canary_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_group", function()
 		local result = service.get_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_associated_groups", function()
 		local result = service.list_associated_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_group_resources", function()
 		local result = service.list_group_resources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_groups", function()
 		local result = service.list_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_canary", function()
 		local result = service.start_canary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_canary", function()
 		local result = service.stop_canary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_canary", function()
 		local result = service.update_canary()
 		assert.is_true(result.success)
 	end)
-
 end)

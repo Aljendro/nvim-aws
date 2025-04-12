@@ -9,285 +9,228 @@ describe("AWS dynamodb service testing", function()
 		local result = service.batch_execute_statement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_item", function()
 		local result = service.batch_get_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_write_item", function()
 		local result = service.batch_write_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_backup", function()
 		local result = service.create_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_global_table", function()
 		local result = service.create_global_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_table", function()
 		local result = service.create_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_backup", function()
 		local result = service.delete_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_item", function()
 		local result = service.delete_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_policy", function()
 		local result = service.delete_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_table", function()
 		local result = service.delete_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_backup", function()
 		local result = service.describe_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_continuous_backups", function()
 		local result = service.describe_continuous_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_contributor_insights", function()
 		local result = service.describe_contributor_insights()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoints", function()
 		local result = service.describe_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export", function()
 		local result = service.describe_export()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_global_table", function()
 		local result = service.describe_global_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_global_table_settings", function()
 		local result = service.describe_global_table_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_import", function()
 		local result = service.describe_import()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_kinesis_streaming_destination", function()
 		local result = service.describe_kinesis_streaming_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_limits", function()
 		local result = service.describe_limits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_table", function()
 		local result = service.describe_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_table_replica_auto_scaling", function()
 		local result = service.describe_table_replica_auto_scaling()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_time_to_live", function()
 		local result = service.describe_time_to_live()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_kinesis_streaming_destination", function()
 		local result = service.disable_kinesis_streaming_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_kinesis_streaming_destination", function()
 		local result = service.enable_kinesis_streaming_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with execute_statement", function()
 		local result = service.execute_statement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with execute_transaction", function()
 		local result = service.execute_transaction()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_table_to_point_in_time", function()
 		local result = service.export_table_to_point_in_time()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_item", function()
 		local result = service.get_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policy", function()
 		local result = service.get_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_table", function()
 		local result = service.import_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_backups", function()
 		local result = service.list_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_contributor_insights", function()
 		local result = service.list_contributor_insights()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_exports", function()
 		local result = service.list_exports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_global_tables", function()
 		local result = service.list_global_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_imports", function()
 		local result = service.list_imports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tables", function()
 		local result = service.list_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_of_resource", function()
 		local result = service.list_tags_of_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_item", function()
 		local result = service.put_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_resource_policy", function()
 		local result = service.put_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with query", function()
 		local result = service.query()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_table_from_backup", function()
 		local result = service.restore_table_from_backup()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_table_to_point_in_time", function()
 		local result = service.restore_table_to_point_in_time()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with scan", function()
 		local result = service.scan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with transact_get_items", function()
 		local result = service.transact_get_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with transact_write_items", function()
 		local result = service.transact_write_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_continuous_backups", function()
 		local result = service.update_continuous_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_contributor_insights", function()
 		local result = service.update_contributor_insights()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_global_table", function()
 		local result = service.update_global_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_global_table_settings", function()
 		local result = service.update_global_table_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_item", function()
 		local result = service.update_item()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_kinesis_streaming_destination", function()
 		local result = service.update_kinesis_streaming_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_table", function()
 		local result = service.update_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_table_replica_auto_scaling", function()
 		local result = service.update_table_replica_auto_scaling()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_time_to_live", function()
 		local result = service.update_time_to_live()
 		assert.is_true(result.success)
 	end)
-
 end)

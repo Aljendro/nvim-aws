@@ -9,155 +9,124 @@ describe("AWS securitylake service testing", function()
 		local result = service.create_aws_log_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_custom_log_source", function()
 		local result = service.create_custom_log_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_lake", function()
 		local result = service.create_data_lake()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_lake_exception_subscription", function()
 		local result = service.create_data_lake_exception_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_lake_organization_configuration", function()
 		local result = service.create_data_lake_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subscriber", function()
 		local result = service.create_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subscriber_notification", function()
 		local result = service.create_subscriber_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_aws_log_source", function()
 		local result = service.delete_aws_log_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_custom_log_source", function()
 		local result = service.delete_custom_log_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_lake", function()
 		local result = service.delete_data_lake()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_lake_exception_subscription", function()
 		local result = service.delete_data_lake_exception_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_lake_organization_configuration", function()
 		local result = service.delete_data_lake_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subscriber", function()
 		local result = service.delete_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subscriber_notification", function()
 		local result = service.delete_subscriber_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_data_lake_delegated_administrator", function()
 		local result = service.deregister_data_lake_delegated_administrator()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_lake_exception_subscription", function()
 		local result = service.get_data_lake_exception_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_lake_organization_configuration", function()
 		local result = service.get_data_lake_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_lake_sources", function()
 		local result = service.get_data_lake_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_subscriber", function()
 		local result = service.get_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_data_lake_exceptions", function()
 		local result = service.list_data_lake_exceptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_data_lakes", function()
 		local result = service.list_data_lakes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_log_sources", function()
 		local result = service.list_log_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_subscribers", function()
 		local result = service.list_subscribers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_data_lake_delegated_administrator", function()
 		local result = service.register_data_lake_delegated_administrator()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_data_lake", function()
 		local result = service.update_data_lake()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_data_lake_exception_subscription", function()
 		local result = service.update_data_lake_exception_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subscriber", function()
 		local result = service.update_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subscriber_notification", function()
 		local result = service.update_subscriber_notification()
 		assert.is_true(result.success)
 	end)
-
 end)

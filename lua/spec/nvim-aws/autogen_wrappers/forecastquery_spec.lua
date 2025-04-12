@@ -9,7 +9,6 @@ describe("AWS forecastquery service testing", function()
 		local result = service.query_forecast()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with query_what_if_forecast", function()
 		local result = service.query_what_if_forecast()
 		assert.is_true(result.success)

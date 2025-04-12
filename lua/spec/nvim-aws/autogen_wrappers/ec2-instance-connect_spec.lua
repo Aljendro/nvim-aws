@@ -9,7 +9,6 @@ describe("AWS ec2-instance-connect service testing", function()
 		local result = service.send_serial_console_ssh_public_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_ssh_public_key", function()
 		local result = service.send_ssh_public_key()
 		assert.is_true(result.success)

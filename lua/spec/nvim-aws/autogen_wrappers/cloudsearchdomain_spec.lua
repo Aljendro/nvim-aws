@@ -9,12 +9,10 @@ describe("AWS cloudsearchdomain service testing", function()
 		local result = service.search()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with suggest", function()
 		local result = service.suggest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with upload_documents", function()
 		local result = service.upload_documents()
 		assert.is_true(result.success)

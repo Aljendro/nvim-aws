@@ -9,150 +9,120 @@ describe("AWS mediaconvert service testing", function()
 		local result = service.associate_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_job", function()
 		local result = service.cancel_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job", function()
 		local result = service.create_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job_template", function()
 		local result = service.create_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_preset", function()
 		local result = service.create_preset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_queue", function()
 		local result = service.create_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job_template", function()
 		local result = service.delete_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_policy", function()
 		local result = service.delete_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_preset", function()
 		local result = service.delete_preset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_queue", function()
 		local result = service.delete_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_certificate", function()
 		local result = service.disassociate_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job", function()
 		local result = service.get_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job_template", function()
 		local result = service.get_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_policy", function()
 		local result = service.get_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_preset", function()
 		local result = service.get_preset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_queue", function()
 		local result = service.get_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_templates", function()
 		local result = service.list_job_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_jobs", function()
 		local result = service.list_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_presets", function()
 		local result = service.list_presets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_queues", function()
 		local result = service.list_queues()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_versions", function()
 		local result = service.list_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with probe", function()
 		local result = service.probe()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_policy", function()
 		local result = service.put_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_jobs", function()
 		local result = service.search_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_job_template", function()
 		local result = service.update_job_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_preset", function()
 		local result = service.update_preset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_queue", function()
 		local result = service.update_queue()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,80 +9,64 @@ describe("AWS emr-serverless service testing", function()
 		local result = service.cancel_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_application", function()
 		local result = service.create_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application", function()
 		local result = service.delete_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application", function()
 		local result = service.get_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dashboard_for_job_run", function()
 		local result = service.get_dashboard_for_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job_run", function()
 		local result = service.get_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_applications", function()
 		local result = service.list_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_run_attempts", function()
 		local result = service.list_job_run_attempts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_runs", function()
 		local result = service.list_job_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_application", function()
 		local result = service.start_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_job_run", function()
 		local result = service.start_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_application", function()
 		local result = service.stop_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application", function()
 		local result = service.update_application()
 		assert.is_true(result.success)
 	end)
-
 end)

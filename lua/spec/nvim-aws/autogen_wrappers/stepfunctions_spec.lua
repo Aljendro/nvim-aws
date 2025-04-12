@@ -9,185 +9,148 @@ describe("AWS stepfunctions service testing", function()
 		local result = service.create_activity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_state_machine", function()
 		local result = service.create_state_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_state_machine_alias", function()
 		local result = service.create_state_machine_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_activity", function()
 		local result = service.delete_activity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_state_machine", function()
 		local result = service.delete_state_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_state_machine_alias", function()
 		local result = service.delete_state_machine_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_state_machine_version", function()
 		local result = service.delete_state_machine_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_activity", function()
 		local result = service.describe_activity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_execution", function()
 		local result = service.describe_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_map_run", function()
 		local result = service.describe_map_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_state_machine", function()
 		local result = service.describe_state_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_state_machine_alias", function()
 		local result = service.describe_state_machine_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_state_machine_for_execution", function()
 		local result = service.describe_state_machine_for_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_activity_task", function()
 		local result = service.get_activity_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_execution_history", function()
 		local result = service.get_execution_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_activities", function()
 		local result = service.list_activities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_executions", function()
 		local result = service.list_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_map_runs", function()
 		local result = service.list_map_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_state_machine_aliases", function()
 		local result = service.list_state_machine_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_state_machine_versions", function()
 		local result = service.list_state_machine_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_state_machines", function()
 		local result = service.list_state_machines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish_state_machine_version", function()
 		local result = service.publish_state_machine_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with redrive_execution", function()
 		local result = service.redrive_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_task_failure", function()
 		local result = service.send_task_failure()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_task_heartbeat", function()
 		local result = service.send_task_heartbeat()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_task_success", function()
 		local result = service.send_task_success()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_execution", function()
 		local result = service.start_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_sync_execution", function()
 		local result = service.start_sync_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_execution", function()
 		local result = service.stop_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_state", function()
 		local result = service.test_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_map_run", function()
 		local result = service.update_map_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_state_machine", function()
 		local result = service.update_state_machine()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_state_machine_alias", function()
 		local result = service.update_state_machine_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with validate_state_machine_definition", function()
 		local result = service.validate_state_machine_definition()
 		assert.is_true(result.success)
 	end)
-
 end)

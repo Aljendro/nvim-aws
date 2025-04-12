@@ -9,60 +9,48 @@ describe("AWS firehose service testing", function()
 		local result = service.create_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_delivery_stream", function()
 		local result = service.delete_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_delivery_stream", function()
 		local result = service.describe_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_delivery_streams", function()
 		local result = service.list_delivery_streams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_delivery_stream", function()
 		local result = service.list_tags_for_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_record", function()
 		local result = service.put_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_record_batch", function()
 		local result = service.put_record_batch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_delivery_stream_encryption", function()
 		local result = service.start_delivery_stream_encryption()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_delivery_stream_encryption", function()
 		local result = service.stop_delivery_stream_encryption()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_delivery_stream", function()
 		local result = service.tag_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_delivery_stream", function()
 		local result = service.untag_delivery_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_destination", function()
 		local result = service.update_destination()
 		assert.is_true(result.success)
 	end)
-
 end)

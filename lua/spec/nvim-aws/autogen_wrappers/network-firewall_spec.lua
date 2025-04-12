@@ -9,225 +9,180 @@ describe("AWS network-firewall service testing", function()
 		local result = service.associate_firewall_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_subnets", function()
 		local result = service.associate_subnets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_firewall", function()
 		local result = service.create_firewall()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_firewall_policy", function()
 		local result = service.create_firewall_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_rule_group", function()
 		local result = service.create_rule_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_tls_inspection_configuration", function()
 		local result = service.create_tls_inspection_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_firewall", function()
 		local result = service.delete_firewall()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_firewall_policy", function()
 		local result = service.delete_firewall_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_policy", function()
 		local result = service.delete_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_rule_group", function()
 		local result = service.delete_rule_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tls_inspection_configuration", function()
 		local result = service.delete_tls_inspection_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_firewall", function()
 		local result = service.describe_firewall()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_firewall_policy", function()
 		local result = service.describe_firewall_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_flow_operation", function()
 		local result = service.describe_flow_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_logging_configuration", function()
 		local result = service.describe_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_resource_policy", function()
 		local result = service.describe_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_rule_group", function()
 		local result = service.describe_rule_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_rule_group_metadata", function()
 		local result = service.describe_rule_group_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tls_inspection_configuration", function()
 		local result = service.describe_tls_inspection_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_subnets", function()
 		local result = service.disassociate_subnets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_analysis_report_results", function()
 		local result = service.get_analysis_report_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_analysis_reports", function()
 		local result = service.list_analysis_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_firewall_policies", function()
 		local result = service.list_firewall_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_firewalls", function()
 		local result = service.list_firewalls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_flow_operation_results", function()
 		local result = service.list_flow_operation_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_flow_operations", function()
 		local result = service.list_flow_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rule_groups", function()
 		local result = service.list_rule_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tls_inspection_configurations", function()
 		local result = service.list_tls_inspection_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_resource_policy", function()
 		local result = service.put_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_analysis_report", function()
 		local result = service.start_analysis_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_flow_capture", function()
 		local result = service.start_flow_capture()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_flow_flush", function()
 		local result = service.start_flow_flush()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_analysis_settings", function()
 		local result = service.update_firewall_analysis_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_delete_protection", function()
 		local result = service.update_firewall_delete_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_description", function()
 		local result = service.update_firewall_description()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_encryption_configuration", function()
 		local result = service.update_firewall_encryption_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_policy", function()
 		local result = service.update_firewall_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_firewall_policy_change_protection", function()
 		local result = service.update_firewall_policy_change_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_logging_configuration", function()
 		local result = service.update_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_rule_group", function()
 		local result = service.update_rule_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subnet_change_protection", function()
 		local result = service.update_subnet_change_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_tls_inspection_configuration", function()
 		local result = service.update_tls_inspection_configuration()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,255 +9,204 @@ describe("AWS es service testing", function()
 		local result = service.accept_inbound_cross_cluster_search_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_tags", function()
 		local result = service.add_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_package", function()
 		local result = service.associate_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with authorize_vpc_endpoint_access", function()
 		local result = service.authorize_vpc_endpoint_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_domain_config_change", function()
 		local result = service.cancel_domain_config_change()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_elasticsearch_service_software_update", function()
 		local result = service.cancel_elasticsearch_service_software_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_elasticsearch_domain", function()
 		local result = service.create_elasticsearch_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_outbound_cross_cluster_search_connection", function()
 		local result = service.create_outbound_cross_cluster_search_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_package", function()
 		local result = service.create_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_endpoint", function()
 		local result = service.create_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_elasticsearch_domain", function()
 		local result = service.delete_elasticsearch_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_elasticsearch_service_role", function()
 		local result = service.delete_elasticsearch_service_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_inbound_cross_cluster_search_connection", function()
 		local result = service.delete_inbound_cross_cluster_search_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_outbound_cross_cluster_search_connection", function()
 		local result = service.delete_outbound_cross_cluster_search_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_package", function()
 		local result = service.delete_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_endpoint", function()
 		local result = service.delete_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain_auto_tunes", function()
 		local result = service.describe_domain_auto_tunes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain_change_progress", function()
 		local result = service.describe_domain_change_progress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_elasticsearch_domain", function()
 		local result = service.describe_elasticsearch_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_elasticsearch_domain_config", function()
 		local result = service.describe_elasticsearch_domain_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_elasticsearch_domains", function()
 		local result = service.describe_elasticsearch_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_elasticsearch_instance_type_limits", function()
 		local result = service.describe_elasticsearch_instance_type_limits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_inbound_cross_cluster_search_connections", function()
 		local result = service.describe_inbound_cross_cluster_search_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_outbound_cross_cluster_search_connections", function()
 		local result = service.describe_outbound_cross_cluster_search_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_packages", function()
 		local result = service.describe_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_elasticsearch_instance_offerings", function()
 		local result = service.describe_reserved_elasticsearch_instance_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_elasticsearch_instances", function()
 		local result = service.describe_reserved_elasticsearch_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoints", function()
 		local result = service.describe_vpc_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with dissociate_package", function()
 		local result = service.dissociate_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_compatible_elasticsearch_versions", function()
 		local result = service.get_compatible_elasticsearch_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_package_version_history", function()
 		local result = service.get_package_version_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_upgrade_history", function()
 		local result = service.get_upgrade_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_upgrade_status", function()
 		local result = service.get_upgrade_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domain_names", function()
 		local result = service.list_domain_names()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domains_for_package", function()
 		local result = service.list_domains_for_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_elasticsearch_instance_types", function()
 		local result = service.list_elasticsearch_instance_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_elasticsearch_versions", function()
 		local result = service.list_elasticsearch_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_packages_for_domain", function()
 		local result = service.list_packages_for_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags", function()
 		local result = service.list_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_endpoint_access", function()
 		local result = service.list_vpc_endpoint_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_endpoints", function()
 		local result = service.list_vpc_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_endpoints_for_domain", function()
 		local result = service.list_vpc_endpoints_for_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_reserved_elasticsearch_instance_offering", function()
 		local result = service.purchase_reserved_elasticsearch_instance_offering()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_inbound_cross_cluster_search_connection", function()
 		local result = service.reject_inbound_cross_cluster_search_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_tags", function()
 		local result = service.remove_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_vpc_endpoint_access", function()
 		local result = service.revoke_vpc_endpoint_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_elasticsearch_service_software_update", function()
 		local result = service.start_elasticsearch_service_software_update()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_elasticsearch_domain_config", function()
 		local result = service.update_elasticsearch_domain_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_package", function()
 		local result = service.update_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_vpc_endpoint", function()
 		local result = service.update_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with upgrade_elasticsearch_domain", function()
 		local result = service.upgrade_elasticsearch_domain()
 		assert.is_true(result.success)
 	end)
-
 end)

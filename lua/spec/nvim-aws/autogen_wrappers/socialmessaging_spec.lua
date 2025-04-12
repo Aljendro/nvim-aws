@@ -9,65 +9,52 @@ describe("AWS socialmessaging service testing", function()
 		local result = service.associate_whatsapp_business_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_whatsapp_media_message", function()
 		local result = service.delete_whatsapp_media_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_whatsapp_business_account", function()
 		local result = service.disassociate_whatsapp_business_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_linked_whatsapp_business_account", function()
 		local result = service.get_linked_whatsapp_business_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_linked_whatsapp_business_account_phone_number", function()
 		local result = service.get_linked_whatsapp_business_account_phone_number()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_whatsapp_message_media", function()
 		local result = service.get_whatsapp_message_media()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_linked_whatsapp_business_accounts", function()
 		local result = service.list_linked_whatsapp_business_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with post_whatsapp_message_media", function()
 		local result = service.post_whatsapp_message_media()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_whatsapp_business_account_event_destinations", function()
 		local result = service.put_whatsapp_business_account_event_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_whatsapp_message", function()
 		local result = service.send_whatsapp_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

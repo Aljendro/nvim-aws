@@ -9,595 +9,476 @@ describe("AWS medialive service testing", function()
 		local result = service.accept_input_device_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete", function()
 		local result = service.batch_delete()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_start", function()
 		local result = service.batch_start()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_stop", function()
 		local result = service.batch_stop()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_update_schedule", function()
 		local result = service.batch_update_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_input_device_transfer", function()
 		local result = service.cancel_input_device_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with claim_device", function()
 		local result = service.claim_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_channel", function()
 		local result = service.create_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_channel_placement_group", function()
 		local result = service.create_channel_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cloud_watch_alarm_template", function()
 		local result = service.create_cloud_watch_alarm_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cloud_watch_alarm_template_group", function()
 		local result = service.create_cloud_watch_alarm_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cluster", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_bridge_rule_template", function()
 		local result = service.create_event_bridge_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_bridge_rule_template_group", function()
 		local result = service.create_event_bridge_rule_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_input", function()
 		local result = service.create_input()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_input_security_group", function()
 		local result = service.create_input_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_multiplex", function()
 		local result = service.create_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_multiplex_program", function()
 		local result = service.create_multiplex_program()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network", function()
 		local result = service.create_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_node", function()
 		local result = service.create_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_node_registration_script", function()
 		local result = service.create_node_registration_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_partner_input", function()
 		local result = service.create_partner_input()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_sdi_source", function()
 		local result = service.create_sdi_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_signal_map", function()
 		local result = service.create_signal_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_tags", function()
 		local result = service.create_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_channel", function()
 		local result = service.delete_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_channel_placement_group", function()
 		local result = service.delete_channel_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cloud_watch_alarm_template", function()
 		local result = service.delete_cloud_watch_alarm_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cloud_watch_alarm_template_group", function()
 		local result = service.delete_cloud_watch_alarm_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_bridge_rule_template", function()
 		local result = service.delete_event_bridge_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_bridge_rule_template_group", function()
 		local result = service.delete_event_bridge_rule_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_input", function()
 		local result = service.delete_input()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_input_security_group", function()
 		local result = service.delete_input_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_multiplex", function()
 		local result = service.delete_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_multiplex_program", function()
 		local result = service.delete_multiplex_program()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network", function()
 		local result = service.delete_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_node", function()
 		local result = service.delete_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_reservation", function()
 		local result = service.delete_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_schedule", function()
 		local result = service.delete_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_sdi_source", function()
 		local result = service.delete_sdi_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_signal_map", function()
 		local result = service.delete_signal_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tags", function()
 		local result = service.delete_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_configuration", function()
 		local result = service.describe_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_channel", function()
 		local result = service.describe_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_channel_placement_group", function()
 		local result = service.describe_channel_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cluster", function()
 		local result = service.describe_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_input", function()
 		local result = service.describe_input()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_input_device", function()
 		local result = service.describe_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_input_security_group", function()
 		local result = service.describe_input_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_multiplex", function()
 		local result = service.describe_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_multiplex_program", function()
 		local result = service.describe_multiplex_program()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network", function()
 		local result = service.describe_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_node", function()
 		local result = service.describe_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_offering", function()
 		local result = service.describe_offering()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reservation", function()
 		local result = service.describe_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_schedule", function()
 		local result = service.describe_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_sdi_source", function()
 		local result = service.describe_sdi_source()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_thumbnails", function()
 		local result = service.describe_thumbnails()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cloud_watch_alarm_template", function()
 		local result = service.get_cloud_watch_alarm_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cloud_watch_alarm_template_group", function()
 		local result = service.get_cloud_watch_alarm_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_bridge_rule_template", function()
 		local result = service.get_event_bridge_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_bridge_rule_template_group", function()
 		local result = service.get_event_bridge_rule_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_signal_map", function()
 		local result = service.get_signal_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_channel_placement_groups", function()
 		local result = service.list_channel_placement_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_channels", function()
 		local result = service.list_channels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cloud_watch_alarm_template_groups", function()
 		local result = service.list_cloud_watch_alarm_template_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cloud_watch_alarm_templates", function()
 		local result = service.list_cloud_watch_alarm_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_clusters", function()
 		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_bridge_rule_template_groups", function()
 		local result = service.list_event_bridge_rule_template_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_bridge_rule_templates", function()
 		local result = service.list_event_bridge_rule_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_input_device_transfers", function()
 		local result = service.list_input_device_transfers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_input_devices", function()
 		local result = service.list_input_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_input_security_groups", function()
 		local result = service.list_input_security_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inputs", function()
 		local result = service.list_inputs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_multiplex_programs", function()
 		local result = service.list_multiplex_programs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_multiplexes", function()
 		local result = service.list_multiplexes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_networks", function()
 		local result = service.list_networks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_nodes", function()
 		local result = service.list_nodes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_offerings", function()
 		local result = service.list_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_reservations", function()
 		local result = service.list_reservations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_sdi_sources", function()
 		local result = service.list_sdi_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_signal_maps", function()
 		local result = service.list_signal_maps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_versions", function()
 		local result = service.list_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_offering", function()
 		local result = service.purchase_offering()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_input_device", function()
 		local result = service.reboot_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_input_device_transfer", function()
 		local result = service.reject_input_device_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restart_channel_pipelines", function()
 		local result = service.restart_channel_pipelines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_channel", function()
 		local result = service.start_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_delete_monitor_deployment", function()
 		local result = service.start_delete_monitor_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_input_device", function()
 		local result = service.start_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_input_device_maintenance_window", function()
 		local result = service.start_input_device_maintenance_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_monitor_deployment", function()
 		local result = service.start_monitor_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_multiplex", function()
 		local result = service.start_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_update_signal_map", function()
 		local result = service.start_update_signal_map()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_channel", function()
 		local result = service.stop_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_input_device", function()
 		local result = service.stop_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_multiplex", function()
 		local result = service.stop_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with transfer_input_device", function()
 		local result = service.transfer_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account_configuration", function()
 		local result = service.update_account_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_channel", function()
 		local result = service.update_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_channel_class", function()
 		local result = service.update_channel_class()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_channel_placement_group", function()
 		local result = service.update_channel_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cloud_watch_alarm_template", function()
 		local result = service.update_cloud_watch_alarm_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cloud_watch_alarm_template_group", function()
 		local result = service.update_cloud_watch_alarm_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_bridge_rule_template", function()
 		local result = service.update_event_bridge_rule_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_bridge_rule_template_group", function()
 		local result = service.update_event_bridge_rule_template_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_input", function()
 		local result = service.update_input()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_input_device", function()
 		local result = service.update_input_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_input_security_group", function()
 		local result = service.update_input_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_multiplex", function()
 		local result = service.update_multiplex()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_multiplex_program", function()
 		local result = service.update_multiplex_program()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_network", function()
 		local result = service.update_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_node", function()
 		local result = service.update_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_node_state", function()
 		local result = service.update_node_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_reservation", function()
 		local result = service.update_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_sdi_source", function()
 		local result = service.update_sdi_source()
 		assert.is_true(result.success)
 	end)
-
 end)

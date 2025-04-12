@@ -9,5 +9,4 @@ describe("AWS freetier service testing", function()
 		local result = service.get_free_tier_usage()
 		assert.is_true(result.success)
 	end)
-
 end)

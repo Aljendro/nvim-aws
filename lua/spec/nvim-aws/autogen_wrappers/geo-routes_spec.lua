@@ -9,25 +9,20 @@ describe("AWS geo-routes service testing", function()
 		local result = service.calculate_isolines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with calculate_route_matrix", function()
 		local result = service.calculate_route_matrix()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with calculate_routes", function()
 		local result = service.calculate_routes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with optimize_waypoints", function()
 		local result = service.optimize_waypoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with snap_to_roads", function()
 		local result = service.snap_to_roads()
 		assert.is_true(result.success)
 	end)
-
 end)

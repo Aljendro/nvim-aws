@@ -9,20 +9,16 @@ describe("AWS dynamodbstreams service testing", function()
 		local result = service.describe_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_records", function()
 		local result = service.get_records()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_shard_iterator", function()
 		local result = service.get_shard_iterator()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_streams", function()
 		local result = service.list_streams()
 		assert.is_true(result.success)
 	end)
-
 end)

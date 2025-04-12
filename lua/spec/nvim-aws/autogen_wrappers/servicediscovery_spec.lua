@@ -9,150 +9,120 @@ describe("AWS servicediscovery service testing", function()
 		local result = service.create_http_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_private_dns_namespace", function()
 		local result = service.create_private_dns_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_public_dns_namespace", function()
 		local result = service.create_public_dns_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_service", function()
 		local result = service.create_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_namespace", function()
 		local result = service.delete_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_service", function()
 		local result = service.delete_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_service_attributes", function()
 		local result = service.delete_service_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_instance", function()
 		local result = service.deregister_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with discover_instances", function()
 		local result = service.discover_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with discover_instances_revision", function()
 		local result = service.discover_instances_revision()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance", function()
 		local result = service.get_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instances_health_status", function()
 		local result = service.get_instances_health_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_namespace", function()
 		local result = service.get_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_operation", function()
 		local result = service.get_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_service", function()
 		local result = service.get_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_service_attributes", function()
 		local result = service.get_service_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_instances", function()
 		local result = service.list_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_namespaces", function()
 		local result = service.list_namespaces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_operations", function()
 		local result = service.list_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_services", function()
 		local result = service.list_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_instance", function()
 		local result = service.register_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_http_namespace", function()
 		local result = service.update_http_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_instance_custom_health_status", function()
 		local result = service.update_instance_custom_health_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_private_dns_namespace", function()
 		local result = service.update_private_dns_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_public_dns_namespace", function()
 		local result = service.update_public_dns_namespace()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service", function()
 		local result = service.update_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service_attributes", function()
 		local result = service.update_service_attributes()
 		assert.is_true(result.success)
 	end)
-
 end)

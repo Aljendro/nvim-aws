@@ -9,325 +9,260 @@ describe("AWS lambda service testing", function()
 		local result = service.add_layer_version_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_permission", function()
 		local result = service.add_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_alias", function()
 		local result = service.create_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_code_signing_config", function()
 		local result = service.create_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_source_mapping", function()
 		local result = service.create_event_source_mapping()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_function", function()
 		local result = service.create_function()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_function_url_config", function()
 		local result = service.create_function_url_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_alias", function()
 		local result = service.delete_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_code_signing_config", function()
 		local result = service.delete_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_source_mapping", function()
 		local result = service.delete_event_source_mapping()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_function", function()
 		local result = service.delete_function()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_function_code_signing_config", function()
 		local result = service.delete_function_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_function_concurrency", function()
 		local result = service.delete_function_concurrency()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_function_event_invoke_config", function()
 		local result = service.delete_function_event_invoke_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_function_url_config", function()
 		local result = service.delete_function_url_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_layer_version", function()
 		local result = service.delete_layer_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_provisioned_concurrency_config", function()
 		local result = service.delete_provisioned_concurrency_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_settings", function()
 		local result = service.get_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_alias", function()
 		local result = service.get_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_code_signing_config", function()
 		local result = service.get_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_source_mapping", function()
 		local result = service.get_event_source_mapping()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function", function()
 		local result = service.get_function()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_code_signing_config", function()
 		local result = service.get_function_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_concurrency", function()
 		local result = service.get_function_concurrency()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_configuration", function()
 		local result = service.get_function_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_event_invoke_config", function()
 		local result = service.get_function_event_invoke_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_recursion_config", function()
 		local result = service.get_function_recursion_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_function_url_config", function()
 		local result = service.get_function_url_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_layer_version", function()
 		local result = service.get_layer_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_layer_version_by_arn", function()
 		local result = service.get_layer_version_by_arn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_layer_version_policy", function()
 		local result = service.get_layer_version_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_policy", function()
 		local result = service.get_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_provisioned_concurrency_config", function()
 		local result = service.get_provisioned_concurrency_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_runtime_management_config", function()
 		local result = service.get_runtime_management_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_aliases", function()
 		local result = service.list_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_code_signing_configs", function()
 		local result = service.list_code_signing_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_source_mappings", function()
 		local result = service.list_event_source_mappings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_function_event_invoke_configs", function()
 		local result = service.list_function_event_invoke_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_function_url_configs", function()
 		local result = service.list_function_url_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_functions", function()
 		local result = service.list_functions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_functions_by_code_signing_config", function()
 		local result = service.list_functions_by_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_layer_versions", function()
 		local result = service.list_layer_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_layers", function()
 		local result = service.list_layers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_provisioned_concurrency_configs", function()
 		local result = service.list_provisioned_concurrency_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags", function()
 		local result = service.list_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_versions_by_function", function()
 		local result = service.list_versions_by_function()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish_layer_version", function()
 		local result = service.publish_layer_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish_version", function()
 		local result = service.publish_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_function_code_signing_config", function()
 		local result = service.put_function_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_function_concurrency", function()
 		local result = service.put_function_concurrency()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_function_event_invoke_config", function()
 		local result = service.put_function_event_invoke_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_function_recursion_config", function()
 		local result = service.put_function_recursion_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_provisioned_concurrency_config", function()
 		local result = service.put_provisioned_concurrency_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_runtime_management_config", function()
 		local result = service.put_runtime_management_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_layer_version_permission", function()
 		local result = service.remove_layer_version_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_permission", function()
 		local result = service.remove_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_alias", function()
 		local result = service.update_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_code_signing_config", function()
 		local result = service.update_code_signing_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_source_mapping", function()
 		local result = service.update_event_source_mapping()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_function_code", function()
 		local result = service.update_function_code()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_function_configuration", function()
 		local result = service.update_function_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_function_event_invoke_config", function()
 		local result = service.update_function_event_invoke_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_function_url_config", function()
 		local result = service.update_function_url_config()
 		assert.is_true(result.success)
 	end)
-
 end)

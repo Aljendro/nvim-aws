@@ -9,355 +9,284 @@ describe("AWS guardduty service testing", function()
 		local result = service.accept_administrator_invitation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with archive_findings", function()
 		local result = service.archive_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_detector", function()
 		local result = service.create_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_filter", function()
 		local result = service.create_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ip_set", function()
 		local result = service.create_ip_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_malware_protection_plan", function()
 		local result = service.create_malware_protection_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_members", function()
 		local result = service.create_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_publishing_destination", function()
 		local result = service.create_publishing_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_sample_findings", function()
 		local result = service.create_sample_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_threat_intel_set", function()
 		local result = service.create_threat_intel_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with decline_invitations", function()
 		local result = service.decline_invitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_detector", function()
 		local result = service.delete_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_filter", function()
 		local result = service.delete_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_invitations", function()
 		local result = service.delete_invitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ip_set", function()
 		local result = service.delete_ip_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_malware_protection_plan", function()
 		local result = service.delete_malware_protection_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_members", function()
 		local result = service.delete_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_publishing_destination", function()
 		local result = service.delete_publishing_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_threat_intel_set", function()
 		local result = service.delete_threat_intel_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_malware_scans", function()
 		local result = service.describe_malware_scans()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_organization_configuration", function()
 		local result = service.describe_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_publishing_destination", function()
 		local result = service.describe_publishing_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_organization_admin_account", function()
 		local result = service.disable_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_from_administrator_account", function()
 		local result = service.disassociate_from_administrator_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_members", function()
 		local result = service.disassociate_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_organization_admin_account", function()
 		local result = service.enable_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_administrator_account", function()
 		local result = service.get_administrator_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_coverage_statistics", function()
 		local result = service.get_coverage_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_detector", function()
 		local result = service.get_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_filter", function()
 		local result = service.get_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_findings", function()
 		local result = service.get_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_findings_statistics", function()
 		local result = service.get_findings_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_invitations_count", function()
 		local result = service.get_invitations_count()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ip_set", function()
 		local result = service.get_ip_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_malware_protection_plan", function()
 		local result = service.get_malware_protection_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_malware_scan_settings", function()
 		local result = service.get_malware_scan_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_member_detectors", function()
 		local result = service.get_member_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_members", function()
 		local result = service.get_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_organization_statistics", function()
 		local result = service.get_organization_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_remaining_free_trial_days", function()
 		local result = service.get_remaining_free_trial_days()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_threat_intel_set", function()
 		local result = service.get_threat_intel_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_usage_statistics", function()
 		local result = service.get_usage_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with invite_members", function()
 		local result = service.invite_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_coverage", function()
 		local result = service.list_coverage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_detectors", function()
 		local result = service.list_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_filters", function()
 		local result = service.list_filters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_findings", function()
 		local result = service.list_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_invitations", function()
 		local result = service.list_invitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_ip_sets", function()
 		local result = service.list_ip_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_malware_protection_plans", function()
 		local result = service.list_malware_protection_plans()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_members", function()
 		local result = service.list_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_organization_admin_accounts", function()
 		local result = service.list_organization_admin_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_publishing_destinations", function()
 		local result = service.list_publishing_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_threat_intel_sets", function()
 		local result = service.list_threat_intel_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_malware_scan", function()
 		local result = service.start_malware_scan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_monitoring_members", function()
 		local result = service.start_monitoring_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_monitoring_members", function()
 		local result = service.stop_monitoring_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unarchive_findings", function()
 		local result = service.unarchive_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_detector", function()
 		local result = service.update_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_filter", function()
 		local result = service.update_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_findings_feedback", function()
 		local result = service.update_findings_feedback()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_ip_set", function()
 		local result = service.update_ip_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_malware_protection_plan", function()
 		local result = service.update_malware_protection_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_malware_scan_settings", function()
 		local result = service.update_malware_scan_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_member_detectors", function()
 		local result = service.update_member_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_organization_configuration", function()
 		local result = service.update_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_publishing_destination", function()
 		local result = service.update_publishing_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_threat_intel_set", function()
 		local result = service.update_threat_intel_set()
 		assert.is_true(result.success)
 	end)
-
 end)

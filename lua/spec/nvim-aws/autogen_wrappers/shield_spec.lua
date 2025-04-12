@@ -9,175 +9,140 @@ describe("AWS shield service testing", function()
 		local result = service.associate_drt_log_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_drt_role", function()
 		local result = service.associate_drt_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_health_check", function()
 		local result = service.associate_health_check()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_proactive_engagement_details", function()
 		local result = service.associate_proactive_engagement_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_protection", function()
 		local result = service.create_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_protection_group", function()
 		local result = service.create_protection_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subscription", function()
 		local result = service.create_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_protection", function()
 		local result = service.delete_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_protection_group", function()
 		local result = service.delete_protection_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_attack", function()
 		local result = service.describe_attack()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_attack_statistics", function()
 		local result = service.describe_attack_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_drt_access", function()
 		local result = service.describe_drt_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_emergency_contact_settings", function()
 		local result = service.describe_emergency_contact_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_protection", function()
 		local result = service.describe_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_protection_group", function()
 		local result = service.describe_protection_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subscription", function()
 		local result = service.describe_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_application_layer_automatic_response", function()
 		local result = service.disable_application_layer_automatic_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_proactive_engagement", function()
 		local result = service.disable_proactive_engagement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_drt_log_bucket", function()
 		local result = service.disassociate_drt_log_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_drt_role", function()
 		local result = service.disassociate_drt_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_health_check", function()
 		local result = service.disassociate_health_check()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_application_layer_automatic_response", function()
 		local result = service.enable_application_layer_automatic_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_proactive_engagement", function()
 		local result = service.enable_proactive_engagement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_subscription_state", function()
 		local result = service.get_subscription_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_attacks", function()
 		local result = service.list_attacks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_protection_groups", function()
 		local result = service.list_protection_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_protections", function()
 		local result = service.list_protections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resources_in_protection_group", function()
 		local result = service.list_resources_in_protection_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application_layer_automatic_response", function()
 		local result = service.update_application_layer_automatic_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_emergency_contact_settings", function()
 		local result = service.update_emergency_contact_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_protection_group", function()
 		local result = service.update_protection_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subscription", function()
 		local result = service.update_subscription()
 		assert.is_true(result.success)
 	end)
-
 end)

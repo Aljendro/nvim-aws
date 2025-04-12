@@ -9,145 +9,116 @@ describe("AWS voice-id service testing", function()
 		local result = service.associate_fraudster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain", function()
 		local result = service.create_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_watchlist", function()
 		local result = service.create_watchlist()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain", function()
 		local result = service.delete_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fraudster", function()
 		local result = service.delete_fraudster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_speaker", function()
 		local result = service.delete_speaker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_watchlist", function()
 		local result = service.delete_watchlist()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain", function()
 		local result = service.describe_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fraudster", function()
 		local result = service.describe_fraudster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fraudster_registration_job", function()
 		local result = service.describe_fraudster_registration_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_speaker", function()
 		local result = service.describe_speaker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_speaker_enrollment_job", function()
 		local result = service.describe_speaker_enrollment_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_watchlist", function()
 		local result = service.describe_watchlist()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_fraudster", function()
 		local result = service.disassociate_fraudster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with evaluate_session", function()
 		local result = service.evaluate_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domains", function()
 		local result = service.list_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fraudster_registration_jobs", function()
 		local result = service.list_fraudster_registration_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fraudsters", function()
 		local result = service.list_fraudsters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_speaker_enrollment_jobs", function()
 		local result = service.list_speaker_enrollment_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_speakers", function()
 		local result = service.list_speakers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_watchlists", function()
 		local result = service.list_watchlists()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with opt_out_speaker", function()
 		local result = service.opt_out_speaker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_fraudster_registration_job", function()
 		local result = service.start_fraudster_registration_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_speaker_enrollment_job", function()
 		local result = service.start_speaker_enrollment_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_domain", function()
 		local result = service.update_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_watchlist", function()
 		local result = service.update_watchlist()
 		assert.is_true(result.success)
 	end)
-
 end)

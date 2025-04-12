@@ -9,330 +9,264 @@ describe("AWS clouddirectory service testing", function()
 		local result = service.add_facet_to_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with apply_schema", function()
 		local result = service.apply_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_object", function()
 		local result = service.attach_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_policy", function()
 		local result = service.attach_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_to_index", function()
 		local result = service.attach_to_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_typed_link", function()
 		local result = service.attach_typed_link()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_read", function()
 		local result = service.batch_read()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_write", function()
 		local result = service.batch_write()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_directory", function()
 		local result = service.create_directory()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_facet", function()
 		local result = service.create_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_index", function()
 		local result = service.create_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_object", function()
 		local result = service.create_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_schema", function()
 		local result = service.create_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_typed_link_facet", function()
 		local result = service.create_typed_link_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_directory", function()
 		local result = service.delete_directory()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_facet", function()
 		local result = service.delete_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_object", function()
 		local result = service.delete_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_schema", function()
 		local result = service.delete_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_typed_link_facet", function()
 		local result = service.delete_typed_link_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_from_index", function()
 		local result = service.detach_from_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_object", function()
 		local result = service.detach_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_policy", function()
 		local result = service.detach_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_typed_link", function()
 		local result = service.detach_typed_link()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_directory", function()
 		local result = service.disable_directory()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_directory", function()
 		local result = service.enable_directory()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_applied_schema_version", function()
 		local result = service.get_applied_schema_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_directory", function()
 		local result = service.get_directory()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_facet", function()
 		local result = service.get_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_link_attributes", function()
 		local result = service.get_link_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_object_attributes", function()
 		local result = service.get_object_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_object_information", function()
 		local result = service.get_object_information()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_schema_as_json", function()
 		local result = service.get_schema_as_json()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_typed_link_facet_information", function()
 		local result = service.get_typed_link_facet_information()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_applied_schema_arns", function()
 		local result = service.list_applied_schema_arns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_attached_indices", function()
 		local result = service.list_attached_indices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_development_schema_arns", function()
 		local result = service.list_development_schema_arns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_directories", function()
 		local result = service.list_directories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_facet_attributes", function()
 		local result = service.list_facet_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_facet_names", function()
 		local result = service.list_facet_names()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_incoming_typed_links", function()
 		local result = service.list_incoming_typed_links()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_index", function()
 		local result = service.list_index()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_schema_arns", function()
 		local result = service.list_managed_schema_arns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_object_attributes", function()
 		local result = service.list_object_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_object_children", function()
 		local result = service.list_object_children()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_object_parent_paths", function()
 		local result = service.list_object_parent_paths()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_object_parents", function()
 		local result = service.list_object_parents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_object_policies", function()
 		local result = service.list_object_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_outgoing_typed_links", function()
 		local result = service.list_outgoing_typed_links()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_policy_attachments", function()
 		local result = service.list_policy_attachments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_published_schema_arns", function()
 		local result = service.list_published_schema_arns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_typed_link_facet_attributes", function()
 		local result = service.list_typed_link_facet_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_typed_link_facet_names", function()
 		local result = service.list_typed_link_facet_names()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with lookup_policy", function()
 		local result = service.lookup_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish_schema", function()
 		local result = service.publish_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_schema_from_json", function()
 		local result = service.put_schema_from_json()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_facet_from_object", function()
 		local result = service.remove_facet_from_object()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_facet", function()
 		local result = service.update_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_link_attributes", function()
 		local result = service.update_link_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_object_attributes", function()
 		local result = service.update_object_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_schema", function()
 		local result = service.update_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_typed_link_facet", function()
 		local result = service.update_typed_link_facet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with upgrade_applied_schema", function()
 		local result = service.upgrade_applied_schema()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with upgrade_published_schema", function()
 		local result = service.upgrade_published_schema()
 		assert.is_true(result.success)
 	end)
-
 end)

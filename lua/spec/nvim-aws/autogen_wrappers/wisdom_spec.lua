@@ -9,195 +9,156 @@ describe("AWS wisdom service testing", function()
 		local result = service.create_assistant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_assistant_association", function()
 		local result = service.create_assistant_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_content", function()
 		local result = service.create_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_knowledge_base", function()
 		local result = service.create_knowledge_base()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_quick_response", function()
 		local result = service.create_quick_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_session", function()
 		local result = service.create_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_assistant", function()
 		local result = service.delete_assistant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_assistant_association", function()
 		local result = service.delete_assistant_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_content", function()
 		local result = service.delete_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_import_job", function()
 		local result = service.delete_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_knowledge_base", function()
 		local result = service.delete_knowledge_base()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_quick_response", function()
 		local result = service.delete_quick_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_assistant", function()
 		local result = service.get_assistant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_assistant_association", function()
 		local result = service.get_assistant_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_content", function()
 		local result = service.get_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_content_summary", function()
 		local result = service.get_content_summary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_import_job", function()
 		local result = service.get_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_knowledge_base", function()
 		local result = service.get_knowledge_base()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_quick_response", function()
 		local result = service.get_quick_response()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_session", function()
 		local result = service.get_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assistant_associations", function()
 		local result = service.list_assistant_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assistants", function()
 		local result = service.list_assistants()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_contents", function()
 		local result = service.list_contents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_import_jobs", function()
 		local result = service.list_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_knowledge_bases", function()
 		local result = service.list_knowledge_bases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_quick_responses", function()
 		local result = service.list_quick_responses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with notify_recommendations_received", function()
 		local result = service.notify_recommendations_received()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_knowledge_base_template_uri", function()
 		local result = service.remove_knowledge_base_template_uri()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_content", function()
 		local result = service.search_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_quick_responses", function()
 		local result = service.search_quick_responses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_sessions", function()
 		local result = service.search_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_content_upload", function()
 		local result = service.start_content_upload()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_import_job", function()
 		local result = service.start_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_content", function()
 		local result = service.update_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_knowledge_base_template_uri", function()
 		local result = service.update_knowledge_base_template_uri()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_quick_response", function()
 		local result = service.update_quick_response()
 		assert.is_true(result.success)
 	end)
-
 end)

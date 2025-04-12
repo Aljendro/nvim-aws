@@ -9,1790 +9,1432 @@ describe("AWS sagemaker service testing", function()
 		local result = service.add_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_tags", function()
 		local result = service.add_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_trial_component", function()
 		local result = service.associate_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_delete_cluster_nodes", function()
 		local result = service.batch_delete_cluster_nodes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_describe_model_package", function()
 		local result = service.batch_describe_model_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_action", function()
 		local result = service.create_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_algorithm", function()
 		local result = service.create_algorithm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app", function()
 		local result = service.create_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_app_image_config", function()
 		local result = service.create_app_image_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_artifact", function()
 		local result = service.create_artifact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_auto_ml_job", function()
 		local result = service.create_auto_ml_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_auto_ml_job_v2", function()
 		local result = service.create_auto_ml_job_v2()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cluster", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cluster_scheduler_config", function()
 		local result = service.create_cluster_scheduler_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_code_repository", function()
 		local result = service.create_code_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_compilation_job", function()
 		local result = service.create_compilation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_compute_quota", function()
 		local result = service.create_compute_quota()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_context", function()
 		local result = service.create_context()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_quality_job_definition", function()
 		local result = service.create_data_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_device_fleet", function()
 		local result = service.create_device_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain", function()
 		local result = service.create_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_edge_deployment_plan", function()
 		local result = service.create_edge_deployment_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_edge_deployment_stage", function()
 		local result = service.create_edge_deployment_stage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_edge_packaging_job", function()
 		local result = service.create_edge_packaging_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_endpoint", function()
 		local result = service.create_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_endpoint_config", function()
 		local result = service.create_endpoint_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_experiment", function()
 		local result = service.create_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_feature_group", function()
 		local result = service.create_feature_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_flow_definition", function()
 		local result = service.create_flow_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hub", function()
 		local result = service.create_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hub_content_reference", function()
 		local result = service.create_hub_content_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_human_task_ui", function()
 		local result = service.create_human_task_ui()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hyper_parameter_tuning_job", function()
 		local result = service.create_hyper_parameter_tuning_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_image", function()
 		local result = service.create_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_image_version", function()
 		local result = service.create_image_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_inference_component", function()
 		local result = service.create_inference_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_inference_experiment", function()
 		local result = service.create_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_inference_recommendations_job", function()
 		local result = service.create_inference_recommendations_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_labeling_job", function()
 		local result = service.create_labeling_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_mlflow_tracking_server", function()
 		local result = service.create_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model", function()
 		local result = service.create_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_bias_job_definition", function()
 		local result = service.create_model_bias_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_card", function()
 		local result = service.create_model_card()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_card_export_job", function()
 		local result = service.create_model_card_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_explainability_job_definition", function()
 		local result = service.create_model_explainability_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_package", function()
 		local result = service.create_model_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_package_group", function()
 		local result = service.create_model_package_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_quality_job_definition", function()
 		local result = service.create_model_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_monitoring_schedule", function()
 		local result = service.create_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_notebook_instance", function()
 		local result = service.create_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_notebook_instance_lifecycle_config", function()
 		local result = service.create_notebook_instance_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_optimization_job", function()
 		local result = service.create_optimization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_partner_app", function()
 		local result = service.create_partner_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_partner_app_presigned_url", function()
 		local result = service.create_partner_app_presigned_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_pipeline", function()
 		local result = service.create_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_presigned_domain_url", function()
 		local result = service.create_presigned_domain_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_presigned_mlflow_tracking_server_url", function()
 		local result = service.create_presigned_mlflow_tracking_server_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_presigned_notebook_instance_url", function()
 		local result = service.create_presigned_notebook_instance_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_processing_job", function()
 		local result = service.create_processing_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_project", function()
 		local result = service.create_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_space", function()
 		local result = service.create_space()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_studio_lifecycle_config", function()
 		local result = service.create_studio_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_training_job", function()
 		local result = service.create_training_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_training_plan", function()
 		local result = service.create_training_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transform_job", function()
 		local result = service.create_transform_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_trial", function()
 		local result = service.create_trial()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_trial_component", function()
 		local result = service.create_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_user_profile", function()
 		local result = service.create_user_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_workforce", function()
 		local result = service.create_workforce()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_workteam", function()
 		local result = service.create_workteam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_action", function()
 		local result = service.delete_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_algorithm", function()
 		local result = service.delete_algorithm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app", function()
 		local result = service.delete_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app_image_config", function()
 		local result = service.delete_app_image_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_artifact", function()
 		local result = service.delete_artifact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_association", function()
 		local result = service.delete_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster_scheduler_config", function()
 		local result = service.delete_cluster_scheduler_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_code_repository", function()
 		local result = service.delete_code_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_compilation_job", function()
 		local result = service.delete_compilation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_compute_quota", function()
 		local result = service.delete_compute_quota()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_context", function()
 		local result = service.delete_context()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_quality_job_definition", function()
 		local result = service.delete_data_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_device_fleet", function()
 		local result = service.delete_device_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain", function()
 		local result = service.delete_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_edge_deployment_plan", function()
 		local result = service.delete_edge_deployment_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_edge_deployment_stage", function()
 		local result = service.delete_edge_deployment_stage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_endpoint", function()
 		local result = service.delete_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_endpoint_config", function()
 		local result = service.delete_endpoint_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_experiment", function()
 		local result = service.delete_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_feature_group", function()
 		local result = service.delete_feature_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_flow_definition", function()
 		local result = service.delete_flow_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_hub", function()
 		local result = service.delete_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_hub_content", function()
 		local result = service.delete_hub_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_hub_content_reference", function()
 		local result = service.delete_hub_content_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_human_task_ui", function()
 		local result = service.delete_human_task_ui()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_hyper_parameter_tuning_job", function()
 		local result = service.delete_hyper_parameter_tuning_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_image", function()
 		local result = service.delete_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_image_version", function()
 		local result = service.delete_image_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_inference_component", function()
 		local result = service.delete_inference_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_inference_experiment", function()
 		local result = service.delete_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_mlflow_tracking_server", function()
 		local result = service.delete_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model", function()
 		local result = service.delete_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_bias_job_definition", function()
 		local result = service.delete_model_bias_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_card", function()
 		local result = service.delete_model_card()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_explainability_job_definition", function()
 		local result = service.delete_model_explainability_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_package", function()
 		local result = service.delete_model_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_package_group", function()
 		local result = service.delete_model_package_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_package_group_policy", function()
 		local result = service.delete_model_package_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_quality_job_definition", function()
 		local result = service.delete_model_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_monitoring_schedule", function()
 		local result = service.delete_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_notebook_instance", function()
 		local result = service.delete_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_notebook_instance_lifecycle_config", function()
 		local result = service.delete_notebook_instance_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_optimization_job", function()
 		local result = service.delete_optimization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_partner_app", function()
 		local result = service.delete_partner_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_pipeline", function()
 		local result = service.delete_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_project", function()
 		local result = service.delete_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_space", function()
 		local result = service.delete_space()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_studio_lifecycle_config", function()
 		local result = service.delete_studio_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tags", function()
 		local result = service.delete_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_trial", function()
 		local result = service.delete_trial()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_trial_component", function()
 		local result = service.delete_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_user_profile", function()
 		local result = service.delete_user_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_workforce", function()
 		local result = service.delete_workforce()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_workteam", function()
 		local result = service.delete_workteam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_devices", function()
 		local result = service.deregister_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_action", function()
 		local result = service.describe_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_algorithm", function()
 		local result = service.describe_algorithm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app", function()
 		local result = service.describe_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app_image_config", function()
 		local result = service.describe_app_image_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_artifact", function()
 		local result = service.describe_artifact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_auto_ml_job", function()
 		local result = service.describe_auto_ml_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_auto_ml_job_v2", function()
 		local result = service.describe_auto_ml_job_v2()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cluster", function()
 		local result = service.describe_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cluster_node", function()
 		local result = service.describe_cluster_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cluster_scheduler_config", function()
 		local result = service.describe_cluster_scheduler_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_code_repository", function()
 		local result = service.describe_code_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_compilation_job", function()
 		local result = service.describe_compilation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_compute_quota", function()
 		local result = service.describe_compute_quota()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_context", function()
 		local result = service.describe_context()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_data_quality_job_definition", function()
 		local result = service.describe_data_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_device", function()
 		local result = service.describe_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_device_fleet", function()
 		local result = service.describe_device_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain", function()
 		local result = service.describe_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_edge_deployment_plan", function()
 		local result = service.describe_edge_deployment_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_edge_packaging_job", function()
 		local result = service.describe_edge_packaging_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoint", function()
 		local result = service.describe_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_endpoint_config", function()
 		local result = service.describe_endpoint_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_experiment", function()
 		local result = service.describe_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_feature_group", function()
 		local result = service.describe_feature_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_feature_metadata", function()
 		local result = service.describe_feature_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_flow_definition", function()
 		local result = service.describe_flow_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_hub", function()
 		local result = service.describe_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_hub_content", function()
 		local result = service.describe_hub_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_human_task_ui", function()
 		local result = service.describe_human_task_ui()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_hyper_parameter_tuning_job", function()
 		local result = service.describe_hyper_parameter_tuning_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_image", function()
 		local result = service.describe_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_image_version", function()
 		local result = service.describe_image_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_inference_component", function()
 		local result = service.describe_inference_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_inference_experiment", function()
 		local result = service.describe_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_inference_recommendations_job", function()
 		local result = service.describe_inference_recommendations_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_labeling_job", function()
 		local result = service.describe_labeling_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_lineage_group", function()
 		local result = service.describe_lineage_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_mlflow_tracking_server", function()
 		local result = service.describe_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model", function()
 		local result = service.describe_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_bias_job_definition", function()
 		local result = service.describe_model_bias_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_card", function()
 		local result = service.describe_model_card()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_card_export_job", function()
 		local result = service.describe_model_card_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_explainability_job_definition", function()
 		local result = service.describe_model_explainability_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_package", function()
 		local result = service.describe_model_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_package_group", function()
 		local result = service.describe_model_package_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_model_quality_job_definition", function()
 		local result = service.describe_model_quality_job_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_monitoring_schedule", function()
 		local result = service.describe_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_notebook_instance", function()
 		local result = service.describe_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_notebook_instance_lifecycle_config", function()
 		local result = service.describe_notebook_instance_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_optimization_job", function()
 		local result = service.describe_optimization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_partner_app", function()
 		local result = service.describe_partner_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pipeline", function()
 		local result = service.describe_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pipeline_definition_for_execution", function()
 		local result = service.describe_pipeline_definition_for_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_pipeline_execution", function()
 		local result = service.describe_pipeline_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_processing_job", function()
 		local result = service.describe_processing_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_project", function()
 		local result = service.describe_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_space", function()
 		local result = service.describe_space()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_studio_lifecycle_config", function()
 		local result = service.describe_studio_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subscribed_workteam", function()
 		local result = service.describe_subscribed_workteam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_training_job", function()
 		local result = service.describe_training_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_training_plan", function()
 		local result = service.describe_training_plan()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transform_job", function()
 		local result = service.describe_transform_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trial", function()
 		local result = service.describe_trial()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trial_component", function()
 		local result = service.describe_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_user_profile", function()
 		local result = service.describe_user_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_workforce", function()
 		local result = service.describe_workforce()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_workteam", function()
 		local result = service.describe_workteam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_sagemaker_servicecatalog_portfolio", function()
 		local result = service.disable_sagemaker_servicecatalog_portfolio()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_trial_component", function()
 		local result = service.disassociate_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_sagemaker_servicecatalog_portfolio", function()
 		local result = service.enable_sagemaker_servicecatalog_portfolio()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_device_fleet_report", function()
 		local result = service.get_device_fleet_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lineage_group_policy", function()
 		local result = service.get_lineage_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_package_group_policy", function()
 		local result = service.get_model_package_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_sagemaker_servicecatalog_portfolio_status", function()
 		local result = service.get_sagemaker_servicecatalog_portfolio_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_scaling_configuration_recommendation", function()
 		local result = service.get_scaling_configuration_recommendation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_search_suggestions", function()
 		local result = service.get_search_suggestions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_hub_content", function()
 		local result = service.import_hub_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_actions", function()
 		local result = service.list_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_algorithms", function()
 		local result = service.list_algorithms()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_aliases", function()
 		local result = service.list_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_app_image_configs", function()
 		local result = service.list_app_image_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_apps", function()
 		local result = service.list_apps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_artifacts", function()
 		local result = service.list_artifacts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_associations", function()
 		local result = service.list_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_auto_ml_jobs", function()
 		local result = service.list_auto_ml_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_candidates_for_auto_ml_job", function()
 		local result = service.list_candidates_for_auto_ml_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cluster_nodes", function()
 		local result = service.list_cluster_nodes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cluster_scheduler_configs", function()
 		local result = service.list_cluster_scheduler_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_clusters", function()
 		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_code_repositories", function()
 		local result = service.list_code_repositories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_compilation_jobs", function()
 		local result = service.list_compilation_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_compute_quotas", function()
 		local result = service.list_compute_quotas()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_contexts", function()
 		local result = service.list_contexts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_data_quality_job_definitions", function()
 		local result = service.list_data_quality_job_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_device_fleets", function()
 		local result = service.list_device_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_devices", function()
 		local result = service.list_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domains", function()
 		local result = service.list_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_edge_deployment_plans", function()
 		local result = service.list_edge_deployment_plans()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_edge_packaging_jobs", function()
 		local result = service.list_edge_packaging_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_endpoint_configs", function()
 		local result = service.list_endpoint_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_endpoints", function()
 		local result = service.list_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_experiments", function()
 		local result = service.list_experiments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_feature_groups", function()
 		local result = service.list_feature_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_flow_definitions", function()
 		local result = service.list_flow_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hub_content_versions", function()
 		local result = service.list_hub_content_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hub_contents", function()
 		local result = service.list_hub_contents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hubs", function()
 		local result = service.list_hubs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_human_task_uis", function()
 		local result = service.list_human_task_uis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hyper_parameter_tuning_jobs", function()
 		local result = service.list_hyper_parameter_tuning_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_image_versions", function()
 		local result = service.list_image_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_images", function()
 		local result = service.list_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inference_components", function()
 		local result = service.list_inference_components()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inference_experiments", function()
 		local result = service.list_inference_experiments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inference_recommendations_job_steps", function()
 		local result = service.list_inference_recommendations_job_steps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inference_recommendations_jobs", function()
 		local result = service.list_inference_recommendations_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_labeling_jobs", function()
 		local result = service.list_labeling_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_labeling_jobs_for_workteam", function()
 		local result = service.list_labeling_jobs_for_workteam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_lineage_groups", function()
 		local result = service.list_lineage_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_mlflow_tracking_servers", function()
 		local result = service.list_mlflow_tracking_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_bias_job_definitions", function()
 		local result = service.list_model_bias_job_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_card_export_jobs", function()
 		local result = service.list_model_card_export_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_card_versions", function()
 		local result = service.list_model_card_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_cards", function()
 		local result = service.list_model_cards()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_explainability_job_definitions", function()
 		local result = service.list_model_explainability_job_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_metadata", function()
 		local result = service.list_model_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_package_groups", function()
 		local result = service.list_model_package_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_packages", function()
 		local result = service.list_model_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_quality_job_definitions", function()
 		local result = service.list_model_quality_job_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_models", function()
 		local result = service.list_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_monitoring_alert_history", function()
 		local result = service.list_monitoring_alert_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_monitoring_alerts", function()
 		local result = service.list_monitoring_alerts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_monitoring_executions", function()
 		local result = service.list_monitoring_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_monitoring_schedules", function()
 		local result = service.list_monitoring_schedules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notebook_instance_lifecycle_configs", function()
 		local result = service.list_notebook_instance_lifecycle_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notebook_instances", function()
 		local result = service.list_notebook_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_optimization_jobs", function()
 		local result = service.list_optimization_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_partner_apps", function()
 		local result = service.list_partner_apps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pipeline_execution_steps", function()
 		local result = service.list_pipeline_execution_steps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pipeline_executions", function()
 		local result = service.list_pipeline_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pipeline_parameters_for_execution", function()
 		local result = service.list_pipeline_parameters_for_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pipelines", function()
 		local result = service.list_pipelines()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_processing_jobs", function()
 		local result = service.list_processing_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_projects", function()
 		local result = service.list_projects()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_catalogs", function()
 		local result = service.list_resource_catalogs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_spaces", function()
 		local result = service.list_spaces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_stage_devices", function()
 		local result = service.list_stage_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_studio_lifecycle_configs", function()
 		local result = service.list_studio_lifecycle_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_subscribed_workteams", function()
 		local result = service.list_subscribed_workteams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags", function()
 		local result = service.list_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_training_jobs", function()
 		local result = service.list_training_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_training_jobs_for_hyper_parameter_tuning_job", function()
 		local result = service.list_training_jobs_for_hyper_parameter_tuning_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_training_plans", function()
 		local result = service.list_training_plans()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_transform_jobs", function()
 		local result = service.list_transform_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_trial_components", function()
 		local result = service.list_trial_components()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_trials", function()
 		local result = service.list_trials()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_user_profiles", function()
 		local result = service.list_user_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_workforces", function()
 		local result = service.list_workforces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_workteams", function()
 		local result = service.list_workteams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_model_package_group_policy", function()
 		local result = service.put_model_package_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with query_lineage", function()
 		local result = service.query_lineage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_devices", function()
 		local result = service.register_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with render_ui_template", function()
 		local result = service.render_ui_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with retry_pipeline_execution", function()
 		local result = service.retry_pipeline_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search", function()
 		local result = service.search()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_training_plan_offerings", function()
 		local result = service.search_training_plan_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_pipeline_execution_step_failure", function()
 		local result = service.send_pipeline_execution_step_failure()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_pipeline_execution_step_success", function()
 		local result = service.send_pipeline_execution_step_success()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_edge_deployment_stage", function()
 		local result = service.start_edge_deployment_stage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_inference_experiment", function()
 		local result = service.start_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_mlflow_tracking_server", function()
 		local result = service.start_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_monitoring_schedule", function()
 		local result = service.start_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_notebook_instance", function()
 		local result = service.start_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_pipeline_execution", function()
 		local result = service.start_pipeline_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_auto_ml_job", function()
 		local result = service.stop_auto_ml_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_compilation_job", function()
 		local result = service.stop_compilation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_edge_deployment_stage", function()
 		local result = service.stop_edge_deployment_stage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_edge_packaging_job", function()
 		local result = service.stop_edge_packaging_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_hyper_parameter_tuning_job", function()
 		local result = service.stop_hyper_parameter_tuning_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_inference_experiment", function()
 		local result = service.stop_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_inference_recommendations_job", function()
 		local result = service.stop_inference_recommendations_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_labeling_job", function()
 		local result = service.stop_labeling_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_mlflow_tracking_server", function()
 		local result = service.stop_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_monitoring_schedule", function()
 		local result = service.stop_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_notebook_instance", function()
 		local result = service.stop_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_optimization_job", function()
 		local result = service.stop_optimization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_pipeline_execution", function()
 		local result = service.stop_pipeline_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_processing_job", function()
 		local result = service.stop_processing_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_training_job", function()
 		local result = service.stop_training_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_transform_job", function()
 		local result = service.stop_transform_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_action", function()
 		local result = service.update_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_app_image_config", function()
 		local result = service.update_app_image_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_artifact", function()
 		local result = service.update_artifact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster_scheduler_config", function()
 		local result = service.update_cluster_scheduler_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster_software", function()
 		local result = service.update_cluster_software()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_code_repository", function()
 		local result = service.update_code_repository()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_compute_quota", function()
 		local result = service.update_compute_quota()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_context", function()
 		local result = service.update_context()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_device_fleet", function()
 		local result = service.update_device_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_devices", function()
 		local result = service.update_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_domain", function()
 		local result = service.update_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_endpoint", function()
 		local result = service.update_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_endpoint_weights_and_capacities", function()
 		local result = service.update_endpoint_weights_and_capacities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_experiment", function()
 		local result = service.update_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_feature_group", function()
 		local result = service.update_feature_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_feature_metadata", function()
 		local result = service.update_feature_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_hub", function()
 		local result = service.update_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_hub_content", function()
 		local result = service.update_hub_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_hub_content_reference", function()
 		local result = service.update_hub_content_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_image", function()
 		local result = service.update_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_image_version", function()
 		local result = service.update_image_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_inference_component", function()
 		local result = service.update_inference_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_inference_component_runtime_config", function()
 		local result = service.update_inference_component_runtime_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_inference_experiment", function()
 		local result = service.update_inference_experiment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_mlflow_tracking_server", function()
 		local result = service.update_mlflow_tracking_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model_card", function()
 		local result = service.update_model_card()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_model_package", function()
 		local result = service.update_model_package()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_monitoring_alert", function()
 		local result = service.update_monitoring_alert()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_monitoring_schedule", function()
 		local result = service.update_monitoring_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notebook_instance", function()
 		local result = service.update_notebook_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notebook_instance_lifecycle_config", function()
 		local result = service.update_notebook_instance_lifecycle_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_partner_app", function()
 		local result = service.update_partner_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pipeline", function()
 		local result = service.update_pipeline()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_pipeline_execution", function()
 		local result = service.update_pipeline_execution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_project", function()
 		local result = service.update_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_space", function()
 		local result = service.update_space()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_training_job", function()
 		local result = service.update_training_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_trial", function()
 		local result = service.update_trial()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_trial_component", function()
 		local result = service.update_trial_component()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_user_profile", function()
 		local result = service.update_user_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_workforce", function()
 		local result = service.update_workforce()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_workteam", function()
 		local result = service.update_workteam()
 		assert.is_true(result.success)
 	end)
-
 end)

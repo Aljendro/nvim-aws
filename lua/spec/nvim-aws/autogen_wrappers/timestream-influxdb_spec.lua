@@ -9,85 +9,68 @@ describe("AWS timestream-influxdb service testing", function()
 		local result = service.create_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_instance", function()
 		local result = service.create_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_db_parameter_group", function()
 		local result = service.create_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_cluster", function()
 		local result = service.delete_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_db_instance", function()
 		local result = service.delete_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_db_cluster", function()
 		local result = service.get_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_db_instance", function()
 		local result = service.get_db_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_db_parameter_group", function()
 		local result = service.get_db_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_db_clusters", function()
 		local result = service.list_db_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_db_instances", function()
 		local result = service.list_db_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_db_instances_for_cluster", function()
 		local result = service.list_db_instances_for_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_db_parameter_groups", function()
 		local result = service.list_db_parameter_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_db_cluster", function()
 		local result = service.update_db_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_db_instance", function()
 		local result = service.update_db_instance()
 		assert.is_true(result.success)
 	end)
-
 end)

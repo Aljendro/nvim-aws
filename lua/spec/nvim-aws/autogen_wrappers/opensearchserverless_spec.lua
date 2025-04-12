@@ -9,185 +9,148 @@ describe("AWS opensearchserverless service testing", function()
 		local result = service.batch_get_collection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_effective_lifecycle_policy", function()
 		local result = service.batch_get_effective_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_lifecycle_policy", function()
 		local result = service.batch_get_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_vpc_endpoint", function()
 		local result = service.batch_get_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_access_policy", function()
 		local result = service.create_access_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_collection", function()
 		local result = service.create_collection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_lifecycle_policy", function()
 		local result = service.create_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_security_config", function()
 		local result = service.create_security_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_security_policy", function()
 		local result = service.create_security_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_endpoint", function()
 		local result = service.create_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_access_policy", function()
 		local result = service.delete_access_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_collection", function()
 		local result = service.delete_collection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_lifecycle_policy", function()
 		local result = service.delete_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_security_config", function()
 		local result = service.delete_security_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_security_policy", function()
 		local result = service.delete_security_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_endpoint", function()
 		local result = service.delete_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_access_policy", function()
 		local result = service.get_access_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_settings", function()
 		local result = service.get_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_policies_stats", function()
 		local result = service.get_policies_stats()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_security_config", function()
 		local result = service.get_security_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_security_policy", function()
 		local result = service.get_security_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_access_policies", function()
 		local result = service.list_access_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_collections", function()
 		local result = service.list_collections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_lifecycle_policies", function()
 		local result = service.list_lifecycle_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_security_configs", function()
 		local result = service.list_security_configs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_security_policies", function()
 		local result = service.list_security_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_endpoints", function()
 		local result = service.list_vpc_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_access_policy", function()
 		local result = service.update_access_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account_settings", function()
 		local result = service.update_account_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_collection", function()
 		local result = service.update_collection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_lifecycle_policy", function()
 		local result = service.update_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_security_config", function()
 		local result = service.update_security_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_security_policy", function()
 		local result = service.update_security_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_vpc_endpoint", function()
 		local result = service.update_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 end)

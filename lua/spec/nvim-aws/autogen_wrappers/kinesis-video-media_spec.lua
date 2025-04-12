@@ -2,5 +2,7 @@
 -- AWS Service: kinesis-video-media
 
 require("nvim-aws").setup()
+local service = require("nvim-aws.autogen_wrappers.kinesis-video-media")
 
-describe("AWS kinesis-video-media service testing", function() end)
+describe("AWS kinesis-video-media service testing", function()
+end)

@@ -9,50 +9,40 @@ describe("AWS rbin service testing", function()
 		local result = service.create_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_rule", function()
 		local result = service.delete_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_rule", function()
 		local result = service.get_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rules", function()
 		local result = service.list_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with lock_rule", function()
 		local result = service.lock_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unlock_rule", function()
 		local result = service.unlock_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_rule", function()
 		local result = service.update_rule()
 		assert.is_true(result.success)
 	end)
-
 end)

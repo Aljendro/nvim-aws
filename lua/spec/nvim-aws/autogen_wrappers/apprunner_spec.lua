@@ -9,185 +9,148 @@ describe("AWS apprunner service testing", function()
 		local result = service.associate_custom_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_auto_scaling_configuration", function()
 		local result = service.create_auto_scaling_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_connection", function()
 		local result = service.create_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_observability_configuration", function()
 		local result = service.create_observability_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_service", function()
 		local result = service.create_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_connector", function()
 		local result = service.create_vpc_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_ingress_connection", function()
 		local result = service.create_vpc_ingress_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_auto_scaling_configuration", function()
 		local result = service.delete_auto_scaling_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_connection", function()
 		local result = service.delete_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_observability_configuration", function()
 		local result = service.delete_observability_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_service", function()
 		local result = service.delete_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_connector", function()
 		local result = service.delete_vpc_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_ingress_connection", function()
 		local result = service.delete_vpc_ingress_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_auto_scaling_configuration", function()
 		local result = service.describe_auto_scaling_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_custom_domains", function()
 		local result = service.describe_custom_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_observability_configuration", function()
 		local result = service.describe_observability_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_service", function()
 		local result = service.describe_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_connector", function()
 		local result = service.describe_vpc_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_ingress_connection", function()
 		local result = service.describe_vpc_ingress_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_custom_domain", function()
 		local result = service.disassociate_custom_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_auto_scaling_configurations", function()
 		local result = service.list_auto_scaling_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_connections", function()
 		local result = service.list_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_observability_configurations", function()
 		local result = service.list_observability_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_operations", function()
 		local result = service.list_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_services", function()
 		local result = service.list_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_services_for_auto_scaling_configuration", function()
 		local result = service.list_services_for_auto_scaling_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_connectors", function()
 		local result = service.list_vpc_connectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_vpc_ingress_connections", function()
 		local result = service.list_vpc_ingress_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with pause_service", function()
 		local result = service.pause_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resume_service", function()
 		local result = service.resume_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_deployment", function()
 		local result = service.start_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_default_auto_scaling_configuration", function()
 		local result = service.update_default_auto_scaling_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service", function()
 		local result = service.update_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_vpc_ingress_connection", function()
 		local result = service.update_vpc_ingress_connection()
 		assert.is_true(result.success)
 	end)
-
 end)

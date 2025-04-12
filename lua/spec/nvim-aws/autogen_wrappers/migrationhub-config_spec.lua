@@ -9,20 +9,16 @@ describe("AWS migrationhub-config service testing", function()
 		local result = service.create_home_region_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_home_region_control", function()
 		local result = service.delete_home_region_control()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_home_region_controls", function()
 		local result = service.describe_home_region_controls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_home_region", function()
 		local result = service.get_home_region()
 		assert.is_true(result.success)
 	end)
-
 end)

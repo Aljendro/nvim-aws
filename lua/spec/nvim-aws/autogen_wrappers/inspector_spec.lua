@@ -9,185 +9,148 @@ describe("AWS inspector service testing", function()
 		local result = service.add_attributes_to_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_assessment_target", function()
 		local result = service.create_assessment_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_assessment_template", function()
 		local result = service.create_assessment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_exclusions_preview", function()
 		local result = service.create_exclusions_preview()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_resource_group", function()
 		local result = service.create_resource_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_assessment_run", function()
 		local result = service.delete_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_assessment_target", function()
 		local result = service.delete_assessment_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_assessment_template", function()
 		local result = service.delete_assessment_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_assessment_runs", function()
 		local result = service.describe_assessment_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_assessment_targets", function()
 		local result = service.describe_assessment_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_assessment_templates", function()
 		local result = service.describe_assessment_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cross_account_access_role", function()
 		local result = service.describe_cross_account_access_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_exclusions", function()
 		local result = service.describe_exclusions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_findings", function()
 		local result = service.describe_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_resource_groups", function()
 		local result = service.describe_resource_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_rules_packages", function()
 		local result = service.describe_rules_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_assessment_report", function()
 		local result = service.get_assessment_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_exclusions_preview", function()
 		local result = service.get_exclusions_preview()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_telemetry_metadata", function()
 		local result = service.get_telemetry_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assessment_run_agents", function()
 		local result = service.list_assessment_run_agents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assessment_runs", function()
 		local result = service.list_assessment_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assessment_targets", function()
 		local result = service.list_assessment_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assessment_templates", function()
 		local result = service.list_assessment_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_subscriptions", function()
 		local result = service.list_event_subscriptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_exclusions", function()
 		local result = service.list_exclusions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_findings", function()
 		local result = service.list_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rules_packages", function()
 		local result = service.list_rules_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with preview_agents", function()
 		local result = service.preview_agents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_cross_account_access_role", function()
 		local result = service.register_cross_account_access_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_attributes_from_findings", function()
 		local result = service.remove_attributes_from_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_tags_for_resource", function()
 		local result = service.set_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_assessment_run", function()
 		local result = service.start_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_assessment_run", function()
 		local result = service.stop_assessment_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with subscribe_to_event", function()
 		local result = service.subscribe_to_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unsubscribe_from_event", function()
 		local result = service.unsubscribe_from_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_assessment_target", function()
 		local result = service.update_assessment_target()
 		assert.is_true(result.success)
 	end)
-
 end)

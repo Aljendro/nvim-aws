@@ -9,220 +9,176 @@ describe("AWS databrew service testing", function()
 		local result = service.batch_delete_recipe_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_dataset", function()
 		local result = service.create_dataset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_profile_job", function()
 		local result = service.create_profile_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_project", function()
 		local result = service.create_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_recipe", function()
 		local result = service.create_recipe()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_recipe_job", function()
 		local result = service.create_recipe_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ruleset", function()
 		local result = service.create_ruleset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_schedule", function()
 		local result = service.create_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_dataset", function()
 		local result = service.delete_dataset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job", function()
 		local result = service.delete_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_project", function()
 		local result = service.delete_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_recipe_version", function()
 		local result = service.delete_recipe_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ruleset", function()
 		local result = service.delete_ruleset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_schedule", function()
 		local result = service.delete_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_dataset", function()
 		local result = service.describe_dataset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job", function()
 		local result = service.describe_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job_run", function()
 		local result = service.describe_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_project", function()
 		local result = service.describe_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_recipe", function()
 		local result = service.describe_recipe()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ruleset", function()
 		local result = service.describe_ruleset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_schedule", function()
 		local result = service.describe_schedule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_datasets", function()
 		local result = service.list_datasets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_job_runs", function()
 		local result = service.list_job_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_jobs", function()
 		local result = service.list_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_projects", function()
 		local result = service.list_projects()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_recipe_versions", function()
 		local result = service.list_recipe_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_recipes", function()
 		local result = service.list_recipes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_rulesets", function()
 		local result = service.list_rulesets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_schedules", function()
 		local result = service.list_schedules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish_recipe", function()
 		local result = service.publish_recipe()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_project_session_action", function()
 		local result = service.send_project_session_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_job_run", function()
 		local result = service.start_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_project_session", function()
 		local result = service.start_project_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_job_run", function()
 		local result = service.stop_job_run()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_dataset", function()
 		local result = service.update_dataset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_profile_job", function()
 		local result = service.update_profile_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_project", function()
 		local result = service.update_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_recipe", function()
 		local result = service.update_recipe()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_recipe_job", function()
 		local result = service.update_recipe_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_ruleset", function()
 		local result = service.update_ruleset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_schedule", function()
 		local result = service.update_schedule()
 		assert.is_true(result.success)
 	end)
-
 end)

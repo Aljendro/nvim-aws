@@ -9,130 +9,104 @@ describe("AWS cloudsearch service testing", function()
 		local result = service.build_suggesters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain", function()
 		local result = service.create_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with define_analysis_scheme", function()
 		local result = service.define_analysis_scheme()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with define_expression", function()
 		local result = service.define_expression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with define_index_field", function()
 		local result = service.define_index_field()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with define_suggester", function()
 		local result = service.define_suggester()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_analysis_scheme", function()
 		local result = service.delete_analysis_scheme()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain", function()
 		local result = service.delete_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_expression", function()
 		local result = service.delete_expression()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_index_field", function()
 		local result = service.delete_index_field()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_suggester", function()
 		local result = service.delete_suggester()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_analysis_schemes", function()
 		local result = service.describe_analysis_schemes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_availability_options", function()
 		local result = service.describe_availability_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domain_endpoint_options", function()
 		local result = service.describe_domain_endpoint_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_domains", function()
 		local result = service.describe_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_expressions", function()
 		local result = service.describe_expressions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_index_fields", function()
 		local result = service.describe_index_fields()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_scaling_parameters", function()
 		local result = service.describe_scaling_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_service_access_policies", function()
 		local result = service.describe_service_access_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_suggesters", function()
 		local result = service.describe_suggesters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with index_documents", function()
 		local result = service.index_documents()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domain_names", function()
 		local result = service.list_domain_names()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_availability_options", function()
 		local result = service.update_availability_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_domain_endpoint_options", function()
 		local result = service.update_domain_endpoint_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_scaling_parameters", function()
 		local result = service.update_scaling_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_service_access_policies", function()
 		local result = service.update_service_access_policies()
 		assert.is_true(result.success)
 	end)
-
 end)

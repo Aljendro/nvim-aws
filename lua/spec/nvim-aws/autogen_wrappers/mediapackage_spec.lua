@@ -9,90 +9,72 @@ describe("AWS mediapackage service testing", function()
 		local result = service.configure_logs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_channel", function()
 		local result = service.create_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_harvest_job", function()
 		local result = service.create_harvest_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_origin_endpoint", function()
 		local result = service.create_origin_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_channel", function()
 		local result = service.delete_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_origin_endpoint", function()
 		local result = service.delete_origin_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_channel", function()
 		local result = service.describe_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_harvest_job", function()
 		local result = service.describe_harvest_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_origin_endpoint", function()
 		local result = service.describe_origin_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_channels", function()
 		local result = service.list_channels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_harvest_jobs", function()
 		local result = service.list_harvest_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_origin_endpoints", function()
 		local result = service.list_origin_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with rotate_ingest_endpoint_credentials", function()
 		local result = service.rotate_ingest_endpoint_credentials()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_channel", function()
 		local result = service.update_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_origin_endpoint", function()
 		local result = service.update_origin_endpoint()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,195 +9,156 @@ describe("AWS mturk service testing", function()
 		local result = service.accept_qualification_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with approve_assignment", function()
 		local result = service.approve_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_qualification_with_worker", function()
 		local result = service.associate_qualification_with_worker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_additional_assignments_for_hit", function()
 		local result = service.create_additional_assignments_for_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hit", function()
 		local result = service.create_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hit_type", function()
 		local result = service.create_hit_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_hit_with_hit_type", function()
 		local result = service.create_hit_with_hit_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_qualification_type", function()
 		local result = service.create_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_worker_block", function()
 		local result = service.create_worker_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_hit", function()
 		local result = service.delete_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_qualification_type", function()
 		local result = service.delete_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_worker_block", function()
 		local result = service.delete_worker_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_qualification_from_worker", function()
 		local result = service.disassociate_qualification_from_worker()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_balance", function()
 		local result = service.get_account_balance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_assignment", function()
 		local result = service.get_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_file_upload_url", function()
 		local result = service.get_file_upload_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_hit", function()
 		local result = service.get_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_qualification_score", function()
 		local result = service.get_qualification_score()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_qualification_type", function()
 		local result = service.get_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_assignments_for_hit", function()
 		local result = service.list_assignments_for_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_bonus_payments", function()
 		local result = service.list_bonus_payments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hits", function()
 		local result = service.list_hits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_hits_for_qualification_type", function()
 		local result = service.list_hits_for_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_qualification_requests", function()
 		local result = service.list_qualification_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_qualification_types", function()
 		local result = service.list_qualification_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_review_policy_results_for_hit", function()
 		local result = service.list_review_policy_results_for_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_reviewable_hits", function()
 		local result = service.list_reviewable_hits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_worker_blocks", function()
 		local result = service.list_worker_blocks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_workers_with_qualification_type", function()
 		local result = service.list_workers_with_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with notify_workers", function()
 		local result = service.notify_workers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_assignment", function()
 		local result = service.reject_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_qualification_request", function()
 		local result = service.reject_qualification_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_bonus", function()
 		local result = service.send_bonus()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_test_event_notification", function()
 		local result = service.send_test_event_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_expiration_for_hit", function()
 		local result = service.update_expiration_for_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_hit_review_status", function()
 		local result = service.update_hit_review_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_hit_type_of_hit", function()
 		local result = service.update_hit_type_of_hit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notification_settings", function()
 		local result = service.update_notification_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_qualification_type", function()
 		local result = service.update_qualification_type()
 		assert.is_true(result.success)
 	end)
-
 end)

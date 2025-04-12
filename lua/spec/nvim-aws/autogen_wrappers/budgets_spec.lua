@@ -9,130 +9,104 @@ describe("AWS budgets service testing", function()
 		local result = service.create_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_budget_action", function()
 		local result = service.create_budget_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_notification", function()
 		local result = service.create_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subscriber", function()
 		local result = service.create_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_budget", function()
 		local result = service.delete_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_budget_action", function()
 		local result = service.delete_budget_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_notification", function()
 		local result = service.delete_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subscriber", function()
 		local result = service.delete_subscriber()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget", function()
 		local result = service.describe_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_action", function()
 		local result = service.describe_budget_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_action_histories", function()
 		local result = service.describe_budget_action_histories()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_actions_for_account", function()
 		local result = service.describe_budget_actions_for_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_actions_for_budget", function()
 		local result = service.describe_budget_actions_for_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_notifications_for_account", function()
 		local result = service.describe_budget_notifications_for_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budget_performance_history", function()
 		local result = service.describe_budget_performance_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_budgets", function()
 		local result = service.describe_budgets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_notifications_for_budget", function()
 		local result = service.describe_notifications_for_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subscribers_for_notification", function()
 		local result = service.describe_subscribers_for_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with execute_budget_action", function()
 		local result = service.execute_budget_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_budget", function()
 		local result = service.update_budget()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_budget_action", function()
 		local result = service.update_budget_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notification", function()
 		local result = service.update_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subscriber", function()
 		local result = service.update_subscriber()
 		assert.is_true(result.success)
 	end)
-
 end)

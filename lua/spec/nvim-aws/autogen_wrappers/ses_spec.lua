@@ -9,340 +9,272 @@ describe("AWS ses service testing", function()
 		local result = service.clone_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_configuration_set", function()
 		local result = service.create_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_configuration_set_event_destination", function()
 		local result = service.create_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_configuration_set_tracking_options", function()
 		local result = service.create_configuration_set_tracking_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_custom_verification_email_template", function()
 		local result = service.create_custom_verification_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_receipt_filter", function()
 		local result = service.create_receipt_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_receipt_rule", function()
 		local result = service.create_receipt_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_receipt_rule_set", function()
 		local result = service.create_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_template", function()
 		local result = service.create_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_configuration_set", function()
 		local result = service.delete_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_configuration_set_event_destination", function()
 		local result = service.delete_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_configuration_set_tracking_options", function()
 		local result = service.delete_configuration_set_tracking_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_custom_verification_email_template", function()
 		local result = service.delete_custom_verification_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_identity", function()
 		local result = service.delete_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_identity_policy", function()
 		local result = service.delete_identity_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_receipt_filter", function()
 		local result = service.delete_receipt_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_receipt_rule", function()
 		local result = service.delete_receipt_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_receipt_rule_set", function()
 		local result = service.delete_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_template", function()
 		local result = service.delete_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_active_receipt_rule_set", function()
 		local result = service.describe_active_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_configuration_set", function()
 		local result = service.describe_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_receipt_rule", function()
 		local result = service.describe_receipt_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_receipt_rule_set", function()
 		local result = service.describe_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account_sending_enabled", function()
 		local result = service.get_account_sending_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_custom_verification_email_template", function()
 		local result = service.get_custom_verification_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_dkim_attributes", function()
 		local result = service.get_identity_dkim_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_mail_from_domain_attributes", function()
 		local result = service.get_identity_mail_from_domain_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_notification_attributes", function()
 		local result = service.get_identity_notification_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_policies", function()
 		local result = service.get_identity_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_identity_verification_attributes", function()
 		local result = service.get_identity_verification_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_send_quota", function()
 		local result = service.get_send_quota()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_send_statistics", function()
 		local result = service.get_send_statistics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_template", function()
 		local result = service.get_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_configuration_sets", function()
 		local result = service.list_configuration_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_custom_verification_email_templates", function()
 		local result = service.list_custom_verification_email_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_identities", function()
 		local result = service.list_identities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_identity_policies", function()
 		local result = service.list_identity_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_receipt_filters", function()
 		local result = service.list_receipt_filters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_receipt_rule_sets", function()
 		local result = service.list_receipt_rule_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_templates", function()
 		local result = service.list_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_configuration_set_delivery_options", function()
 		local result = service.put_configuration_set_delivery_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_identity_policy", function()
 		local result = service.put_identity_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reorder_receipt_rule_set", function()
 		local result = service.reorder_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_bounce", function()
 		local result = service.send_bounce()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_bulk_templated_email", function()
 		local result = service.send_bulk_templated_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_custom_verification_email", function()
 		local result = service.send_custom_verification_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_email", function()
 		local result = service.send_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_raw_email", function()
 		local result = service.send_raw_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_templated_email", function()
 		local result = service.send_templated_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_active_receipt_rule_set", function()
 		local result = service.set_active_receipt_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_dkim_enabled", function()
 		local result = service.set_identity_dkim_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_feedback_forwarding_enabled", function()
 		local result = service.set_identity_feedback_forwarding_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_headers_in_notifications_enabled", function()
 		local result = service.set_identity_headers_in_notifications_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_mail_from_domain", function()
 		local result = service.set_identity_mail_from_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_identity_notification_topic", function()
 		local result = service.set_identity_notification_topic()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_receipt_rule_position", function()
 		local result = service.set_receipt_rule_position()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_render_template", function()
 		local result = service.test_render_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_account_sending_enabled", function()
 		local result = service.update_account_sending_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_configuration_set_event_destination", function()
 		local result = service.update_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_configuration_set_reputation_metrics_enabled", function()
 		local result = service.update_configuration_set_reputation_metrics_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_configuration_set_sending_enabled", function()
 		local result = service.update_configuration_set_sending_enabled()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_configuration_set_tracking_options", function()
 		local result = service.update_configuration_set_tracking_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_custom_verification_email_template", function()
 		local result = service.update_custom_verification_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_receipt_rule", function()
 		local result = service.update_receipt_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_template", function()
 		local result = service.update_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with verify_domain_dkim", function()
 		local result = service.verify_domain_dkim()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with verify_domain_identity", function()
 		local result = service.verify_domain_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with verify_email_identity", function()
 		local result = service.verify_email_identity()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,590 +9,472 @@ describe("AWS gamelift service testing", function()
 		local result = service.accept_match()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with claim_game_server", function()
 		local result = service.claim_game_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_alias", function()
 		local result = service.create_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_build", function()
 		local result = service.create_build()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_container_fleet", function()
 		local result = service.create_container_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_container_group_definition", function()
 		local result = service.create_container_group_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet", function()
 		local result = service.create_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet_locations", function()
 		local result = service.create_fleet_locations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_game_server_group", function()
 		local result = service.create_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_game_session", function()
 		local result = service.create_game_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_game_session_queue", function()
 		local result = service.create_game_session_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_location", function()
 		local result = service.create_location()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_matchmaking_configuration", function()
 		local result = service.create_matchmaking_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_matchmaking_rule_set", function()
 		local result = service.create_matchmaking_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_player_session", function()
 		local result = service.create_player_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_player_sessions", function()
 		local result = service.create_player_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_script", function()
 		local result = service.create_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_peering_authorization", function()
 		local result = service.create_vpc_peering_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_peering_connection", function()
 		local result = service.create_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_alias", function()
 		local result = service.delete_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_build", function()
 		local result = service.delete_build()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_container_fleet", function()
 		local result = service.delete_container_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_container_group_definition", function()
 		local result = service.delete_container_group_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet", function()
 		local result = service.delete_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleet_locations", function()
 		local result = service.delete_fleet_locations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_game_server_group", function()
 		local result = service.delete_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_game_session_queue", function()
 		local result = service.delete_game_session_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_location", function()
 		local result = service.delete_location()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_matchmaking_configuration", function()
 		local result = service.delete_matchmaking_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_matchmaking_rule_set", function()
 		local result = service.delete_matchmaking_rule_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_scaling_policy", function()
 		local result = service.delete_scaling_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_script", function()
 		local result = service.delete_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_peering_authorization", function()
 		local result = service.delete_vpc_peering_authorization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_peering_connection", function()
 		local result = service.delete_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_compute", function()
 		local result = service.deregister_compute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_game_server", function()
 		local result = service.deregister_game_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_alias", function()
 		local result = service.describe_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_build", function()
 		local result = service.describe_build()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_compute", function()
 		local result = service.describe_compute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_container_fleet", function()
 		local result = service.describe_container_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_container_group_definition", function()
 		local result = service.describe_container_group_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ec2_instance_limits", function()
 		local result = service.describe_ec2_instance_limits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_attributes", function()
 		local result = service.describe_fleet_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_capacity", function()
 		local result = service.describe_fleet_capacity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_deployment", function()
 		local result = service.describe_fleet_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_events", function()
 		local result = service.describe_fleet_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_location_attributes", function()
 		local result = service.describe_fleet_location_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_location_capacity", function()
 		local result = service.describe_fleet_location_capacity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_location_utilization", function()
 		local result = service.describe_fleet_location_utilization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_port_settings", function()
 		local result = service.describe_fleet_port_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_utilization", function()
 		local result = service.describe_fleet_utilization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_server", function()
 		local result = service.describe_game_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_server_group", function()
 		local result = service.describe_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_server_instances", function()
 		local result = service.describe_game_server_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_session_details", function()
 		local result = service.describe_game_session_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_session_placement", function()
 		local result = service.describe_game_session_placement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_session_queues", function()
 		local result = service.describe_game_session_queues()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_game_sessions", function()
 		local result = service.describe_game_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instances", function()
 		local result = service.describe_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_matchmaking", function()
 		local result = service.describe_matchmaking()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_matchmaking_configurations", function()
 		local result = service.describe_matchmaking_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_matchmaking_rule_sets", function()
 		local result = service.describe_matchmaking_rule_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_player_sessions", function()
 		local result = service.describe_player_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_runtime_configuration", function()
 		local result = service.describe_runtime_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_scaling_policies", function()
 		local result = service.describe_scaling_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_script", function()
 		local result = service.describe_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_peering_authorizations", function()
 		local result = service.describe_vpc_peering_authorizations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_peering_connections", function()
 		local result = service.describe_vpc_peering_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_compute_access", function()
 		local result = service.get_compute_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_compute_auth_token", function()
 		local result = service.get_compute_auth_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_game_session_log_url", function()
 		local result = service.get_game_session_log_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_access", function()
 		local result = service.get_instance_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_aliases", function()
 		local result = service.list_aliases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_builds", function()
 		local result = service.list_builds()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_compute", function()
 		local result = service.list_compute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_container_fleets", function()
 		local result = service.list_container_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_container_group_definition_versions", function()
 		local result = service.list_container_group_definition_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_container_group_definitions", function()
 		local result = service.list_container_group_definitions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fleet_deployments", function()
 		local result = service.list_fleet_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_fleets", function()
 		local result = service.list_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_game_server_groups", function()
 		local result = service.list_game_server_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_game_servers", function()
 		local result = service.list_game_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_locations", function()
 		local result = service.list_locations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_scripts", function()
 		local result = service.list_scripts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_scaling_policy", function()
 		local result = service.put_scaling_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_compute", function()
 		local result = service.register_compute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_game_server", function()
 		local result = service.register_game_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with request_upload_credentials", function()
 		local result = service.request_upload_credentials()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resolve_alias", function()
 		local result = service.resolve_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resume_game_server_group", function()
 		local result = service.resume_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_game_sessions", function()
 		local result = service.search_game_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_fleet_actions", function()
 		local result = service.start_fleet_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_game_session_placement", function()
 		local result = service.start_game_session_placement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_match_backfill", function()
 		local result = service.start_match_backfill()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_matchmaking", function()
 		local result = service.start_matchmaking()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_fleet_actions", function()
 		local result = service.stop_fleet_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_game_session_placement", function()
 		local result = service.stop_game_session_placement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_matchmaking", function()
 		local result = service.stop_matchmaking()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with suspend_game_server_group", function()
 		local result = service.suspend_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with terminate_game_session", function()
 		local result = service.terminate_game_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_alias", function()
 		local result = service.update_alias()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_build", function()
 		local result = service.update_build()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_container_fleet", function()
 		local result = service.update_container_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_container_group_definition", function()
 		local result = service.update_container_group_definition()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_fleet_attributes", function()
 		local result = service.update_fleet_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_fleet_capacity", function()
 		local result = service.update_fleet_capacity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_fleet_port_settings", function()
 		local result = service.update_fleet_port_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_game_server", function()
 		local result = service.update_game_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_game_server_group", function()
 		local result = service.update_game_server_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_game_session", function()
 		local result = service.update_game_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_game_session_queue", function()
 		local result = service.update_game_session_queue()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_matchmaking_configuration", function()
 		local result = service.update_matchmaking_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_runtime_configuration", function()
 		local result = service.update_runtime_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_script", function()
 		local result = service.update_script()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with validate_matchmaking_rule_set", function()
 		local result = service.validate_matchmaking_rule_set()
 		assert.is_true(result.success)
 	end)
-
 end)

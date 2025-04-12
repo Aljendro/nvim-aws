@@ -9,65 +9,52 @@ describe("AWS pi service testing", function()
 		local result = service.create_performance_analysis_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_performance_analysis_report", function()
 		local result = service.delete_performance_analysis_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_dimension_keys", function()
 		local result = service.describe_dimension_keys()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dimension_key_details", function()
 		local result = service.get_dimension_key_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_performance_analysis_report", function()
 		local result = service.get_performance_analysis_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_metadata", function()
 		local result = service.get_resource_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_metrics", function()
 		local result = service.get_resource_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_available_resource_dimensions", function()
 		local result = service.list_available_resource_dimensions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_available_resource_metrics", function()
 		local result = service.list_available_resource_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_performance_analysis_reports", function()
 		local result = service.list_performance_analysis_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

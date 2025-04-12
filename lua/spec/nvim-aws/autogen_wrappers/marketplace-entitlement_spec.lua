@@ -9,5 +9,4 @@ describe("AWS marketplace-entitlement service testing", function()
 		local result = service.get_entitlements()
 		assert.is_true(result.success)
 	end)
-
 end)

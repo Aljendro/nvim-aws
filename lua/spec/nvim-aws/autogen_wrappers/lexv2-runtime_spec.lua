@@ -9,15 +9,12 @@ describe("AWS lexv2-runtime service testing", function()
 		local result = service.delete_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_session", function()
 		local result = service.get_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with recognize_text", function()
 		local result = service.recognize_text()
 		assert.is_true(result.success)
 	end)
-
 end)

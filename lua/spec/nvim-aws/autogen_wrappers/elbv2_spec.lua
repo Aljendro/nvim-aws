@@ -9,255 +9,204 @@ describe("AWS elbv2 service testing", function()
 		local result = service.add_listener_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_tags", function()
 		local result = service.add_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with add_trust_store_revocations", function()
 		local result = service.add_trust_store_revocations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_listener", function()
 		local result = service.create_listener()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer", function()
 		local result = service.create_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_rule", function()
 		local result = service.create_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_target_group", function()
 		local result = service.create_target_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_trust_store", function()
 		local result = service.create_trust_store()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_listener", function()
 		local result = service.delete_listener()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer", function()
 		local result = service.delete_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_rule", function()
 		local result = service.delete_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_shared_trust_store_association", function()
 		local result = service.delete_shared_trust_store_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_target_group", function()
 		local result = service.delete_target_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_trust_store", function()
 		local result = service.delete_trust_store()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_targets", function()
 		local result = service.deregister_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_limits", function()
 		local result = service.describe_account_limits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_reservation", function()
 		local result = service.describe_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_listener_attributes", function()
 		local result = service.describe_listener_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_listener_certificates", function()
 		local result = service.describe_listener_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_listeners", function()
 		local result = service.describe_listeners()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancer_attributes", function()
 		local result = service.describe_load_balancer_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_load_balancers", function()
 		local result = service.describe_load_balancers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_rules", function()
 		local result = service.describe_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ssl_policies", function()
 		local result = service.describe_ssl_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tags", function()
 		local result = service.describe_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_target_group_attributes", function()
 		local result = service.describe_target_group_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_target_groups", function()
 		local result = service.describe_target_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_target_health", function()
 		local result = service.describe_target_health()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trust_store_associations", function()
 		local result = service.describe_trust_store_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trust_store_revocations", function()
 		local result = service.describe_trust_store_revocations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trust_stores", function()
 		local result = service.describe_trust_stores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policy", function()
 		local result = service.get_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_trust_store_ca_certificates_bundle", function()
 		local result = service.get_trust_store_ca_certificates_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_trust_store_revocation_content", function()
 		local result = service.get_trust_store_revocation_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_capacity_reservation", function()
 		local result = service.modify_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ip_pools", function()
 		local result = service.modify_ip_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_listener", function()
 		local result = service.modify_listener()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_listener_attributes", function()
 		local result = service.modify_listener_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_load_balancer_attributes", function()
 		local result = service.modify_load_balancer_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_rule", function()
 		local result = service.modify_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_target_group", function()
 		local result = service.modify_target_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_target_group_attributes", function()
 		local result = service.modify_target_group_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_trust_store", function()
 		local result = service.modify_trust_store()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_targets", function()
 		local result = service.register_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_listener_certificates", function()
 		local result = service.remove_listener_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_tags", function()
 		local result = service.remove_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_trust_store_revocations", function()
 		local result = service.remove_trust_store_revocations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_ip_address_type", function()
 		local result = service.set_ip_address_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_rule_priorities", function()
 		local result = service.set_rule_priorities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_security_groups", function()
 		local result = service.set_security_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_subnets", function()
 		local result = service.set_subnets()
 		assert.is_true(result.success)
 	end)
-
 end)

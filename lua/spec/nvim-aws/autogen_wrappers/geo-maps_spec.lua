@@ -2,5 +2,7 @@
 -- AWS Service: geo-maps
 
 require("nvim-aws").setup()
+local service = require("nvim-aws.autogen_wrappers.geo-maps")
 
-describe("AWS geo-maps service testing", function() end)
+describe("AWS geo-maps service testing", function()
+end)

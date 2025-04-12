@@ -9,60 +9,48 @@ describe("AWS backupsearch service testing", function()
 		local result = service.get_search_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_search_result_export_job", function()
 		local result = service.get_search_result_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_search_job_backups", function()
 		local result = service.list_search_job_backups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_search_job_results", function()
 		local result = service.list_search_job_results()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_search_jobs", function()
 		local result = service.list_search_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_search_result_export_jobs", function()
 		local result = service.list_search_result_export_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_search_job", function()
 		local result = service.start_search_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_search_result_export_job", function()
 		local result = service.start_search_result_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_search_job", function()
 		local result = service.stop_search_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

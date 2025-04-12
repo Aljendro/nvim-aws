@@ -9,140 +9,112 @@ describe("AWS compute-optimizer service testing", function()
 		local result = service.delete_recommendation_preferences()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_recommendation_export_jobs", function()
 		local result = service.describe_recommendation_export_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_auto_scaling_group_recommendations", function()
 		local result = service.export_auto_scaling_group_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_ebs_volume_recommendations", function()
 		local result = service.export_ebs_volume_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_ec2_instance_recommendations", function()
 		local result = service.export_ec2_instance_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_ecs_service_recommendations", function()
 		local result = service.export_ecs_service_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_idle_recommendations", function()
 		local result = service.export_idle_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_lambda_function_recommendations", function()
 		local result = service.export_lambda_function_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_license_recommendations", function()
 		local result = service.export_license_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_rds_database_recommendations", function()
 		local result = service.export_rds_database_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_auto_scaling_group_recommendations", function()
 		local result = service.get_auto_scaling_group_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ebs_volume_recommendations", function()
 		local result = service.get_ebs_volume_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ec2_instance_recommendations", function()
 		local result = service.get_ec2_instance_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ec2_recommendation_projected_metrics", function()
 		local result = service.get_ec2_recommendation_projected_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ecs_service_recommendation_projected_metrics", function()
 		local result = service.get_ecs_service_recommendation_projected_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ecs_service_recommendations", function()
 		local result = service.get_ecs_service_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_effective_recommendation_preferences", function()
 		local result = service.get_effective_recommendation_preferences()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_enrollment_status", function()
 		local result = service.get_enrollment_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_enrollment_statuses_for_organization", function()
 		local result = service.get_enrollment_statuses_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_idle_recommendations", function()
 		local result = service.get_idle_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lambda_function_recommendations", function()
 		local result = service.get_lambda_function_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_license_recommendations", function()
 		local result = service.get_license_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_rds_database_recommendation_projected_metrics", function()
 		local result = service.get_rds_database_recommendation_projected_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_rds_database_recommendations", function()
 		local result = service.get_rds_database_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_recommendation_preferences", function()
 		local result = service.get_recommendation_preferences()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_recommendation_summaries", function()
 		local result = service.get_recommendation_summaries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_recommendation_preferences", function()
 		local result = service.put_recommendation_preferences()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_enrollment_status", function()
 		local result = service.update_enrollment_status()
 		assert.is_true(result.success)
 	end)
-
 end)

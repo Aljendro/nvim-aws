@@ -9,80 +9,64 @@ describe("AWS taxsettings service testing", function()
 		local result = service.batch_delete_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_tax_exemptions", function()
 		local result = service.batch_get_tax_exemptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_put_tax_registration", function()
 		local result = service.batch_put_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_supplemental_tax_registration", function()
 		local result = service.delete_supplemental_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tax_registration", function()
 		local result = service.delete_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_tax_exemption_types", function()
 		local result = service.get_tax_exemption_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_tax_inheritance", function()
 		local result = service.get_tax_inheritance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_tax_registration", function()
 		local result = service.get_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_tax_registration_document", function()
 		local result = service.get_tax_registration_document()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_supplemental_tax_registrations", function()
 		local result = service.list_supplemental_tax_registrations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tax_exemptions", function()
 		local result = service.list_tax_exemptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tax_registrations", function()
 		local result = service.list_tax_registrations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_supplemental_tax_registration", function()
 		local result = service.put_supplemental_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_tax_exemption", function()
 		local result = service.put_tax_exemption()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_tax_inheritance", function()
 		local result = service.put_tax_inheritance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_tax_registration", function()
 		local result = service.put_tax_registration()
 		assert.is_true(result.success)
 	end)
-
 end)

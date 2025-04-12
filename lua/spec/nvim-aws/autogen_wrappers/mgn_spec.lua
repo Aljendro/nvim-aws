@@ -9,350 +9,280 @@ describe("AWS mgn service testing", function()
 		local result = service.archive_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with archive_wave", function()
 		local result = service.archive_wave()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_applications", function()
 		local result = service.associate_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_source_servers", function()
 		local result = service.associate_source_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with change_server_life_cycle_state", function()
 		local result = service.change_server_life_cycle_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_application", function()
 		local result = service.create_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_connector", function()
 		local result = service.create_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_launch_configuration_template", function()
 		local result = service.create_launch_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replication_configuration_template", function()
 		local result = service.create_replication_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_wave", function()
 		local result = service.create_wave()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application", function()
 		local result = service.delete_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_connector", function()
 		local result = service.delete_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_job", function()
 		local result = service.delete_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_launch_configuration_template", function()
 		local result = service.delete_launch_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_replication_configuration_template", function()
 		local result = service.delete_replication_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_source_server", function()
 		local result = service.delete_source_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vcenter_client", function()
 		local result = service.delete_vcenter_client()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_wave", function()
 		local result = service.delete_wave()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job_log_items", function()
 		local result = service.describe_job_log_items()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_jobs", function()
 		local result = service.describe_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_launch_configuration_templates", function()
 		local result = service.describe_launch_configuration_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replication_configuration_templates", function()
 		local result = service.describe_replication_configuration_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_source_servers", function()
 		local result = service.describe_source_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vcenter_clients", function()
 		local result = service.describe_vcenter_clients()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_applications", function()
 		local result = service.disassociate_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_source_servers", function()
 		local result = service.disassociate_source_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disconnect_from_service", function()
 		local result = service.disconnect_from_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with finalize_cutover", function()
 		local result = service.finalize_cutover()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_launch_configuration", function()
 		local result = service.get_launch_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_replication_configuration", function()
 		local result = service.get_replication_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with initialize_service", function()
 		local result = service.initialize_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_applications", function()
 		local result = service.list_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_connectors", function()
 		local result = service.list_connectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_export_errors", function()
 		local result = service.list_export_errors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_exports", function()
 		local result = service.list_exports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_import_errors", function()
 		local result = service.list_import_errors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_imports", function()
 		local result = service.list_imports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_accounts", function()
 		local result = service.list_managed_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_source_server_actions", function()
 		local result = service.list_source_server_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_template_actions", function()
 		local result = service.list_template_actions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_waves", function()
 		local result = service.list_waves()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with mark_as_archived", function()
 		local result = service.mark_as_archived()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with pause_replication", function()
 		local result = service.pause_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_source_server_action", function()
 		local result = service.put_source_server_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_template_action", function()
 		local result = service.put_template_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_source_server_action", function()
 		local result = service.remove_source_server_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_template_action", function()
 		local result = service.remove_template_action()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with resume_replication", function()
 		local result = service.resume_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with retry_data_replication", function()
 		local result = service.retry_data_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_cutover", function()
 		local result = service.start_cutover()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_export", function()
 		local result = service.start_export()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_import", function()
 		local result = service.start_import()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_replication", function()
 		local result = service.start_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_test", function()
 		local result = service.start_test()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_replication", function()
 		local result = service.stop_replication()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with terminate_target_instances", function()
 		local result = service.terminate_target_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unarchive_application", function()
 		local result = service.unarchive_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unarchive_wave", function()
 		local result = service.unarchive_wave()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application", function()
 		local result = service.update_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_connector", function()
 		local result = service.update_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_launch_configuration", function()
 		local result = service.update_launch_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_launch_configuration_template", function()
 		local result = service.update_launch_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_replication_configuration", function()
 		local result = service.update_replication_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_replication_configuration_template", function()
 		local result = service.update_replication_configuration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_source_server", function()
 		local result = service.update_source_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_source_server_replication_type", function()
 		local result = service.update_source_server_replication_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_wave", function()
 		local result = service.update_wave()
 		assert.is_true(result.success)
 	end)
-
 end)

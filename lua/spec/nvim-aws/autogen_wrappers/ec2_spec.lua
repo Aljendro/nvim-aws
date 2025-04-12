@@ -9,3365 +9,2692 @@ describe("AWS ec2 service testing", function()
 		local result = service.accept_address_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_capacity_reservation_billing_ownership", function()
 		local result = service.accept_capacity_reservation_billing_ownership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_reserved_instances_exchange_quote", function()
 		local result = service.accept_reserved_instances_exchange_quote()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_transit_gateway_multicast_domain_associations", function()
 		local result = service.accept_transit_gateway_multicast_domain_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_transit_gateway_peering_attachment", function()
 		local result = service.accept_transit_gateway_peering_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_transit_gateway_vpc_attachment", function()
 		local result = service.accept_transit_gateway_vpc_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_vpc_endpoint_connections", function()
 		local result = service.accept_vpc_endpoint_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with accept_vpc_peering_connection", function()
 		local result = service.accept_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with advertise_byoip_cidr", function()
 		local result = service.advertise_byoip_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with allocate_address", function()
 		local result = service.allocate_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with allocate_hosts", function()
 		local result = service.allocate_hosts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with allocate_ipam_pool_cidr", function()
 		local result = service.allocate_ipam_pool_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with apply_security_groups_to_client_vpn_target_network", function()
 		local result = service.apply_security_groups_to_client_vpn_target_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assign_ipv6_addresses", function()
 		local result = service.assign_ipv6_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assign_private_ip_addresses", function()
 		local result = service.assign_private_ip_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with assign_private_nat_gateway_address", function()
 		local result = service.assign_private_nat_gateway_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_address", function()
 		local result = service.associate_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_capacity_reservation_billing_owner", function()
 		local result = service.associate_capacity_reservation_billing_owner()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_client_vpn_target_network", function()
 		local result = service.associate_client_vpn_target_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_dhcp_options", function()
 		local result = service.associate_dhcp_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_enclave_certificate_iam_role", function()
 		local result = service.associate_enclave_certificate_iam_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_iam_instance_profile", function()
 		local result = service.associate_iam_instance_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_instance_event_window", function()
 		local result = service.associate_instance_event_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_ipam_byoasn", function()
 		local result = service.associate_ipam_byoasn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_ipam_resource_discovery", function()
 		local result = service.associate_ipam_resource_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_nat_gateway_address", function()
 		local result = service.associate_nat_gateway_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_route_server", function()
 		local result = service.associate_route_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_route_table", function()
 		local result = service.associate_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_security_group_vpc", function()
 		local result = service.associate_security_group_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_subnet_cidr_block", function()
 		local result = service.associate_subnet_cidr_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_transit_gateway_multicast_domain", function()
 		local result = service.associate_transit_gateway_multicast_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_transit_gateway_policy_table", function()
 		local result = service.associate_transit_gateway_policy_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_transit_gateway_route_table", function()
 		local result = service.associate_transit_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_trunk_interface", function()
 		local result = service.associate_trunk_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_vpc_cidr_block", function()
 		local result = service.associate_vpc_cidr_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_classic_link_vpc", function()
 		local result = service.attach_classic_link_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_internet_gateway", function()
 		local result = service.attach_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_network_interface", function()
 		local result = service.attach_network_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_verified_access_trust_provider", function()
 		local result = service.attach_verified_access_trust_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_volume", function()
 		local result = service.attach_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_vpn_gateway", function()
 		local result = service.attach_vpn_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with authorize_client_vpn_ingress", function()
 		local result = service.authorize_client_vpn_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with authorize_security_group_egress", function()
 		local result = service.authorize_security_group_egress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with authorize_security_group_ingress", function()
 		local result = service.authorize_security_group_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with bundle_instance", function()
 		local result = service.bundle_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_bundle_task", function()
 		local result = service.cancel_bundle_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_capacity_reservation", function()
 		local result = service.cancel_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_capacity_reservation_fleets", function()
 		local result = service.cancel_capacity_reservation_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_conversion_task", function()
 		local result = service.cancel_conversion_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_declarative_policies_report", function()
 		local result = service.cancel_declarative_policies_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_export_task", function()
 		local result = service.cancel_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_image_launch_permission", function()
 		local result = service.cancel_image_launch_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_import_task", function()
 		local result = service.cancel_import_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_reserved_instances_listing", function()
 		local result = service.cancel_reserved_instances_listing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_spot_fleet_requests", function()
 		local result = service.cancel_spot_fleet_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_spot_instance_requests", function()
 		local result = service.cancel_spot_instance_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with confirm_product_instance", function()
 		local result = service.confirm_product_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_fpga_image", function()
 		local result = service.copy_fpga_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_image", function()
 		local result = service.copy_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_snapshot", function()
 		local result = service.copy_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_capacity_reservation", function()
 		local result = service.create_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_capacity_reservation_by_splitting", function()
 		local result = service.create_capacity_reservation_by_splitting()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_capacity_reservation_fleet", function()
 		local result = service.create_capacity_reservation_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_carrier_gateway", function()
 		local result = service.create_carrier_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_client_vpn_endpoint", function()
 		local result = service.create_client_vpn_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_client_vpn_route", function()
 		local result = service.create_client_vpn_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_coip_cidr", function()
 		local result = service.create_coip_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_coip_pool", function()
 		local result = service.create_coip_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_customer_gateway", function()
 		local result = service.create_customer_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_default_subnet", function()
 		local result = service.create_default_subnet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_default_vpc", function()
 		local result = service.create_default_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_dhcp_options", function()
 		local result = service.create_dhcp_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_egress_only_internet_gateway", function()
 		local result = service.create_egress_only_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fleet", function()
 		local result = service.create_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_flow_logs", function()
 		local result = service.create_flow_logs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_fpga_image", function()
 		local result = service.create_fpga_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_image", function()
 		local result = service.create_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_connect_endpoint", function()
 		local result = service.create_instance_connect_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_event_window", function()
 		local result = service.create_instance_event_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_export_task", function()
 		local result = service.create_instance_export_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_internet_gateway", function()
 		local result = service.create_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ipam", function()
 		local result = service.create_ipam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ipam_external_resource_verification_token", function()
 		local result = service.create_ipam_external_resource_verification_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ipam_pool", function()
 		local result = service.create_ipam_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ipam_resource_discovery", function()
 		local result = service.create_ipam_resource_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_ipam_scope", function()
 		local result = service.create_ipam_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_key_pair", function()
 		local result = service.create_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_launch_template", function()
 		local result = service.create_launch_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_launch_template_version", function()
 		local result = service.create_launch_template_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_local_gateway_route", function()
 		local result = service.create_local_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_local_gateway_route_table", function()
 		local result = service.create_local_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_local_gateway_route_table_virtual_interface_group_association", function()
 		local result = service.create_local_gateway_route_table_virtual_interface_group_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_local_gateway_route_table_vpc_association", function()
 		local result = service.create_local_gateway_route_table_vpc_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_managed_prefix_list", function()
 		local result = service.create_managed_prefix_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_nat_gateway", function()
 		local result = service.create_nat_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_acl", function()
 		local result = service.create_network_acl()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_acl_entry", function()
 		local result = service.create_network_acl_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_insights_access_scope", function()
 		local result = service.create_network_insights_access_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_insights_path", function()
 		local result = service.create_network_insights_path()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_interface", function()
 		local result = service.create_network_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_network_interface_permission", function()
 		local result = service.create_network_interface_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_placement_group", function()
 		local result = service.create_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_public_ipv4_pool", function()
 		local result = service.create_public_ipv4_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_replace_root_volume_task", function()
 		local result = service.create_replace_root_volume_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_reserved_instances_listing", function()
 		local result = service.create_reserved_instances_listing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_restore_image_task", function()
 		local result = service.create_restore_image_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_route", function()
 		local result = service.create_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_route_server", function()
 		local result = service.create_route_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_route_server_endpoint", function()
 		local result = service.create_route_server_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_route_server_peer", function()
 		local result = service.create_route_server_peer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_route_table", function()
 		local result = service.create_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_security_group", function()
 		local result = service.create_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_snapshot", function()
 		local result = service.create_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_snapshots", function()
 		local result = service.create_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_spot_datafeed_subscription", function()
 		local result = service.create_spot_datafeed_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_store_image_task", function()
 		local result = service.create_store_image_task()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subnet", function()
 		local result = service.create_subnet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subnet_cidr_reservation", function()
 		local result = service.create_subnet_cidr_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_tags", function()
 		local result = service.create_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_traffic_mirror_filter", function()
 		local result = service.create_traffic_mirror_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_traffic_mirror_filter_rule", function()
 		local result = service.create_traffic_mirror_filter_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_traffic_mirror_session", function()
 		local result = service.create_traffic_mirror_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_traffic_mirror_target", function()
 		local result = service.create_traffic_mirror_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway", function()
 		local result = service.create_transit_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_connect", function()
 		local result = service.create_transit_gateway_connect()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_connect_peer", function()
 		local result = service.create_transit_gateway_connect_peer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_multicast_domain", function()
 		local result = service.create_transit_gateway_multicast_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_peering_attachment", function()
 		local result = service.create_transit_gateway_peering_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_policy_table", function()
 		local result = service.create_transit_gateway_policy_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_prefix_list_reference", function()
 		local result = service.create_transit_gateway_prefix_list_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_route", function()
 		local result = service.create_transit_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_route_table", function()
 		local result = service.create_transit_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_route_table_announcement", function()
 		local result = service.create_transit_gateway_route_table_announcement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_transit_gateway_vpc_attachment", function()
 		local result = service.create_transit_gateway_vpc_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_verified_access_endpoint", function()
 		local result = service.create_verified_access_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_verified_access_group", function()
 		local result = service.create_verified_access_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_verified_access_instance", function()
 		local result = service.create_verified_access_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_verified_access_trust_provider", function()
 		local result = service.create_verified_access_trust_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_volume", function()
 		local result = service.create_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc", function()
 		local result = service.create_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_block_public_access_exclusion", function()
 		local result = service.create_vpc_block_public_access_exclusion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_endpoint", function()
 		local result = service.create_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_endpoint_connection_notification", function()
 		local result = service.create_vpc_endpoint_connection_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_endpoint_service_configuration", function()
 		local result = service.create_vpc_endpoint_service_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpc_peering_connection", function()
 		local result = service.create_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpn_connection", function()
 		local result = service.create_vpn_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpn_connection_route", function()
 		local result = service.create_vpn_connection_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_vpn_gateway", function()
 		local result = service.create_vpn_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_carrier_gateway", function()
 		local result = service.delete_carrier_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_client_vpn_endpoint", function()
 		local result = service.delete_client_vpn_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_client_vpn_route", function()
 		local result = service.delete_client_vpn_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_coip_cidr", function()
 		local result = service.delete_coip_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_coip_pool", function()
 		local result = service.delete_coip_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_customer_gateway", function()
 		local result = service.delete_customer_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_dhcp_options", function()
 		local result = service.delete_dhcp_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_egress_only_internet_gateway", function()
 		local result = service.delete_egress_only_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fleets", function()
 		local result = service.delete_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_flow_logs", function()
 		local result = service.delete_flow_logs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_fpga_image", function()
 		local result = service.delete_fpga_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance_connect_endpoint", function()
 		local result = service.delete_instance_connect_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance_event_window", function()
 		local result = service.delete_instance_event_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_internet_gateway", function()
 		local result = service.delete_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ipam", function()
 		local result = service.delete_ipam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ipam_external_resource_verification_token", function()
 		local result = service.delete_ipam_external_resource_verification_token()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ipam_pool", function()
 		local result = service.delete_ipam_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ipam_resource_discovery", function()
 		local result = service.delete_ipam_resource_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_ipam_scope", function()
 		local result = service.delete_ipam_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_key_pair", function()
 		local result = service.delete_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_launch_template", function()
 		local result = service.delete_launch_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_launch_template_versions", function()
 		local result = service.delete_launch_template_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_local_gateway_route", function()
 		local result = service.delete_local_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_local_gateway_route_table", function()
 		local result = service.delete_local_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_local_gateway_route_table_virtual_interface_group_association", function()
 		local result = service.delete_local_gateway_route_table_virtual_interface_group_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_local_gateway_route_table_vpc_association", function()
 		local result = service.delete_local_gateway_route_table_vpc_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_managed_prefix_list", function()
 		local result = service.delete_managed_prefix_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_nat_gateway", function()
 		local result = service.delete_nat_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_acl", function()
 		local result = service.delete_network_acl()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_acl_entry", function()
 		local result = service.delete_network_acl_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_insights_access_scope", function()
 		local result = service.delete_network_insights_access_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_insights_access_scope_analysis", function()
 		local result = service.delete_network_insights_access_scope_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_insights_analysis", function()
 		local result = service.delete_network_insights_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_insights_path", function()
 		local result = service.delete_network_insights_path()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_interface", function()
 		local result = service.delete_network_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_network_interface_permission", function()
 		local result = service.delete_network_interface_permission()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_placement_group", function()
 		local result = service.delete_placement_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_public_ipv4_pool", function()
 		local result = service.delete_public_ipv4_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_queued_reserved_instances", function()
 		local result = service.delete_queued_reserved_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_route", function()
 		local result = service.delete_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_route_server", function()
 		local result = service.delete_route_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_route_server_endpoint", function()
 		local result = service.delete_route_server_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_route_server_peer", function()
 		local result = service.delete_route_server_peer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_route_table", function()
 		local result = service.delete_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_security_group", function()
 		local result = service.delete_security_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_snapshot", function()
 		local result = service.delete_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_spot_datafeed_subscription", function()
 		local result = service.delete_spot_datafeed_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subnet", function()
 		local result = service.delete_subnet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subnet_cidr_reservation", function()
 		local result = service.delete_subnet_cidr_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_tags", function()
 		local result = service.delete_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_traffic_mirror_filter", function()
 		local result = service.delete_traffic_mirror_filter()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_traffic_mirror_filter_rule", function()
 		local result = service.delete_traffic_mirror_filter_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_traffic_mirror_session", function()
 		local result = service.delete_traffic_mirror_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_traffic_mirror_target", function()
 		local result = service.delete_traffic_mirror_target()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway", function()
 		local result = service.delete_transit_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_connect", function()
 		local result = service.delete_transit_gateway_connect()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_connect_peer", function()
 		local result = service.delete_transit_gateway_connect_peer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_multicast_domain", function()
 		local result = service.delete_transit_gateway_multicast_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_peering_attachment", function()
 		local result = service.delete_transit_gateway_peering_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_policy_table", function()
 		local result = service.delete_transit_gateway_policy_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_prefix_list_reference", function()
 		local result = service.delete_transit_gateway_prefix_list_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_route", function()
 		local result = service.delete_transit_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_route_table", function()
 		local result = service.delete_transit_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_route_table_announcement", function()
 		local result = service.delete_transit_gateway_route_table_announcement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_transit_gateway_vpc_attachment", function()
 		local result = service.delete_transit_gateway_vpc_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_verified_access_endpoint", function()
 		local result = service.delete_verified_access_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_verified_access_group", function()
 		local result = service.delete_verified_access_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_verified_access_instance", function()
 		local result = service.delete_verified_access_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_verified_access_trust_provider", function()
 		local result = service.delete_verified_access_trust_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_volume", function()
 		local result = service.delete_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc", function()
 		local result = service.delete_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_block_public_access_exclusion", function()
 		local result = service.delete_vpc_block_public_access_exclusion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_endpoint_connection_notifications", function()
 		local result = service.delete_vpc_endpoint_connection_notifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_endpoint_service_configurations", function()
 		local result = service.delete_vpc_endpoint_service_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_endpoints", function()
 		local result = service.delete_vpc_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpc_peering_connection", function()
 		local result = service.delete_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpn_connection", function()
 		local result = service.delete_vpn_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpn_connection_route", function()
 		local result = service.delete_vpn_connection_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_vpn_gateway", function()
 		local result = service.delete_vpn_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deprovision_byoip_cidr", function()
 		local result = service.deprovision_byoip_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deprovision_ipam_byoasn", function()
 		local result = service.deprovision_ipam_byoasn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deprovision_ipam_pool_cidr", function()
 		local result = service.deprovision_ipam_pool_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deprovision_public_ipv4_pool_cidr", function()
 		local result = service.deprovision_public_ipv4_pool_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_image", function()
 		local result = service.deregister_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_instance_event_notification_attributes", function()
 		local result = service.deregister_instance_event_notification_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_transit_gateway_multicast_group_members", function()
 		local result = service.deregister_transit_gateway_multicast_group_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_transit_gateway_multicast_group_sources", function()
 		local result = service.deregister_transit_gateway_multicast_group_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_attributes", function()
 		local result = service.describe_account_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_address_transfers", function()
 		local result = service.describe_address_transfers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_addresses", function()
 		local result = service.describe_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_addresses_attribute", function()
 		local result = service.describe_addresses_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_aggregate_id_format", function()
 		local result = service.describe_aggregate_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_availability_zones", function()
 		local result = service.describe_availability_zones()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_aws_network_performance_metric_subscriptions", function()
 		local result = service.describe_aws_network_performance_metric_subscriptions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_bundle_tasks", function()
 		local result = service.describe_bundle_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_byoip_cidrs", function()
 		local result = service.describe_byoip_cidrs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_block_extension_history", function()
 		local result = service.describe_capacity_block_extension_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_block_extension_offerings", function()
 		local result = service.describe_capacity_block_extension_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_block_offerings", function()
 		local result = service.describe_capacity_block_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_reservation_billing_requests", function()
 		local result = service.describe_capacity_reservation_billing_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_reservation_fleets", function()
 		local result = service.describe_capacity_reservation_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_capacity_reservations", function()
 		local result = service.describe_capacity_reservations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_carrier_gateways", function()
 		local result = service.describe_carrier_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_classic_link_instances", function()
 		local result = service.describe_classic_link_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_client_vpn_authorization_rules", function()
 		local result = service.describe_client_vpn_authorization_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_client_vpn_connections", function()
 		local result = service.describe_client_vpn_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_client_vpn_endpoints", function()
 		local result = service.describe_client_vpn_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_client_vpn_routes", function()
 		local result = service.describe_client_vpn_routes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_client_vpn_target_networks", function()
 		local result = service.describe_client_vpn_target_networks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_coip_pools", function()
 		local result = service.describe_coip_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_conversion_tasks", function()
 		local result = service.describe_conversion_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_customer_gateways", function()
 		local result = service.describe_customer_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_declarative_policies_reports", function()
 		local result = service.describe_declarative_policies_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_dhcp_options", function()
 		local result = service.describe_dhcp_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_egress_only_internet_gateways", function()
 		local result = service.describe_egress_only_internet_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_elastic_gpus", function()
 		local result = service.describe_elastic_gpus()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export_image_tasks", function()
 		local result = service.describe_export_image_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_export_tasks", function()
 		local result = service.describe_export_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fast_launch_images", function()
 		local result = service.describe_fast_launch_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fast_snapshot_restores", function()
 		local result = service.describe_fast_snapshot_restores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_history", function()
 		local result = service.describe_fleet_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleet_instances", function()
 		local result = service.describe_fleet_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fleets", function()
 		local result = service.describe_fleets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_flow_logs", function()
 		local result = service.describe_flow_logs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fpga_image_attribute", function()
 		local result = service.describe_fpga_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_fpga_images", function()
 		local result = service.describe_fpga_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_host_reservation_offerings", function()
 		local result = service.describe_host_reservation_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_host_reservations", function()
 		local result = service.describe_host_reservations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_hosts", function()
 		local result = service.describe_hosts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_iam_instance_profile_associations", function()
 		local result = service.describe_iam_instance_profile_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_id_format", function()
 		local result = service.describe_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_identity_id_format", function()
 		local result = service.describe_identity_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_image_attribute", function()
 		local result = service.describe_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_images", function()
 		local result = service.describe_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_import_image_tasks", function()
 		local result = service.describe_import_image_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_import_snapshot_tasks", function()
 		local result = service.describe_import_snapshot_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_attribute", function()
 		local result = service.describe_instance_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_connect_endpoints", function()
 		local result = service.describe_instance_connect_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_credit_specifications", function()
 		local result = service.describe_instance_credit_specifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_event_notification_attributes", function()
 		local result = service.describe_instance_event_notification_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_event_windows", function()
 		local result = service.describe_instance_event_windows()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_image_metadata", function()
 		local result = service.describe_instance_image_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_status", function()
 		local result = service.describe_instance_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_topology", function()
 		local result = service.describe_instance_topology()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_type_offerings", function()
 		local result = service.describe_instance_type_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_types", function()
 		local result = service.describe_instance_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instances", function()
 		local result = service.describe_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_internet_gateways", function()
 		local result = service.describe_internet_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_byoasn", function()
 		local result = service.describe_ipam_byoasn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_external_resource_verification_tokens", function()
 		local result = service.describe_ipam_external_resource_verification_tokens()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_pools", function()
 		local result = service.describe_ipam_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_resource_discoveries", function()
 		local result = service.describe_ipam_resource_discoveries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_resource_discovery_associations", function()
 		local result = service.describe_ipam_resource_discovery_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipam_scopes", function()
 		local result = service.describe_ipam_scopes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipams", function()
 		local result = service.describe_ipams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_ipv6_pools", function()
 		local result = service.describe_ipv6_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_key_pairs", function()
 		local result = service.describe_key_pairs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_launch_template_versions", function()
 		local result = service.describe_launch_template_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_launch_templates", function()
 		local result = service.describe_launch_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateway_route_table_virtual_interface_group_associations", function()
 		local result = service.describe_local_gateway_route_table_virtual_interface_group_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateway_route_table_vpc_associations", function()
 		local result = service.describe_local_gateway_route_table_vpc_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateway_route_tables", function()
 		local result = service.describe_local_gateway_route_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateway_virtual_interface_groups", function()
 		local result = service.describe_local_gateway_virtual_interface_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateway_virtual_interfaces", function()
 		local result = service.describe_local_gateway_virtual_interfaces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_local_gateways", function()
 		local result = service.describe_local_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_locked_snapshots", function()
 		local result = service.describe_locked_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_mac_hosts", function()
 		local result = service.describe_mac_hosts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_managed_prefix_lists", function()
 		local result = service.describe_managed_prefix_lists()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_moving_addresses", function()
 		local result = service.describe_moving_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_nat_gateways", function()
 		local result = service.describe_nat_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_acls", function()
 		local result = service.describe_network_acls()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_insights_access_scope_analyses", function()
 		local result = service.describe_network_insights_access_scope_analyses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_insights_access_scopes", function()
 		local result = service.describe_network_insights_access_scopes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_insights_analyses", function()
 		local result = service.describe_network_insights_analyses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_insights_paths", function()
 		local result = service.describe_network_insights_paths()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_interface_attribute", function()
 		local result = service.describe_network_interface_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_interface_permissions", function()
 		local result = service.describe_network_interface_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_network_interfaces", function()
 		local result = service.describe_network_interfaces()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_placement_groups", function()
 		local result = service.describe_placement_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_prefix_lists", function()
 		local result = service.describe_prefix_lists()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_principal_id_format", function()
 		local result = service.describe_principal_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_public_ipv4_pools", function()
 		local result = service.describe_public_ipv4_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_regions", function()
 		local result = service.describe_regions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_replace_root_volume_tasks", function()
 		local result = service.describe_replace_root_volume_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_instances", function()
 		local result = service.describe_reserved_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_instances_listings", function()
 		local result = service.describe_reserved_instances_listings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_instances_modifications", function()
 		local result = service.describe_reserved_instances_modifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_reserved_instances_offerings", function()
 		local result = service.describe_reserved_instances_offerings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_route_server_endpoints", function()
 		local result = service.describe_route_server_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_route_server_peers", function()
 		local result = service.describe_route_server_peers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_route_servers", function()
 		local result = service.describe_route_servers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_route_tables", function()
 		local result = service.describe_route_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_scheduled_instance_availability", function()
 		local result = service.describe_scheduled_instance_availability()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_scheduled_instances", function()
 		local result = service.describe_scheduled_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_group_references", function()
 		local result = service.describe_security_group_references()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_group_rules", function()
 		local result = service.describe_security_group_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_group_vpc_associations", function()
 		local result = service.describe_security_group_vpc_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_security_groups", function()
 		local result = service.describe_security_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_snapshot_attribute", function()
 		local result = service.describe_snapshot_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_snapshot_tier_status", function()
 		local result = service.describe_snapshot_tier_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_snapshots", function()
 		local result = service.describe_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_datafeed_subscription", function()
 		local result = service.describe_spot_datafeed_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_fleet_instances", function()
 		local result = service.describe_spot_fleet_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_fleet_request_history", function()
 		local result = service.describe_spot_fleet_request_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_fleet_requests", function()
 		local result = service.describe_spot_fleet_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_instance_requests", function()
 		local result = service.describe_spot_instance_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_spot_price_history", function()
 		local result = service.describe_spot_price_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_stale_security_groups", function()
 		local result = service.describe_stale_security_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_store_image_tasks", function()
 		local result = service.describe_store_image_tasks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subnets", function()
 		local result = service.describe_subnets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_tags", function()
 		local result = service.describe_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_traffic_mirror_filter_rules", function()
 		local result = service.describe_traffic_mirror_filter_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_traffic_mirror_filters", function()
 		local result = service.describe_traffic_mirror_filters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_traffic_mirror_sessions", function()
 		local result = service.describe_traffic_mirror_sessions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_traffic_mirror_targets", function()
 		local result = service.describe_traffic_mirror_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_attachments", function()
 		local result = service.describe_transit_gateway_attachments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_connect_peers", function()
 		local result = service.describe_transit_gateway_connect_peers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_connects", function()
 		local result = service.describe_transit_gateway_connects()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_multicast_domains", function()
 		local result = service.describe_transit_gateway_multicast_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_peering_attachments", function()
 		local result = service.describe_transit_gateway_peering_attachments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_policy_tables", function()
 		local result = service.describe_transit_gateway_policy_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_route_table_announcements", function()
 		local result = service.describe_transit_gateway_route_table_announcements()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_route_tables", function()
 		local result = service.describe_transit_gateway_route_tables()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateway_vpc_attachments", function()
 		local result = service.describe_transit_gateway_vpc_attachments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_transit_gateways", function()
 		local result = service.describe_transit_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trunk_interface_associations", function()
 		local result = service.describe_trunk_interface_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_verified_access_endpoints", function()
 		local result = service.describe_verified_access_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_verified_access_groups", function()
 		local result = service.describe_verified_access_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_verified_access_instance_logging_configurations", function()
 		local result = service.describe_verified_access_instance_logging_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_verified_access_instances", function()
 		local result = service.describe_verified_access_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_verified_access_trust_providers", function()
 		local result = service.describe_verified_access_trust_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_volume_attribute", function()
 		local result = service.describe_volume_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_volume_status", function()
 		local result = service.describe_volume_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_volumes", function()
 		local result = service.describe_volumes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_volumes_modifications", function()
 		local result = service.describe_volumes_modifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_attribute", function()
 		local result = service.describe_vpc_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_block_public_access_exclusions", function()
 		local result = service.describe_vpc_block_public_access_exclusions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_block_public_access_options", function()
 		local result = service.describe_vpc_block_public_access_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_classic_link", function()
 		local result = service.describe_vpc_classic_link()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_classic_link_dns_support", function()
 		local result = service.describe_vpc_classic_link_dns_support()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_associations", function()
 		local result = service.describe_vpc_endpoint_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_connection_notifications", function()
 		local result = service.describe_vpc_endpoint_connection_notifications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_connections", function()
 		local result = service.describe_vpc_endpoint_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_service_configurations", function()
 		local result = service.describe_vpc_endpoint_service_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_service_permissions", function()
 		local result = service.describe_vpc_endpoint_service_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoint_services", function()
 		local result = service.describe_vpc_endpoint_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_endpoints", function()
 		local result = service.describe_vpc_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpc_peering_connections", function()
 		local result = service.describe_vpc_peering_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpcs", function()
 		local result = service.describe_vpcs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpn_connections", function()
 		local result = service.describe_vpn_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_vpn_gateways", function()
 		local result = service.describe_vpn_gateways()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_classic_link_vpc", function()
 		local result = service.detach_classic_link_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_internet_gateway", function()
 		local result = service.detach_internet_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_network_interface", function()
 		local result = service.detach_network_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_verified_access_trust_provider", function()
 		local result = service.detach_verified_access_trust_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_volume", function()
 		local result = service.detach_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_vpn_gateway", function()
 		local result = service.detach_vpn_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_address_transfer", function()
 		local result = service.disable_address_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_allowed_images_settings", function()
 		local result = service.disable_allowed_images_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_aws_network_performance_metric_subscription", function()
 		local result = service.disable_aws_network_performance_metric_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_ebs_encryption_by_default", function()
 		local result = service.disable_ebs_encryption_by_default()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_fast_launch", function()
 		local result = service.disable_fast_launch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_fast_snapshot_restores", function()
 		local result = service.disable_fast_snapshot_restores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_image", function()
 		local result = service.disable_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_image_block_public_access", function()
 		local result = service.disable_image_block_public_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_image_deprecation", function()
 		local result = service.disable_image_deprecation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_image_deregistration_protection", function()
 		local result = service.disable_image_deregistration_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_ipam_organization_admin_account", function()
 		local result = service.disable_ipam_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_route_server_propagation", function()
 		local result = service.disable_route_server_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_serial_console_access", function()
 		local result = service.disable_serial_console_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_snapshot_block_public_access", function()
 		local result = service.disable_snapshot_block_public_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_transit_gateway_route_table_propagation", function()
 		local result = service.disable_transit_gateway_route_table_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_vgw_route_propagation", function()
 		local result = service.disable_vgw_route_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_vpc_classic_link", function()
 		local result = service.disable_vpc_classic_link()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_vpc_classic_link_dns_support", function()
 		local result = service.disable_vpc_classic_link_dns_support()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_address", function()
 		local result = service.disassociate_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_capacity_reservation_billing_owner", function()
 		local result = service.disassociate_capacity_reservation_billing_owner()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_client_vpn_target_network", function()
 		local result = service.disassociate_client_vpn_target_network()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_enclave_certificate_iam_role", function()
 		local result = service.disassociate_enclave_certificate_iam_role()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_iam_instance_profile", function()
 		local result = service.disassociate_iam_instance_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_instance_event_window", function()
 		local result = service.disassociate_instance_event_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_ipam_byoasn", function()
 		local result = service.disassociate_ipam_byoasn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_ipam_resource_discovery", function()
 		local result = service.disassociate_ipam_resource_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_nat_gateway_address", function()
 		local result = service.disassociate_nat_gateway_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_route_server", function()
 		local result = service.disassociate_route_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_route_table", function()
 		local result = service.disassociate_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_security_group_vpc", function()
 		local result = service.disassociate_security_group_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_subnet_cidr_block", function()
 		local result = service.disassociate_subnet_cidr_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_transit_gateway_multicast_domain", function()
 		local result = service.disassociate_transit_gateway_multicast_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_transit_gateway_policy_table", function()
 		local result = service.disassociate_transit_gateway_policy_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_transit_gateway_route_table", function()
 		local result = service.disassociate_transit_gateway_route_table()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_trunk_interface", function()
 		local result = service.disassociate_trunk_interface()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_vpc_cidr_block", function()
 		local result = service.disassociate_vpc_cidr_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_address_transfer", function()
 		local result = service.enable_address_transfer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_allowed_images_settings", function()
 		local result = service.enable_allowed_images_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_aws_network_performance_metric_subscription", function()
 		local result = service.enable_aws_network_performance_metric_subscription()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_ebs_encryption_by_default", function()
 		local result = service.enable_ebs_encryption_by_default()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_fast_launch", function()
 		local result = service.enable_fast_launch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_fast_snapshot_restores", function()
 		local result = service.enable_fast_snapshot_restores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_image", function()
 		local result = service.enable_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_image_block_public_access", function()
 		local result = service.enable_image_block_public_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_image_deprecation", function()
 		local result = service.enable_image_deprecation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_image_deregistration_protection", function()
 		local result = service.enable_image_deregistration_protection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_ipam_organization_admin_account", function()
 		local result = service.enable_ipam_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_reachability_analyzer_organization_sharing", function()
 		local result = service.enable_reachability_analyzer_organization_sharing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_route_server_propagation", function()
 		local result = service.enable_route_server_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_serial_console_access", function()
 		local result = service.enable_serial_console_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_snapshot_block_public_access", function()
 		local result = service.enable_snapshot_block_public_access()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_transit_gateway_route_table_propagation", function()
 		local result = service.enable_transit_gateway_route_table_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_vgw_route_propagation", function()
 		local result = service.enable_vgw_route_propagation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_volume_io", function()
 		local result = service.enable_volume_io()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_vpc_classic_link", function()
 		local result = service.enable_vpc_classic_link()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_vpc_classic_link_dns_support", function()
 		local result = service.enable_vpc_classic_link_dns_support()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_client_vpn_client_certificate_revocation_list", function()
 		local result = service.export_client_vpn_client_certificate_revocation_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_client_vpn_client_configuration", function()
 		local result = service.export_client_vpn_client_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_image", function()
 		local result = service.export_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_transit_gateway_routes", function()
 		local result = service.export_transit_gateway_routes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_verified_access_instance_client_configuration", function()
 		local result = service.export_verified_access_instance_client_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_allowed_images_settings", function()
 		local result = service.get_allowed_images_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_associated_enclave_certificate_iam_roles", function()
 		local result = service.get_associated_enclave_certificate_iam_roles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_associated_ipv6_pool_cidrs", function()
 		local result = service.get_associated_ipv6_pool_cidrs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_aws_network_performance_data", function()
 		local result = service.get_aws_network_performance_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_capacity_reservation_usage", function()
 		local result = service.get_capacity_reservation_usage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_coip_pool_usage", function()
 		local result = service.get_coip_pool_usage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_console_output", function()
 		local result = service.get_console_output()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_console_screenshot", function()
 		local result = service.get_console_screenshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_declarative_policies_report_summary", function()
 		local result = service.get_declarative_policies_report_summary()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_default_credit_specification", function()
 		local result = service.get_default_credit_specification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ebs_default_kms_key_id", function()
 		local result = service.get_ebs_default_kms_key_id()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ebs_encryption_by_default", function()
 		local result = service.get_ebs_encryption_by_default()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_flow_logs_integration_template", function()
 		local result = service.get_flow_logs_integration_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_groups_for_capacity_reservation", function()
 		local result = service.get_groups_for_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_host_reservation_purchase_preview", function()
 		local result = service.get_host_reservation_purchase_preview()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_image_block_public_access_state", function()
 		local result = service.get_image_block_public_access_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_metadata_defaults", function()
 		local result = service.get_instance_metadata_defaults()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_tpm_ek_pub", function()
 		local result = service.get_instance_tpm_ek_pub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_types_from_instance_requirements", function()
 		local result = service.get_instance_types_from_instance_requirements()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_uefi_data", function()
 		local result = service.get_instance_uefi_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_address_history", function()
 		local result = service.get_ipam_address_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_discovered_accounts", function()
 		local result = service.get_ipam_discovered_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_discovered_public_addresses", function()
 		local result = service.get_ipam_discovered_public_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_discovered_resource_cidrs", function()
 		local result = service.get_ipam_discovered_resource_cidrs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_pool_allocations", function()
 		local result = service.get_ipam_pool_allocations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_pool_cidrs", function()
 		local result = service.get_ipam_pool_cidrs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_ipam_resource_cidrs", function()
 		local result = service.get_ipam_resource_cidrs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_launch_template_data", function()
 		local result = service.get_launch_template_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_prefix_list_associations", function()
 		local result = service.get_managed_prefix_list_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_prefix_list_entries", function()
 		local result = service.get_managed_prefix_list_entries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_network_insights_access_scope_analysis_findings", function()
 		local result = service.get_network_insights_access_scope_analysis_findings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_network_insights_access_scope_content", function()
 		local result = service.get_network_insights_access_scope_content()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_password_data", function()
 		local result = service.get_password_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_reserved_instances_exchange_quote", function()
 		local result = service.get_reserved_instances_exchange_quote()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_route_server_associations", function()
 		local result = service.get_route_server_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_route_server_propagations", function()
 		local result = service.get_route_server_propagations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_route_server_routing_database", function()
 		local result = service.get_route_server_routing_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_security_groups_for_vpc", function()
 		local result = service.get_security_groups_for_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_serial_console_access_status", function()
 		local result = service.get_serial_console_access_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_snapshot_block_public_access_state", function()
 		local result = service.get_snapshot_block_public_access_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_spot_placement_scores", function()
 		local result = service.get_spot_placement_scores()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_subnet_cidr_reservations", function()
 		local result = service.get_subnet_cidr_reservations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_attachment_propagations", function()
 		local result = service.get_transit_gateway_attachment_propagations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_multicast_domain_associations", function()
 		local result = service.get_transit_gateway_multicast_domain_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_policy_table_associations", function()
 		local result = service.get_transit_gateway_policy_table_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_policy_table_entries", function()
 		local result = service.get_transit_gateway_policy_table_entries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_prefix_list_references", function()
 		local result = service.get_transit_gateway_prefix_list_references()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_route_table_associations", function()
 		local result = service.get_transit_gateway_route_table_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_transit_gateway_route_table_propagations", function()
 		local result = service.get_transit_gateway_route_table_propagations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_verified_access_endpoint_policy", function()
 		local result = service.get_verified_access_endpoint_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_verified_access_endpoint_targets", function()
 		local result = service.get_verified_access_endpoint_targets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_verified_access_group_policy", function()
 		local result = service.get_verified_access_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_vpn_connection_device_sample_configuration", function()
 		local result = service.get_vpn_connection_device_sample_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_vpn_connection_device_types", function()
 		local result = service.get_vpn_connection_device_types()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_vpn_tunnel_replacement_status", function()
 		local result = service.get_vpn_tunnel_replacement_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_client_vpn_client_certificate_revocation_list", function()
 		local result = service.import_client_vpn_client_certificate_revocation_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_image", function()
 		local result = service.import_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_key_pair", function()
 		local result = service.import_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_snapshot", function()
 		local result = service.import_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_images_in_recycle_bin", function()
 		local result = service.list_images_in_recycle_bin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_snapshots_in_recycle_bin", function()
 		local result = service.list_snapshots_in_recycle_bin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with lock_snapshot", function()
 		local result = service.lock_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_address_attribute", function()
 		local result = service.modify_address_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_availability_zone_group", function()
 		local result = service.modify_availability_zone_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_capacity_reservation", function()
 		local result = service.modify_capacity_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_capacity_reservation_fleet", function()
 		local result = service.modify_capacity_reservation_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_client_vpn_endpoint", function()
 		local result = service.modify_client_vpn_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_default_credit_specification", function()
 		local result = service.modify_default_credit_specification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ebs_default_kms_key_id", function()
 		local result = service.modify_ebs_default_kms_key_id()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_fleet", function()
 		local result = service.modify_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_fpga_image_attribute", function()
 		local result = service.modify_fpga_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_hosts", function()
 		local result = service.modify_hosts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_id_format", function()
 		local result = service.modify_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_identity_id_format", function()
 		local result = service.modify_identity_id_format()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_image_attribute", function()
 		local result = service.modify_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_attribute", function()
 		local result = service.modify_instance_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_capacity_reservation_attributes", function()
 		local result = service.modify_instance_capacity_reservation_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_cpu_options", function()
 		local result = service.modify_instance_cpu_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_credit_specification", function()
 		local result = service.modify_instance_credit_specification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_event_start_time", function()
 		local result = service.modify_instance_event_start_time()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_event_window", function()
 		local result = service.modify_instance_event_window()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_maintenance_options", function()
 		local result = service.modify_instance_maintenance_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_metadata_defaults", function()
 		local result = service.modify_instance_metadata_defaults()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_metadata_options", function()
 		local result = service.modify_instance_metadata_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_network_performance_options", function()
 		local result = service.modify_instance_network_performance_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_instance_placement", function()
 		local result = service.modify_instance_placement()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ipam", function()
 		local result = service.modify_ipam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ipam_pool", function()
 		local result = service.modify_ipam_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ipam_resource_cidr", function()
 		local result = service.modify_ipam_resource_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ipam_resource_discovery", function()
 		local result = service.modify_ipam_resource_discovery()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_ipam_scope", function()
 		local result = service.modify_ipam_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_launch_template", function()
 		local result = service.modify_launch_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_local_gateway_route", function()
 		local result = service.modify_local_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_managed_prefix_list", function()
 		local result = service.modify_managed_prefix_list()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_network_interface_attribute", function()
 		local result = service.modify_network_interface_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_private_dns_name_options", function()
 		local result = service.modify_private_dns_name_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_reserved_instances", function()
 		local result = service.modify_reserved_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_route_server", function()
 		local result = service.modify_route_server()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_security_group_rules", function()
 		local result = service.modify_security_group_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_snapshot_attribute", function()
 		local result = service.modify_snapshot_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_snapshot_tier", function()
 		local result = service.modify_snapshot_tier()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_spot_fleet_request", function()
 		local result = service.modify_spot_fleet_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_subnet_attribute", function()
 		local result = service.modify_subnet_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_traffic_mirror_filter_network_services", function()
 		local result = service.modify_traffic_mirror_filter_network_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_traffic_mirror_filter_rule", function()
 		local result = service.modify_traffic_mirror_filter_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_traffic_mirror_session", function()
 		local result = service.modify_traffic_mirror_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_transit_gateway", function()
 		local result = service.modify_transit_gateway()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_transit_gateway_prefix_list_reference", function()
 		local result = service.modify_transit_gateway_prefix_list_reference()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_transit_gateway_vpc_attachment", function()
 		local result = service.modify_transit_gateway_vpc_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_endpoint", function()
 		local result = service.modify_verified_access_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_endpoint_policy", function()
 		local result = service.modify_verified_access_endpoint_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_group", function()
 		local result = service.modify_verified_access_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_group_policy", function()
 		local result = service.modify_verified_access_group_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_instance", function()
 		local result = service.modify_verified_access_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_instance_logging_configuration", function()
 		local result = service.modify_verified_access_instance_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_verified_access_trust_provider", function()
 		local result = service.modify_verified_access_trust_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_volume", function()
 		local result = service.modify_volume()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_volume_attribute", function()
 		local result = service.modify_volume_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_attribute", function()
 		local result = service.modify_vpc_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_block_public_access_exclusion", function()
 		local result = service.modify_vpc_block_public_access_exclusion()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_block_public_access_options", function()
 		local result = service.modify_vpc_block_public_access_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_endpoint", function()
 		local result = service.modify_vpc_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_endpoint_connection_notification", function()
 		local result = service.modify_vpc_endpoint_connection_notification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_endpoint_service_configuration", function()
 		local result = service.modify_vpc_endpoint_service_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_endpoint_service_payer_responsibility", function()
 		local result = service.modify_vpc_endpoint_service_payer_responsibility()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_endpoint_service_permissions", function()
 		local result = service.modify_vpc_endpoint_service_permissions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_peering_connection_options", function()
 		local result = service.modify_vpc_peering_connection_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpc_tenancy", function()
 		local result = service.modify_vpc_tenancy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpn_connection", function()
 		local result = service.modify_vpn_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpn_connection_options", function()
 		local result = service.modify_vpn_connection_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpn_tunnel_certificate", function()
 		local result = service.modify_vpn_tunnel_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with modify_vpn_tunnel_options", function()
 		local result = service.modify_vpn_tunnel_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with monitor_instances", function()
 		local result = service.monitor_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with move_address_to_vpc", function()
 		local result = service.move_address_to_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with move_byoip_cidr_to_ipam", function()
 		local result = service.move_byoip_cidr_to_ipam()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with move_capacity_reservation_instances", function()
 		local result = service.move_capacity_reservation_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provision_byoip_cidr", function()
 		local result = service.provision_byoip_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provision_ipam_byoasn", function()
 		local result = service.provision_ipam_byoasn()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provision_ipam_pool_cidr", function()
 		local result = service.provision_ipam_pool_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provision_public_ipv4_pool_cidr", function()
 		local result = service.provision_public_ipv4_pool_cidr()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_capacity_block", function()
 		local result = service.purchase_capacity_block()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_capacity_block_extension", function()
 		local result = service.purchase_capacity_block_extension()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_host_reservation", function()
 		local result = service.purchase_host_reservation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_reserved_instances_offering", function()
 		local result = service.purchase_reserved_instances_offering()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with purchase_scheduled_instances", function()
 		local result = service.purchase_scheduled_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_instances", function()
 		local result = service.reboot_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_image", function()
 		local result = service.register_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_instance_event_notification_attributes", function()
 		local result = service.register_instance_event_notification_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_transit_gateway_multicast_group_members", function()
 		local result = service.register_transit_gateway_multicast_group_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_transit_gateway_multicast_group_sources", function()
 		local result = service.register_transit_gateway_multicast_group_sources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_capacity_reservation_billing_ownership", function()
 		local result = service.reject_capacity_reservation_billing_ownership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_transit_gateway_multicast_domain_associations", function()
 		local result = service.reject_transit_gateway_multicast_domain_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_transit_gateway_peering_attachment", function()
 		local result = service.reject_transit_gateway_peering_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_transit_gateway_vpc_attachment", function()
 		local result = service.reject_transit_gateway_vpc_attachment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_vpc_endpoint_connections", function()
 		local result = service.reject_vpc_endpoint_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_vpc_peering_connection", function()
 		local result = service.reject_vpc_peering_connection()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with release_address", function()
 		local result = service.release_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with release_hosts", function()
 		local result = service.release_hosts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with release_ipam_pool_allocation", function()
 		local result = service.release_ipam_pool_allocation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_iam_instance_profile_association", function()
 		local result = service.replace_iam_instance_profile_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_image_criteria_in_allowed_images_settings", function()
 		local result = service.replace_image_criteria_in_allowed_images_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_network_acl_association", function()
 		local result = service.replace_network_acl_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_network_acl_entry", function()
 		local result = service.replace_network_acl_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_route", function()
 		local result = service.replace_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_route_table_association", function()
 		local result = service.replace_route_table_association()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_transit_gateway_route", function()
 		local result = service.replace_transit_gateway_route()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with replace_vpn_tunnel", function()
 		local result = service.replace_vpn_tunnel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with report_instance_status", function()
 		local result = service.report_instance_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with request_spot_fleet", function()
 		local result = service.request_spot_fleet()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with request_spot_instances", function()
 		local result = service.request_spot_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_address_attribute", function()
 		local result = service.reset_address_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_ebs_default_kms_key_id", function()
 		local result = service.reset_ebs_default_kms_key_id()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_fpga_image_attribute", function()
 		local result = service.reset_fpga_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_image_attribute", function()
 		local result = service.reset_image_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_instance_attribute", function()
 		local result = service.reset_instance_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_network_interface_attribute", function()
 		local result = service.reset_network_interface_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_snapshot_attribute", function()
 		local result = service.reset_snapshot_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_address_to_classic", function()
 		local result = service.restore_address_to_classic()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_image_from_recycle_bin", function()
 		local result = service.restore_image_from_recycle_bin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_managed_prefix_list_version", function()
 		local result = service.restore_managed_prefix_list_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_snapshot_from_recycle_bin", function()
 		local result = service.restore_snapshot_from_recycle_bin()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with restore_snapshot_tier", function()
 		local result = service.restore_snapshot_tier()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_client_vpn_ingress", function()
 		local result = service.revoke_client_vpn_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_security_group_egress", function()
 		local result = service.revoke_security_group_egress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with revoke_security_group_ingress", function()
 		local result = service.revoke_security_group_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with run_instances", function()
 		local result = service.run_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with run_scheduled_instances", function()
 		local result = service.run_scheduled_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_local_gateway_routes", function()
 		local result = service.search_local_gateway_routes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_transit_gateway_multicast_groups", function()
 		local result = service.search_transit_gateway_multicast_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_transit_gateway_routes", function()
 		local result = service.search_transit_gateway_routes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_diagnostic_interrupt", function()
 		local result = service.send_diagnostic_interrupt()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_declarative_policies_report", function()
 		local result = service.start_declarative_policies_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_instances", function()
 		local result = service.start_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_network_insights_access_scope_analysis", function()
 		local result = service.start_network_insights_access_scope_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_network_insights_analysis", function()
 		local result = service.start_network_insights_analysis()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_vpc_endpoint_service_private_dns_verification", function()
 		local result = service.start_vpc_endpoint_service_private_dns_verification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_instances", function()
 		local result = service.stop_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with terminate_client_vpn_connections", function()
 		local result = service.terminate_client_vpn_connections()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with terminate_instances", function()
 		local result = service.terminate_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unassign_ipv6_addresses", function()
 		local result = service.unassign_ipv6_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unassign_private_ip_addresses", function()
 		local result = service.unassign_private_ip_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unassign_private_nat_gateway_address", function()
 		local result = service.unassign_private_nat_gateway_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unlock_snapshot", function()
 		local result = service.unlock_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unmonitor_instances", function()
 		local result = service.unmonitor_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_security_group_rule_descriptions_egress", function()
 		local result = service.update_security_group_rule_descriptions_egress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_security_group_rule_descriptions_ingress", function()
 		local result = service.update_security_group_rule_descriptions_ingress()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with withdraw_byoip_cidr", function()
 		local result = service.withdraw_byoip_cidr()
 		assert.is_true(result.success)
 	end)
-
 end)

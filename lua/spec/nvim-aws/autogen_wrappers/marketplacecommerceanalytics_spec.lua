@@ -9,5 +9,4 @@ describe("AWS marketplacecommerceanalytics service testing", function()
 		local result = service.generate_data_set()
 		assert.is_true(result.success)
 	end)
-
 end)

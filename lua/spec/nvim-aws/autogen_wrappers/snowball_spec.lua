@@ -9,135 +9,108 @@ describe("AWS snowball service testing", function()
 		local result = service.cancel_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_job", function()
 		local result = service.cancel_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_address", function()
 		local result = service.create_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cluster", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job", function()
 		local result = service.create_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_long_term_pricing", function()
 		local result = service.create_long_term_pricing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_return_shipping_label", function()
 		local result = service.create_return_shipping_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_address", function()
 		local result = service.describe_address()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_addresses", function()
 		local result = service.describe_addresses()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_cluster", function()
 		local result = service.describe_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_job", function()
 		local result = service.describe_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_return_shipping_label", function()
 		local result = service.describe_return_shipping_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job_manifest", function()
 		local result = service.get_job_manifest()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_job_unlock_code", function()
 		local result = service.get_job_unlock_code()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_snowball_usage", function()
 		local result = service.get_snowball_usage()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_software_updates", function()
 		local result = service.get_software_updates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cluster_jobs", function()
 		local result = service.list_cluster_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_clusters", function()
 		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_compatible_images", function()
 		local result = service.list_compatible_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_jobs", function()
 		local result = service.list_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_long_term_pricing", function()
 		local result = service.list_long_term_pricing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_pickup_locations", function()
 		local result = service.list_pickup_locations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_service_versions", function()
 		local result = service.list_service_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_job", function()
 		local result = service.update_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_job_shipment_state", function()
 		local result = service.update_job_shipment_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_long_term_pricing", function()
 		local result = service.update_long_term_pricing()
 		assert.is_true(result.success)
 	end)
-
 end)

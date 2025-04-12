@@ -9,15 +9,12 @@ describe("AWS sagemaker-edge service testing", function()
 		local result = service.get_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_device_registration", function()
 		local result = service.get_device_registration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_heartbeat", function()
 		local result = service.send_heartbeat()
 		assert.is_true(result.success)
 	end)
-
 end)

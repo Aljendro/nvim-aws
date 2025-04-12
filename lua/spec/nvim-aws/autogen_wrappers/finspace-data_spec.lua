@@ -2,5 +2,7 @@
 -- AWS Service: finspace-data
 
 require("nvim-aws").setup()
+local service = require("nvim-aws.autogen_wrappers.finspace-data")
 
-describe("AWS finspace-data service testing", function() end)
+describe("AWS finspace-data service testing", function()
+end)

@@ -9,150 +9,120 @@ describe("AWS lookoutmetrics service testing", function()
 		local result = service.activate_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with back_test_anomaly_detector", function()
 		local result = service.back_test_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_alert", function()
 		local result = service.create_alert()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_anomaly_detector", function()
 		local result = service.create_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_metric_set", function()
 		local result = service.create_metric_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deactivate_anomaly_detector", function()
 		local result = service.deactivate_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_alert", function()
 		local result = service.delete_alert()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_anomaly_detector", function()
 		local result = service.delete_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_alert", function()
 		local result = service.describe_alert()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_anomaly_detection_executions", function()
 		local result = service.describe_anomaly_detection_executions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_anomaly_detector", function()
 		local result = service.describe_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_metric_set", function()
 		local result = service.describe_metric_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detect_metric_set_config", function()
 		local result = service.detect_metric_set_config()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_anomaly_group", function()
 		local result = service.get_anomaly_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_quality_metrics", function()
 		local result = service.get_data_quality_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_feedback", function()
 		local result = service.get_feedback()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_sample_data", function()
 		local result = service.get_sample_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_alerts", function()
 		local result = service.list_alerts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_anomaly_detectors", function()
 		local result = service.list_anomaly_detectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_anomaly_group_related_metrics", function()
 		local result = service.list_anomaly_group_related_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_anomaly_group_summaries", function()
 		local result = service.list_anomaly_group_summaries()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_anomaly_group_time_series", function()
 		local result = service.list_anomaly_group_time_series()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_metric_sets", function()
 		local result = service.list_metric_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_feedback", function()
 		local result = service.put_feedback()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_alert", function()
 		local result = service.update_alert()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_anomaly_detector", function()
 		local result = service.update_anomaly_detector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_metric_set", function()
 		local result = service.update_metric_set()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,70 +9,56 @@ describe("AWS bedrock-data-automation service testing", function()
 		local result = service.create_blueprint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_blueprint_version", function()
 		local result = service.create_blueprint_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_data_automation_project", function()
 		local result = service.create_data_automation_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_blueprint", function()
 		local result = service.delete_blueprint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_data_automation_project", function()
 		local result = service.delete_data_automation_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_blueprint", function()
 		local result = service.get_blueprint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_data_automation_project", function()
 		local result = service.get_data_automation_project()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_blueprints", function()
 		local result = service.list_blueprints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_data_automation_projects", function()
 		local result = service.list_data_automation_projects()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_blueprint", function()
 		local result = service.update_blueprint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_data_automation_project", function()
 		local result = service.update_data_automation_project()
 		assert.is_true(result.success)
 	end)
-
 end)

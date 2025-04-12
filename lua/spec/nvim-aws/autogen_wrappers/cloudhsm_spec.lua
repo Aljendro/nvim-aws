@@ -2,5 +2,7 @@
 -- AWS Service: cloudhsm
 
 require("nvim-aws").setup()
+local service = require("nvim-aws.autogen_wrappers.cloudhsm")
 
-describe("AWS cloudhsm service testing", function() end)
+describe("AWS cloudhsm service testing", function()
+end)

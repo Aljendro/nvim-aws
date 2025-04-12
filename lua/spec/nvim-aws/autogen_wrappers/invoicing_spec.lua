@@ -9,45 +9,36 @@ describe("AWS invoicing service testing", function()
 		local result = service.batch_get_invoice_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_invoice_unit", function()
 		local result = service.create_invoice_unit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_invoice_unit", function()
 		local result = service.delete_invoice_unit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_invoice_unit", function()
 		local result = service.get_invoice_unit()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_invoice_units", function()
 		local result = service.list_invoice_units()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_invoice_unit", function()
 		local result = service.update_invoice_unit()
 		assert.is_true(result.success)
 	end)
-
 end)

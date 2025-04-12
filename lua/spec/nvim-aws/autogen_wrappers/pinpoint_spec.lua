@@ -9,610 +9,488 @@ describe("AWS pinpoint service testing", function()
 		local result = service.create_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_campaign", function()
 		local result = service.create_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_email_template", function()
 		local result = service.create_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_export_job", function()
 		local result = service.create_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_import_job", function()
 		local result = service.create_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_in_app_template", function()
 		local result = service.create_in_app_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_journey", function()
 		local result = service.create_journey()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_push_template", function()
 		local result = service.create_push_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_recommender_configuration", function()
 		local result = service.create_recommender_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_segment", function()
 		local result = service.create_segment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_sms_template", function()
 		local result = service.create_sms_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_voice_template", function()
 		local result = service.create_voice_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_adm_channel", function()
 		local result = service.delete_adm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_apns_channel", function()
 		local result = service.delete_apns_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_apns_sandbox_channel", function()
 		local result = service.delete_apns_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_apns_voip_channel", function()
 		local result = service.delete_apns_voip_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_apns_voip_sandbox_channel", function()
 		local result = service.delete_apns_voip_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app", function()
 		local result = service.delete_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_baidu_channel", function()
 		local result = service.delete_baidu_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_campaign", function()
 		local result = service.delete_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_email_channel", function()
 		local result = service.delete_email_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_email_template", function()
 		local result = service.delete_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_endpoint", function()
 		local result = service.delete_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_stream", function()
 		local result = service.delete_event_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_gcm_channel", function()
 		local result = service.delete_gcm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_in_app_template", function()
 		local result = service.delete_in_app_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_journey", function()
 		local result = service.delete_journey()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_push_template", function()
 		local result = service.delete_push_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_recommender_configuration", function()
 		local result = service.delete_recommender_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_segment", function()
 		local result = service.delete_segment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_sms_channel", function()
 		local result = service.delete_sms_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_sms_template", function()
 		local result = service.delete_sms_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_user_endpoints", function()
 		local result = service.delete_user_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_voice_channel", function()
 		local result = service.delete_voice_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_voice_template", function()
 		local result = service.delete_voice_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_adm_channel", function()
 		local result = service.get_adm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_apns_channel", function()
 		local result = service.get_apns_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_apns_sandbox_channel", function()
 		local result = service.get_apns_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_apns_voip_channel", function()
 		local result = service.get_apns_voip_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_apns_voip_sandbox_channel", function()
 		local result = service.get_apns_voip_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_app", function()
 		local result = service.get_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_date_range_kpi", function()
 		local result = service.get_application_date_range_kpi()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_settings", function()
 		local result = service.get_application_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_apps", function()
 		local result = service.get_apps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_baidu_channel", function()
 		local result = service.get_baidu_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign", function()
 		local result = service.get_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign_activities", function()
 		local result = service.get_campaign_activities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign_date_range_kpi", function()
 		local result = service.get_campaign_date_range_kpi()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign_version", function()
 		local result = service.get_campaign_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaign_versions", function()
 		local result = service.get_campaign_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_campaigns", function()
 		local result = service.get_campaigns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_channels", function()
 		local result = service.get_channels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_email_channel", function()
 		local result = service.get_email_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_email_template", function()
 		local result = service.get_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_endpoint", function()
 		local result = service.get_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_stream", function()
 		local result = service.get_event_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_export_job", function()
 		local result = service.get_export_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_export_jobs", function()
 		local result = service.get_export_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_gcm_channel", function()
 		local result = service.get_gcm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_import_job", function()
 		local result = service.get_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_import_jobs", function()
 		local result = service.get_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_in_app_messages", function()
 		local result = service.get_in_app_messages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_in_app_template", function()
 		local result = service.get_in_app_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey", function()
 		local result = service.get_journey()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_date_range_kpi", function()
 		local result = service.get_journey_date_range_kpi()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_execution_activity_metrics", function()
 		local result = service.get_journey_execution_activity_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_execution_metrics", function()
 		local result = service.get_journey_execution_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_run_execution_activity_metrics", function()
 		local result = service.get_journey_run_execution_activity_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_run_execution_metrics", function()
 		local result = service.get_journey_run_execution_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_journey_runs", function()
 		local result = service.get_journey_runs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_push_template", function()
 		local result = service.get_push_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_recommender_configuration", function()
 		local result = service.get_recommender_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_recommender_configurations", function()
 		local result = service.get_recommender_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segment", function()
 		local result = service.get_segment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segment_export_jobs", function()
 		local result = service.get_segment_export_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segment_import_jobs", function()
 		local result = service.get_segment_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segment_version", function()
 		local result = service.get_segment_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segment_versions", function()
 		local result = service.get_segment_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_segments", function()
 		local result = service.get_segments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_sms_channel", function()
 		local result = service.get_sms_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_sms_template", function()
 		local result = service.get_sms_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_user_endpoints", function()
 		local result = service.get_user_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_voice_channel", function()
 		local result = service.get_voice_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_voice_template", function()
 		local result = service.get_voice_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_journeys", function()
 		local result = service.list_journeys()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_template_versions", function()
 		local result = service.list_template_versions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_templates", function()
 		local result = service.list_templates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with phone_number_validate", function()
 		local result = service.phone_number_validate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_event_stream", function()
 		local result = service.put_event_stream()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_events", function()
 		local result = service.put_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_attributes", function()
 		local result = service.remove_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_messages", function()
 		local result = service.send_messages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_otp_message", function()
 		local result = service.send_otp_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_users_messages", function()
 		local result = service.send_users_messages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_adm_channel", function()
 		local result = service.update_adm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_apns_channel", function()
 		local result = service.update_apns_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_apns_sandbox_channel", function()
 		local result = service.update_apns_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_apns_voip_channel", function()
 		local result = service.update_apns_voip_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_apns_voip_sandbox_channel", function()
 		local result = service.update_apns_voip_sandbox_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application_settings", function()
 		local result = service.update_application_settings()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_baidu_channel", function()
 		local result = service.update_baidu_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_campaign", function()
 		local result = service.update_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_email_channel", function()
 		local result = service.update_email_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_email_template", function()
 		local result = service.update_email_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_endpoint", function()
 		local result = service.update_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_endpoints_batch", function()
 		local result = service.update_endpoints_batch()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_gcm_channel", function()
 		local result = service.update_gcm_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_in_app_template", function()
 		local result = service.update_in_app_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_journey", function()
 		local result = service.update_journey()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_journey_state", function()
 		local result = service.update_journey_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_push_template", function()
 		local result = service.update_push_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_recommender_configuration", function()
 		local result = service.update_recommender_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_segment", function()
 		local result = service.update_segment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_sms_channel", function()
 		local result = service.update_sms_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_sms_template", function()
 		local result = service.update_sms_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_template_active_version", function()
 		local result = service.update_template_active_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_voice_channel", function()
 		local result = service.update_voice_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_voice_template", function()
 		local result = service.update_voice_template()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with verify_otp_message", function()
 		local result = service.verify_otp_message()
 		assert.is_true(result.success)
 	end)
-
 end)

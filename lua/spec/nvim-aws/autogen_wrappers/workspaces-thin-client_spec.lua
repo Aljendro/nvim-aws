@@ -9,80 +9,64 @@ describe("AWS workspaces-thin-client service testing", function()
 		local result = service.create_environment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_device", function()
 		local result = service.delete_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_environment", function()
 		local result = service.delete_environment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_device", function()
 		local result = service.deregister_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_device", function()
 		local result = service.get_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_environment", function()
 		local result = service.get_environment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_software_set", function()
 		local result = service.get_software_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_devices", function()
 		local result = service.list_devices()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_environments", function()
 		local result = service.list_environments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_software_sets", function()
 		local result = service.list_software_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_device", function()
 		local result = service.update_device()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_environment", function()
 		local result = service.update_environment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_software_set", function()
 		local result = service.update_software_set()
 		assert.is_true(result.success)
 	end)
-
 end)

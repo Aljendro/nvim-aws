@@ -9,60 +9,48 @@ describe("AWS pca-connector-scep service testing", function()
 		local result = service.create_challenge()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_connector", function()
 		local result = service.create_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_challenge", function()
 		local result = service.delete_challenge()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_connector", function()
 		local result = service.delete_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_challenge_metadata", function()
 		local result = service.get_challenge_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_challenge_password", function()
 		local result = service.get_challenge_password()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_connector", function()
 		local result = service.get_connector()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_challenge_metadata", function()
 		local result = service.list_challenge_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_connectors", function()
 		local result = service.list_connectors()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

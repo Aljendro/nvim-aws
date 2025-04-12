@@ -9,20 +9,16 @@ describe("AWS iot-data service testing", function()
 		local result = service.get_retained_message()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_named_shadows_for_thing", function()
 		local result = service.list_named_shadows_for_thing()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_retained_messages", function()
 		local result = service.list_retained_messages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with publish", function()
 		local result = service.publish()
 		assert.is_true(result.success)
 	end)
-
 end)

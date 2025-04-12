@@ -9,65 +9,52 @@ describe("AWS marketplace-catalog service testing", function()
 		local result = service.batch_describe_entities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_change_set", function()
 		local result = service.cancel_change_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource_policy", function()
 		local result = service.delete_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_change_set", function()
 		local result = service.describe_change_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_entity", function()
 		local result = service.describe_entity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policy", function()
 		local result = service.get_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_change_sets", function()
 		local result = service.list_change_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_entities", function()
 		local result = service.list_entities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_resource_policy", function()
 		local result = service.put_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_change_set", function()
 		local result = service.start_change_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

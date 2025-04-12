@@ -9,85 +9,68 @@ describe("AWS ds-data service testing", function()
 		local result = service.add_group_member()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_group", function()
 		local result = service.create_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_user", function()
 		local result = service.create_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_group", function()
 		local result = service.delete_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_user", function()
 		local result = service.delete_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_group", function()
 		local result = service.describe_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_user", function()
 		local result = service.describe_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_user", function()
 		local result = service.disable_user()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_group_members", function()
 		local result = service.list_group_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_groups", function()
 		local result = service.list_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_groups_for_member", function()
 		local result = service.list_groups_for_member()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_users", function()
 		local result = service.list_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with remove_group_member", function()
 		local result = service.remove_group_member()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_groups", function()
 		local result = service.search_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_users", function()
 		local result = service.search_users()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_group", function()
 		local result = service.update_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_user", function()
 		local result = service.update_user()
 		assert.is_true(result.success)
 	end)
-
 end)

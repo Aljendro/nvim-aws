@@ -9,35 +9,28 @@ describe("AWS geo-places service testing", function()
 		local result = service.autocomplete()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with geocode", function()
 		local result = service.geocode()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_place", function()
 		local result = service.get_place()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reverse_geocode", function()
 		local result = service.reverse_geocode()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_nearby", function()
 		local result = service.search_nearby()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with search_text", function()
 		local result = service.search_text()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with suggest", function()
 		local result = service.suggest()
 		assert.is_true(result.success)
 	end)
-
 end)

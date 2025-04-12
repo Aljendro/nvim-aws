@@ -9,7 +9,6 @@ describe("AWS kinesis-video-webrtc-storage service testing", function()
 		local result = service.join_storage_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with join_storage_session_as_viewer", function()
 		local result = service.join_storage_session_as_viewer()
 		assert.is_true(result.success)

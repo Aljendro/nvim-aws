@@ -9,30 +9,24 @@ describe("AWS importexport service testing", function()
 		local result = service.cancel_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_job", function()
 		local result = service.create_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_shipping_label", function()
 		local result = service.get_shipping_label()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_status", function()
 		local result = service.get_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_jobs", function()
 		local result = service.list_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_job", function()
 		local result = service.update_job()
 		assert.is_true(result.success)
 	end)
-
 end)

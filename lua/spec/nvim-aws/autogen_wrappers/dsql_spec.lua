@@ -9,50 +9,40 @@ describe("AWS dsql service testing", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_multi_region_clusters", function()
 		local result = service.create_multi_region_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_multi_region_clusters", function()
 		local result = service.delete_multi_region_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cluster", function()
 		local result = service.get_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_clusters", function()
 		local result = service.list_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 end)

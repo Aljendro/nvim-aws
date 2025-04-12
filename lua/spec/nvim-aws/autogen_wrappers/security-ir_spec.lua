@@ -9,110 +9,88 @@ describe("AWS security-ir service testing", function()
 		local result = service.batch_get_member_account_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with cancel_membership", function()
 		local result = service.cancel_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with close_case", function()
 		local result = service.close_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_case", function()
 		local result = service.create_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_case_comment", function()
 		local result = service.create_case_comment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_membership", function()
 		local result = service.create_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_case", function()
 		local result = service.get_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_case_attachment_download_url", function()
 		local result = service.get_case_attachment_download_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_case_attachment_upload_url", function()
 		local result = service.get_case_attachment_upload_url()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_membership", function()
 		local result = service.get_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_case_edits", function()
 		local result = service.list_case_edits()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_cases", function()
 		local result = service.list_cases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_comments", function()
 		local result = service.list_comments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_memberships", function()
 		local result = service.list_memberships()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_case", function()
 		local result = service.update_case()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_case_comment", function()
 		local result = service.update_case_comment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_case_status", function()
 		local result = service.update_case_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_membership", function()
 		local result = service.update_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_resolver_type", function()
 		local result = service.update_resolver_type()
 		assert.is_true(result.success)
 	end)
-
 end)

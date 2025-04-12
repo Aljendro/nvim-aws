@@ -9,40 +9,32 @@ describe("AWS dlm service testing", function()
 		local result = service.create_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_lifecycle_policy", function()
 		local result = service.delete_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lifecycle_policies", function()
 		local result = service.get_lifecycle_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_lifecycle_policy", function()
 		local result = service.get_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_lifecycle_policy", function()
 		local result = service.update_lifecycle_policy()
 		assert.is_true(result.success)
 	end)
-
 end)

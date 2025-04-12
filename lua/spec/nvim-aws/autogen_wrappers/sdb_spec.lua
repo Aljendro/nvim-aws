@@ -9,50 +9,40 @@ describe("AWS sdb service testing", function()
 		local result = service.batch_delete_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_put_attributes", function()
 		local result = service.batch_put_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain", function()
 		local result = service.create_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_attributes", function()
 		local result = service.delete_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain", function()
 		local result = service.delete_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with domain_metadata", function()
 		local result = service.domain_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_attributes", function()
 		local result = service.get_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domains", function()
 		local result = service.list_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_attributes", function()
 		local result = service.put_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with select", function()
 		local result = service.select()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,50 +9,40 @@ describe("AWS billing service testing", function()
 		local result = service.create_billing_view()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_billing_view", function()
 		local result = service.delete_billing_view()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_billing_view", function()
 		local result = service.get_billing_view()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_policy", function()
 		local result = service.get_resource_policy()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_billing_views", function()
 		local result = service.list_billing_views()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_source_views_for_billing_view", function()
 		local result = service.list_source_views_for_billing_view()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_billing_view", function()
 		local result = service.update_billing_view()
 		assert.is_true(result.success)
 	end)
-
 end)

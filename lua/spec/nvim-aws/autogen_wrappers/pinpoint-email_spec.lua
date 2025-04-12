@@ -9,210 +9,168 @@ describe("AWS pinpoint-email service testing", function()
 		local result = service.create_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_configuration_set_event_destination", function()
 		local result = service.create_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_dedicated_ip_pool", function()
 		local result = service.create_dedicated_ip_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_deliverability_test_report", function()
 		local result = service.create_deliverability_test_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_email_identity", function()
 		local result = service.create_email_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_configuration_set", function()
 		local result = service.delete_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_configuration_set_event_destination", function()
 		local result = service.delete_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_dedicated_ip_pool", function()
 		local result = service.delete_dedicated_ip_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_email_identity", function()
 		local result = service.delete_email_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_account", function()
 		local result = service.get_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_blacklist_reports", function()
 		local result = service.get_blacklist_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_configuration_set", function()
 		local result = service.get_configuration_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_configuration_set_event_destinations", function()
 		local result = service.get_configuration_set_event_destinations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dedicated_ip", function()
 		local result = service.get_dedicated_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_dedicated_ips", function()
 		local result = service.get_dedicated_ips()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_deliverability_dashboard_options", function()
 		local result = service.get_deliverability_dashboard_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_deliverability_test_report", function()
 		local result = service.get_deliverability_test_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_domain_deliverability_campaign", function()
 		local result = service.get_domain_deliverability_campaign()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_domain_statistics_report", function()
 		local result = service.get_domain_statistics_report()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_email_identity", function()
 		local result = service.get_email_identity()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_configuration_sets", function()
 		local result = service.list_configuration_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_dedicated_ip_pools", function()
 		local result = service.list_dedicated_ip_pools()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_deliverability_test_reports", function()
 		local result = service.list_deliverability_test_reports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_domain_deliverability_campaigns", function()
 		local result = service.list_domain_deliverability_campaigns()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_email_identities", function()
 		local result = service.list_email_identities()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_dedicated_ip_warmup_attributes", function()
 		local result = service.put_account_dedicated_ip_warmup_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_account_sending_attributes", function()
 		local result = service.put_account_sending_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_configuration_set_delivery_options", function()
 		local result = service.put_configuration_set_delivery_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_configuration_set_reputation_options", function()
 		local result = service.put_configuration_set_reputation_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_configuration_set_sending_options", function()
 		local result = service.put_configuration_set_sending_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_configuration_set_tracking_options", function()
 		local result = service.put_configuration_set_tracking_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_dedicated_ip_in_pool", function()
 		local result = service.put_dedicated_ip_in_pool()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_dedicated_ip_warmup_attributes", function()
 		local result = service.put_dedicated_ip_warmup_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_deliverability_dashboard_option", function()
 		local result = service.put_deliverability_dashboard_option()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_email_identity_dkim_attributes", function()
 		local result = service.put_email_identity_dkim_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_email_identity_feedback_attributes", function()
 		local result = service.put_email_identity_feedback_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_email_identity_mail_from_attributes", function()
 		local result = service.put_email_identity_mail_from_attributes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_email", function()
 		local result = service.send_email()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_configuration_set_event_destination", function()
 		local result = service.update_configuration_set_event_destination()
 		assert.is_true(result.success)
 	end)
-
 end)

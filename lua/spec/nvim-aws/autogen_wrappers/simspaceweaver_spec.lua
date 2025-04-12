@@ -9,80 +9,64 @@ describe("AWS simspaceweaver service testing", function()
 		local result = service.create_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_app", function()
 		local result = service.delete_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_simulation", function()
 		local result = service.delete_simulation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_app", function()
 		local result = service.describe_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_simulation", function()
 		local result = service.describe_simulation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_apps", function()
 		local result = service.list_apps()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_simulations", function()
 		local result = service.list_simulations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_app", function()
 		local result = service.start_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_clock", function()
 		local result = service.start_clock()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_simulation", function()
 		local result = service.start_simulation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_app", function()
 		local result = service.stop_app()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_clock", function()
 		local result = service.stop_clock()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_simulation", function()
 		local result = service.stop_simulation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

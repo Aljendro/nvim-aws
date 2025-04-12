@@ -9,805 +9,644 @@ describe("AWS lightsail service testing", function()
 		local result = service.allocate_static_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_certificate_to_distribution", function()
 		local result = service.attach_certificate_to_distribution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_disk", function()
 		local result = service.attach_disk()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_instances_to_load_balancer", function()
 		local result = service.attach_instances_to_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_load_balancer_tls_certificate", function()
 		local result = service.attach_load_balancer_tls_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_static_ip", function()
 		local result = service.attach_static_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with close_instance_public_ports", function()
 		local result = service.close_instance_public_ports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with copy_snapshot", function()
 		local result = service.copy_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_bucket", function()
 		local result = service.create_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_bucket_access_key", function()
 		local result = service.create_bucket_access_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_certificate", function()
 		local result = service.create_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_cloud_formation_stack", function()
 		local result = service.create_cloud_formation_stack()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_contact_method", function()
 		local result = service.create_contact_method()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_container_service", function()
 		local result = service.create_container_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_container_service_deployment", function()
 		local result = service.create_container_service_deployment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_container_service_registry_login", function()
 		local result = service.create_container_service_registry_login()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_disk", function()
 		local result = service.create_disk()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_disk_from_snapshot", function()
 		local result = service.create_disk_from_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_disk_snapshot", function()
 		local result = service.create_disk_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_distribution", function()
 		local result = service.create_distribution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain", function()
 		local result = service.create_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_domain_entry", function()
 		local result = service.create_domain_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_gui_session_access_details", function()
 		local result = service.create_gui_session_access_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_snapshot", function()
 		local result = service.create_instance_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instances", function()
 		local result = service.create_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instances_from_snapshot", function()
 		local result = service.create_instances_from_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_key_pair", function()
 		local result = service.create_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer", function()
 		local result = service.create_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_load_balancer_tls_certificate", function()
 		local result = service.create_load_balancer_tls_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_relational_database", function()
 		local result = service.create_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_relational_database_from_snapshot", function()
 		local result = service.create_relational_database_from_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_relational_database_snapshot", function()
 		local result = service.create_relational_database_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_alarm", function()
 		local result = service.delete_alarm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_auto_snapshot", function()
 		local result = service.delete_auto_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_bucket", function()
 		local result = service.delete_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_bucket_access_key", function()
 		local result = service.delete_bucket_access_key()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_certificate", function()
 		local result = service.delete_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_contact_method", function()
 		local result = service.delete_contact_method()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_container_image", function()
 		local result = service.delete_container_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_container_service", function()
 		local result = service.delete_container_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_disk", function()
 		local result = service.delete_disk()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_disk_snapshot", function()
 		local result = service.delete_disk_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_distribution", function()
 		local result = service.delete_distribution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain", function()
 		local result = service.delete_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_domain_entry", function()
 		local result = service.delete_domain_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance", function()
 		local result = service.delete_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance_snapshot", function()
 		local result = service.delete_instance_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_key_pair", function()
 		local result = service.delete_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_known_host_keys", function()
 		local result = service.delete_known_host_keys()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer", function()
 		local result = service.delete_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_load_balancer_tls_certificate", function()
 		local result = service.delete_load_balancer_tls_certificate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_relational_database", function()
 		local result = service.delete_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_relational_database_snapshot", function()
 		local result = service.delete_relational_database_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_certificate_from_distribution", function()
 		local result = service.detach_certificate_from_distribution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_disk", function()
 		local result = service.detach_disk()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_instances_from_load_balancer", function()
 		local result = service.detach_instances_from_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_static_ip", function()
 		local result = service.detach_static_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_add_on", function()
 		local result = service.disable_add_on()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with download_default_key_pair", function()
 		local result = service.download_default_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_add_on", function()
 		local result = service.enable_add_on()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with export_snapshot", function()
 		local result = service.export_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_active_names", function()
 		local result = service.get_active_names()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_alarms", function()
 		local result = service.get_alarms()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_auto_snapshots", function()
 		local result = service.get_auto_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_blueprints", function()
 		local result = service.get_blueprints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_bucket_access_keys", function()
 		local result = service.get_bucket_access_keys()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_bucket_bundles", function()
 		local result = service.get_bucket_bundles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_bucket_metric_data", function()
 		local result = service.get_bucket_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_buckets", function()
 		local result = service.get_buckets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_bundles", function()
 		local result = service.get_bundles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_certificates", function()
 		local result = service.get_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cloud_formation_stack_records", function()
 		local result = service.get_cloud_formation_stack_records()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_contact_methods", function()
 		local result = service.get_contact_methods()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_api_metadata", function()
 		local result = service.get_container_api_metadata()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_images", function()
 		local result = service.get_container_images()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_log", function()
 		local result = service.get_container_log()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_service_deployments", function()
 		local result = service.get_container_service_deployments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_service_metric_data", function()
 		local result = service.get_container_service_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_service_powers", function()
 		local result = service.get_container_service_powers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_container_services", function()
 		local result = service.get_container_services()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_cost_estimate", function()
 		local result = service.get_cost_estimate()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_disk", function()
 		local result = service.get_disk()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_disk_snapshot", function()
 		local result = service.get_disk_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_disk_snapshots", function()
 		local result = service.get_disk_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_disks", function()
 		local result = service.get_disks()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_distribution_bundles", function()
 		local result = service.get_distribution_bundles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_distribution_latest_cache_reset", function()
 		local result = service.get_distribution_latest_cache_reset()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_distribution_metric_data", function()
 		local result = service.get_distribution_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_distributions", function()
 		local result = service.get_distributions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_domain", function()
 		local result = service.get_domain()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_domains", function()
 		local result = service.get_domains()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_export_snapshot_records", function()
 		local result = service.get_export_snapshot_records()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance", function()
 		local result = service.get_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_access_details", function()
 		local result = service.get_instance_access_details()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_metric_data", function()
 		local result = service.get_instance_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_port_states", function()
 		local result = service.get_instance_port_states()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_snapshot", function()
 		local result = service.get_instance_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_snapshots", function()
 		local result = service.get_instance_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instance_state", function()
 		local result = service.get_instance_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_instances", function()
 		local result = service.get_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_key_pair", function()
 		local result = service.get_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_key_pairs", function()
 		local result = service.get_key_pairs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_load_balancer", function()
 		local result = service.get_load_balancer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_load_balancer_metric_data", function()
 		local result = service.get_load_balancer_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_load_balancer_tls_certificates", function()
 		local result = service.get_load_balancer_tls_certificates()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_load_balancer_tls_policies", function()
 		local result = service.get_load_balancer_tls_policies()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_load_balancers", function()
 		local result = service.get_load_balancers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_operation", function()
 		local result = service.get_operation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_operations", function()
 		local result = service.get_operations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_operations_for_resource", function()
 		local result = service.get_operations_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_regions", function()
 		local result = service.get_regions()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database", function()
 		local result = service.get_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_blueprints", function()
 		local result = service.get_relational_database_blueprints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_bundles", function()
 		local result = service.get_relational_database_bundles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_events", function()
 		local result = service.get_relational_database_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_log_events", function()
 		local result = service.get_relational_database_log_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_log_streams", function()
 		local result = service.get_relational_database_log_streams()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_master_user_password", function()
 		local result = service.get_relational_database_master_user_password()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_metric_data", function()
 		local result = service.get_relational_database_metric_data()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_parameters", function()
 		local result = service.get_relational_database_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_snapshot", function()
 		local result = service.get_relational_database_snapshot()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_database_snapshots", function()
 		local result = service.get_relational_database_snapshots()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_relational_databases", function()
 		local result = service.get_relational_databases()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_setup_history", function()
 		local result = service.get_setup_history()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_static_ip", function()
 		local result = service.get_static_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_static_ips", function()
 		local result = service.get_static_ips()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with import_key_pair", function()
 		local result = service.import_key_pair()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with is_vpc_peered", function()
 		local result = service.is_vpc_peered()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with open_instance_public_ports", function()
 		local result = service.open_instance_public_ports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with peer_vpc", function()
 		local result = service.peer_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_alarm", function()
 		local result = service.put_alarm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_instance_public_ports", function()
 		local result = service.put_instance_public_ports()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_instance", function()
 		local result = service.reboot_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_relational_database", function()
 		local result = service.reboot_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_container_image", function()
 		local result = service.register_container_image()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with release_static_ip", function()
 		local result = service.release_static_ip()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reset_distribution_cache", function()
 		local result = service.reset_distribution_cache()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with send_contact_method_verification", function()
 		local result = service.send_contact_method_verification()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_ip_address_type", function()
 		local result = service.set_ip_address_type()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with set_resource_access_for_bucket", function()
 		local result = service.set_resource_access_for_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with setup_instance_https", function()
 		local result = service.setup_instance_https()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_gui_session", function()
 		local result = service.start_gui_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_instance", function()
 		local result = service.start_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_relational_database", function()
 		local result = service.start_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_gui_session", function()
 		local result = service.stop_gui_session()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_instance", function()
 		local result = service.stop_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_relational_database", function()
 		local result = service.stop_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with test_alarm", function()
 		local result = service.test_alarm()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with unpeer_vpc", function()
 		local result = service.unpeer_vpc()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_bucket", function()
 		local result = service.update_bucket()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_bucket_bundle", function()
 		local result = service.update_bucket_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_container_service", function()
 		local result = service.update_container_service()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_distribution", function()
 		local result = service.update_distribution()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_distribution_bundle", function()
 		local result = service.update_distribution_bundle()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_domain_entry", function()
 		local result = service.update_domain_entry()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_instance_metadata_options", function()
 		local result = service.update_instance_metadata_options()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_load_balancer_attribute", function()
 		local result = service.update_load_balancer_attribute()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_relational_database", function()
 		local result = service.update_relational_database()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_relational_database_parameters", function()
 		local result = service.update_relational_database_parameters()
 		assert.is_true(result.success)
 	end)
-
 end)

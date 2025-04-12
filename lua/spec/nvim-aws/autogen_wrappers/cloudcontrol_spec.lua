@@ -9,40 +9,32 @@ describe("AWS cloudcontrol service testing", function()
 		local result = service.cancel_resource_request()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_resource", function()
 		local result = service.create_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_resource", function()
 		local result = service.delete_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource", function()
 		local result = service.get_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_resource_request_status", function()
 		local result = service.get_resource_request_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resource_requests", function()
 		local result = service.list_resource_requests()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_resources", function()
 		local result = service.list_resources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_resource", function()
 		local result = service.update_resource()
 		assert.is_true(result.success)
 	end)
-
 end)

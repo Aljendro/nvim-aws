@@ -9,105 +9,84 @@ describe("AWS dax service testing", function()
 		local result = service.create_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_parameter_group", function()
 		local result = service.create_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_subnet_group", function()
 		local result = service.create_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with decrease_replication_factor", function()
 		local result = service.decrease_replication_factor()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_cluster", function()
 		local result = service.delete_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_parameter_group", function()
 		local result = service.delete_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_subnet_group", function()
 		local result = service.delete_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_clusters", function()
 		local result = service.describe_clusters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_default_parameters", function()
 		local result = service.describe_default_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_events", function()
 		local result = service.describe_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_parameter_groups", function()
 		local result = service.describe_parameter_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_parameters", function()
 		local result = service.describe_parameters()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_subnet_groups", function()
 		local result = service.describe_subnet_groups()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with increase_replication_factor", function()
 		local result = service.increase_replication_factor()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags", function()
 		local result = service.list_tags()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reboot_node", function()
 		local result = service.reboot_node()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_cluster", function()
 		local result = service.update_cluster()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_parameter_group", function()
 		local result = service.update_parameter_group()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_subnet_group", function()
 		local result = service.update_subnet_group()
 		assert.is_true(result.success)
 	end)
-
 end)

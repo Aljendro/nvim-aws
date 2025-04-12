@@ -9,175 +9,140 @@ describe("AWS notifications service testing", function()
 		local result = service.associate_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_managed_notification_account_contact", function()
 		local result = service.associate_managed_notification_account_contact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with associate_managed_notification_additional_channel", function()
 		local result = service.associate_managed_notification_additional_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_event_rule", function()
 		local result = service.create_event_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_notification_configuration", function()
 		local result = service.create_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_event_rule", function()
 		local result = service.delete_event_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_notification_configuration", function()
 		local result = service.delete_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_notification_hub", function()
 		local result = service.deregister_notification_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_notifications_access_for_organization", function()
 		local result = service.disable_notifications_access_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_channel", function()
 		local result = service.disassociate_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_managed_notification_account_contact", function()
 		local result = service.disassociate_managed_notification_account_contact()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_managed_notification_additional_channel", function()
 		local result = service.disassociate_managed_notification_additional_channel()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_notifications_access_for_organization", function()
 		local result = service.enable_notifications_access_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_event_rule", function()
 		local result = service.get_event_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_notification_child_event", function()
 		local result = service.get_managed_notification_child_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_notification_configuration", function()
 		local result = service.get_managed_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_managed_notification_event", function()
 		local result = service.get_managed_notification_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_notification_configuration", function()
 		local result = service.get_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_notification_event", function()
 		local result = service.get_notification_event()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_notifications_access_for_organization", function()
 		local result = service.get_notifications_access_for_organization()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_channels", function()
 		local result = service.list_channels()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_event_rules", function()
 		local result = service.list_event_rules()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_notification_channel_associations", function()
 		local result = service.list_managed_notification_channel_associations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_notification_child_events", function()
 		local result = service.list_managed_notification_child_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_notification_configurations", function()
 		local result = service.list_managed_notification_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_notification_events", function()
 		local result = service.list_managed_notification_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notification_configurations", function()
 		local result = service.list_notification_configurations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notification_events", function()
 		local result = service.list_notification_events()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_notification_hubs", function()
 		local result = service.list_notification_hubs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_notification_hub", function()
 		local result = service.register_notification_hub()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_event_rule", function()
 		local result = service.update_event_rule()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_notification_configuration", function()
 		local result = service.update_notification_configuration()
 		assert.is_true(result.success)
 	end)
-
 end)

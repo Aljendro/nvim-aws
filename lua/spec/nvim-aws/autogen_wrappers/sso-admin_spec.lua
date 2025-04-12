@@ -9,365 +9,292 @@ describe("AWS sso-admin service testing", function()
 		local result = service.attach_customer_managed_policy_reference_to_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with attach_managed_policy_to_permission_set", function()
 		local result = service.attach_managed_policy_to_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_account_assignment", function()
 		local result = service.create_account_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_application", function()
 		local result = service.create_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_application_assignment", function()
 		local result = service.create_application_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance", function()
 		local result = service.create_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_instance_access_control_attribute_configuration", function()
 		local result = service.create_instance_access_control_attribute_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_permission_set", function()
 		local result = service.create_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_trusted_token_issuer", function()
 		local result = service.create_trusted_token_issuer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_account_assignment", function()
 		local result = service.delete_account_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application", function()
 		local result = service.delete_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application_access_scope", function()
 		local result = service.delete_application_access_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application_assignment", function()
 		local result = service.delete_application_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application_authentication_method", function()
 		local result = service.delete_application_authentication_method()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_application_grant", function()
 		local result = service.delete_application_grant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_inline_policy_from_permission_set", function()
 		local result = service.delete_inline_policy_from_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance", function()
 		local result = service.delete_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_instance_access_control_attribute_configuration", function()
 		local result = service.delete_instance_access_control_attribute_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_permission_set", function()
 		local result = service.delete_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_permissions_boundary_from_permission_set", function()
 		local result = service.delete_permissions_boundary_from_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_trusted_token_issuer", function()
 		local result = service.delete_trusted_token_issuer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_assignment_creation_status", function()
 		local result = service.describe_account_assignment_creation_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_account_assignment_deletion_status", function()
 		local result = service.describe_account_assignment_deletion_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_application", function()
 		local result = service.describe_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_application_assignment", function()
 		local result = service.describe_application_assignment()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_application_provider", function()
 		local result = service.describe_application_provider()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance", function()
 		local result = service.describe_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_instance_access_control_attribute_configuration", function()
 		local result = service.describe_instance_access_control_attribute_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_permission_set", function()
 		local result = service.describe_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_permission_set_provisioning_status", function()
 		local result = service.describe_permission_set_provisioning_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_trusted_token_issuer", function()
 		local result = service.describe_trusted_token_issuer()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_customer_managed_policy_reference_from_permission_set", function()
 		local result = service.detach_customer_managed_policy_reference_from_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with detach_managed_policy_from_permission_set", function()
 		local result = service.detach_managed_policy_from_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_access_scope", function()
 		local result = service.get_application_access_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_assignment_configuration", function()
 		local result = service.get_application_assignment_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_authentication_method", function()
 		local result = service.get_application_authentication_method()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_application_grant", function()
 		local result = service.get_application_grant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_inline_policy_for_permission_set", function()
 		local result = service.get_inline_policy_for_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_permissions_boundary_for_permission_set", function()
 		local result = service.get_permissions_boundary_for_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_account_assignment_creation_status", function()
 		local result = service.list_account_assignment_creation_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_account_assignment_deletion_status", function()
 		local result = service.list_account_assignment_deletion_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_account_assignments", function()
 		local result = service.list_account_assignments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_account_assignments_for_principal", function()
 		local result = service.list_account_assignments_for_principal()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_accounts_for_provisioned_permission_set", function()
 		local result = service.list_accounts_for_provisioned_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_access_scopes", function()
 		local result = service.list_application_access_scopes()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_assignments", function()
 		local result = service.list_application_assignments()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_assignments_for_principal", function()
 		local result = service.list_application_assignments_for_principal()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_authentication_methods", function()
 		local result = service.list_application_authentication_methods()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_grants", function()
 		local result = service.list_application_grants()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_application_providers", function()
 		local result = service.list_application_providers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_applications", function()
 		local result = service.list_applications()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_customer_managed_policy_references_in_permission_set", function()
 		local result = service.list_customer_managed_policy_references_in_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_instances", function()
 		local result = service.list_instances()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_managed_policies_in_permission_set", function()
 		local result = service.list_managed_policies_in_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permission_set_provisioning_status", function()
 		local result = service.list_permission_set_provisioning_status()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permission_sets", function()
 		local result = service.list_permission_sets()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_permission_sets_provisioned_to_account", function()
 		local result = service.list_permission_sets_provisioned_to_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_trusted_token_issuers", function()
 		local result = service.list_trusted_token_issuers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with provision_permission_set", function()
 		local result = service.provision_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_application_access_scope", function()
 		local result = service.put_application_access_scope()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_application_assignment_configuration", function()
 		local result = service.put_application_assignment_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_application_authentication_method", function()
 		local result = service.put_application_authentication_method()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_application_grant", function()
 		local result = service.put_application_grant()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_inline_policy_to_permission_set", function()
 		local result = service.put_inline_policy_to_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_permissions_boundary_to_permission_set", function()
 		local result = service.put_permissions_boundary_to_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_application", function()
 		local result = service.update_application()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_instance", function()
 		local result = service.update_instance()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_instance_access_control_attribute_configuration", function()
 		local result = service.update_instance_access_control_attribute_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_permission_set", function()
 		local result = service.update_permission_set()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_trusted_token_issuer", function()
 		local result = service.update_trusted_token_issuer()
 		assert.is_true(result.success)
 	end)
-
 end)

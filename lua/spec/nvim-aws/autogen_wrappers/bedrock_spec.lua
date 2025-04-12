@@ -9,295 +9,236 @@ describe("AWS bedrock service testing", function()
 		local result = service.batch_delete_evaluation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_evaluation_job", function()
 		local result = service.create_evaluation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_guardrail", function()
 		local result = service.create_guardrail()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_guardrail_version", function()
 		local result = service.create_guardrail_version()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_inference_profile", function()
 		local result = service.create_inference_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_marketplace_model_endpoint", function()
 		local result = service.create_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_copy_job", function()
 		local result = service.create_model_copy_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_customization_job", function()
 		local result = service.create_model_customization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_import_job", function()
 		local result = service.create_model_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_model_invocation_job", function()
 		local result = service.create_model_invocation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_prompt_router", function()
 		local result = service.create_prompt_router()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_provisioned_model_throughput", function()
 		local result = service.create_provisioned_model_throughput()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_custom_model", function()
 		local result = service.delete_custom_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_guardrail", function()
 		local result = service.delete_guardrail()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_imported_model", function()
 		local result = service.delete_imported_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_inference_profile", function()
 		local result = service.delete_inference_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_marketplace_model_endpoint", function()
 		local result = service.delete_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_model_invocation_logging_configuration", function()
 		local result = service.delete_model_invocation_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_prompt_router", function()
 		local result = service.delete_prompt_router()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_provisioned_model_throughput", function()
 		local result = service.delete_provisioned_model_throughput()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with deregister_marketplace_model_endpoint", function()
 		local result = service.deregister_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_custom_model", function()
 		local result = service.get_custom_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_evaluation_job", function()
 		local result = service.get_evaluation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_foundation_model", function()
 		local result = service.get_foundation_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_guardrail", function()
 		local result = service.get_guardrail()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_imported_model", function()
 		local result = service.get_imported_model()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_inference_profile", function()
 		local result = service.get_inference_profile()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_marketplace_model_endpoint", function()
 		local result = service.get_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_copy_job", function()
 		local result = service.get_model_copy_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_customization_job", function()
 		local result = service.get_model_customization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_import_job", function()
 		local result = service.get_model_import_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_invocation_job", function()
 		local result = service.get_model_invocation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_model_invocation_logging_configuration", function()
 		local result = service.get_model_invocation_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_prompt_router", function()
 		local result = service.get_prompt_router()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_provisioned_model_throughput", function()
 		local result = service.get_provisioned_model_throughput()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_custom_models", function()
 		local result = service.list_custom_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_evaluation_jobs", function()
 		local result = service.list_evaluation_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_foundation_models", function()
 		local result = service.list_foundation_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_guardrails", function()
 		local result = service.list_guardrails()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_imported_models", function()
 		local result = service.list_imported_models()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_inference_profiles", function()
 		local result = service.list_inference_profiles()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_marketplace_model_endpoints", function()
 		local result = service.list_marketplace_model_endpoints()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_copy_jobs", function()
 		local result = service.list_model_copy_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_customization_jobs", function()
 		local result = service.list_model_customization_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_import_jobs", function()
 		local result = service.list_model_import_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_model_invocation_jobs", function()
 		local result = service.list_model_invocation_jobs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_prompt_routers", function()
 		local result = service.list_prompt_routers()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_provisioned_model_throughputs", function()
 		local result = service.list_provisioned_model_throughputs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_model_invocation_logging_configuration", function()
 		local result = service.put_model_invocation_logging_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with register_marketplace_model_endpoint", function()
 		local result = service.register_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_evaluation_job", function()
 		local result = service.stop_evaluation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_model_customization_job", function()
 		local result = service.stop_model_customization_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with stop_model_invocation_job", function()
 		local result = service.stop_model_invocation_job()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_guardrail", function()
 		local result = service.update_guardrail()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_marketplace_model_endpoint", function()
 		local result = service.update_marketplace_model_endpoint()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_provisioned_model_throughput", function()
 		local result = service.update_provisioned_model_throughput()
 		assert.is_true(result.success)
 	end)
-
 end)

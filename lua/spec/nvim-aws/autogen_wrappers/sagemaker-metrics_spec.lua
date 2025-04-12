@@ -9,10 +9,8 @@ describe("AWS sagemaker-metrics service testing", function()
 		local result = service.batch_get_metrics()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_put_metrics", function()
 		local result = service.batch_put_metrics()
 		assert.is_true(result.success)
 	end)
-
 end)

@@ -9,15 +9,12 @@ describe("AWS personalize-runtime service testing", function()
 		local result = service.get_action_recommendations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_personalized_ranking", function()
 		local result = service.get_personalized_ranking()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_recommendations", function()
 		local result = service.get_recommendations()
 		assert.is_true(result.success)
 	end)
-
 end)

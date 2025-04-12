@@ -9,145 +9,116 @@ describe("AWS detective service testing", function()
 		local result = service.accept_invitation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_graph_member_datasources", function()
 		local result = service.batch_get_graph_member_datasources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with batch_get_membership_datasources", function()
 		local result = service.batch_get_membership_datasources()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_graph", function()
 		local result = service.create_graph()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with create_members", function()
 		local result = service.create_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_graph", function()
 		local result = service.delete_graph()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_members", function()
 		local result = service.delete_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with describe_organization_configuration", function()
 		local result = service.describe_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disable_organization_admin_account", function()
 		local result = service.disable_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with disassociate_membership", function()
 		local result = service.disassociate_membership()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with enable_organization_admin_account", function()
 		local result = service.enable_organization_admin_account()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_investigation", function()
 		local result = service.get_investigation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_members", function()
 		local result = service.get_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_datasource_packages", function()
 		local result = service.list_datasource_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_graphs", function()
 		local result = service.list_graphs()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_indicators", function()
 		local result = service.list_indicators()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_investigations", function()
 		local result = service.list_investigations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_invitations", function()
 		local result = service.list_invitations()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_members", function()
 		local result = service.list_members()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_organization_admin_accounts", function()
 		local result = service.list_organization_admin_accounts()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with list_tags_for_resource", function()
 		local result = service.list_tags_for_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with reject_invitation", function()
 		local result = service.reject_invitation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_investigation", function()
 		local result = service.start_investigation()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with start_monitoring_member", function()
 		local result = service.start_monitoring_member()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with tag_resource", function()
 		local result = service.tag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with untag_resource", function()
 		local result = service.untag_resource()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_datasource_packages", function()
 		local result = service.update_datasource_packages()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_investigation_state", function()
 		local result = service.update_investigation_state()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with update_organization_configuration", function()
 		local result = service.update_organization_configuration()
 		assert.is_true(result.success)
 	end)
-
 end)

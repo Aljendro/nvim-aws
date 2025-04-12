@@ -9,20 +9,16 @@ describe("AWS sagemaker-featurestore-runtime service testing", function()
 		local result = service.batch_get_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with delete_record", function()
 		local result = service.delete_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with get_record", function()
 		local result = service.get_record()
 		assert.is_true(result.success)
 	end)
-
 	it("should generate a cli skeleton with put_record", function()
 		local result = service.put_record()
 		assert.is_true(result.success)
 	end)
-
 end)

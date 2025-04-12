@@ -9,5 +9,4 @@ describe("AWS marketplace-reporting service testing", function()
 		local result = service.get_buyer_dashboard()
 		assert.is_true(result.success)
 	end)
-
 end)
