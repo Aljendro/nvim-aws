@@ -118,4 +118,11 @@ function M.update_pipeline_status(input)
 	return common.execute_aws_command_with_input({ "elastictranscoder", "update-pipeline-status" }, input)
 end
 
+--- AWS elastictranscoder wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "elastictranscoder", "wait" }, input)
+end
+
 return M

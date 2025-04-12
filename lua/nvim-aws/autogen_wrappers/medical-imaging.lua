@@ -118,4 +118,18 @@ function M.update_image_set_metadata(input)
 	return common.execute_aws_command_with_input({ "medical-imaging", "update-image-set-metadata" }, input)
 end
 
+--- AWS medical-imaging get-image-frame operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_image_frame(input)
+	return common.execute_aws_command_with_raw_input({ "medical-imaging", "get-image-frame" }, input)
+end
+
+--- AWS medical-imaging get-image-set-metadata operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_image_set_metadata(input)
+	return common.execute_aws_command_with_raw_input({ "medical-imaging", "get-image-set-metadata" }, input)
+end
+
 return M

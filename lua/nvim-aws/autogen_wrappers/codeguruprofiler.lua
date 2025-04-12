@@ -160,4 +160,11 @@ function M.update_profiling_group(input)
 	return common.execute_aws_command_with_input({ "codeguruprofiler", "update-profiling-group" }, input)
 end
 
+--- AWS codeguruprofiler get-profile operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_profile(input)
+	return common.execute_aws_command_with_raw_input({ "codeguruprofiler", "get-profile" }, input)
+end
+
 return M

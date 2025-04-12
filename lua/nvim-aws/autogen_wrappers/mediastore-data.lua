@@ -34,4 +34,11 @@ function M.put_object(input)
 	return common.execute_aws_command_with_input({ "mediastore-data", "put-object" }, input)
 end
 
+--- AWS mediastore-data get-object operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_object(input)
+	return common.execute_aws_command_with_raw_input({ "mediastore-data", "get-object" }, input)
+end
+
 return M

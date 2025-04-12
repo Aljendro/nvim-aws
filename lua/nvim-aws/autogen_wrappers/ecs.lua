@@ -419,4 +419,18 @@ function M.update_task_set(input)
 	return common.execute_aws_command_with_input({ "ecs", "update-task-set" }, input)
 end
 
+--- AWS ecs deploy operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.deploy(input)
+	return common.execute_aws_command_with_raw_input({ "ecs", "deploy" }, input)
+end
+
+--- AWS ecs wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "ecs", "wait" }, input)
+end
+
 return M

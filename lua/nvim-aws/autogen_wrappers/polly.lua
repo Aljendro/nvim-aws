@@ -62,4 +62,11 @@ function M.start_speech_synthesis_task(input)
 	return common.execute_aws_command_with_input({ "polly", "start-speech-synthesis-task" }, input)
 end
 
+--- AWS polly synthesize-speech operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.synthesize_speech(input)
+	return common.execute_aws_command_with_raw_input({ "polly", "synthesize-speech" }, input)
+end
+
 return M

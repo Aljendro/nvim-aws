@@ -41,4 +41,11 @@ function M.start_async_invoke(input)
 	return common.execute_aws_command_with_input({ "bedrock-runtime", "start-async-invoke" }, input)
 end
 
+--- AWS bedrock-runtime invoke-model operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.invoke_model(input)
+	return common.execute_aws_command_with_raw_input({ "bedrock-runtime", "invoke-model" }, input)
+end
+
 return M

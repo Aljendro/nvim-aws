@@ -398,4 +398,32 @@ function M.verify_device_position(input)
 	return common.execute_aws_command_with_input({ "location", "verify-device-position" }, input)
 end
 
+--- AWS location get-map-glyphs operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_map_glyphs(input)
+	return common.execute_aws_command_with_raw_input({ "location", "get-map-glyphs" }, input)
+end
+
+--- AWS location get-map-sprites operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_map_sprites(input)
+	return common.execute_aws_command_with_raw_input({ "location", "get-map-sprites" }, input)
+end
+
+--- AWS location get-map-style-descriptor operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_map_style_descriptor(input)
+	return common.execute_aws_command_with_raw_input({ "location", "get-map-style-descriptor" }, input)
+end
+
+--- AWS location get-map-tile operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_map_tile(input)
+	return common.execute_aws_command_with_raw_input({ "location", "get-map-tile" }, input)
+end
+
 return M

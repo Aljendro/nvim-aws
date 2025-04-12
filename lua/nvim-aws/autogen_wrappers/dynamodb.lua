@@ -405,4 +405,18 @@ function M.update_time_to_live(input)
 	return common.execute_aws_command_with_input({ "dynamodb", "update-time-to-live" }, input)
 end
 
+--- AWS dynamodb wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "dynamodb", "wait" }, input)
+end
+
+--- AWS dynamodb wizard operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wizard(input)
+	return common.execute_aws_command_with_raw_input({ "dynamodb", "wizard" }, input)
+end
+
 return M

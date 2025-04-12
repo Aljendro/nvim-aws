@@ -13,4 +13,11 @@ function M.start_configuration_session(input)
 	return common.execute_aws_command_with_input({ "appconfigdata", "start-configuration-session" }, input)
 end
 
+--- AWS appconfigdata get-latest-configuration operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_latest_configuration(input)
+	return common.execute_aws_command_with_raw_input({ "appconfigdata", "get-latest-configuration" }, input)
+end
+
 return M

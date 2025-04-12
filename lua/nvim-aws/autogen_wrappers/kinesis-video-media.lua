@@ -6,4 +6,11 @@ local common = require("nvim-aws.wrappers.common")
 --- AWS KINESIS-VIDEO-MEDIA service functions
 local M = {}
 
+--- AWS kinesis-video-media get-media operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_media(input)
+	return common.execute_aws_command_with_raw_input({ "kinesis-video-media", "get-media" }, input)
+end
+
 return M

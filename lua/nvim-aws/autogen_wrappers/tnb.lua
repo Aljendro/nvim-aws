@@ -209,4 +209,32 @@ function M.validate_sol_network_package_content(input)
 	return common.execute_aws_command_with_input({ "tnb", "validate-sol-network-package-content" }, input)
 end
 
+--- AWS tnb get-sol-function-package-content operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_sol_function_package_content(input)
+	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-function-package-content" }, input)
+end
+
+--- AWS tnb get-sol-function-package-descriptor operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_sol_function_package_descriptor(input)
+	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-function-package-descriptor" }, input)
+end
+
+--- AWS tnb get-sol-network-package-content operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_sol_network_package_content(input)
+	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-network-package-content" }, input)
+end
+
+--- AWS tnb get-sol-network-package-descriptor operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_sol_network_package_descriptor(input)
+	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-network-package-descriptor" }, input)
+end
+
 return M

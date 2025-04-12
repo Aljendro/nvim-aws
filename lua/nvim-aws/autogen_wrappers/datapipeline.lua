@@ -139,4 +139,11 @@ function M.validate_pipeline_definition(input)
 	return common.execute_aws_command_with_input({ "datapipeline", "validate-pipeline-definition" }, input)
 end
 
+--- AWS datapipeline list-runs operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_runs(input)
+	return common.execute_aws_command_with_raw_input({ "datapipeline", "list-runs" }, input)
+end
+
 return M

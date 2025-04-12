@@ -685,4 +685,18 @@ function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "configservice", "untag-resource" }, input)
 end
 
+--- AWS configservice get-status operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_status(input)
+	return common.execute_aws_command_with_raw_input({ "configservice", "get-status" }, input)
+end
+
+--- AWS configservice subscribe operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.subscribe(input)
+	return common.execute_aws_command_with_raw_input({ "configservice", "subscribe" }, input)
+end
+
 return M

@@ -461,4 +461,25 @@ function M.update_function_url_config(input)
 	return common.execute_aws_command_with_input({ "lambda", "update-function-url-config" }, input)
 end
 
+--- AWS lambda invoke operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.invoke(input)
+	return common.execute_aws_command_with_raw_input({ "lambda", "invoke" }, input)
+end
+
+--- AWS lambda wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "lambda", "wait" }, input)
+end
+
+--- AWS lambda wizard operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wizard(input)
+	return common.execute_aws_command_with_raw_input({ "lambda", "wizard" }, input)
+end
+
 return M

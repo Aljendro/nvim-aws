@@ -167,4 +167,11 @@ function M.update_certificate_authority(input)
 	return common.execute_aws_command_with_input({ "acm-pca", "update-certificate-authority" }, input)
 end
 
+--- AWS acm-pca wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "acm-pca", "wait" }, input)
+end
+
 return M

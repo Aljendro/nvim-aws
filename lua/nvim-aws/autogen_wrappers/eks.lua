@@ -405,4 +405,25 @@ function M.update_pod_identity_association(input)
 	return common.execute_aws_command_with_input({ "eks", "update-pod-identity-association" }, input)
 end
 
+--- AWS eks get-token operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_token(input)
+	return common.execute_aws_command_with_raw_input({ "eks", "get-token" }, input)
+end
+
+--- AWS eks update-kubeconfig operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_kubeconfig(input)
+	return common.execute_aws_command_with_raw_input({ "eks", "update-kubeconfig" }, input)
+end
+
+--- AWS eks wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "eks", "wait" }, input)
+end
+
 return M

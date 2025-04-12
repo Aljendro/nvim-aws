@@ -559,4 +559,11 @@ function M.update_theme_for_stack(input)
 	return common.execute_aws_command_with_input({ "appstream", "update-theme-for-stack" }, input)
 end
 
+--- AWS appstream wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "appstream", "wait" }, input)
+end
+
 return M

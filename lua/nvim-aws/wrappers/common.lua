@@ -32,6 +32,19 @@ function M.execute_aws_command_with_input(command_path, input)
 	end
 end
 
+--- Execute an AWS CLI command with a raw input and process the results
+--- Return an empty table if input is nil
+--- @param command_path table the aws command path
+--- @param raw_input table|nil the raw input table
+--- @return table {success: boolean, data: table|nil, error: string|nil}
+function M.execute_aws_command_with_raw_input(command_path, raw_input)
+	if not raw_input then
+		return {}
+	else
+		return M.execute_aws_command(vim.list_extend(command_path, raw_input))
+	end
+end
+
 --- Execute an AWS CLI command and process the results
 --- @param args table The arguments for the AWS CLI command
 --- @return table {success: boolean, data: table|nil, error: string|nil}

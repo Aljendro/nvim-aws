@@ -503,4 +503,11 @@ function M.update_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigatewayv2", "update-vpc-link" }, input)
 end
 
+--- AWS apigatewayv2 export-api operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.export_api(input)
+	return common.execute_aws_command_with_raw_input({ "apigatewayv2", "export-api" }, input)
+end
+
 return M

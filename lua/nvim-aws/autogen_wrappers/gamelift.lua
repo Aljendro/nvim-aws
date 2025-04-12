@@ -832,4 +832,18 @@ function M.validate_matchmaking_rule_set(input)
 	return common.execute_aws_command_with_input({ "gamelift", "validate-matchmaking-rule-set" }, input)
 end
 
+--- AWS gamelift get-game-session-log operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_game_session_log(input)
+	return common.execute_aws_command_with_raw_input({ "gamelift", "get-game-session-log" }, input)
+end
+
+--- AWS gamelift upload-build operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.upload_build(input)
+	return common.execute_aws_command_with_raw_input({ "gamelift", "upload-build" }, input)
+end
+
 return M

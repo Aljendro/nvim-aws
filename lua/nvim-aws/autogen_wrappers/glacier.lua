@@ -230,4 +230,18 @@ function M.upload_multipart_part(input)
 	return common.execute_aws_command_with_input({ "glacier", "upload-multipart-part" }, input)
 end
 
+--- AWS glacier get-job-output operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_job_output(input)
+	return common.execute_aws_command_with_raw_input({ "glacier", "get-job-output" }, input)
+end
+
+--- AWS glacier wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "glacier", "wait" }, input)
+end
+
 return M

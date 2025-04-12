@@ -601,4 +601,18 @@ function M.update_log_anomaly_detector(input)
 	return common.execute_aws_command_with_input({ "logs", "update-log-anomaly-detector" }, input)
 end
 
+--- AWS logs start-live-tail operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.start_live_tail(input)
+	return common.execute_aws_command_with_raw_input({ "logs", "start-live-tail" }, input)
+end
+
+--- AWS logs tail operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.tail(input)
+	return common.execute_aws_command_with_raw_input({ "logs", "tail" }, input)
+end
+
 return M

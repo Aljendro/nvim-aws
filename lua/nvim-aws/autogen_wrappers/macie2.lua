@@ -573,4 +573,11 @@ function M.update_sensitivity_inspection_template(input)
 	return common.execute_aws_command_with_input({ "macie2", "update-sensitivity-inspection-template" }, input)
 end
 
+--- AWS macie2 wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "macie2", "wait" }, input)
+end
+
 return M

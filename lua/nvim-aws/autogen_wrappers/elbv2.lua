@@ -363,4 +363,11 @@ function M.set_subnets(input)
 	return common.execute_aws_command_with_input({ "elbv2", "set-subnets" }, input)
 end
 
+--- AWS elbv2 wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "elbv2", "wait" }, input)
+end
+
 return M

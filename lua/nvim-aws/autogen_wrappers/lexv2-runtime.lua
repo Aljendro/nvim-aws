@@ -27,4 +27,18 @@ function M.recognize_text(input)
 	return common.execute_aws_command_with_input({ "lexv2-runtime", "recognize-text" }, input)
 end
 
+--- AWS lexv2-runtime put-session operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_session(input)
+	return common.execute_aws_command_with_raw_input({ "lexv2-runtime", "put-session" }, input)
+end
+
+--- AWS lexv2-runtime recognize-utterance operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.recognize_utterance(input)
+	return common.execute_aws_command_with_raw_input({ "lexv2-runtime", "recognize-utterance" }, input)
+end
+
 return M

@@ -202,4 +202,11 @@ function M.update_ml_model(input)
 	return common.execute_aws_command_with_input({ "machinelearning", "update-ml-model" }, input)
 end
 
+--- AWS machinelearning wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "machinelearning", "wait" }, input)
+end
+
 return M

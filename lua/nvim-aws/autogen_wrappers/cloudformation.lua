@@ -622,4 +622,25 @@ function M.validate_template(input)
 	return common.execute_aws_command_with_input({ "cloudformation", "validate-template" }, input)
 end
 
+--- AWS cloudformation deploy operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.deploy(input)
+	return common.execute_aws_command_with_raw_input({ "cloudformation", "deploy" }, input)
+end
+
+--- AWS cloudformation package operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.package(input)
+	return common.execute_aws_command_with_raw_input({ "cloudformation", "package" }, input)
+end
+
+--- AWS cloudformation wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "cloudformation", "wait" }, input)
+end
+
 return M

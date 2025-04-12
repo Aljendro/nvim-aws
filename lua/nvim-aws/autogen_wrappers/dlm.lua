@@ -62,4 +62,11 @@ function M.update_lifecycle_policy(input)
 	return common.execute_aws_command_with_input({ "dlm", "update-lifecycle-policy" }, input)
 end
 
+--- AWS dlm create-default-role operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_default_role(input)
+	return common.execute_aws_command_with_raw_input({ "dlm", "create-default-role" }, input)
+end
+
 return M

@@ -139,4 +139,11 @@ function M.update_server_engine_attributes(input)
 	return common.execute_aws_command_with_input({ "opsworks-cm", "update-server-engine-attributes" }, input)
 end
 
+--- AWS opsworks-cm wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "opsworks-cm", "wait" }, input)
+end
+
 return M

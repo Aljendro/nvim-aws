@@ -790,4 +790,11 @@ function M.update_subscriptions_to_event_bridge(input)
 	return common.execute_aws_command_with_input({ "dms", "update-subscriptions-to-event-bridge" }, input)
 end
 
+--- AWS dms wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "dms", "wait" }, input)
+end
+
 return M

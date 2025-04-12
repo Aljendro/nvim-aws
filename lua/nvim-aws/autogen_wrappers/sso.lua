@@ -27,4 +27,18 @@ function M.list_accounts(input)
 	return common.execute_aws_command_with_input({ "sso", "list-accounts" }, input)
 end
 
+--- AWS sso login operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.login(input)
+	return common.execute_aws_command_with_raw_input({ "sso", "login" }, input)
+end
+
+--- AWS sso logout operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.logout(input)
+	return common.execute_aws_command_with_raw_input({ "sso", "logout" }, input)
+end
+
 return M

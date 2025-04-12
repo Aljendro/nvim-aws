@@ -13,4 +13,11 @@ function M.put_raw_message_content(input)
 	return common.execute_aws_command_with_input({ "workmailmessageflow", "put-raw-message-content" }, input)
 end
 
+--- AWS workmailmessageflow get-raw-message-content operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_raw_message_content(input)
+	return common.execute_aws_command_with_raw_input({ "workmailmessageflow", "get-raw-message-content" }, input)
+end
+
 return M

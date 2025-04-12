@@ -76,4 +76,25 @@ function M.update_cluster(input)
 	return common.execute_aws_command_with_input({ "dsql", "update-cluster" }, input)
 end
 
+--- AWS dsql generate-db-connect-admin-auth-token operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.generate_db_connect_admin_auth_token(input)
+	return common.execute_aws_command_with_raw_input({ "dsql", "generate-db-connect-admin-auth-token" }, input)
+end
+
+--- AWS dsql generate-db-connect-auth-token operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.generate_db_connect_auth_token(input)
+	return common.execute_aws_command_with_raw_input({ "dsql", "generate-db-connect-auth-token" }, input)
+end
+
+--- AWS dsql wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "dsql", "wait" }, input)
+end
+
 return M

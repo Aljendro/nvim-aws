@@ -167,4 +167,25 @@ function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "emr-containers", "untag-resource" }, input)
 end
 
+--- AWS emr-containers create-role-associations operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_role_associations(input)
+	return common.execute_aws_command_with_raw_input({ "emr-containers", "create-role-associations" }, input)
+end
+
+--- AWS emr-containers delete-role-associations operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_role_associations(input)
+	return common.execute_aws_command_with_raw_input({ "emr-containers", "delete-role-associations" }, input)
+end
+
+--- AWS emr-containers update-role-trust-policy operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_role_trust_policy(input)
+	return common.execute_aws_command_with_raw_input({ "emr-containers", "update-role-trust-policy" }, input)
+end
+
 return M

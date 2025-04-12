@@ -314,4 +314,123 @@ function M.update_studio_session_mapping(input)
 	return common.execute_aws_command_with_input({ "emr", "update-studio-session-mapping" }, input)
 end
 
+--- AWS emr add-instance-groups operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.add_instance_groups(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "add-instance-groups" }, input)
+end
+
+--- AWS emr add-steps operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.add_steps(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "add-steps" }, input)
+end
+
+--- AWS emr create-cluster operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_cluster(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "create-cluster" }, input)
+end
+
+--- AWS emr create-default-roles operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_default_roles(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "create-default-roles" }, input)
+end
+
+--- AWS emr create-hbase-backup operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_hbase_backup(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "create-hbase-backup" }, input)
+end
+
+--- AWS emr describe-cluster operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.describe_cluster(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "describe-cluster" }, input)
+end
+
+--- AWS emr disable-hbase-backups operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.disable_hbase_backups(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "disable-hbase-backups" }, input)
+end
+
+--- AWS emr get operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "get" }, input)
+end
+
+--- AWS emr install-applications operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.install_applications(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "install-applications" }, input)
+end
+
+--- AWS emr modify-cluster-attributes operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.modify_cluster_attributes(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "modify-cluster-attributes" }, input)
+end
+
+--- AWS emr put operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "put" }, input)
+end
+
+--- AWS emr restore-from-hbase-backup operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.restore_from_hbase_backup(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "restore-from-hbase-backup" }, input)
+end
+
+--- AWS emr schedule-hbase-backup operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.schedule_hbase_backup(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "schedule-hbase-backup" }, input)
+end
+
+--- AWS emr socks operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.socks(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "socks" }, input)
+end
+
+--- AWS emr ssh operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.ssh(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "ssh" }, input)
+end
+
+--- AWS emr terminate-clusters operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.terminate_clusters(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "terminate-clusters" }, input)
+end
+
+--- AWS emr wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "emr", "wait" }, input)
+end
+
 return M

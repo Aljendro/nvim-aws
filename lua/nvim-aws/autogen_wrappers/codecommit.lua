@@ -559,4 +559,11 @@ function M.update_repository_name(input)
 	return common.execute_aws_command_with_input({ "codecommit", "update-repository-name" }, input)
 end
 
+--- AWS codecommit credential-helper operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.credential_helper(input)
+	return common.execute_aws_command_with_raw_input({ "codecommit", "credential-helper" }, input)
+end
+
 return M

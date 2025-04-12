@@ -132,4 +132,11 @@ function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "untag-resource" }, input)
 end
 
+--- AWS sagemaker-geospatial get-tile operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_tile(input)
+	return common.execute_aws_command_with_raw_input({ "sagemaker-geospatial", "get-tile" }, input)
+end
+
 return M

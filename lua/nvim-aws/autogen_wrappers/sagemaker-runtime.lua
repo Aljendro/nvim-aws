@@ -13,4 +13,11 @@ function M.invoke_endpoint_async(input)
 	return common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-async" }, input)
 end
 
+--- AWS sagemaker-runtime invoke-endpoint operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.invoke_endpoint(input)
+	return common.execute_aws_command_with_raw_input({ "sagemaker-runtime", "invoke-endpoint" }, input)
+end
+
 return M

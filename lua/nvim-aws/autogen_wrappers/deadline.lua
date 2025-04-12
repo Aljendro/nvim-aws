@@ -797,4 +797,11 @@ function M.update_worker_schedule(input)
 	return common.execute_aws_command_with_input({ "deadline", "update-worker-schedule" }, input)
 end
 
+--- AWS deadline wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "deadline", "wait" }, input)
+end
+
 return M

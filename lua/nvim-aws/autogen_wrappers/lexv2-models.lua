@@ -720,4 +720,11 @@ function M.update_test_set(input)
 	return common.execute_aws_command_with_input({ "lexv2-models", "update-test-set" }, input)
 end
 
+--- AWS lexv2-models wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "lexv2-models", "wait" }, input)
+end
+
 return M

@@ -349,4 +349,18 @@ function M.validate_pull_through_cache_rule(input)
 	return common.execute_aws_command_with_input({ "ecr", "validate-pull-through-cache-rule" }, input)
 end
 
+--- AWS ecr get-login-password operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_login_password(input)
+	return common.execute_aws_command_with_raw_input({ "ecr", "get-login-password" }, input)
+end
+
+--- AWS ecr wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "ecr", "wait" }, input)
+end
+
 return M

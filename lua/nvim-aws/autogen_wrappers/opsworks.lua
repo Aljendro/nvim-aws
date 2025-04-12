@@ -524,4 +524,18 @@ function M.update_volume(input)
 	return common.execute_aws_command_with_input({ "opsworks", "update-volume" }, input)
 end
 
+--- AWS opsworks register operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.register(input)
+	return common.execute_aws_command_with_raw_input({ "opsworks", "register" }, input)
+end
+
+--- AWS opsworks wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "opsworks", "wait" }, input)
+end
+
 return M

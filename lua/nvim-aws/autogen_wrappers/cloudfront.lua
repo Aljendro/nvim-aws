@@ -853,4 +853,25 @@ function M.update_vpc_origin(input)
 	return common.execute_aws_command_with_input({ "cloudfront", "update-vpc-origin" }, input)
 end
 
+--- AWS cloudfront get-function operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_function(input)
+	return common.execute_aws_command_with_raw_input({ "cloudfront", "get-function" }, input)
+end
+
+--- AWS cloudfront sign operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.sign(input)
+	return common.execute_aws_command_with_raw_input({ "cloudfront", "sign" }, input)
+end
+
+--- AWS cloudfront wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "cloudfront", "wait" }, input)
+end
+
 return M

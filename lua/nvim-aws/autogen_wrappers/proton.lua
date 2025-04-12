@@ -615,4 +615,11 @@ function M.update_template_sync_config(input)
 	return common.execute_aws_command_with_input({ "proton", "update-template-sync-config" }, input)
 end
 
+--- AWS proton wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "proton", "wait" }, input)
+end
+
 return M

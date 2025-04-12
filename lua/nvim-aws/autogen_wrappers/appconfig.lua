@@ -300,4 +300,18 @@ function M.validate_configuration(input)
 	return common.execute_aws_command_with_input({ "appconfig", "validate-configuration" }, input)
 end
 
+--- AWS appconfig create-hosted-configuration-version operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_hosted_configuration_version(input)
+	return common.execute_aws_command_with_raw_input({ "appconfig", "create-hosted-configuration-version" }, input)
+end
+
+--- AWS appconfig get-hosted-configuration-version operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_hosted_configuration_version(input)
+	return common.execute_aws_command_with_raw_input({ "appconfig", "get-hosted-configuration-version" }, input)
+end
+
 return M

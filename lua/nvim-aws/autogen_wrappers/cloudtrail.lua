@@ -405,4 +405,18 @@ function M.update_trail(input)
 	return common.execute_aws_command_with_input({ "cloudtrail", "update-trail" }, input)
 end
 
+--- AWS cloudtrail validate-logs operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.validate_logs(input)
+	return common.execute_aws_command_with_raw_input({ "cloudtrail", "validate-logs" }, input)
+end
+
+--- AWS cloudtrail verify-query-results operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.verify_query_results(input)
+	return common.execute_aws_command_with_raw_input({ "cloudtrail", "verify-query-results" }, input)
+end
+
 return M

@@ -741,4 +741,18 @@ function M.update_wireless_gateway(input)
 	return common.execute_aws_command_with_input({ "iotwireless", "update-wireless-gateway" }, input)
 end
 
+--- AWS iotwireless get-position-estimate operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_position_estimate(input)
+	return common.execute_aws_command_with_raw_input({ "iotwireless", "get-position-estimate" }, input)
+end
+
+--- AWS iotwireless get-resource-position operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_resource_position(input)
+	return common.execute_aws_command_with_raw_input({ "iotwireless", "get-resource-position" }, input)
+end
+
 return M

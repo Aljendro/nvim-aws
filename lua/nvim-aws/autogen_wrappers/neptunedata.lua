@@ -286,4 +286,25 @@ function M.start_ml_model_transform_job(input)
 	return common.execute_aws_command_with_input({ "neptunedata", "start-ml-model-transform-job" }, input)
 end
 
+--- AWS neptunedata execute-gremlin-explain-query operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.execute_gremlin_explain_query(input)
+	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-gremlin-explain-query" }, input)
+end
+
+--- AWS neptunedata execute-gremlin-profile-query operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.execute_gremlin_profile_query(input)
+	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-gremlin-profile-query" }, input)
+end
+
+--- AWS neptunedata execute-open-cypher-explain-query operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.execute_open_cypher_explain_query(input)
+	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-open-cypher-explain-query" }, input)
+end
+
 return M

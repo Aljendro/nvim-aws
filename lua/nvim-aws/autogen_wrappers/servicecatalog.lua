@@ -636,4 +636,11 @@ function M.update_tag_option(input)
 	return common.execute_aws_command_with_input({ "servicecatalog", "update-tag-option" }, input)
 end
 
+--- AWS servicecatalog generate operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.generate(input)
+	return common.execute_aws_command_with_raw_input({ "servicecatalog", "generate" }, input)
+end
+
 return M

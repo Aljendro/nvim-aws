@@ -272,4 +272,11 @@ function M.untag_resource(input)
 	return common.execute_aws_command_with_input({ "cloudwatch", "untag-resource" }, input)
 end
 
+--- AWS cloudwatch wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "cloudwatch", "wait" }, input)
+end
+
 return M

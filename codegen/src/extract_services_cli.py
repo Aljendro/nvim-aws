@@ -35,16 +35,8 @@ class AwsCliParser:
             commands
         )
 
-        # Log any commands that don't support --generate-cli-skeleton
-        if unsupported_commands:
-            print(
-                "\nWARNING: The following commands do not support --generate-cli-skeleton:"
-            )
-            for command in unsupported_commands:
-                print(f"  - {command}")
-
         # Generate Lua files
-        self._generate_lua_file(supported_commands)
+        self._generate_lua_file(supported_commands, unsupported_commands)
 
     def _extract_commands(self) -> List[str]:
         """Extract command names from CLI help output"""
@@ -125,7 +117,7 @@ class AwsCliParser:
             print(f"Error getting help for {service_id}: {e}")
             return None
 
-    def _generate_lua_file(self, commands: List[str]):
+    def _generate_lua_file(self, commands: List[str], raw_commands: List[str]):
         """Generate the Lua wrapper file"""
         # Create the output directories if they don't exist
         os.makedirs(self.output_dir, exist_ok=True)
@@ -143,7 +135,6 @@ class AwsCliParser:
             f.write(f"--- AWS {self.service_id.upper()} service functions\n")
             f.write("local M = {}\n\n")
 
-            # Write each operation
             for command in sorted(commands):
                 lua_func_name = self._to_snake_case(command)
 
@@ -156,6 +147,21 @@ class AwsCliParser:
                 f.write(f"function M.{lua_func_name}(input)\n")
                 f.write(
                     f'\treturn common.execute_aws_command_with_input({{ "{self.service_id}", "{command}" }}, input)\n'
+                )
+                f.write("end\n\n")
+
+            for command in sorted(raw_commands):
+                lua_func_name = self._to_snake_case(command)
+
+                # Write function
+                f.write(f"--- AWS {self.service_id} {command} operation\n")
+                f.write("--- @param input table|nil Optional raw list input\n")
+                f.write(
+                    "--- @return {success: boolean, data: table|nil, error: string|nil} Result table\n"
+                )
+                f.write(f"function M.{lua_func_name}(input)\n")
+                f.write(
+                    f'\treturn common.execute_aws_command_with_raw_input({{ "{self.service_id}", "{command}" }}, input)\n'
                 )
                 f.write("end\n\n")
 

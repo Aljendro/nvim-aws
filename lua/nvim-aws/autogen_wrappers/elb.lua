@@ -209,4 +209,11 @@ function M.set_load_balancer_policies_of_listener(input)
 	return common.execute_aws_command_with_input({ "elb", "set-load-balancer-policies-of-listener" }, input)
 end
 
+--- AWS elb wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "elb", "wait" }, input)
+end
+
 return M

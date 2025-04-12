@@ -629,4 +629,25 @@ function M.upload_read_set_part(input)
 	return common.execute_aws_command_with_input({ "omics", "upload-read-set-part" }, input)
 end
 
+--- AWS omics get-read-set operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_read_set(input)
+	return common.execute_aws_command_with_raw_input({ "omics", "get-read-set" }, input)
+end
+
+--- AWS omics get-reference operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_reference(input)
+	return common.execute_aws_command_with_raw_input({ "omics", "get-reference" }, input)
+end
+
+--- AWS omics wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "omics", "wait" }, input)
+end
+
 return M

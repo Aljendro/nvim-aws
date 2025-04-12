@@ -27,4 +27,18 @@ function M.post_text(input)
 	return common.execute_aws_command_with_input({ "lex-runtime", "post-text" }, input)
 end
 
+--- AWS lex-runtime post-content operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.post_content(input)
+	return common.execute_aws_command_with_raw_input({ "lex-runtime", "post-content" }, input)
+end
+
+--- AWS lex-runtime put-session operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.put_session(input)
+	return common.execute_aws_command_with_raw_input({ "lex-runtime", "put-session" }, input)
+end
+
 return M

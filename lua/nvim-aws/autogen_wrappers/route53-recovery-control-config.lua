@@ -181,4 +181,11 @@ function M.update_safety_rule(input)
 	return common.execute_aws_command_with_input({ "route53-recovery-control-config", "update-safety-rule" }, input)
 end
 
+--- AWS route53-recovery-control-config wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "route53-recovery-control-config", "wait" }, input)
+end
+
 return M

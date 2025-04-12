@@ -335,4 +335,18 @@ function M.update_repository(input)
 	return common.execute_aws_command_with_input({ "codeartifact", "update-repository" }, input)
 end
 
+--- AWS codeartifact get-package-version-asset operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_package_version_asset(input)
+	return common.execute_aws_command_with_raw_input({ "codeartifact", "get-package-version-asset" }, input)
+end
+
+--- AWS codeartifact login operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.login(input)
+	return common.execute_aws_command_with_raw_input({ "codeartifact", "login" }, input)
+end
+
 return M

@@ -419,4 +419,11 @@ function M.update_table_storage_optimizer(input)
 	return common.execute_aws_command_with_input({ "lakeformation", "update-table-storage-optimizer" }, input)
 end
 
+--- AWS lakeformation get-work-unit-results operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_work_unit_results(input)
+	return common.execute_aws_command_with_raw_input({ "lakeformation", "get-work-unit-results" }, input)
+end
+
 return M

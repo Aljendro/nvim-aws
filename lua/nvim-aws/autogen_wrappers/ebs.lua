@@ -41,4 +41,11 @@ function M.start_snapshot(input)
 	return common.execute_aws_command_with_input({ "ebs", "start-snapshot" }, input)
 end
 
+--- AWS ebs get-snapshot-block operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_snapshot_block(input)
+	return common.execute_aws_command_with_raw_input({ "ebs", "get-snapshot-block" }, input)
+end
+
 return M

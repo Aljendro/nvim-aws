@@ -860,4 +860,18 @@ function M.update_vpc_link(input)
 	return common.execute_aws_command_with_input({ "apigateway", "update-vpc-link" }, input)
 end
 
+--- AWS apigateway get-export operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_export(input)
+	return common.execute_aws_command_with_raw_input({ "apigateway", "get-export" }, input)
+end
+
+--- AWS apigateway get-sdk operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_sdk(input)
+	return common.execute_aws_command_with_raw_input({ "apigateway", "get-sdk" }, input)
+end
+
 return M

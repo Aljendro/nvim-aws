@@ -20,4 +20,18 @@ function M.send_ssh_public_key(input)
 	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-ssh-public-key" }, input)
 end
 
+--- AWS ec2-instance-connect open-tunnel operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.open_tunnel(input)
+	return common.execute_aws_command_with_raw_input({ "ec2-instance-connect", "open-tunnel" }, input)
+end
+
+--- AWS ec2-instance-connect ssh operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.ssh(input)
+	return common.execute_aws_command_with_raw_input({ "ec2-instance-connect", "ssh" }, input)
+end
+
 return M

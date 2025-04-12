@@ -370,4 +370,11 @@ function M.update_gateway_instance(input)
 	return common.execute_aws_command_with_input({ "mediaconnect", "update-gateway-instance" }, input)
 end
 
+--- AWS mediaconnect wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "mediaconnect", "wait" }, input)
+end
+
 return M

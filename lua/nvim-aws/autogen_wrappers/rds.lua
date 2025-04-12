@@ -1147,4 +1147,18 @@ function M.switchover_read_replica(input)
 	return common.execute_aws_command_with_input({ "rds", "switchover-read-replica" }, input)
 end
 
+--- AWS rds generate-db-auth-token operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.generate_db_auth_token(input)
+	return common.execute_aws_command_with_raw_input({ "rds", "generate-db-auth-token" }, input)
+end
+
+--- AWS rds wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "rds", "wait" }, input)
+end
+
 return M

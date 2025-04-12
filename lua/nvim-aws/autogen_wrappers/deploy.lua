@@ -307,4 +307,46 @@ function M.update_deployment_group(input)
 	return common.execute_aws_command_with_input({ "deploy", "update-deployment-group" }, input)
 end
 
+--- AWS deploy deregister operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.deregister(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "deregister" }, input)
+end
+
+--- AWS deploy install operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.install(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "install" }, input)
+end
+
+--- AWS deploy push operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.push(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "push" }, input)
+end
+
+--- AWS deploy register operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.register(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "register" }, input)
+end
+
+--- AWS deploy uninstall operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.uninstall(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "uninstall" }, input)
+end
+
+--- AWS deploy wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "deploy", "wait" }, input)
+end
+
 return M

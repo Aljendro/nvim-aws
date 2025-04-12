@@ -839,4 +839,18 @@ function M.update_sdi_source(input)
 	return common.execute_aws_command_with_input({ "medialive", "update-sdi-source" }, input)
 end
 
+--- AWS medialive describe-input-device-thumbnail operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.describe_input_device_thumbnail(input)
+	return common.execute_aws_command_with_raw_input({ "medialive", "describe-input-device-thumbnail" }, input)
+end
+
+--- AWS medialive wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "medialive", "wait" }, input)
+end
+
 return M

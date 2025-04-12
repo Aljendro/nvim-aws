@@ -62,4 +62,11 @@ function M.update_resource(input)
 	return common.execute_aws_command_with_input({ "cloudcontrol", "update-resource" }, input)
 end
 
+--- AWS cloudcontrol wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "cloudcontrol", "wait" }, input)
+end
+
 return M

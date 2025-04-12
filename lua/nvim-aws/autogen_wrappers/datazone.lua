@@ -1105,4 +1105,11 @@ function M.update_user_profile(input)
 	return common.execute_aws_command_with_input({ "datazone", "update-user-profile" }, input)
 end
 
+--- AWS datazone get-lineage-event operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_lineage_event(input)
+	return common.execute_aws_command_with_raw_input({ "datazone", "get-lineage-event" }, input)
+end
+
 return M

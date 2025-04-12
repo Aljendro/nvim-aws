@@ -1147,4 +1147,25 @@ function M.upload_ssh_public_key(input)
 	return common.execute_aws_command_with_input({ "iam", "upload-ssh-public-key" }, input)
 end
 
+--- AWS iam create-virtual-mfa-device operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_virtual_mfa_device(input)
+	return common.execute_aws_command_with_raw_input({ "iam", "create-virtual-mfa-device" }, input)
+end
+
+--- AWS iam wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "iam", "wait" }, input)
+end
+
+--- AWS iam wizard operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wizard(input)
+	return common.execute_aws_command_with_raw_input({ "iam", "wizard" }, input)
+end
+
 return M

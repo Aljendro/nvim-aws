@@ -531,4 +531,11 @@ function M.update_stream_processor(input)
 	return common.execute_aws_command_with_input({ "rekognition", "update-stream-processor" }, input)
 end
 
+--- AWS rekognition wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "rekognition", "wait" }, input)
+end
+
 return M

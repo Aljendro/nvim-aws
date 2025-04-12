@@ -489,4 +489,11 @@ function M.stop_db_cluster(input)
 	return common.execute_aws_command_with_input({ "neptune", "stop-db-cluster" }, input)
 end
 
+--- AWS neptune wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "neptune", "wait" }, input)
+end
+
 return M

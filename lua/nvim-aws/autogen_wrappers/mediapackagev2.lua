@@ -216,4 +216,11 @@ function M.update_origin_endpoint(input)
 	return common.execute_aws_command_with_input({ "mediapackagev2", "update-origin-endpoint" }, input)
 end
 
+--- AWS mediapackagev2 wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "mediapackagev2", "wait" }, input)
+end
+
 return M

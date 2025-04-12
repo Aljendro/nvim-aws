@@ -671,4 +671,32 @@ function M.write_get_object_response(input)
 	return common.execute_aws_command_with_input({ "s3api", "write-get-object-response" }, input)
 end
 
+--- AWS s3api get-object operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_object(input)
+	return common.execute_aws_command_with_raw_input({ "s3api", "get-object" }, input)
+end
+
+--- AWS s3api get-object-torrent operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_object_torrent(input)
+	return common.execute_aws_command_with_raw_input({ "s3api", "get-object-torrent" }, input)
+end
+
+--- AWS s3api select-object-content operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.select_object_content(input)
+	return common.execute_aws_command_with_raw_input({ "s3api", "select-object-content" }, input)
+end
+
+--- AWS s3api wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "s3api", "wait" }, input)
+end
+
 return M

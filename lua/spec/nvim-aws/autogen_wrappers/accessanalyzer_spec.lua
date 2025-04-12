@@ -154,4 +154,3 @@ describe("AWS accessanalyzer service testing", function()
 		assert.is_true(result.success)
 	end)
 end)
-

@@ -1133,4 +1133,11 @@ function M.update_relational_database_parameters(input)
 	return common.execute_aws_command_with_input({ "lightsail", "update-relational-database-parameters" }, input)
 end
 
+--- AWS lightsail push-container-image operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.push_container_image(input)
+	return common.execute_aws_command_with_raw_input({ "lightsail", "push-container-image" }, input)
+end
+
 return M

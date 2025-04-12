@@ -223,4 +223,11 @@ function M.update_timeline_event(input)
 	return common.execute_aws_command_with_input({ "ssm-incidents", "update-timeline-event" }, input)
 end
 
+--- AWS ssm-incidents wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "ssm-incidents", "wait" }, input)
+end
+
 return M

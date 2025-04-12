@@ -216,4 +216,18 @@ function M.update_schema(input)
 	return common.execute_aws_command_with_input({ "schemas", "update-schema" }, input)
 end
 
+--- AWS schemas get-code-binding-source operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_code_binding_source(input)
+	return common.execute_aws_command_with_raw_input({ "schemas", "get-code-binding-source" }, input)
+end
+
+--- AWS schemas wait operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.wait(input)
+	return common.execute_aws_command_with_raw_input({ "schemas", "wait" }, input)
+end
+
 return M

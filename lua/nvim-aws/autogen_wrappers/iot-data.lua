@@ -34,4 +34,25 @@ function M.publish(input)
 	return common.execute_aws_command_with_input({ "iot-data", "publish" }, input)
 end
 
+--- AWS iot-data delete-thing-shadow operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.delete_thing_shadow(input)
+	return common.execute_aws_command_with_raw_input({ "iot-data", "delete-thing-shadow" }, input)
+end
+
+--- AWS iot-data get-thing-shadow operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_thing_shadow(input)
+	return common.execute_aws_command_with_raw_input({ "iot-data", "get-thing-shadow" }, input)
+end
+
+--- AWS iot-data update-thing-shadow operation
+--- @param input table|nil Optional raw list input
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.update_thing_shadow(input)
+	return common.execute_aws_command_with_raw_input({ "iot-data", "update-thing-shadow" }, input)
+end
+
 return M
