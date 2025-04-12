@@ -131,7 +131,7 @@ class AwsCliParser:
             f.write(f"-- AWS Service: {self.service_id}\n\n")
 
             # Write header
-            f.write('local common = require("nvim-aws.wrappers.common")\n\n')
+            f.write('local common = require("nvim-aws.common")\n\n')
             f.write(f"--- AWS {self.service_id.upper()} service functions\n")
             f.write("local M = {}\n\n")
 
