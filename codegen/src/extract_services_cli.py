@@ -6,13 +6,12 @@ Extracts AWS API commands from CLI help output and generates Lua wrapper functio
 
 import os
 import re
-import json
 import argparse
 import subprocess
 import shlex
 from typing import List
 
-from generate_cli_commands import service_mappings
+from src.generate_cli_commands import service_mappings
 
 
 class AwsCliParser:

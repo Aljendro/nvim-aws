@@ -33,11 +33,11 @@ def test_extract_service_ids(mocker, mock_subprocess_run):
     mock_process = mocker.MagicMock()
     mock_process.stdout = """
     AVAILABLE SERVICES
-      +o s3
-      +o ec2
-      +o lambda
-      +o help
-      +o configure
+      o s3
+      o ec2
+      o lambda
+      o help
+      o configure
     SEE ALSO
       aws help topics
     """

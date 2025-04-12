@@ -36,6 +36,7 @@ def test_get_service_help(mocker, aws_cli_parser):
         stderr=-1,
         text=True,
         check=True,
+        env=mocker.ANY,
     )
 
     # Test error case
@@ -58,14 +59,18 @@ def test_extract_commands(mocker, aws_cli_parser):
     )
     mock_get_help.return_value = """
     AVAILABLE COMMANDS
-      +o list-buckets
-      +o create-bucket
-      +o get-object
+      o execute-the-script
+      o delete-everything
+      o handle-workaround
     """
 
     # Test extraction
     commands = aws_cli_parser._extract_commands()
-    assert commands == ["list-buckets", "create-bucket", "get-object"]
+    assert commands == [
+        "execute-the-script",
+        "delete-everything",
+        "handle-workaround",
+    ]
 
     # Test empty case
     mock_get_help.return_value = None
@@ -83,7 +88,7 @@ def test_check_cli_skeleton_support(mocker, aws_cli_parser):
         result = mocker.MagicMock()
         command = cmd_args[2]  # The command is the third argument
 
-        if command == "list-buckets":
+        if command == "execute-the-script":
             result.returncode = 0  # Success
         else:
             result.returncode = 1  # Failure
@@ -93,16 +98,17 @@ def test_check_cli_skeleton_support(mocker, aws_cli_parser):
     mock_run.side_effect = mock_run_side_effect
 
     # Test the function
-    commands = ["list-buckets", "create-bucket"]
+    commands = ["execute-the-script", "help-the-bucket"]
     supported, unsupported = aws_cli_parser._check_cli_skeleton_support(commands)
 
-    assert supported == ["list-buckets"]
-    assert unsupported == ["create-bucket"]
+    assert supported == ["execute-the-script"]
+    assert unsupported == ["help-the-bucket"]
 
 
 def test_parse(mocker, aws_cli_parser):
     """Test the main parse method."""
     # Setup mocks
+    mock_generate_cli_dict = mocker.patch("src.generate_cli_commands.service_mappings")
     mock_extract = mocker.patch(
         "src.extract_services_cli.AwsCliParser._extract_commands"
     )
@@ -113,6 +119,7 @@ def test_parse(mocker, aws_cli_parser):
         "src.extract_services_cli.AwsCliParser._generate_lua_file"
     )
 
+    mock_generate_cli_dict = {"s3api": ["cmd1", "cmd3"]}
     mock_extract.return_value = ["cmd1", "cmd2", "cmd3"]
     mock_check.return_value = [["cmd1", "cmd3"], ["cmd2"]]
 
@@ -122,14 +129,15 @@ def test_parse(mocker, aws_cli_parser):
     # Verify the expected calls
     mock_extract.assert_called_once()
     mock_check.assert_called_once_with(["cmd1", "cmd2", "cmd3"])
-    mock_generate.assert_called_once_with(["cmd1", "cmd3"])
+    mock_generate.assert_called_once_with(["cmd1", "cmd3"], ["cmd2"])
 
 
 def test_generate_lua_file(aws_cli_parser, output_dir, output_dir_tests):
     """Test generating Lua files."""
     # Test with some commands
     commands = ["list-buckets", "create-bucket"]
-    aws_cli_parser._generate_lua_file(commands)
+    raw_commands = ["list-everything"]
+    aws_cli_parser._generate_lua_file(commands, raw_commands)
 
     # Check if files were created
     lua_file = os.path.join(output_dir, "s3api.lua")
@@ -143,6 +151,7 @@ def test_generate_lua_file(aws_cli_parser, output_dir, output_dir_tests):
         content = f.read()
         assert "function M.list_buckets(input)" in content
         assert "function M.create_bucket(input)" in content
+        assert "function M.list_everything(input)" in content
 
     with open(test_file, "r") as f:
         content = f.read()
