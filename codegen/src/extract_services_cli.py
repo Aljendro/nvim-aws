@@ -6,10 +6,13 @@ Extracts AWS API commands from CLI help output and generates Lua wrapper functio
 
 import os
 import re
+import json
 import argparse
 import subprocess
 import shlex
 from typing import List
+
+from generate_cli_commands import service_mappings
 
 
 class AwsCliParser:
@@ -73,7 +76,15 @@ class AwsCliParser:
         unsupported_commands = []
 
         for command in commands:
+            if command == "help":
+                continue
+
             cmd = f"aws {self.service_id} {command} --generate-cli-skeleton"
+
+            # If the command is already known to be supported, add it directly
+            if command in service_mappings.get(self.service_id, []):
+                supported_commands.append(command)
+                continue
 
             try:
                 result = subprocess.run(
@@ -176,7 +187,7 @@ class AwsCliParser:
                 )
                 f.write(f"\t\tlocal result = service.{lua_func_name}()\n")
                 f.write("\t\tassert.is_true(result.success)\n")
-                f.write("\tend)\n\n")
+                f.write("\tend)\n")
 
             f.write("end)")
 
