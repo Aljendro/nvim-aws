@@ -20,6 +20,13 @@ function M.create_application(input)
 	return common.execute_aws_command_with_input({ "m2", "create-application" }, input)
 end
 
+--- AWS m2 create-data-set-export-task operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.create_data_set_export_task(input)
+	return common.execute_aws_command_with_input({ "m2", "create-data-set-export-task" }, input)
+end
+
 --- AWS m2 create-data-set-import-task operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
@@ -90,6 +97,13 @@ function M.get_data_set_details(input)
 	return common.execute_aws_command_with_input({ "m2", "get-data-set-details" }, input)
 end
 
+--- AWS m2 get-data-set-export-task operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.get_data_set_export_task(input)
+	return common.execute_aws_command_with_input({ "m2", "get-data-set-export-task" }, input)
+end
+
 --- AWS m2 get-data-set-import-task operation
 --- @param input table|nil Optional input parameters
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
@@ -151,6 +165,13 @@ end
 --- @return {success: boolean, data: table|nil, error: string|nil} Result table
 function M.list_batch_job_restart_points(input)
 	return common.execute_aws_command_with_input({ "m2", "list-batch-job-restart-points" }, input)
+end
+
+--- AWS m2 list-data-set-export-history operation
+--- @param input table|nil Optional input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil} Result table
+function M.list_data_set_export_history(input)
+	return common.execute_aws_command_with_input({ "m2", "list-data-set-export-history" }, input)
 end
 
 --- AWS m2 list-data-set-import-history operation
