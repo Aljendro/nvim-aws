@@ -3,7 +3,7 @@ require("nvim-aws").setup()
 local os = require("os")
 local Path = require("plenary.path")
 
-local s3 = require("nvim-aws.wrappers.s3")
+local s3 = require("nvim-aws.autogen_wrappers.s3api")
 
 describe("AWS S3 Service", function()
 	local test_bucket = "test-bucket-" .. os.time()
@@ -74,7 +74,7 @@ describe("AWS S3 Service", function()
 	end)
 
 	it("should get an object from the bucket", function()
-		local result = s3.get_object({ Bucket = test_bucket, Key = test_object_key, Outfile = downloaded_file_path })
+		local result = s3.get_object({ "--bucket", test_bucket, "--key", test_object_key, downloaded_file_path })
 		assert.is_true(result.success)
 		assert.is_table(result.data)
 
