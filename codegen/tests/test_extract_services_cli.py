@@ -143,19 +143,27 @@ def test_parse(mocker, aws_cli_parser):
     mock_extract.assert_called_once()
     mock_check.assert_called_once_with(["cmd1", "cmd2", "cmd3", "cmd4"])
     mock_generate.assert_called_once_with(
-        ["cmd1", OutputType.HAS_GENERATE_CLI_SKELETON],
-        ["cmd2", OutputType.MISSING_HAS_GENERATE_CLI_SKELETON],
-        ["cmd3", OutputType.HAS_GENERATE_CLI_SKELETON],
-        ["cmd4", OutputType.STREAMING],
+        [
+            ["cmd1", OutputType.HAS_GENERATE_CLI_SKELETON],
+            ["cmd2", OutputType.MISSING_HAS_GENERATE_CLI_SKELETON],
+            ["cmd3", OutputType.HAS_GENERATE_CLI_SKELETON],
+            ["cmd4", OutputType.STREAMING],
+        ]
     )
 
 
 def test_generate_lua_file(aws_cli_parser, output_dir, output_dir_tests):
     """Test generating Lua files."""
     # Test with some commands
-    commands = ["list-buckets", "create-bucket"]
-    raw_commands = ["list-everything"]
-    aws_cli_parser._generate_lua_file(commands, raw_commands)
+    partitioned_commands = [
+        ["list-buckets", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["create-bucket", OutputType.HAS_GENERATE_CLI_SKELETON],
+        [
+            "list-everything",
+            OutputType.MISSING_HAS_GENERATE_CLI_SKELETON,
+        ],
+    ]
+    aws_cli_parser._generate_lua_file(partitioned_commands)
 
     # Check if files were created
     lua_file = os.path.join(output_dir, "s3api.lua")
@@ -167,11 +175,12 @@ def test_generate_lua_file(aws_cli_parser, output_dir, output_dir_tests):
     # Verify file contents
     with open(lua_file, "r") as f:
         content = f.read()
-        assert "function M.list_buckets(input)" in content
-        assert "function M.create_bucket(input)" in content
-        assert "function M.list_everything(input)" in content
+        assert "function M.list_buckets(input, callbacks)" in content
+        assert "function M.create_bucket(input, callbacks)" in content
+        assert "function M.list_everything(input, callbacks)" in content
 
     with open(test_file, "r") as f:
         content = f.read()
         assert 'it("should generate a cli skeleton with list_buckets"' in content
         assert 'it("should generate a cli skeleton with create_bucket"' in content
+        assert 'it("should generate a cli skeleton with list_everything"' in content
