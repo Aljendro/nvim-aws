@@ -8,506 +8,578 @@ local M = {}
 
 --- AWS apigatewayv2 create-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-api-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api_mapping(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-api-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-api-mapping" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-authorizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_authorizer(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-authorizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_authorizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-authorizer" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deployment(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-deployment" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain_name(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-domain-name" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-integration" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-integration-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-integration-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-integration-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_model(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-model" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-route operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_route(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-route" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_route(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-route" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-route-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_route_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-route-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_route_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-route-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-stage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stage(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-stage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-stage" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 create-vpc-link operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_vpc_link(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-vpc-link" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_vpc_link(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "create-vpc-link" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-access-log-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_log_settings(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-access-log-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_log_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-access-log-settings" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-api-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api_mapping(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-api-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-api-mapping" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-authorizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_authorizer(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-authorizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_authorizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-authorizer" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-cors-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cors_configuration(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-cors-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cors_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-cors-configuration" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_deployment(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-deployment" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain_name(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-domain-name" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-integration" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-integration-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-integration-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-integration-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_model(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-model" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-route operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_route(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_route(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-route-request-parameter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_route_request_parameter(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-request-parameter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_route_request_parameter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-request-parameter" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-route-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_route_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_route_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-route-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_route_settings(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_route_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-route-settings" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-stage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_stage(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-stage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_stage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-stage" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 delete-vpc-link operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_vpc_link(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-vpc-link" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_vpc_link(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "delete-vpc-link" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 export-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_api(input)
-	return common.execute_aws_command({ "apigatewayv2", "export-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_api(input, callbacks)
+	return common.execute_aws_command({ "apigatewayv2", "export-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-api-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api_mapping(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api-mapping" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-api-mappings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api_mappings(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api-mappings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api_mappings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-api-mappings" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-apis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_apis(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-apis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_apis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-apis" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-authorizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_authorizer(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-authorizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_authorizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-authorizer" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-authorizers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_authorizers(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-authorizers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_authorizers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-authorizers" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployment(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-deployment" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployments(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-deployments" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_name(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-domain-name" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-domain-names operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_names(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-domain-names" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_names(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-domain-names" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-integration-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-integration-responses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration_responses(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration-responses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration_responses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integration-responses" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integrations(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-integrations" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_model(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-model" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-model-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_model_template(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-model-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_model_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-model-template" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_models(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-models" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-route operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_route(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_route(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-route-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_route_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_route_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-route-responses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_route_responses(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route-responses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_route_responses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-route-responses" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_routes(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-routes" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-stage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stage(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-stage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-stage" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-stages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stages(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-stages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-stages" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tags(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-tags" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-vpc-link operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_vpc_link(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-vpc-link" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_vpc_link(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-vpc-link" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 get-vpc-links operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_vpc_links(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-vpc-links" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_vpc_links(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "get-vpc-links" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 import-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "import-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "import-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 reimport-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reimport_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "reimport-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reimport_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "reimport-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 reset-authorizers-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_authorizers_cache(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "reset-authorizers-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_authorizers_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "reset-authorizers-cache" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-api" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-api-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api_mapping(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-api-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-api-mapping" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-authorizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_authorizer(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-authorizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_authorizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-authorizer" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_deployment(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-deployment" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_name(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-domain-name" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_integration(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-integration" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-integration-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_integration_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-integration-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_integration_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-integration-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_model(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-model" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-route operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_route(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-route" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_route(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-route" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-route-response operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_route_response(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-route-response" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_route_response(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-route-response" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-stage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_stage(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-stage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_stage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-stage" }, input, callbacks)
 end
 
 --- AWS apigatewayv2 update-vpc-link operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_vpc_link(input)
-	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-vpc-link" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_vpc_link(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewayv2", "update-vpc-link" }, input, callbacks)
 end
 
 return M

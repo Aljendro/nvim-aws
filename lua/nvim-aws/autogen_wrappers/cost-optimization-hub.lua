@@ -8,51 +8,58 @@ local M = {}
 
 --- AWS cost-optimization-hub get-preferences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_preferences(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-preferences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_preferences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-preferences" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub get-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_recommendation(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-recommendation" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub list-enrollment-statuses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_enrollment_statuses(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-enrollment-statuses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_enrollment_statuses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-enrollment-statuses" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub list-recommendation-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommendation_summaries(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendation-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommendation_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendation-summaries" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub list-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommendations(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendations" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub update-enrollment-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_enrollment_status(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-enrollment-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_enrollment_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-enrollment-status" }, input, callbacks)
 end
 
 --- AWS cost-optimization-hub update-preferences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_preferences(input)
-	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-preferences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_preferences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-preferences" }, input, callbacks)
 end
 
 return M

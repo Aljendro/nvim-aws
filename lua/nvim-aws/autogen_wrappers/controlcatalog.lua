@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS controlcatalog get-control operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_control(input)
-	return common.execute_aws_command_skeleton({ "controlcatalog", "get-control" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_control(input, callbacks)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "get-control" }, input, callbacks)
 end
 
 --- AWS controlcatalog list-common-controls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_common_controls(input)
-	return common.execute_aws_command_skeleton({ "controlcatalog", "list-common-controls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_common_controls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-common-controls" }, input, callbacks)
 end
 
 --- AWS controlcatalog list-controls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_controls(input)
-	return common.execute_aws_command_skeleton({ "controlcatalog", "list-controls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_controls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-controls" }, input, callbacks)
 end
 
 --- AWS controlcatalog list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "controlcatalog", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-domains" }, input, callbacks)
 end
 
 --- AWS controlcatalog list-objectives operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_objectives(input)
-	return common.execute_aws_command_skeleton({ "controlcatalog", "list-objectives" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_objectives(input, callbacks)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-objectives" }, input, callbacks)
 end
 
 return M

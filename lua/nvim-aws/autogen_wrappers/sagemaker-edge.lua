@@ -8,23 +8,26 @@ local M = {}
 
 --- AWS sagemaker-edge get-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployments(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-deployments" }, input, callbacks)
 end
 
 --- AWS sagemaker-edge get-device-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_registration(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-device-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-device-registration" }, input, callbacks)
 end
 
 --- AWS sagemaker-edge send-heartbeat operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_heartbeat(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-edge", "send-heartbeat" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_heartbeat(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "send-heartbeat" }, input, callbacks)
 end
 
 return M

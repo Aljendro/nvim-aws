@@ -8,9 +8,10 @@ local M = {}
 
 --- AWS marketplace-reporting get-buyer-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_buyer_dashboard(input)
-	return common.execute_aws_command_skeleton({ "marketplace-reporting", "get-buyer-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_buyer_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "marketplace-reporting", "get-buyer-dashboard" }, input, callbacks)
 end
 
 return M

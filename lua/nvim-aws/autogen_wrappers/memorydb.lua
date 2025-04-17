@@ -8,303 +8,346 @@ local M = {}
 
 --- AWS memorydb batch-update-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "batch-update-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "batch-update-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb copy-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_snapshot(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "copy-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "copy-snapshot" }, input, callbacks)
 end
 
 --- AWS memorydb create-acl operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_acl(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-acl" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_acl(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-acl" }, input, callbacks)
 end
 
 --- AWS memorydb create-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb create-multi-region-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_multi_region_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-multi-region-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_multi_region_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-multi-region-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb create-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-parameter-group" }, input, callbacks)
 end
 
 --- AWS memorydb create-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_snapshot(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-snapshot" }, input, callbacks)
 end
 
 --- AWS memorydb create-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-subnet-group" }, input, callbacks)
 end
 
 --- AWS memorydb create-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "create-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "create-user" }, input, callbacks)
 end
 
 --- AWS memorydb delete-acl operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_acl(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-acl" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_acl(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-acl" }, input, callbacks)
 end
 
 --- AWS memorydb delete-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb delete-multi-region-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_multi_region_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-multi-region-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_multi_region_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-multi-region-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb delete-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-parameter-group" }, input, callbacks)
 end
 
 --- AWS memorydb delete-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_snapshot(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-snapshot" }, input, callbacks)
 end
 
 --- AWS memorydb delete-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-subnet-group" }, input, callbacks)
 end
 
 --- AWS memorydb delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "delete-user" }, input, callbacks)
 end
 
 --- AWS memorydb describe-acls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_acls(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-acls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_acls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-acls" }, input, callbacks)
 end
 
 --- AWS memorydb describe-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_clusters(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-clusters" }, input, callbacks)
 end
 
 --- AWS memorydb describe-engine-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_engine_versions(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-engine-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_engine_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-engine-versions" }, input, callbacks)
 end
 
 --- AWS memorydb describe-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_events(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-events" }, input, callbacks)
 end
 
 --- AWS memorydb describe-multi-region-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_multi_region_clusters(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-multi-region-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_multi_region_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-multi-region-clusters" }, input, callbacks)
 end
 
 --- AWS memorydb describe-parameter-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_parameter_groups(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-parameter-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_parameter_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-parameter-groups" }, input, callbacks)
 end
 
 --- AWS memorydb describe-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_parameters(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-parameters" }, input, callbacks)
 end
 
 --- AWS memorydb describe-reserved-nodes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_reserved_nodes(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-reserved-nodes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_reserved_nodes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-reserved-nodes" }, input, callbacks)
 end
 
 --- AWS memorydb describe-reserved-nodes-offerings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_reserved_nodes_offerings(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-reserved-nodes-offerings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_reserved_nodes_offerings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-reserved-nodes-offerings" }, input, callbacks)
 end
 
 --- AWS memorydb describe-service-updates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_service_updates(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-service-updates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_service_updates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-service-updates" }, input, callbacks)
 end
 
 --- AWS memorydb describe-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_snapshots(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-snapshots" }, input, callbacks)
 end
 
 --- AWS memorydb describe-subnet-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_subnet_groups(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-subnet-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_subnet_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-subnet-groups" }, input, callbacks)
 end
 
 --- AWS memorydb describe-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_users(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "describe-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "describe-users" }, input, callbacks)
 end
 
 --- AWS memorydb failover-shard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.failover_shard(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "failover-shard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.failover_shard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "failover-shard" }, input, callbacks)
 end
 
 --- AWS memorydb list-allowed-multi-region-cluster-updates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_allowed_multi_region_cluster_updates(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "list-allowed-multi-region-cluster-updates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_allowed_multi_region_cluster_updates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "list-allowed-multi-region-cluster-updates" }, input, callbacks)
 end
 
 --- AWS memorydb list-allowed-node-type-updates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_allowed_node_type_updates(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "list-allowed-node-type-updates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_allowed_node_type_updates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "list-allowed-node-type-updates" }, input, callbacks)
 end
 
 --- AWS memorydb list-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "list-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "list-tags" }, input, callbacks)
 end
 
 --- AWS memorydb purchase-reserved-nodes-offering operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.purchase_reserved_nodes_offering(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "purchase-reserved-nodes-offering" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.purchase_reserved_nodes_offering(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "purchase-reserved-nodes-offering" }, input, callbacks)
 end
 
 --- AWS memorydb reset-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "reset-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "reset-parameter-group" }, input, callbacks)
 end
 
 --- AWS memorydb tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "tag-resource" }, input, callbacks)
 end
 
 --- AWS memorydb untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "untag-resource" }, input, callbacks)
 end
 
 --- AWS memorydb update-acl operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_acl(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-acl" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_acl(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-acl" }, input, callbacks)
 end
 
 --- AWS memorydb update-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb update-multi-region-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_multi_region_cluster(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-multi-region-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_multi_region_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-multi-region-cluster" }, input, callbacks)
 end
 
 --- AWS memorydb update-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-parameter-group" }, input, callbacks)
 end
 
 --- AWS memorydb update-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-subnet-group" }, input, callbacks)
 end
 
 --- AWS memorydb update-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user(input)
-	return common.execute_aws_command_skeleton({ "memorydb", "update-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "memorydb", "update-user" }, input, callbacks)
 end
 
 return M

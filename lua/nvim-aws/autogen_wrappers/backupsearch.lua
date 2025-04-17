@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS backupsearch get-search-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_search_job(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "get-search-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_search_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "get-search-job" }, input, callbacks)
 end
 
 --- AWS backupsearch get-search-result-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_search_result_export_job(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "get-search-result-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_search_result_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "get-search-result-export-job" }, input, callbacks)
 end
 
 --- AWS backupsearch list-search-job-backups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_search_job_backups(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-job-backups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_search_job_backups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-job-backups" }, input, callbacks)
 end
 
 --- AWS backupsearch list-search-job-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_search_job_results(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-job-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_search_job_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-job-results" }, input, callbacks)
 end
 
 --- AWS backupsearch list-search-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_search_jobs(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_search_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-jobs" }, input, callbacks)
 end
 
 --- AWS backupsearch list-search-result-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_search_result_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-result-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_search_result_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "list-search-result-export-jobs" }, input, callbacks)
 end
 
 --- AWS backupsearch list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS backupsearch start-search-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_search_job(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "start-search-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_search_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "start-search-job" }, input, callbacks)
 end
 
 --- AWS backupsearch start-search-result-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_search_result_export_job(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "start-search-result-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_search_result_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "start-search-result-export-job" }, input, callbacks)
 end
 
 --- AWS backupsearch stop-search-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_search_job(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "stop-search-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_search_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "stop-search-job" }, input, callbacks)
 end
 
 --- AWS backupsearch tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "tag-resource" }, input, callbacks)
 end
 
 --- AWS backupsearch untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "backupsearch", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "backupsearch", "untag-resource" }, input, callbacks)
 end
 
 return M

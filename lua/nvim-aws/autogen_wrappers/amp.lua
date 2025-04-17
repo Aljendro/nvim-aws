@@ -8,198 +8,226 @@ local M = {}
 
 --- AWS amp create-alert-manager-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_alert_manager_definition(input)
-	return common.execute_aws_command_skeleton({ "amp", "create-alert-manager-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_alert_manager_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "create-alert-manager-definition" }, input, callbacks)
 end
 
 --- AWS amp create-logging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_logging_configuration(input)
-	return common.execute_aws_command_skeleton({ "amp", "create-logging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_logging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "create-logging-configuration" }, input, callbacks)
 end
 
 --- AWS amp create-rule-groups-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_rule_groups_namespace(input)
-	return common.execute_aws_command_skeleton({ "amp", "create-rule-groups-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_rule_groups_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "create-rule-groups-namespace" }, input, callbacks)
 end
 
 --- AWS amp create-scraper operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_scraper(input)
-	return common.execute_aws_command_skeleton({ "amp", "create-scraper" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_scraper(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "create-scraper" }, input, callbacks)
 end
 
 --- AWS amp create-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workspace(input)
-	return common.execute_aws_command_skeleton({ "amp", "create-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "create-workspace" }, input, callbacks)
 end
 
 --- AWS amp delete-alert-manager-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alert_manager_definition(input)
-	return common.execute_aws_command_skeleton({ "amp", "delete-alert-manager-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alert_manager_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "delete-alert-manager-definition" }, input, callbacks)
 end
 
 --- AWS amp delete-logging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_logging_configuration(input)
-	return common.execute_aws_command_skeleton({ "amp", "delete-logging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_logging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "delete-logging-configuration" }, input, callbacks)
 end
 
 --- AWS amp delete-rule-groups-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rule_groups_namespace(input)
-	return common.execute_aws_command_skeleton({ "amp", "delete-rule-groups-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rule_groups_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "delete-rule-groups-namespace" }, input, callbacks)
 end
 
 --- AWS amp delete-scraper operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_scraper(input)
-	return common.execute_aws_command_skeleton({ "amp", "delete-scraper" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_scraper(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "delete-scraper" }, input, callbacks)
 end
 
 --- AWS amp delete-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workspace(input)
-	return common.execute_aws_command_skeleton({ "amp", "delete-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "delete-workspace" }, input, callbacks)
 end
 
 --- AWS amp describe-alert-manager-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_alert_manager_definition(input)
-	return common.execute_aws_command_skeleton({ "amp", "describe-alert-manager-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_alert_manager_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "describe-alert-manager-definition" }, input, callbacks)
 end
 
 --- AWS amp describe-logging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_logging_configuration(input)
-	return common.execute_aws_command_skeleton({ "amp", "describe-logging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_logging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "describe-logging-configuration" }, input, callbacks)
 end
 
 --- AWS amp describe-rule-groups-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_rule_groups_namespace(input)
-	return common.execute_aws_command_skeleton({ "amp", "describe-rule-groups-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_rule_groups_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "describe-rule-groups-namespace" }, input, callbacks)
 end
 
 --- AWS amp describe-scraper operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_scraper(input)
-	return common.execute_aws_command_skeleton({ "amp", "describe-scraper" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_scraper(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "describe-scraper" }, input, callbacks)
 end
 
 --- AWS amp describe-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workspace(input)
-	return common.execute_aws_command_skeleton({ "amp", "describe-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "describe-workspace" }, input, callbacks)
 end
 
 --- AWS amp get-default-scraper-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_default_scraper_configuration(input)
-	return common.execute_aws_command_skeleton({ "amp", "get-default-scraper-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_default_scraper_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "get-default-scraper-configuration" }, input, callbacks)
 end
 
 --- AWS amp list-rule-groups-namespaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rule_groups_namespaces(input)
-	return common.execute_aws_command_skeleton({ "amp", "list-rule-groups-namespaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rule_groups_namespaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "list-rule-groups-namespaces" }, input, callbacks)
 end
 
 --- AWS amp list-scrapers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_scrapers(input)
-	return common.execute_aws_command_skeleton({ "amp", "list-scrapers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_scrapers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "list-scrapers" }, input, callbacks)
 end
 
 --- AWS amp list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "amp", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS amp list-workspaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workspaces(input)
-	return common.execute_aws_command_skeleton({ "amp", "list-workspaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workspaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "list-workspaces" }, input, callbacks)
 end
 
 --- AWS amp put-alert-manager-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_alert_manager_definition(input)
-	return common.execute_aws_command_skeleton({ "amp", "put-alert-manager-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_alert_manager_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "put-alert-manager-definition" }, input, callbacks)
 end
 
 --- AWS amp put-rule-groups-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_rule_groups_namespace(input)
-	return common.execute_aws_command_skeleton({ "amp", "put-rule-groups-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_rule_groups_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "put-rule-groups-namespace" }, input, callbacks)
 end
 
 --- AWS amp tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "amp", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "tag-resource" }, input, callbacks)
 end
 
 --- AWS amp untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "amp", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "untag-resource" }, input, callbacks)
 end
 
 --- AWS amp update-logging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_logging_configuration(input)
-	return common.execute_aws_command_skeleton({ "amp", "update-logging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_logging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "update-logging-configuration" }, input, callbacks)
 end
 
 --- AWS amp update-scraper operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_scraper(input)
-	return common.execute_aws_command_skeleton({ "amp", "update-scraper" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_scraper(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "update-scraper" }, input, callbacks)
 end
 
 --- AWS amp update-workspace-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workspace_alias(input)
-	return common.execute_aws_command_skeleton({ "amp", "update-workspace-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workspace_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amp", "update-workspace-alias" }, input, callbacks)
 end
 
 --- AWS amp wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "amp", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "amp", "wait" }, input, callbacks)
 end
 
 return M

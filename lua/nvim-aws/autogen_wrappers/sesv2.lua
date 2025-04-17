@@ -8,681 +8,778 @@ local M = {}
 
 --- AWS sesv2 batch-get-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_metric_data(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "batch-get-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "batch-get-metric-data" }, input, callbacks)
 end
 
 --- AWS sesv2 cancel-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_export_job(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "cancel-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "cancel-export-job" }, input, callbacks)
 end
 
 --- AWS sesv2 create-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-configuration-set" }, input, callbacks)
 end
 
 --- AWS sesv2 create-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 create-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-contact" }, input, callbacks)
 end
 
 --- AWS sesv2 create-contact-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact_list(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-contact-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-contact-list" }, input, callbacks)
 end
 
 --- AWS sesv2 create-custom-verification-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_verification_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-custom-verification-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_verification_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-custom-verification-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 create-dedicated-ip-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dedicated_ip_pool(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-dedicated-ip-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dedicated_ip_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-dedicated-ip-pool" }, input, callbacks)
 end
 
 --- AWS sesv2 create-deliverability-test-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deliverability_test_report(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-deliverability-test-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deliverability_test_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-deliverability-test-report" }, input, callbacks)
 end
 
 --- AWS sesv2 create-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_email_identity(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-email-identity" }, input, callbacks)
 end
 
 --- AWS sesv2 create-email-identity-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_email_identity_policy(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-email-identity-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_email_identity_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-email-identity-policy" }, input, callbacks)
 end
 
 --- AWS sesv2 create-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 create-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_export_job(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-export-job" }, input, callbacks)
 end
 
 --- AWS sesv2 create-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_import_job(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-import-job" }, input, callbacks)
 end
 
 --- AWS sesv2 create-multi-region-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_multi_region_endpoint(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "create-multi-region-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_multi_region_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "create-multi-region-endpoint" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-configuration-set" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-contact" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-contact-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_list(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-contact-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-contact-list" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-custom-verification-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_verification_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-custom-verification-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_verification_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-custom-verification-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-dedicated-ip-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dedicated_ip_pool(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-dedicated-ip-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dedicated_ip_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-dedicated-ip-pool" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_email_identity(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-identity" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-email-identity-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_email_identity_policy(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-identity-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_email_identity_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-identity-policy" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-multi-region-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_multi_region_endpoint(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-multi-region-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_multi_region_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-multi-region-endpoint" }, input, callbacks)
 end
 
 --- AWS sesv2 delete-suppressed-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_suppressed_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "delete-suppressed-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_suppressed_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "delete-suppressed-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 get-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-account" }, input, callbacks)
 end
 
 --- AWS sesv2 get-blacklist-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blacklist_reports(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-blacklist-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blacklist_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-blacklist-reports" }, input, callbacks)
 end
 
 --- AWS sesv2 get-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-configuration-set" }, input, callbacks)
 end
 
 --- AWS sesv2 get-configuration-set-event-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_set_event_destinations(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-configuration-set-event-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_set_event_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-configuration-set-event-destinations" }, input, callbacks)
 end
 
 --- AWS sesv2 get-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-contact" }, input, callbacks)
 end
 
 --- AWS sesv2 get-contact-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact_list(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-contact-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-contact-list" }, input, callbacks)
 end
 
 --- AWS sesv2 get-custom-verification-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_custom_verification_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-custom-verification-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_custom_verification_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-custom-verification-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 get-dedicated-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dedicated_ip(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dedicated_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ip" }, input, callbacks)
 end
 
 --- AWS sesv2 get-dedicated-ip-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dedicated_ip_pool(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ip-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dedicated_ip_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ip-pool" }, input, callbacks)
 end
 
 --- AWS sesv2 get-dedicated-ips operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dedicated_ips(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ips" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dedicated_ips(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-dedicated-ips" }, input, callbacks)
 end
 
 --- AWS sesv2 get-deliverability-dashboard-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deliverability_dashboard_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-deliverability-dashboard-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deliverability_dashboard_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-deliverability-dashboard-options" }, input, callbacks)
 end
 
 --- AWS sesv2 get-deliverability-test-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deliverability_test_report(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-deliverability-test-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deliverability_test_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-deliverability-test-report" }, input, callbacks)
 end
 
 --- AWS sesv2 get-domain-deliverability-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_deliverability_campaign(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-domain-deliverability-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_deliverability_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-domain-deliverability-campaign" }, input, callbacks)
 end
 
 --- AWS sesv2 get-domain-statistics-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_statistics_report(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-domain-statistics-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_statistics_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-domain-statistics-report" }, input, callbacks)
 end
 
 --- AWS sesv2 get-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_email_identity(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-email-identity" }, input, callbacks)
 end
 
 --- AWS sesv2 get-email-identity-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_email_identity_policies(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-email-identity-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_email_identity_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-email-identity-policies" }, input, callbacks)
 end
 
 --- AWS sesv2 get-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 get-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_export_job(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-export-job" }, input, callbacks)
 end
 
 --- AWS sesv2 get-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_import_job(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-import-job" }, input, callbacks)
 end
 
 --- AWS sesv2 get-message-insights operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_message_insights(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-message-insights" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_message_insights(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-message-insights" }, input, callbacks)
 end
 
 --- AWS sesv2 get-multi-region-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multi_region_endpoint(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-multi-region-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multi_region_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-multi-region-endpoint" }, input, callbacks)
 end
 
 --- AWS sesv2 get-suppressed-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_suppressed_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "get-suppressed-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_suppressed_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "get-suppressed-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 list-configuration-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configuration_sets(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-configuration-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configuration_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-configuration-sets" }, input, callbacks)
 end
 
 --- AWS sesv2 list-contact-lists operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_lists(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-contact-lists" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_lists(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-contact-lists" }, input, callbacks)
 end
 
 --- AWS sesv2 list-contacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contacts(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-contacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-contacts" }, input, callbacks)
 end
 
 --- AWS sesv2 list-custom-verification-email-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_verification_email_templates(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-custom-verification-email-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_verification_email_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-custom-verification-email-templates" }, input, callbacks)
 end
 
 --- AWS sesv2 list-dedicated-ip-pools operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dedicated_ip_pools(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-dedicated-ip-pools" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dedicated_ip_pools(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-dedicated-ip-pools" }, input, callbacks)
 end
 
 --- AWS sesv2 list-deliverability-test-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deliverability_test_reports(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-deliverability-test-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deliverability_test_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-deliverability-test-reports" }, input, callbacks)
 end
 
 --- AWS sesv2 list-domain-deliverability-campaigns operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domain_deliverability_campaigns(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-domain-deliverability-campaigns" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domain_deliverability_campaigns(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-domain-deliverability-campaigns" }, input, callbacks)
 end
 
 --- AWS sesv2 list-email-identities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_email_identities(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-email-identities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_email_identities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-email-identities" }, input, callbacks)
 end
 
 --- AWS sesv2 list-email-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_email_templates(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-email-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_email_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-email-templates" }, input, callbacks)
 end
 
 --- AWS sesv2 list-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-export-jobs" }, input, callbacks)
 end
 
 --- AWS sesv2 list-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-import-jobs" }, input, callbacks)
 end
 
 --- AWS sesv2 list-multi-region-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_multi_region_endpoints(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-multi-region-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_multi_region_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-multi-region-endpoints" }, input, callbacks)
 end
 
 --- AWS sesv2 list-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommendations(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-recommendations" }, input, callbacks)
 end
 
 --- AWS sesv2 list-suppressed-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_suppressed_destinations(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-suppressed-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_suppressed_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-suppressed-destinations" }, input, callbacks)
 end
 
 --- AWS sesv2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS sesv2 put-account-dedicated-ip-warmup-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_dedicated_ip_warmup_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-account-dedicated-ip-warmup-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_dedicated_ip_warmup_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-account-dedicated-ip-warmup-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-account-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_details(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-account-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-account-details" }, input, callbacks)
 end
 
 --- AWS sesv2 put-account-sending-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_sending_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-account-sending-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_sending_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-account-sending-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-account-suppression-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_suppression_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-account-suppression-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_suppression_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-account-suppression-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-account-vdm-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_vdm_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-account-vdm-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_vdm_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-account-vdm-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-archiving-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_archiving_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-archiving-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_archiving_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-archiving-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-delivery-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_delivery_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-delivery-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_delivery_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-delivery-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-reputation-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_reputation_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-reputation-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_reputation_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-reputation-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-sending-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_sending_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-sending-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_sending_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-sending-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-suppression-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_suppression_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-suppression-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_suppression_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-suppression-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-tracking-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_tracking_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-tracking-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_tracking_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-tracking-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-configuration-set-vdm-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_vdm_options(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-vdm-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_vdm_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-configuration-set-vdm-options" }, input, callbacks)
 end
 
 --- AWS sesv2 put-dedicated-ip-in-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_dedicated_ip_in_pool(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-in-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_dedicated_ip_in_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-in-pool" }, input, callbacks)
 end
 
 --- AWS sesv2 put-dedicated-ip-pool-scaling-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_dedicated_ip_pool_scaling_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-pool-scaling-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_dedicated_ip_pool_scaling_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-pool-scaling-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-dedicated-ip-warmup-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_dedicated_ip_warmup_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-warmup-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_dedicated_ip_warmup_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-dedicated-ip-warmup-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-deliverability-dashboard-option operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_deliverability_dashboard_option(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-deliverability-dashboard-option" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_deliverability_dashboard_option(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-deliverability-dashboard-option" }, input, callbacks)
 end
 
 --- AWS sesv2 put-email-identity-configuration-set-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_configuration_set_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-configuration-set-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_configuration_set_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-configuration-set-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-email-identity-dkim-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_dkim_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-dkim-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_dkim_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-dkim-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-email-identity-dkim-signing-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_dkim_signing_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-dkim-signing-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_dkim_signing_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-dkim-signing-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-email-identity-feedback-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_feedback_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-feedback-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_feedback_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-feedback-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-email-identity-mail-from-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_mail_from_attributes(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-mail-from-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_mail_from_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-email-identity-mail-from-attributes" }, input, callbacks)
 end
 
 --- AWS sesv2 put-suppressed-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_suppressed_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "put-suppressed-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_suppressed_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "put-suppressed-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 send-bulk-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_bulk_email(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "send-bulk-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_bulk_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "send-bulk-email" }, input, callbacks)
 end
 
 --- AWS sesv2 send-custom-verification-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_custom_verification_email(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "send-custom-verification-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_custom_verification_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "send-custom-verification-email" }, input, callbacks)
 end
 
 --- AWS sesv2 send-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_email(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "send-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "send-email" }, input, callbacks)
 end
 
 --- AWS sesv2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS sesv2 test-render-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_render_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "test-render-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_render_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "test-render-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS sesv2 update-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS sesv2 update-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-contact" }, input, callbacks)
 end
 
 --- AWS sesv2 update-contact-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_list(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-contact-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-contact-list" }, input, callbacks)
 end
 
 --- AWS sesv2 update-custom-verification-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_custom_verification_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-custom-verification-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_custom_verification_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-custom-verification-email-template" }, input, callbacks)
 end
 
 --- AWS sesv2 update-email-identity-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_email_identity_policy(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-email-identity-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_email_identity_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-email-identity-policy" }, input, callbacks)
 end
 
 --- AWS sesv2 update-email-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_email_template(input)
-	return common.execute_aws_command_skeleton({ "sesv2", "update-email-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_email_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sesv2", "update-email-template" }, input, callbacks)
 end
 
 return M

@@ -8,156 +8,178 @@ local M = {}
 
 --- AWS lookoutvision create-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "create-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "create-dataset" }, input, callbacks)
 end
 
 --- AWS lookoutvision create-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_model(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "create-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "create-model" }, input, callbacks)
 end
 
 --- AWS lookoutvision create-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_project(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "create-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "create-project" }, input, callbacks)
 end
 
 --- AWS lookoutvision delete-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataset(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-dataset" }, input, callbacks)
 end
 
 --- AWS lookoutvision delete-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_model(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-model" }, input, callbacks)
 end
 
 --- AWS lookoutvision delete-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "delete-project" }, input, callbacks)
 end
 
 --- AWS lookoutvision describe-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-dataset" }, input, callbacks)
 end
 
 --- AWS lookoutvision describe-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_model(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-model" }, input, callbacks)
 end
 
 --- AWS lookoutvision describe-model-packaging-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_model_packaging_job(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-model-packaging-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_model_packaging_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-model-packaging-job" }, input, callbacks)
 end
 
 --- AWS lookoutvision describe-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_project(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "describe-project" }, input, callbacks)
 end
 
 --- AWS lookoutvision detect-anomalies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_anomalies(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "detect-anomalies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_anomalies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "detect-anomalies" }, input, callbacks)
 end
 
 --- AWS lookoutvision list-dataset-entries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_entries(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "list-dataset-entries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_entries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "list-dataset-entries" }, input, callbacks)
 end
 
 --- AWS lookoutvision list-model-packaging-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_model_packaging_jobs(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "list-model-packaging-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_model_packaging_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "list-model-packaging-jobs" }, input, callbacks)
 end
 
 --- AWS lookoutvision list-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_models(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "list-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "list-models" }, input, callbacks)
 end
 
 --- AWS lookoutvision list-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_projects(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "list-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "list-projects" }, input, callbacks)
 end
 
 --- AWS lookoutvision list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS lookoutvision start-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_model(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "start-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "start-model" }, input, callbacks)
 end
 
 --- AWS lookoutvision start-model-packaging-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_model_packaging_job(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "start-model-packaging-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_model_packaging_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "start-model-packaging-job" }, input, callbacks)
 end
 
 --- AWS lookoutvision stop-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_model(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "stop-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "stop-model" }, input, callbacks)
 end
 
 --- AWS lookoutvision tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "tag-resource" }, input, callbacks)
 end
 
 --- AWS lookoutvision untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "untag-resource" }, input, callbacks)
 end
 
 --- AWS lookoutvision update-dataset-entries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dataset_entries(input)
-	return common.execute_aws_command_skeleton({ "lookoutvision", "update-dataset-entries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dataset_entries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutvision", "update-dataset-entries" }, input, callbacks)
 end
 
 return M

@@ -8,149 +8,170 @@ local M = {}
 
 --- AWS ssm-sap delete-resource-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_permission(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "delete-resource-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "delete-resource-permission" }, input, callbacks)
 end
 
 --- AWS ssm-sap deregister-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_application(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "deregister-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "deregister-application" }, input, callbacks)
 end
 
 --- AWS ssm-sap get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "get-application" }, input, callbacks)
 end
 
 --- AWS ssm-sap get-component operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_component(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "get-component" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_component(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "get-component" }, input, callbacks)
 end
 
 --- AWS ssm-sap get-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_database(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "get-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "get-database" }, input, callbacks)
 end
 
 --- AWS ssm-sap get-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_operation(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "get-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "get-operation" }, input, callbacks)
 end
 
 --- AWS ssm-sap get-resource-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_permission(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "get-resource-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "get-resource-permission" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-applications" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-components operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_components(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-components" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_components(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-components" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_databases(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-databases" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-operation-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_operation_events(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-operation-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_operation_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-operation-events" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_operations(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-operations" }, input, callbacks)
 end
 
 --- AWS ssm-sap list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ssm-sap put-resource-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_permission(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "put-resource-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "put-resource-permission" }, input, callbacks)
 end
 
 --- AWS ssm-sap register-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_application(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "register-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "register-application" }, input, callbacks)
 end
 
 --- AWS ssm-sap start-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_application(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "start-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "start-application" }, input, callbacks)
 end
 
 --- AWS ssm-sap start-application-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_application_refresh(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "start-application-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_application_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "start-application-refresh" }, input, callbacks)
 end
 
 --- AWS ssm-sap stop-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_application(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "stop-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "stop-application" }, input, callbacks)
 end
 
 --- AWS ssm-sap tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ssm-sap untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ssm-sap update-application-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application_settings(input)
-	return common.execute_aws_command_skeleton({ "ssm-sap", "update-application-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-sap", "update-application-settings" }, input, callbacks)
 end
 
 return M

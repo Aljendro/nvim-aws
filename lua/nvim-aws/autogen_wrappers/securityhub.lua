@@ -8,534 +8,610 @@ local M = {}
 
 --- AWS securityhub accept-administrator-invitation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_administrator_invitation(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "accept-administrator-invitation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_administrator_invitation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "accept-administrator-invitation" }, input, callbacks)
 end
 
 --- AWS securityhub batch-delete-automation-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_automation_rules(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-delete-automation-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_automation_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-delete-automation-rules" }, input, callbacks)
 end
 
 --- AWS securityhub batch-disable-standards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_disable_standards(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-disable-standards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_disable_standards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-disable-standards" }, input, callbacks)
 end
 
 --- AWS securityhub batch-enable-standards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_enable_standards(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-enable-standards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_enable_standards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-enable-standards" }, input, callbacks)
 end
 
 --- AWS securityhub batch-get-automation-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_automation_rules(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-automation-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_automation_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-automation-rules" }, input, callbacks)
 end
 
 --- AWS securityhub batch-get-configuration-policy-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_configuration_policy_associations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-configuration-policy-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_configuration_policy_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-configuration-policy-associations" }, input, callbacks)
 end
 
 --- AWS securityhub batch-get-security-controls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_security_controls(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-security-controls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_security_controls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-security-controls" }, input, callbacks)
 end
 
 --- AWS securityhub batch-get-standards-control-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_standards_control_associations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-standards-control-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_standards_control_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-get-standards-control-associations" }, input, callbacks)
 end
 
 --- AWS securityhub batch-import-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_import_findings(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-import-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_import_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-import-findings" }, input, callbacks)
 end
 
 --- AWS securityhub batch-update-automation-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_automation_rules(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-automation-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_automation_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-automation-rules" }, input, callbacks)
 end
 
 --- AWS securityhub batch-update-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_findings(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-findings" }, input, callbacks)
 end
 
 --- AWS securityhub batch-update-standards-control-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_standards_control_associations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-standards-control-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_standards_control_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "batch-update-standards-control-associations" }, input, callbacks)
 end
 
 --- AWS securityhub create-action-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_action_target(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-action-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_action_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-action-target" }, input, callbacks)
 end
 
 --- AWS securityhub create-automation-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_automation_rule(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-automation-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_automation_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-automation-rule" }, input, callbacks)
 end
 
 --- AWS securityhub create-configuration-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_policy(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-configuration-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-configuration-policy" }, input, callbacks)
 end
 
 --- AWS securityhub create-finding-aggregator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_finding_aggregator(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-finding-aggregator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_finding_aggregator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-finding-aggregator" }, input, callbacks)
 end
 
 --- AWS securityhub create-insight operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_insight(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-insight" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_insight(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-insight" }, input, callbacks)
 end
 
 --- AWS securityhub create-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "create-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "create-members" }, input, callbacks)
 end
 
 --- AWS securityhub decline-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.decline_invitations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "decline-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.decline_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "decline-invitations" }, input, callbacks)
 end
 
 --- AWS securityhub delete-action-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_action_target(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-action-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_action_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-action-target" }, input, callbacks)
 end
 
 --- AWS securityhub delete-configuration-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_policy(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-configuration-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-configuration-policy" }, input, callbacks)
 end
 
 --- AWS securityhub delete-finding-aggregator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_finding_aggregator(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-finding-aggregator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_finding_aggregator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-finding-aggregator" }, input, callbacks)
 end
 
 --- AWS securityhub delete-insight operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_insight(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-insight" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_insight(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-insight" }, input, callbacks)
 end
 
 --- AWS securityhub delete-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_invitations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-invitations" }, input, callbacks)
 end
 
 --- AWS securityhub delete-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "delete-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "delete-members" }, input, callbacks)
 end
 
 --- AWS securityhub describe-action-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_action_targets(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-action-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_action_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-action-targets" }, input, callbacks)
 end
 
 --- AWS securityhub describe-hub operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_hub(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-hub" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_hub(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-hub" }, input, callbacks)
 end
 
 --- AWS securityhub describe-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-organization-configuration" }, input, callbacks)
 end
 
 --- AWS securityhub describe-products operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_products(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-products" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_products(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-products" }, input, callbacks)
 end
 
 --- AWS securityhub describe-standards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_standards(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-standards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_standards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-standards" }, input, callbacks)
 end
 
 --- AWS securityhub describe-standards-controls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_standards_controls(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "describe-standards-controls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_standards_controls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "describe-standards-controls" }, input, callbacks)
 end
 
 --- AWS securityhub disable-import-findings-for-product operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_import_findings_for_product(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "disable-import-findings-for-product" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_import_findings_for_product(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "disable-import-findings-for-product" }, input, callbacks)
 end
 
 --- AWS securityhub disable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "disable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "disable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS securityhub disable-security-hub operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_security_hub(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "disable-security-hub" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_security_hub(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "disable-security-hub" }, input, callbacks)
 end
 
 --- AWS securityhub disassociate-from-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_from_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "disassociate-from-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_from_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "disassociate-from-administrator-account" }, input, callbacks)
 end
 
 --- AWS securityhub disassociate-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "disassociate-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "disassociate-members" }, input, callbacks)
 end
 
 --- AWS securityhub enable-import-findings-for-product operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_import_findings_for_product(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "enable-import-findings-for-product" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_import_findings_for_product(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "enable-import-findings-for-product" }, input, callbacks)
 end
 
 --- AWS securityhub enable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "enable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "enable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS securityhub enable-security-hub operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_security_hub(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "enable-security-hub" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_security_hub(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "enable-security-hub" }, input, callbacks)
 end
 
 --- AWS securityhub get-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-administrator-account" }, input, callbacks)
 end
 
 --- AWS securityhub get-configuration-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_policy(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-configuration-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-configuration-policy" }, input, callbacks)
 end
 
 --- AWS securityhub get-configuration-policy-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_policy_association(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-configuration-policy-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_policy_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-configuration-policy-association" }, input, callbacks)
 end
 
 --- AWS securityhub get-enabled-standards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_enabled_standards(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-enabled-standards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_enabled_standards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-enabled-standards" }, input, callbacks)
 end
 
 --- AWS securityhub get-finding-aggregator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_finding_aggregator(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-finding-aggregator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_finding_aggregator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-finding-aggregator" }, input, callbacks)
 end
 
 --- AWS securityhub get-finding-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_finding_history(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-finding-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_finding_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-finding-history" }, input, callbacks)
 end
 
 --- AWS securityhub get-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-findings" }, input, callbacks)
 end
 
 --- AWS securityhub get-insight-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight_results(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-insight-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-insight-results" }, input, callbacks)
 end
 
 --- AWS securityhub get-insights operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insights(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-insights" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insights(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-insights" }, input, callbacks)
 end
 
 --- AWS securityhub get-invitations-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_invitations_count(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-invitations-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_invitations_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-invitations-count" }, input, callbacks)
 end
 
 --- AWS securityhub get-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-members" }, input, callbacks)
 end
 
 --- AWS securityhub get-security-control-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_security_control_definition(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "get-security-control-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_security_control_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "get-security-control-definition" }, input, callbacks)
 end
 
 --- AWS securityhub invite-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.invite_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "invite-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.invite_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "invite-members" }, input, callbacks)
 end
 
 --- AWS securityhub list-automation-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_automation_rules(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-automation-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_automation_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-automation-rules" }, input, callbacks)
 end
 
 --- AWS securityhub list-configuration-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configuration_policies(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-configuration-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configuration_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-configuration-policies" }, input, callbacks)
 end
 
 --- AWS securityhub list-configuration-policy-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configuration_policy_associations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-configuration-policy-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configuration_policy_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-configuration-policy-associations" }, input, callbacks)
 end
 
 --- AWS securityhub list-enabled-products-for-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_enabled_products_for_import(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-enabled-products-for-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_enabled_products_for_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-enabled-products-for-import" }, input, callbacks)
 end
 
 --- AWS securityhub list-finding-aggregators operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_finding_aggregators(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-finding-aggregators" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_finding_aggregators(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-finding-aggregators" }, input, callbacks)
 end
 
 --- AWS securityhub list-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invitations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-invitations" }, input, callbacks)
 end
 
 --- AWS securityhub list-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_members(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-members" }, input, callbacks)
 end
 
 --- AWS securityhub list-organization-admin-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_admin_accounts(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-organization-admin-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_admin_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-organization-admin-accounts" }, input, callbacks)
 end
 
 --- AWS securityhub list-security-control-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_security_control_definitions(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-security-control-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_security_control_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-security-control-definitions" }, input, callbacks)
 end
 
 --- AWS securityhub list-standards-control-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_standards_control_associations(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-standards-control-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_standards_control_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-standards-control-associations" }, input, callbacks)
 end
 
 --- AWS securityhub list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS securityhub start-configuration-policy-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_configuration_policy_association(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "start-configuration-policy-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_configuration_policy_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "start-configuration-policy-association" }, input, callbacks)
 end
 
 --- AWS securityhub start-configuration-policy-disassociation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_configuration_policy_disassociation(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "start-configuration-policy-disassociation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_configuration_policy_disassociation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "start-configuration-policy-disassociation" }, input, callbacks)
 end
 
 --- AWS securityhub tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "tag-resource" }, input, callbacks)
 end
 
 --- AWS securityhub untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "untag-resource" }, input, callbacks)
 end
 
 --- AWS securityhub update-action-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_action_target(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-action-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_action_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-action-target" }, input, callbacks)
 end
 
 --- AWS securityhub update-configuration-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_policy(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-configuration-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-configuration-policy" }, input, callbacks)
 end
 
 --- AWS securityhub update-finding-aggregator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_finding_aggregator(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-finding-aggregator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_finding_aggregator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-finding-aggregator" }, input, callbacks)
 end
 
 --- AWS securityhub update-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_findings(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-findings" }, input, callbacks)
 end
 
 --- AWS securityhub update-insight operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_insight(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-insight" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_insight(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-insight" }, input, callbacks)
 end
 
 --- AWS securityhub update-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-organization-configuration" }, input, callbacks)
 end
 
 --- AWS securityhub update-security-control operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_security_control(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-security-control" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_security_control(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-security-control" }, input, callbacks)
 end
 
 --- AWS securityhub update-security-hub-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_security_hub_configuration(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-security-hub-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_security_hub_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-security-hub-configuration" }, input, callbacks)
 end
 
 --- AWS securityhub update-standards-control operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_standards_control(input)
-	return common.execute_aws_command_skeleton({ "securityhub", "update-standards-control" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_standards_control(input, callbacks)
+	return common.execute_aws_command_skeleton({ "securityhub", "update-standards-control" }, input, callbacks)
 end
 
 return M

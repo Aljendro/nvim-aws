@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS networkmonitor create-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_monitor(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "create-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "create-monitor" }, input, callbacks)
 end
 
 --- AWS networkmonitor create-probe operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_probe(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "create-probe" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_probe(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "create-probe" }, input, callbacks)
 end
 
 --- AWS networkmonitor delete-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_monitor(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "delete-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "delete-monitor" }, input, callbacks)
 end
 
 --- AWS networkmonitor delete-probe operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_probe(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "delete-probe" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_probe(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "delete-probe" }, input, callbacks)
 end
 
 --- AWS networkmonitor get-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_monitor(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "get-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "get-monitor" }, input, callbacks)
 end
 
 --- AWS networkmonitor get-probe operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_probe(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "get-probe" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_probe(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "get-probe" }, input, callbacks)
 end
 
 --- AWS networkmonitor list-monitors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_monitors(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "list-monitors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_monitors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "list-monitors" }, input, callbacks)
 end
 
 --- AWS networkmonitor list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS networkmonitor tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "tag-resource" }, input, callbacks)
 end
 
 --- AWS networkmonitor untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "untag-resource" }, input, callbacks)
 end
 
 --- AWS networkmonitor update-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_monitor(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "update-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "update-monitor" }, input, callbacks)
 end
 
 --- AWS networkmonitor update-probe operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_probe(input)
-	return common.execute_aws_command_skeleton({ "networkmonitor", "update-probe" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_probe(input, callbacks)
+	return common.execute_aws_command_skeleton({ "networkmonitor", "update-probe" }, input, callbacks)
 end
 
 return M

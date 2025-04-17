@@ -8,51 +8,58 @@ local M = {}
 
 --- AWS cur delete-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_report_definition(input)
-	return common.execute_aws_command_skeleton({ "cur", "delete-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "delete-report-definition" }, input, callbacks)
 end
 
 --- AWS cur describe-report-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_report_definitions(input)
-	return common.execute_aws_command_skeleton({ "cur", "describe-report-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_report_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "describe-report-definitions" }, input, callbacks)
 end
 
 --- AWS cur list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "cur", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS cur modify-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_report_definition(input)
-	return common.execute_aws_command_skeleton({ "cur", "modify-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "modify-report-definition" }, input, callbacks)
 end
 
 --- AWS cur put-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_report_definition(input)
-	return common.execute_aws_command_skeleton({ "cur", "put-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "put-report-definition" }, input, callbacks)
 end
 
 --- AWS cur tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "cur", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "tag-resource" }, input, callbacks)
 end
 
 --- AWS cur untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "cur", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cur", "untag-resource" }, input, callbacks)
 end
 
 return M

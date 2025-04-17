@@ -8,121 +8,138 @@ local M = {}
 
 --- AWS elastictranscoder cancel-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_job(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "cancel-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "cancel-job" }, input, callbacks)
 end
 
 --- AWS elastictranscoder create-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-job" }, input, callbacks)
 end
 
 --- AWS elastictranscoder create-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_pipeline(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-pipeline" }, input, callbacks)
 end
 
 --- AWS elastictranscoder create-preset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_preset(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-preset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_preset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "create-preset" }, input, callbacks)
 end
 
 --- AWS elastictranscoder delete-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_pipeline(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "delete-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "delete-pipeline" }, input, callbacks)
 end
 
 --- AWS elastictranscoder delete-preset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_preset(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "delete-preset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_preset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "delete-preset" }, input, callbacks)
 end
 
 --- AWS elastictranscoder list-jobs-by-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs_by_pipeline(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-jobs-by-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs_by_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-jobs-by-pipeline" }, input, callbacks)
 end
 
 --- AWS elastictranscoder list-jobs-by-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs_by_status(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-jobs-by-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs_by_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-jobs-by-status" }, input, callbacks)
 end
 
 --- AWS elastictranscoder list-pipelines operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_pipelines(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-pipelines" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_pipelines(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-pipelines" }, input, callbacks)
 end
 
 --- AWS elastictranscoder list-presets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_presets(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-presets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_presets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "list-presets" }, input, callbacks)
 end
 
 --- AWS elastictranscoder read-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.read_job(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.read_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-job" }, input, callbacks)
 end
 
 --- AWS elastictranscoder read-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.read_pipeline(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.read_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-pipeline" }, input, callbacks)
 end
 
 --- AWS elastictranscoder read-preset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.read_preset(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-preset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.read_preset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "read-preset" }, input, callbacks)
 end
 
 --- AWS elastictranscoder update-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_pipeline(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline" }, input, callbacks)
 end
 
 --- AWS elastictranscoder update-pipeline-notifications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_pipeline_notifications(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline-notifications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_pipeline_notifications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline-notifications" }, input, callbacks)
 end
 
 --- AWS elastictranscoder update-pipeline-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_pipeline_status(input)
-	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_pipeline_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elastictranscoder", "update-pipeline-status" }, input, callbacks)
 end
 
 --- AWS elastictranscoder wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "elastictranscoder", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "elastictranscoder", "wait" }, input, callbacks)
 end
 
 return M

@@ -8,415 +8,474 @@ local M = {}
 
 --- AWS cloudtrail add-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_tags(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "add-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "add-tags" }, input, callbacks)
 end
 
 --- AWS cloudtrail cancel-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_query(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "cancel-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "cancel-query" }, input, callbacks)
 end
 
 --- AWS cloudtrail create-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_channel(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "create-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-channel" }, input, callbacks)
 end
 
 --- AWS cloudtrail create-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dashboard(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "create-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-dashboard" }, input, callbacks)
 end
 
 --- AWS cloudtrail create-event-data-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_data_store(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "create-event-data-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_data_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-event-data-store" }, input, callbacks)
 end
 
 --- AWS cloudtrail create-trail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_trail(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "create-trail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_trail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-trail" }, input, callbacks)
 end
 
 --- AWS cloudtrail delete-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_channel(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-channel" }, input, callbacks)
 end
 
 --- AWS cloudtrail delete-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dashboard(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-dashboard" }, input, callbacks)
 end
 
 --- AWS cloudtrail delete-event-data-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_data_store(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-event-data-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_data_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-event-data-store" }, input, callbacks)
 end
 
 --- AWS cloudtrail delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudtrail delete-trail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_trail(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-trail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_trail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-trail" }, input, callbacks)
 end
 
 --- AWS cloudtrail deregister-organization-delegated-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_organization_delegated_admin(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "deregister-organization-delegated-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_organization_delegated_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "deregister-organization-delegated-admin" }, input, callbacks)
 end
 
 --- AWS cloudtrail describe-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_query(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-query" }, input, callbacks)
 end
 
 --- AWS cloudtrail describe-trails operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trails(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-trails" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trails(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-trails" }, input, callbacks)
 end
 
 --- AWS cloudtrail disable-federation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_federation(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "disable-federation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_federation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "disable-federation" }, input, callbacks)
 end
 
 --- AWS cloudtrail enable-federation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_federation(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "enable-federation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_federation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "enable-federation" }, input, callbacks)
 end
 
 --- AWS cloudtrail generate-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_query(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "generate-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "generate-query" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_channel(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-channel" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dashboard(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-dashboard" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-event-data-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_data_store(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-data-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_data_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-data-store" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-event-selectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_selectors(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-selectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_selectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-selectors" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_import(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-import" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-insight-selectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight_selectors(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-insight-selectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight_selectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-insight-selectors" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-query-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_results(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-query-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-query-results" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-trail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trail(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail" }, input, callbacks)
 end
 
 --- AWS cloudtrail get-trail-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trail_status(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trail_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail-status" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-channels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_channels(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-channels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_channels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-channels" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-dashboards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dashboards(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-dashboards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dashboards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-dashboards" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-event-data-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_data_stores(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-event-data-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_data_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-event-data-stores" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-import-failures operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_import_failures(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-import-failures" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_import_failures(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-import-failures" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-imports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_imports(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-imports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_imports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-imports" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-insights-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_insights_metric_data(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-insights-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_insights_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-insights-metric-data" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-public-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_public_keys(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-public-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_public_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-public-keys" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-queries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queries(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-queries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-queries" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-tags" }, input, callbacks)
 end
 
 --- AWS cloudtrail list-trails operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_trails(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "list-trails" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_trails(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-trails" }, input, callbacks)
 end
 
 --- AWS cloudtrail lookup-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.lookup_events(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "lookup-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.lookup_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "lookup-events" }, input, callbacks)
 end
 
 --- AWS cloudtrail put-event-selectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_event_selectors(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "put-event-selectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_event_selectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-event-selectors" }, input, callbacks)
 end
 
 --- AWS cloudtrail put-insight-selectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_insight_selectors(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "put-insight-selectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_insight_selectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-insight-selectors" }, input, callbacks)
 end
 
 --- AWS cloudtrail put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudtrail register-organization-delegated-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_organization_delegated_admin(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "register-organization-delegated-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_organization_delegated_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "register-organization-delegated-admin" }, input, callbacks)
 end
 
 --- AWS cloudtrail remove-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_tags(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "remove-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "remove-tags" }, input, callbacks)
 end
 
 --- AWS cloudtrail restore-event-data-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_event_data_store(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "restore-event-data-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_event_data_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "restore-event-data-store" }, input, callbacks)
 end
 
 --- AWS cloudtrail search-sample-queries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_sample_queries(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "search-sample-queries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_sample_queries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "search-sample-queries" }, input, callbacks)
 end
 
 --- AWS cloudtrail start-dashboard-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_dashboard_refresh(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "start-dashboard-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_dashboard_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-dashboard-refresh" }, input, callbacks)
 end
 
 --- AWS cloudtrail start-event-data-store-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_event_data_store_ingestion(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "start-event-data-store-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_event_data_store_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-event-data-store-ingestion" }, input, callbacks)
 end
 
 --- AWS cloudtrail start-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_import(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "start-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-import" }, input, callbacks)
 end
 
 --- AWS cloudtrail start-logging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_logging(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "start-logging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_logging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-logging" }, input, callbacks)
 end
 
 --- AWS cloudtrail start-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_query(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "start-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-query" }, input, callbacks)
 end
 
 --- AWS cloudtrail stop-event-data-store-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_event_data_store_ingestion(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-event-data-store-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_event_data_store_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-event-data-store-ingestion" }, input, callbacks)
 end
 
 --- AWS cloudtrail stop-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_import(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-import" }, input, callbacks)
 end
 
 --- AWS cloudtrail stop-logging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_logging(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-logging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_logging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-logging" }, input, callbacks)
 end
 
 --- AWS cloudtrail update-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_channel(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "update-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-channel" }, input, callbacks)
 end
 
 --- AWS cloudtrail update-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboard(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "update-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-dashboard" }, input, callbacks)
 end
 
 --- AWS cloudtrail update-event-data-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_data_store(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "update-event-data-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_data_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-event-data-store" }, input, callbacks)
 end
 
 --- AWS cloudtrail update-trail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_trail(input)
-	return common.execute_aws_command_skeleton({ "cloudtrail", "update-trail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_trail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-trail" }, input, callbacks)
 end
 
 --- AWS cloudtrail validate-logs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.validate_logs(input)
-	return common.execute_aws_command({ "cloudtrail", "validate-logs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.validate_logs(input, callbacks)
+	return common.execute_aws_command({ "cloudtrail", "validate-logs" }, input, callbacks)
 end
 
 --- AWS cloudtrail verify-query-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_query_results(input)
-	return common.execute_aws_command({ "cloudtrail", "verify-query-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_query_results(input, callbacks)
+	return common.execute_aws_command({ "cloudtrail", "verify-query-results" }, input, callbacks)
 end
 
 return M

@@ -8,261 +8,298 @@ local M = {}
 
 --- AWS inspector add-attributes-to-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_attributes_to_findings(input)
-	return common.execute_aws_command_skeleton({ "inspector", "add-attributes-to-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_attributes_to_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "add-attributes-to-findings" }, input, callbacks)
 end
 
 --- AWS inspector create-assessment-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_assessment_target(input)
-	return common.execute_aws_command_skeleton({ "inspector", "create-assessment-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_assessment_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "create-assessment-target" }, input, callbacks)
 end
 
 --- AWS inspector create-assessment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_assessment_template(input)
-	return common.execute_aws_command_skeleton({ "inspector", "create-assessment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_assessment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "create-assessment-template" }, input, callbacks)
 end
 
 --- AWS inspector create-exclusions-preview operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_exclusions_preview(input)
-	return common.execute_aws_command_skeleton({ "inspector", "create-exclusions-preview" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_exclusions_preview(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "create-exclusions-preview" }, input, callbacks)
 end
 
 --- AWS inspector create-resource-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_resource_group(input)
-	return common.execute_aws_command_skeleton({ "inspector", "create-resource-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_resource_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "create-resource-group" }, input, callbacks)
 end
 
 --- AWS inspector delete-assessment-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_assessment_run(input)
-	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_assessment_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-run" }, input, callbacks)
 end
 
 --- AWS inspector delete-assessment-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_assessment_target(input)
-	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_assessment_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-target" }, input, callbacks)
 end
 
 --- AWS inspector delete-assessment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_assessment_template(input)
-	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_assessment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "delete-assessment-template" }, input, callbacks)
 end
 
 --- AWS inspector describe-assessment-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_assessment_runs(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_assessment_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-runs" }, input, callbacks)
 end
 
 --- AWS inspector describe-assessment-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_assessment_targets(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_assessment_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-targets" }, input, callbacks)
 end
 
 --- AWS inspector describe-assessment-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_assessment_templates(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_assessment_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-assessment-templates" }, input, callbacks)
 end
 
 --- AWS inspector describe-cross-account-access-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cross_account_access_role(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-cross-account-access-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cross_account_access_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-cross-account-access-role" }, input, callbacks)
 end
 
 --- AWS inspector describe-exclusions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_exclusions(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-exclusions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_exclusions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-exclusions" }, input, callbacks)
 end
 
 --- AWS inspector describe-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_findings(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-findings" }, input, callbacks)
 end
 
 --- AWS inspector describe-resource-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_resource_groups(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-resource-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_resource_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-resource-groups" }, input, callbacks)
 end
 
 --- AWS inspector describe-rules-packages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_rules_packages(input)
-	return common.execute_aws_command_skeleton({ "inspector", "describe-rules-packages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_rules_packages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "describe-rules-packages" }, input, callbacks)
 end
 
 --- AWS inspector get-assessment-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_assessment_report(input)
-	return common.execute_aws_command_skeleton({ "inspector", "get-assessment-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_assessment_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "get-assessment-report" }, input, callbacks)
 end
 
 --- AWS inspector get-exclusions-preview operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_exclusions_preview(input)
-	return common.execute_aws_command_skeleton({ "inspector", "get-exclusions-preview" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_exclusions_preview(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "get-exclusions-preview" }, input, callbacks)
 end
 
 --- AWS inspector get-telemetry-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_telemetry_metadata(input)
-	return common.execute_aws_command_skeleton({ "inspector", "get-telemetry-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_telemetry_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "get-telemetry-metadata" }, input, callbacks)
 end
 
 --- AWS inspector list-assessment-run-agents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assessment_run_agents(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-run-agents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assessment_run_agents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-run-agents" }, input, callbacks)
 end
 
 --- AWS inspector list-assessment-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assessment_runs(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assessment_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-runs" }, input, callbacks)
 end
 
 --- AWS inspector list-assessment-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assessment_targets(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assessment_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-targets" }, input, callbacks)
 end
 
 --- AWS inspector list-assessment-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assessment_templates(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assessment_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-assessment-templates" }, input, callbacks)
 end
 
 --- AWS inspector list-event-subscriptions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_subscriptions(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-event-subscriptions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_subscriptions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-event-subscriptions" }, input, callbacks)
 end
 
 --- AWS inspector list-exclusions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_exclusions(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-exclusions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_exclusions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-exclusions" }, input, callbacks)
 end
 
 --- AWS inspector list-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-findings" }, input, callbacks)
 end
 
 --- AWS inspector list-rules-packages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rules_packages(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-rules-packages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rules_packages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-rules-packages" }, input, callbacks)
 end
 
 --- AWS inspector list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS inspector preview-agents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.preview_agents(input)
-	return common.execute_aws_command_skeleton({ "inspector", "preview-agents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.preview_agents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "preview-agents" }, input, callbacks)
 end
 
 --- AWS inspector register-cross-account-access-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_cross_account_access_role(input)
-	return common.execute_aws_command_skeleton({ "inspector", "register-cross-account-access-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_cross_account_access_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "register-cross-account-access-role" }, input, callbacks)
 end
 
 --- AWS inspector remove-attributes-from-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_attributes_from_findings(input)
-	return common.execute_aws_command_skeleton({ "inspector", "remove-attributes-from-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_attributes_from_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "remove-attributes-from-findings" }, input, callbacks)
 end
 
 --- AWS inspector set-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector", "set-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "set-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS inspector start-assessment-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_assessment_run(input)
-	return common.execute_aws_command_skeleton({ "inspector", "start-assessment-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_assessment_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "start-assessment-run" }, input, callbacks)
 end
 
 --- AWS inspector stop-assessment-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_assessment_run(input)
-	return common.execute_aws_command_skeleton({ "inspector", "stop-assessment-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_assessment_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "stop-assessment-run" }, input, callbacks)
 end
 
 --- AWS inspector subscribe-to-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.subscribe_to_event(input)
-	return common.execute_aws_command_skeleton({ "inspector", "subscribe-to-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.subscribe_to_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "subscribe-to-event" }, input, callbacks)
 end
 
 --- AWS inspector unsubscribe-from-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unsubscribe_from_event(input)
-	return common.execute_aws_command_skeleton({ "inspector", "unsubscribe-from-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unsubscribe_from_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "unsubscribe-from-event" }, input, callbacks)
 end
 
 --- AWS inspector update-assessment-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_assessment_target(input)
-	return common.execute_aws_command_skeleton({ "inspector", "update-assessment-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_assessment_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector", "update-assessment-target" }, input, callbacks)
 end
 
 return M

@@ -8,205 +8,234 @@ local M = {}
 
 --- AWS voice-id associate-fraudster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_fraudster(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "associate-fraudster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_fraudster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "associate-fraudster" }, input, callbacks)
 end
 
 --- AWS voice-id create-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "create-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "create-domain" }, input, callbacks)
 end
 
 --- AWS voice-id create-watchlist operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_watchlist(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "create-watchlist" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_watchlist(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "create-watchlist" }, input, callbacks)
 end
 
 --- AWS voice-id delete-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "delete-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "delete-domain" }, input, callbacks)
 end
 
 --- AWS voice-id delete-fraudster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fraudster(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "delete-fraudster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fraudster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "delete-fraudster" }, input, callbacks)
 end
 
 --- AWS voice-id delete-speaker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_speaker(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "delete-speaker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_speaker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "delete-speaker" }, input, callbacks)
 end
 
 --- AWS voice-id delete-watchlist operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_watchlist(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "delete-watchlist" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_watchlist(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "delete-watchlist" }, input, callbacks)
 end
 
 --- AWS voice-id describe-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_domain(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-domain" }, input, callbacks)
 end
 
 --- AWS voice-id describe-fraudster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fraudster(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-fraudster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fraudster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-fraudster" }, input, callbacks)
 end
 
 --- AWS voice-id describe-fraudster-registration-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fraudster_registration_job(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-fraudster-registration-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fraudster_registration_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-fraudster-registration-job" }, input, callbacks)
 end
 
 --- AWS voice-id describe-speaker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_speaker(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-speaker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_speaker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-speaker" }, input, callbacks)
 end
 
 --- AWS voice-id describe-speaker-enrollment-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_speaker_enrollment_job(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-speaker-enrollment-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_speaker_enrollment_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-speaker-enrollment-job" }, input, callbacks)
 end
 
 --- AWS voice-id describe-watchlist operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_watchlist(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "describe-watchlist" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_watchlist(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "describe-watchlist" }, input, callbacks)
 end
 
 --- AWS voice-id disassociate-fraudster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_fraudster(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "disassociate-fraudster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_fraudster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "disassociate-fraudster" }, input, callbacks)
 end
 
 --- AWS voice-id evaluate-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.evaluate_session(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "evaluate-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.evaluate_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "evaluate-session" }, input, callbacks)
 end
 
 --- AWS voice-id list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-domains" }, input, callbacks)
 end
 
 --- AWS voice-id list-fraudster-registration-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fraudster_registration_jobs(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-fraudster-registration-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fraudster_registration_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-fraudster-registration-jobs" }, input, callbacks)
 end
 
 --- AWS voice-id list-fraudsters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fraudsters(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-fraudsters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fraudsters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-fraudsters" }, input, callbacks)
 end
 
 --- AWS voice-id list-speaker-enrollment-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_speaker_enrollment_jobs(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-speaker-enrollment-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_speaker_enrollment_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-speaker-enrollment-jobs" }, input, callbacks)
 end
 
 --- AWS voice-id list-speakers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_speakers(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-speakers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_speakers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-speakers" }, input, callbacks)
 end
 
 --- AWS voice-id list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS voice-id list-watchlists operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_watchlists(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "list-watchlists" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_watchlists(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "list-watchlists" }, input, callbacks)
 end
 
 --- AWS voice-id opt-out-speaker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.opt_out_speaker(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "opt-out-speaker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.opt_out_speaker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "opt-out-speaker" }, input, callbacks)
 end
 
 --- AWS voice-id start-fraudster-registration-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_fraudster_registration_job(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "start-fraudster-registration-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_fraudster_registration_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "start-fraudster-registration-job" }, input, callbacks)
 end
 
 --- AWS voice-id start-speaker-enrollment-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_speaker_enrollment_job(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "start-speaker-enrollment-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_speaker_enrollment_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "start-speaker-enrollment-job" }, input, callbacks)
 end
 
 --- AWS voice-id tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "tag-resource" }, input, callbacks)
 end
 
 --- AWS voice-id untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "untag-resource" }, input, callbacks)
 end
 
 --- AWS voice-id update-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "update-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "update-domain" }, input, callbacks)
 end
 
 --- AWS voice-id update-watchlist operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_watchlist(input)
-	return common.execute_aws_command_skeleton({ "voice-id", "update-watchlist" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_watchlist(input, callbacks)
+	return common.execute_aws_command_skeleton({ "voice-id", "update-watchlist" }, input, callbacks)
 end
 
 return M

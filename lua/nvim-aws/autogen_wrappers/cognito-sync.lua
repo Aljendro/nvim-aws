@@ -8,121 +8,138 @@ local M = {}
 
 --- AWS cognito-sync bulk-publish operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.bulk_publish(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "bulk-publish" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.bulk_publish(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "bulk-publish" }, input, callbacks)
 end
 
 --- AWS cognito-sync delete-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataset(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "delete-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "delete-dataset" }, input, callbacks)
 end
 
 --- AWS cognito-sync describe-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-dataset" }, input, callbacks)
 end
 
 --- AWS cognito-sync describe-identity-pool-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_identity_pool_usage(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-identity-pool-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_identity_pool_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-identity-pool-usage" }, input, callbacks)
 end
 
 --- AWS cognito-sync describe-identity-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_identity_usage(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-identity-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_identity_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "describe-identity-usage" }, input, callbacks)
 end
 
 --- AWS cognito-sync get-bulk-publish-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bulk_publish_details(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "get-bulk-publish-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bulk_publish_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "get-bulk-publish-details" }, input, callbacks)
 end
 
 --- AWS cognito-sync get-cognito-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cognito_events(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "get-cognito-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cognito_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "get-cognito-events" }, input, callbacks)
 end
 
 --- AWS cognito-sync get-identity-pool-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_identity_pool_configuration(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "get-identity-pool-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_identity_pool_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "get-identity-pool-configuration" }, input, callbacks)
 end
 
 --- AWS cognito-sync list-datasets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_datasets(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "list-datasets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_datasets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "list-datasets" }, input, callbacks)
 end
 
 --- AWS cognito-sync list-identity-pool-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_identity_pool_usage(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "list-identity-pool-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_identity_pool_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "list-identity-pool-usage" }, input, callbacks)
 end
 
 --- AWS cognito-sync list-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_records(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "list-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "list-records" }, input, callbacks)
 end
 
 --- AWS cognito-sync register-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_device(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "register-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "register-device" }, input, callbacks)
 end
 
 --- AWS cognito-sync set-cognito-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_cognito_events(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "set-cognito-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_cognito_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "set-cognito-events" }, input, callbacks)
 end
 
 --- AWS cognito-sync set-identity-pool-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_identity_pool_configuration(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "set-identity-pool-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_identity_pool_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "set-identity-pool-configuration" }, input, callbacks)
 end
 
 --- AWS cognito-sync subscribe-to-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.subscribe_to_dataset(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "subscribe-to-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.subscribe_to_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "subscribe-to-dataset" }, input, callbacks)
 end
 
 --- AWS cognito-sync unsubscribe-from-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unsubscribe_from_dataset(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "unsubscribe-from-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unsubscribe_from_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "unsubscribe-from-dataset" }, input, callbacks)
 end
 
 --- AWS cognito-sync update-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_records(input)
-	return common.execute_aws_command_skeleton({ "cognito-sync", "update-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cognito-sync", "update-records" }, input, callbacks)
 end
 
 return M

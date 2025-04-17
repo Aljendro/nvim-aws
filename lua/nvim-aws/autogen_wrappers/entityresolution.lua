@@ -8,261 +8,298 @@ local M = {}
 
 --- AWS entityresolution add-policy-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_policy_statement(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "add-policy-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_policy_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "add-policy-statement" }, input, callbacks)
 end
 
 --- AWS entityresolution batch-delete-unique-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_unique_id(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "batch-delete-unique-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_unique_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "batch-delete-unique-id" }, input, callbacks)
 end
 
 --- AWS entityresolution create-id-mapping-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_id_mapping_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-mapping-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_id_mapping_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-mapping-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution create-id-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_id_namespace(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_id_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-namespace" }, input, callbacks)
 end
 
 --- AWS entityresolution create-matching-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_matching_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "create-matching-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_matching_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-matching-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution create-schema-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_schema_mapping(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "create-schema-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_schema_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-schema-mapping" }, input, callbacks)
 end
 
 --- AWS entityresolution delete-id-mapping-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_id_mapping_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-mapping-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_id_mapping_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-mapping-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution delete-id-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_id_namespace(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_id_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-namespace" }, input, callbacks)
 end
 
 --- AWS entityresolution delete-matching-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_matching_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "delete-matching-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_matching_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-matching-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution delete-policy-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_policy_statement(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "delete-policy-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_policy_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-policy-statement" }, input, callbacks)
 end
 
 --- AWS entityresolution delete-schema-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schema_mapping(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "delete-schema-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schema_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-schema-mapping" }, input, callbacks)
 end
 
 --- AWS entityresolution get-id-mapping-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_id_mapping_job(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_id_mapping_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-job" }, input, callbacks)
 end
 
 --- AWS entityresolution get-id-mapping-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_id_mapping_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_id_mapping_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution get-id-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_id_namespace(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_id_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-namespace" }, input, callbacks)
 end
 
 --- AWS entityresolution get-match-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_match_id(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-match-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_match_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-match-id" }, input, callbacks)
 end
 
 --- AWS entityresolution get-matching-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_matching_job(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_matching_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-job" }, input, callbacks)
 end
 
 --- AWS entityresolution get-matching-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_matching_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_matching_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution get-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_policy(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-policy" }, input, callbacks)
 end
 
 --- AWS entityresolution get-provider-service operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_provider_service(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-provider-service" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_provider_service(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-provider-service" }, input, callbacks)
 end
 
 --- AWS entityresolution get-schema-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_mapping(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "get-schema-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-schema-mapping" }, input, callbacks)
 end
 
 --- AWS entityresolution list-id-mapping-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_id_mapping_jobs(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_id_mapping_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-jobs" }, input, callbacks)
 end
 
 --- AWS entityresolution list-id-mapping-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_id_mapping_workflows(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_id_mapping_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-workflows" }, input, callbacks)
 end
 
 --- AWS entityresolution list-id-namespaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_id_namespaces(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-namespaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_id_namespaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-namespaces" }, input, callbacks)
 end
 
 --- AWS entityresolution list-matching-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_matching_jobs(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_matching_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-jobs" }, input, callbacks)
 end
 
 --- AWS entityresolution list-matching-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_matching_workflows(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_matching_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-workflows" }, input, callbacks)
 end
 
 --- AWS entityresolution list-provider-services operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_provider_services(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-provider-services" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_provider_services(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-provider-services" }, input, callbacks)
 end
 
 --- AWS entityresolution list-schema-mappings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schema_mappings(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-schema-mappings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schema_mappings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-schema-mappings" }, input, callbacks)
 end
 
 --- AWS entityresolution list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS entityresolution put-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_policy(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "put-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "put-policy" }, input, callbacks)
 end
 
 --- AWS entityresolution start-id-mapping-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_id_mapping_job(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "start-id-mapping-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_id_mapping_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "start-id-mapping-job" }, input, callbacks)
 end
 
 --- AWS entityresolution start-matching-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_matching_job(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "start-matching-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_matching_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "start-matching-job" }, input, callbacks)
 end
 
 --- AWS entityresolution tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "tag-resource" }, input, callbacks)
 end
 
 --- AWS entityresolution untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "untag-resource" }, input, callbacks)
 end
 
 --- AWS entityresolution update-id-mapping-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_id_mapping_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-mapping-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_id_mapping_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-mapping-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution update-id-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_id_namespace(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_id_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-namespace" }, input, callbacks)
 end
 
 --- AWS entityresolution update-matching-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_matching_workflow(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "update-matching-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_matching_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-matching-workflow" }, input, callbacks)
 end
 
 --- AWS entityresolution update-schema-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_schema_mapping(input)
-	return common.execute_aws_command_skeleton({ "entityresolution", "update-schema-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_schema_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-schema-mapping" }, input, callbacks)
 end
 
 return M

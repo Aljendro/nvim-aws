@@ -8,422 +8,482 @@ local M = {}
 
 --- AWS lakeformation add-lf-tags-to-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_lf_tags_to_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "add-lf-tags-to-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_lf_tags_to_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "add-lf-tags-to-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation assume-decorated-role-with-saml operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_decorated_role_with_saml(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "assume-decorated-role-with-saml" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_decorated_role_with_saml(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "assume-decorated-role-with-saml" }, input, callbacks)
 end
 
 --- AWS lakeformation batch-grant-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_grant_permissions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "batch-grant-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_grant_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "batch-grant-permissions" }, input, callbacks)
 end
 
 --- AWS lakeformation batch-revoke-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_revoke_permissions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "batch-revoke-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_revoke_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "batch-revoke-permissions" }, input, callbacks)
 end
 
 --- AWS lakeformation cancel-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_transaction(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "cancel-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "cancel-transaction" }, input, callbacks)
 end
 
 --- AWS lakeformation commit-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.commit_transaction(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "commit-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.commit_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "commit-transaction" }, input, callbacks)
 end
 
 --- AWS lakeformation create-data-cells-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_cells_filter(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "create-data-cells-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_cells_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "create-data-cells-filter" }, input, callbacks)
 end
 
 --- AWS lakeformation create-lake-formation-identity-center-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_lake_formation_identity_center_configuration(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "create-lake-formation-identity-center-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_lake_formation_identity_center_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "create-lake-formation-identity-center-configuration" }, input, callbacks)
 end
 
 --- AWS lakeformation create-lake-formation-opt-in operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_lake_formation_opt_in(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "create-lake-formation-opt-in" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_lake_formation_opt_in(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "create-lake-formation-opt-in" }, input, callbacks)
 end
 
 --- AWS lakeformation create-lf-tag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_lf_tag(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "create-lf-tag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_lf_tag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "create-lf-tag" }, input, callbacks)
 end
 
 --- AWS lakeformation create-lf-tag-expression operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_lf_tag_expression(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "create-lf-tag-expression" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_lf_tag_expression(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "create-lf-tag-expression" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-data-cells-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_cells_filter(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-data-cells-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_cells_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-data-cells-filter" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-lake-formation-identity-center-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lake_formation_identity_center_configuration(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lake-formation-identity-center-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lake_formation_identity_center_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lake-formation-identity-center-configuration" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-lake-formation-opt-in operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lake_formation_opt_in(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lake-formation-opt-in" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lake_formation_opt_in(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lake-formation-opt-in" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-lf-tag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lf_tag(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lf-tag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lf_tag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lf-tag" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-lf-tag-expression operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lf_tag_expression(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lf-tag-expression" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lf_tag_expression(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-lf-tag-expression" }, input, callbacks)
 end
 
 --- AWS lakeformation delete-objects-on-cancel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_objects_on_cancel(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "delete-objects-on-cancel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_objects_on_cancel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "delete-objects-on-cancel" }, input, callbacks)
 end
 
 --- AWS lakeformation deregister-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "deregister-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "deregister-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation describe-lake-formation-identity-center-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_lake_formation_identity_center_configuration(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "describe-lake-formation-identity-center-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_lake_formation_identity_center_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "describe-lake-formation-identity-center-configuration" }, input, callbacks)
 end
 
 --- AWS lakeformation describe-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "describe-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "describe-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation describe-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_transaction(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "describe-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "describe-transaction" }, input, callbacks)
 end
 
 --- AWS lakeformation extend-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.extend_transaction(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "extend-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.extend_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "extend-transaction" }, input, callbacks)
 end
 
 --- AWS lakeformation get-data-cells-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_cells_filter(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-cells-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_cells_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-cells-filter" }, input, callbacks)
 end
 
 --- AWS lakeformation get-data-lake-principal operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_lake_principal(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-lake-principal" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_lake_principal(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-lake-principal" }, input, callbacks)
 end
 
 --- AWS lakeformation get-data-lake-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_lake_settings(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-lake-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_lake_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-data-lake-settings" }, input, callbacks)
 end
 
 --- AWS lakeformation get-effective-permissions-for-path operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_effective_permissions_for_path(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-effective-permissions-for-path" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_effective_permissions_for_path(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-effective-permissions-for-path" }, input, callbacks)
 end
 
 --- AWS lakeformation get-lf-tag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lf_tag(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-lf-tag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lf_tag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-lf-tag" }, input, callbacks)
 end
 
 --- AWS lakeformation get-lf-tag-expression operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lf_tag_expression(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-lf-tag-expression" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lf_tag_expression(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-lf-tag-expression" }, input, callbacks)
 end
 
 --- AWS lakeformation get-query-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_state(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-query-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-query-state" }, input, callbacks)
 end
 
 --- AWS lakeformation get-query-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_statistics(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-query-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-query-statistics" }, input, callbacks)
 end
 
 --- AWS lakeformation get-resource-lf-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_lf_tags(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-resource-lf-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_lf_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-resource-lf-tags" }, input, callbacks)
 end
 
 --- AWS lakeformation get-table-objects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_objects(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-table-objects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_objects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-table-objects" }, input, callbacks)
 end
 
 --- AWS lakeformation get-temporary-glue-partition-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_temporary_glue_partition_credentials(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-temporary-glue-partition-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_temporary_glue_partition_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-temporary-glue-partition-credentials" }, input, callbacks)
 end
 
 --- AWS lakeformation get-temporary-glue-table-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_temporary_glue_table_credentials(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-temporary-glue-table-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_temporary_glue_table_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-temporary-glue-table-credentials" }, input, callbacks)
 end
 
 --- AWS lakeformation get-work-unit-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_work_unit_results(input)
-	return common.execute_aws_command({ "lakeformation", "get-work-unit-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_work_unit_results(input, callbacks)
+	return common.execute_aws_command({ "lakeformation", "get-work-unit-results" }, input, callbacks)
 end
 
 --- AWS lakeformation get-work-units operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_work_units(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "get-work-units" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_work_units(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "get-work-units" }, input, callbacks)
 end
 
 --- AWS lakeformation grant-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.grant_permissions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "grant-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.grant_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "grant-permissions" }, input, callbacks)
 end
 
 --- AWS lakeformation list-data-cells-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_cells_filter(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-data-cells-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_cells_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-data-cells-filter" }, input, callbacks)
 end
 
 --- AWS lakeformation list-lake-formation-opt-ins operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lake_formation_opt_ins(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-lake-formation-opt-ins" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lake_formation_opt_ins(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-lake-formation-opt-ins" }, input, callbacks)
 end
 
 --- AWS lakeformation list-lf-tag-expressions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lf_tag_expressions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-lf-tag-expressions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lf_tag_expressions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-lf-tag-expressions" }, input, callbacks)
 end
 
 --- AWS lakeformation list-lf-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lf_tags(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-lf-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lf_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-lf-tags" }, input, callbacks)
 end
 
 --- AWS lakeformation list-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_permissions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-permissions" }, input, callbacks)
 end
 
 --- AWS lakeformation list-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resources(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-resources" }, input, callbacks)
 end
 
 --- AWS lakeformation list-table-storage-optimizers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_table_storage_optimizers(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-table-storage-optimizers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_table_storage_optimizers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-table-storage-optimizers" }, input, callbacks)
 end
 
 --- AWS lakeformation list-transactions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_transactions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "list-transactions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_transactions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "list-transactions" }, input, callbacks)
 end
 
 --- AWS lakeformation put-data-lake-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_data_lake_settings(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "put-data-lake-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_data_lake_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "put-data-lake-settings" }, input, callbacks)
 end
 
 --- AWS lakeformation register-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "register-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "register-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation remove-lf-tags-from-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_lf_tags_from_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "remove-lf-tags-from-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_lf_tags_from_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "remove-lf-tags-from-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation revoke-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.revoke_permissions(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "revoke-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.revoke_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "revoke-permissions" }, input, callbacks)
 end
 
 --- AWS lakeformation search-databases-by-lf-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_databases_by_lf_tags(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "search-databases-by-lf-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_databases_by_lf_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "search-databases-by-lf-tags" }, input, callbacks)
 end
 
 --- AWS lakeformation search-tables-by-lf-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_tables_by_lf_tags(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "search-tables-by-lf-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_tables_by_lf_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "search-tables-by-lf-tags" }, input, callbacks)
 end
 
 --- AWS lakeformation start-query-planning operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_query_planning(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "start-query-planning" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_query_planning(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "start-query-planning" }, input, callbacks)
 end
 
 --- AWS lakeformation start-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_transaction(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "start-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "start-transaction" }, input, callbacks)
 end
 
 --- AWS lakeformation update-data-cells-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_cells_filter(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-data-cells-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_cells_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-data-cells-filter" }, input, callbacks)
 end
 
 --- AWS lakeformation update-lake-formation-identity-center-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_lake_formation_identity_center_configuration(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-lake-formation-identity-center-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_lake_formation_identity_center_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-lake-formation-identity-center-configuration" }, input, callbacks)
 end
 
 --- AWS lakeformation update-lf-tag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_lf_tag(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-lf-tag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_lf_tag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-lf-tag" }, input, callbacks)
 end
 
 --- AWS lakeformation update-lf-tag-expression operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_lf_tag_expression(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-lf-tag-expression" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_lf_tag_expression(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-lf-tag-expression" }, input, callbacks)
 end
 
 --- AWS lakeformation update-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-resource" }, input, callbacks)
 end
 
 --- AWS lakeformation update-table-objects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_table_objects(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-table-objects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_table_objects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-table-objects" }, input, callbacks)
 end
 
 --- AWS lakeformation update-table-storage-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_table_storage_optimizer(input)
-	return common.execute_aws_command_skeleton({ "lakeformation", "update-table-storage-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_table_storage_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lakeformation", "update-table-storage-optimizer" }, input, callbacks)
 end
 
 return M

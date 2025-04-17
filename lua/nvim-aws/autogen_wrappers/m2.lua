@@ -8,261 +8,298 @@ local M = {}
 
 --- AWS m2 cancel-batch-job-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_batch_job_execution(input)
-	return common.execute_aws_command_skeleton({ "m2", "cancel-batch-job-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_batch_job_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "cancel-batch-job-execution" }, input, callbacks)
 end
 
 --- AWS m2 create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "create-application" }, input, callbacks)
 end
 
 --- AWS m2 create-data-set-export-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_set_export_task(input)
-	return common.execute_aws_command_skeleton({ "m2", "create-data-set-export-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_set_export_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "create-data-set-export-task" }, input, callbacks)
 end
 
 --- AWS m2 create-data-set-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_set_import_task(input)
-	return common.execute_aws_command_skeleton({ "m2", "create-data-set-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_set_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "create-data-set-import-task" }, input, callbacks)
 end
 
 --- AWS m2 create-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deployment(input)
-	return common.execute_aws_command_skeleton({ "m2", "create-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "create-deployment" }, input, callbacks)
 end
 
 --- AWS m2 create-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_environment(input)
-	return common.execute_aws_command_skeleton({ "m2", "create-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "create-environment" }, input, callbacks)
 end
 
 --- AWS m2 delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "delete-application" }, input, callbacks)
 end
 
 --- AWS m2 delete-application-from-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_from_environment(input)
-	return common.execute_aws_command_skeleton({ "m2", "delete-application-from-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_from_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "delete-application-from-environment" }, input, callbacks)
 end
 
 --- AWS m2 delete-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_environment(input)
-	return common.execute_aws_command_skeleton({ "m2", "delete-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "delete-environment" }, input, callbacks)
 end
 
 --- AWS m2 get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-application" }, input, callbacks)
 end
 
 --- AWS m2 get-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application_version(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-application-version" }, input, callbacks)
 end
 
 --- AWS m2 get-batch-job-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_batch_job_execution(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-batch-job-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_batch_job_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-batch-job-execution" }, input, callbacks)
 end
 
 --- AWS m2 get-data-set-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_set_details(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-data-set-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_set_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-data-set-details" }, input, callbacks)
 end
 
 --- AWS m2 get-data-set-export-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_set_export_task(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-data-set-export-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_set_export_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-data-set-export-task" }, input, callbacks)
 end
 
 --- AWS m2 get-data-set-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_set_import_task(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-data-set-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_set_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-data-set-import-task" }, input, callbacks)
 end
 
 --- AWS m2 get-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployment(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-deployment" }, input, callbacks)
 end
 
 --- AWS m2 get-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_environment(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-environment" }, input, callbacks)
 end
 
 --- AWS m2 get-signed-bluinsights-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_signed_bluinsights_url(input)
-	return common.execute_aws_command_skeleton({ "m2", "get-signed-bluinsights-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_signed_bluinsights_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "get-signed-bluinsights-url" }, input, callbacks)
 end
 
 --- AWS m2 list-application-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_versions(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-application-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-application-versions" }, input, callbacks)
 end
 
 --- AWS m2 list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-applications" }, input, callbacks)
 end
 
 --- AWS m2 list-batch-job-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_batch_job_definitions(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_batch_job_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-definitions" }, input, callbacks)
 end
 
 --- AWS m2 list-batch-job-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_batch_job_executions(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_batch_job_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-executions" }, input, callbacks)
 end
 
 --- AWS m2 list-batch-job-restart-points operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_batch_job_restart_points(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-restart-points" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_batch_job_restart_points(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-batch-job-restart-points" }, input, callbacks)
 end
 
 --- AWS m2 list-data-set-export-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_set_export_history(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-data-set-export-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_set_export_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-data-set-export-history" }, input, callbacks)
 end
 
 --- AWS m2 list-data-set-import-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_set_import_history(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-data-set-import-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_set_import_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-data-set-import-history" }, input, callbacks)
 end
 
 --- AWS m2 list-data-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_sets(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-data-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-data-sets" }, input, callbacks)
 end
 
 --- AWS m2 list-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deployments(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-deployments" }, input, callbacks)
 end
 
 --- AWS m2 list-engine-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_engine_versions(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-engine-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_engine_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-engine-versions" }, input, callbacks)
 end
 
 --- AWS m2 list-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_environments(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-environments" }, input, callbacks)
 end
 
 --- AWS m2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "m2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS m2 start-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "start-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "start-application" }, input, callbacks)
 end
 
 --- AWS m2 start-batch-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_batch_job(input)
-	return common.execute_aws_command_skeleton({ "m2", "start-batch-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_batch_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "start-batch-job" }, input, callbacks)
 end
 
 --- AWS m2 stop-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "stop-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "stop-application" }, input, callbacks)
 end
 
 --- AWS m2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "m2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS m2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "m2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS m2 update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "m2", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "update-application" }, input, callbacks)
 end
 
 --- AWS m2 update-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_environment(input)
-	return common.execute_aws_command_skeleton({ "m2", "update-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "m2", "update-environment" }, input, callbacks)
 end
 
 return M

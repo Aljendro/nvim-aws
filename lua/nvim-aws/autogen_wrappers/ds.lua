@@ -8,492 +8,562 @@ local M = {}
 
 --- AWS ds accept-shared-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_shared_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "accept-shared-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_shared_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "accept-shared-directory" }, input, callbacks)
 end
 
 --- AWS ds add-ip-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_ip_routes(input)
-	return common.execute_aws_command_skeleton({ "ds", "add-ip-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_ip_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "add-ip-routes" }, input, callbacks)
 end
 
 --- AWS ds add-region operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_region(input)
-	return common.execute_aws_command_skeleton({ "ds", "add-region" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_region(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "add-region" }, input, callbacks)
 end
 
 --- AWS ds add-tags-to-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_tags_to_resource(input)
-	return common.execute_aws_command_skeleton({ "ds", "add-tags-to-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_tags_to_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "add-tags-to-resource" }, input, callbacks)
 end
 
 --- AWS ds cancel-schema-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_schema_extension(input)
-	return common.execute_aws_command_skeleton({ "ds", "cancel-schema-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_schema_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "cancel-schema-extension" }, input, callbacks)
 end
 
 --- AWS ds connect-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.connect_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "connect-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.connect_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "connect-directory" }, input, callbacks)
 end
 
 --- AWS ds create-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_alias(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-alias" }, input, callbacks)
 end
 
 --- AWS ds create-computer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_computer(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-computer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_computer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-computer" }, input, callbacks)
 end
 
 --- AWS ds create-conditional-forwarder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_conditional_forwarder(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-conditional-forwarder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_conditional_forwarder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-conditional-forwarder" }, input, callbacks)
 end
 
 --- AWS ds create-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-directory" }, input, callbacks)
 end
 
 --- AWS ds create-log-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_log_subscription(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-log-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_log_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-log-subscription" }, input, callbacks)
 end
 
 --- AWS ds create-microsoft-ad operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_microsoft_ad(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-microsoft-ad" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_microsoft_ad(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-microsoft-ad" }, input, callbacks)
 end
 
 --- AWS ds create-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_snapshot(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-snapshot" }, input, callbacks)
 end
 
 --- AWS ds create-trust operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_trust(input)
-	return common.execute_aws_command_skeleton({ "ds", "create-trust" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_trust(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "create-trust" }, input, callbacks)
 end
 
 --- AWS ds delete-conditional-forwarder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_conditional_forwarder(input)
-	return common.execute_aws_command_skeleton({ "ds", "delete-conditional-forwarder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_conditional_forwarder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "delete-conditional-forwarder" }, input, callbacks)
 end
 
 --- AWS ds delete-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "delete-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "delete-directory" }, input, callbacks)
 end
 
 --- AWS ds delete-log-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_log_subscription(input)
-	return common.execute_aws_command_skeleton({ "ds", "delete-log-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_log_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "delete-log-subscription" }, input, callbacks)
 end
 
 --- AWS ds delete-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_snapshot(input)
-	return common.execute_aws_command_skeleton({ "ds", "delete-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "delete-snapshot" }, input, callbacks)
 end
 
 --- AWS ds delete-trust operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_trust(input)
-	return common.execute_aws_command_skeleton({ "ds", "delete-trust" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_trust(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "delete-trust" }, input, callbacks)
 end
 
 --- AWS ds deregister-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_certificate(input)
-	return common.execute_aws_command_skeleton({ "ds", "deregister-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "deregister-certificate" }, input, callbacks)
 end
 
 --- AWS ds deregister-event-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_event_topic(input)
-	return common.execute_aws_command_skeleton({ "ds", "deregister-event-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_event_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "deregister-event-topic" }, input, callbacks)
 end
 
 --- AWS ds describe-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_certificate(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-certificate" }, input, callbacks)
 end
 
 --- AWS ds describe-client-authentication-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_client_authentication_settings(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-client-authentication-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_client_authentication_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-client-authentication-settings" }, input, callbacks)
 end
 
 --- AWS ds describe-conditional-forwarders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_conditional_forwarders(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-conditional-forwarders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_conditional_forwarders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-conditional-forwarders" }, input, callbacks)
 end
 
 --- AWS ds describe-directories operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_directories(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-directories" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_directories(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-directories" }, input, callbacks)
 end
 
 --- AWS ds describe-directory-data-access operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_directory_data_access(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-directory-data-access" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_directory_data_access(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-directory-data-access" }, input, callbacks)
 end
 
 --- AWS ds describe-domain-controllers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_domain_controllers(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-domain-controllers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_domain_controllers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-domain-controllers" }, input, callbacks)
 end
 
 --- AWS ds describe-event-topics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_topics(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-event-topics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_topics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-event-topics" }, input, callbacks)
 end
 
 --- AWS ds describe-ldaps-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_ldaps_settings(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-ldaps-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_ldaps_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-ldaps-settings" }, input, callbacks)
 end
 
 --- AWS ds describe-regions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_regions(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-regions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_regions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-regions" }, input, callbacks)
 end
 
 --- AWS ds describe-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_settings(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-settings" }, input, callbacks)
 end
 
 --- AWS ds describe-shared-directories operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_shared_directories(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-shared-directories" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_shared_directories(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-shared-directories" }, input, callbacks)
 end
 
 --- AWS ds describe-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_snapshots(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-snapshots" }, input, callbacks)
 end
 
 --- AWS ds describe-trusts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trusts(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-trusts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trusts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-trusts" }, input, callbacks)
 end
 
 --- AWS ds describe-update-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_update_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "describe-update-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_update_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "describe-update-directory" }, input, callbacks)
 end
 
 --- AWS ds disable-client-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_client_authentication(input)
-	return common.execute_aws_command_skeleton({ "ds", "disable-client-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_client_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "disable-client-authentication" }, input, callbacks)
 end
 
 --- AWS ds disable-directory-data-access operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_directory_data_access(input)
-	return common.execute_aws_command_skeleton({ "ds", "disable-directory-data-access" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_directory_data_access(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "disable-directory-data-access" }, input, callbacks)
 end
 
 --- AWS ds disable-ldaps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_ldaps(input)
-	return common.execute_aws_command_skeleton({ "ds", "disable-ldaps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_ldaps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "disable-ldaps" }, input, callbacks)
 end
 
 --- AWS ds disable-radius operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_radius(input)
-	return common.execute_aws_command_skeleton({ "ds", "disable-radius" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_radius(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "disable-radius" }, input, callbacks)
 end
 
 --- AWS ds disable-sso operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_sso(input)
-	return common.execute_aws_command_skeleton({ "ds", "disable-sso" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_sso(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "disable-sso" }, input, callbacks)
 end
 
 --- AWS ds enable-client-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_client_authentication(input)
-	return common.execute_aws_command_skeleton({ "ds", "enable-client-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_client_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "enable-client-authentication" }, input, callbacks)
 end
 
 --- AWS ds enable-directory-data-access operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_directory_data_access(input)
-	return common.execute_aws_command_skeleton({ "ds", "enable-directory-data-access" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_directory_data_access(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "enable-directory-data-access" }, input, callbacks)
 end
 
 --- AWS ds enable-ldaps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_ldaps(input)
-	return common.execute_aws_command_skeleton({ "ds", "enable-ldaps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_ldaps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "enable-ldaps" }, input, callbacks)
 end
 
 --- AWS ds enable-radius operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_radius(input)
-	return common.execute_aws_command_skeleton({ "ds", "enable-radius" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_radius(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "enable-radius" }, input, callbacks)
 end
 
 --- AWS ds enable-sso operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_sso(input)
-	return common.execute_aws_command_skeleton({ "ds", "enable-sso" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_sso(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "enable-sso" }, input, callbacks)
 end
 
 --- AWS ds get-directory-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_directory_limits(input)
-	return common.execute_aws_command_skeleton({ "ds", "get-directory-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_directory_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "get-directory-limits" }, input, callbacks)
 end
 
 --- AWS ds get-snapshot-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_snapshot_limits(input)
-	return common.execute_aws_command_skeleton({ "ds", "get-snapshot-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_snapshot_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "get-snapshot-limits" }, input, callbacks)
 end
 
 --- AWS ds list-certificates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_certificates(input)
-	return common.execute_aws_command_skeleton({ "ds", "list-certificates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_certificates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "list-certificates" }, input, callbacks)
 end
 
 --- AWS ds list-ip-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ip_routes(input)
-	return common.execute_aws_command_skeleton({ "ds", "list-ip-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ip_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "list-ip-routes" }, input, callbacks)
 end
 
 --- AWS ds list-log-subscriptions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_log_subscriptions(input)
-	return common.execute_aws_command_skeleton({ "ds", "list-log-subscriptions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_log_subscriptions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "list-log-subscriptions" }, input, callbacks)
 end
 
 --- AWS ds list-schema-extensions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schema_extensions(input)
-	return common.execute_aws_command_skeleton({ "ds", "list-schema-extensions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schema_extensions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "list-schema-extensions" }, input, callbacks)
 end
 
 --- AWS ds list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ds", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ds register-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_certificate(input)
-	return common.execute_aws_command_skeleton({ "ds", "register-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "register-certificate" }, input, callbacks)
 end
 
 --- AWS ds register-event-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_event_topic(input)
-	return common.execute_aws_command_skeleton({ "ds", "register-event-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_event_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "register-event-topic" }, input, callbacks)
 end
 
 --- AWS ds reject-shared-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reject_shared_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "reject-shared-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reject_shared_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "reject-shared-directory" }, input, callbacks)
 end
 
 --- AWS ds remove-ip-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_ip_routes(input)
-	return common.execute_aws_command_skeleton({ "ds", "remove-ip-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_ip_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "remove-ip-routes" }, input, callbacks)
 end
 
 --- AWS ds remove-region operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_region(input)
-	return common.execute_aws_command_skeleton({ "ds", "remove-region" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_region(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "remove-region" }, input, callbacks)
 end
 
 --- AWS ds remove-tags-from-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_skeleton({ "ds", "remove-tags-from-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_tags_from_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "remove-tags-from-resource" }, input, callbacks)
 end
 
 --- AWS ds reset-user-password operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_user_password(input)
-	return common.execute_aws_command_skeleton({ "ds", "reset-user-password" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_user_password(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "reset-user-password" }, input, callbacks)
 end
 
 --- AWS ds restore-from-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_from_snapshot(input)
-	return common.execute_aws_command_skeleton({ "ds", "restore-from-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_from_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "restore-from-snapshot" }, input, callbacks)
 end
 
 --- AWS ds share-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.share_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "share-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.share_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "share-directory" }, input, callbacks)
 end
 
 --- AWS ds start-schema-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_schema_extension(input)
-	return common.execute_aws_command_skeleton({ "ds", "start-schema-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_schema_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "start-schema-extension" }, input, callbacks)
 end
 
 --- AWS ds unshare-directory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unshare_directory(input)
-	return common.execute_aws_command_skeleton({ "ds", "unshare-directory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unshare_directory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "unshare-directory" }, input, callbacks)
 end
 
 --- AWS ds update-conditional-forwarder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_conditional_forwarder(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-conditional-forwarder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_conditional_forwarder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-conditional-forwarder" }, input, callbacks)
 end
 
 --- AWS ds update-directory-setup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_directory_setup(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-directory-setup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_directory_setup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-directory-setup" }, input, callbacks)
 end
 
 --- AWS ds update-number-of-domain-controllers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_number_of_domain_controllers(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-number-of-domain-controllers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_number_of_domain_controllers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-number-of-domain-controllers" }, input, callbacks)
 end
 
 --- AWS ds update-radius operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_radius(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-radius" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_radius(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-radius" }, input, callbacks)
 end
 
 --- AWS ds update-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_settings(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-settings" }, input, callbacks)
 end
 
 --- AWS ds update-trust operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_trust(input)
-	return common.execute_aws_command_skeleton({ "ds", "update-trust" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_trust(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "update-trust" }, input, callbacks)
 end
 
 --- AWS ds verify-trust operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_trust(input)
-	return common.execute_aws_command_skeleton({ "ds", "verify-trust" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_trust(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ds", "verify-trust" }, input, callbacks)
 end
 
 return M

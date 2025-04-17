@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS mediastore-data delete-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_object(input)
-	return common.execute_aws_command_skeleton({ "mediastore-data", "delete-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_object(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "delete-object" }, input, callbacks)
 end
 
 --- AWS mediastore-data describe-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_object(input)
-	return common.execute_aws_command_skeleton({ "mediastore-data", "describe-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_object(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "describe-object" }, input, callbacks)
 end
 
 --- AWS mediastore-data get-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_object(input)
-	return common.execute_aws_command({ "mediastore-data", "get-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_object(input, callbacks)
+	return common.execute_aws_command({ "mediastore-data", "get-object" }, input, callbacks)
 end
 
 --- AWS mediastore-data list-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_items(input)
-	return common.execute_aws_command_skeleton({ "mediastore-data", "list-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "list-items" }, input, callbacks)
 end
 
 --- AWS mediastore-data put-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_object(input)
-	return common.execute_aws_command_skeleton({ "mediastore-data", "put-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_object(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "put-object" }, input, callbacks)
 end
 
 return M

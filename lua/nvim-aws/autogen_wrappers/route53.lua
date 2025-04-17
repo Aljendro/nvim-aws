@@ -8,499 +8,570 @@ local M = {}
 
 --- AWS route53 activate-key-signing-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_key_signing_key(input)
-	return common.execute_aws_command_skeleton({ "route53", "activate-key-signing-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_key_signing_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "activate-key-signing-key" }, input, callbacks)
 end
 
 --- AWS route53 associate-vpc-with-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_vpc_with_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "associate-vpc-with-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_vpc_with_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "associate-vpc-with-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 change-cidr-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.change_cidr_collection(input)
-	return common.execute_aws_command_skeleton({ "route53", "change-cidr-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.change_cidr_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "change-cidr-collection" }, input, callbacks)
 end
 
 --- AWS route53 change-resource-record-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.change_resource_record_sets(input)
-	return common.execute_aws_command_skeleton({ "route53", "change-resource-record-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.change_resource_record_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "change-resource-record-sets" }, input, callbacks)
 end
 
 --- AWS route53 change-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.change_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "route53", "change-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.change_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "change-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS route53 create-cidr-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cidr_collection(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-cidr-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cidr_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-cidr-collection" }, input, callbacks)
 end
 
 --- AWS route53 create-health-check operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_health_check(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-health-check" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_health_check(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-health-check" }, input, callbacks)
 end
 
 --- AWS route53 create-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 create-key-signing-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_key_signing_key(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-key-signing-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_key_signing_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-key-signing-key" }, input, callbacks)
 end
 
 --- AWS route53 create-query-logging-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_query_logging_config(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-query-logging-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_query_logging_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-query-logging-config" }, input, callbacks)
 end
 
 --- AWS route53 create-reusable-delegation-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_reusable_delegation_set(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-reusable-delegation-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_reusable_delegation_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-reusable-delegation-set" }, input, callbacks)
 end
 
 --- AWS route53 create-traffic-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_traffic_policy(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_traffic_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy" }, input, callbacks)
 end
 
 --- AWS route53 create-traffic-policy-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_traffic_policy_instance(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_traffic_policy_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy-instance" }, input, callbacks)
 end
 
 --- AWS route53 create-traffic-policy-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_traffic_policy_version(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_traffic_policy_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-traffic-policy-version" }, input, callbacks)
 end
 
 --- AWS route53 create-vpc-association-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_vpc_association_authorization(input)
-	return common.execute_aws_command_skeleton({ "route53", "create-vpc-association-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_vpc_association_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "create-vpc-association-authorization" }, input, callbacks)
 end
 
 --- AWS route53 deactivate-key-signing-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deactivate_key_signing_key(input)
-	return common.execute_aws_command_skeleton({ "route53", "deactivate-key-signing-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deactivate_key_signing_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "deactivate-key-signing-key" }, input, callbacks)
 end
 
 --- AWS route53 delete-cidr-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cidr_collection(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-cidr-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cidr_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-cidr-collection" }, input, callbacks)
 end
 
 --- AWS route53 delete-health-check operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_health_check(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-health-check" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_health_check(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-health-check" }, input, callbacks)
 end
 
 --- AWS route53 delete-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 delete-key-signing-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_key_signing_key(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-key-signing-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_key_signing_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-key-signing-key" }, input, callbacks)
 end
 
 --- AWS route53 delete-query-logging-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_query_logging_config(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-query-logging-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_query_logging_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-query-logging-config" }, input, callbacks)
 end
 
 --- AWS route53 delete-reusable-delegation-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_reusable_delegation_set(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-reusable-delegation-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_reusable_delegation_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-reusable-delegation-set" }, input, callbacks)
 end
 
 --- AWS route53 delete-traffic-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_traffic_policy(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-traffic-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_traffic_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-traffic-policy" }, input, callbacks)
 end
 
 --- AWS route53 delete-traffic-policy-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_traffic_policy_instance(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-traffic-policy-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_traffic_policy_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-traffic-policy-instance" }, input, callbacks)
 end
 
 --- AWS route53 delete-vpc-association-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_vpc_association_authorization(input)
-	return common.execute_aws_command_skeleton({ "route53", "delete-vpc-association-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_vpc_association_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "delete-vpc-association-authorization" }, input, callbacks)
 end
 
 --- AWS route53 disable-hosted-zone-dnssec operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_hosted_zone_dnssec(input)
-	return common.execute_aws_command_skeleton({ "route53", "disable-hosted-zone-dnssec" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_hosted_zone_dnssec(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "disable-hosted-zone-dnssec" }, input, callbacks)
 end
 
 --- AWS route53 disassociate-vpc-from-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_vpc_from_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "disassociate-vpc-from-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_vpc_from_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "disassociate-vpc-from-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 enable-hosted-zone-dnssec operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_hosted_zone_dnssec(input)
-	return common.execute_aws_command_skeleton({ "route53", "enable-hosted-zone-dnssec" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_hosted_zone_dnssec(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "enable-hosted-zone-dnssec" }, input, callbacks)
 end
 
 --- AWS route53 get-account-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_limit(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-account-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-account-limit" }, input, callbacks)
 end
 
 --- AWS route53 get-change operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_change(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-change" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_change(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-change" }, input, callbacks)
 end
 
 --- AWS route53 get-checker-ip-ranges operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_checker_ip_ranges(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-checker-ip-ranges" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_checker_ip_ranges(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-checker-ip-ranges" }, input, callbacks)
 end
 
 --- AWS route53 get-dnssec operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dnssec(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-dnssec" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dnssec(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-dnssec" }, input, callbacks)
 end
 
 --- AWS route53 get-geo-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_geo_location(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-geo-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_geo_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-geo-location" }, input, callbacks)
 end
 
 --- AWS route53 get-health-check operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_health_check(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-health-check" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_health_check(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-health-check" }, input, callbacks)
 end
 
 --- AWS route53 get-health-check-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_health_check_count(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-health-check-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_health_check_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-health-check-count" }, input, callbacks)
 end
 
 --- AWS route53 get-health-check-last-failure-reason operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_health_check_last_failure_reason(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-health-check-last-failure-reason" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_health_check_last_failure_reason(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-health-check-last-failure-reason" }, input, callbacks)
 end
 
 --- AWS route53 get-health-check-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_health_check_status(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-health-check-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_health_check_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-health-check-status" }, input, callbacks)
 end
 
 --- AWS route53 get-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 get-hosted-zone-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hosted_zone_count(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hosted_zone_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone-count" }, input, callbacks)
 end
 
 --- AWS route53 get-hosted-zone-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hosted_zone_limit(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hosted_zone_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-hosted-zone-limit" }, input, callbacks)
 end
 
 --- AWS route53 get-query-logging-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_logging_config(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-query-logging-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_logging_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-query-logging-config" }, input, callbacks)
 end
 
 --- AWS route53 get-reusable-delegation-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reusable_delegation_set(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-reusable-delegation-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reusable_delegation_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-reusable-delegation-set" }, input, callbacks)
 end
 
 --- AWS route53 get-reusable-delegation-set-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reusable_delegation_set_limit(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-reusable-delegation-set-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reusable_delegation_set_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-reusable-delegation-set-limit" }, input, callbacks)
 end
 
 --- AWS route53 get-traffic-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_traffic_policy(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_traffic_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy" }, input, callbacks)
 end
 
 --- AWS route53 get-traffic-policy-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_traffic_policy_instance(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_traffic_policy_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy-instance" }, input, callbacks)
 end
 
 --- AWS route53 get-traffic-policy-instance-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_traffic_policy_instance_count(input)
-	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy-instance-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_traffic_policy_instance_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "get-traffic-policy-instance-count" }, input, callbacks)
 end
 
 --- AWS route53 list-cidr-blocks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cidr_blocks(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-cidr-blocks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cidr_blocks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-cidr-blocks" }, input, callbacks)
 end
 
 --- AWS route53 list-cidr-collections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cidr_collections(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-cidr-collections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cidr_collections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-cidr-collections" }, input, callbacks)
 end
 
 --- AWS route53 list-cidr-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cidr_locations(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-cidr-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cidr_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-cidr-locations" }, input, callbacks)
 end
 
 --- AWS route53 list-geo-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_geo_locations(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-geo-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_geo_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-geo-locations" }, input, callbacks)
 end
 
 --- AWS route53 list-health-checks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_health_checks(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-health-checks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_health_checks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-health-checks" }, input, callbacks)
 end
 
 --- AWS route53 list-hosted-zones operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hosted_zones(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hosted_zones(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones" }, input, callbacks)
 end
 
 --- AWS route53 list-hosted-zones-by-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hosted_zones_by_name(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones-by-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hosted_zones_by_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones-by-name" }, input, callbacks)
 end
 
 --- AWS route53 list-hosted-zones-by-vpc operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hosted_zones_by_vpc(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones-by-vpc" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hosted_zones_by_vpc(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-hosted-zones-by-vpc" }, input, callbacks)
 end
 
 --- AWS route53 list-query-logging-configs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_query_logging_configs(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-query-logging-configs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_query_logging_configs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-query-logging-configs" }, input, callbacks)
 end
 
 --- AWS route53 list-resource-record-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_record_sets(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-resource-record-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_record_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-resource-record-sets" }, input, callbacks)
 end
 
 --- AWS route53 list-reusable-delegation-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_reusable_delegation_sets(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-reusable-delegation-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_reusable_delegation_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-reusable-delegation-sets" }, input, callbacks)
 end
 
 --- AWS route53 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS route53 list-tags-for-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resources(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-tags-for-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-tags-for-resources" }, input, callbacks)
 end
 
 --- AWS route53 list-traffic-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_policies(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policies" }, input, callbacks)
 end
 
 --- AWS route53 list-traffic-policy-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_policy_instances(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_policy_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances" }, input, callbacks)
 end
 
 --- AWS route53 list-traffic-policy-instances-by-hosted-zone operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_policy_instances_by_hosted_zone(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances-by-hosted-zone" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_policy_instances_by_hosted_zone(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances-by-hosted-zone" }, input, callbacks)
 end
 
 --- AWS route53 list-traffic-policy-instances-by-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_policy_instances_by_policy(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances-by-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_policy_instances_by_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-instances-by-policy" }, input, callbacks)
 end
 
 --- AWS route53 list-traffic-policy-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_policy_versions(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_policy_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-traffic-policy-versions" }, input, callbacks)
 end
 
 --- AWS route53 list-vpc-association-authorizations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_vpc_association_authorizations(input)
-	return common.execute_aws_command_skeleton({ "route53", "list-vpc-association-authorizations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_vpc_association_authorizations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "list-vpc-association-authorizations" }, input, callbacks)
 end
 
 --- AWS route53 test-dns-answer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_dns_answer(input)
-	return common.execute_aws_command_skeleton({ "route53", "test-dns-answer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_dns_answer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "test-dns-answer" }, input, callbacks)
 end
 
 --- AWS route53 update-health-check operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_health_check(input)
-	return common.execute_aws_command_skeleton({ "route53", "update-health-check" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_health_check(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "update-health-check" }, input, callbacks)
 end
 
 --- AWS route53 update-hosted-zone-comment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_hosted_zone_comment(input)
-	return common.execute_aws_command_skeleton({ "route53", "update-hosted-zone-comment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_hosted_zone_comment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "update-hosted-zone-comment" }, input, callbacks)
 end
 
 --- AWS route53 update-traffic-policy-comment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_traffic_policy_comment(input)
-	return common.execute_aws_command_skeleton({ "route53", "update-traffic-policy-comment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_traffic_policy_comment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "update-traffic-policy-comment" }, input, callbacks)
 end
 
 --- AWS route53 update-traffic-policy-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_traffic_policy_instance(input)
-	return common.execute_aws_command_skeleton({ "route53", "update-traffic-policy-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_traffic_policy_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53", "update-traffic-policy-instance" }, input, callbacks)
 end
 
 --- AWS route53 wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "route53", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "route53", "wait" }, input, callbacks)
 end
 
 return M

@@ -8,723 +8,826 @@ local M = {}
 
 --- AWS lexv2-models batch-create-custom-vocabulary-item operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_create_custom_vocabulary_item(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-create-custom-vocabulary-item" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_create_custom_vocabulary_item(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-create-custom-vocabulary-item" }, input, callbacks)
 end
 
 --- AWS lexv2-models batch-delete-custom-vocabulary-item operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_custom_vocabulary_item(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-delete-custom-vocabulary-item" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_custom_vocabulary_item(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-delete-custom-vocabulary-item" }, input, callbacks)
 end
 
 --- AWS lexv2-models batch-update-custom-vocabulary-item operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_custom_vocabulary_item(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-update-custom-vocabulary-item" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_custom_vocabulary_item(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-update-custom-vocabulary-item" }, input, callbacks)
 end
 
 --- AWS lexv2-models build-bot-locale operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.build_bot_locale(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "build-bot-locale" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.build_bot_locale(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "build-bot-locale" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-bot-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bot_alias(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bot_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-alias" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-bot-locale operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bot_locale(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-locale" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bot_locale(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-locale" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-bot-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bot_replica(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bot_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-replica" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-bot-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bot_version(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bot_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-version" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_export(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-export" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-intent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_intent(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-intent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_intent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-intent" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-resource-policy-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_resource_policy_statement(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_resource_policy_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy-statement" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-slot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_slot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_slot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-slot-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_slot_type(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_slot_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot-type" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-test-set-discrepancy-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_test_set_discrepancy_report(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-test-set-discrepancy-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_test_set_discrepancy_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-test-set-discrepancy-report" }, input, callbacks)
 end
 
 --- AWS lexv2-models create-upload-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_upload_url(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "create-upload-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_upload_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-upload-url" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-bot-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bot_alias(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bot_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-alias" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-bot-locale operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bot_locale(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-locale" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bot_locale(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-locale" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-bot-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bot_replica(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bot_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-replica" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-bot-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bot_version(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bot_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-version" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-custom-vocabulary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_vocabulary(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-custom-vocabulary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_vocabulary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-custom-vocabulary" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_export(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-export" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_import(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-import" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-intent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_intent(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-intent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_intent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-intent" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-resource-policy-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy_statement(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy-statement" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-slot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-slot-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slot_type(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slot_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot-type" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-test-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_test_set(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-test-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_test_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-test-set" }, input, callbacks)
 end
 
 --- AWS lexv2-models delete-utterances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_utterances(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-utterances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_utterances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-utterances" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_alias(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-alias" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-locale operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_locale(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-locale" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_locale(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-locale" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_recommendation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-recommendation" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_replica(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-replica" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-resource-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_resource_generation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-resource-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_resource_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-resource-generation" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-bot-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bot_version(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bot_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-version" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-custom-vocabulary-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_custom_vocabulary_metadata(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-custom-vocabulary-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_custom_vocabulary_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-custom-vocabulary-metadata" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_export(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-export" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_import(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-import" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-intent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_intent(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-intent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_intent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-intent" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-resource-policy" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-slot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_slot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_slot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-slot-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_slot_type(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_slot_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot-type" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-test-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_test_execution(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_test_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-execution" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-test-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_test_set(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_test_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-test-set-discrepancy-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_test_set_discrepancy_report(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-discrepancy-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_test_set_discrepancy_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-discrepancy-report" }, input, callbacks)
 end
 
 --- AWS lexv2-models describe-test-set-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_test_set_generation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_test_set_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-generation" }, input, callbacks)
 end
 
 --- AWS lexv2-models generate-bot-element operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_bot_element(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "generate-bot-element" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_bot_element(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "generate-bot-element" }, input, callbacks)
 end
 
 --- AWS lexv2-models get-test-execution-artifacts-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_test_execution_artifacts_url(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "get-test-execution-artifacts-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_test_execution_artifacts_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "get-test-execution-artifacts-url" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-aggregated-utterances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_aggregated_utterances(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-aggregated-utterances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_aggregated_utterances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-aggregated-utterances" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-alias-replicas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_alias_replicas(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-alias-replicas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_alias_replicas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-alias-replicas" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-aliases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_aliases(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-aliases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_aliases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-aliases" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-locales operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_locales(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-locales" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_locales(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-locales" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_recommendations(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-recommendations" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-replicas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_replicas(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-replicas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_replicas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-replicas" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-resource-generations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_resource_generations(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-resource-generations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_resource_generations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-resource-generations" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-version-replicas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_version_replicas(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-version-replicas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_version_replicas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-version-replicas" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bot-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bot_versions(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bot_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-versions" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-bots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bots(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bots" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-built-in-intents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_built_in_intents(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-intents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_built_in_intents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-intents" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-built-in-slot-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_built_in_slot_types(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-slot-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_built_in_slot_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-slot-types" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-custom-vocabulary-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_vocabulary_items(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-custom-vocabulary-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_vocabulary_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-custom-vocabulary-items" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-exports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_exports(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-exports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_exports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-exports" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-imports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_imports(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-imports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_imports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-imports" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-intent-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_intent_metrics(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_intent_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-metrics" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-intent-paths operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_intent_paths(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-paths" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_intent_paths(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-paths" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-intent-stage-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_intent_stage_metrics(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-stage-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_intent_stage_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-stage-metrics" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-intents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_intents(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_intents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intents" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-recommended-intents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommended_intents(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-recommended-intents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommended_intents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-recommended-intents" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-session-analytics-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_session_analytics_data(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-analytics-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_session_analytics_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-analytics-data" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-session-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_session_metrics(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_session_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-metrics" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-slot-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_slot_types(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slot-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_slot_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slot-types" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-slots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_slots(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_slots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slots" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-test-execution-result-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_execution_result_items(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-execution-result-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_execution_result_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-execution-result-items" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-test-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_executions(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-executions" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-test-set-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_set_records(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-set-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_set_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-set-records" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-test-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_sets(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-sets" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-utterance-analytics-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_utterance_analytics_data(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-analytics-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_utterance_analytics_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-analytics-data" }, input, callbacks)
 end
 
 --- AWS lexv2-models list-utterance-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_utterance_metrics(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_utterance_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-metrics" }, input, callbacks)
 end
 
 --- AWS lexv2-models search-associated-transcripts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_associated_transcripts(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "search-associated-transcripts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_associated_transcripts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "search-associated-transcripts" }, input, callbacks)
 end
 
 --- AWS lexv2-models start-bot-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_bot_recommendation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_bot_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-recommendation" }, input, callbacks)
 end
 
 --- AWS lexv2-models start-bot-resource-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_bot_resource_generation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-resource-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_bot_resource_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-resource-generation" }, input, callbacks)
 end
 
 --- AWS lexv2-models start-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_import(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "start-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-import" }, input, callbacks)
 end
 
 --- AWS lexv2-models start-test-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_test_execution(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_test_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-execution" }, input, callbacks)
 end
 
 --- AWS lexv2-models start-test-set-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_test_set_generation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-set-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_test_set_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-set-generation" }, input, callbacks)
 end
 
 --- AWS lexv2-models stop-bot-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_bot_recommendation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "stop-bot-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_bot_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "stop-bot-recommendation" }, input, callbacks)
 end
 
 --- AWS lexv2-models tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "tag-resource" }, input, callbacks)
 end
 
 --- AWS lexv2-models untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "untag-resource" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-bot-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bot_alias(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bot_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-alias" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-bot-locale operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bot_locale(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-locale" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bot_locale(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-locale" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-bot-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bot_recommendation(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bot_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-recommendation" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_export(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-export" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-intent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_intent(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-intent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_intent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-intent" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-resource-policy" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-slot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_slot(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_slot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-slot-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_slot_type(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_slot_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot-type" }, input, callbacks)
 end
 
 --- AWS lexv2-models update-test-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_test_set(input)
-	return common.execute_aws_command_skeleton({ "lexv2-models", "update-test-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_test_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-test-set" }, input, callbacks)
 end
 
 --- AWS lexv2-models wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "lexv2-models", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "lexv2-models", "wait" }, input, callbacks)
 end
 
 return M

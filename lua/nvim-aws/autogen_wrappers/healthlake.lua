@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS healthlake create-fhir-datastore operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_fhir_datastore(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "create-fhir-datastore" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_fhir_datastore(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "create-fhir-datastore" }, input, callbacks)
 end
 
 --- AWS healthlake delete-fhir-datastore operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fhir_datastore(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "delete-fhir-datastore" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fhir_datastore(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "delete-fhir-datastore" }, input, callbacks)
 end
 
 --- AWS healthlake describe-fhir-datastore operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fhir_datastore(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-datastore" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fhir_datastore(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-datastore" }, input, callbacks)
 end
 
 --- AWS healthlake describe-fhir-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fhir_export_job(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fhir_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-export-job" }, input, callbacks)
 end
 
 --- AWS healthlake describe-fhir-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fhir_import_job(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fhir_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "describe-fhir-import-job" }, input, callbacks)
 end
 
 --- AWS healthlake list-fhir-datastores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fhir_datastores(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-datastores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fhir_datastores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-datastores" }, input, callbacks)
 end
 
 --- AWS healthlake list-fhir-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fhir_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fhir_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-export-jobs" }, input, callbacks)
 end
 
 --- AWS healthlake list-fhir-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fhir_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fhir_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "list-fhir-import-jobs" }, input, callbacks)
 end
 
 --- AWS healthlake list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS healthlake start-fhir-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_fhir_export_job(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "start-fhir-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_fhir_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "start-fhir-export-job" }, input, callbacks)
 end
 
 --- AWS healthlake start-fhir-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_fhir_import_job(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "start-fhir-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_fhir_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "start-fhir-import-job" }, input, callbacks)
 end
 
 --- AWS healthlake tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "tag-resource" }, input, callbacks)
 end
 
 --- AWS healthlake untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "healthlake", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "healthlake", "untag-resource" }, input, callbacks)
 end
 
 return M

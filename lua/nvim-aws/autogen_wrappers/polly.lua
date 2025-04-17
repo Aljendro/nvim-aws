@@ -8,65 +8,74 @@ local M = {}
 
 --- AWS polly delete-lexicon operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lexicon(input)
-	return common.execute_aws_command_skeleton({ "polly", "delete-lexicon" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lexicon(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "delete-lexicon" }, input, callbacks)
 end
 
 --- AWS polly describe-voices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_voices(input)
-	return common.execute_aws_command_skeleton({ "polly", "describe-voices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_voices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "describe-voices" }, input, callbacks)
 end
 
 --- AWS polly get-lexicon operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lexicon(input)
-	return common.execute_aws_command_skeleton({ "polly", "get-lexicon" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lexicon(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "get-lexicon" }, input, callbacks)
 end
 
 --- AWS polly get-speech-synthesis-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_speech_synthesis_task(input)
-	return common.execute_aws_command_skeleton({ "polly", "get-speech-synthesis-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_speech_synthesis_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "get-speech-synthesis-task" }, input, callbacks)
 end
 
 --- AWS polly list-lexicons operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lexicons(input)
-	return common.execute_aws_command_skeleton({ "polly", "list-lexicons" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lexicons(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "list-lexicons" }, input, callbacks)
 end
 
 --- AWS polly list-speech-synthesis-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_speech_synthesis_tasks(input)
-	return common.execute_aws_command_skeleton({ "polly", "list-speech-synthesis-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_speech_synthesis_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "list-speech-synthesis-tasks" }, input, callbacks)
 end
 
 --- AWS polly put-lexicon operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_lexicon(input)
-	return common.execute_aws_command_skeleton({ "polly", "put-lexicon" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_lexicon(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "put-lexicon" }, input, callbacks)
 end
 
 --- AWS polly start-speech-synthesis-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_speech_synthesis_task(input)
-	return common.execute_aws_command_skeleton({ "polly", "start-speech-synthesis-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_speech_synthesis_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "polly", "start-speech-synthesis-task" }, input, callbacks)
 end
 
 --- AWS polly synthesize-speech operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.synthesize_speech(input)
-	return common.execute_aws_command({ "polly", "synthesize-speech" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.synthesize_speech(input, callbacks)
+	return common.execute_aws_command({ "polly", "synthesize-speech" }, input, callbacks)
 end
 
 return M

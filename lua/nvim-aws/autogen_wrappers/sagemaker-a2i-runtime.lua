@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS sagemaker-a2i-runtime delete-human-loop operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_human_loop(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "delete-human-loop" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_human_loop(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "delete-human-loop" }, input, callbacks)
 end
 
 --- AWS sagemaker-a2i-runtime describe-human-loop operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_human_loop(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "describe-human-loop" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_human_loop(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "describe-human-loop" }, input, callbacks)
 end
 
 --- AWS sagemaker-a2i-runtime list-human-loops operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_human_loops(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "list-human-loops" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_human_loops(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "list-human-loops" }, input, callbacks)
 end
 
 --- AWS sagemaker-a2i-runtime start-human-loop operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_human_loop(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "start-human-loop" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_human_loop(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "start-human-loop" }, input, callbacks)
 end
 
 --- AWS sagemaker-a2i-runtime stop-human-loop operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_human_loop(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "stop-human-loop" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_human_loop(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "stop-human-loop" }, input, callbacks)
 end
 
 return M

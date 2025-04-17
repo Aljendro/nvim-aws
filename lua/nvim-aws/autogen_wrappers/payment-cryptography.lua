@@ -8,142 +8,162 @@ local M = {}
 
 --- AWS payment-cryptography create-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_alias(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "create-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "create-alias" }, input, callbacks)
 end
 
 --- AWS payment-cryptography create-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "create-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "create-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography delete-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alias(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "delete-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "delete-alias" }, input, callbacks)
 end
 
 --- AWS payment-cryptography delete-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "delete-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "delete-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography export-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "export-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "export-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography get-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_alias(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-alias" }, input, callbacks)
 end
 
 --- AWS payment-cryptography get-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography get-parameters-for-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_parameters_for_export(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-parameters-for-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_parameters_for_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-parameters-for-export" }, input, callbacks)
 end
 
 --- AWS payment-cryptography get-parameters-for-import operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_parameters_for_import(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-parameters-for-import" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_parameters_for_import(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-parameters-for-import" }, input, callbacks)
 end
 
 --- AWS payment-cryptography get-public-key-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_public_key_certificate(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-public-key-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_public_key_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "get-public-key-certificate" }, input, callbacks)
 end
 
 --- AWS payment-cryptography import-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "import-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "import-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography list-aliases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_aliases(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-aliases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_aliases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-aliases" }, input, callbacks)
 end
 
 --- AWS payment-cryptography list-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_keys(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-keys" }, input, callbacks)
 end
 
 --- AWS payment-cryptography list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS payment-cryptography restore-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_key(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "restore-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "restore-key" }, input, callbacks)
 end
 
 --- AWS payment-cryptography start-key-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_key_usage(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "start-key-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_key_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "start-key-usage" }, input, callbacks)
 end
 
 --- AWS payment-cryptography stop-key-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_key_usage(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "stop-key-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_key_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "stop-key-usage" }, input, callbacks)
 end
 
 --- AWS payment-cryptography tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "tag-resource" }, input, callbacks)
 end
 
 --- AWS payment-cryptography untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "untag-resource" }, input, callbacks)
 end
 
 --- AWS payment-cryptography update-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_alias(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography", "update-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography", "update-alias" }, input, callbacks)
 end
 
 return M

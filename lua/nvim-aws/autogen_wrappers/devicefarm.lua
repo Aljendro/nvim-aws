@@ -8,541 +8,618 @@ local M = {}
 
 --- AWS devicefarm create-device-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_device_pool(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-device-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_device_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-device-pool" }, input, callbacks)
 end
 
 --- AWS devicefarm create-instance-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_instance_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-instance-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_instance_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-instance-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm create-network-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_network_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-network-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_network_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-network-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm create-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-project" }, input, callbacks)
 end
 
 --- AWS devicefarm create-remote-access-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_remote_access_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-remote-access-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_remote_access_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-remote-access-session" }, input, callbacks)
 end
 
 --- AWS devicefarm create-test-grid-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_test_grid_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_test_grid_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-project" }, input, callbacks)
 end
 
 --- AWS devicefarm create-test-grid-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_test_grid_url(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_test_grid_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-url" }, input, callbacks)
 end
 
 --- AWS devicefarm create-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_upload(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-upload" }, input, callbacks)
 end
 
 --- AWS devicefarm create-vpce-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_vpce_configuration(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "create-vpce-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_vpce_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-vpce-configuration" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-device-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_device_pool(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-device-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_device_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-device-pool" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-instance-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_instance_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-instance-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_instance_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-instance-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-network-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_network_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-network-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_network_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-network-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-project" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-remote-access-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_remote_access_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-remote-access-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_remote_access_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-remote-access-session" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_run(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-run" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-test-grid-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_test_grid_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-test-grid-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_test_grid_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-test-grid-project" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_upload(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-upload" }, input, callbacks)
 end
 
 --- AWS devicefarm delete-vpce-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_vpce_configuration(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "delete-vpce-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_vpce_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-vpce-configuration" }, input, callbacks)
 end
 
 --- AWS devicefarm get-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_settings(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-account-settings" }, input, callbacks)
 end
 
 --- AWS devicefarm get-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device" }, input, callbacks)
 end
 
 --- AWS devicefarm get-device-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_instance(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-instance" }, input, callbacks)
 end
 
 --- AWS devicefarm get-device-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_pool(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool" }, input, callbacks)
 end
 
 --- AWS devicefarm get-device-pool-compatibility operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_pool_compatibility(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool-compatibility" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_pool_compatibility(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool-compatibility" }, input, callbacks)
 end
 
 --- AWS devicefarm get-instance-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-instance-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-instance-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm get-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-job" }, input, callbacks)
 end
 
 --- AWS devicefarm get-network-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_network_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-network-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_network_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-network-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm get-offering-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_offering_status(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-offering-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_offering_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-offering-status" }, input, callbacks)
 end
 
 --- AWS devicefarm get-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-project" }, input, callbacks)
 end
 
 --- AWS devicefarm get-remote-access-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_remote_access_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-remote-access-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_remote_access_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-remote-access-session" }, input, callbacks)
 end
 
 --- AWS devicefarm get-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_run(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-run" }, input, callbacks)
 end
 
 --- AWS devicefarm get-suite operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_suite(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-suite" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_suite(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-suite" }, input, callbacks)
 end
 
 --- AWS devicefarm get-test operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_test(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-test" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_test(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test" }, input, callbacks)
 end
 
 --- AWS devicefarm get-test-grid-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_test_grid_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_test_grid_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-project" }, input, callbacks)
 end
 
 --- AWS devicefarm get-test-grid-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_test_grid_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_test_grid_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-session" }, input, callbacks)
 end
 
 --- AWS devicefarm get-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_upload(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-upload" }, input, callbacks)
 end
 
 --- AWS devicefarm get-vpce-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_vpce_configuration(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "get-vpce-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_vpce_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-vpce-configuration" }, input, callbacks)
 end
 
 --- AWS devicefarm install-to-remote-access-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.install_to_remote_access_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "install-to-remote-access-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.install_to_remote_access_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "install-to-remote-access-session" }, input, callbacks)
 end
 
 --- AWS devicefarm list-artifacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_artifacts(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-artifacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_artifacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-artifacts" }, input, callbacks)
 end
 
 --- AWS devicefarm list-device-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_instances(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-instances" }, input, callbacks)
 end
 
 --- AWS devicefarm list-device-pools operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_pools(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-pools" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_pools(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-pools" }, input, callbacks)
 end
 
 --- AWS devicefarm list-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-devices" }, input, callbacks)
 end
 
 --- AWS devicefarm list-instance-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_instance_profiles(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-instance-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_instance_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-instance-profiles" }, input, callbacks)
 end
 
 --- AWS devicefarm list-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-jobs" }, input, callbacks)
 end
 
 --- AWS devicefarm list-network-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_network_profiles(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-network-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_network_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-network-profiles" }, input, callbacks)
 end
 
 --- AWS devicefarm list-offering-promotions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_offering_promotions(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-promotions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_offering_promotions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-promotions" }, input, callbacks)
 end
 
 --- AWS devicefarm list-offering-transactions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_offering_transactions(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-transactions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_offering_transactions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-transactions" }, input, callbacks)
 end
 
 --- AWS devicefarm list-offerings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_offerings(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-offerings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_offerings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offerings" }, input, callbacks)
 end
 
 --- AWS devicefarm list-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_projects(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-projects" }, input, callbacks)
 end
 
 --- AWS devicefarm list-remote-access-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_remote_access_sessions(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-remote-access-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_remote_access_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-remote-access-sessions" }, input, callbacks)
 end
 
 --- AWS devicefarm list-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_runs(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-runs" }, input, callbacks)
 end
 
 --- AWS devicefarm list-samples operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_samples(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-samples" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_samples(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-samples" }, input, callbacks)
 end
 
 --- AWS devicefarm list-suites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_suites(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-suites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_suites(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-suites" }, input, callbacks)
 end
 
 --- AWS devicefarm list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS devicefarm list-test-grid-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_grid_projects(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_grid_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-projects" }, input, callbacks)
 end
 
 --- AWS devicefarm list-test-grid-session-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_grid_session_actions(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_grid_session_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-actions" }, input, callbacks)
 end
 
 --- AWS devicefarm list-test-grid-session-artifacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_grid_session_artifacts(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-artifacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_grid_session_artifacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-artifacts" }, input, callbacks)
 end
 
 --- AWS devicefarm list-test-grid-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_test_grid_sessions(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_test_grid_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-sessions" }, input, callbacks)
 end
 
 --- AWS devicefarm list-tests operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tests(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-tests" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tests(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-tests" }, input, callbacks)
 end
 
 --- AWS devicefarm list-unique-problems operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_unique_problems(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-unique-problems" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_unique_problems(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-unique-problems" }, input, callbacks)
 end
 
 --- AWS devicefarm list-uploads operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_uploads(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-uploads" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_uploads(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-uploads" }, input, callbacks)
 end
 
 --- AWS devicefarm list-vpce-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_vpce_configurations(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "list-vpce-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_vpce_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-vpce-configurations" }, input, callbacks)
 end
 
 --- AWS devicefarm purchase-offering operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.purchase_offering(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "purchase-offering" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.purchase_offering(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "purchase-offering" }, input, callbacks)
 end
 
 --- AWS devicefarm renew-offering operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.renew_offering(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "renew-offering" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.renew_offering(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "renew-offering" }, input, callbacks)
 end
 
 --- AWS devicefarm schedule-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.schedule_run(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "schedule-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.schedule_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "schedule-run" }, input, callbacks)
 end
 
 --- AWS devicefarm stop-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_job(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "stop-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-job" }, input, callbacks)
 end
 
 --- AWS devicefarm stop-remote-access-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_remote_access_session(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "stop-remote-access-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_remote_access_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-remote-access-session" }, input, callbacks)
 end
 
 --- AWS devicefarm stop-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_run(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "stop-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-run" }, input, callbacks)
 end
 
 --- AWS devicefarm tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "tag-resource" }, input, callbacks)
 end
 
 --- AWS devicefarm untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "untag-resource" }, input, callbacks)
 end
 
 --- AWS devicefarm update-device-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_device_instance(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_device_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-instance" }, input, callbacks)
 end
 
 --- AWS devicefarm update-device-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_device_pool(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_device_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-pool" }, input, callbacks)
 end
 
 --- AWS devicefarm update-instance-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_instance_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-instance-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_instance_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-instance-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm update-network-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_network_profile(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-network-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_network_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-network-profile" }, input, callbacks)
 end
 
 --- AWS devicefarm update-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-project" }, input, callbacks)
 end
 
 --- AWS devicefarm update-test-grid-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_test_grid_project(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-test-grid-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_test_grid_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-test-grid-project" }, input, callbacks)
 end
 
 --- AWS devicefarm update-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_upload(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-upload" }, input, callbacks)
 end
 
 --- AWS devicefarm update-vpce-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_vpce_configuration(input)
-	return common.execute_aws_command_skeleton({ "devicefarm", "update-vpce-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_vpce_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-vpce-configuration" }, input, callbacks)
 end
 
 return M

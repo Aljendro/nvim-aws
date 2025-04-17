@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS discovery associate-configuration-items-to-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_configuration_items_to_application(input)
-	return common.execute_aws_command_skeleton({ "discovery", "associate-configuration-items-to-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_configuration_items_to_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "associate-configuration-items-to-application" }, input, callbacks)
 end
 
 --- AWS discovery batch-delete-agents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_agents(input)
-	return common.execute_aws_command_skeleton({ "discovery", "batch-delete-agents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_agents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "batch-delete-agents" }, input, callbacks)
 end
 
 --- AWS discovery batch-delete-import-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_import_data(input)
-	return common.execute_aws_command_skeleton({ "discovery", "batch-delete-import-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_import_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "batch-delete-import-data" }, input, callbacks)
 end
 
 --- AWS discovery create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "discovery", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "create-application" }, input, callbacks)
 end
 
 --- AWS discovery create-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tags(input)
-	return common.execute_aws_command_skeleton({ "discovery", "create-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "create-tags" }, input, callbacks)
 end
 
 --- AWS discovery delete-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_applications(input)
-	return common.execute_aws_command_skeleton({ "discovery", "delete-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "delete-applications" }, input, callbacks)
 end
 
 --- AWS discovery delete-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tags(input)
-	return common.execute_aws_command_skeleton({ "discovery", "delete-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "delete-tags" }, input, callbacks)
 end
 
 --- AWS discovery describe-agents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_agents(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-agents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_agents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-agents" }, input, callbacks)
 end
 
 --- AWS discovery describe-batch-delete-configuration-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_batch_delete_configuration_task(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-batch-delete-configuration-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_batch_delete_configuration_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-batch-delete-configuration-task" }, input, callbacks)
 end
 
 --- AWS discovery describe-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_configurations(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-configurations" }, input, callbacks)
 end
 
 --- AWS discovery describe-continuous-exports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_continuous_exports(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-continuous-exports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_continuous_exports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-continuous-exports" }, input, callbacks)
 end
 
 --- AWS discovery describe-export-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_export_tasks(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-export-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_export_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-export-tasks" }, input, callbacks)
 end
 
 --- AWS discovery describe-import-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_import_tasks(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-import-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_import_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-import-tasks" }, input, callbacks)
 end
 
 --- AWS discovery describe-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tags(input)
-	return common.execute_aws_command_skeleton({ "discovery", "describe-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "describe-tags" }, input, callbacks)
 end
 
 --- AWS discovery disassociate-configuration-items-from-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_configuration_items_from_application(input)
-	return common.execute_aws_command_skeleton({ "discovery", "disassociate-configuration-items-from-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_configuration_items_from_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "disassociate-configuration-items-from-application" }, input, callbacks)
 end
 
 --- AWS discovery get-discovery-summary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_discovery_summary(input)
-	return common.execute_aws_command_skeleton({ "discovery", "get-discovery-summary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_discovery_summary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "get-discovery-summary" }, input, callbacks)
 end
 
 --- AWS discovery list-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configurations(input)
-	return common.execute_aws_command_skeleton({ "discovery", "list-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "list-configurations" }, input, callbacks)
 end
 
 --- AWS discovery list-server-neighbors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_server_neighbors(input)
-	return common.execute_aws_command_skeleton({ "discovery", "list-server-neighbors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_server_neighbors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "list-server-neighbors" }, input, callbacks)
 end
 
 --- AWS discovery start-batch-delete-configuration-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_batch_delete_configuration_task(input)
-	return common.execute_aws_command_skeleton({ "discovery", "start-batch-delete-configuration-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_batch_delete_configuration_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "start-batch-delete-configuration-task" }, input, callbacks)
 end
 
 --- AWS discovery start-continuous-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_continuous_export(input)
-	return common.execute_aws_command_skeleton({ "discovery", "start-continuous-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_continuous_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "start-continuous-export" }, input, callbacks)
 end
 
 --- AWS discovery start-data-collection-by-agent-ids operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_data_collection_by_agent_ids(input)
-	return common.execute_aws_command_skeleton({ "discovery", "start-data-collection-by-agent-ids" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_data_collection_by_agent_ids(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "start-data-collection-by-agent-ids" }, input, callbacks)
 end
 
 --- AWS discovery start-export-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_export_task(input)
-	return common.execute_aws_command_skeleton({ "discovery", "start-export-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_export_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "start-export-task" }, input, callbacks)
 end
 
 --- AWS discovery start-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_import_task(input)
-	return common.execute_aws_command_skeleton({ "discovery", "start-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "start-import-task" }, input, callbacks)
 end
 
 --- AWS discovery stop-continuous-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_continuous_export(input)
-	return common.execute_aws_command_skeleton({ "discovery", "stop-continuous-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_continuous_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "stop-continuous-export" }, input, callbacks)
 end
 
 --- AWS discovery stop-data-collection-by-agent-ids operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_data_collection_by_agent_ids(input)
-	return common.execute_aws_command_skeleton({ "discovery", "stop-data-collection-by-agent-ids" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_data_collection_by_agent_ids(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "stop-data-collection-by-agent-ids" }, input, callbacks)
 end
 
 --- AWS discovery update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "discovery", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "discovery", "update-application" }, input, callbacks)
 end
 
 return M

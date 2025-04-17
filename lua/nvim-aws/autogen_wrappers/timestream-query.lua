@@ -8,107 +8,122 @@ local M = {}
 
 --- AWS timestream-query cancel-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "cancel-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "cancel-query" }, input, callbacks)
 end
 
 --- AWS timestream-query create-scheduled-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_scheduled_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "create-scheduled-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_scheduled_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "create-scheduled-query" }, input, callbacks)
 end
 
 --- AWS timestream-query delete-scheduled-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_scheduled_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "delete-scheduled-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_scheduled_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "delete-scheduled-query" }, input, callbacks)
 end
 
 --- AWS timestream-query describe-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_settings(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "describe-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "describe-account-settings" }, input, callbacks)
 end
 
 --- AWS timestream-query describe-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_endpoints(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "describe-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "describe-endpoints" }, input, callbacks)
 end
 
 --- AWS timestream-query describe-scheduled-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_scheduled_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "describe-scheduled-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_scheduled_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "describe-scheduled-query" }, input, callbacks)
 end
 
 --- AWS timestream-query execute-scheduled-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.execute_scheduled_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "execute-scheduled-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.execute_scheduled_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "execute-scheduled-query" }, input, callbacks)
 end
 
 --- AWS timestream-query list-scheduled-queries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_scheduled_queries(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "list-scheduled-queries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_scheduled_queries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "list-scheduled-queries" }, input, callbacks)
 end
 
 --- AWS timestream-query list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS timestream-query prepare-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.prepare_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "prepare-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.prepare_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "prepare-query" }, input, callbacks)
 end
 
 --- AWS timestream-query query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "query" }, input, callbacks)
 end
 
 --- AWS timestream-query tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "tag-resource" }, input, callbacks)
 end
 
 --- AWS timestream-query untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "untag-resource" }, input, callbacks)
 end
 
 --- AWS timestream-query update-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_settings(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "update-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "update-account-settings" }, input, callbacks)
 end
 
 --- AWS timestream-query update-scheduled-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_scheduled_query(input)
-	return common.execute_aws_command_skeleton({ "timestream-query", "update-scheduled-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_scheduled_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "timestream-query", "update-scheduled-query" }, input, callbacks)
 end
 
 return M

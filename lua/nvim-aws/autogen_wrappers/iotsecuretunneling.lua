@@ -8,58 +8,66 @@ local M = {}
 
 --- AWS iotsecuretunneling close-tunnel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.close_tunnel(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "close-tunnel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.close_tunnel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "close-tunnel" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling describe-tunnel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tunnel(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "describe-tunnel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tunnel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "describe-tunnel" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling list-tunnels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tunnels(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tunnels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tunnels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tunnels" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling open-tunnel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.open_tunnel(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "open-tunnel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.open_tunnel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "open-tunnel" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling rotate-tunnel-access-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rotate_tunnel_access_token(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "rotate-tunnel-access-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rotate_tunnel_access_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "rotate-tunnel-access-token" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "tag-resource" }, input, callbacks)
 end
 
 --- AWS iotsecuretunneling untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "untag-resource" }, input, callbacks)
 end
 
 return M

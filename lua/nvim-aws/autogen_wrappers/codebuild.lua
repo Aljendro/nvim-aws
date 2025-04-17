@@ -8,415 +8,474 @@ local M = {}
 
 --- AWS codebuild batch-delete-builds operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_builds(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-delete-builds" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_builds(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-delete-builds" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-build-batches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_build_batches(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-build-batches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_build_batches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-build-batches" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-builds operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_builds(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-builds" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_builds(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-builds" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-command-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_command_executions(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-command-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_command_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-command-executions" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-fleets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_fleets(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-fleets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_fleets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-fleets" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_projects(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-projects" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-report-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_report_groups(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-report-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_report_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-report-groups" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_reports(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-reports" }, input, callbacks)
 end
 
 --- AWS codebuild batch-get-sandboxes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_sandboxes(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-sandboxes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_sandboxes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "batch-get-sandboxes" }, input, callbacks)
 end
 
 --- AWS codebuild create-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_fleet(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "create-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "create-fleet" }, input, callbacks)
 end
 
 --- AWS codebuild create-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "create-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "create-project" }, input, callbacks)
 end
 
 --- AWS codebuild create-report-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_report_group(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "create-report-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_report_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "create-report-group" }, input, callbacks)
 end
 
 --- AWS codebuild create-webhook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_webhook(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "create-webhook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_webhook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "create-webhook" }, input, callbacks)
 end
 
 --- AWS codebuild delete-build-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_build_batch(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-build-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_build_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-build-batch" }, input, callbacks)
 end
 
 --- AWS codebuild delete-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fleet(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-fleet" }, input, callbacks)
 end
 
 --- AWS codebuild delete-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-project" }, input, callbacks)
 end
 
 --- AWS codebuild delete-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_report(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-report" }, input, callbacks)
 end
 
 --- AWS codebuild delete-report-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_report_group(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-report-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_report_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-report-group" }, input, callbacks)
 end
 
 --- AWS codebuild delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS codebuild delete-source-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_source_credentials(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-source-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_source_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-source-credentials" }, input, callbacks)
 end
 
 --- AWS codebuild delete-webhook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_webhook(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "delete-webhook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_webhook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "delete-webhook" }, input, callbacks)
 end
 
 --- AWS codebuild describe-code-coverages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_code_coverages(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "describe-code-coverages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_code_coverages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "describe-code-coverages" }, input, callbacks)
 end
 
 --- AWS codebuild describe-test-cases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_test_cases(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "describe-test-cases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_test_cases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "describe-test-cases" }, input, callbacks)
 end
 
 --- AWS codebuild get-report-group-trend operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_report_group_trend(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "get-report-group-trend" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_report_group_trend(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "get-report-group-trend" }, input, callbacks)
 end
 
 --- AWS codebuild get-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "get-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "get-resource-policy" }, input, callbacks)
 end
 
 --- AWS codebuild import-source-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_source_credentials(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "import-source-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_source_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "import-source-credentials" }, input, callbacks)
 end
 
 --- AWS codebuild invalidate-project-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.invalidate_project_cache(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "invalidate-project-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.invalidate_project_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "invalidate-project-cache" }, input, callbacks)
 end
 
 --- AWS codebuild list-build-batches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_build_batches(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-build-batches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_build_batches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-build-batches" }, input, callbacks)
 end
 
 --- AWS codebuild list-build-batches-for-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_build_batches_for_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-build-batches-for-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_build_batches_for_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-build-batches-for-project" }, input, callbacks)
 end
 
 --- AWS codebuild list-builds operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_builds(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-builds" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_builds(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-builds" }, input, callbacks)
 end
 
 --- AWS codebuild list-builds-for-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_builds_for_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-builds-for-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_builds_for_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-builds-for-project" }, input, callbacks)
 end
 
 --- AWS codebuild list-command-executions-for-sandbox operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_command_executions_for_sandbox(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-command-executions-for-sandbox" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_command_executions_for_sandbox(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-command-executions-for-sandbox" }, input, callbacks)
 end
 
 --- AWS codebuild list-curated-environment-images operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_curated_environment_images(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-curated-environment-images" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_curated_environment_images(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-curated-environment-images" }, input, callbacks)
 end
 
 --- AWS codebuild list-fleets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fleets(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-fleets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fleets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-fleets" }, input, callbacks)
 end
 
 --- AWS codebuild list-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_projects(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-projects" }, input, callbacks)
 end
 
 --- AWS codebuild list-report-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_report_groups(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-report-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_report_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-report-groups" }, input, callbacks)
 end
 
 --- AWS codebuild list-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_reports(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-reports" }, input, callbacks)
 end
 
 --- AWS codebuild list-reports-for-report-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_reports_for_report_group(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-reports-for-report-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_reports_for_report_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-reports-for-report-group" }, input, callbacks)
 end
 
 --- AWS codebuild list-sandboxes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sandboxes(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-sandboxes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sandboxes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-sandboxes" }, input, callbacks)
 end
 
 --- AWS codebuild list-sandboxes-for-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sandboxes_for_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-sandboxes-for-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sandboxes_for_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-sandboxes-for-project" }, input, callbacks)
 end
 
 --- AWS codebuild list-shared-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_shared_projects(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-shared-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_shared_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-shared-projects" }, input, callbacks)
 end
 
 --- AWS codebuild list-shared-report-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_shared_report_groups(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-shared-report-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_shared_report_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-shared-report-groups" }, input, callbacks)
 end
 
 --- AWS codebuild list-source-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_source_credentials(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "list-source-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_source_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "list-source-credentials" }, input, callbacks)
 end
 
 --- AWS codebuild put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS codebuild retry-build operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retry_build(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "retry-build" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retry_build(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "retry-build" }, input, callbacks)
 end
 
 --- AWS codebuild retry-build-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retry_build_batch(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "retry-build-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retry_build_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "retry-build-batch" }, input, callbacks)
 end
 
 --- AWS codebuild start-build operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_build(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "start-build" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_build(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "start-build" }, input, callbacks)
 end
 
 --- AWS codebuild start-build-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_build_batch(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "start-build-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_build_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "start-build-batch" }, input, callbacks)
 end
 
 --- AWS codebuild start-command-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_command_execution(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "start-command-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_command_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "start-command-execution" }, input, callbacks)
 end
 
 --- AWS codebuild start-sandbox operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_sandbox(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "start-sandbox" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_sandbox(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "start-sandbox" }, input, callbacks)
 end
 
 --- AWS codebuild start-sandbox-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_sandbox_connection(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "start-sandbox-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_sandbox_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "start-sandbox-connection" }, input, callbacks)
 end
 
 --- AWS codebuild stop-build operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_build(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "stop-build" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_build(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "stop-build" }, input, callbacks)
 end
 
 --- AWS codebuild stop-build-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_build_batch(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "stop-build-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_build_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "stop-build-batch" }, input, callbacks)
 end
 
 --- AWS codebuild stop-sandbox operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_sandbox(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "stop-sandbox" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_sandbox(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "stop-sandbox" }, input, callbacks)
 end
 
 --- AWS codebuild update-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_fleet(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "update-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "update-fleet" }, input, callbacks)
 end
 
 --- AWS codebuild update-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_project(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "update-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "update-project" }, input, callbacks)
 end
 
 --- AWS codebuild update-project-visibility operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_project_visibility(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "update-project-visibility" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_project_visibility(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "update-project-visibility" }, input, callbacks)
 end
 
 --- AWS codebuild update-report-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_report_group(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "update-report-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_report_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "update-report-group" }, input, callbacks)
 end
 
 --- AWS codebuild update-webhook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_webhook(input)
-	return common.execute_aws_command_skeleton({ "codebuild", "update-webhook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_webhook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codebuild", "update-webhook" }, input, callbacks)
 end
 
 return M

@@ -8,226 +8,258 @@ local M = {}
 
 --- AWS ssm-incidents batch-get-incident-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_incident_findings(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "batch-get-incident-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_incident_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "batch-get-incident-findings" }, input, callbacks)
 end
 
 --- AWS ssm-incidents create-replication-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_replication_set(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-replication-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_replication_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-replication-set" }, input, callbacks)
 end
 
 --- AWS ssm-incidents create-response-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_response_plan(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-response-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_response_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-response-plan" }, input, callbacks)
 end
 
 --- AWS ssm-incidents create-timeline-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_timeline_event(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-timeline-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_timeline_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-timeline-event" }, input, callbacks)
 end
 
 --- AWS ssm-incidents delete-incident-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_incident_record(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-incident-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_incident_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-incident-record" }, input, callbacks)
 end
 
 --- AWS ssm-incidents delete-replication-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_replication_set(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-replication-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_replication_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-replication-set" }, input, callbacks)
 end
 
 --- AWS ssm-incidents delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS ssm-incidents delete-response-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_response_plan(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-response-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_response_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-response-plan" }, input, callbacks)
 end
 
 --- AWS ssm-incidents delete-timeline-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_timeline_event(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-timeline-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_timeline_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-timeline-event" }, input, callbacks)
 end
 
 --- AWS ssm-incidents get-incident-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_incident_record(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-incident-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_incident_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-incident-record" }, input, callbacks)
 end
 
 --- AWS ssm-incidents get-replication-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_replication_set(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-replication-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_replication_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-replication-set" }, input, callbacks)
 end
 
 --- AWS ssm-incidents get-resource-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policies(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-resource-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-resource-policies" }, input, callbacks)
 end
 
 --- AWS ssm-incidents get-response-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_response_plan(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-response-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_response_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-response-plan" }, input, callbacks)
 end
 
 --- AWS ssm-incidents get-timeline-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_timeline_event(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-timeline-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_timeline_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-timeline-event" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-incident-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_incident_findings(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_incident_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-findings" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-incident-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_incident_records(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_incident_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-records" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-related-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_related_items(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-related-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_related_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-related-items" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-replication-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_replication_sets(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-replication-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_replication_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-replication-sets" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-response-plans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_response_plans(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-response-plans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_response_plans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-response-plans" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ssm-incidents list-timeline-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_timeline_events(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-timeline-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_timeline_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-timeline-events" }, input, callbacks)
 end
 
 --- AWS ssm-incidents put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS ssm-incidents start-incident operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_incident(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "start-incident" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_incident(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "start-incident" }, input, callbacks)
 end
 
 --- AWS ssm-incidents tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ssm-incidents untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-deletion-protection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_deletion_protection(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-deletion-protection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_deletion_protection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-deletion-protection" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-incident-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_incident_record(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-incident-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_incident_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-incident-record" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-related-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_related_items(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-related-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_related_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-related-items" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-replication-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_replication_set(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-replication-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_replication_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-replication-set" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-response-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_response_plan(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-response-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_response_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-response-plan" }, input, callbacks)
 end
 
 --- AWS ssm-incidents update-timeline-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_timeline_event(input)
-	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-timeline-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_timeline_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-timeline-event" }, input, callbacks)
 end
 
 --- AWS ssm-incidents wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "ssm-incidents", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "ssm-incidents", "wait" }, input, callbacks)
 end
 
 return M

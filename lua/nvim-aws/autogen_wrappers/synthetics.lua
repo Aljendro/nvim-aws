@@ -8,149 +8,170 @@ local M = {}
 
 --- AWS synthetics associate-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_resource(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "associate-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "associate-resource" }, input, callbacks)
 end
 
 --- AWS synthetics create-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "create-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "create-canary" }, input, callbacks)
 end
 
 --- AWS synthetics create-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "create-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "create-group" }, input, callbacks)
 end
 
 --- AWS synthetics delete-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "delete-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "delete-canary" }, input, callbacks)
 end
 
 --- AWS synthetics delete-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "delete-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "delete-group" }, input, callbacks)
 end
 
 --- AWS synthetics describe-canaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_canaries(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "describe-canaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_canaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "describe-canaries" }, input, callbacks)
 end
 
 --- AWS synthetics describe-canaries-last-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_canaries_last_run(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "describe-canaries-last-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_canaries_last_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "describe-canaries-last-run" }, input, callbacks)
 end
 
 --- AWS synthetics describe-runtime-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_runtime_versions(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "describe-runtime-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_runtime_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "describe-runtime-versions" }, input, callbacks)
 end
 
 --- AWS synthetics disassociate-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_resource(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "disassociate-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "disassociate-resource" }, input, callbacks)
 end
 
 --- AWS synthetics get-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "get-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "get-canary" }, input, callbacks)
 end
 
 --- AWS synthetics get-canary-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_canary_runs(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "get-canary-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_canary_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "get-canary-runs" }, input, callbacks)
 end
 
 --- AWS synthetics get-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "get-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "get-group" }, input, callbacks)
 end
 
 --- AWS synthetics list-associated-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_groups(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "list-associated-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "list-associated-groups" }, input, callbacks)
 end
 
 --- AWS synthetics list-group-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_group_resources(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "list-group-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_group_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "list-group-resources" }, input, callbacks)
 end
 
 --- AWS synthetics list-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_groups(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "list-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "list-groups" }, input, callbacks)
 end
 
 --- AWS synthetics list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS synthetics start-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "start-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "start-canary" }, input, callbacks)
 end
 
 --- AWS synthetics stop-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "stop-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "stop-canary" }, input, callbacks)
 end
 
 --- AWS synthetics tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "tag-resource" }, input, callbacks)
 end
 
 --- AWS synthetics untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "untag-resource" }, input, callbacks)
 end
 
 --- AWS synthetics update-canary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_canary(input)
-	return common.execute_aws_command_skeleton({ "synthetics", "update-canary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_canary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "synthetics", "update-canary" }, input, callbacks)
 end
 
 return M

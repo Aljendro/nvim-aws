@@ -8,114 +8,130 @@ local M = {}
 
 --- AWS workspaces-thin-client create-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_environment(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "create-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "create-environment" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client delete-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_device(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "delete-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "delete-device" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client delete-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_environment(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "delete-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "delete-environment" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client deregister-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_device(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "deregister-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "deregister-device" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client get-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-device" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client get-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_environment(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-environment" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client get-software-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_software_set(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-software-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_software_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "get-software-set" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client list-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-devices" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client list-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_environments(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-environments" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client list-software-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_software_sets(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-software-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_software_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-software-sets" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "tag-resource" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "untag-resource" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client update-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_device(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-device" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client update-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_environment(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-environment" }, input, callbacks)
 end
 
 --- AWS workspaces-thin-client update-software-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_software_set(input)
-	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-software-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_software_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workspaces-thin-client", "update-software-set" }, input, callbacks)
 end
 
 return M

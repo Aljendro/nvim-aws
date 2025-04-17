@@ -8,590 +8,674 @@ local M = {}
 
 --- AWS cleanrooms batch-get-collaboration-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_collaboration_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-collaboration-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_collaboration_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-collaboration-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms batch-get-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_schema(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-schema" }, input, callbacks)
 end
 
 --- AWS cleanrooms batch-get-schema-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_schema_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-schema-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_schema_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "batch-get-schema-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-collaboration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_collaboration(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-collaboration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_collaboration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-collaboration" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-configured-audience-model-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configured_audience_model_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-audience-model-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configured_audience_model_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-audience-model-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-configured-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configured_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configured_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-configured-table-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configured_table_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configured_table_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-configured-table-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configured_table_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configured_table_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-configured-table-association-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configured_table_association_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-association-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configured_table_association_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-configured-table-association-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-id-mapping-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_id_mapping_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-id-mapping-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_id_mapping_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-id-mapping-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-id-namespace-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_id_namespace_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-id-namespace-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_id_namespace_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-id-namespace-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_membership(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-membership" }, input, callbacks)
 end
 
 --- AWS cleanrooms create-privacy-budget-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_privacy_budget_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "create-privacy-budget-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_privacy_budget_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "create-privacy-budget-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-collaboration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_collaboration(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-collaboration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_collaboration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-collaboration" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-configured-audience-model-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configured_audience_model_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-audience-model-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configured_audience_model_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-audience-model-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-configured-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configured_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configured_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-configured-table-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configured_table_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configured_table_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-configured-table-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configured_table_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configured_table_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-configured-table-association-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configured_table_association_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-association-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configured_table_association_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-configured-table-association-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-id-mapping-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_id_mapping_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-id-mapping-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_id_mapping_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-id-mapping-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-id-namespace-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_id_namespace_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-id-namespace-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_id_namespace_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-id-namespace-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_member(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-member" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_membership(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-membership" }, input, callbacks)
 end
 
 --- AWS cleanrooms delete-privacy-budget-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_privacy_budget_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-privacy-budget-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_privacy_budget_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "delete-privacy-budget-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-collaboration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_collaboration(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_collaboration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-collaboration-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_collaboration_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_collaboration_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-collaboration-configured-audience-model-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_collaboration_configured_audience_model_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-configured-audience-model-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_collaboration_configured_audience_model_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-configured-audience-model-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-collaboration-id-namespace-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_collaboration_id_namespace_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-id-namespace-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_collaboration_id_namespace_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-id-namespace-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-collaboration-privacy-budget-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_collaboration_privacy_budget_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-privacy-budget-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_collaboration_privacy_budget_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-collaboration-privacy-budget-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-configured-audience-model-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configured_audience_model_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-audience-model-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configured_audience_model_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-audience-model-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-configured-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configured_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configured_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-configured-table-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configured_table_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configured_table_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-configured-table-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configured_table_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configured_table_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-configured-table-association-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configured_table_association_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-association-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configured_table_association_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-configured-table-association-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-id-mapping-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_id_mapping_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-id-mapping-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_id_mapping_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-id-mapping-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-id-namespace-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_id_namespace_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-id-namespace-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_id_namespace_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-id-namespace-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_membership(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-membership" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-privacy-budget-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_privacy_budget_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-privacy-budget-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_privacy_budget_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-privacy-budget-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-protected-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_protected_job(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-protected-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_protected_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-protected-job" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-protected-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_protected_query(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-protected-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_protected_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-protected-query" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-schema" }, input, callbacks)
 end
 
 --- AWS cleanrooms get-schema-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "get-schema-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "get-schema-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-analysis-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_analysis_templates(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-analysis-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_analysis_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-analysis-templates" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaboration-analysis-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaboration_analysis_templates(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-analysis-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaboration_analysis_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-analysis-templates" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaboration-configured-audience-model-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaboration_configured_audience_model_associations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-configured-audience-model-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaboration_configured_audience_model_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-configured-audience-model-associations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaboration-id-namespace-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaboration_id_namespace_associations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-id-namespace-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaboration_id_namespace_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-id-namespace-associations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaboration-privacy-budget-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaboration_privacy_budget_templates(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-privacy-budget-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaboration_privacy_budget_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-privacy-budget-templates" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaboration-privacy-budgets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaboration_privacy_budgets(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-privacy-budgets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaboration_privacy_budgets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaboration-privacy-budgets" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-collaborations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collaborations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaborations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collaborations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-collaborations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-configured-audience-model-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configured_audience_model_associations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-audience-model-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configured_audience_model_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-audience-model-associations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-configured-table-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configured_table_associations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-table-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configured_table_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-table-associations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-configured-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configured_tables(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configured_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-configured-tables" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-id-mapping-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_id_mapping_tables(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-id-mapping-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_id_mapping_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-id-mapping-tables" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-id-namespace-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_id_namespace_associations(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-id-namespace-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_id_namespace_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-id-namespace-associations" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_members(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-members" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-memberships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_memberships(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-memberships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_memberships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-memberships" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-privacy-budget-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_privacy_budget_templates(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-privacy-budget-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_privacy_budget_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-privacy-budget-templates" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-privacy-budgets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_privacy_budgets(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-privacy-budgets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_privacy_budgets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-privacy-budgets" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-protected-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_protected_jobs(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-protected-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_protected_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-protected-jobs" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-protected-queries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_protected_queries(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-protected-queries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_protected_queries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-protected-queries" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-schemas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schemas(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-schemas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schemas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-schemas" }, input, callbacks)
 end
 
 --- AWS cleanrooms list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS cleanrooms populate-id-mapping-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.populate_id_mapping_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "populate-id-mapping-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.populate_id_mapping_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "populate-id-mapping-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms preview-privacy-impact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.preview_privacy_impact(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "preview-privacy-impact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.preview_privacy_impact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "preview-privacy-impact" }, input, callbacks)
 end
 
 --- AWS cleanrooms start-protected-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_protected_job(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "start-protected-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_protected_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "start-protected-job" }, input, callbacks)
 end
 
 --- AWS cleanrooms start-protected-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_protected_query(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "start-protected-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_protected_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "start-protected-query" }, input, callbacks)
 end
 
 --- AWS cleanrooms tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "tag-resource" }, input, callbacks)
 end
 
 --- AWS cleanrooms untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "untag-resource" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-analysis-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_analysis_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-analysis-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_analysis_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-analysis-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-collaboration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_collaboration(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-collaboration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_collaboration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-collaboration" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-configured-audience-model-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configured_audience_model_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-audience-model-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configured_audience_model_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-audience-model-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-configured-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configured_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configured_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-configured-table-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configured_table_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configured_table_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-configured-table-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configured_table_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configured_table_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-configured-table-association-analysis-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configured_table_association_analysis_rule(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-association-analysis-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configured_table_association_analysis_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-configured-table-association-analysis-rule" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-id-mapping-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_id_mapping_table(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-id-mapping-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_id_mapping_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-id-mapping-table" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-id-namespace-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_id_namespace_association(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-id-namespace-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_id_namespace_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-id-namespace-association" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_membership(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-membership" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-privacy-budget-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_privacy_budget_template(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-privacy-budget-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_privacy_budget_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-privacy-budget-template" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-protected-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_protected_job(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-protected-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_protected_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-protected-job" }, input, callbacks)
 end
 
 --- AWS cleanrooms update-protected-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_protected_query(input)
-	return common.execute_aws_command_skeleton({ "cleanrooms", "update-protected-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_protected_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cleanrooms", "update-protected-query" }, input, callbacks)
 end
 
 return M

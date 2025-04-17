@@ -8,100 +8,114 @@ local M = {}
 
 --- AWS serverlessrepo create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-application" }, input, callbacks)
 end
 
 --- AWS serverlessrepo create-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application_version(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-application-version" }, input, callbacks)
 end
 
 --- AWS serverlessrepo create-cloud-formation-change-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cloud_formation_change_set(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-cloud-formation-change-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cloud_formation_change_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-cloud-formation-change-set" }, input, callbacks)
 end
 
 --- AWS serverlessrepo create-cloud-formation-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cloud_formation_template(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-cloud-formation-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cloud_formation_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "create-cloud-formation-template" }, input, callbacks)
 end
 
 --- AWS serverlessrepo delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "delete-application" }, input, callbacks)
 end
 
 --- AWS serverlessrepo get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-application" }, input, callbacks)
 end
 
 --- AWS serverlessrepo get-application-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application_policy(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-application-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-application-policy" }, input, callbacks)
 end
 
 --- AWS serverlessrepo get-cloud-formation-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cloud_formation_template(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-cloud-formation-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cloud_formation_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "get-cloud-formation-template" }, input, callbacks)
 end
 
 --- AWS serverlessrepo list-application-dependencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_dependencies(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-application-dependencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_dependencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-application-dependencies" }, input, callbacks)
 end
 
 --- AWS serverlessrepo list-application-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_versions(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-application-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-application-versions" }, input, callbacks)
 end
 
 --- AWS serverlessrepo list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "list-applications" }, input, callbacks)
 end
 
 --- AWS serverlessrepo put-application-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_application_policy(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "put-application-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_application_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "put-application-policy" }, input, callbacks)
 end
 
 --- AWS serverlessrepo unshare-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unshare_application(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "unshare-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unshare_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "unshare-application" }, input, callbacks)
 end
 
 --- AWS serverlessrepo update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "serverlessrepo", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "serverlessrepo", "update-application" }, input, callbacks)
 end
 
 return M

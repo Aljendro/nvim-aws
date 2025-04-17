@@ -8,114 +8,130 @@ local M = {}
 
 --- AWS chime-sdk-meetings batch-create-attendee operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_create_attendee(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "batch-create-attendee" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_create_attendee(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "batch-create-attendee" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings batch-update-attendee-capabilities-except operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_attendee_capabilities_except(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "batch-update-attendee-capabilities-except" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_attendee_capabilities_except(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "batch-update-attendee-capabilities-except" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings create-attendee operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_attendee(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-attendee" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_attendee(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-attendee" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings create-meeting operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_meeting(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-meeting" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_meeting(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-meeting" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings create-meeting-with-attendees operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_meeting_with_attendees(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-meeting-with-attendees" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_meeting_with_attendees(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "create-meeting-with-attendees" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings delete-attendee operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_attendee(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "delete-attendee" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_attendee(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "delete-attendee" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings delete-meeting operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_meeting(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "delete-meeting" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_meeting(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "delete-meeting" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings get-attendee operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attendee(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "get-attendee" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attendee(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "get-attendee" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings get-meeting operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_meeting(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "get-meeting" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_meeting(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "get-meeting" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings list-attendees operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_attendees(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "list-attendees" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_attendees(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "list-attendees" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings start-meeting-transcription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_meeting_transcription(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "start-meeting-transcription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_meeting_transcription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "start-meeting-transcription" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings stop-meeting-transcription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_meeting_transcription(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "stop-meeting-transcription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_meeting_transcription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "stop-meeting-transcription" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "tag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "untag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-meetings update-attendee-capabilities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_attendee_capabilities(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "update-attendee-capabilities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_attendee_capabilities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-meetings", "update-attendee-capabilities" }, input, callbacks)
 end
 
 return M

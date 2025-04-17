@@ -8,751 +8,858 @@ local M = {}
 
 --- AWS iotwireless associate-aws-account-with-partner-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_aws_account_with_partner_account(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-aws-account-with-partner-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_aws_account_with_partner_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-aws-account-with-partner-account" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-multicast-group-with-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_multicast_group_with_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-multicast-group-with-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_multicast_group_with_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-multicast-group-with-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-wireless-device-with-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_wireless_device_with_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_wireless_device_with_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-wireless-device-with-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_wireless_device_with_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_wireless_device_with_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-wireless-device-with-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_wireless_device_with_thing(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_wireless_device_with_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-thing" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-wireless-gateway-with-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_wireless_gateway_with_certificate(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_wireless_gateway_with_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-certificate" }, input, callbacks)
 end
 
 --- AWS iotwireless associate-wireless-gateway-with-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_wireless_gateway_with_thing(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_wireless_gateway_with_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-thing" }, input, callbacks)
 end
 
 --- AWS iotwireless cancel-multicast-group-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_multicast_group_session(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "cancel-multicast-group-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_multicast_group_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "cancel-multicast-group-session" }, input, callbacks)
 end
 
 --- AWS iotwireless create-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_destination(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-destination" }, input, callbacks)
 end
 
 --- AWS iotwireless create-device-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_device_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-device-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_device_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-device-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless create-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless create-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless create-network-analyzer-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_network_analyzer_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-network-analyzer-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_network_analyzer_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-network-analyzer-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless create-service-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_service_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-service-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_service_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-service-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless create-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless create-wireless-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_wireless_gateway(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_wireless_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway" }, input, callbacks)
 end
 
 --- AWS iotwireless create-wireless-gateway-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_wireless_gateway_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_wireless_gateway_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task" }, input, callbacks)
 end
 
 --- AWS iotwireless create-wireless-gateway-task-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_wireless_gateway_task_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task-definition" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_destination(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-destination" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-device-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_device_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-device-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_device_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-device-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-network-analyzer-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_network_analyzer_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-network-analyzer-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_network_analyzer_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-network-analyzer-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-queued-messages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queued_messages(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-queued-messages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queued_messages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-queued-messages" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-service-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_service_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-service-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_service_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-service-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-wireless-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_wireless_gateway(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_wireless_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-wireless-gateway-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_wireless_gateway_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_wireless_gateway_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task" }, input, callbacks)
 end
 
 --- AWS iotwireless delete-wireless-gateway-task-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_wireless_gateway_task_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task-definition" }, input, callbacks)
 end
 
 --- AWS iotwireless deregister-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "deregister-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "deregister-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-aws-account-from-partner-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_aws_account_from_partner_account(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-aws-account-from-partner-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_aws_account_from_partner_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-aws-account-from-partner-account" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-multicast-group-from-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_multicast_group_from_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-multicast-group-from-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_multicast_group_from_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-multicast-group-from-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_wireless_device_from_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_wireless_device_from_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_wireless_device_from_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_wireless_device_from_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_wireless_device_from_thing(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_wireless_device_from_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-thing" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-wireless-gateway-from-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_wireless_gateway_from_certificate(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_wireless_gateway_from_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-certificate" }, input, callbacks)
 end
 
 --- AWS iotwireless disassociate-wireless-gateway-from-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_wireless_gateway_from_thing(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_wireless_gateway_from_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-thing" }, input, callbacks)
 end
 
 --- AWS iotwireless get-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_destination(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-destination" }, input, callbacks)
 end
 
 --- AWS iotwireless get-device-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-device-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-device-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless get-event-configuration-by-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_configuration_by_resource_types(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-event-configuration-by-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_configuration_by_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-event-configuration-by-resource-types" }, input, callbacks)
 end
 
 --- AWS iotwireless get-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless get-log-levels-by-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_log_levels_by_resource_types(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-log-levels-by-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_log_levels_by_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-log-levels-by-resource-types" }, input, callbacks)
 end
 
 --- AWS iotwireless get-metric-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metric_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-metric-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metric_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-metric-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless get-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metrics(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-metrics" }, input, callbacks)
 end
 
 --- AWS iotwireless get-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless get-multicast-group-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multicast_group_session(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multicast_group_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group-session" }, input, callbacks)
 end
 
 --- AWS iotwireless get-network-analyzer-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_network_analyzer_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-network-analyzer-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_network_analyzer_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-network-analyzer-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless get-partner-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_partner_account(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-partner-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_partner_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-partner-account" }, input, callbacks)
 end
 
 --- AWS iotwireless get-position-estimate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_position_estimate(input)
-	return common.execute_aws_command({ "iotwireless", "get-position-estimate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_position_estimate(input, callbacks)
+	return common.execute_aws_command({ "iotwireless", "get-position-estimate" }, input, callbacks)
 end
 
 --- AWS iotwireless get-resource-event-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_event_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-event-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_event_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-event-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless get-resource-log-level operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_log_level(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-log-level" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_log_level(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-log-level" }, input, callbacks)
 end
 
 --- AWS iotwireless get-resource-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_position(input)
-	return common.execute_aws_command({ "iotwireless", "get-resource-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_position(input, callbacks)
+	return common.execute_aws_command({ "iotwireless", "get-resource-position" }, input, callbacks)
 end
 
 --- AWS iotwireless get-service-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service_endpoint(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-endpoint" }, input, callbacks)
 end
 
 --- AWS iotwireless get-service-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service_profile(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-profile" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-device-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_device_statistics(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_device_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-statistics" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway_certificate(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-certificate" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway-firmware-information operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway_firmware_information(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-firmware-information" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway_firmware_information(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-firmware-information" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway_statistics(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-statistics" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task" }, input, callbacks)
 end
 
 --- AWS iotwireless get-wireless-gateway-task-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_wireless_gateway_task_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task-definition" }, input, callbacks)
 end
 
 --- AWS iotwireless list-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_destinations(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-destinations" }, input, callbacks)
 end
 
 --- AWS iotwireless list-device-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_profiles(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-device-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-device-profiles" }, input, callbacks)
 end
 
 --- AWS iotwireless list-devices-for-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices_for_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-devices-for-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices_for_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-devices-for-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless list-event-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_configurations(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-event-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-event-configurations" }, input, callbacks)
 end
 
 --- AWS iotwireless list-fuota-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fuota_tasks(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-fuota-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fuota_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-fuota-tasks" }, input, callbacks)
 end
 
 --- AWS iotwireless list-multicast-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_multicast_groups(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_multicast_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups" }, input, callbacks)
 end
 
 --- AWS iotwireless list-multicast-groups-by-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_multicast_groups_by_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups-by-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_multicast_groups_by_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups-by-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless list-network-analyzer-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_network_analyzer_configurations(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-network-analyzer-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_network_analyzer_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-network-analyzer-configurations" }, input, callbacks)
 end
 
 --- AWS iotwireless list-partner-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_partner_accounts(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-partner-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_partner_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-partner-accounts" }, input, callbacks)
 end
 
 --- AWS iotwireless list-queued-messages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queued_messages(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-queued-messages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queued_messages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-queued-messages" }, input, callbacks)
 end
 
 --- AWS iotwireless list-service-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_profiles(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-service-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-service-profiles" }, input, callbacks)
 end
 
 --- AWS iotwireless list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS iotwireless list-wireless-device-import-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_wireless_device_import_tasks(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-device-import-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_wireless_device_import_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-device-import-tasks" }, input, callbacks)
 end
 
 --- AWS iotwireless list-wireless-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_wireless_devices(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_wireless_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-devices" }, input, callbacks)
 end
 
 --- AWS iotwireless list-wireless-gateway-task-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_wireless_gateway_task_definitions(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateway-task-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_wireless_gateway_task_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateway-task-definitions" }, input, callbacks)
 end
 
 --- AWS iotwireless list-wireless-gateways operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_wireless_gateways(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateways" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_wireless_gateways(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateways" }, input, callbacks)
 end
 
 --- AWS iotwireless put-resource-log-level operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_log_level(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "put-resource-log-level" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_log_level(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "put-resource-log-level" }, input, callbacks)
 end
 
 --- AWS iotwireless reset-all-resource-log-levels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_all_resource_log_levels(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "reset-all-resource-log-levels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_all_resource_log_levels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "reset-all-resource-log-levels" }, input, callbacks)
 end
 
 --- AWS iotwireless reset-resource-log-level operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_resource_log_level(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "reset-resource-log-level" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_resource_log_level(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "reset-resource-log-level" }, input, callbacks)
 end
 
 --- AWS iotwireless send-data-to-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_data_to_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_data_to_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless send-data-to-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_data_to_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_data_to_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless start-bulk-associate-wireless-device-with-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_bulk_associate_wireless_device_with_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-associate-wireless-device-with-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_bulk_associate_wireless_device_with_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-associate-wireless-device-with-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless start-bulk-disassociate-wireless-device-from-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_bulk_disassociate_wireless_device_from_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-disassociate-wireless-device-from-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_bulk_disassociate_wireless_device_from_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-disassociate-wireless-device-from-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless start-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless start-multicast-group-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_multicast_group_session(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-multicast-group-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_multicast_group_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-multicast-group-session" }, input, callbacks)
 end
 
 --- AWS iotwireless start-single-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_single_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-single-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_single_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-single-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless start-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "start-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "tag-resource" }, input, callbacks)
 end
 
 --- AWS iotwireless test-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "test-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "test-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "untag-resource" }, input, callbacks)
 end
 
 --- AWS iotwireless update-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_destination(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-destination" }, input, callbacks)
 end
 
 --- AWS iotwireless update-event-configuration-by-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_configuration_by_resource_types(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-event-configuration-by-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_configuration_by_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-event-configuration-by-resource-types" }, input, callbacks)
 end
 
 --- AWS iotwireless update-fuota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_fuota_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-fuota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_fuota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-fuota-task" }, input, callbacks)
 end
 
 --- AWS iotwireless update-log-levels-by-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_log_levels_by_resource_types(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-log-levels-by-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_log_levels_by_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-log-levels-by-resource-types" }, input, callbacks)
 end
 
 --- AWS iotwireless update-metric-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_metric_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-metric-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_metric_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-metric-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless update-multicast-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_multicast_group(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-multicast-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_multicast_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-multicast-group" }, input, callbacks)
 end
 
 --- AWS iotwireless update-network-analyzer-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_network_analyzer_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-network-analyzer-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_network_analyzer_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-network-analyzer-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless update-partner-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_partner_account(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-partner-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_partner_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-partner-account" }, input, callbacks)
 end
 
 --- AWS iotwireless update-resource-event-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_event_configuration(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-event-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_event_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-event-configuration" }, input, callbacks)
 end
 
 --- AWS iotwireless update-resource-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_position(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-position" }, input, callbacks)
 end
 
 --- AWS iotwireless update-wireless-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_wireless_device(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_wireless_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device" }, input, callbacks)
 end
 
 --- AWS iotwireless update-wireless-device-import-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_wireless_device_import_task(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device-import-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_wireless_device_import_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device-import-task" }, input, callbacks)
 end
 
 --- AWS iotwireless update-wireless-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_wireless_gateway(input)
-	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_wireless_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-gateway" }, input, callbacks)
 end
 
 return M

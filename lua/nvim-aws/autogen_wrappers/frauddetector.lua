@@ -8,513 +8,586 @@ local M = {}
 
 --- AWS frauddetector batch-create-variable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_create_variable(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "batch-create-variable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_create_variable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "batch-create-variable" }, input, callbacks)
 end
 
 --- AWS frauddetector batch-get-variable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_variable(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "batch-get-variable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_variable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "batch-get-variable" }, input, callbacks)
 end
 
 --- AWS frauddetector cancel-batch-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_batch_import_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "cancel-batch-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_batch_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "cancel-batch-import-job" }, input, callbacks)
 end
 
 --- AWS frauddetector cancel-batch-prediction-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_batch_prediction_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "cancel-batch-prediction-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_batch_prediction_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "cancel-batch-prediction-job" }, input, callbacks)
 end
 
 --- AWS frauddetector create-batch-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_batch_import_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-batch-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_batch_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-batch-import-job" }, input, callbacks)
 end
 
 --- AWS frauddetector create-batch-prediction-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_batch_prediction_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-batch-prediction-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_batch_prediction_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-batch-prediction-job" }, input, callbacks)
 end
 
 --- AWS frauddetector create-detector-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_detector_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-detector-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_detector_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-detector-version" }, input, callbacks)
 end
 
 --- AWS frauddetector create-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_list(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-list" }, input, callbacks)
 end
 
 --- AWS frauddetector create-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_model(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-model" }, input, callbacks)
 end
 
 --- AWS frauddetector create-model-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_model_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-model-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_model_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-model-version" }, input, callbacks)
 end
 
 --- AWS frauddetector create-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_rule(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-rule" }, input, callbacks)
 end
 
 --- AWS frauddetector create-variable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_variable(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "create-variable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_variable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "create-variable" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-batch-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_batch_import_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-batch-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_batch_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-batch-import-job" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-batch-prediction-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_batch_prediction_job(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-batch-prediction-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_batch_prediction_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-batch-prediction-job" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_detector(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-detector" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-detector-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_detector_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-detector-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_detector_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-detector-version" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-entity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_entity_type(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-entity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_entity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-entity-type" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-event" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-event-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_type(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-event-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-event-type" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-events-by-event-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_events_by_event_type(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-events-by-event-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_events_by_event_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-events-by-event-type" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-external-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_external_model(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-external-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_external_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-external-model" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-label operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_label(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-label" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_label(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-label" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_list(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-list" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_model(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-model" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-model-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_model_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-model-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_model_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-model-version" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-outcome operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_outcome(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-outcome" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_outcome(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-outcome" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rule(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-rule" }, input, callbacks)
 end
 
 --- AWS frauddetector delete-variable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_variable(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "delete-variable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_variable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "delete-variable" }, input, callbacks)
 end
 
 --- AWS frauddetector describe-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_detector(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "describe-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "describe-detector" }, input, callbacks)
 end
 
 --- AWS frauddetector describe-model-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_model_versions(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "describe-model-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_model_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "describe-model-versions" }, input, callbacks)
 end
 
 --- AWS frauddetector get-batch-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_batch_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-batch-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_batch_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-batch-import-jobs" }, input, callbacks)
 end
 
 --- AWS frauddetector get-batch-prediction-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_batch_prediction_jobs(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-batch-prediction-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_batch_prediction_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-batch-prediction-jobs" }, input, callbacks)
 end
 
 --- AWS frauddetector get-delete-events-by-event-type-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_delete_events_by_event_type_status(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-delete-events-by-event-type-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_delete_events_by_event_type_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-delete-events-by-event-type-status" }, input, callbacks)
 end
 
 --- AWS frauddetector get-detector-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_detector_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-detector-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_detector_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-detector-version" }, input, callbacks)
 end
 
 --- AWS frauddetector get-detectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_detectors(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-detectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_detectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-detectors" }, input, callbacks)
 end
 
 --- AWS frauddetector get-entity-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_entity_types(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-entity-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_entity_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-entity-types" }, input, callbacks)
 end
 
 --- AWS frauddetector get-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-event" }, input, callbacks)
 end
 
 --- AWS frauddetector get-event-prediction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_prediction(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-prediction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_prediction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-prediction" }, input, callbacks)
 end
 
 --- AWS frauddetector get-event-prediction-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_prediction_metadata(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-prediction-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_prediction_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-prediction-metadata" }, input, callbacks)
 end
 
 --- AWS frauddetector get-event-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_types(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-event-types" }, input, callbacks)
 end
 
 --- AWS frauddetector get-external-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_external_models(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-external-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_external_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-external-models" }, input, callbacks)
 end
 
 --- AWS frauddetector get-kms-encryption-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_kms_encryption_key(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-kms-encryption-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_kms_encryption_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-kms-encryption-key" }, input, callbacks)
 end
 
 --- AWS frauddetector get-labels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_labels(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-labels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_labels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-labels" }, input, callbacks)
 end
 
 --- AWS frauddetector get-list-elements operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_list_elements(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-list-elements" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_list_elements(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-list-elements" }, input, callbacks)
 end
 
 --- AWS frauddetector get-lists-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lists_metadata(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-lists-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lists_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-lists-metadata" }, input, callbacks)
 end
 
 --- AWS frauddetector get-model-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_model_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-model-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_model_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-model-version" }, input, callbacks)
 end
 
 --- AWS frauddetector get-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_models(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-models" }, input, callbacks)
 end
 
 --- AWS frauddetector get-outcomes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_outcomes(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-outcomes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_outcomes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-outcomes" }, input, callbacks)
 end
 
 --- AWS frauddetector get-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_rules(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-rules" }, input, callbacks)
 end
 
 --- AWS frauddetector get-variables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_variables(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "get-variables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_variables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "get-variables" }, input, callbacks)
 end
 
 --- AWS frauddetector list-event-predictions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_predictions(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "list-event-predictions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_predictions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "list-event-predictions" }, input, callbacks)
 end
 
 --- AWS frauddetector list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS frauddetector put-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_detector(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-detector" }, input, callbacks)
 end
 
 --- AWS frauddetector put-entity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_entity_type(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-entity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_entity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-entity-type" }, input, callbacks)
 end
 
 --- AWS frauddetector put-event-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_event_type(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-event-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_event_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-event-type" }, input, callbacks)
 end
 
 --- AWS frauddetector put-external-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_external_model(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-external-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_external_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-external-model" }, input, callbacks)
 end
 
 --- AWS frauddetector put-kms-encryption-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_kms_encryption_key(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-kms-encryption-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_kms_encryption_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-kms-encryption-key" }, input, callbacks)
 end
 
 --- AWS frauddetector put-label operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_label(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-label" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_label(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-label" }, input, callbacks)
 end
 
 --- AWS frauddetector put-outcome operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_outcome(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "put-outcome" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_outcome(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "put-outcome" }, input, callbacks)
 end
 
 --- AWS frauddetector send-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_event(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "send-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "send-event" }, input, callbacks)
 end
 
 --- AWS frauddetector tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "tag-resource" }, input, callbacks)
 end
 
 --- AWS frauddetector untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "untag-resource" }, input, callbacks)
 end
 
 --- AWS frauddetector update-detector-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_detector_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_detector_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version" }, input, callbacks)
 end
 
 --- AWS frauddetector update-detector-version-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_detector_version_metadata(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_detector_version_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version-metadata" }, input, callbacks)
 end
 
 --- AWS frauddetector update-detector-version-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_detector_version_status(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_detector_version_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-detector-version-status" }, input, callbacks)
 end
 
 --- AWS frauddetector update-event-label operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_label(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-event-label" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_label(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-event-label" }, input, callbacks)
 end
 
 --- AWS frauddetector update-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_list(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-list" }, input, callbacks)
 end
 
 --- AWS frauddetector update-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_model(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-model" }, input, callbacks)
 end
 
 --- AWS frauddetector update-model-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_model_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-model-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_model_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-model-version" }, input, callbacks)
 end
 
 --- AWS frauddetector update-model-version-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_model_version_status(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-model-version-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_model_version_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-model-version-status" }, input, callbacks)
 end
 
 --- AWS frauddetector update-rule-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_rule_metadata(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-rule-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_rule_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-rule-metadata" }, input, callbacks)
 end
 
 --- AWS frauddetector update-rule-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_rule_version(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-rule-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_rule_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-rule-version" }, input, callbacks)
 end
 
 --- AWS frauddetector update-variable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_variable(input)
-	return common.execute_aws_command_skeleton({ "frauddetector", "update-variable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_variable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "frauddetector", "update-variable" }, input, callbacks)
 end
 
 return M

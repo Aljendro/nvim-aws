@@ -8,415 +8,474 @@ local M = {}
 
 --- AWS inspector2 associate-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_member(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "associate-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "associate-member" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-get-account-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_account_status(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-account-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_account_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-account-status" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-get-code-snippet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_code_snippet(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-code-snippet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_code_snippet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-code-snippet" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-get-finding-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_finding_details(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-finding-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_finding_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-finding-details" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-get-free-trial-info operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_free_trial_info(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-free-trial-info" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_free_trial_info(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-free-trial-info" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-get-member-ec2-deep-inspection-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_member_ec2_deep_inspection_status(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-member-ec2-deep-inspection-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_member_ec2_deep_inspection_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-get-member-ec2-deep-inspection-status" }, input, callbacks)
 end
 
 --- AWS inspector2 batch-update-member-ec2-deep-inspection-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_member_ec2_deep_inspection_status(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "batch-update-member-ec2-deep-inspection-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_member_ec2_deep_inspection_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "batch-update-member-ec2-deep-inspection-status" }, input, callbacks)
 end
 
 --- AWS inspector2 cancel-findings-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_findings_report(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "cancel-findings-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_findings_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "cancel-findings-report" }, input, callbacks)
 end
 
 --- AWS inspector2 cancel-sbom-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_sbom_export(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "cancel-sbom-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_sbom_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "cancel-sbom-export" }, input, callbacks)
 end
 
 --- AWS inspector2 create-cis-scan-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cis_scan_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "create-cis-scan-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cis_scan_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "create-cis-scan-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 create-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_filter(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "create-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "create-filter" }, input, callbacks)
 end
 
 --- AWS inspector2 create-findings-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_findings_report(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "create-findings-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_findings_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "create-findings-report" }, input, callbacks)
 end
 
 --- AWS inspector2 create-sbom-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_sbom_export(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "create-sbom-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_sbom_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "create-sbom-export" }, input, callbacks)
 end
 
 --- AWS inspector2 delete-cis-scan-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cis_scan_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "delete-cis-scan-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cis_scan_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "delete-cis-scan-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 delete-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_filter(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "delete-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "delete-filter" }, input, callbacks)
 end
 
 --- AWS inspector2 describe-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "describe-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "describe-organization-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 disable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "disable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "disable" }, input, callbacks)
 end
 
 --- AWS inspector2 disable-delegated-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_delegated_admin_account(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "disable-delegated-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_delegated_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "disable-delegated-admin-account" }, input, callbacks)
 end
 
 --- AWS inspector2 disassociate-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "disassociate-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "disassociate-member" }, input, callbacks)
 end
 
 --- AWS inspector2 enable operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "enable" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "enable" }, input, callbacks)
 end
 
 --- AWS inspector2 enable-delegated-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_delegated_admin_account(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "enable-delegated-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_delegated_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "enable-delegated-admin-account" }, input, callbacks)
 end
 
 --- AWS inspector2 get-cis-scan-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cis_scan_report(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-cis-scan-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cis_scan_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-cis-scan-report" }, input, callbacks)
 end
 
 --- AWS inspector2 get-cis-scan-result-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cis_scan_result_details(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-cis-scan-result-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cis_scan_result_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-cis-scan-result-details" }, input, callbacks)
 end
 
 --- AWS inspector2 get-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 get-delegated-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_delegated_admin_account(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-delegated-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_delegated_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-delegated-admin-account" }, input, callbacks)
 end
 
 --- AWS inspector2 get-ec2-deep-inspection-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ec2_deep_inspection_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-ec2-deep-inspection-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ec2_deep_inspection_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-ec2-deep-inspection-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 get-encryption-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_encryption_key(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-encryption-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_encryption_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-encryption-key" }, input, callbacks)
 end
 
 --- AWS inspector2 get-findings-report-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings_report_status(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-findings-report-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings_report_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-findings-report-status" }, input, callbacks)
 end
 
 --- AWS inspector2 get-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_member(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-member" }, input, callbacks)
 end
 
 --- AWS inspector2 get-sbom-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sbom_export(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "get-sbom-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sbom_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "get-sbom-export" }, input, callbacks)
 end
 
 --- AWS inspector2 list-account-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_account_permissions(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-account-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_account_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-account-permissions" }, input, callbacks)
 end
 
 --- AWS inspector2 list-cis-scan-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cis_scan_configurations(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cis_scan_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-configurations" }, input, callbacks)
 end
 
 --- AWS inspector2 list-cis-scan-results-aggregated-by-checks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cis_scan_results_aggregated_by_checks(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-results-aggregated-by-checks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cis_scan_results_aggregated_by_checks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-results-aggregated-by-checks" }, input, callbacks)
 end
 
 --- AWS inspector2 list-cis-scan-results-aggregated-by-target-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cis_scan_results_aggregated_by_target_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-results-aggregated-by-target-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cis_scan_results_aggregated_by_target_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scan-results-aggregated-by-target-resource" }, input, callbacks)
 end
 
 --- AWS inspector2 list-cis-scans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cis_scans(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cis_scans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-cis-scans" }, input, callbacks)
 end
 
 --- AWS inspector2 list-coverage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_coverage(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-coverage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_coverage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-coverage" }, input, callbacks)
 end
 
 --- AWS inspector2 list-coverage-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_coverage_statistics(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-coverage-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_coverage_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-coverage-statistics" }, input, callbacks)
 end
 
 --- AWS inspector2 list-delegated-admin-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_delegated_admin_accounts(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-delegated-admin-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_delegated_admin_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-delegated-admin-accounts" }, input, callbacks)
 end
 
 --- AWS inspector2 list-filters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_filters(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-filters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_filters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-filters" }, input, callbacks)
 end
 
 --- AWS inspector2 list-finding-aggregations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_finding_aggregations(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-finding-aggregations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_finding_aggregations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-finding-aggregations" }, input, callbacks)
 end
 
 --- AWS inspector2 list-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-findings" }, input, callbacks)
 end
 
 --- AWS inspector2 list-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_members(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-members" }, input, callbacks)
 end
 
 --- AWS inspector2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS inspector2 list-usage-totals operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_usage_totals(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "list-usage-totals" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_usage_totals(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "list-usage-totals" }, input, callbacks)
 end
 
 --- AWS inspector2 reset-encryption-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_encryption_key(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "reset-encryption-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_encryption_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "reset-encryption-key" }, input, callbacks)
 end
 
 --- AWS inspector2 search-vulnerabilities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_vulnerabilities(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "search-vulnerabilities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_vulnerabilities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "search-vulnerabilities" }, input, callbacks)
 end
 
 --- AWS inspector2 send-cis-session-health operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_cis_session_health(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "send-cis-session-health" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_cis_session_health(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "send-cis-session-health" }, input, callbacks)
 end
 
 --- AWS inspector2 send-cis-session-telemetry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_cis_session_telemetry(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "send-cis-session-telemetry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_cis_session_telemetry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "send-cis-session-telemetry" }, input, callbacks)
 end
 
 --- AWS inspector2 start-cis-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_cis_session(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "start-cis-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_cis_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "start-cis-session" }, input, callbacks)
 end
 
 --- AWS inspector2 stop-cis-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_cis_session(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "stop-cis-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_cis_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "stop-cis-session" }, input, callbacks)
 end
 
 --- AWS inspector2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS inspector2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS inspector2 update-cis-scan-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_cis_scan_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-cis-scan-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_cis_scan_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-cis-scan-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 update-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 update-ec2-deep-inspection-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ec2_deep_inspection_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-ec2-deep-inspection-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ec2_deep_inspection_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-ec2-deep-inspection-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 update-encryption-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_encryption_key(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-encryption-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_encryption_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-encryption-key" }, input, callbacks)
 end
 
 --- AWS inspector2 update-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_filter(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-filter" }, input, callbacks)
 end
 
 --- AWS inspector2 update-org-ec2-deep-inspection-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_org_ec2_deep_inspection_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-org-ec2-deep-inspection-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_org_ec2_deep_inspection_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-org-ec2-deep-inspection-configuration" }, input, callbacks)
 end
 
 --- AWS inspector2 update-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "inspector2", "update-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "inspector2", "update-organization-configuration" }, input, callbacks)
 end
 
 return M

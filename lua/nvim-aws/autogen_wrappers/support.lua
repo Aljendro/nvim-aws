@@ -8,114 +8,130 @@ local M = {}
 
 --- AWS support add-attachments-to-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_attachments_to_set(input)
-	return common.execute_aws_command_skeleton({ "support", "add-attachments-to-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_attachments_to_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "add-attachments-to-set" }, input, callbacks)
 end
 
 --- AWS support add-communication-to-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_communication_to_case(input)
-	return common.execute_aws_command_skeleton({ "support", "add-communication-to-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_communication_to_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "add-communication-to-case" }, input, callbacks)
 end
 
 --- AWS support create-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_case(input)
-	return common.execute_aws_command_skeleton({ "support", "create-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "create-case" }, input, callbacks)
 end
 
 --- AWS support describe-attachment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_attachment(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-attachment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_attachment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-attachment" }, input, callbacks)
 end
 
 --- AWS support describe-cases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cases(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-cases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-cases" }, input, callbacks)
 end
 
 --- AWS support describe-communications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_communications(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-communications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_communications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-communications" }, input, callbacks)
 end
 
 --- AWS support describe-create-case-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_create_case_options(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-create-case-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_create_case_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-create-case-options" }, input, callbacks)
 end
 
 --- AWS support describe-services operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_services(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-services" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_services(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-services" }, input, callbacks)
 end
 
 --- AWS support describe-severity-levels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_severity_levels(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-severity-levels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_severity_levels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-severity-levels" }, input, callbacks)
 end
 
 --- AWS support describe-supported-languages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_supported_languages(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-supported-languages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_supported_languages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-supported-languages" }, input, callbacks)
 end
 
 --- AWS support describe-trusted-advisor-check-refresh-statuses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trusted_advisor_check_refresh_statuses(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-refresh-statuses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trusted_advisor_check_refresh_statuses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-refresh-statuses" }, input, callbacks)
 end
 
 --- AWS support describe-trusted-advisor-check-result operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trusted_advisor_check_result(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-result" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trusted_advisor_check_result(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-result" }, input, callbacks)
 end
 
 --- AWS support describe-trusted-advisor-check-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trusted_advisor_check_summaries(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trusted_advisor_check_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-summaries" }, input, callbacks)
 end
 
 --- AWS support describe-trusted-advisor-checks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_trusted_advisor_checks(input)
-	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-checks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_trusted_advisor_checks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-checks" }, input, callbacks)
 end
 
 --- AWS support refresh-trusted-advisor-check operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.refresh_trusted_advisor_check(input)
-	return common.execute_aws_command_skeleton({ "support", "refresh-trusted-advisor-check" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.refresh_trusted_advisor_check(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "refresh-trusted-advisor-check" }, input, callbacks)
 end
 
 --- AWS support resolve-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resolve_case(input)
-	return common.execute_aws_command_skeleton({ "support", "resolve-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resolve_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support", "resolve-case" }, input, callbacks)
 end
 
 return M

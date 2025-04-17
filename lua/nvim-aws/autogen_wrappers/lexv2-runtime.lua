@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS lexv2-runtime delete-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_session(input)
-	return common.execute_aws_command_skeleton({ "lexv2-runtime", "delete-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-runtime", "delete-session" }, input, callbacks)
 end
 
 --- AWS lexv2-runtime get-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session(input)
-	return common.execute_aws_command_skeleton({ "lexv2-runtime", "get-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-runtime", "get-session" }, input, callbacks)
 end
 
 --- AWS lexv2-runtime put-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_session(input)
-	return common.execute_aws_command({ "lexv2-runtime", "put-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_session(input, callbacks)
+	return common.execute_aws_command({ "lexv2-runtime", "put-session" }, input, callbacks)
 end
 
 --- AWS lexv2-runtime recognize-text operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.recognize_text(input)
-	return common.execute_aws_command_skeleton({ "lexv2-runtime", "recognize-text" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.recognize_text(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lexv2-runtime", "recognize-text" }, input, callbacks)
 end
 
 --- AWS lexv2-runtime recognize-utterance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.recognize_utterance(input)
-	return common.execute_aws_command({ "lexv2-runtime", "recognize-utterance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.recognize_utterance(input, callbacks)
+	return common.execute_aws_command({ "lexv2-runtime", "recognize-utterance" }, input, callbacks)
 end
 
 return M

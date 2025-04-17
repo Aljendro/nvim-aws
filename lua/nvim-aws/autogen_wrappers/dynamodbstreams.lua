@@ -8,30 +8,34 @@ local M = {}
 
 --- AWS dynamodbstreams describe-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_stream(input)
-	return common.execute_aws_command_skeleton({ "dynamodbstreams", "describe-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "describe-stream" }, input, callbacks)
 end
 
 --- AWS dynamodbstreams get-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_records(input)
-	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-records" }, input, callbacks)
 end
 
 --- AWS dynamodbstreams get-shard-iterator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_shard_iterator(input)
-	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-shard-iterator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_shard_iterator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-shard-iterator" }, input, callbacks)
 end
 
 --- AWS dynamodbstreams list-streams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_streams(input)
-	return common.execute_aws_command_skeleton({ "dynamodbstreams", "list-streams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_streams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "list-streams" }, input, callbacks)
 end
 
 return M

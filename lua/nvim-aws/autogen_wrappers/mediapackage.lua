@@ -8,128 +8,146 @@ local M = {}
 
 --- AWS mediapackage configure-logs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.configure_logs(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "configure-logs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.configure_logs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "configure-logs" }, input, callbacks)
 end
 
 --- AWS mediapackage create-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_channel(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "create-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-channel" }, input, callbacks)
 end
 
 --- AWS mediapackage create-harvest-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_harvest_job(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "create-harvest-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_harvest_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-harvest-job" }, input, callbacks)
 end
 
 --- AWS mediapackage create-origin-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_origin_endpoint(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "create-origin-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_origin_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-origin-endpoint" }, input, callbacks)
 end
 
 --- AWS mediapackage delete-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_channel(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "delete-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "delete-channel" }, input, callbacks)
 end
 
 --- AWS mediapackage delete-origin-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_origin_endpoint(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "delete-origin-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_origin_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "delete-origin-endpoint" }, input, callbacks)
 end
 
 --- AWS mediapackage describe-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_channel(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "describe-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-channel" }, input, callbacks)
 end
 
 --- AWS mediapackage describe-harvest-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_harvest_job(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "describe-harvest-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_harvest_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-harvest-job" }, input, callbacks)
 end
 
 --- AWS mediapackage describe-origin-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_origin_endpoint(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "describe-origin-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_origin_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-origin-endpoint" }, input, callbacks)
 end
 
 --- AWS mediapackage list-channels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_channels(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "list-channels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_channels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-channels" }, input, callbacks)
 end
 
 --- AWS mediapackage list-harvest-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_harvest_jobs(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "list-harvest-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_harvest_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-harvest-jobs" }, input, callbacks)
 end
 
 --- AWS mediapackage list-origin-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_origin_endpoints(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "list-origin-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_origin_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-origin-endpoints" }, input, callbacks)
 end
 
 --- AWS mediapackage list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage rotate-ingest-endpoint-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rotate_ingest_endpoint_credentials(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "rotate-ingest-endpoint-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rotate_ingest_endpoint_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "rotate-ingest-endpoint-credentials" }, input, callbacks)
 end
 
 --- AWS mediapackage tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "tag-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "untag-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage update-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_channel(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "update-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "update-channel" }, input, callbacks)
 end
 
 --- AWS mediapackage update-origin-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_origin_endpoint(input)
-	return common.execute_aws_command_skeleton({ "mediapackage", "update-origin-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_origin_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage", "update-origin-endpoint" }, input, callbacks)
 end
 
 return M

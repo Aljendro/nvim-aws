@@ -8,296 +8,338 @@ local M = {}
 
 --- AWS pinpoint-email create-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-configuration-set" }, input, callbacks)
 end
 
 --- AWS pinpoint-email create-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS pinpoint-email create-dedicated-ip-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dedicated_ip_pool(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-dedicated-ip-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dedicated_ip_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-dedicated-ip-pool" }, input, callbacks)
 end
 
 --- AWS pinpoint-email create-deliverability-test-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deliverability_test_report(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-deliverability-test-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deliverability_test_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-deliverability-test-report" }, input, callbacks)
 end
 
 --- AWS pinpoint-email create-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_email_identity(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "create-email-identity" }, input, callbacks)
 end
 
 --- AWS pinpoint-email delete-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-configuration-set" }, input, callbacks)
 end
 
 --- AWS pinpoint-email delete-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS pinpoint-email delete-dedicated-ip-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dedicated_ip_pool(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-dedicated-ip-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dedicated_ip_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-dedicated-ip-pool" }, input, callbacks)
 end
 
 --- AWS pinpoint-email delete-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_email_identity(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "delete-email-identity" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-account" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-blacklist-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blacklist_reports(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-blacklist-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blacklist_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-blacklist-reports" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-configuration-set" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-configuration-set-event-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_set_event_destinations(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-configuration-set-event-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_set_event_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-configuration-set-event-destinations" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-dedicated-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dedicated_ip(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-dedicated-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dedicated_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-dedicated-ip" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-dedicated-ips operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dedicated_ips(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-dedicated-ips" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dedicated_ips(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-dedicated-ips" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-deliverability-dashboard-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deliverability_dashboard_options(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-deliverability-dashboard-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deliverability_dashboard_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-deliverability-dashboard-options" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-deliverability-test-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deliverability_test_report(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-deliverability-test-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deliverability_test_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-deliverability-test-report" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-domain-deliverability-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_deliverability_campaign(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-domain-deliverability-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_deliverability_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-domain-deliverability-campaign" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-domain-statistics-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_statistics_report(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-domain-statistics-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_statistics_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-domain-statistics-report" }, input, callbacks)
 end
 
 --- AWS pinpoint-email get-email-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_email_identity(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-email-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_email_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "get-email-identity" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-configuration-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configuration_sets(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-configuration-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configuration_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-configuration-sets" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-dedicated-ip-pools operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dedicated_ip_pools(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-dedicated-ip-pools" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dedicated_ip_pools(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-dedicated-ip-pools" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-deliverability-test-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deliverability_test_reports(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-deliverability-test-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deliverability_test_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-deliverability-test-reports" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-domain-deliverability-campaigns operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domain_deliverability_campaigns(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-domain-deliverability-campaigns" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domain_deliverability_campaigns(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-domain-deliverability-campaigns" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-email-identities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_email_identities(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-email-identities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_email_identities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-email-identities" }, input, callbacks)
 end
 
 --- AWS pinpoint-email list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-account-dedicated-ip-warmup-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_dedicated_ip_warmup_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-account-dedicated-ip-warmup-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_dedicated_ip_warmup_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-account-dedicated-ip-warmup-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-account-sending-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_sending_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-account-sending-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_sending_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-account-sending-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-configuration-set-delivery-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_delivery_options(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-delivery-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_delivery_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-delivery-options" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-configuration-set-reputation-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_reputation_options(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-reputation-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_reputation_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-reputation-options" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-configuration-set-sending-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_sending_options(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-sending-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_sending_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-sending-options" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-configuration-set-tracking-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration_set_tracking_options(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-tracking-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration_set_tracking_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-configuration-set-tracking-options" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-dedicated-ip-in-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_dedicated_ip_in_pool(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-dedicated-ip-in-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_dedicated_ip_in_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-dedicated-ip-in-pool" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-dedicated-ip-warmup-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_dedicated_ip_warmup_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-dedicated-ip-warmup-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_dedicated_ip_warmup_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-dedicated-ip-warmup-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-deliverability-dashboard-option operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_deliverability_dashboard_option(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-deliverability-dashboard-option" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_deliverability_dashboard_option(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-deliverability-dashboard-option" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-email-identity-dkim-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_dkim_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-dkim-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_dkim_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-dkim-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-email-identity-feedback-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_feedback_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-feedback-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_feedback_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-feedback-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email put-email-identity-mail-from-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_email_identity_mail_from_attributes(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-mail-from-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_email_identity_mail_from_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "put-email-identity-mail-from-attributes" }, input, callbacks)
 end
 
 --- AWS pinpoint-email send-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_email(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "send-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "send-email" }, input, callbacks)
 end
 
 --- AWS pinpoint-email tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "tag-resource" }, input, callbacks)
 end
 
 --- AWS pinpoint-email untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "untag-resource" }, input, callbacks)
 end
 
 --- AWS pinpoint-email update-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-email", "update-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-email", "update-configuration-set-event-destination" }, input, callbacks)
 end
 
 return M

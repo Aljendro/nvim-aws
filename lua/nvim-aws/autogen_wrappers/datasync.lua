@@ -8,464 +8,530 @@ local M = {}
 
 --- AWS datasync add-storage-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_storage_system(input)
-	return common.execute_aws_command_skeleton({ "datasync", "add-storage-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_storage_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "add-storage-system" }, input, callbacks)
 end
 
 --- AWS datasync cancel-task-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_task_execution(input)
-	return common.execute_aws_command_skeleton({ "datasync", "cancel-task-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_task_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "cancel-task-execution" }, input, callbacks)
 end
 
 --- AWS datasync create-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_agent(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-agent" }, input, callbacks)
 end
 
 --- AWS datasync create-location-azure-blob operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_azure_blob(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-azure-blob" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_azure_blob(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-azure-blob" }, input, callbacks)
 end
 
 --- AWS datasync create-location-efs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_efs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-efs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_efs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-efs" }, input, callbacks)
 end
 
 --- AWS datasync create-location-fsx-lustre operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_fsx_lustre(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-lustre" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_fsx_lustre(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-lustre" }, input, callbacks)
 end
 
 --- AWS datasync create-location-fsx-ontap operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_fsx_ontap(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-ontap" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_fsx_ontap(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-ontap" }, input, callbacks)
 end
 
 --- AWS datasync create-location-fsx-open-zfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_fsx_open_zfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-open-zfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_fsx_open_zfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-open-zfs" }, input, callbacks)
 end
 
 --- AWS datasync create-location-fsx-windows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_fsx_windows(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-windows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_fsx_windows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-windows" }, input, callbacks)
 end
 
 --- AWS datasync create-location-hdfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_hdfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-hdfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_hdfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-hdfs" }, input, callbacks)
 end
 
 --- AWS datasync create-location-nfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_nfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-nfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_nfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-nfs" }, input, callbacks)
 end
 
 --- AWS datasync create-location-object-storage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_object_storage(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-object-storage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_object_storage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-object-storage" }, input, callbacks)
 end
 
 --- AWS datasync create-location-s3 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_s3(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-s3" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_s3(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-s3" }, input, callbacks)
 end
 
 --- AWS datasync create-location-smb operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_location_smb(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-location-smb" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_location_smb(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-smb" }, input, callbacks)
 end
 
 --- AWS datasync create-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_task(input)
-	return common.execute_aws_command_skeleton({ "datasync", "create-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "create-task" }, input, callbacks)
 end
 
 --- AWS datasync delete-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_agent(input)
-	return common.execute_aws_command_skeleton({ "datasync", "delete-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-agent" }, input, callbacks)
 end
 
 --- AWS datasync delete-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_location(input)
-	return common.execute_aws_command_skeleton({ "datasync", "delete-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-location" }, input, callbacks)
 end
 
 --- AWS datasync delete-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_task(input)
-	return common.execute_aws_command_skeleton({ "datasync", "delete-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-task" }, input, callbacks)
 end
 
 --- AWS datasync describe-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_agent(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-agent" }, input, callbacks)
 end
 
 --- AWS datasync describe-discovery-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_discovery_job(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-discovery-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_discovery_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-discovery-job" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-azure-blob operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_azure_blob(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-azure-blob" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_azure_blob(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-azure-blob" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-efs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_efs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-efs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_efs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-efs" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-fsx-lustre operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_fsx_lustre(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-lustre" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_fsx_lustre(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-lustre" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-fsx-ontap operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_fsx_ontap(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-ontap" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_fsx_ontap(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-ontap" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-fsx-open-zfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_fsx_open_zfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-open-zfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_fsx_open_zfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-open-zfs" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-fsx-windows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_fsx_windows(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-windows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_fsx_windows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-windows" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-hdfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_hdfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-hdfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_hdfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-hdfs" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-nfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_nfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-nfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_nfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-nfs" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-object-storage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_object_storage(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-object-storage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_object_storage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-object-storage" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-s3 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_s3(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-s3" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_s3(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-s3" }, input, callbacks)
 end
 
 --- AWS datasync describe-location-smb operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_location_smb(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-location-smb" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_location_smb(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-smb" }, input, callbacks)
 end
 
 --- AWS datasync describe-storage-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_storage_system(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_storage_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system" }, input, callbacks)
 end
 
 --- AWS datasync describe-storage-system-resource-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_storage_system_resource_metrics(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resource-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_storage_system_resource_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resource-metrics" }, input, callbacks)
 end
 
 --- AWS datasync describe-storage-system-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_storage_system_resources(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_storage_system_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resources" }, input, callbacks)
 end
 
 --- AWS datasync describe-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_task(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-task" }, input, callbacks)
 end
 
 --- AWS datasync describe-task-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_task_execution(input)
-	return common.execute_aws_command_skeleton({ "datasync", "describe-task-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_task_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-task-execution" }, input, callbacks)
 end
 
 --- AWS datasync generate-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_recommendations(input)
-	return common.execute_aws_command_skeleton({ "datasync", "generate-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "generate-recommendations" }, input, callbacks)
 end
 
 --- AWS datasync list-agents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_agents(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-agents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_agents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-agents" }, input, callbacks)
 end
 
 --- AWS datasync list-discovery-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_discovery_jobs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-discovery-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_discovery_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-discovery-jobs" }, input, callbacks)
 end
 
 --- AWS datasync list-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_locations(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-locations" }, input, callbacks)
 end
 
 --- AWS datasync list-storage-systems operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_storage_systems(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-storage-systems" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_storage_systems(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-storage-systems" }, input, callbacks)
 end
 
 --- AWS datasync list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS datasync list-task-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_task_executions(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-task-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_task_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-task-executions" }, input, callbacks)
 end
 
 --- AWS datasync list-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tasks(input)
-	return common.execute_aws_command_skeleton({ "datasync", "list-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "list-tasks" }, input, callbacks)
 end
 
 --- AWS datasync remove-storage-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_storage_system(input)
-	return common.execute_aws_command_skeleton({ "datasync", "remove-storage-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_storage_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "remove-storage-system" }, input, callbacks)
 end
 
 --- AWS datasync start-discovery-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_discovery_job(input)
-	return common.execute_aws_command_skeleton({ "datasync", "start-discovery-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_discovery_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "start-discovery-job" }, input, callbacks)
 end
 
 --- AWS datasync start-task-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_task_execution(input)
-	return common.execute_aws_command_skeleton({ "datasync", "start-task-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_task_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "start-task-execution" }, input, callbacks)
 end
 
 --- AWS datasync stop-discovery-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_discovery_job(input)
-	return common.execute_aws_command_skeleton({ "datasync", "stop-discovery-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_discovery_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "stop-discovery-job" }, input, callbacks)
 end
 
 --- AWS datasync tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "datasync", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "tag-resource" }, input, callbacks)
 end
 
 --- AWS datasync untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "datasync", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "untag-resource" }, input, callbacks)
 end
 
 --- AWS datasync update-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_agent(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-agent" }, input, callbacks)
 end
 
 --- AWS datasync update-discovery-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_discovery_job(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-discovery-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_discovery_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-discovery-job" }, input, callbacks)
 end
 
 --- AWS datasync update-location-azure-blob operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_azure_blob(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-azure-blob" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_azure_blob(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-azure-blob" }, input, callbacks)
 end
 
 --- AWS datasync update-location-efs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_efs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-efs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_efs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-efs" }, input, callbacks)
 end
 
 --- AWS datasync update-location-fsx-lustre operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_fsx_lustre(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-lustre" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_fsx_lustre(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-lustre" }, input, callbacks)
 end
 
 --- AWS datasync update-location-fsx-ontap operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_fsx_ontap(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-ontap" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_fsx_ontap(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-ontap" }, input, callbacks)
 end
 
 --- AWS datasync update-location-fsx-open-zfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_fsx_open_zfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-open-zfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_fsx_open_zfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-open-zfs" }, input, callbacks)
 end
 
 --- AWS datasync update-location-fsx-windows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_fsx_windows(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-windows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_fsx_windows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-windows" }, input, callbacks)
 end
 
 --- AWS datasync update-location-hdfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_hdfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-hdfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_hdfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-hdfs" }, input, callbacks)
 end
 
 --- AWS datasync update-location-nfs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_nfs(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-nfs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_nfs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-nfs" }, input, callbacks)
 end
 
 --- AWS datasync update-location-object-storage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_object_storage(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-object-storage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_object_storage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-object-storage" }, input, callbacks)
 end
 
 --- AWS datasync update-location-s3 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_s3(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-s3" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_s3(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-s3" }, input, callbacks)
 end
 
 --- AWS datasync update-location-smb operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_location_smb(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-location-smb" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_location_smb(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-smb" }, input, callbacks)
 end
 
 --- AWS datasync update-storage-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_storage_system(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-storage-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_storage_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-storage-system" }, input, callbacks)
 end
 
 --- AWS datasync update-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_task(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-task" }, input, callbacks)
 end
 
 --- AWS datasync update-task-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_task_execution(input)
-	return common.execute_aws_command_skeleton({ "datasync", "update-task-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_task_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "datasync", "update-task-execution" }, input, callbacks)
 end
 
 return M

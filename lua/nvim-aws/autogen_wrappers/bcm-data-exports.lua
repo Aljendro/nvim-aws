@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS bcm-data-exports create-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_export(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "create-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "create-export" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports delete-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_export(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "delete-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "delete-export" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports get-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_execution(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-execution" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports get-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_export(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-export" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports get-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-table" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports list-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_executions(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-executions" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports list-exports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_exports(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-exports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_exports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-exports" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports list-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tables(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tables" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "tag-resource" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "untag-resource" }, input, callbacks)
 end
 
 --- AWS bcm-data-exports update-export operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_export(input)
-	return common.execute_aws_command_skeleton({ "bcm-data-exports", "update-export" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_export(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "update-export" }, input, callbacks)
 end
 
 return M

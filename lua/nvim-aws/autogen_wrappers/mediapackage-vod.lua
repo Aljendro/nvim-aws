@@ -8,121 +8,138 @@ local M = {}
 
 --- AWS mediapackage-vod configure-logs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.configure_logs(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "configure-logs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.configure_logs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "configure-logs" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod create-asset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_asset(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-asset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_asset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-asset" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod create-packaging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_packaging_configuration(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_packaging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-configuration" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod create-packaging-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_packaging_group(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_packaging_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-group" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod delete-asset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_asset(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-asset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_asset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-asset" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod delete-packaging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_packaging_configuration(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_packaging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-configuration" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod delete-packaging-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_packaging_group(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_packaging_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-group" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod describe-asset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_asset(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-asset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_asset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-asset" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod describe-packaging-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_packaging_configuration(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_packaging_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-configuration" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod describe-packaging-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_packaging_group(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_packaging_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-group" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod list-assets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assets(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-assets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-assets" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod list-packaging-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_packaging_configurations(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_packaging_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-configurations" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod list-packaging-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_packaging_groups(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_packaging_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-groups" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "tag-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "untag-resource" }, input, callbacks)
 end
 
 --- AWS mediapackage-vod update-packaging-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_packaging_group(input)
-	return common.execute_aws_command_skeleton({ "mediapackage-vod", "update-packaging-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_packaging_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "update-packaging-group" }, input, callbacks)
 end
 
 return M

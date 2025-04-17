@@ -8,44 +8,50 @@ local M = {}
 
 --- AWS importexport cancel-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_job(input)
-	return common.execute_aws_command_skeleton({ "importexport", "cancel-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "cancel-job" }, input, callbacks)
 end
 
 --- AWS importexport create-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job(input)
-	return common.execute_aws_command_skeleton({ "importexport", "create-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "create-job" }, input, callbacks)
 end
 
 --- AWS importexport get-shipping-label operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_shipping_label(input)
-	return common.execute_aws_command_skeleton({ "importexport", "get-shipping-label" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_shipping_label(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "get-shipping-label" }, input, callbacks)
 end
 
 --- AWS importexport get-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_status(input)
-	return common.execute_aws_command_skeleton({ "importexport", "get-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "get-status" }, input, callbacks)
 end
 
 --- AWS importexport list-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs(input)
-	return common.execute_aws_command_skeleton({ "importexport", "list-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "list-jobs" }, input, callbacks)
 end
 
 --- AWS importexport update-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job(input)
-	return common.execute_aws_command_skeleton({ "importexport", "update-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "importexport", "update-job" }, input, callbacks)
 end
 
 return M

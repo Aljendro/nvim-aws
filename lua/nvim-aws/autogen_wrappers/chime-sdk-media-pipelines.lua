@@ -8,219 +8,250 @@ local M = {}
 
 --- AWS chime-sdk-media-pipelines create-media-capture-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_capture_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-capture-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_capture_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-capture-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-concatenation-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_concatenation_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-concatenation-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_concatenation_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-concatenation-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-insights-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_insights_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-insights-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_insights_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-insights-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-insights-pipeline-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_insights_pipeline_configuration(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-insights-pipeline-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_insights_pipeline_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-insights-pipeline-configuration" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-live-connector-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_live_connector_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-live-connector-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_live_connector_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-live-connector-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-pipeline-kinesis-video-stream-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_pipeline_kinesis_video_stream_pool(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-pipeline-kinesis-video-stream-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_pipeline_kinesis_video_stream_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-pipeline-kinesis-video-stream-pool" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines create-media-stream-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_media_stream_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-stream-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_media_stream_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "create-media-stream-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines delete-media-capture-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_media_capture_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-capture-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_media_capture_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-capture-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines delete-media-insights-pipeline-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_media_insights_pipeline_configuration(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-insights-pipeline-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_media_insights_pipeline_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-insights-pipeline-configuration" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines delete-media-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_media_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_media_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines delete-media-pipeline-kinesis-video-stream-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_media_pipeline_kinesis_video_stream_pool(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-pipeline-kinesis-video-stream-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_media_pipeline_kinesis_video_stream_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "delete-media-pipeline-kinesis-video-stream-pool" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-media-capture-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_capture_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-capture-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_capture_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-capture-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-media-insights-pipeline-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_insights_pipeline_configuration(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-insights-pipeline-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_insights_pipeline_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-insights-pipeline-configuration" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-media-pipeline operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_pipeline(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-pipeline" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_pipeline(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-pipeline" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-media-pipeline-kinesis-video-stream-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_pipeline_kinesis_video_stream_pool(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-pipeline-kinesis-video-stream-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_pipeline_kinesis_video_stream_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-media-pipeline-kinesis-video-stream-pool" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-speaker-search-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_speaker_search_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-speaker-search-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_speaker_search_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-speaker-search-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines get-voice-tone-analysis-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_voice_tone_analysis_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-voice-tone-analysis-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_voice_tone_analysis_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "get-voice-tone-analysis-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines list-media-capture-pipelines operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_media_capture_pipelines(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-capture-pipelines" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_media_capture_pipelines(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-capture-pipelines" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines list-media-insights-pipeline-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_media_insights_pipeline_configurations(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-insights-pipeline-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_media_insights_pipeline_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-insights-pipeline-configurations" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines list-media-pipeline-kinesis-video-stream-pools operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_media_pipeline_kinesis_video_stream_pools(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-pipeline-kinesis-video-stream-pools" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_media_pipeline_kinesis_video_stream_pools(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-pipeline-kinesis-video-stream-pools" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines list-media-pipelines operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_media_pipelines(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-pipelines" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_media_pipelines(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-media-pipelines" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines start-speaker-search-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_speaker_search_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "start-speaker-search-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_speaker_search_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "start-speaker-search-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines start-voice-tone-analysis-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_voice_tone_analysis_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "start-voice-tone-analysis-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_voice_tone_analysis_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "start-voice-tone-analysis-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines stop-speaker-search-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_speaker_search_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "stop-speaker-search-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_speaker_search_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "stop-speaker-search-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines stop-voice-tone-analysis-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_voice_tone_analysis_task(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "stop-voice-tone-analysis-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_voice_tone_analysis_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "stop-voice-tone-analysis-task" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "tag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "untag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines update-media-insights-pipeline-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_media_insights_pipeline_configuration(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-insights-pipeline-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_media_insights_pipeline_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-insights-pipeline-configuration" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines update-media-insights-pipeline-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_media_insights_pipeline_status(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-insights-pipeline-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_media_insights_pipeline_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-insights-pipeline-status" }, input, callbacks)
 end
 
 --- AWS chime-sdk-media-pipelines update-media-pipeline-kinesis-video-stream-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_media_pipeline_kinesis_video_stream_pool(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-pipeline-kinesis-video-stream-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_media_pipeline_kinesis_video_stream_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-media-pipelines", "update-media-pipeline-kinesis-video-stream-pool" }, input, callbacks)
 end
 
 return M

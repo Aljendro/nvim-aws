@@ -8,177 +8,202 @@ local M = {}
 
 --- AWS textract analyze-document operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.analyze_document(input)
-	return common.execute_aws_command_skeleton({ "textract", "analyze-document" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.analyze_document(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-document" }, input, callbacks)
 end
 
 --- AWS textract analyze-expense operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.analyze_expense(input)
-	return common.execute_aws_command_skeleton({ "textract", "analyze-expense" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.analyze_expense(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-expense" }, input, callbacks)
 end
 
 --- AWS textract analyze-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.analyze_id(input)
-	return common.execute_aws_command_skeleton({ "textract", "analyze-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.analyze_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-id" }, input, callbacks)
 end
 
 --- AWS textract create-adapter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_adapter(input)
-	return common.execute_aws_command_skeleton({ "textract", "create-adapter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_adapter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "create-adapter" }, input, callbacks)
 end
 
 --- AWS textract create-adapter-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_adapter_version(input)
-	return common.execute_aws_command_skeleton({ "textract", "create-adapter-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_adapter_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "create-adapter-version" }, input, callbacks)
 end
 
 --- AWS textract delete-adapter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_adapter(input)
-	return common.execute_aws_command_skeleton({ "textract", "delete-adapter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_adapter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "delete-adapter" }, input, callbacks)
 end
 
 --- AWS textract delete-adapter-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_adapter_version(input)
-	return common.execute_aws_command_skeleton({ "textract", "delete-adapter-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_adapter_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "delete-adapter-version" }, input, callbacks)
 end
 
 --- AWS textract detect-document-text operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_document_text(input)
-	return common.execute_aws_command_skeleton({ "textract", "detect-document-text" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_document_text(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "detect-document-text" }, input, callbacks)
 end
 
 --- AWS textract get-adapter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_adapter(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-adapter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_adapter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-adapter" }, input, callbacks)
 end
 
 --- AWS textract get-adapter-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_adapter_version(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-adapter-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_adapter_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-adapter-version" }, input, callbacks)
 end
 
 --- AWS textract get-document-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_document_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-document-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_document_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-document-analysis" }, input, callbacks)
 end
 
 --- AWS textract get-document-text-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_document_text_detection(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-document-text-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_document_text_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-document-text-detection" }, input, callbacks)
 end
 
 --- AWS textract get-expense-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_expense_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-expense-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_expense_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-expense-analysis" }, input, callbacks)
 end
 
 --- AWS textract get-lending-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lending_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lending_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis" }, input, callbacks)
 end
 
 --- AWS textract get-lending-analysis-summary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_lending_analysis_summary(input)
-	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis-summary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_lending_analysis_summary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis-summary" }, input, callbacks)
 end
 
 --- AWS textract list-adapter-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_adapter_versions(input)
-	return common.execute_aws_command_skeleton({ "textract", "list-adapter-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_adapter_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "list-adapter-versions" }, input, callbacks)
 end
 
 --- AWS textract list-adapters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_adapters(input)
-	return common.execute_aws_command_skeleton({ "textract", "list-adapters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_adapters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "list-adapters" }, input, callbacks)
 end
 
 --- AWS textract list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "textract", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS textract start-document-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_document_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "start-document-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_document_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "start-document-analysis" }, input, callbacks)
 end
 
 --- AWS textract start-document-text-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_document_text_detection(input)
-	return common.execute_aws_command_skeleton({ "textract", "start-document-text-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_document_text_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "start-document-text-detection" }, input, callbacks)
 end
 
 --- AWS textract start-expense-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_expense_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "start-expense-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_expense_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "start-expense-analysis" }, input, callbacks)
 end
 
 --- AWS textract start-lending-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_lending_analysis(input)
-	return common.execute_aws_command_skeleton({ "textract", "start-lending-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_lending_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "start-lending-analysis" }, input, callbacks)
 end
 
 --- AWS textract tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "textract", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "tag-resource" }, input, callbacks)
 end
 
 --- AWS textract untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "textract", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "untag-resource" }, input, callbacks)
 end
 
 --- AWS textract update-adapter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_adapter(input)
-	return common.execute_aws_command_skeleton({ "textract", "update-adapter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_adapter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "textract", "update-adapter" }, input, callbacks)
 end
 
 return M

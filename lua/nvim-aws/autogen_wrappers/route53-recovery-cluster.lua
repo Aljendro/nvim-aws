@@ -8,30 +8,34 @@ local M = {}
 
 --- AWS route53-recovery-cluster get-routing-control-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_routing_control_state(input)
-	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "get-routing-control-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_routing_control_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "get-routing-control-state" }, input, callbacks)
 end
 
 --- AWS route53-recovery-cluster list-routing-controls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_routing_controls(input)
-	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "list-routing-controls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_routing_controls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "list-routing-controls" }, input, callbacks)
 end
 
 --- AWS route53-recovery-cluster update-routing-control-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_control_state(input)
-	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "update-routing-control-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_control_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "update-routing-control-state" }, input, callbacks)
 end
 
 --- AWS route53-recovery-cluster update-routing-control-states operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_control_states(input)
-	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "update-routing-control-states" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_control_states(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53-recovery-cluster", "update-routing-control-states" }, input, callbacks)
 end
 
 return M

@@ -8,58 +8,66 @@ local M = {}
 
 --- AWS observabilityadmin get-telemetry-evaluation-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_telemetry_evaluation_status(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_telemetry_evaluation_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status" }, input, callbacks)
 end
 
 --- AWS observabilityadmin get-telemetry-evaluation-status-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_telemetry_evaluation_status_for_organization(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_telemetry_evaluation_status_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" }, input, callbacks)
 end
 
 --- AWS observabilityadmin list-resource-telemetry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_telemetry(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_telemetry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry" }, input, callbacks)
 end
 
 --- AWS observabilityadmin list-resource-telemetry-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_telemetry_for_organization(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_telemetry_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry-for-organization" }, input, callbacks)
 end
 
 --- AWS observabilityadmin start-telemetry-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_telemetry_evaluation(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_telemetry_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation" }, input, callbacks)
 end
 
 --- AWS observabilityadmin start-telemetry-evaluation-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_telemetry_evaluation_for_organization(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_telemetry_evaluation_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation-for-organization" }, input, callbacks)
 end
 
 --- AWS observabilityadmin stop-telemetry-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_telemetry_evaluation(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_telemetry_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation" }, input, callbacks)
 end
 
 --- AWS observabilityadmin stop-telemetry-evaluation-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_telemetry_evaluation_for_organization(input)
-	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_telemetry_evaluation_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation-for-organization" }, input, callbacks)
 end
 
 return M

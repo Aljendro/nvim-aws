@@ -8,233 +8,266 @@ local M = {}
 
 --- AWS connectcampaignsv2 create-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "create-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "create-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-channel-subtype-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_campaign_channel_subtype_config(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-channel-subtype-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_campaign_channel_subtype_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-channel-subtype-config" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-communication-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_campaign_communication_limits(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_campaign_communication_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-limits" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-communication-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_campaign_communication_time(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_campaign_communication_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-time" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-connect-instance-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connect_instance_config(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connect_instance_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-config" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-connect-instance-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connect_instance_integration(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connect_instance_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-integration" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 delete-instance-onboarding-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_instance_onboarding_job(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-instance-onboarding-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_instance_onboarding_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-instance-onboarding-job" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 describe-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "describe-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "describe-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 get-campaign-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_campaign_state(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_campaign_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 get-campaign-state-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_campaign_state_batch(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_campaign_state_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state-batch" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 get-connect-instance-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_connect_instance_config(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-connect-instance-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_connect_instance_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-connect-instance-config" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 get-instance-onboarding-job-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_onboarding_job_status(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-instance-onboarding-job-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_onboarding_job_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-instance-onboarding-job-status" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 list-campaigns operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_campaigns(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-campaigns" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_campaigns(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-campaigns" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 list-connect-instance-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_connect_instance_integrations(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-connect-instance-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_connect_instance_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-connect-instance-integrations" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 pause-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.pause_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "pause-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.pause_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "pause-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 put-connect-instance-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_connect_instance_integration(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-connect-instance-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_connect_instance_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-connect-instance-integration" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 put-outbound-request-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_outbound_request_batch(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-outbound-request-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_outbound_request_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-outbound-request-batch" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 put-profile-outbound-request-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_profile_outbound_request_batch(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-profile-outbound-request-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_profile_outbound_request_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-profile-outbound-request-batch" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 resume-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resume_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "resume-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resume_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "resume-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 start-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 start-instance-onboarding-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_instance_onboarding_job(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-instance-onboarding-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_instance_onboarding_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-instance-onboarding-job" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 stop-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_campaign(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "stop-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "stop-campaign" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-channel-subtype-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_channel_subtype_config(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-channel-subtype-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_channel_subtype_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-channel-subtype-config" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-communication-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_communication_limits(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_communication_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-limits" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-communication-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_communication_time(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_communication_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-time" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-flow-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_flow_association(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-flow-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_flow_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-flow-association" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_name(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-name" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_schedule(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-schedule" }, input, callbacks)
 end
 
 --- AWS connectcampaignsv2 update-campaign-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign_source(input)
-	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-source" }, input, callbacks)
 end
 
 return M

@@ -8,478 +8,546 @@ local M = {}
 
 --- AWS athena batch-get-named-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_named_query(input)
-	return common.execute_aws_command_skeleton({ "athena", "batch-get-named-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_named_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "batch-get-named-query" }, input, callbacks)
 end
 
 --- AWS athena batch-get-prepared-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_prepared_statement(input)
-	return common.execute_aws_command_skeleton({ "athena", "batch-get-prepared-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_prepared_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "batch-get-prepared-statement" }, input, callbacks)
 end
 
 --- AWS athena batch-get-query-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_query_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "batch-get-query-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_query_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "batch-get-query-execution" }, input, callbacks)
 end
 
 --- AWS athena cancel-capacity-reservation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_capacity_reservation(input)
-	return common.execute_aws_command_skeleton({ "athena", "cancel-capacity-reservation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_capacity_reservation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "cancel-capacity-reservation" }, input, callbacks)
 end
 
 --- AWS athena create-capacity-reservation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_capacity_reservation(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-capacity-reservation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_capacity_reservation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-capacity-reservation" }, input, callbacks)
 end
 
 --- AWS athena create-data-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_catalog(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-data-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-data-catalog" }, input, callbacks)
 end
 
 --- AWS athena create-named-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_named_query(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-named-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_named_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-named-query" }, input, callbacks)
 end
 
 --- AWS athena create-notebook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_notebook(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-notebook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_notebook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-notebook" }, input, callbacks)
 end
 
 --- AWS athena create-prepared-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_prepared_statement(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-prepared-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_prepared_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-prepared-statement" }, input, callbacks)
 end
 
 --- AWS athena create-presigned-notebook-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_presigned_notebook_url(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-presigned-notebook-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_presigned_notebook_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-presigned-notebook-url" }, input, callbacks)
 end
 
 --- AWS athena create-work-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_work_group(input)
-	return common.execute_aws_command_skeleton({ "athena", "create-work-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_work_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "create-work-group" }, input, callbacks)
 end
 
 --- AWS athena delete-capacity-reservation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_capacity_reservation(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-capacity-reservation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_capacity_reservation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-capacity-reservation" }, input, callbacks)
 end
 
 --- AWS athena delete-data-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_catalog(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-data-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-data-catalog" }, input, callbacks)
 end
 
 --- AWS athena delete-named-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_named_query(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-named-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_named_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-named-query" }, input, callbacks)
 end
 
 --- AWS athena delete-notebook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_notebook(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-notebook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_notebook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-notebook" }, input, callbacks)
 end
 
 --- AWS athena delete-prepared-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_prepared_statement(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-prepared-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_prepared_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-prepared-statement" }, input, callbacks)
 end
 
 --- AWS athena delete-work-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_work_group(input)
-	return common.execute_aws_command_skeleton({ "athena", "delete-work-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_work_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "delete-work-group" }, input, callbacks)
 end
 
 --- AWS athena export-notebook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_notebook(input)
-	return common.execute_aws_command_skeleton({ "athena", "export-notebook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_notebook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "export-notebook" }, input, callbacks)
 end
 
 --- AWS athena get-calculation-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_calculation_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_calculation_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution" }, input, callbacks)
 end
 
 --- AWS athena get-calculation-execution-code operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_calculation_execution_code(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution-code" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_calculation_execution_code(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution-code" }, input, callbacks)
 end
 
 --- AWS athena get-calculation-execution-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_calculation_execution_status(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_calculation_execution_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-calculation-execution-status" }, input, callbacks)
 end
 
 --- AWS athena get-capacity-assignment-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_capacity_assignment_configuration(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-capacity-assignment-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_capacity_assignment_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-capacity-assignment-configuration" }, input, callbacks)
 end
 
 --- AWS athena get-capacity-reservation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_capacity_reservation(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-capacity-reservation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_capacity_reservation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-capacity-reservation" }, input, callbacks)
 end
 
 --- AWS athena get-data-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_catalog(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-data-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-data-catalog" }, input, callbacks)
 end
 
 --- AWS athena get-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_database(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-database" }, input, callbacks)
 end
 
 --- AWS athena get-named-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_named_query(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-named-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_named_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-named-query" }, input, callbacks)
 end
 
 --- AWS athena get-notebook-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_notebook_metadata(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-notebook-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_notebook_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-notebook-metadata" }, input, callbacks)
 end
 
 --- AWS athena get-prepared-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_prepared_statement(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-prepared-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_prepared_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-prepared-statement" }, input, callbacks)
 end
 
 --- AWS athena get-query-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-query-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-query-execution" }, input, callbacks)
 end
 
 --- AWS athena get-query-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_results(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-query-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-query-results" }, input, callbacks)
 end
 
 --- AWS athena get-query-runtime-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_runtime_statistics(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-query-runtime-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_runtime_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-query-runtime-statistics" }, input, callbacks)
 end
 
 --- AWS athena get-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-session" }, input, callbacks)
 end
 
 --- AWS athena get-session-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session_status(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-session-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-session-status" }, input, callbacks)
 end
 
 --- AWS athena get-table-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_metadata(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-table-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-table-metadata" }, input, callbacks)
 end
 
 --- AWS athena get-work-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_work_group(input)
-	return common.execute_aws_command_skeleton({ "athena", "get-work-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_work_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "get-work-group" }, input, callbacks)
 end
 
 --- AWS athena import-notebook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_notebook(input)
-	return common.execute_aws_command_skeleton({ "athena", "import-notebook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_notebook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "import-notebook" }, input, callbacks)
 end
 
 --- AWS athena list-application-dpu-sizes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_dpu_sizes(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-application-dpu-sizes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_dpu_sizes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-application-dpu-sizes" }, input, callbacks)
 end
 
 --- AWS athena list-calculation-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_calculation_executions(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-calculation-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_calculation_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-calculation-executions" }, input, callbacks)
 end
 
 --- AWS athena list-capacity-reservations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_capacity_reservations(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-capacity-reservations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_capacity_reservations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-capacity-reservations" }, input, callbacks)
 end
 
 --- AWS athena list-data-catalogs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_catalogs(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-data-catalogs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_catalogs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-data-catalogs" }, input, callbacks)
 end
 
 --- AWS athena list-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_databases(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-databases" }, input, callbacks)
 end
 
 --- AWS athena list-engine-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_engine_versions(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-engine-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_engine_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-engine-versions" }, input, callbacks)
 end
 
 --- AWS athena list-executors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_executors(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-executors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_executors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-executors" }, input, callbacks)
 end
 
 --- AWS athena list-named-queries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_named_queries(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-named-queries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_named_queries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-named-queries" }, input, callbacks)
 end
 
 --- AWS athena list-notebook-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_notebook_metadata(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-notebook-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_notebook_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-notebook-metadata" }, input, callbacks)
 end
 
 --- AWS athena list-notebook-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_notebook_sessions(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-notebook-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_notebook_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-notebook-sessions" }, input, callbacks)
 end
 
 --- AWS athena list-prepared-statements operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_prepared_statements(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-prepared-statements" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_prepared_statements(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-prepared-statements" }, input, callbacks)
 end
 
 --- AWS athena list-query-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_query_executions(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-query-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_query_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-query-executions" }, input, callbacks)
 end
 
 --- AWS athena list-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sessions(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-sessions" }, input, callbacks)
 end
 
 --- AWS athena list-table-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_table_metadata(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-table-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_table_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-table-metadata" }, input, callbacks)
 end
 
 --- AWS athena list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS athena list-work-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_work_groups(input)
-	return common.execute_aws_command_skeleton({ "athena", "list-work-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_work_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "list-work-groups" }, input, callbacks)
 end
 
 --- AWS athena put-capacity-assignment-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_capacity_assignment_configuration(input)
-	return common.execute_aws_command_skeleton({ "athena", "put-capacity-assignment-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_capacity_assignment_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "put-capacity-assignment-configuration" }, input, callbacks)
 end
 
 --- AWS athena start-calculation-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_calculation_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "start-calculation-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_calculation_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "start-calculation-execution" }, input, callbacks)
 end
 
 --- AWS athena start-query-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_query_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "start-query-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_query_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "start-query-execution" }, input, callbacks)
 end
 
 --- AWS athena start-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_session(input)
-	return common.execute_aws_command_skeleton({ "athena", "start-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "start-session" }, input, callbacks)
 end
 
 --- AWS athena stop-calculation-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_calculation_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "stop-calculation-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_calculation_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "stop-calculation-execution" }, input, callbacks)
 end
 
 --- AWS athena stop-query-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_query_execution(input)
-	return common.execute_aws_command_skeleton({ "athena", "stop-query-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_query_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "stop-query-execution" }, input, callbacks)
 end
 
 --- AWS athena tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "athena", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "tag-resource" }, input, callbacks)
 end
 
 --- AWS athena terminate-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.terminate_session(input)
-	return common.execute_aws_command_skeleton({ "athena", "terminate-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.terminate_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "terminate-session" }, input, callbacks)
 end
 
 --- AWS athena untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "athena", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "untag-resource" }, input, callbacks)
 end
 
 --- AWS athena update-capacity-reservation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_capacity_reservation(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-capacity-reservation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_capacity_reservation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-capacity-reservation" }, input, callbacks)
 end
 
 --- AWS athena update-data-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_catalog(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-data-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-data-catalog" }, input, callbacks)
 end
 
 --- AWS athena update-named-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_named_query(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-named-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_named_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-named-query" }, input, callbacks)
 end
 
 --- AWS athena update-notebook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_notebook(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-notebook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_notebook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-notebook" }, input, callbacks)
 end
 
 --- AWS athena update-notebook-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_notebook_metadata(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-notebook-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_notebook_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-notebook-metadata" }, input, callbacks)
 end
 
 --- AWS athena update-prepared-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_prepared_statement(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-prepared-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_prepared_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-prepared-statement" }, input, callbacks)
 end
 
 --- AWS athena update-work-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_work_group(input)
-	return common.execute_aws_command_skeleton({ "athena", "update-work-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_work_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "athena", "update-work-group" }, input, callbacks)
 end
 
 return M

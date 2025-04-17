@@ -8,240 +8,274 @@ local M = {}
 
 --- AWS ram accept-resource-share-invitation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_resource_share_invitation(input)
-	return common.execute_aws_command_skeleton({ "ram", "accept-resource-share-invitation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_resource_share_invitation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "accept-resource-share-invitation" }, input, callbacks)
 end
 
 --- AWS ram associate-resource-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_resource_share(input)
-	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_resource_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share" }, input, callbacks)
 end
 
 --- AWS ram associate-resource-share-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_resource_share_permission(input)
-	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_resource_share_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share-permission" }, input, callbacks)
 end
 
 --- AWS ram create-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_permission(input)
-	return common.execute_aws_command_skeleton({ "ram", "create-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "create-permission" }, input, callbacks)
 end
 
 --- AWS ram create-permission-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_permission_version(input)
-	return common.execute_aws_command_skeleton({ "ram", "create-permission-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_permission_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "create-permission-version" }, input, callbacks)
 end
 
 --- AWS ram create-resource-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_resource_share(input)
-	return common.execute_aws_command_skeleton({ "ram", "create-resource-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_resource_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "create-resource-share" }, input, callbacks)
 end
 
 --- AWS ram delete-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_permission(input)
-	return common.execute_aws_command_skeleton({ "ram", "delete-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "delete-permission" }, input, callbacks)
 end
 
 --- AWS ram delete-permission-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_permission_version(input)
-	return common.execute_aws_command_skeleton({ "ram", "delete-permission-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_permission_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "delete-permission-version" }, input, callbacks)
 end
 
 --- AWS ram delete-resource-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_share(input)
-	return common.execute_aws_command_skeleton({ "ram", "delete-resource-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "delete-resource-share" }, input, callbacks)
 end
 
 --- AWS ram disassociate-resource-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_resource_share(input)
-	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_resource_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share" }, input, callbacks)
 end
 
 --- AWS ram disassociate-resource-share-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_resource_share_permission(input)
-	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_resource_share_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share-permission" }, input, callbacks)
 end
 
 --- AWS ram enable-sharing-with-aws-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_sharing_with_aws_organization(input)
-	return common.execute_aws_command_skeleton({ "ram", "enable-sharing-with-aws-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_sharing_with_aws_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "enable-sharing-with-aws-organization" }, input, callbacks)
 end
 
 --- AWS ram get-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_permission(input)
-	return common.execute_aws_command_skeleton({ "ram", "get-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "get-permission" }, input, callbacks)
 end
 
 --- AWS ram get-resource-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policies(input)
-	return common.execute_aws_command_skeleton({ "ram", "get-resource-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-policies" }, input, callbacks)
 end
 
 --- AWS ram get-resource-share-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_share_associations(input)
-	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_share_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-associations" }, input, callbacks)
 end
 
 --- AWS ram get-resource-share-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_share_invitations(input)
-	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_share_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-invitations" }, input, callbacks)
 end
 
 --- AWS ram get-resource-shares operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_shares(input)
-	return common.execute_aws_command_skeleton({ "ram", "get-resource-shares" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_shares(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-shares" }, input, callbacks)
 end
 
 --- AWS ram list-pending-invitation-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_pending_invitation_resources(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-pending-invitation-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_pending_invitation_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-pending-invitation-resources" }, input, callbacks)
 end
 
 --- AWS ram list-permission-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_permission_associations(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-permission-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_permission_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-permission-associations" }, input, callbacks)
 end
 
 --- AWS ram list-permission-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_permission_versions(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-permission-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_permission_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-permission-versions" }, input, callbacks)
 end
 
 --- AWS ram list-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_permissions(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-permissions" }, input, callbacks)
 end
 
 --- AWS ram list-principals operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_principals(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-principals" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_principals(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-principals" }, input, callbacks)
 end
 
 --- AWS ram list-replace-permission-associations-work operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_replace_permission_associations_work(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-replace-permission-associations-work" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_replace_permission_associations_work(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-replace-permission-associations-work" }, input, callbacks)
 end
 
 --- AWS ram list-resource-share-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_share_permissions(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-resource-share-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_share_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-resource-share-permissions" }, input, callbacks)
 end
 
 --- AWS ram list-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_types(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-resource-types" }, input, callbacks)
 end
 
 --- AWS ram list-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resources(input)
-	return common.execute_aws_command_skeleton({ "ram", "list-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "list-resources" }, input, callbacks)
 end
 
 --- AWS ram promote-permission-created-from-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.promote_permission_created_from_policy(input)
-	return common.execute_aws_command_skeleton({ "ram", "promote-permission-created-from-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.promote_permission_created_from_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "promote-permission-created-from-policy" }, input, callbacks)
 end
 
 --- AWS ram promote-resource-share-created-from-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.promote_resource_share_created_from_policy(input)
-	return common.execute_aws_command_skeleton({ "ram", "promote-resource-share-created-from-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.promote_resource_share_created_from_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "promote-resource-share-created-from-policy" }, input, callbacks)
 end
 
 --- AWS ram reject-resource-share-invitation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reject_resource_share_invitation(input)
-	return common.execute_aws_command_skeleton({ "ram", "reject-resource-share-invitation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reject_resource_share_invitation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "reject-resource-share-invitation" }, input, callbacks)
 end
 
 --- AWS ram replace-permission-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.replace_permission_associations(input)
-	return common.execute_aws_command_skeleton({ "ram", "replace-permission-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.replace_permission_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "replace-permission-associations" }, input, callbacks)
 end
 
 --- AWS ram set-default-permission-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_default_permission_version(input)
-	return common.execute_aws_command_skeleton({ "ram", "set-default-permission-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_default_permission_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "set-default-permission-version" }, input, callbacks)
 end
 
 --- AWS ram tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ram", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ram untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ram", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ram update-resource-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_share(input)
-	return common.execute_aws_command_skeleton({ "ram", "update-resource-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ram", "update-resource-share" }, input, callbacks)
 end
 
 return M

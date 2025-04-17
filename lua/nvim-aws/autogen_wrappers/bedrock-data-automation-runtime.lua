@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS bedrock-data-automation-runtime get-data-automation-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_automation_status(input)
-	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "get-data-automation-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_automation_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "get-data-automation-status" }, input, callbacks)
 end
 
 --- AWS bedrock-data-automation-runtime invoke-data-automation-async operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.invoke_data_automation_async(input)
-	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "invoke-data-automation-async" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.invoke_data_automation_async(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "invoke-data-automation-async" }, input, callbacks)
 end
 
 --- AWS bedrock-data-automation-runtime list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS bedrock-data-automation-runtime tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "tag-resource" }, input, callbacks)
 end
 
 --- AWS bedrock-data-automation-runtime untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "untag-resource" }, input, callbacks)
 end
 
 return M

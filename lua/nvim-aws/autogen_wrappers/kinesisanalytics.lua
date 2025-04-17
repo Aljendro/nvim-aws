@@ -8,142 +8,162 @@ local M = {}
 
 --- AWS kinesisanalytics add-application-cloud-watch-logging-option operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_application_cloud_watch_logging_option(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-cloud-watch-logging-option" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_application_cloud_watch_logging_option(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-cloud-watch-logging-option" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics add-application-input operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_application_input(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-input" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_application_input(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-input" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics add-application-input-processing-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_application_input_processing_configuration(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-input-processing-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_application_input_processing_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-input-processing-configuration" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics add-application-output operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_application_output(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-output" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_application_output(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-output" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics add-application-reference-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_application_reference_data_source(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-reference-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_application_reference_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "add-application-reference-data-source" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "create-application" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics delete-application-cloud-watch-logging-option operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_cloud_watch_logging_option(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-cloud-watch-logging-option" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_cloud_watch_logging_option(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-cloud-watch-logging-option" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics delete-application-input-processing-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_input_processing_configuration(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-input-processing-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_input_processing_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-input-processing-configuration" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics delete-application-output operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_output(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-output" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_output(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-output" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics delete-application-reference-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_reference_data_source(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-reference-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_reference_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "delete-application-reference-data-source" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics describe-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "describe-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "describe-application" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics discover-input-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.discover_input_schema(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "discover-input-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.discover_input_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "discover-input-schema" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "list-applications" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics start-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "start-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "start-application" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics stop-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "stop-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "stop-application" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "tag-resource" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "untag-resource" }, input, callbacks)
 end
 
 --- AWS kinesisanalytics update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "kinesisanalytics", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesisanalytics", "update-application" }, input, callbacks)
 end
 
 return M

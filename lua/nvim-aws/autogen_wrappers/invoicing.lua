@@ -8,65 +8,74 @@ local M = {}
 
 --- AWS invoicing batch-get-invoice-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_invoice_profile(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "batch-get-invoice-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_invoice_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "batch-get-invoice-profile" }, input, callbacks)
 end
 
 --- AWS invoicing create-invoice-unit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_invoice_unit(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "create-invoice-unit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_invoice_unit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "create-invoice-unit" }, input, callbacks)
 end
 
 --- AWS invoicing delete-invoice-unit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_invoice_unit(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "delete-invoice-unit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_invoice_unit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "delete-invoice-unit" }, input, callbacks)
 end
 
 --- AWS invoicing get-invoice-unit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_invoice_unit(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "get-invoice-unit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_invoice_unit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "get-invoice-unit" }, input, callbacks)
 end
 
 --- AWS invoicing list-invoice-units operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invoice_units(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "list-invoice-units" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invoice_units(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "list-invoice-units" }, input, callbacks)
 end
 
 --- AWS invoicing list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS invoicing tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "tag-resource" }, input, callbacks)
 end
 
 --- AWS invoicing untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "untag-resource" }, input, callbacks)
 end
 
 --- AWS invoicing update-invoice-unit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_invoice_unit(input)
-	return common.execute_aws_command_skeleton({ "invoicing", "update-invoice-unit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_invoice_unit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "invoicing", "update-invoice-unit" }, input, callbacks)
 end
 
 return M

@@ -8,415 +8,474 @@ local M = {}
 
 --- AWS directconnect accept-direct-connect-gateway-association-proposal operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_direct_connect_gateway_association_proposal(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "accept-direct-connect-gateway-association-proposal" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_direct_connect_gateway_association_proposal(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "accept-direct-connect-gateway-association-proposal" }, input, callbacks)
 end
 
 --- AWS directconnect allocate-hosted-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.allocate_hosted_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "allocate-hosted-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.allocate_hosted_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "allocate-hosted-connection" }, input, callbacks)
 end
 
 --- AWS directconnect allocate-private-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.allocate_private_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "allocate-private-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.allocate_private_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "allocate-private-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect allocate-public-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.allocate_public_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "allocate-public-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.allocate_public_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "allocate-public-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect allocate-transit-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.allocate_transit_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "allocate-transit-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.allocate_transit_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "allocate-transit-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect associate-connection-with-lag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_connection_with_lag(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "associate-connection-with-lag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_connection_with_lag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "associate-connection-with-lag" }, input, callbacks)
 end
 
 --- AWS directconnect associate-hosted-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_hosted_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "associate-hosted-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_hosted_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "associate-hosted-connection" }, input, callbacks)
 end
 
 --- AWS directconnect associate-mac-sec-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_mac_sec_key(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "associate-mac-sec-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_mac_sec_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "associate-mac-sec-key" }, input, callbacks)
 end
 
 --- AWS directconnect associate-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "associate-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "associate-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect confirm-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.confirm_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "confirm-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.confirm_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "confirm-connection" }, input, callbacks)
 end
 
 --- AWS directconnect confirm-customer-agreement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.confirm_customer_agreement(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "confirm-customer-agreement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.confirm_customer_agreement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "confirm-customer-agreement" }, input, callbacks)
 end
 
 --- AWS directconnect confirm-private-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.confirm_private_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "confirm-private-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.confirm_private_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "confirm-private-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect confirm-public-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.confirm_public_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "confirm-public-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.confirm_public_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "confirm-public-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect confirm-transit-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.confirm_transit_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "confirm-transit-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.confirm_transit_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "confirm-transit-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect create-bgp-peer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bgp_peer(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-bgp-peer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bgp_peer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-bgp-peer" }, input, callbacks)
 end
 
 --- AWS directconnect create-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-connection" }, input, callbacks)
 end
 
 --- AWS directconnect create-direct-connect-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_direct_connect_gateway(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_direct_connect_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway" }, input, callbacks)
 end
 
 --- AWS directconnect create-direct-connect-gateway-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_direct_connect_gateway_association(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_direct_connect_gateway_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway-association" }, input, callbacks)
 end
 
 --- AWS directconnect create-direct-connect-gateway-association-proposal operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_direct_connect_gateway_association_proposal(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway-association-proposal" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_direct_connect_gateway_association_proposal(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-direct-connect-gateway-association-proposal" }, input, callbacks)
 end
 
 --- AWS directconnect create-interconnect operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_interconnect(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-interconnect" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_interconnect(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-interconnect" }, input, callbacks)
 end
 
 --- AWS directconnect create-lag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_lag(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-lag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_lag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-lag" }, input, callbacks)
 end
 
 --- AWS directconnect create-private-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_private_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-private-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_private_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-private-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect create-public-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_public_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-public-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_public_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-public-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect create-transit-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_transit_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "create-transit-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_transit_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "create-transit-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect delete-bgp-peer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bgp_peer(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-bgp-peer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bgp_peer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-bgp-peer" }, input, callbacks)
 end
 
 --- AWS directconnect delete-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-connection" }, input, callbacks)
 end
 
 --- AWS directconnect delete-direct-connect-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_direct_connect_gateway(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_direct_connect_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway" }, input, callbacks)
 end
 
 --- AWS directconnect delete-direct-connect-gateway-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_direct_connect_gateway_association(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_direct_connect_gateway_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway-association" }, input, callbacks)
 end
 
 --- AWS directconnect delete-direct-connect-gateway-association-proposal operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_direct_connect_gateway_association_proposal(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway-association-proposal" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_direct_connect_gateway_association_proposal(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-direct-connect-gateway-association-proposal" }, input, callbacks)
 end
 
 --- AWS directconnect delete-interconnect operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_interconnect(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-interconnect" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_interconnect(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-interconnect" }, input, callbacks)
 end
 
 --- AWS directconnect delete-lag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lag(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-lag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-lag" }, input, callbacks)
 end
 
 --- AWS directconnect delete-virtual-interface operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_virtual_interface(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "delete-virtual-interface" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_virtual_interface(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "delete-virtual-interface" }, input, callbacks)
 end
 
 --- AWS directconnect describe-connections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connections(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-connections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-connections" }, input, callbacks)
 end
 
 --- AWS directconnect describe-customer-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_customer_metadata(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-customer-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_customer_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-customer-metadata" }, input, callbacks)
 end
 
 --- AWS directconnect describe-direct-connect-gateway-association-proposals operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_direct_connect_gateway_association_proposals(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-association-proposals" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_direct_connect_gateway_association_proposals(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-association-proposals" }, input, callbacks)
 end
 
 --- AWS directconnect describe-direct-connect-gateway-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_direct_connect_gateway_associations(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_direct_connect_gateway_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-associations" }, input, callbacks)
 end
 
 --- AWS directconnect describe-direct-connect-gateway-attachments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_direct_connect_gateway_attachments(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-attachments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_direct_connect_gateway_attachments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateway-attachments" }, input, callbacks)
 end
 
 --- AWS directconnect describe-direct-connect-gateways operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_direct_connect_gateways(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateways" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_direct_connect_gateways(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-direct-connect-gateways" }, input, callbacks)
 end
 
 --- AWS directconnect describe-hosted-connections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_hosted_connections(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-hosted-connections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_hosted_connections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-hosted-connections" }, input, callbacks)
 end
 
 --- AWS directconnect describe-interconnects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_interconnects(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-interconnects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_interconnects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-interconnects" }, input, callbacks)
 end
 
 --- AWS directconnect describe-lags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_lags(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-lags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_lags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-lags" }, input, callbacks)
 end
 
 --- AWS directconnect describe-loa operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_loa(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-loa" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_loa(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-loa" }, input, callbacks)
 end
 
 --- AWS directconnect describe-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_locations(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-locations" }, input, callbacks)
 end
 
 --- AWS directconnect describe-router-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_router_configuration(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-router-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_router_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-router-configuration" }, input, callbacks)
 end
 
 --- AWS directconnect describe-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tags(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-tags" }, input, callbacks)
 end
 
 --- AWS directconnect describe-virtual-gateways operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_virtual_gateways(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-virtual-gateways" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_virtual_gateways(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-virtual-gateways" }, input, callbacks)
 end
 
 --- AWS directconnect describe-virtual-interfaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_virtual_interfaces(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "describe-virtual-interfaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_virtual_interfaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "describe-virtual-interfaces" }, input, callbacks)
 end
 
 --- AWS directconnect disassociate-connection-from-lag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_connection_from_lag(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "disassociate-connection-from-lag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_connection_from_lag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "disassociate-connection-from-lag" }, input, callbacks)
 end
 
 --- AWS directconnect disassociate-mac-sec-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_mac_sec_key(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "disassociate-mac-sec-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_mac_sec_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "disassociate-mac-sec-key" }, input, callbacks)
 end
 
 --- AWS directconnect list-virtual-interface-test-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_virtual_interface_test_history(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "list-virtual-interface-test-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_virtual_interface_test_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "list-virtual-interface-test-history" }, input, callbacks)
 end
 
 --- AWS directconnect start-bgp-failover-test operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_bgp_failover_test(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "start-bgp-failover-test" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_bgp_failover_test(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "start-bgp-failover-test" }, input, callbacks)
 end
 
 --- AWS directconnect stop-bgp-failover-test operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_bgp_failover_test(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "stop-bgp-failover-test" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_bgp_failover_test(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "stop-bgp-failover-test" }, input, callbacks)
 end
 
 --- AWS directconnect tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "tag-resource" }, input, callbacks)
 end
 
 --- AWS directconnect untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "untag-resource" }, input, callbacks)
 end
 
 --- AWS directconnect update-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_connection(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "update-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "update-connection" }, input, callbacks)
 end
 
 --- AWS directconnect update-direct-connect-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_direct_connect_gateway(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "update-direct-connect-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_direct_connect_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "update-direct-connect-gateway" }, input, callbacks)
 end
 
 --- AWS directconnect update-direct-connect-gateway-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_direct_connect_gateway_association(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "update-direct-connect-gateway-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_direct_connect_gateway_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "update-direct-connect-gateway-association" }, input, callbacks)
 end
 
 --- AWS directconnect update-lag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_lag(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "update-lag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_lag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "update-lag" }, input, callbacks)
 end
 
 --- AWS directconnect update-virtual-interface-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_virtual_interface_attributes(input)
-	return common.execute_aws_command_skeleton({ "directconnect", "update-virtual-interface-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_virtual_interface_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "directconnect", "update-virtual-interface-attributes" }, input, callbacks)
 end
 
 return M

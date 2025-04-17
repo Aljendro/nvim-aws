@@ -8,30 +8,34 @@ local M = {}
 
 --- AWS meteringmarketplace batch-meter-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_meter_usage(input)
-	return common.execute_aws_command_skeleton({ "meteringmarketplace", "batch-meter-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_meter_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "batch-meter-usage" }, input, callbacks)
 end
 
 --- AWS meteringmarketplace meter-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.meter_usage(input)
-	return common.execute_aws_command_skeleton({ "meteringmarketplace", "meter-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.meter_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "meter-usage" }, input, callbacks)
 end
 
 --- AWS meteringmarketplace register-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_usage(input)
-	return common.execute_aws_command_skeleton({ "meteringmarketplace", "register-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "register-usage" }, input, callbacks)
 end
 
 --- AWS meteringmarketplace resolve-customer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resolve_customer(input)
-	return common.execute_aws_command_skeleton({ "meteringmarketplace", "resolve-customer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resolve_customer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "resolve-customer" }, input, callbacks)
 end
 
 return M

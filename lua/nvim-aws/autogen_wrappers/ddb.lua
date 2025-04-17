@@ -8,16 +8,18 @@ local M = {}
 
 --- AWS ddb put operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put(input)
-	return common.execute_aws_command({ "ddb", "put" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put(input, callbacks)
+	return common.execute_aws_command({ "ddb", "put" }, input, callbacks)
 end
 
 --- AWS ddb select operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.select(input)
-	return common.execute_aws_command({ "ddb", "select" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.select(input, callbacks)
+	return common.execute_aws_command({ "ddb", "select" }, input, callbacks)
 end
 
 return M

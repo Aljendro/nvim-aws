@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS payment-cryptography-data decrypt-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.decrypt_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "decrypt-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.decrypt_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "decrypt-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data encrypt-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.encrypt_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "encrypt-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.encrypt_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "encrypt-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data generate-card-validation-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_card_validation_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-card-validation-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_card_validation_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-card-validation-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data generate-mac operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_mac(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-mac" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_mac(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-mac" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data generate-mac-emv-pin-change operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_mac_emv_pin_change(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-mac-emv-pin-change" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_mac_emv_pin_change(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-mac-emv-pin-change" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data generate-pin-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_pin_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-pin-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_pin_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "generate-pin-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data re-encrypt-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.re_encrypt_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "re-encrypt-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.re_encrypt_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "re-encrypt-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data translate-pin-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.translate_pin_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "translate-pin-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.translate_pin_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "translate-pin-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data verify-auth-request-cryptogram operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_auth_request_cryptogram(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-auth-request-cryptogram" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_auth_request_cryptogram(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-auth-request-cryptogram" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data verify-card-validation-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_card_validation_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-card-validation-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_card_validation_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-card-validation-data" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data verify-mac operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_mac(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-mac" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_mac(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-mac" }, input, callbacks)
 end
 
 --- AWS payment-cryptography-data verify-pin-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_pin_data(input)
-	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-pin-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_pin_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "payment-cryptography-data", "verify-pin-data" }, input, callbacks)
 end
 
 return M

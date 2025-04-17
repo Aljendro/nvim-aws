@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS rds-data batch-execute-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_execute_statement(input)
-	return common.execute_aws_command_skeleton({ "rds-data", "batch-execute-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_execute_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds-data", "batch-execute-statement" }, input, callbacks)
 end
 
 --- AWS rds-data begin-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.begin_transaction(input)
-	return common.execute_aws_command_skeleton({ "rds-data", "begin-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.begin_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds-data", "begin-transaction" }, input, callbacks)
 end
 
 --- AWS rds-data commit-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.commit_transaction(input)
-	return common.execute_aws_command_skeleton({ "rds-data", "commit-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.commit_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds-data", "commit-transaction" }, input, callbacks)
 end
 
 --- AWS rds-data execute-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.execute_statement(input)
-	return common.execute_aws_command_skeleton({ "rds-data", "execute-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.execute_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds-data", "execute-statement" }, input, callbacks)
 end
 
 --- AWS rds-data rollback-transaction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rollback_transaction(input)
-	return common.execute_aws_command_skeleton({ "rds-data", "rollback-transaction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rollback_transaction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds-data", "rollback-transaction" }, input, callbacks)
 end
 
 return M

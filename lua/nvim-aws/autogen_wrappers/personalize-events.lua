@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS personalize-events put-action-interactions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_action_interactions(input)
-	return common.execute_aws_command_skeleton({ "personalize-events", "put-action-interactions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_action_interactions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-events", "put-action-interactions" }, input, callbacks)
 end
 
 --- AWS personalize-events put-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_actions(input)
-	return common.execute_aws_command_skeleton({ "personalize-events", "put-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-events", "put-actions" }, input, callbacks)
 end
 
 --- AWS personalize-events put-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_events(input)
-	return common.execute_aws_command_skeleton({ "personalize-events", "put-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-events", "put-events" }, input, callbacks)
 end
 
 --- AWS personalize-events put-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_items(input)
-	return common.execute_aws_command_skeleton({ "personalize-events", "put-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-events", "put-items" }, input, callbacks)
 end
 
 --- AWS personalize-events put-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_users(input)
-	return common.execute_aws_command_skeleton({ "personalize-events", "put-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-events", "put-users" }, input, callbacks)
 end
 
 return M

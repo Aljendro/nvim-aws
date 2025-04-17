@@ -8,72 +8,82 @@ local M = {}
 
 --- AWS sdb batch-delete-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_attributes(input)
-	return common.execute_aws_command_skeleton({ "sdb", "batch-delete-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "batch-delete-attributes" }, input, callbacks)
 end
 
 --- AWS sdb batch-put-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_put_attributes(input)
-	return common.execute_aws_command_skeleton({ "sdb", "batch-put-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_put_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "batch-put-attributes" }, input, callbacks)
 end
 
 --- AWS sdb create-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain(input)
-	return common.execute_aws_command_skeleton({ "sdb", "create-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "create-domain" }, input, callbacks)
 end
 
 --- AWS sdb delete-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_attributes(input)
-	return common.execute_aws_command_skeleton({ "sdb", "delete-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "delete-attributes" }, input, callbacks)
 end
 
 --- AWS sdb delete-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain(input)
-	return common.execute_aws_command_skeleton({ "sdb", "delete-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "delete-domain" }, input, callbacks)
 end
 
 --- AWS sdb domain-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.domain_metadata(input)
-	return common.execute_aws_command_skeleton({ "sdb", "domain-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.domain_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "domain-metadata" }, input, callbacks)
 end
 
 --- AWS sdb get-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attributes(input)
-	return common.execute_aws_command_skeleton({ "sdb", "get-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "get-attributes" }, input, callbacks)
 end
 
 --- AWS sdb list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "sdb", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "list-domains" }, input, callbacks)
 end
 
 --- AWS sdb put-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_attributes(input)
-	return common.execute_aws_command_skeleton({ "sdb", "put-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "put-attributes" }, input, callbacks)
 end
 
 --- AWS sdb select operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.select(input)
-	return common.execute_aws_command_skeleton({ "sdb", "select" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.select(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sdb", "select" }, input, callbacks)
 end
 
 return M

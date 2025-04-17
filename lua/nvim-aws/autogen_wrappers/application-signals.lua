@@ -8,121 +8,138 @@ local M = {}
 
 --- AWS application-signals batch-get-service-level-objective-budget-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_service_level_objective_budget_report(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "batch-get-service-level-objective-budget-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_service_level_objective_budget_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "batch-get-service-level-objective-budget-report" }, input, callbacks)
 end
 
 --- AWS application-signals batch-update-exclusion-windows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_exclusion_windows(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "batch-update-exclusion-windows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_exclusion_windows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "batch-update-exclusion-windows" }, input, callbacks)
 end
 
 --- AWS application-signals create-service-level-objective operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_service_level_objective(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "create-service-level-objective" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_service_level_objective(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "create-service-level-objective" }, input, callbacks)
 end
 
 --- AWS application-signals delete-service-level-objective operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_service_level_objective(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "delete-service-level-objective" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_service_level_objective(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "delete-service-level-objective" }, input, callbacks)
 end
 
 --- AWS application-signals get-service operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "get-service" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "get-service" }, input, callbacks)
 end
 
 --- AWS application-signals get-service-level-objective operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service_level_objective(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "get-service-level-objective" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service_level_objective(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "get-service-level-objective" }, input, callbacks)
 end
 
 --- AWS application-signals list-service-dependencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_dependencies(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-service-dependencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_dependencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-service-dependencies" }, input, callbacks)
 end
 
 --- AWS application-signals list-service-dependents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_dependents(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-service-dependents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_dependents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-service-dependents" }, input, callbacks)
 end
 
 --- AWS application-signals list-service-level-objective-exclusion-windows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_level_objective_exclusion_windows(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-service-level-objective-exclusion-windows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_level_objective_exclusion_windows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-service-level-objective-exclusion-windows" }, input, callbacks)
 end
 
 --- AWS application-signals list-service-level-objectives operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_level_objectives(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-service-level-objectives" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_level_objectives(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-service-level-objectives" }, input, callbacks)
 end
 
 --- AWS application-signals list-service-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_service_operations(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-service-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_service_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-service-operations" }, input, callbacks)
 end
 
 --- AWS application-signals list-services operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_services(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-services" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_services(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-services" }, input, callbacks)
 end
 
 --- AWS application-signals list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS application-signals start-discovery operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_discovery(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "start-discovery" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_discovery(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "start-discovery" }, input, callbacks)
 end
 
 --- AWS application-signals tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "tag-resource" }, input, callbacks)
 end
 
 --- AWS application-signals untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "untag-resource" }, input, callbacks)
 end
 
 --- AWS application-signals update-service-level-objective operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_service_level_objective(input)
-	return common.execute_aws_command_skeleton({ "application-signals", "update-service-level-objective" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_service_level_objective(input, callbacks)
+	return common.execute_aws_command_skeleton({ "application-signals", "update-service-level-objective" }, input, callbacks)
 end
 
 return M

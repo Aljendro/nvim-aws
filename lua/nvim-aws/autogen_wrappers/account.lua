@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS account accept-primary-email-update operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_primary_email_update(input)
-	return common.execute_aws_command_skeleton({ "account", "accept-primary-email-update" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_primary_email_update(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "accept-primary-email-update" }, input, callbacks)
 end
 
 --- AWS account delete-alternate-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alternate_contact(input)
-	return common.execute_aws_command_skeleton({ "account", "delete-alternate-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alternate_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "delete-alternate-contact" }, input, callbacks)
 end
 
 --- AWS account disable-region operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_region(input)
-	return common.execute_aws_command_skeleton({ "account", "disable-region" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_region(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "disable-region" }, input, callbacks)
 end
 
 --- AWS account enable-region operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_region(input)
-	return common.execute_aws_command_skeleton({ "account", "enable-region" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_region(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "enable-region" }, input, callbacks)
 end
 
 --- AWS account get-alternate-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_alternate_contact(input)
-	return common.execute_aws_command_skeleton({ "account", "get-alternate-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_alternate_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "get-alternate-contact" }, input, callbacks)
 end
 
 --- AWS account get-contact-information operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact_information(input)
-	return common.execute_aws_command_skeleton({ "account", "get-contact-information" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact_information(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "get-contact-information" }, input, callbacks)
 end
 
 --- AWS account get-primary-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_primary_email(input)
-	return common.execute_aws_command_skeleton({ "account", "get-primary-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_primary_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "get-primary-email" }, input, callbacks)
 end
 
 --- AWS account get-region-opt-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_region_opt_status(input)
-	return common.execute_aws_command_skeleton({ "account", "get-region-opt-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_region_opt_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "get-region-opt-status" }, input, callbacks)
 end
 
 --- AWS account list-regions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_regions(input)
-	return common.execute_aws_command_skeleton({ "account", "list-regions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_regions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "list-regions" }, input, callbacks)
 end
 
 --- AWS account put-alternate-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_alternate_contact(input)
-	return common.execute_aws_command_skeleton({ "account", "put-alternate-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_alternate_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "put-alternate-contact" }, input, callbacks)
 end
 
 --- AWS account put-contact-information operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_contact_information(input)
-	return common.execute_aws_command_skeleton({ "account", "put-contact-information" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_contact_information(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "put-contact-information" }, input, callbacks)
 end
 
 --- AWS account start-primary-email-update operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_primary_email_update(input)
-	return common.execute_aws_command_skeleton({ "account", "start-primary-email-update" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_primary_email_update(input, callbacks)
+	return common.execute_aws_command_skeleton({ "account", "start-primary-email-update" }, input, callbacks)
 end
 
 return M

@@ -8,401 +8,458 @@ local M = {}
 
 --- AWS iot-managed-integrations create-credential-locker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_credential_locker(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-credential-locker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_credential_locker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-credential-locker" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_destination(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-destination" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-event-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-event-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-event-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-managed-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_managed_thing(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-managed-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_managed_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-managed-thing" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-notification-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-ota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ota_task(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-ota-task-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ota_task_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ota_task_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations create-provisioning-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_provisioning_profile(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-provisioning-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_provisioning_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-provisioning-profile" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-credential-locker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_credential_locker(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-credential-locker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_credential_locker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-credential-locker" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_destination(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-destination" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-event-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-event-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-event-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-managed-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_managed_thing(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-managed-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_managed_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-managed-thing" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-notification-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-ota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ota_task(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-ota-task-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ota_task_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ota_task_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations delete-provisioning-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_provisioning_profile(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-provisioning-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_provisioning_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-provisioning-profile" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-credential-locker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_credential_locker(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-credential-locker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_credential_locker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-credential-locker" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-custom-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_custom_endpoint(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-custom-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_custom_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-custom-endpoint" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-default-encryption-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_default_encryption_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-default-encryption-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_default_encryption_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-default-encryption-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_destination(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-destination" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-device-discovery operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_discovery(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-device-discovery" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_discovery(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-device-discovery" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-event-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-event-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-event-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-hub-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hub_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-hub-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hub_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-hub-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-managed-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_thing(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-capabilities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_thing_capabilities(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-capabilities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_thing_capabilities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-capabilities" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-connectivity-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_thing_connectivity_data(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-connectivity-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_thing_connectivity_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-connectivity-data" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-meta-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_thing_meta_data(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-meta-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_thing_meta_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-meta-data" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_thing_state(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_thing_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-state" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-notification-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-ota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ota_task(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-ota-task-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ota_task_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ota_task_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-provisioning-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_provisioning_profile(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-provisioning-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_provisioning_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-provisioning-profile" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-runtime-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_runtime_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-runtime-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_runtime_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-runtime-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations get-schema-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_version(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-schema-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-schema-version" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-credential-lockers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_credential_lockers(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-credential-lockers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_credential_lockers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-credential-lockers" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_destinations(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-destinations" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-event-log-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_log_configurations(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-event-log-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_log_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-event-log-configurations" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-managed-thing-schemas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_managed_thing_schemas(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-thing-schemas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_managed_thing_schemas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-thing-schemas" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-managed-things operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_managed_things(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-things" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_managed_things(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-things" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-notification-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_notification_configurations(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-notification-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_notification_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-notification-configurations" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-ota-task-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ota_task_configurations(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ota_task_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-configurations" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-ota-task-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ota_task_executions(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ota_task_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-executions" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-ota-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ota_tasks(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ota_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-tasks" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-provisioning-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_provisioning_profiles(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-provisioning-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_provisioning_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-provisioning-profiles" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations list-schema-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schema_versions(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-schema-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schema_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-schema-versions" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations put-default-encryption-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_default_encryption_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-default-encryption-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_default_encryption_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-default-encryption-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations put-hub-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_hub_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-hub-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_hub_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-hub-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations put-runtime-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_runtime_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-runtime-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_runtime_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-runtime-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations register-custom-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_custom_endpoint(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "register-custom-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_custom_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "register-custom-endpoint" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations reset-runtime-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_runtime_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "reset-runtime-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_runtime_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "reset-runtime-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations send-managed-thing-command operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_managed_thing_command(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "send-managed-thing-command" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_managed_thing_command(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "send-managed-thing-command" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations start-device-discovery operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_device_discovery(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "start-device-discovery" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_device_discovery(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "start-device-discovery" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations update-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_destination(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-destination" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations update-event-log-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_log_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-event-log-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_log_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-event-log-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations update-managed-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_managed_thing(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-managed-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_managed_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-managed-thing" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations update-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-notification-configuration" }, input, callbacks)
 end
 
 --- AWS iot-managed-integrations update-ota-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ota_task(input)
-	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-ota-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ota_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-ota-task" }, input, callbacks)
 end
 
 return M

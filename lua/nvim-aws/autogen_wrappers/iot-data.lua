@@ -8,51 +8,58 @@ local M = {}
 
 --- AWS iot-data delete-thing-shadow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_thing_shadow(input)
-	return common.execute_aws_command({ "iot-data", "delete-thing-shadow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_thing_shadow(input, callbacks)
+	return common.execute_aws_command({ "iot-data", "delete-thing-shadow" }, input, callbacks)
 end
 
 --- AWS iot-data get-retained-message operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_retained_message(input)
-	return common.execute_aws_command_skeleton({ "iot-data", "get-retained-message" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_retained_message(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-data", "get-retained-message" }, input, callbacks)
 end
 
 --- AWS iot-data get-thing-shadow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_thing_shadow(input)
-	return common.execute_aws_command({ "iot-data", "get-thing-shadow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_thing_shadow(input, callbacks)
+	return common.execute_aws_command({ "iot-data", "get-thing-shadow" }, input, callbacks)
 end
 
 --- AWS iot-data list-named-shadows-for-thing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_named_shadows_for_thing(input)
-	return common.execute_aws_command_skeleton({ "iot-data", "list-named-shadows-for-thing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_named_shadows_for_thing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-data", "list-named-shadows-for-thing" }, input, callbacks)
 end
 
 --- AWS iot-data list-retained-messages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_retained_messages(input)
-	return common.execute_aws_command_skeleton({ "iot-data", "list-retained-messages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_retained_messages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-data", "list-retained-messages" }, input, callbacks)
 end
 
 --- AWS iot-data publish operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.publish(input)
-	return common.execute_aws_command_skeleton({ "iot-data", "publish" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.publish(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-data", "publish" }, input, callbacks)
 end
 
 --- AWS iot-data update-thing-shadow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_thing_shadow(input)
-	return common.execute_aws_command({ "iot-data", "update-thing-shadow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_thing_shadow(input, callbacks)
+	return common.execute_aws_command({ "iot-data", "update-thing-shadow" }, input, callbacks)
 end
 
 return M

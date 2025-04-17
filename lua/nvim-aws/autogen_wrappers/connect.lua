@@ -8,1976 +8,2258 @@ local M = {}
 
 --- AWS connect activate-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "activate-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "activate-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect associate-analytics-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_analytics_data_set(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-analytics-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_analytics_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-analytics-data-set" }, input, callbacks)
 end
 
 --- AWS connect associate-approved-origin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_approved_origin(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-approved-origin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_approved_origin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-approved-origin" }, input, callbacks)
 end
 
 --- AWS connect associate-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_bot(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-bot" }, input, callbacks)
 end
 
 --- AWS connect associate-default-vocabulary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_default_vocabulary(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-default-vocabulary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_default_vocabulary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-default-vocabulary" }, input, callbacks)
 end
 
 --- AWS connect associate-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-flow" }, input, callbacks)
 end
 
 --- AWS connect associate-instance-storage-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_instance_storage_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-instance-storage-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_instance_storage_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-instance-storage-config" }, input, callbacks)
 end
 
 --- AWS connect associate-lambda-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_lambda_function(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-lambda-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_lambda_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-lambda-function" }, input, callbacks)
 end
 
 --- AWS connect associate-lex-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_lex_bot(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-lex-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_lex_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-lex-bot" }, input, callbacks)
 end
 
 --- AWS connect associate-phone-number-contact-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_phone_number_contact_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-phone-number-contact-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_phone_number_contact_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-phone-number-contact-flow" }, input, callbacks)
 end
 
 --- AWS connect associate-queue-quick-connects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_queue_quick_connects(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-queue-quick-connects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_queue_quick_connects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-queue-quick-connects" }, input, callbacks)
 end
 
 --- AWS connect associate-routing-profile-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_routing_profile_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-routing-profile-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_routing_profile_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-routing-profile-queues" }, input, callbacks)
 end
 
 --- AWS connect associate-security-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_security_key(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-security-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_security_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-security-key" }, input, callbacks)
 end
 
 --- AWS connect associate-traffic-distribution-group-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_traffic_distribution_group_user(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-traffic-distribution-group-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_traffic_distribution_group_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-traffic-distribution-group-user" }, input, callbacks)
 end
 
 --- AWS connect associate-user-proficiencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_user_proficiencies(input)
-	return common.execute_aws_command_skeleton({ "connect", "associate-user-proficiencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_user_proficiencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "associate-user-proficiencies" }, input, callbacks)
 end
 
 --- AWS connect batch-associate-analytics-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_associate_analytics_data_set(input)
-	return common.execute_aws_command_skeleton({ "connect", "batch-associate-analytics-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_associate_analytics_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "batch-associate-analytics-data-set" }, input, callbacks)
 end
 
 --- AWS connect batch-disassociate-analytics-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_disassociate_analytics_data_set(input)
-	return common.execute_aws_command_skeleton({ "connect", "batch-disassociate-analytics-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_disassociate_analytics_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "batch-disassociate-analytics-data-set" }, input, callbacks)
 end
 
 --- AWS connect batch-get-attached-file-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_attached_file_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "batch-get-attached-file-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_attached_file_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "batch-get-attached-file-metadata" }, input, callbacks)
 end
 
 --- AWS connect batch-get-flow-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_flow_association(input)
-	return common.execute_aws_command_skeleton({ "connect", "batch-get-flow-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_flow_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "batch-get-flow-association" }, input, callbacks)
 end
 
 --- AWS connect batch-put-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_put_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "batch-put-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_put_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "batch-put-contact" }, input, callbacks)
 end
 
 --- AWS connect claim-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.claim_phone_number(input)
-	return common.execute_aws_command_skeleton({ "connect", "claim-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.claim_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "claim-phone-number" }, input, callbacks)
 end
 
 --- AWS connect complete-attached-file-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.complete_attached_file_upload(input)
-	return common.execute_aws_command_skeleton({ "connect", "complete-attached-file-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.complete_attached_file_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "complete-attached-file-upload" }, input, callbacks)
 end
 
 --- AWS connect create-agent-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_agent_status(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-agent-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_agent_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-agent-status" }, input, callbacks)
 end
 
 --- AWS connect create-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-contact" }, input, callbacks)
 end
 
 --- AWS connect create-contact-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow" }, input, callbacks)
 end
 
 --- AWS connect create-contact-flow-module operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact_flow_module(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow-module" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact_flow_module(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow-module" }, input, callbacks)
 end
 
 --- AWS connect create-contact-flow-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact_flow_version(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact_flow_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-contact-flow-version" }, input, callbacks)
 end
 
 --- AWS connect create-email-address operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_email_address(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-email-address" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_email_address(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-email-address" }, input, callbacks)
 end
 
 --- AWS connect create-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect create-hours-of-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_hours_of_operation(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-hours-of-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_hours_of_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-hours-of-operation" }, input, callbacks)
 end
 
 --- AWS connect create-hours-of-operation-override operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_hours_of_operation_override(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-hours-of-operation-override" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_hours_of_operation_override(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-hours-of-operation-override" }, input, callbacks)
 end
 
 --- AWS connect create-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_instance(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-instance" }, input, callbacks)
 end
 
 --- AWS connect create-integration-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration_association(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-integration-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-integration-association" }, input, callbacks)
 end
 
 --- AWS connect create-participant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_participant(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-participant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_participant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-participant" }, input, callbacks)
 end
 
 --- AWS connect create-persistent-contact-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_persistent_contact_association(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-persistent-contact-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_persistent_contact_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-persistent-contact-association" }, input, callbacks)
 end
 
 --- AWS connect create-predefined-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_predefined_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-predefined-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_predefined_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-predefined-attribute" }, input, callbacks)
 end
 
 --- AWS connect create-prompt operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_prompt(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-prompt" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_prompt(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-prompt" }, input, callbacks)
 end
 
 --- AWS connect create-push-notification-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_push_notification_registration(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-push-notification-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_push_notification_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-push-notification-registration" }, input, callbacks)
 end
 
 --- AWS connect create-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-queue" }, input, callbacks)
 end
 
 --- AWS connect create-quick-connect operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_quick_connect(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-quick-connect" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_quick_connect(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-quick-connect" }, input, callbacks)
 end
 
 --- AWS connect create-routing-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_routing_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-routing-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_routing_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-routing-profile" }, input, callbacks)
 end
 
 --- AWS connect create-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_rule(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-rule" }, input, callbacks)
 end
 
 --- AWS connect create-security-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_security_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-security-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_security_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-security-profile" }, input, callbacks)
 end
 
 --- AWS connect create-task-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_task_template(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-task-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_task_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-task-template" }, input, callbacks)
 end
 
 --- AWS connect create-traffic-distribution-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_traffic_distribution_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-traffic-distribution-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_traffic_distribution_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-traffic-distribution-group" }, input, callbacks)
 end
 
 --- AWS connect create-use-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_use_case(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-use-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_use_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-use-case" }, input, callbacks)
 end
 
 --- AWS connect create-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-user" }, input, callbacks)
 end
 
 --- AWS connect create-user-hierarchy-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user_hierarchy_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-user-hierarchy-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user_hierarchy_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-user-hierarchy-group" }, input, callbacks)
 end
 
 --- AWS connect create-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_view(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-view" }, input, callbacks)
 end
 
 --- AWS connect create-view-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_view_version(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-view-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_view_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-view-version" }, input, callbacks)
 end
 
 --- AWS connect create-vocabulary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_vocabulary(input)
-	return common.execute_aws_command_skeleton({ "connect", "create-vocabulary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_vocabulary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "create-vocabulary" }, input, callbacks)
 end
 
 --- AWS connect deactivate-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deactivate_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "deactivate-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deactivate_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "deactivate-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect delete-attached-file operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_attached_file(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-attached-file" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_attached_file(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-attached-file" }, input, callbacks)
 end
 
 --- AWS connect delete-contact-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_evaluation(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-contact-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-contact-evaluation" }, input, callbacks)
 end
 
 --- AWS connect delete-contact-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow" }, input, callbacks)
 end
 
 --- AWS connect delete-contact-flow-module operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_flow_module(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow-module" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_flow_module(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow-module" }, input, callbacks)
 end
 
 --- AWS connect delete-contact-flow-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_flow_version(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_flow_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-contact-flow-version" }, input, callbacks)
 end
 
 --- AWS connect delete-email-address operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_email_address(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-email-address" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_email_address(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-email-address" }, input, callbacks)
 end
 
 --- AWS connect delete-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect delete-hours-of-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_hours_of_operation(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-hours-of-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_hours_of_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-hours-of-operation" }, input, callbacks)
 end
 
 --- AWS connect delete-hours-of-operation-override operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_hours_of_operation_override(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-hours-of-operation-override" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_hours_of_operation_override(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-hours-of-operation-override" }, input, callbacks)
 end
 
 --- AWS connect delete-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_instance(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-instance" }, input, callbacks)
 end
 
 --- AWS connect delete-integration-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration_association(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-integration-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-integration-association" }, input, callbacks)
 end
 
 --- AWS connect delete-predefined-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_predefined_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-predefined-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_predefined_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-predefined-attribute" }, input, callbacks)
 end
 
 --- AWS connect delete-prompt operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_prompt(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-prompt" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_prompt(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-prompt" }, input, callbacks)
 end
 
 --- AWS connect delete-push-notification-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_push_notification_registration(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-push-notification-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_push_notification_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-push-notification-registration" }, input, callbacks)
 end
 
 --- AWS connect delete-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-queue" }, input, callbacks)
 end
 
 --- AWS connect delete-quick-connect operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_quick_connect(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-quick-connect" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_quick_connect(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-quick-connect" }, input, callbacks)
 end
 
 --- AWS connect delete-routing-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_routing_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-routing-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_routing_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-routing-profile" }, input, callbacks)
 end
 
 --- AWS connect delete-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rule(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-rule" }, input, callbacks)
 end
 
 --- AWS connect delete-security-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_security_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-security-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_security_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-security-profile" }, input, callbacks)
 end
 
 --- AWS connect delete-task-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_task_template(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-task-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_task_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-task-template" }, input, callbacks)
 end
 
 --- AWS connect delete-traffic-distribution-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_traffic_distribution_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-traffic-distribution-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_traffic_distribution_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-traffic-distribution-group" }, input, callbacks)
 end
 
 --- AWS connect delete-use-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_use_case(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-use-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_use_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-use-case" }, input, callbacks)
 end
 
 --- AWS connect delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-user" }, input, callbacks)
 end
 
 --- AWS connect delete-user-hierarchy-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user_hierarchy_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-user-hierarchy-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user_hierarchy_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-user-hierarchy-group" }, input, callbacks)
 end
 
 --- AWS connect delete-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_view(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-view" }, input, callbacks)
 end
 
 --- AWS connect delete-view-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_view_version(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-view-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_view_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-view-version" }, input, callbacks)
 end
 
 --- AWS connect delete-vocabulary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_vocabulary(input)
-	return common.execute_aws_command_skeleton({ "connect", "delete-vocabulary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_vocabulary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "delete-vocabulary" }, input, callbacks)
 end
 
 --- AWS connect describe-agent-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_agent_status(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-agent-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_agent_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-agent-status" }, input, callbacks)
 end
 
 --- AWS connect describe-authentication-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_authentication_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-authentication-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_authentication_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-authentication-profile" }, input, callbacks)
 end
 
 --- AWS connect describe-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-contact" }, input, callbacks)
 end
 
 --- AWS connect describe-contact-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_contact_evaluation(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-contact-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_contact_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-contact-evaluation" }, input, callbacks)
 end
 
 --- AWS connect describe-contact-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_contact_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-contact-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_contact_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-contact-flow" }, input, callbacks)
 end
 
 --- AWS connect describe-contact-flow-module operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_contact_flow_module(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-contact-flow-module" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_contact_flow_module(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-contact-flow-module" }, input, callbacks)
 end
 
 --- AWS connect describe-email-address operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_email_address(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-email-address" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_email_address(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-email-address" }, input, callbacks)
 end
 
 --- AWS connect describe-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect describe-hours-of-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_hours_of_operation(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-hours-of-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_hours_of_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-hours-of-operation" }, input, callbacks)
 end
 
 --- AWS connect describe-hours-of-operation-override operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_hours_of_operation_override(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-hours-of-operation-override" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_hours_of_operation_override(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-hours-of-operation-override" }, input, callbacks)
 end
 
 --- AWS connect describe-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_instance(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-instance" }, input, callbacks)
 end
 
 --- AWS connect describe-instance-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_instance_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-instance-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_instance_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-instance-attribute" }, input, callbacks)
 end
 
 --- AWS connect describe-instance-storage-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_instance_storage_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-instance-storage-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_instance_storage_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-instance-storage-config" }, input, callbacks)
 end
 
 --- AWS connect describe-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_phone_number(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-phone-number" }, input, callbacks)
 end
 
 --- AWS connect describe-predefined-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_predefined_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-predefined-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_predefined_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-predefined-attribute" }, input, callbacks)
 end
 
 --- AWS connect describe-prompt operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_prompt(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-prompt" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_prompt(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-prompt" }, input, callbacks)
 end
 
 --- AWS connect describe-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_queue(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-queue" }, input, callbacks)
 end
 
 --- AWS connect describe-quick-connect operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_quick_connect(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-quick-connect" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_quick_connect(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-quick-connect" }, input, callbacks)
 end
 
 --- AWS connect describe-routing-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_routing_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-routing-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_routing_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-routing-profile" }, input, callbacks)
 end
 
 --- AWS connect describe-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_rule(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-rule" }, input, callbacks)
 end
 
 --- AWS connect describe-security-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_security_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-security-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_security_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-security-profile" }, input, callbacks)
 end
 
 --- AWS connect describe-traffic-distribution-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_traffic_distribution_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-traffic-distribution-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_traffic_distribution_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-traffic-distribution-group" }, input, callbacks)
 end
 
 --- AWS connect describe-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-user" }, input, callbacks)
 end
 
 --- AWS connect describe-user-hierarchy-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user_hierarchy_group(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-user-hierarchy-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user_hierarchy_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-user-hierarchy-group" }, input, callbacks)
 end
 
 --- AWS connect describe-user-hierarchy-structure operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user_hierarchy_structure(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-user-hierarchy-structure" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user_hierarchy_structure(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-user-hierarchy-structure" }, input, callbacks)
 end
 
 --- AWS connect describe-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_view(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-view" }, input, callbacks)
 end
 
 --- AWS connect describe-vocabulary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_vocabulary(input)
-	return common.execute_aws_command_skeleton({ "connect", "describe-vocabulary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_vocabulary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "describe-vocabulary" }, input, callbacks)
 end
 
 --- AWS connect disassociate-analytics-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_analytics_data_set(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-analytics-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_analytics_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-analytics-data-set" }, input, callbacks)
 end
 
 --- AWS connect disassociate-approved-origin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_approved_origin(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-approved-origin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_approved_origin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-approved-origin" }, input, callbacks)
 end
 
 --- AWS connect disassociate-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_bot(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-bot" }, input, callbacks)
 end
 
 --- AWS connect disassociate-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-flow" }, input, callbacks)
 end
 
 --- AWS connect disassociate-instance-storage-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_instance_storage_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-instance-storage-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_instance_storage_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-instance-storage-config" }, input, callbacks)
 end
 
 --- AWS connect disassociate-lambda-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_lambda_function(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-lambda-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_lambda_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-lambda-function" }, input, callbacks)
 end
 
 --- AWS connect disassociate-lex-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_lex_bot(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-lex-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_lex_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-lex-bot" }, input, callbacks)
 end
 
 --- AWS connect disassociate-phone-number-contact-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_phone_number_contact_flow(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-phone-number-contact-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_phone_number_contact_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-phone-number-contact-flow" }, input, callbacks)
 end
 
 --- AWS connect disassociate-queue-quick-connects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_queue_quick_connects(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-queue-quick-connects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_queue_quick_connects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-queue-quick-connects" }, input, callbacks)
 end
 
 --- AWS connect disassociate-routing-profile-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_routing_profile_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-routing-profile-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_routing_profile_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-routing-profile-queues" }, input, callbacks)
 end
 
 --- AWS connect disassociate-security-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_security_key(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-security-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_security_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-security-key" }, input, callbacks)
 end
 
 --- AWS connect disassociate-traffic-distribution-group-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_traffic_distribution_group_user(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-traffic-distribution-group-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_traffic_distribution_group_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-traffic-distribution-group-user" }, input, callbacks)
 end
 
 --- AWS connect disassociate-user-proficiencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_user_proficiencies(input)
-	return common.execute_aws_command_skeleton({ "connect", "disassociate-user-proficiencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_user_proficiencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "disassociate-user-proficiencies" }, input, callbacks)
 end
 
 --- AWS connect dismiss-user-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.dismiss_user_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "dismiss-user-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.dismiss_user_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "dismiss-user-contact" }, input, callbacks)
 end
 
 --- AWS connect get-attached-file operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attached_file(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-attached-file" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attached_file(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-attached-file" }, input, callbacks)
 end
 
 --- AWS connect get-contact-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact_attributes(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-contact-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-contact-attributes" }, input, callbacks)
 end
 
 --- AWS connect get-current-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_current_metric_data(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-current-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_current_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-current-metric-data" }, input, callbacks)
 end
 
 --- AWS connect get-current-user-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_current_user_data(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-current-user-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_current_user_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-current-user-data" }, input, callbacks)
 end
 
 --- AWS connect get-effective-hours-of-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_effective_hours_of_operations(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-effective-hours-of-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_effective_hours_of_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-effective-hours-of-operations" }, input, callbacks)
 end
 
 --- AWS connect get-federation-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_federation_token(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-federation-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_federation_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-federation-token" }, input, callbacks)
 end
 
 --- AWS connect get-flow-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_flow_association(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-flow-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_flow_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-flow-association" }, input, callbacks)
 end
 
 --- AWS connect get-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metric_data(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-metric-data" }, input, callbacks)
 end
 
 --- AWS connect get-metric-data-v2 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metric_data_v2(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-metric-data-v2" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metric_data_v2(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-metric-data-v2" }, input, callbacks)
 end
 
 --- AWS connect get-prompt-file operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_prompt_file(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-prompt-file" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_prompt_file(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-prompt-file" }, input, callbacks)
 end
 
 --- AWS connect get-task-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_task_template(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-task-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_task_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-task-template" }, input, callbacks)
 end
 
 --- AWS connect get-traffic-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_traffic_distribution(input)
-	return common.execute_aws_command_skeleton({ "connect", "get-traffic-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_traffic_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "get-traffic-distribution" }, input, callbacks)
 end
 
 --- AWS connect import-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_phone_number(input)
-	return common.execute_aws_command_skeleton({ "connect", "import-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "import-phone-number" }, input, callbacks)
 end
 
 --- AWS connect list-agent-statuses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_agent_statuses(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-agent-statuses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_agent_statuses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-agent-statuses" }, input, callbacks)
 end
 
 --- AWS connect list-analytics-data-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_analytics_data_associations(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-analytics-data-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_analytics_data_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-analytics-data-associations" }, input, callbacks)
 end
 
 --- AWS connect list-analytics-data-lake-data-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_analytics_data_lake_data_sets(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-analytics-data-lake-data-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_analytics_data_lake_data_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-analytics-data-lake-data-sets" }, input, callbacks)
 end
 
 --- AWS connect list-approved-origins operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_approved_origins(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-approved-origins" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_approved_origins(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-approved-origins" }, input, callbacks)
 end
 
 --- AWS connect list-associated-contacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_contacts(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-associated-contacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_contacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-associated-contacts" }, input, callbacks)
 end
 
 --- AWS connect list-authentication-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_authentication_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-authentication-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_authentication_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-authentication-profiles" }, input, callbacks)
 end
 
 --- AWS connect list-bots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_bots(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-bots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_bots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-bots" }, input, callbacks)
 end
 
 --- AWS connect list-contact-evaluations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_evaluations(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-contact-evaluations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_evaluations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-contact-evaluations" }, input, callbacks)
 end
 
 --- AWS connect list-contact-flow-modules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_flow_modules(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-contact-flow-modules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_flow_modules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-contact-flow-modules" }, input, callbacks)
 end
 
 --- AWS connect list-contact-flow-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_flow_versions(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-contact-flow-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_flow_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-contact-flow-versions" }, input, callbacks)
 end
 
 --- AWS connect list-contact-flows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_flows(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-contact-flows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_flows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-contact-flows" }, input, callbacks)
 end
 
 --- AWS connect list-contact-references operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contact_references(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-contact-references" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contact_references(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-contact-references" }, input, callbacks)
 end
 
 --- AWS connect list-default-vocabularies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_default_vocabularies(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-default-vocabularies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_default_vocabularies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-default-vocabularies" }, input, callbacks)
 end
 
 --- AWS connect list-evaluation-form-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_evaluation_form_versions(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-evaluation-form-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_evaluation_form_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-evaluation-form-versions" }, input, callbacks)
 end
 
 --- AWS connect list-evaluation-forms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_evaluation_forms(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-evaluation-forms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_evaluation_forms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-evaluation-forms" }, input, callbacks)
 end
 
 --- AWS connect list-flow-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_flow_associations(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-flow-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_flow_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-flow-associations" }, input, callbacks)
 end
 
 --- AWS connect list-hours-of-operation-overrides operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hours_of_operation_overrides(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-hours-of-operation-overrides" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hours_of_operation_overrides(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-hours-of-operation-overrides" }, input, callbacks)
 end
 
 --- AWS connect list-hours-of-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hours_of_operations(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-hours-of-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hours_of_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-hours-of-operations" }, input, callbacks)
 end
 
 --- AWS connect list-instance-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_instance_attributes(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-instance-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_instance_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-instance-attributes" }, input, callbacks)
 end
 
 --- AWS connect list-instance-storage-configs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_instance_storage_configs(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-instance-storage-configs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_instance_storage_configs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-instance-storage-configs" }, input, callbacks)
 end
 
 --- AWS connect list-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_instances(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-instances" }, input, callbacks)
 end
 
 --- AWS connect list-integration-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_integration_associations(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-integration-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_integration_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-integration-associations" }, input, callbacks)
 end
 
 --- AWS connect list-lambda-functions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lambda_functions(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-lambda-functions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lambda_functions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-lambda-functions" }, input, callbacks)
 end
 
 --- AWS connect list-lex-bots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_lex_bots(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-lex-bots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_lex_bots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-lex-bots" }, input, callbacks)
 end
 
 --- AWS connect list-phone-numbers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_phone_numbers(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-phone-numbers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_phone_numbers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-phone-numbers" }, input, callbacks)
 end
 
 --- AWS connect list-phone-numbers-v2 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_phone_numbers_v2(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-phone-numbers-v2" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_phone_numbers_v2(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-phone-numbers-v2" }, input, callbacks)
 end
 
 --- AWS connect list-predefined-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_predefined_attributes(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-predefined-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_predefined_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-predefined-attributes" }, input, callbacks)
 end
 
 --- AWS connect list-prompts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_prompts(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-prompts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_prompts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-prompts" }, input, callbacks)
 end
 
 --- AWS connect list-queue-quick-connects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queue_quick_connects(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-queue-quick-connects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queue_quick_connects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-queue-quick-connects" }, input, callbacks)
 end
 
 --- AWS connect list-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-queues" }, input, callbacks)
 end
 
 --- AWS connect list-quick-connects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_quick_connects(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-quick-connects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_quick_connects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-quick-connects" }, input, callbacks)
 end
 
 --- AWS connect list-realtime-contact-analysis-segments-v2 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_realtime_contact_analysis_segments_v2(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-realtime-contact-analysis-segments-v2" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_realtime_contact_analysis_segments_v2(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-realtime-contact-analysis-segments-v2" }, input, callbacks)
 end
 
 --- AWS connect list-routing-profile-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_routing_profile_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-routing-profile-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_routing_profile_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-routing-profile-queues" }, input, callbacks)
 end
 
 --- AWS connect list-routing-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_routing_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-routing-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_routing_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-routing-profiles" }, input, callbacks)
 end
 
 --- AWS connect list-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rules(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-rules" }, input, callbacks)
 end
 
 --- AWS connect list-security-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_security_keys(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-security-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_security_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-security-keys" }, input, callbacks)
 end
 
 --- AWS connect list-security-profile-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_security_profile_applications(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-security-profile-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_security_profile_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-security-profile-applications" }, input, callbacks)
 end
 
 --- AWS connect list-security-profile-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_security_profile_permissions(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-security-profile-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_security_profile_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-security-profile-permissions" }, input, callbacks)
 end
 
 --- AWS connect list-security-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_security_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-security-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_security_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-security-profiles" }, input, callbacks)
 end
 
 --- AWS connect list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS connect list-task-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_task_templates(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-task-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_task_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-task-templates" }, input, callbacks)
 end
 
 --- AWS connect list-traffic-distribution-group-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_distribution_group_users(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-traffic-distribution-group-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_distribution_group_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-traffic-distribution-group-users" }, input, callbacks)
 end
 
 --- AWS connect list-traffic-distribution-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_traffic_distribution_groups(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-traffic-distribution-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_traffic_distribution_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-traffic-distribution-groups" }, input, callbacks)
 end
 
 --- AWS connect list-use-cases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_use_cases(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-use-cases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_use_cases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-use-cases" }, input, callbacks)
 end
 
 --- AWS connect list-user-hierarchy-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_user_hierarchy_groups(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-user-hierarchy-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_user_hierarchy_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-user-hierarchy-groups" }, input, callbacks)
 end
 
 --- AWS connect list-user-proficiencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_user_proficiencies(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-user-proficiencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_user_proficiencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-user-proficiencies" }, input, callbacks)
 end
 
 --- AWS connect list-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_users(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-users" }, input, callbacks)
 end
 
 --- AWS connect list-view-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_view_versions(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-view-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_view_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-view-versions" }, input, callbacks)
 end
 
 --- AWS connect list-views operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_views(input)
-	return common.execute_aws_command_skeleton({ "connect", "list-views" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_views(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "list-views" }, input, callbacks)
 end
 
 --- AWS connect monitor-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.monitor_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "monitor-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.monitor_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "monitor-contact" }, input, callbacks)
 end
 
 --- AWS connect pause-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.pause_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "pause-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.pause_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "pause-contact" }, input, callbacks)
 end
 
 --- AWS connect put-user-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_user_status(input)
-	return common.execute_aws_command_skeleton({ "connect", "put-user-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_user_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "put-user-status" }, input, callbacks)
 end
 
 --- AWS connect release-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.release_phone_number(input)
-	return common.execute_aws_command_skeleton({ "connect", "release-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.release_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "release-phone-number" }, input, callbacks)
 end
 
 --- AWS connect replicate-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.replicate_instance(input)
-	return common.execute_aws_command_skeleton({ "connect", "replicate-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.replicate_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "replicate-instance" }, input, callbacks)
 end
 
 --- AWS connect resume-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resume_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "resume-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resume_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "resume-contact" }, input, callbacks)
 end
 
 --- AWS connect resume-contact-recording operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resume_contact_recording(input)
-	return common.execute_aws_command_skeleton({ "connect", "resume-contact-recording" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resume_contact_recording(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "resume-contact-recording" }, input, callbacks)
 end
 
 --- AWS connect search-agent-statuses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_agent_statuses(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-agent-statuses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_agent_statuses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-agent-statuses" }, input, callbacks)
 end
 
 --- AWS connect search-available-phone-numbers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_available_phone_numbers(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-available-phone-numbers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_available_phone_numbers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-available-phone-numbers" }, input, callbacks)
 end
 
 --- AWS connect search-contact-flow-modules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_contact_flow_modules(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-contact-flow-modules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_contact_flow_modules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-contact-flow-modules" }, input, callbacks)
 end
 
 --- AWS connect search-contact-flows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_contact_flows(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-contact-flows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_contact_flows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-contact-flows" }, input, callbacks)
 end
 
 --- AWS connect search-contacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_contacts(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-contacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_contacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-contacts" }, input, callbacks)
 end
 
 --- AWS connect search-email-addresses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_email_addresses(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-email-addresses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_email_addresses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-email-addresses" }, input, callbacks)
 end
 
 --- AWS connect search-hours-of-operation-overrides operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_hours_of_operation_overrides(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-hours-of-operation-overrides" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_hours_of_operation_overrides(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-hours-of-operation-overrides" }, input, callbacks)
 end
 
 --- AWS connect search-hours-of-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_hours_of_operations(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-hours-of-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_hours_of_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-hours-of-operations" }, input, callbacks)
 end
 
 --- AWS connect search-predefined-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_predefined_attributes(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-predefined-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_predefined_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-predefined-attributes" }, input, callbacks)
 end
 
 --- AWS connect search-prompts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_prompts(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-prompts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_prompts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-prompts" }, input, callbacks)
 end
 
 --- AWS connect search-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-queues" }, input, callbacks)
 end
 
 --- AWS connect search-quick-connects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_quick_connects(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-quick-connects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_quick_connects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-quick-connects" }, input, callbacks)
 end
 
 --- AWS connect search-resource-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_resource_tags(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-resource-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_resource_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-resource-tags" }, input, callbacks)
 end
 
 --- AWS connect search-routing-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_routing_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-routing-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_routing_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-routing-profiles" }, input, callbacks)
 end
 
 --- AWS connect search-security-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_security_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-security-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_security_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-security-profiles" }, input, callbacks)
 end
 
 --- AWS connect search-user-hierarchy-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_user_hierarchy_groups(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-user-hierarchy-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_user_hierarchy_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-user-hierarchy-groups" }, input, callbacks)
 end
 
 --- AWS connect search-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_users(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-users" }, input, callbacks)
 end
 
 --- AWS connect search-vocabularies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_vocabularies(input)
-	return common.execute_aws_command_skeleton({ "connect", "search-vocabularies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_vocabularies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "search-vocabularies" }, input, callbacks)
 end
 
 --- AWS connect send-chat-integration-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_chat_integration_event(input)
-	return common.execute_aws_command_skeleton({ "connect", "send-chat-integration-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_chat_integration_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "send-chat-integration-event" }, input, callbacks)
 end
 
 --- AWS connect send-outbound-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_outbound_email(input)
-	return common.execute_aws_command_skeleton({ "connect", "send-outbound-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_outbound_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "send-outbound-email" }, input, callbacks)
 end
 
 --- AWS connect start-attached-file-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_attached_file_upload(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-attached-file-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_attached_file_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-attached-file-upload" }, input, callbacks)
 end
 
 --- AWS connect start-chat-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_chat_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-chat-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_chat_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-chat-contact" }, input, callbacks)
 end
 
 --- AWS connect start-contact-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_contact_evaluation(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-contact-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_contact_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-contact-evaluation" }, input, callbacks)
 end
 
 --- AWS connect start-contact-recording operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_contact_recording(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-contact-recording" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_contact_recording(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-contact-recording" }, input, callbacks)
 end
 
 --- AWS connect start-contact-streaming operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_contact_streaming(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-contact-streaming" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_contact_streaming(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-contact-streaming" }, input, callbacks)
 end
 
 --- AWS connect start-email-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_email_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-email-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_email_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-email-contact" }, input, callbacks)
 end
 
 --- AWS connect start-outbound-chat-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_outbound_chat_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-outbound-chat-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_outbound_chat_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-outbound-chat-contact" }, input, callbacks)
 end
 
 --- AWS connect start-outbound-email-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_outbound_email_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-outbound-email-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_outbound_email_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-outbound-email-contact" }, input, callbacks)
 end
 
 --- AWS connect start-outbound-voice-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_outbound_voice_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-outbound-voice-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_outbound_voice_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-outbound-voice-contact" }, input, callbacks)
 end
 
 --- AWS connect start-screen-sharing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_screen_sharing(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-screen-sharing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_screen_sharing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-screen-sharing" }, input, callbacks)
 end
 
 --- AWS connect start-task-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_task_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-task-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_task_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-task-contact" }, input, callbacks)
 end
 
 --- AWS connect start-web-rtc-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_web_rtc_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "start-web-rtc-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_web_rtc_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "start-web-rtc-contact" }, input, callbacks)
 end
 
 --- AWS connect stop-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "stop-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "stop-contact" }, input, callbacks)
 end
 
 --- AWS connect stop-contact-recording operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_contact_recording(input)
-	return common.execute_aws_command_skeleton({ "connect", "stop-contact-recording" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_contact_recording(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "stop-contact-recording" }, input, callbacks)
 end
 
 --- AWS connect stop-contact-streaming operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_contact_streaming(input)
-	return common.execute_aws_command_skeleton({ "connect", "stop-contact-streaming" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_contact_streaming(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "stop-contact-streaming" }, input, callbacks)
 end
 
 --- AWS connect submit-contact-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.submit_contact_evaluation(input)
-	return common.execute_aws_command_skeleton({ "connect", "submit-contact-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.submit_contact_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "submit-contact-evaluation" }, input, callbacks)
 end
 
 --- AWS connect suspend-contact-recording operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.suspend_contact_recording(input)
-	return common.execute_aws_command_skeleton({ "connect", "suspend-contact-recording" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.suspend_contact_recording(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "suspend-contact-recording" }, input, callbacks)
 end
 
 --- AWS connect tag-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "tag-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "tag-contact" }, input, callbacks)
 end
 
 --- AWS connect tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "connect", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "tag-resource" }, input, callbacks)
 end
 
 --- AWS connect transfer-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.transfer_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "transfer-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.transfer_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "transfer-contact" }, input, callbacks)
 end
 
 --- AWS connect untag-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "untag-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "untag-contact" }, input, callbacks)
 end
 
 --- AWS connect untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "connect", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "untag-resource" }, input, callbacks)
 end
 
 --- AWS connect update-agent-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_agent_status(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-agent-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_agent_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-agent-status" }, input, callbacks)
 end
 
 --- AWS connect update-authentication-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_authentication_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-authentication-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_authentication_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-authentication-profile" }, input, callbacks)
 end
 
 --- AWS connect update-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact" }, input, callbacks)
 end
 
 --- AWS connect update-contact-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_attributes(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-attributes" }, input, callbacks)
 end
 
 --- AWS connect update-contact-evaluation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_evaluation(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-evaluation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_evaluation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-evaluation" }, input, callbacks)
 end
 
 --- AWS connect update-contact-flow-content operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_flow_content(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-content" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_flow_content(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-content" }, input, callbacks)
 end
 
 --- AWS connect update-contact-flow-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_flow_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_flow_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-metadata" }, input, callbacks)
 end
 
 --- AWS connect update-contact-flow-module-content operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_flow_module_content(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-module-content" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_flow_module_content(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-module-content" }, input, callbacks)
 end
 
 --- AWS connect update-contact-flow-module-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_flow_module_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-module-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_flow_module_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-module-metadata" }, input, callbacks)
 end
 
 --- AWS connect update-contact-flow-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_flow_name(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_flow_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-flow-name" }, input, callbacks)
 end
 
 --- AWS connect update-contact-routing-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_routing_data(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-routing-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_routing_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-routing-data" }, input, callbacks)
 end
 
 --- AWS connect update-contact-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_contact_schedule(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-contact-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_contact_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-contact-schedule" }, input, callbacks)
 end
 
 --- AWS connect update-email-address-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_email_address_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-email-address-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_email_address_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-email-address-metadata" }, input, callbacks)
 end
 
 --- AWS connect update-evaluation-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_evaluation_form(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-evaluation-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_evaluation_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-evaluation-form" }, input, callbacks)
 end
 
 --- AWS connect update-hours-of-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_hours_of_operation(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-hours-of-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_hours_of_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-hours-of-operation" }, input, callbacks)
 end
 
 --- AWS connect update-hours-of-operation-override operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_hours_of_operation_override(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-hours-of-operation-override" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_hours_of_operation_override(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-hours-of-operation-override" }, input, callbacks)
 end
 
 --- AWS connect update-instance-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_instance_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-instance-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_instance_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-instance-attribute" }, input, callbacks)
 end
 
 --- AWS connect update-instance-storage-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_instance_storage_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-instance-storage-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_instance_storage_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-instance-storage-config" }, input, callbacks)
 end
 
 --- AWS connect update-participant-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_participant_authentication(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-participant-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_participant_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-participant-authentication" }, input, callbacks)
 end
 
 --- AWS connect update-participant-role-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_participant_role_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-participant-role-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_participant_role_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-participant-role-config" }, input, callbacks)
 end
 
 --- AWS connect update-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_phone_number(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-phone-number" }, input, callbacks)
 end
 
 --- AWS connect update-phone-number-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_phone_number_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-phone-number-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_phone_number_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-phone-number-metadata" }, input, callbacks)
 end
 
 --- AWS connect update-predefined-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_predefined_attribute(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-predefined-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_predefined_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-predefined-attribute" }, input, callbacks)
 end
 
 --- AWS connect update-prompt operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_prompt(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-prompt" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_prompt(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-prompt" }, input, callbacks)
 end
 
 --- AWS connect update-queue-hours-of-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_hours_of_operation(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-hours-of-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_hours_of_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-hours-of-operation" }, input, callbacks)
 end
 
 --- AWS connect update-queue-max-contacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_max_contacts(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-max-contacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_max_contacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-max-contacts" }, input, callbacks)
 end
 
 --- AWS connect update-queue-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_name(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-name" }, input, callbacks)
 end
 
 --- AWS connect update-queue-outbound-caller-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_outbound_caller_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-outbound-caller-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_outbound_caller_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-outbound-caller-config" }, input, callbacks)
 end
 
 --- AWS connect update-queue-outbound-email-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_outbound_email_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-outbound-email-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_outbound_email_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-outbound-email-config" }, input, callbacks)
 end
 
 --- AWS connect update-queue-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_status(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-queue-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-queue-status" }, input, callbacks)
 end
 
 --- AWS connect update-quick-connect-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_quick_connect_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-quick-connect-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_quick_connect_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-quick-connect-config" }, input, callbacks)
 end
 
 --- AWS connect update-quick-connect-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_quick_connect_name(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-quick-connect-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_quick_connect_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-quick-connect-name" }, input, callbacks)
 end
 
 --- AWS connect update-routing-profile-agent-availability-timer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_profile_agent_availability_timer(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-agent-availability-timer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_profile_agent_availability_timer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-agent-availability-timer" }, input, callbacks)
 end
 
 --- AWS connect update-routing-profile-concurrency operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_profile_concurrency(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-concurrency" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_profile_concurrency(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-concurrency" }, input, callbacks)
 end
 
 --- AWS connect update-routing-profile-default-outbound-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_profile_default_outbound_queue(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-default-outbound-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_profile_default_outbound_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-default-outbound-queue" }, input, callbacks)
 end
 
 --- AWS connect update-routing-profile-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_profile_name(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_profile_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-name" }, input, callbacks)
 end
 
 --- AWS connect update-routing-profile-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_routing_profile_queues(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_routing_profile_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-routing-profile-queues" }, input, callbacks)
 end
 
 --- AWS connect update-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_rule(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-rule" }, input, callbacks)
 end
 
 --- AWS connect update-security-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_security_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-security-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_security_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-security-profile" }, input, callbacks)
 end
 
 --- AWS connect update-task-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_task_template(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-task-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_task_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-task-template" }, input, callbacks)
 end
 
 --- AWS connect update-traffic-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_traffic_distribution(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-traffic-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_traffic_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-traffic-distribution" }, input, callbacks)
 end
 
 --- AWS connect update-user-hierarchy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_hierarchy(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_hierarchy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy" }, input, callbacks)
 end
 
 --- AWS connect update-user-hierarchy-group-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_hierarchy_group_name(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy-group-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_hierarchy_group_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy-group-name" }, input, callbacks)
 end
 
 --- AWS connect update-user-hierarchy-structure operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_hierarchy_structure(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy-structure" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_hierarchy_structure(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-hierarchy-structure" }, input, callbacks)
 end
 
 --- AWS connect update-user-identity-info operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_identity_info(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-identity-info" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_identity_info(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-identity-info" }, input, callbacks)
 end
 
 --- AWS connect update-user-phone-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_phone_config(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-phone-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_phone_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-phone-config" }, input, callbacks)
 end
 
 --- AWS connect update-user-proficiencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_proficiencies(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-proficiencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_proficiencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-proficiencies" }, input, callbacks)
 end
 
 --- AWS connect update-user-routing-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_routing_profile(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-routing-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_routing_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-routing-profile" }, input, callbacks)
 end
 
 --- AWS connect update-user-security-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_security_profiles(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-user-security-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_security_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-user-security-profiles" }, input, callbacks)
 end
 
 --- AWS connect update-view-content operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_view_content(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-view-content" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_view_content(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-view-content" }, input, callbacks)
 end
 
 --- AWS connect update-view-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_view_metadata(input)
-	return common.execute_aws_command_skeleton({ "connect", "update-view-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_view_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connect", "update-view-metadata" }, input, callbacks)
 end
 
 return M

@@ -8,268 +8,306 @@ local M = {}
 
 --- AWS xray batch-get-traces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_traces(input)
-	return common.execute_aws_command_skeleton({ "xray", "batch-get-traces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_traces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "batch-get-traces" }, input, callbacks)
 end
 
 --- AWS xray cancel-trace-retrieval operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_trace_retrieval(input)
-	return common.execute_aws_command_skeleton({ "xray", "cancel-trace-retrieval" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_trace_retrieval(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "cancel-trace-retrieval" }, input, callbacks)
 end
 
 --- AWS xray create-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group(input)
-	return common.execute_aws_command_skeleton({ "xray", "create-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "create-group" }, input, callbacks)
 end
 
 --- AWS xray create-sampling-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_sampling_rule(input)
-	return common.execute_aws_command_skeleton({ "xray", "create-sampling-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_sampling_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "create-sampling-rule" }, input, callbacks)
 end
 
 --- AWS xray delete-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group(input)
-	return common.execute_aws_command_skeleton({ "xray", "delete-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "delete-group" }, input, callbacks)
 end
 
 --- AWS xray delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "xray", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS xray delete-sampling-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_sampling_rule(input)
-	return common.execute_aws_command_skeleton({ "xray", "delete-sampling-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_sampling_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "delete-sampling-rule" }, input, callbacks)
 end
 
 --- AWS xray get-encryption-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_encryption_config(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-encryption-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_encryption_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-encryption-config" }, input, callbacks)
 end
 
 --- AWS xray get-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-group" }, input, callbacks)
 end
 
 --- AWS xray get-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_groups(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-groups" }, input, callbacks)
 end
 
 --- AWS xray get-indexing-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_indexing_rules(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-indexing-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_indexing_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-indexing-rules" }, input, callbacks)
 end
 
 --- AWS xray get-insight operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-insight" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight" }, input, callbacks)
 end
 
 --- AWS xray get-insight-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight_events(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-insight-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-events" }, input, callbacks)
 end
 
 --- AWS xray get-insight-impact-graph operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight_impact_graph(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-insight-impact-graph" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight_impact_graph(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-impact-graph" }, input, callbacks)
 end
 
 --- AWS xray get-insight-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_insight_summaries(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-insight-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_insight_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-summaries" }, input, callbacks)
 end
 
 --- AWS xray get-retrieved-traces-graph operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_retrieved_traces_graph(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-retrieved-traces-graph" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_retrieved_traces_graph(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-retrieved-traces-graph" }, input, callbacks)
 end
 
 --- AWS xray get-sampling-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sampling_rules(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-sampling-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sampling_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-rules" }, input, callbacks)
 end
 
 --- AWS xray get-sampling-statistic-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sampling_statistic_summaries(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-sampling-statistic-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sampling_statistic_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-statistic-summaries" }, input, callbacks)
 end
 
 --- AWS xray get-sampling-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sampling_targets(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-sampling-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sampling_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-targets" }, input, callbacks)
 end
 
 --- AWS xray get-service-graph operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service_graph(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-service-graph" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service_graph(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-service-graph" }, input, callbacks)
 end
 
 --- AWS xray get-time-series-service-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_time_series_service_statistics(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-time-series-service-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_time_series_service_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-time-series-service-statistics" }, input, callbacks)
 end
 
 --- AWS xray get-trace-graph operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trace_graph(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-trace-graph" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trace_graph(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-graph" }, input, callbacks)
 end
 
 --- AWS xray get-trace-segment-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trace_segment_destination(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-trace-segment-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trace_segment_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-segment-destination" }, input, callbacks)
 end
 
 --- AWS xray get-trace-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trace_summaries(input)
-	return common.execute_aws_command_skeleton({ "xray", "get-trace-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trace_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-summaries" }, input, callbacks)
 end
 
 --- AWS xray list-resource-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_policies(input)
-	return common.execute_aws_command_skeleton({ "xray", "list-resource-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "list-resource-policies" }, input, callbacks)
 end
 
 --- AWS xray list-retrieved-traces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_retrieved_traces(input)
-	return common.execute_aws_command_skeleton({ "xray", "list-retrieved-traces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_retrieved_traces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "list-retrieved-traces" }, input, callbacks)
 end
 
 --- AWS xray list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "xray", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS xray put-encryption-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_encryption_config(input)
-	return common.execute_aws_command_skeleton({ "xray", "put-encryption-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_encryption_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "put-encryption-config" }, input, callbacks)
 end
 
 --- AWS xray put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "xray", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS xray put-telemetry-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_telemetry_records(input)
-	return common.execute_aws_command_skeleton({ "xray", "put-telemetry-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_telemetry_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "put-telemetry-records" }, input, callbacks)
 end
 
 --- AWS xray put-trace-segments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_trace_segments(input)
-	return common.execute_aws_command_skeleton({ "xray", "put-trace-segments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_trace_segments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "put-trace-segments" }, input, callbacks)
 end
 
 --- AWS xray start-trace-retrieval operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_trace_retrieval(input)
-	return common.execute_aws_command_skeleton({ "xray", "start-trace-retrieval" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_trace_retrieval(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "start-trace-retrieval" }, input, callbacks)
 end
 
 --- AWS xray tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "xray", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "tag-resource" }, input, callbacks)
 end
 
 --- AWS xray untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "xray", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "untag-resource" }, input, callbacks)
 end
 
 --- AWS xray update-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_group(input)
-	return common.execute_aws_command_skeleton({ "xray", "update-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "update-group" }, input, callbacks)
 end
 
 --- AWS xray update-indexing-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_indexing_rule(input)
-	return common.execute_aws_command_skeleton({ "xray", "update-indexing-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_indexing_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "update-indexing-rule" }, input, callbacks)
 end
 
 --- AWS xray update-sampling-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_sampling_rule(input)
-	return common.execute_aws_command_skeleton({ "xray", "update-sampling-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_sampling_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "update-sampling-rule" }, input, callbacks)
 end
 
 --- AWS xray update-trace-segment-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_trace_segment_destination(input)
-	return common.execute_aws_command_skeleton({ "xray", "update-trace-segment-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_trace_segment_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "xray", "update-trace-segment-destination" }, input, callbacks)
 end
 
 return M

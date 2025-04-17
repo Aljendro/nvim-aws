@@ -8,79 +8,90 @@ local M = {}
 
 --- AWS connectparticipant cancel-participant-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_participant_authentication(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "cancel-participant-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_participant_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "cancel-participant-authentication" }, input, callbacks)
 end
 
 --- AWS connectparticipant complete-attachment-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.complete_attachment_upload(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "complete-attachment-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.complete_attachment_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "complete-attachment-upload" }, input, callbacks)
 end
 
 --- AWS connectparticipant create-participant-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_participant_connection(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "create-participant-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_participant_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "create-participant-connection" }, input, callbacks)
 end
 
 --- AWS connectparticipant describe-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_view(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "describe-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "describe-view" }, input, callbacks)
 end
 
 --- AWS connectparticipant disconnect-participant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disconnect_participant(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "disconnect-participant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disconnect_participant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "disconnect-participant" }, input, callbacks)
 end
 
 --- AWS connectparticipant get-attachment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attachment(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "get-attachment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attachment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-attachment" }, input, callbacks)
 end
 
 --- AWS connectparticipant get-authentication-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_authentication_url(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "get-authentication-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_authentication_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-authentication-url" }, input, callbacks)
 end
 
 --- AWS connectparticipant get-transcript operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_transcript(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "get-transcript" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_transcript(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-transcript" }, input, callbacks)
 end
 
 --- AWS connectparticipant send-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_event(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "send-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "send-event" }, input, callbacks)
 end
 
 --- AWS connectparticipant send-message operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_message(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "send-message" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_message(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "send-message" }, input, callbacks)
 end
 
 --- AWS connectparticipant start-attachment-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_attachment_upload(input)
-	return common.execute_aws_command_skeleton({ "connectparticipant", "start-attachment-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_attachment_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "start-attachment-upload" }, input, callbacks)
 end
 
 return M

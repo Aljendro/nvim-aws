@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS socialmessaging associate-whatsapp-business-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_whatsapp_business_account(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "associate-whatsapp-business-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_whatsapp_business_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "associate-whatsapp-business-account" }, input, callbacks)
 end
 
 --- AWS socialmessaging delete-whatsapp-media-message operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_whatsapp_media_message(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "delete-whatsapp-media-message" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_whatsapp_media_message(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "delete-whatsapp-media-message" }, input, callbacks)
 end
 
 --- AWS socialmessaging disassociate-whatsapp-business-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_whatsapp_business_account(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "disassociate-whatsapp-business-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_whatsapp_business_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "disassociate-whatsapp-business-account" }, input, callbacks)
 end
 
 --- AWS socialmessaging get-linked-whatsapp-business-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_linked_whatsapp_business_account(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "get-linked-whatsapp-business-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_linked_whatsapp_business_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "get-linked-whatsapp-business-account" }, input, callbacks)
 end
 
 --- AWS socialmessaging get-linked-whatsapp-business-account-phone-number operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_linked_whatsapp_business_account_phone_number(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "get-linked-whatsapp-business-account-phone-number" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_linked_whatsapp_business_account_phone_number(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "get-linked-whatsapp-business-account-phone-number" }, input, callbacks)
 end
 
 --- AWS socialmessaging get-whatsapp-message-media operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_whatsapp_message_media(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "get-whatsapp-message-media" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_whatsapp_message_media(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "get-whatsapp-message-media" }, input, callbacks)
 end
 
 --- AWS socialmessaging list-linked-whatsapp-business-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_linked_whatsapp_business_accounts(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "list-linked-whatsapp-business-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_linked_whatsapp_business_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "list-linked-whatsapp-business-accounts" }, input, callbacks)
 end
 
 --- AWS socialmessaging list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS socialmessaging post-whatsapp-message-media operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.post_whatsapp_message_media(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "post-whatsapp-message-media" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.post_whatsapp_message_media(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "post-whatsapp-message-media" }, input, callbacks)
 end
 
 --- AWS socialmessaging put-whatsapp-business-account-event-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_whatsapp_business_account_event_destinations(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "put-whatsapp-business-account-event-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_whatsapp_business_account_event_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "put-whatsapp-business-account-event-destinations" }, input, callbacks)
 end
 
 --- AWS socialmessaging send-whatsapp-message operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_whatsapp_message(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "send-whatsapp-message" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_whatsapp_message(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "send-whatsapp-message" }, input, callbacks)
 end
 
 --- AWS socialmessaging tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "tag-resource" }, input, callbacks)
 end
 
 --- AWS socialmessaging untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "socialmessaging", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "socialmessaging", "untag-resource" }, input, callbacks)
 end
 
 return M

@@ -8,9 +8,10 @@ local M = {}
 
 --- AWS eks-auth assume-role-for-pod-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_role_for_pod_identity(input)
-	return common.execute_aws_command_skeleton({ "eks-auth", "assume-role-for-pod-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_role_for_pod_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "eks-auth", "assume-role-for-pod-identity" }, input, callbacks)
 end
 
 return M

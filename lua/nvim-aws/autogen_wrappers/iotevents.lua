@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS iotevents create-alarm-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_alarm_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "create-alarm-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_alarm_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "create-alarm-model" }, input, callbacks)
 end
 
 --- AWS iotevents create-detector-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_detector_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "create-detector-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_detector_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "create-detector-model" }, input, callbacks)
 end
 
 --- AWS iotevents create-input operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_input(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "create-input" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_input(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "create-input" }, input, callbacks)
 end
 
 --- AWS iotevents delete-alarm-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alarm_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "delete-alarm-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alarm_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "delete-alarm-model" }, input, callbacks)
 end
 
 --- AWS iotevents delete-detector-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_detector_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "delete-detector-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_detector_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "delete-detector-model" }, input, callbacks)
 end
 
 --- AWS iotevents delete-input operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_input(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "delete-input" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_input(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "delete-input" }, input, callbacks)
 end
 
 --- AWS iotevents describe-alarm-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_alarm_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "describe-alarm-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_alarm_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "describe-alarm-model" }, input, callbacks)
 end
 
 --- AWS iotevents describe-detector-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_detector_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "describe-detector-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_detector_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "describe-detector-model" }, input, callbacks)
 end
 
 --- AWS iotevents describe-detector-model-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_detector_model_analysis(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "describe-detector-model-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_detector_model_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "describe-detector-model-analysis" }, input, callbacks)
 end
 
 --- AWS iotevents describe-input operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_input(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "describe-input" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_input(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "describe-input" }, input, callbacks)
 end
 
 --- AWS iotevents describe-logging-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_logging_options(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "describe-logging-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_logging_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "describe-logging-options" }, input, callbacks)
 end
 
 --- AWS iotevents get-detector-model-analysis-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_detector_model_analysis_results(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "get-detector-model-analysis-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_detector_model_analysis_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "get-detector-model-analysis-results" }, input, callbacks)
 end
 
 --- AWS iotevents list-alarm-model-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_alarm_model_versions(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-alarm-model-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_alarm_model_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-alarm-model-versions" }, input, callbacks)
 end
 
 --- AWS iotevents list-alarm-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_alarm_models(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-alarm-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_alarm_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-alarm-models" }, input, callbacks)
 end
 
 --- AWS iotevents list-detector-model-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_detector_model_versions(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-detector-model-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_detector_model_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-detector-model-versions" }, input, callbacks)
 end
 
 --- AWS iotevents list-detector-models operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_detector_models(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-detector-models" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_detector_models(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-detector-models" }, input, callbacks)
 end
 
 --- AWS iotevents list-input-routings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_input_routings(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-input-routings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_input_routings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-input-routings" }, input, callbacks)
 end
 
 --- AWS iotevents list-inputs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_inputs(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-inputs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_inputs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-inputs" }, input, callbacks)
 end
 
 --- AWS iotevents list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS iotevents put-logging-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_logging_options(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "put-logging-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_logging_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "put-logging-options" }, input, callbacks)
 end
 
 --- AWS iotevents start-detector-model-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_detector_model_analysis(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "start-detector-model-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_detector_model_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "start-detector-model-analysis" }, input, callbacks)
 end
 
 --- AWS iotevents tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "tag-resource" }, input, callbacks)
 end
 
 --- AWS iotevents untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "untag-resource" }, input, callbacks)
 end
 
 --- AWS iotevents update-alarm-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_alarm_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "update-alarm-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_alarm_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "update-alarm-model" }, input, callbacks)
 end
 
 --- AWS iotevents update-detector-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_detector_model(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "update-detector-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_detector_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "update-detector-model" }, input, callbacks)
 end
 
 --- AWS iotevents update-input operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_input(input)
-	return common.execute_aws_command_skeleton({ "iotevents", "update-input" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_input(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iotevents", "update-input" }, input, callbacks)
 end
 
 return M

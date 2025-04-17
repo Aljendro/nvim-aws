@@ -8,30 +8,34 @@ local M = {}
 
 --- AWS sagemaker-featurestore-runtime batch-get-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_record(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "batch-get-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "batch-get-record" }, input, callbacks)
 end
 
 --- AWS sagemaker-featurestore-runtime delete-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_record(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "delete-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "delete-record" }, input, callbacks)
 end
 
 --- AWS sagemaker-featurestore-runtime get-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_record(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "get-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "get-record" }, input, callbacks)
 end
 
 --- AWS sagemaker-featurestore-runtime put-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_record(input)
-	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "put-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sagemaker-featurestore-runtime", "put-record" }, input, callbacks)
 end
 
 return M

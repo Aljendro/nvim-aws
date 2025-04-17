@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS launch-wizard create-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deployment(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "create-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "create-deployment" }, input, callbacks)
 end
 
 --- AWS launch-wizard delete-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_deployment(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "delete-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "delete-deployment" }, input, callbacks)
 end
 
 --- AWS launch-wizard get-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployment(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "get-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-deployment" }, input, callbacks)
 end
 
 --- AWS launch-wizard get-workload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workload(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload" }, input, callbacks)
 end
 
 --- AWS launch-wizard get-workload-deployment-pattern operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workload_deployment_pattern(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload-deployment-pattern" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workload_deployment_pattern(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload-deployment-pattern" }, input, callbacks)
 end
 
 --- AWS launch-wizard list-deployment-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deployment_events(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployment-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deployment_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployment-events" }, input, callbacks)
 end
 
 --- AWS launch-wizard list-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deployments(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployments" }, input, callbacks)
 end
 
 --- AWS launch-wizard list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS launch-wizard list-workload-deployment-patterns operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workload_deployment_patterns(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workload-deployment-patterns" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workload_deployment_patterns(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workload-deployment-patterns" }, input, callbacks)
 end
 
 --- AWS launch-wizard list-workloads operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workloads(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workloads" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workloads(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workloads" }, input, callbacks)
 end
 
 --- AWS launch-wizard tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "tag-resource" }, input, callbacks)
 end
 
 --- AWS launch-wizard untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "launch-wizard", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "untag-resource" }, input, callbacks)
 end
 
 return M

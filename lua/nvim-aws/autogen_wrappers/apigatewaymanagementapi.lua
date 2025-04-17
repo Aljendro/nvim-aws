@@ -8,23 +8,26 @@ local M = {}
 
 --- AWS apigatewaymanagementapi delete-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connection(input)
-	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "delete-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "delete-connection" }, input, callbacks)
 end
 
 --- AWS apigatewaymanagementapi get-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_connection(input)
-	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "get-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "get-connection" }, input, callbacks)
 end
 
 --- AWS apigatewaymanagementapi post-to-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.post_to_connection(input)
-	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "post-to-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.post_to_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "post-to-connection" }, input, callbacks)
 end
 
 return M

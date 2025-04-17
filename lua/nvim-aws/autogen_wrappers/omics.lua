@@ -8,646 +8,738 @@ local M = {}
 
 --- AWS omics abort-multipart-read-set-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.abort_multipart_read_set_upload(input)
-	return common.execute_aws_command_skeleton({ "omics", "abort-multipart-read-set-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.abort_multipart_read_set_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "abort-multipart-read-set-upload" }, input, callbacks)
 end
 
 --- AWS omics accept-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_share(input)
-	return common.execute_aws_command_skeleton({ "omics", "accept-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "accept-share" }, input, callbacks)
 end
 
 --- AWS omics batch-delete-read-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_read_set(input)
-	return common.execute_aws_command_skeleton({ "omics", "batch-delete-read-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_read_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "batch-delete-read-set" }, input, callbacks)
 end
 
 --- AWS omics cancel-annotation-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_annotation_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "cancel-annotation-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_annotation_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "cancel-annotation-import-job" }, input, callbacks)
 end
 
 --- AWS omics cancel-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_run(input)
-	return common.execute_aws_command_skeleton({ "omics", "cancel-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "cancel-run" }, input, callbacks)
 end
 
 --- AWS omics cancel-variant-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_variant_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "cancel-variant-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_variant_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "cancel-variant-import-job" }, input, callbacks)
 end
 
 --- AWS omics complete-multipart-read-set-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.complete_multipart_read_set_upload(input)
-	return common.execute_aws_command_skeleton({ "omics", "complete-multipart-read-set-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.complete_multipart_read_set_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "complete-multipart-read-set-upload" }, input, callbacks)
 end
 
 --- AWS omics create-annotation-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_annotation_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-annotation-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_annotation_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-annotation-store" }, input, callbacks)
 end
 
 --- AWS omics create-annotation-store-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_annotation_store_version(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-annotation-store-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_annotation_store_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-annotation-store-version" }, input, callbacks)
 end
 
 --- AWS omics create-multipart-read-set-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_multipart_read_set_upload(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-multipart-read-set-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_multipart_read_set_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-multipart-read-set-upload" }, input, callbacks)
 end
 
 --- AWS omics create-reference-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_reference_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-reference-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_reference_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-reference-store" }, input, callbacks)
 end
 
 --- AWS omics create-run-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_run_cache(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-run-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_run_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-run-cache" }, input, callbacks)
 end
 
 --- AWS omics create-run-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_run_group(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-run-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_run_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-run-group" }, input, callbacks)
 end
 
 --- AWS omics create-sequence-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_sequence_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-sequence-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_sequence_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-sequence-store" }, input, callbacks)
 end
 
 --- AWS omics create-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_share(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-share" }, input, callbacks)
 end
 
 --- AWS omics create-variant-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_variant_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-variant-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_variant_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-variant-store" }, input, callbacks)
 end
 
 --- AWS omics create-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workflow(input)
-	return common.execute_aws_command_skeleton({ "omics", "create-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "create-workflow" }, input, callbacks)
 end
 
 --- AWS omics delete-annotation-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_annotation_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-annotation-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_annotation_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-annotation-store" }, input, callbacks)
 end
 
 --- AWS omics delete-annotation-store-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_annotation_store_versions(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-annotation-store-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_annotation_store_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-annotation-store-versions" }, input, callbacks)
 end
 
 --- AWS omics delete-reference operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_reference(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-reference" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_reference(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-reference" }, input, callbacks)
 end
 
 --- AWS omics delete-reference-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_reference_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-reference-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_reference_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-reference-store" }, input, callbacks)
 end
 
 --- AWS omics delete-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_run(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-run" }, input, callbacks)
 end
 
 --- AWS omics delete-run-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_run_cache(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-run-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_run_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-run-cache" }, input, callbacks)
 end
 
 --- AWS omics delete-run-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_run_group(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-run-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_run_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-run-group" }, input, callbacks)
 end
 
 --- AWS omics delete-s3-access-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_s3_access_policy(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-s3-access-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_s3_access_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-s3-access-policy" }, input, callbacks)
 end
 
 --- AWS omics delete-sequence-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_sequence_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-sequence-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_sequence_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-sequence-store" }, input, callbacks)
 end
 
 --- AWS omics delete-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_share(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-share" }, input, callbacks)
 end
 
 --- AWS omics delete-variant-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_variant_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-variant-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_variant_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-variant-store" }, input, callbacks)
 end
 
 --- AWS omics delete-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workflow(input)
-	return common.execute_aws_command_skeleton({ "omics", "delete-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "delete-workflow" }, input, callbacks)
 end
 
 --- AWS omics get-annotation-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_annotation_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-annotation-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_annotation_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-annotation-import-job" }, input, callbacks)
 end
 
 --- AWS omics get-annotation-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_annotation_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-annotation-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_annotation_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-annotation-store" }, input, callbacks)
 end
 
 --- AWS omics get-annotation-store-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_annotation_store_version(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-annotation-store-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_annotation_store_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-annotation-store-version" }, input, callbacks)
 end
 
 --- AWS omics get-read-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_read_set(input)
-	return common.execute_aws_command({ "omics", "get-read-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_read_set(input, callbacks)
+	return common.execute_aws_command({ "omics", "get-read-set" }, input, callbacks)
 end
 
 --- AWS omics get-read-set-activation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_read_set_activation_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-read-set-activation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_read_set_activation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-read-set-activation-job" }, input, callbacks)
 end
 
 --- AWS omics get-read-set-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_read_set_export_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-read-set-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_read_set_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-read-set-export-job" }, input, callbacks)
 end
 
 --- AWS omics get-read-set-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_read_set_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-read-set-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_read_set_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-read-set-import-job" }, input, callbacks)
 end
 
 --- AWS omics get-read-set-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_read_set_metadata(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-read-set-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_read_set_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-read-set-metadata" }, input, callbacks)
 end
 
 --- AWS omics get-reference operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reference(input)
-	return common.execute_aws_command({ "omics", "get-reference" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reference(input, callbacks)
+	return common.execute_aws_command({ "omics", "get-reference" }, input, callbacks)
 end
 
 --- AWS omics get-reference-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reference_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-reference-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reference_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-reference-import-job" }, input, callbacks)
 end
 
 --- AWS omics get-reference-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reference_metadata(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-reference-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reference_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-reference-metadata" }, input, callbacks)
 end
 
 --- AWS omics get-reference-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reference_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-reference-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reference_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-reference-store" }, input, callbacks)
 end
 
 --- AWS omics get-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_run(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-run" }, input, callbacks)
 end
 
 --- AWS omics get-run-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_run_cache(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-run-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_run_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-run-cache" }, input, callbacks)
 end
 
 --- AWS omics get-run-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_run_group(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-run-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_run_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-run-group" }, input, callbacks)
 end
 
 --- AWS omics get-run-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_run_task(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-run-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_run_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-run-task" }, input, callbacks)
 end
 
 --- AWS omics get-s3-access-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_s3_access_policy(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-s3-access-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_s3_access_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-s3-access-policy" }, input, callbacks)
 end
 
 --- AWS omics get-sequence-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sequence_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-sequence-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sequence_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-sequence-store" }, input, callbacks)
 end
 
 --- AWS omics get-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_share(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-share" }, input, callbacks)
 end
 
 --- AWS omics get-variant-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_variant_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-variant-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_variant_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-variant-import-job" }, input, callbacks)
 end
 
 --- AWS omics get-variant-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_variant_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-variant-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_variant_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-variant-store" }, input, callbacks)
 end
 
 --- AWS omics get-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow(input)
-	return common.execute_aws_command_skeleton({ "omics", "get-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "get-workflow" }, input, callbacks)
 end
 
 --- AWS omics list-annotation-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_annotation_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-annotation-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_annotation_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-annotation-import-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-annotation-store-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_annotation_store_versions(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-annotation-store-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_annotation_store_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-annotation-store-versions" }, input, callbacks)
 end
 
 --- AWS omics list-annotation-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_annotation_stores(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-annotation-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_annotation_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-annotation-stores" }, input, callbacks)
 end
 
 --- AWS omics list-multipart-read-set-uploads operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_multipart_read_set_uploads(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-multipart-read-set-uploads" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_multipart_read_set_uploads(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-multipart-read-set-uploads" }, input, callbacks)
 end
 
 --- AWS omics list-read-set-activation-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_read_set_activation_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-read-set-activation-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_read_set_activation_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-read-set-activation-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-read-set-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_read_set_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-read-set-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_read_set_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-read-set-export-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-read-set-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_read_set_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-read-set-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_read_set_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-read-set-import-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-read-set-upload-parts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_read_set_upload_parts(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-read-set-upload-parts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_read_set_upload_parts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-read-set-upload-parts" }, input, callbacks)
 end
 
 --- AWS omics list-read-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_read_sets(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-read-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_read_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-read-sets" }, input, callbacks)
 end
 
 --- AWS omics list-reference-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_reference_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-reference-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_reference_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-reference-import-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-reference-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_reference_stores(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-reference-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_reference_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-reference-stores" }, input, callbacks)
 end
 
 --- AWS omics list-references operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_references(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-references" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_references(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-references" }, input, callbacks)
 end
 
 --- AWS omics list-run-caches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_run_caches(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-run-caches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_run_caches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-run-caches" }, input, callbacks)
 end
 
 --- AWS omics list-run-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_run_groups(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-run-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_run_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-run-groups" }, input, callbacks)
 end
 
 --- AWS omics list-run-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_run_tasks(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-run-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_run_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-run-tasks" }, input, callbacks)
 end
 
 --- AWS omics list-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_runs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-runs" }, input, callbacks)
 end
 
 --- AWS omics list-sequence-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sequence_stores(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-sequence-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sequence_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-sequence-stores" }, input, callbacks)
 end
 
 --- AWS omics list-shares operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_shares(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-shares" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_shares(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-shares" }, input, callbacks)
 end
 
 --- AWS omics list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS omics list-variant-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_variant_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-variant-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_variant_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-variant-import-jobs" }, input, callbacks)
 end
 
 --- AWS omics list-variant-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_variant_stores(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-variant-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_variant_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-variant-stores" }, input, callbacks)
 end
 
 --- AWS omics list-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workflows(input)
-	return common.execute_aws_command_skeleton({ "omics", "list-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "list-workflows" }, input, callbacks)
 end
 
 --- AWS omics put-s3-access-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_s3_access_policy(input)
-	return common.execute_aws_command_skeleton({ "omics", "put-s3-access-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_s3_access_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "put-s3-access-policy" }, input, callbacks)
 end
 
 --- AWS omics start-annotation-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_annotation_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-annotation-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_annotation_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-annotation-import-job" }, input, callbacks)
 end
 
 --- AWS omics start-read-set-activation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_read_set_activation_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-read-set-activation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_read_set_activation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-read-set-activation-job" }, input, callbacks)
 end
 
 --- AWS omics start-read-set-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_read_set_export_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-read-set-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_read_set_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-read-set-export-job" }, input, callbacks)
 end
 
 --- AWS omics start-read-set-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_read_set_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-read-set-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_read_set_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-read-set-import-job" }, input, callbacks)
 end
 
 --- AWS omics start-reference-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_reference_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-reference-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_reference_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-reference-import-job" }, input, callbacks)
 end
 
 --- AWS omics start-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_run(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-run" }, input, callbacks)
 end
 
 --- AWS omics start-variant-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_variant_import_job(input)
-	return common.execute_aws_command_skeleton({ "omics", "start-variant-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_variant_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "start-variant-import-job" }, input, callbacks)
 end
 
 --- AWS omics tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "omics", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "tag-resource" }, input, callbacks)
 end
 
 --- AWS omics untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "omics", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "untag-resource" }, input, callbacks)
 end
 
 --- AWS omics update-annotation-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_annotation_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-annotation-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_annotation_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-annotation-store" }, input, callbacks)
 end
 
 --- AWS omics update-annotation-store-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_annotation_store_version(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-annotation-store-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_annotation_store_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-annotation-store-version" }, input, callbacks)
 end
 
 --- AWS omics update-run-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_run_cache(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-run-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_run_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-run-cache" }, input, callbacks)
 end
 
 --- AWS omics update-run-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_run_group(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-run-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_run_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-run-group" }, input, callbacks)
 end
 
 --- AWS omics update-sequence-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_sequence_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-sequence-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_sequence_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-sequence-store" }, input, callbacks)
 end
 
 --- AWS omics update-variant-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_variant_store(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-variant-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_variant_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-variant-store" }, input, callbacks)
 end
 
 --- AWS omics update-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workflow(input)
-	return common.execute_aws_command_skeleton({ "omics", "update-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "update-workflow" }, input, callbacks)
 end
 
 --- AWS omics upload-read-set-part operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.upload_read_set_part(input)
-	return common.execute_aws_command_skeleton({ "omics", "upload-read-set-part" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.upload_read_set_part(input, callbacks)
+	return common.execute_aws_command_skeleton({ "omics", "upload-read-set-part" }, input, callbacks)
 end
 
 --- AWS omics wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "omics", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "omics", "wait" }, input, callbacks)
 end
 
 return M

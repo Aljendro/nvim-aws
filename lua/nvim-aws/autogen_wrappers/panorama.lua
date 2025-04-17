@@ -8,240 +8,274 @@ local M = {}
 
 --- AWS panorama create-application-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application_instance(input)
-	return common.execute_aws_command_skeleton({ "panorama", "create-application-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "create-application-instance" }, input, callbacks)
 end
 
 --- AWS panorama create-job-for-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job_for_devices(input)
-	return common.execute_aws_command_skeleton({ "panorama", "create-job-for-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job_for_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "create-job-for-devices" }, input, callbacks)
 end
 
 --- AWS panorama create-node-from-template-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_node_from_template_job(input)
-	return common.execute_aws_command_skeleton({ "panorama", "create-node-from-template-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_node_from_template_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "create-node-from-template-job" }, input, callbacks)
 end
 
 --- AWS panorama create-package operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_package(input)
-	return common.execute_aws_command_skeleton({ "panorama", "create-package" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_package(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "create-package" }, input, callbacks)
 end
 
 --- AWS panorama create-package-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_package_import_job(input)
-	return common.execute_aws_command_skeleton({ "panorama", "create-package-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_package_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "create-package-import-job" }, input, callbacks)
 end
 
 --- AWS panorama delete-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_device(input)
-	return common.execute_aws_command_skeleton({ "panorama", "delete-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "delete-device" }, input, callbacks)
 end
 
 --- AWS panorama delete-package operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_package(input)
-	return common.execute_aws_command_skeleton({ "panorama", "delete-package" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_package(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "delete-package" }, input, callbacks)
 end
 
 --- AWS panorama deregister-package-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_package_version(input)
-	return common.execute_aws_command_skeleton({ "panorama", "deregister-package-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_package_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "deregister-package-version" }, input, callbacks)
 end
 
 --- AWS panorama describe-application-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_application_instance(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-application-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_application_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-application-instance" }, input, callbacks)
 end
 
 --- AWS panorama describe-application-instance-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_application_instance_details(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-application-instance-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_application_instance_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-application-instance-details" }, input, callbacks)
 end
 
 --- AWS panorama describe-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_device(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-device" }, input, callbacks)
 end
 
 --- AWS panorama describe-device-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_device_job(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-device-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_device_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-device-job" }, input, callbacks)
 end
 
 --- AWS panorama describe-node operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_node(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-node" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_node(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-node" }, input, callbacks)
 end
 
 --- AWS panorama describe-node-from-template-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_node_from_template_job(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-node-from-template-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_node_from_template_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-node-from-template-job" }, input, callbacks)
 end
 
 --- AWS panorama describe-package operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_package(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-package" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_package(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-package" }, input, callbacks)
 end
 
 --- AWS panorama describe-package-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_package_import_job(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-package-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_package_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-package-import-job" }, input, callbacks)
 end
 
 --- AWS panorama describe-package-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_package_version(input)
-	return common.execute_aws_command_skeleton({ "panorama", "describe-package-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_package_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "describe-package-version" }, input, callbacks)
 end
 
 --- AWS panorama list-application-instance-dependencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_instance_dependencies(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-application-instance-dependencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_instance_dependencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-application-instance-dependencies" }, input, callbacks)
 end
 
 --- AWS panorama list-application-instance-node-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_instance_node_instances(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-application-instance-node-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_instance_node_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-application-instance-node-instances" }, input, callbacks)
 end
 
 --- AWS panorama list-application-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_application_instances(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-application-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_application_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-application-instances" }, input, callbacks)
 end
 
 --- AWS panorama list-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-devices" }, input, callbacks)
 end
 
 --- AWS panorama list-devices-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices_jobs(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-devices-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-devices-jobs" }, input, callbacks)
 end
 
 --- AWS panorama list-node-from-template-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_node_from_template_jobs(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-node-from-template-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_node_from_template_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-node-from-template-jobs" }, input, callbacks)
 end
 
 --- AWS panorama list-nodes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_nodes(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-nodes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_nodes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-nodes" }, input, callbacks)
 end
 
 --- AWS panorama list-package-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_package_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-package-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_package_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-package-import-jobs" }, input, callbacks)
 end
 
 --- AWS panorama list-packages operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_packages(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-packages" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_packages(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-packages" }, input, callbacks)
 end
 
 --- AWS panorama list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "panorama", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS panorama provision-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.provision_device(input)
-	return common.execute_aws_command_skeleton({ "panorama", "provision-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.provision_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "provision-device" }, input, callbacks)
 end
 
 --- AWS panorama register-package-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_package_version(input)
-	return common.execute_aws_command_skeleton({ "panorama", "register-package-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_package_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "register-package-version" }, input, callbacks)
 end
 
 --- AWS panorama remove-application-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_application_instance(input)
-	return common.execute_aws_command_skeleton({ "panorama", "remove-application-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_application_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "remove-application-instance" }, input, callbacks)
 end
 
 --- AWS panorama signal-application-instance-node-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.signal_application_instance_node_instances(input)
-	return common.execute_aws_command_skeleton({ "panorama", "signal-application-instance-node-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.signal_application_instance_node_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "signal-application-instance-node-instances" }, input, callbacks)
 end
 
 --- AWS panorama tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "panorama", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "tag-resource" }, input, callbacks)
 end
 
 --- AWS panorama untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "panorama", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "untag-resource" }, input, callbacks)
 end
 
 --- AWS panorama update-device-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_device_metadata(input)
-	return common.execute_aws_command_skeleton({ "panorama", "update-device-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_device_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "panorama", "update-device-metadata" }, input, callbacks)
 end
 
 return M

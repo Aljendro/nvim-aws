@@ -8,681 +8,778 @@ local M = {}
 
 --- AWS s3control associate-access-grants-identity-center operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_access_grants_identity_center(input)
-	return common.execute_aws_command_skeleton({ "s3control", "associate-access-grants-identity-center" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_access_grants_identity_center(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "associate-access-grants-identity-center" }, input, callbacks)
 end
 
 --- AWS s3control create-access-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_access_grant(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-access-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_access_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-access-grant" }, input, callbacks)
 end
 
 --- AWS s3control create-access-grants-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_access_grants_instance(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-access-grants-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_access_grants_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-access-grants-instance" }, input, callbacks)
 end
 
 --- AWS s3control create-access-grants-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_access_grants_location(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-access-grants-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_access_grants_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-access-grants-location" }, input, callbacks)
 end
 
 --- AWS s3control create-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-access-point" }, input, callbacks)
 end
 
 --- AWS s3control create-access-point-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_access_point_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-access-point-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_access_point_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-access-point-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control create-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-bucket" }, input, callbacks)
 end
 
 --- AWS s3control create-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-job" }, input, callbacks)
 end
 
 --- AWS s3control create-multi-region-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_multi_region_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-multi-region-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_multi_region_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-multi-region-access-point" }, input, callbacks)
 end
 
 --- AWS s3control create-storage-lens-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_storage_lens_group(input)
-	return common.execute_aws_command_skeleton({ "s3control", "create-storage-lens-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_storage_lens_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "create-storage-lens-group" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_grant(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grant" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-grants-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_grants_instance(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_grants_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-instance" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-grants-instance-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_grants_instance_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-instance-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_grants_instance_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-instance-resource-policy" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-grants-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_grants_location(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_grants_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-grants-location" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-point-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_point_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_point_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-point-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_point_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_point_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-policy" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-point-policy-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_point_policy_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-policy-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_point_policy_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-policy-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control delete-access-point-scope operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_access_point_scope(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-scope" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_access_point_scope(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-access-point-scope" }, input, callbacks)
 end
 
 --- AWS s3control delete-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket" }, input, callbacks)
 end
 
 --- AWS s3control delete-bucket-lifecycle-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket_lifecycle_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-lifecycle-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket_lifecycle_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-lifecycle-configuration" }, input, callbacks)
 end
 
 --- AWS s3control delete-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3control delete-bucket-replication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket_replication(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-replication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket_replication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-replication" }, input, callbacks)
 end
 
 --- AWS s3control delete-bucket-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-bucket-tagging" }, input, callbacks)
 end
 
 --- AWS s3control delete-job-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_job_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-job-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_job_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-job-tagging" }, input, callbacks)
 end
 
 --- AWS s3control delete-multi-region-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_multi_region_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-multi-region-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_multi_region_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-multi-region-access-point" }, input, callbacks)
 end
 
 --- AWS s3control delete-public-access-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_public_access_block(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-public-access-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_public_access_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-public-access-block" }, input, callbacks)
 end
 
 --- AWS s3control delete-storage-lens-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_storage_lens_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_storage_lens_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-configuration" }, input, callbacks)
 end
 
 --- AWS s3control delete-storage-lens-configuration-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_storage_lens_configuration_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-configuration-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_storage_lens_configuration_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-configuration-tagging" }, input, callbacks)
 end
 
 --- AWS s3control delete-storage-lens-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_storage_lens_group(input)
-	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_storage_lens_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "delete-storage-lens-group" }, input, callbacks)
 end
 
 --- AWS s3control describe-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_job(input)
-	return common.execute_aws_command_skeleton({ "s3control", "describe-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "describe-job" }, input, callbacks)
 end
 
 --- AWS s3control describe-multi-region-access-point-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_multi_region_access_point_operation(input)
-	return common.execute_aws_command_skeleton({ "s3control", "describe-multi-region-access-point-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_multi_region_access_point_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "describe-multi-region-access-point-operation" }, input, callbacks)
 end
 
 --- AWS s3control dissociate-access-grants-identity-center operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.dissociate_access_grants_identity_center(input)
-	return common.execute_aws_command_skeleton({ "s3control", "dissociate-access-grants-identity-center" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.dissociate_access_grants_identity_center(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "dissociate-access-grants-identity-center" }, input, callbacks)
 end
 
 --- AWS s3control get-access-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_grant(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-grant" }, input, callbacks)
 end
 
 --- AWS s3control get-access-grants-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_grants_instance(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_grants_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance" }, input, callbacks)
 end
 
 --- AWS s3control get-access-grants-instance-for-prefix operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_grants_instance_for_prefix(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance-for-prefix" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_grants_instance_for_prefix(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance-for-prefix" }, input, callbacks)
 end
 
 --- AWS s3control get-access-grants-instance-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_grants_instance_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_grants_instance_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-instance-resource-policy" }, input, callbacks)
 end
 
 --- AWS s3control get-access-grants-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_grants_location(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_grants_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-grants-location" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-configuration-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_configuration_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-configuration-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_configuration_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-configuration-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-policy-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_policy_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_policy_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-policy-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_policy_status(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_policy_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-status" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-policy-status-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_policy_status_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-status-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_policy_status_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-policy-status-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control get-access-point-scope operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_point_scope(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-scope" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_point_scope(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-access-point-scope" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket-lifecycle-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_lifecycle_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-lifecycle-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_lifecycle_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-lifecycle-configuration" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket-replication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_replication(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-replication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_replication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-replication" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-tagging" }, input, callbacks)
 end
 
 --- AWS s3control get-bucket-versioning operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_versioning(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-versioning" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_versioning(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-bucket-versioning" }, input, callbacks)
 end
 
 --- AWS s3control get-data-access operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_access(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-data-access" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_access(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-data-access" }, input, callbacks)
 end
 
 --- AWS s3control get-job-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-job-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-job-tagging" }, input, callbacks)
 end
 
 --- AWS s3control get-multi-region-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multi_region_access_point(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multi_region_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point" }, input, callbacks)
 end
 
 --- AWS s3control get-multi-region-access-point-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multi_region_access_point_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multi_region_access_point_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-policy" }, input, callbacks)
 end
 
 --- AWS s3control get-multi-region-access-point-policy-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multi_region_access_point_policy_status(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-policy-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multi_region_access_point_policy_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-policy-status" }, input, callbacks)
 end
 
 --- AWS s3control get-multi-region-access-point-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_multi_region_access_point_routes(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_multi_region_access_point_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-multi-region-access-point-routes" }, input, callbacks)
 end
 
 --- AWS s3control get-public-access-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_public_access_block(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-public-access-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_public_access_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-public-access-block" }, input, callbacks)
 end
 
 --- AWS s3control get-storage-lens-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_storage_lens_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_storage_lens_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-configuration" }, input, callbacks)
 end
 
 --- AWS s3control get-storage-lens-configuration-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_storage_lens_configuration_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-configuration-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_storage_lens_configuration_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-configuration-tagging" }, input, callbacks)
 end
 
 --- AWS s3control get-storage-lens-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_storage_lens_group(input)
-	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_storage_lens_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "get-storage-lens-group" }, input, callbacks)
 end
 
 --- AWS s3control list-access-grants operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_grants(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_grants(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants" }, input, callbacks)
 end
 
 --- AWS s3control list-access-grants-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_grants_instances(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_grants_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants-instances" }, input, callbacks)
 end
 
 --- AWS s3control list-access-grants-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_grants_locations(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_grants_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-grants-locations" }, input, callbacks)
 end
 
 --- AWS s3control list-access-points operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_points(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-points" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_points(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-points" }, input, callbacks)
 end
 
 --- AWS s3control list-access-points-for-directory-buckets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_points_for_directory_buckets(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-points-for-directory-buckets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_points_for_directory_buckets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-points-for-directory-buckets" }, input, callbacks)
 end
 
 --- AWS s3control list-access-points-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_access_points_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-access-points-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_access_points_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-access-points-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control list-caller-access-grants operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_caller_access_grants(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-caller-access-grants" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_caller_access_grants(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-caller-access-grants" }, input, callbacks)
 end
 
 --- AWS s3control list-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-jobs" }, input, callbacks)
 end
 
 --- AWS s3control list-multi-region-access-points operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_multi_region_access_points(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-multi-region-access-points" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_multi_region_access_points(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-multi-region-access-points" }, input, callbacks)
 end
 
 --- AWS s3control list-regional-buckets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_regional_buckets(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-regional-buckets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_regional_buckets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-regional-buckets" }, input, callbacks)
 end
 
 --- AWS s3control list-storage-lens-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_storage_lens_configurations(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-storage-lens-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_storage_lens_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-storage-lens-configurations" }, input, callbacks)
 end
 
 --- AWS s3control list-storage-lens-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_storage_lens_groups(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-storage-lens-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_storage_lens_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-storage-lens-groups" }, input, callbacks)
 end
 
 --- AWS s3control list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "s3control", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS s3control put-access-grants-instance-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_access_grants_instance_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-access-grants-instance-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_access_grants_instance_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-access-grants-instance-resource-policy" }, input, callbacks)
 end
 
 --- AWS s3control put-access-point-configuration-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_access_point_configuration_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-configuration-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_access_point_configuration_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-configuration-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control put-access-point-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_access_point_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_access_point_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-policy" }, input, callbacks)
 end
 
 --- AWS s3control put-access-point-policy-for-object-lambda operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_access_point_policy_for_object_lambda(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-policy-for-object-lambda" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_access_point_policy_for_object_lambda(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-policy-for-object-lambda" }, input, callbacks)
 end
 
 --- AWS s3control put-access-point-scope operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_access_point_scope(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-scope" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_access_point_scope(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-access-point-scope" }, input, callbacks)
 end
 
 --- AWS s3control put-bucket-lifecycle-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_bucket_lifecycle_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-lifecycle-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_bucket_lifecycle_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-lifecycle-configuration" }, input, callbacks)
 end
 
 --- AWS s3control put-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3control put-bucket-replication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_bucket_replication(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-replication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_bucket_replication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-replication" }, input, callbacks)
 end
 
 --- AWS s3control put-bucket-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_bucket_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_bucket_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-tagging" }, input, callbacks)
 end
 
 --- AWS s3control put-bucket-versioning operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_bucket_versioning(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-versioning" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_bucket_versioning(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-bucket-versioning" }, input, callbacks)
 end
 
 --- AWS s3control put-job-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_job_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-job-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_job_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-job-tagging" }, input, callbacks)
 end
 
 --- AWS s3control put-multi-region-access-point-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_multi_region_access_point_policy(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-multi-region-access-point-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_multi_region_access_point_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-multi-region-access-point-policy" }, input, callbacks)
 end
 
 --- AWS s3control put-public-access-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_public_access_block(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-public-access-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_public_access_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-public-access-block" }, input, callbacks)
 end
 
 --- AWS s3control put-storage-lens-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_storage_lens_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-storage-lens-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_storage_lens_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-storage-lens-configuration" }, input, callbacks)
 end
 
 --- AWS s3control put-storage-lens-configuration-tagging operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_storage_lens_configuration_tagging(input)
-	return common.execute_aws_command_skeleton({ "s3control", "put-storage-lens-configuration-tagging" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_storage_lens_configuration_tagging(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "put-storage-lens-configuration-tagging" }, input, callbacks)
 end
 
 --- AWS s3control submit-multi-region-access-point-routes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.submit_multi_region_access_point_routes(input)
-	return common.execute_aws_command_skeleton({ "s3control", "submit-multi-region-access-point-routes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.submit_multi_region_access_point_routes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "submit-multi-region-access-point-routes" }, input, callbacks)
 end
 
 --- AWS s3control tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "s3control", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "tag-resource" }, input, callbacks)
 end
 
 --- AWS s3control untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "s3control", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "untag-resource" }, input, callbacks)
 end
 
 --- AWS s3control update-access-grants-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_access_grants_location(input)
-	return common.execute_aws_command_skeleton({ "s3control", "update-access-grants-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_access_grants_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "update-access-grants-location" }, input, callbacks)
 end
 
 --- AWS s3control update-job-priority operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job_priority(input)
-	return common.execute_aws_command_skeleton({ "s3control", "update-job-priority" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job_priority(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "update-job-priority" }, input, callbacks)
 end
 
 --- AWS s3control update-job-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job_status(input)
-	return common.execute_aws_command_skeleton({ "s3control", "update-job-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "update-job-status" }, input, callbacks)
 end
 
 --- AWS s3control update-storage-lens-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_storage_lens_group(input)
-	return common.execute_aws_command_skeleton({ "s3control", "update-storage-lens-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_storage_lens_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3control", "update-storage-lens-group" }, input, callbacks)
 end
 
 return M

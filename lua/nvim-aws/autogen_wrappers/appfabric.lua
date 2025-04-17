@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS appfabric batch-get-user-access-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_user_access_tasks(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "batch-get-user-access-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_user_access_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "batch-get-user-access-tasks" }, input, callbacks)
 end
 
 --- AWS appfabric connect-app-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.connect_app_authorization(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "connect-app-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.connect_app_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "connect-app-authorization" }, input, callbacks)
 end
 
 --- AWS appfabric create-app-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_authorization(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "create-app-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "create-app-authorization" }, input, callbacks)
 end
 
 --- AWS appfabric create-app-bundle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_bundle(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "create-app-bundle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_bundle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "create-app-bundle" }, input, callbacks)
 end
 
 --- AWS appfabric create-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ingestion(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "create-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "create-ingestion" }, input, callbacks)
 end
 
 --- AWS appfabric create-ingestion-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ingestion_destination(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "create-ingestion-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ingestion_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "create-ingestion-destination" }, input, callbacks)
 end
 
 --- AWS appfabric delete-app-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_authorization(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "delete-app-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "delete-app-authorization" }, input, callbacks)
 end
 
 --- AWS appfabric delete-app-bundle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_bundle(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "delete-app-bundle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_bundle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "delete-app-bundle" }, input, callbacks)
 end
 
 --- AWS appfabric delete-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ingestion(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "delete-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "delete-ingestion" }, input, callbacks)
 end
 
 --- AWS appfabric delete-ingestion-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ingestion_destination(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "delete-ingestion-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ingestion_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "delete-ingestion-destination" }, input, callbacks)
 end
 
 --- AWS appfabric get-app-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_app_authorization(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "get-app-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_app_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "get-app-authorization" }, input, callbacks)
 end
 
 --- AWS appfabric get-app-bundle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_app_bundle(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "get-app-bundle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_app_bundle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "get-app-bundle" }, input, callbacks)
 end
 
 --- AWS appfabric get-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ingestion(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "get-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "get-ingestion" }, input, callbacks)
 end
 
 --- AWS appfabric get-ingestion-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ingestion_destination(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "get-ingestion-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ingestion_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "get-ingestion-destination" }, input, callbacks)
 end
 
 --- AWS appfabric list-app-authorizations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_authorizations(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "list-app-authorizations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_authorizations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "list-app-authorizations" }, input, callbacks)
 end
 
 --- AWS appfabric list-app-bundles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_bundles(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "list-app-bundles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_bundles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "list-app-bundles" }, input, callbacks)
 end
 
 --- AWS appfabric list-ingestion-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ingestion_destinations(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "list-ingestion-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ingestion_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "list-ingestion-destinations" }, input, callbacks)
 end
 
 --- AWS appfabric list-ingestions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ingestions(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "list-ingestions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ingestions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "list-ingestions" }, input, callbacks)
 end
 
 --- AWS appfabric list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS appfabric start-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_ingestion(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "start-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "start-ingestion" }, input, callbacks)
 end
 
 --- AWS appfabric start-user-access-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_user_access_tasks(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "start-user-access-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_user_access_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "start-user-access-tasks" }, input, callbacks)
 end
 
 --- AWS appfabric stop-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_ingestion(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "stop-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "stop-ingestion" }, input, callbacks)
 end
 
 --- AWS appfabric tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "tag-resource" }, input, callbacks)
 end
 
 --- AWS appfabric untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "untag-resource" }, input, callbacks)
 end
 
 --- AWS appfabric update-app-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_authorization(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "update-app-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "update-app-authorization" }, input, callbacks)
 end
 
 --- AWS appfabric update-ingestion-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ingestion_destination(input)
-	return common.execute_aws_command_skeleton({ "appfabric", "update-ingestion-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ingestion_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appfabric", "update-ingestion-destination" }, input, callbacks)
 end
 
 return M

@@ -8,310 +8,354 @@ local M = {}
 
 --- AWS ce create-anomaly-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_anomaly_monitor(input)
-	return common.execute_aws_command_skeleton({ "ce", "create-anomaly-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_anomaly_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "create-anomaly-monitor" }, input, callbacks)
 end
 
 --- AWS ce create-anomaly-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_anomaly_subscription(input)
-	return common.execute_aws_command_skeleton({ "ce", "create-anomaly-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_anomaly_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "create-anomaly-subscription" }, input, callbacks)
 end
 
 --- AWS ce create-cost-category-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cost_category_definition(input)
-	return common.execute_aws_command_skeleton({ "ce", "create-cost-category-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cost_category_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "create-cost-category-definition" }, input, callbacks)
 end
 
 --- AWS ce delete-anomaly-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_anomaly_monitor(input)
-	return common.execute_aws_command_skeleton({ "ce", "delete-anomaly-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_anomaly_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "delete-anomaly-monitor" }, input, callbacks)
 end
 
 --- AWS ce delete-anomaly-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_anomaly_subscription(input)
-	return common.execute_aws_command_skeleton({ "ce", "delete-anomaly-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_anomaly_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "delete-anomaly-subscription" }, input, callbacks)
 end
 
 --- AWS ce delete-cost-category-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cost_category_definition(input)
-	return common.execute_aws_command_skeleton({ "ce", "delete-cost-category-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cost_category_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "delete-cost-category-definition" }, input, callbacks)
 end
 
 --- AWS ce describe-cost-category-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cost_category_definition(input)
-	return common.execute_aws_command_skeleton({ "ce", "describe-cost-category-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cost_category_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "describe-cost-category-definition" }, input, callbacks)
 end
 
 --- AWS ce get-anomalies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_anomalies(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-anomalies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_anomalies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-anomalies" }, input, callbacks)
 end
 
 --- AWS ce get-anomaly-monitors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_anomaly_monitors(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-anomaly-monitors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_anomaly_monitors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-anomaly-monitors" }, input, callbacks)
 end
 
 --- AWS ce get-anomaly-subscriptions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_anomaly_subscriptions(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-anomaly-subscriptions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_anomaly_subscriptions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-anomaly-subscriptions" }, input, callbacks)
 end
 
 --- AWS ce get-approximate-usage-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_approximate_usage_records(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-approximate-usage-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_approximate_usage_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-approximate-usage-records" }, input, callbacks)
 end
 
 --- AWS ce get-commitment-purchase-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_commitment_purchase_analysis(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-commitment-purchase-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_commitment_purchase_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-commitment-purchase-analysis" }, input, callbacks)
 end
 
 --- AWS ce get-cost-and-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cost_and_usage(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-cost-and-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cost_and_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-cost-and-usage" }, input, callbacks)
 end
 
 --- AWS ce get-cost-and-usage-with-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cost_and_usage_with_resources(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-cost-and-usage-with-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cost_and_usage_with_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-cost-and-usage-with-resources" }, input, callbacks)
 end
 
 --- AWS ce get-cost-categories operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cost_categories(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-cost-categories" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cost_categories(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-cost-categories" }, input, callbacks)
 end
 
 --- AWS ce get-cost-forecast operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cost_forecast(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-cost-forecast" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cost_forecast(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-cost-forecast" }, input, callbacks)
 end
 
 --- AWS ce get-dimension-values operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dimension_values(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-dimension-values" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dimension_values(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-dimension-values" }, input, callbacks)
 end
 
 --- AWS ce get-reservation-coverage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reservation_coverage(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-reservation-coverage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reservation_coverage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-reservation-coverage" }, input, callbacks)
 end
 
 --- AWS ce get-reservation-purchase-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reservation_purchase_recommendation(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-reservation-purchase-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reservation_purchase_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-reservation-purchase-recommendation" }, input, callbacks)
 end
 
 --- AWS ce get-reservation-utilization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reservation_utilization(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-reservation-utilization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reservation_utilization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-reservation-utilization" }, input, callbacks)
 end
 
 --- AWS ce get-rightsizing-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_rightsizing_recommendation(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-rightsizing-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_rightsizing_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-rightsizing-recommendation" }, input, callbacks)
 end
 
 --- AWS ce get-savings-plan-purchase-recommendation-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_savings_plan_purchase_recommendation_details(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-savings-plan-purchase-recommendation-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_savings_plan_purchase_recommendation_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-savings-plan-purchase-recommendation-details" }, input, callbacks)
 end
 
 --- AWS ce get-savings-plans-coverage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_savings_plans_coverage(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-coverage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_savings_plans_coverage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-coverage" }, input, callbacks)
 end
 
 --- AWS ce get-savings-plans-purchase-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_savings_plans_purchase_recommendation(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-purchase-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_savings_plans_purchase_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-purchase-recommendation" }, input, callbacks)
 end
 
 --- AWS ce get-savings-plans-utilization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_savings_plans_utilization(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-utilization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_savings_plans_utilization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-utilization" }, input, callbacks)
 end
 
 --- AWS ce get-savings-plans-utilization-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_savings_plans_utilization_details(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-utilization-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_savings_plans_utilization_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-savings-plans-utilization-details" }, input, callbacks)
 end
 
 --- AWS ce get-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tags(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-tags" }, input, callbacks)
 end
 
 --- AWS ce get-usage-forecast operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_usage_forecast(input)
-	return common.execute_aws_command_skeleton({ "ce", "get-usage-forecast" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_usage_forecast(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "get-usage-forecast" }, input, callbacks)
 end
 
 --- AWS ce list-commitment-purchase-analyses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_commitment_purchase_analyses(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-commitment-purchase-analyses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_commitment_purchase_analyses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-commitment-purchase-analyses" }, input, callbacks)
 end
 
 --- AWS ce list-cost-allocation-tag-backfill-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cost_allocation_tag_backfill_history(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-cost-allocation-tag-backfill-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cost_allocation_tag_backfill_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-cost-allocation-tag-backfill-history" }, input, callbacks)
 end
 
 --- AWS ce list-cost-allocation-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cost_allocation_tags(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-cost-allocation-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cost_allocation_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-cost-allocation-tags" }, input, callbacks)
 end
 
 --- AWS ce list-cost-category-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cost_category_definitions(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-cost-category-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cost_category_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-cost-category-definitions" }, input, callbacks)
 end
 
 --- AWS ce list-savings-plans-purchase-recommendation-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_savings_plans_purchase_recommendation_generation(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-savings-plans-purchase-recommendation-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_savings_plans_purchase_recommendation_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-savings-plans-purchase-recommendation-generation" }, input, callbacks)
 end
 
 --- AWS ce list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ce", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ce provide-anomaly-feedback operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.provide_anomaly_feedback(input)
-	return common.execute_aws_command_skeleton({ "ce", "provide-anomaly-feedback" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.provide_anomaly_feedback(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "provide-anomaly-feedback" }, input, callbacks)
 end
 
 --- AWS ce start-commitment-purchase-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_commitment_purchase_analysis(input)
-	return common.execute_aws_command_skeleton({ "ce", "start-commitment-purchase-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_commitment_purchase_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "start-commitment-purchase-analysis" }, input, callbacks)
 end
 
 --- AWS ce start-cost-allocation-tag-backfill operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_cost_allocation_tag_backfill(input)
-	return common.execute_aws_command_skeleton({ "ce", "start-cost-allocation-tag-backfill" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_cost_allocation_tag_backfill(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "start-cost-allocation-tag-backfill" }, input, callbacks)
 end
 
 --- AWS ce start-savings-plans-purchase-recommendation-generation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_savings_plans_purchase_recommendation_generation(input)
-	return common.execute_aws_command_skeleton({ "ce", "start-savings-plans-purchase-recommendation-generation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_savings_plans_purchase_recommendation_generation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "start-savings-plans-purchase-recommendation-generation" }, input, callbacks)
 end
 
 --- AWS ce tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ce", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ce untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ce", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ce update-anomaly-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_anomaly_monitor(input)
-	return common.execute_aws_command_skeleton({ "ce", "update-anomaly-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_anomaly_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "update-anomaly-monitor" }, input, callbacks)
 end
 
 --- AWS ce update-anomaly-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_anomaly_subscription(input)
-	return common.execute_aws_command_skeleton({ "ce", "update-anomaly-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_anomaly_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "update-anomaly-subscription" }, input, callbacks)
 end
 
 --- AWS ce update-cost-allocation-tags-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_cost_allocation_tags_status(input)
-	return common.execute_aws_command_skeleton({ "ce", "update-cost-allocation-tags-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_cost_allocation_tags_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "update-cost-allocation-tags-status" }, input, callbacks)
 end
 
 --- AWS ce update-cost-category-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_cost_category_definition(input)
-	return common.execute_aws_command_skeleton({ "ce", "update-cost-category-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_cost_category_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ce", "update-cost-category-definition" }, input, callbacks)
 end
 
 return M

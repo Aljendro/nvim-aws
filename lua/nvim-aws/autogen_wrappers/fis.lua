@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS fis create-experiment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_experiment_template(input)
-	return common.execute_aws_command_skeleton({ "fis", "create-experiment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_experiment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "create-experiment-template" }, input, callbacks)
 end
 
 --- AWS fis create-target-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_target_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "fis", "create-target-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_target_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "create-target-account-configuration" }, input, callbacks)
 end
 
 --- AWS fis delete-experiment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_experiment_template(input)
-	return common.execute_aws_command_skeleton({ "fis", "delete-experiment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_experiment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "delete-experiment-template" }, input, callbacks)
 end
 
 --- AWS fis delete-target-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_target_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "fis", "delete-target-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_target_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "delete-target-account-configuration" }, input, callbacks)
 end
 
 --- AWS fis get-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_action(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-action" }, input, callbacks)
 end
 
 --- AWS fis get-experiment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_experiment(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-experiment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_experiment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-experiment" }, input, callbacks)
 end
 
 --- AWS fis get-experiment-target-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_experiment_target_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-experiment-target-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_experiment_target_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-experiment-target-account-configuration" }, input, callbacks)
 end
 
 --- AWS fis get-experiment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_experiment_template(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-experiment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_experiment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-experiment-template" }, input, callbacks)
 end
 
 --- AWS fis get-safety-lever operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_safety_lever(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-safety-lever" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_safety_lever(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-safety-lever" }, input, callbacks)
 end
 
 --- AWS fis get-target-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_target_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-target-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_target_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-target-account-configuration" }, input, callbacks)
 end
 
 --- AWS fis get-target-resource-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_target_resource_type(input)
-	return common.execute_aws_command_skeleton({ "fis", "get-target-resource-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_target_resource_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "get-target-resource-type" }, input, callbacks)
 end
 
 --- AWS fis list-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_actions(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-actions" }, input, callbacks)
 end
 
 --- AWS fis list-experiment-resolved-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_experiment_resolved_targets(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-experiment-resolved-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_experiment_resolved_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-experiment-resolved-targets" }, input, callbacks)
 end
 
 --- AWS fis list-experiment-target-account-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_experiment_target_account_configurations(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-experiment-target-account-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_experiment_target_account_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-experiment-target-account-configurations" }, input, callbacks)
 end
 
 --- AWS fis list-experiment-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_experiment_templates(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-experiment-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_experiment_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-experiment-templates" }, input, callbacks)
 end
 
 --- AWS fis list-experiments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_experiments(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-experiments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_experiments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-experiments" }, input, callbacks)
 end
 
 --- AWS fis list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS fis list-target-account-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_target_account_configurations(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-target-account-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_target_account_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-target-account-configurations" }, input, callbacks)
 end
 
 --- AWS fis list-target-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_target_resource_types(input)
-	return common.execute_aws_command_skeleton({ "fis", "list-target-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_target_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "list-target-resource-types" }, input, callbacks)
 end
 
 --- AWS fis start-experiment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_experiment(input)
-	return common.execute_aws_command_skeleton({ "fis", "start-experiment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_experiment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "start-experiment" }, input, callbacks)
 end
 
 --- AWS fis stop-experiment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_experiment(input)
-	return common.execute_aws_command_skeleton({ "fis", "stop-experiment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_experiment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "stop-experiment" }, input, callbacks)
 end
 
 --- AWS fis tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "fis", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "tag-resource" }, input, callbacks)
 end
 
 --- AWS fis untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "fis", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "untag-resource" }, input, callbacks)
 end
 
 --- AWS fis update-experiment-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_experiment_template(input)
-	return common.execute_aws_command_skeleton({ "fis", "update-experiment-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_experiment_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "update-experiment-template" }, input, callbacks)
 end
 
 --- AWS fis update-safety-lever-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_safety_lever_state(input)
-	return common.execute_aws_command_skeleton({ "fis", "update-safety-lever-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_safety_lever_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "update-safety-lever-state" }, input, callbacks)
 end
 
 --- AWS fis update-target-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_target_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "fis", "update-target-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_target_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "fis", "update-target-account-configuration" }, input, callbacks)
 end
 
 return M

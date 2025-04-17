@@ -8,177 +8,202 @@ local M = {}
 
 --- AWS appflow cancel-flow-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_flow_executions(input)
-	return common.execute_aws_command_skeleton({ "appflow", "cancel-flow-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_flow_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "cancel-flow-executions" }, input, callbacks)
 end
 
 --- AWS appflow create-connector-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_connector_profile(input)
-	return common.execute_aws_command_skeleton({ "appflow", "create-connector-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_connector_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "create-connector-profile" }, input, callbacks)
 end
 
 --- AWS appflow create-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "create-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "create-flow" }, input, callbacks)
 end
 
 --- AWS appflow delete-connector-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connector_profile(input)
-	return common.execute_aws_command_skeleton({ "appflow", "delete-connector-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connector_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "delete-connector-profile" }, input, callbacks)
 end
 
 --- AWS appflow delete-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "delete-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "delete-flow" }, input, callbacks)
 end
 
 --- AWS appflow describe-connector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connector(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-connector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-connector" }, input, callbacks)
 end
 
 --- AWS appflow describe-connector-entity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connector_entity(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-connector-entity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connector_entity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-connector-entity" }, input, callbacks)
 end
 
 --- AWS appflow describe-connector-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connector_profiles(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-connector-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connector_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-connector-profiles" }, input, callbacks)
 end
 
 --- AWS appflow describe-connectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connectors(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-connectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-connectors" }, input, callbacks)
 end
 
 --- AWS appflow describe-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-flow" }, input, callbacks)
 end
 
 --- AWS appflow describe-flow-execution-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_flow_execution_records(input)
-	return common.execute_aws_command_skeleton({ "appflow", "describe-flow-execution-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_flow_execution_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "describe-flow-execution-records" }, input, callbacks)
 end
 
 --- AWS appflow list-connector-entities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_connector_entities(input)
-	return common.execute_aws_command_skeleton({ "appflow", "list-connector-entities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_connector_entities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "list-connector-entities" }, input, callbacks)
 end
 
 --- AWS appflow list-connectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_connectors(input)
-	return common.execute_aws_command_skeleton({ "appflow", "list-connectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_connectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "list-connectors" }, input, callbacks)
 end
 
 --- AWS appflow list-flows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_flows(input)
-	return common.execute_aws_command_skeleton({ "appflow", "list-flows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_flows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "list-flows" }, input, callbacks)
 end
 
 --- AWS appflow list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "appflow", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS appflow register-connector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_connector(input)
-	return common.execute_aws_command_skeleton({ "appflow", "register-connector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_connector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "register-connector" }, input, callbacks)
 end
 
 --- AWS appflow reset-connector-metadata-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_connector_metadata_cache(input)
-	return common.execute_aws_command_skeleton({ "appflow", "reset-connector-metadata-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_connector_metadata_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "reset-connector-metadata-cache" }, input, callbacks)
 end
 
 --- AWS appflow start-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "start-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "start-flow" }, input, callbacks)
 end
 
 --- AWS appflow stop-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "stop-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "stop-flow" }, input, callbacks)
 end
 
 --- AWS appflow tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "appflow", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "tag-resource" }, input, callbacks)
 end
 
 --- AWS appflow unregister-connector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unregister_connector(input)
-	return common.execute_aws_command_skeleton({ "appflow", "unregister-connector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unregister_connector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "unregister-connector" }, input, callbacks)
 end
 
 --- AWS appflow untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "appflow", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "untag-resource" }, input, callbacks)
 end
 
 --- AWS appflow update-connector-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_connector_profile(input)
-	return common.execute_aws_command_skeleton({ "appflow", "update-connector-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_connector_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "update-connector-profile" }, input, callbacks)
 end
 
 --- AWS appflow update-connector-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_connector_registration(input)
-	return common.execute_aws_command_skeleton({ "appflow", "update-connector-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_connector_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "update-connector-registration" }, input, callbacks)
 end
 
 --- AWS appflow update-flow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_flow(input)
-	return common.execute_aws_command_skeleton({ "appflow", "update-flow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_flow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appflow", "update-flow" }, input, callbacks)
 end
 
 return M

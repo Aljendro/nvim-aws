@@ -8,576 +8,658 @@ local M = {}
 
 --- AWS macie2 accept-invitation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_invitation(input)
-	return common.execute_aws_command_skeleton({ "macie2", "accept-invitation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_invitation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "accept-invitation" }, input, callbacks)
 end
 
 --- AWS macie2 batch-get-custom-data-identifiers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_custom_data_identifiers(input)
-	return common.execute_aws_command_skeleton({ "macie2", "batch-get-custom-data-identifiers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_custom_data_identifiers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "batch-get-custom-data-identifiers" }, input, callbacks)
 end
 
 --- AWS macie2 batch-update-automated-discovery-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_automated_discovery_accounts(input)
-	return common.execute_aws_command_skeleton({ "macie2", "batch-update-automated-discovery-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_automated_discovery_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "batch-update-automated-discovery-accounts" }, input, callbacks)
 end
 
 --- AWS macie2 create-allow-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_allow_list(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-allow-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_allow_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-allow-list" }, input, callbacks)
 end
 
 --- AWS macie2 create-classification-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_classification_job(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-classification-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_classification_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-classification-job" }, input, callbacks)
 end
 
 --- AWS macie2 create-custom-data-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_data_identifier(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-custom-data-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_data_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-custom-data-identifier" }, input, callbacks)
 end
 
 --- AWS macie2 create-findings-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_findings_filter(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-findings-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_findings_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-findings-filter" }, input, callbacks)
 end
 
 --- AWS macie2 create-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_invitations(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-invitations" }, input, callbacks)
 end
 
 --- AWS macie2 create-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_member(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-member" }, input, callbacks)
 end
 
 --- AWS macie2 create-sample-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_sample_findings(input)
-	return common.execute_aws_command_skeleton({ "macie2", "create-sample-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_sample_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "create-sample-findings" }, input, callbacks)
 end
 
 --- AWS macie2 decline-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.decline_invitations(input)
-	return common.execute_aws_command_skeleton({ "macie2", "decline-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.decline_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "decline-invitations" }, input, callbacks)
 end
 
 --- AWS macie2 delete-allow-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_allow_list(input)
-	return common.execute_aws_command_skeleton({ "macie2", "delete-allow-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_allow_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "delete-allow-list" }, input, callbacks)
 end
 
 --- AWS macie2 delete-custom-data-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_data_identifier(input)
-	return common.execute_aws_command_skeleton({ "macie2", "delete-custom-data-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_data_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "delete-custom-data-identifier" }, input, callbacks)
 end
 
 --- AWS macie2 delete-findings-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_findings_filter(input)
-	return common.execute_aws_command_skeleton({ "macie2", "delete-findings-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_findings_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "delete-findings-filter" }, input, callbacks)
 end
 
 --- AWS macie2 delete-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_invitations(input)
-	return common.execute_aws_command_skeleton({ "macie2", "delete-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "delete-invitations" }, input, callbacks)
 end
 
 --- AWS macie2 delete-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_member(input)
-	return common.execute_aws_command_skeleton({ "macie2", "delete-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "delete-member" }, input, callbacks)
 end
 
 --- AWS macie2 describe-buckets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_buckets(input)
-	return common.execute_aws_command_skeleton({ "macie2", "describe-buckets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_buckets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "describe-buckets" }, input, callbacks)
 end
 
 --- AWS macie2 describe-classification-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_classification_job(input)
-	return common.execute_aws_command_skeleton({ "macie2", "describe-classification-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_classification_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "describe-classification-job" }, input, callbacks)
 end
 
 --- AWS macie2 describe-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "describe-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "describe-organization-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 disable-macie operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_macie(input)
-	return common.execute_aws_command_skeleton({ "macie2", "disable-macie" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_macie(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "disable-macie" }, input, callbacks)
 end
 
 --- AWS macie2 disable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "disable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "disable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS macie2 disassociate-from-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_from_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "disassociate-from-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_from_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "disassociate-from-administrator-account" }, input, callbacks)
 end
 
 --- AWS macie2 disassociate-from-master-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_from_master_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "disassociate-from-master-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_from_master_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "disassociate-from-master-account" }, input, callbacks)
 end
 
 --- AWS macie2 disassociate-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member(input)
-	return common.execute_aws_command_skeleton({ "macie2", "disassociate-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "disassociate-member" }, input, callbacks)
 end
 
 --- AWS macie2 enable-macie operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_macie(input)
-	return common.execute_aws_command_skeleton({ "macie2", "enable-macie" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_macie(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "enable-macie" }, input, callbacks)
 end
 
 --- AWS macie2 enable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "enable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "enable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS macie2 get-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-administrator-account" }, input, callbacks)
 end
 
 --- AWS macie2 get-allow-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_allow_list(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-allow-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_allow_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-allow-list" }, input, callbacks)
 end
 
 --- AWS macie2 get-automated-discovery-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_automated_discovery_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-automated-discovery-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_automated_discovery_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-automated-discovery-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 get-bucket-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_statistics(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-bucket-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-bucket-statistics" }, input, callbacks)
 end
 
 --- AWS macie2 get-classification-export-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_classification_export_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-classification-export-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_classification_export_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-classification-export-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 get-classification-scope operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_classification_scope(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-classification-scope" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_classification_scope(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-classification-scope" }, input, callbacks)
 end
 
 --- AWS macie2 get-custom-data-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_custom_data_identifier(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-custom-data-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_custom_data_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-custom-data-identifier" }, input, callbacks)
 end
 
 --- AWS macie2 get-finding-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_finding_statistics(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-finding-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_finding_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-finding-statistics" }, input, callbacks)
 end
 
 --- AWS macie2 get-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-findings" }, input, callbacks)
 end
 
 --- AWS macie2 get-findings-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings_filter(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-findings-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-findings-filter" }, input, callbacks)
 end
 
 --- AWS macie2 get-findings-publication-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings_publication_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-findings-publication-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings_publication_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-findings-publication-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 get-invitations-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_invitations_count(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-invitations-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_invitations_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-invitations-count" }, input, callbacks)
 end
 
 --- AWS macie2 get-macie-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_macie_session(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-macie-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_macie_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-macie-session" }, input, callbacks)
 end
 
 --- AWS macie2 get-master-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_master_account(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-master-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_master_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-master-account" }, input, callbacks)
 end
 
 --- AWS macie2 get-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_member(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-member" }, input, callbacks)
 end
 
 --- AWS macie2 get-resource-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_profile(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-resource-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-resource-profile" }, input, callbacks)
 end
 
 --- AWS macie2 get-reveal-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_reveal_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-reveal-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_reveal_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-reveal-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 get-sensitive-data-occurrences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sensitive_data_occurrences(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-sensitive-data-occurrences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sensitive_data_occurrences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-sensitive-data-occurrences" }, input, callbacks)
 end
 
 --- AWS macie2 get-sensitive-data-occurrences-availability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sensitive_data_occurrences_availability(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-sensitive-data-occurrences-availability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sensitive_data_occurrences_availability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-sensitive-data-occurrences-availability" }, input, callbacks)
 end
 
 --- AWS macie2 get-sensitivity-inspection-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sensitivity_inspection_template(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-sensitivity-inspection-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sensitivity_inspection_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-sensitivity-inspection-template" }, input, callbacks)
 end
 
 --- AWS macie2 get-usage-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_usage_statistics(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-usage-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_usage_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-usage-statistics" }, input, callbacks)
 end
 
 --- AWS macie2 get-usage-totals operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_usage_totals(input)
-	return common.execute_aws_command_skeleton({ "macie2", "get-usage-totals" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_usage_totals(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "get-usage-totals" }, input, callbacks)
 end
 
 --- AWS macie2 list-allow-lists operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_allow_lists(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-allow-lists" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_allow_lists(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-allow-lists" }, input, callbacks)
 end
 
 --- AWS macie2 list-automated-discovery-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_automated_discovery_accounts(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-automated-discovery-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_automated_discovery_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-automated-discovery-accounts" }, input, callbacks)
 end
 
 --- AWS macie2 list-classification-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_classification_jobs(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-classification-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_classification_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-classification-jobs" }, input, callbacks)
 end
 
 --- AWS macie2 list-classification-scopes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_classification_scopes(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-classification-scopes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_classification_scopes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-classification-scopes" }, input, callbacks)
 end
 
 --- AWS macie2 list-custom-data-identifiers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_data_identifiers(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-custom-data-identifiers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_data_identifiers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-custom-data-identifiers" }, input, callbacks)
 end
 
 --- AWS macie2 list-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-findings" }, input, callbacks)
 end
 
 --- AWS macie2 list-findings-filters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings_filters(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-findings-filters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings_filters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-findings-filters" }, input, callbacks)
 end
 
 --- AWS macie2 list-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invitations(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-invitations" }, input, callbacks)
 end
 
 --- AWS macie2 list-managed-data-identifiers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_managed_data_identifiers(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-managed-data-identifiers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_managed_data_identifiers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-managed-data-identifiers" }, input, callbacks)
 end
 
 --- AWS macie2 list-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_members(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-members" }, input, callbacks)
 end
 
 --- AWS macie2 list-organization-admin-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_admin_accounts(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-organization-admin-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_admin_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-organization-admin-accounts" }, input, callbacks)
 end
 
 --- AWS macie2 list-resource-profile-artifacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_profile_artifacts(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-resource-profile-artifacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_profile_artifacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-resource-profile-artifacts" }, input, callbacks)
 end
 
 --- AWS macie2 list-resource-profile-detections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_profile_detections(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-resource-profile-detections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_profile_detections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-resource-profile-detections" }, input, callbacks)
 end
 
 --- AWS macie2 list-sensitivity-inspection-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sensitivity_inspection_templates(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-sensitivity-inspection-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sensitivity_inspection_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-sensitivity-inspection-templates" }, input, callbacks)
 end
 
 --- AWS macie2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "macie2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS macie2 put-classification-export-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_classification_export_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "put-classification-export-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_classification_export_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "put-classification-export-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 put-findings-publication-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_findings_publication_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "put-findings-publication-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_findings_publication_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "put-findings-publication-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 search-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_resources(input)
-	return common.execute_aws_command_skeleton({ "macie2", "search-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "search-resources" }, input, callbacks)
 end
 
 --- AWS macie2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "macie2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS macie2 test-custom-data-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_custom_data_identifier(input)
-	return common.execute_aws_command_skeleton({ "macie2", "test-custom-data-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_custom_data_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "test-custom-data-identifier" }, input, callbacks)
 end
 
 --- AWS macie2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "macie2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS macie2 update-allow-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_allow_list(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-allow-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_allow_list(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-allow-list" }, input, callbacks)
 end
 
 --- AWS macie2 update-automated-discovery-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_automated_discovery_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-automated-discovery-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_automated_discovery_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-automated-discovery-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 update-classification-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_classification_job(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-classification-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_classification_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-classification-job" }, input, callbacks)
 end
 
 --- AWS macie2 update-classification-scope operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_classification_scope(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-classification-scope" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_classification_scope(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-classification-scope" }, input, callbacks)
 end
 
 --- AWS macie2 update-findings-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_findings_filter(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-findings-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_findings_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-findings-filter" }, input, callbacks)
 end
 
 --- AWS macie2 update-macie-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_macie_session(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-macie-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_macie_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-macie-session" }, input, callbacks)
 end
 
 --- AWS macie2 update-member-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_member_session(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-member-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_member_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-member-session" }, input, callbacks)
 end
 
 --- AWS macie2 update-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-organization-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 update-resource-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_profile(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-resource-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-resource-profile" }, input, callbacks)
 end
 
 --- AWS macie2 update-resource-profile-detections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resource_profile_detections(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-resource-profile-detections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resource_profile_detections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-resource-profile-detections" }, input, callbacks)
 end
 
 --- AWS macie2 update-reveal-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_reveal_configuration(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-reveal-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_reveal_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-reveal-configuration" }, input, callbacks)
 end
 
 --- AWS macie2 update-sensitivity-inspection-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_sensitivity_inspection_template(input)
-	return common.execute_aws_command_skeleton({ "macie2", "update-sensitivity-inspection-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_sensitivity_inspection_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "macie2", "update-sensitivity-inspection-template" }, input, callbacks)
 end
 
 --- AWS macie2 wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "macie2", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "macie2", "wait" }, input, callbacks)
 end
 
 return M

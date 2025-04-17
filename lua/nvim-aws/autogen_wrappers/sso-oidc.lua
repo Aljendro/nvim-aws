@@ -8,30 +8,34 @@ local M = {}
 
 --- AWS sso-oidc create-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_token(input)
-	return common.execute_aws_command_skeleton({ "sso-oidc", "create-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso-oidc", "create-token" }, input, callbacks)
 end
 
 --- AWS sso-oidc create-token-with-iam operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_token_with_iam(input)
-	return common.execute_aws_command_skeleton({ "sso-oidc", "create-token-with-iam" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_token_with_iam(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso-oidc", "create-token-with-iam" }, input, callbacks)
 end
 
 --- AWS sso-oidc register-client operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_client(input)
-	return common.execute_aws_command_skeleton({ "sso-oidc", "register-client" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_client(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso-oidc", "register-client" }, input, callbacks)
 end
 
 --- AWS sso-oidc start-device-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_device_authorization(input)
-	return common.execute_aws_command_skeleton({ "sso-oidc", "start-device-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_device_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso-oidc", "start-device-authorization" }, input, callbacks)
 end
 
 return M

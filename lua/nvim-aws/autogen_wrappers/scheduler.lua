@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS scheduler create-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_schedule(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule" }, input, callbacks)
 end
 
 --- AWS scheduler create-schedule-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_schedule_group(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_schedule_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule-group" }, input, callbacks)
 end
 
 --- AWS scheduler delete-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schedule(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule" }, input, callbacks)
 end
 
 --- AWS scheduler delete-schedule-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schedule_group(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schedule_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule-group" }, input, callbacks)
 end
 
 --- AWS scheduler get-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schedule(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule" }, input, callbacks)
 end
 
 --- AWS scheduler get-schedule-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schedule_group(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schedule_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule-group" }, input, callbacks)
 end
 
 --- AWS scheduler list-schedule-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schedule_groups(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "list-schedule-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schedule_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-schedule-groups" }, input, callbacks)
 end
 
 --- AWS scheduler list-schedules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schedules(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "list-schedules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schedules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-schedules" }, input, callbacks)
 end
 
 --- AWS scheduler list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS scheduler tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "tag-resource" }, input, callbacks)
 end
 
 --- AWS scheduler untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "untag-resource" }, input, callbacks)
 end
 
 --- AWS scheduler update-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_schedule(input)
-	return common.execute_aws_command_skeleton({ "scheduler", "update-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "scheduler", "update-schedule" }, input, callbacks)
 end
 
 return M

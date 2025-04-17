@@ -8,114 +8,130 @@ local M = {}
 
 --- AWS internetmonitor create-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_monitor(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "create-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "create-monitor" }, input, callbacks)
 end
 
 --- AWS internetmonitor delete-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_monitor(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "delete-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "delete-monitor" }, input, callbacks)
 end
 
 --- AWS internetmonitor get-health-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_health_event(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "get-health-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_health_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "get-health-event" }, input, callbacks)
 end
 
 --- AWS internetmonitor get-internet-event operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_internet_event(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "get-internet-event" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_internet_event(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "get-internet-event" }, input, callbacks)
 end
 
 --- AWS internetmonitor get-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_monitor(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "get-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "get-monitor" }, input, callbacks)
 end
 
 --- AWS internetmonitor get-query-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_results(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "get-query-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "get-query-results" }, input, callbacks)
 end
 
 --- AWS internetmonitor get-query-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_query_status(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "get-query-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_query_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "get-query-status" }, input, callbacks)
 end
 
 --- AWS internetmonitor list-health-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_health_events(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "list-health-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_health_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "list-health-events" }, input, callbacks)
 end
 
 --- AWS internetmonitor list-internet-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_internet_events(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "list-internet-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_internet_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "list-internet-events" }, input, callbacks)
 end
 
 --- AWS internetmonitor list-monitors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_monitors(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "list-monitors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_monitors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "list-monitors" }, input, callbacks)
 end
 
 --- AWS internetmonitor list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS internetmonitor start-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_query(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "start-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "start-query" }, input, callbacks)
 end
 
 --- AWS internetmonitor stop-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_query(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "stop-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "stop-query" }, input, callbacks)
 end
 
 --- AWS internetmonitor tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "tag-resource" }, input, callbacks)
 end
 
 --- AWS internetmonitor untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "untag-resource" }, input, callbacks)
 end
 
 --- AWS internetmonitor update-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_monitor(input)
-	return common.execute_aws_command_skeleton({ "internetmonitor", "update-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "internetmonitor", "update-monitor" }, input, callbacks)
 end
 
 return M

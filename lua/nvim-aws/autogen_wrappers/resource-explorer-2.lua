@@ -8,170 +8,194 @@ local M = {}
 
 --- AWS resource-explorer-2 associate-default-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_default_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "associate-default-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_default_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "associate-default-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 batch-get-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "batch-get-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "batch-get-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 create-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_index(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "create-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "create-index" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 create-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "create-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "create-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 delete-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_index(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "delete-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "delete-index" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 delete-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "delete-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "delete-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 disassociate-default-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_default_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "disassociate-default-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_default_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "disassociate-default-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 get-account-level-service-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_level_service_configuration(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-account-level-service-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_level_service_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-account-level-service-configuration" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 get-default-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_default_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-default-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_default_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-default-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 get-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_index(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-index" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 get-managed-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-managed-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-managed-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 get-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "get-view" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-indexes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_indexes(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-indexes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_indexes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-indexes" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-indexes-for-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_indexes_for_members(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-indexes-for-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_indexes_for_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-indexes-for-members" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-managed-views operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_managed_views(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-managed-views" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_managed_views(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-managed-views" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resources(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-resources" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-supported-resource-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_supported_resource_types(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-supported-resource-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_supported_resource_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-supported-resource-types" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 list-views operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_views(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-views" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_views(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "list-views" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 search operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "search" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "search" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "untag-resource" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 update-index-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_index_type(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "update-index-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_index_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "update-index-type" }, input, callbacks)
 end
 
 --- AWS resource-explorer-2 update-view operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_view(input)
-	return common.execute_aws_command_skeleton({ "resource-explorer-2", "update-view" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_view(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-explorer-2", "update-view" }, input, callbacks)
 end
 
 return M

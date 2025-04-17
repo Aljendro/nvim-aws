@@ -8,79 +8,90 @@ local M = {}
 
 --- AWS trustedadvisor batch-update-recommendation-resource-exclusion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_recommendation_resource_exclusion(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "batch-update-recommendation-resource-exclusion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_recommendation_resource_exclusion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "batch-update-recommendation-resource-exclusion" }, input, callbacks)
 end
 
 --- AWS trustedadvisor get-organization-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_organization_recommendation(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-organization-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_organization_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-organization-recommendation" }, input, callbacks)
 end
 
 --- AWS trustedadvisor get-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_recommendation(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-recommendation" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-checks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_checks(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-checks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_checks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-checks" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-organization-recommendation-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_recommendation_accounts(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_recommendation_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-accounts" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-organization-recommendation-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_recommendation_resources(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_recommendation_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-resources" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-organization-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_recommendations(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendations" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-recommendation-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommendation_resources(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendation-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommendation_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendation-resources" }, input, callbacks)
 end
 
 --- AWS trustedadvisor list-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommendations(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendations" }, input, callbacks)
 end
 
 --- AWS trustedadvisor update-organization-recommendation-lifecycle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_organization_recommendation_lifecycle(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-organization-recommendation-lifecycle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_organization_recommendation_lifecycle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-organization-recommendation-lifecycle" }, input, callbacks)
 end
 
 --- AWS trustedadvisor update-recommendation-lifecycle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_recommendation_lifecycle(input)
-	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-recommendation-lifecycle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_recommendation_lifecycle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-recommendation-lifecycle" }, input, callbacks)
 end
 
 return M

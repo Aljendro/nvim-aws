@@ -8,499 +8,570 @@ local M = {}
 
 --- AWS guardduty accept-administrator-invitation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_administrator_invitation(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "accept-administrator-invitation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_administrator_invitation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "accept-administrator-invitation" }, input, callbacks)
 end
 
 --- AWS guardduty archive-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.archive_findings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "archive-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.archive_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "archive-findings" }, input, callbacks)
 end
 
 --- AWS guardduty create-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_detector(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-detector" }, input, callbacks)
 end
 
 --- AWS guardduty create-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_filter(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-filter" }, input, callbacks)
 end
 
 --- AWS guardduty create-ip-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ip_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-ip-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ip_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-ip-set" }, input, callbacks)
 end
 
 --- AWS guardduty create-malware-protection-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_malware_protection_plan(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-malware-protection-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_malware_protection_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-malware-protection-plan" }, input, callbacks)
 end
 
 --- AWS guardduty create-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-members" }, input, callbacks)
 end
 
 --- AWS guardduty create-publishing-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_publishing_destination(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-publishing-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_publishing_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-publishing-destination" }, input, callbacks)
 end
 
 --- AWS guardduty create-sample-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_sample_findings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-sample-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_sample_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-sample-findings" }, input, callbacks)
 end
 
 --- AWS guardduty create-threat-intel-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_threat_intel_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "create-threat-intel-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_threat_intel_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-threat-intel-set" }, input, callbacks)
 end
 
 --- AWS guardduty decline-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.decline_invitations(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "decline-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.decline_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "decline-invitations" }, input, callbacks)
 end
 
 --- AWS guardduty delete-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_detector(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-detector" }, input, callbacks)
 end
 
 --- AWS guardduty delete-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_filter(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-filter" }, input, callbacks)
 end
 
 --- AWS guardduty delete-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_invitations(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-invitations" }, input, callbacks)
 end
 
 --- AWS guardduty delete-ip-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ip_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-ip-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ip_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-ip-set" }, input, callbacks)
 end
 
 --- AWS guardduty delete-malware-protection-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_malware_protection_plan(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-malware-protection-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_malware_protection_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-malware-protection-plan" }, input, callbacks)
 end
 
 --- AWS guardduty delete-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-members" }, input, callbacks)
 end
 
 --- AWS guardduty delete-publishing-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_publishing_destination(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-publishing-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_publishing_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-publishing-destination" }, input, callbacks)
 end
 
 --- AWS guardduty delete-threat-intel-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_threat_intel_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "delete-threat-intel-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_threat_intel_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-threat-intel-set" }, input, callbacks)
 end
 
 --- AWS guardduty describe-malware-scans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_malware_scans(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "describe-malware-scans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_malware_scans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-malware-scans" }, input, callbacks)
 end
 
 --- AWS guardduty describe-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "describe-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-organization-configuration" }, input, callbacks)
 end
 
 --- AWS guardduty describe-publishing-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_publishing_destination(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "describe-publishing-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_publishing_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-publishing-destination" }, input, callbacks)
 end
 
 --- AWS guardduty disable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "disable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "disable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS guardduty disassociate-from-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_from_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-from-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_from_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-from-administrator-account" }, input, callbacks)
 end
 
 --- AWS guardduty disassociate-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-members" }, input, callbacks)
 end
 
 --- AWS guardduty enable-organization-admin-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_organization_admin_account(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "enable-organization-admin-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_organization_admin_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "enable-organization-admin-account" }, input, callbacks)
 end
 
 --- AWS guardduty get-administrator-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_administrator_account(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-administrator-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_administrator_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-administrator-account" }, input, callbacks)
 end
 
 --- AWS guardduty get-coverage-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_coverage_statistics(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-coverage-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_coverage_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-coverage-statistics" }, input, callbacks)
 end
 
 --- AWS guardduty get-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_detector(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-detector" }, input, callbacks)
 end
 
 --- AWS guardduty get-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_filter(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-filter" }, input, callbacks)
 end
 
 --- AWS guardduty get-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-findings" }, input, callbacks)
 end
 
 --- AWS guardduty get-findings-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings_statistics(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-findings-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-findings-statistics" }, input, callbacks)
 end
 
 --- AWS guardduty get-invitations-count operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_invitations_count(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-invitations-count" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_invitations_count(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-invitations-count" }, input, callbacks)
 end
 
 --- AWS guardduty get-ip-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ip_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-ip-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ip_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-ip-set" }, input, callbacks)
 end
 
 --- AWS guardduty get-malware-protection-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_malware_protection_plan(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-protection-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_malware_protection_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-protection-plan" }, input, callbacks)
 end
 
 --- AWS guardduty get-malware-scan-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_malware_scan_settings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-scan-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_malware_scan_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-scan-settings" }, input, callbacks)
 end
 
 --- AWS guardduty get-member-detectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_member_detectors(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-member-detectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_member_detectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-member-detectors" }, input, callbacks)
 end
 
 --- AWS guardduty get-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-members" }, input, callbacks)
 end
 
 --- AWS guardduty get-organization-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_organization_statistics(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-organization-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_organization_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-organization-statistics" }, input, callbacks)
 end
 
 --- AWS guardduty get-remaining-free-trial-days operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_remaining_free_trial_days(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-remaining-free-trial-days" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_remaining_free_trial_days(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-remaining-free-trial-days" }, input, callbacks)
 end
 
 --- AWS guardduty get-threat-intel-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_threat_intel_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-threat-intel-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_threat_intel_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-threat-intel-set" }, input, callbacks)
 end
 
 --- AWS guardduty get-usage-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_usage_statistics(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "get-usage-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_usage_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-usage-statistics" }, input, callbacks)
 end
 
 --- AWS guardduty invite-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.invite_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "invite-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.invite_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "invite-members" }, input, callbacks)
 end
 
 --- AWS guardduty list-coverage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_coverage(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-coverage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_coverage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-coverage" }, input, callbacks)
 end
 
 --- AWS guardduty list-detectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_detectors(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-detectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_detectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-detectors" }, input, callbacks)
 end
 
 --- AWS guardduty list-filters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_filters(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-filters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_filters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-filters" }, input, callbacks)
 end
 
 --- AWS guardduty list-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-findings" }, input, callbacks)
 end
 
 --- AWS guardduty list-invitations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invitations(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-invitations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invitations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-invitations" }, input, callbacks)
 end
 
 --- AWS guardduty list-ip-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ip_sets(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-ip-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ip_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-ip-sets" }, input, callbacks)
 end
 
 --- AWS guardduty list-malware-protection-plans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_malware_protection_plans(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-malware-protection-plans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_malware_protection_plans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-malware-protection-plans" }, input, callbacks)
 end
 
 --- AWS guardduty list-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-members" }, input, callbacks)
 end
 
 --- AWS guardduty list-organization-admin-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_organization_admin_accounts(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-organization-admin-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_organization_admin_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-organization-admin-accounts" }, input, callbacks)
 end
 
 --- AWS guardduty list-publishing-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_publishing_destinations(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-publishing-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_publishing_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-publishing-destinations" }, input, callbacks)
 end
 
 --- AWS guardduty list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS guardduty list-threat-intel-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_threat_intel_sets(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "list-threat-intel-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_threat_intel_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-threat-intel-sets" }, input, callbacks)
 end
 
 --- AWS guardduty start-malware-scan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_malware_scan(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "start-malware-scan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_malware_scan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "start-malware-scan" }, input, callbacks)
 end
 
 --- AWS guardduty start-monitoring-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_monitoring_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "start-monitoring-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_monitoring_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "start-monitoring-members" }, input, callbacks)
 end
 
 --- AWS guardduty stop-monitoring-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_monitoring_members(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "stop-monitoring-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_monitoring_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "stop-monitoring-members" }, input, callbacks)
 end
 
 --- AWS guardduty tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "tag-resource" }, input, callbacks)
 end
 
 --- AWS guardduty unarchive-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unarchive_findings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "unarchive-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unarchive_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "unarchive-findings" }, input, callbacks)
 end
 
 --- AWS guardduty untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "untag-resource" }, input, callbacks)
 end
 
 --- AWS guardduty update-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_detector(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-detector" }, input, callbacks)
 end
 
 --- AWS guardduty update-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_filter(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-filter" }, input, callbacks)
 end
 
 --- AWS guardduty update-findings-feedback operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_findings_feedback(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-findings-feedback" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_findings_feedback(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-findings-feedback" }, input, callbacks)
 end
 
 --- AWS guardduty update-ip-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ip_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-ip-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ip_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-ip-set" }, input, callbacks)
 end
 
 --- AWS guardduty update-malware-protection-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_malware_protection_plan(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-protection-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_malware_protection_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-protection-plan" }, input, callbacks)
 end
 
 --- AWS guardduty update-malware-scan-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_malware_scan_settings(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-scan-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_malware_scan_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-scan-settings" }, input, callbacks)
 end
 
 --- AWS guardduty update-member-detectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_member_detectors(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-member-detectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_member_detectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-member-detectors" }, input, callbacks)
 end
 
 --- AWS guardduty update-organization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_organization_configuration(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-organization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_organization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-organization-configuration" }, input, callbacks)
 end
 
 --- AWS guardduty update-publishing-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_publishing_destination(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-publishing-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_publishing_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-publishing-destination" }, input, callbacks)
 end
 
 --- AWS guardduty update-threat-intel-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_threat_intel_set(input)
-	return common.execute_aws_command_skeleton({ "guardduty", "update-threat-intel-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_threat_intel_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-threat-intel-set" }, input, callbacks)
 end
 
 return M

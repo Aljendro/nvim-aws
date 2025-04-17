@@ -8,275 +8,314 @@ local M = {}
 
 --- AWS swf count-closed-workflow-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.count_closed_workflow_executions(input)
-	return common.execute_aws_command_skeleton({ "swf", "count-closed-workflow-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.count_closed_workflow_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "count-closed-workflow-executions" }, input, callbacks)
 end
 
 --- AWS swf count-open-workflow-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.count_open_workflow_executions(input)
-	return common.execute_aws_command_skeleton({ "swf", "count-open-workflow-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.count_open_workflow_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "count-open-workflow-executions" }, input, callbacks)
 end
 
 --- AWS swf count-pending-activity-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.count_pending_activity_tasks(input)
-	return common.execute_aws_command_skeleton({ "swf", "count-pending-activity-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.count_pending_activity_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "count-pending-activity-tasks" }, input, callbacks)
 end
 
 --- AWS swf count-pending-decision-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.count_pending_decision_tasks(input)
-	return common.execute_aws_command_skeleton({ "swf", "count-pending-decision-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.count_pending_decision_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "count-pending-decision-tasks" }, input, callbacks)
 end
 
 --- AWS swf delete-activity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_activity_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "delete-activity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_activity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "delete-activity-type" }, input, callbacks)
 end
 
 --- AWS swf delete-workflow-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workflow_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "delete-workflow-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workflow_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "delete-workflow-type" }, input, callbacks)
 end
 
 --- AWS swf deprecate-activity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deprecate_activity_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "deprecate-activity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deprecate_activity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "deprecate-activity-type" }, input, callbacks)
 end
 
 --- AWS swf deprecate-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deprecate_domain(input)
-	return common.execute_aws_command_skeleton({ "swf", "deprecate-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deprecate_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "deprecate-domain" }, input, callbacks)
 end
 
 --- AWS swf deprecate-workflow-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deprecate_workflow_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "deprecate-workflow-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deprecate_workflow_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "deprecate-workflow-type" }, input, callbacks)
 end
 
 --- AWS swf describe-activity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_activity_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "describe-activity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_activity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "describe-activity-type" }, input, callbacks)
 end
 
 --- AWS swf describe-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_domain(input)
-	return common.execute_aws_command_skeleton({ "swf", "describe-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "describe-domain" }, input, callbacks)
 end
 
 --- AWS swf describe-workflow-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workflow_execution(input)
-	return common.execute_aws_command_skeleton({ "swf", "describe-workflow-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workflow_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "describe-workflow-execution" }, input, callbacks)
 end
 
 --- AWS swf describe-workflow-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workflow_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "describe-workflow-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workflow_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "describe-workflow-type" }, input, callbacks)
 end
 
 --- AWS swf get-workflow-execution-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow_execution_history(input)
-	return common.execute_aws_command_skeleton({ "swf", "get-workflow-execution-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow_execution_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "get-workflow-execution-history" }, input, callbacks)
 end
 
 --- AWS swf list-activity-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_activity_types(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-activity-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_activity_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-activity-types" }, input, callbacks)
 end
 
 --- AWS swf list-closed-workflow-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_closed_workflow_executions(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-closed-workflow-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_closed_workflow_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-closed-workflow-executions" }, input, callbacks)
 end
 
 --- AWS swf list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-domains" }, input, callbacks)
 end
 
 --- AWS swf list-open-workflow-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_open_workflow_executions(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-open-workflow-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_open_workflow_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-open-workflow-executions" }, input, callbacks)
 end
 
 --- AWS swf list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS swf list-workflow-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workflow_types(input)
-	return common.execute_aws_command_skeleton({ "swf", "list-workflow-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workflow_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "list-workflow-types" }, input, callbacks)
 end
 
 --- AWS swf poll-for-activity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.poll_for_activity_task(input)
-	return common.execute_aws_command_skeleton({ "swf", "poll-for-activity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.poll_for_activity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "poll-for-activity-task" }, input, callbacks)
 end
 
 --- AWS swf poll-for-decision-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.poll_for_decision_task(input)
-	return common.execute_aws_command_skeleton({ "swf", "poll-for-decision-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.poll_for_decision_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "poll-for-decision-task" }, input, callbacks)
 end
 
 --- AWS swf record-activity-task-heartbeat operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.record_activity_task_heartbeat(input)
-	return common.execute_aws_command_skeleton({ "swf", "record-activity-task-heartbeat" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.record_activity_task_heartbeat(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "record-activity-task-heartbeat" }, input, callbacks)
 end
 
 --- AWS swf register-activity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_activity_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "register-activity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_activity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "register-activity-type" }, input, callbacks)
 end
 
 --- AWS swf register-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_domain(input)
-	return common.execute_aws_command_skeleton({ "swf", "register-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "register-domain" }, input, callbacks)
 end
 
 --- AWS swf register-workflow-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_workflow_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "register-workflow-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_workflow_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "register-workflow-type" }, input, callbacks)
 end
 
 --- AWS swf request-cancel-workflow-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.request_cancel_workflow_execution(input)
-	return common.execute_aws_command_skeleton({ "swf", "request-cancel-workflow-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.request_cancel_workflow_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "request-cancel-workflow-execution" }, input, callbacks)
 end
 
 --- AWS swf respond-activity-task-canceled operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.respond_activity_task_canceled(input)
-	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-canceled" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.respond_activity_task_canceled(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-canceled" }, input, callbacks)
 end
 
 --- AWS swf respond-activity-task-completed operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.respond_activity_task_completed(input)
-	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-completed" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.respond_activity_task_completed(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-completed" }, input, callbacks)
 end
 
 --- AWS swf respond-activity-task-failed operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.respond_activity_task_failed(input)
-	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-failed" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.respond_activity_task_failed(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "respond-activity-task-failed" }, input, callbacks)
 end
 
 --- AWS swf respond-decision-task-completed operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.respond_decision_task_completed(input)
-	return common.execute_aws_command_skeleton({ "swf", "respond-decision-task-completed" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.respond_decision_task_completed(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "respond-decision-task-completed" }, input, callbacks)
 end
 
 --- AWS swf signal-workflow-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.signal_workflow_execution(input)
-	return common.execute_aws_command_skeleton({ "swf", "signal-workflow-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.signal_workflow_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "signal-workflow-execution" }, input, callbacks)
 end
 
 --- AWS swf start-workflow-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_workflow_execution(input)
-	return common.execute_aws_command_skeleton({ "swf", "start-workflow-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_workflow_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "start-workflow-execution" }, input, callbacks)
 end
 
 --- AWS swf tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "swf", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "tag-resource" }, input, callbacks)
 end
 
 --- AWS swf terminate-workflow-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.terminate_workflow_execution(input)
-	return common.execute_aws_command_skeleton({ "swf", "terminate-workflow-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.terminate_workflow_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "terminate-workflow-execution" }, input, callbacks)
 end
 
 --- AWS swf undeprecate-activity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.undeprecate_activity_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "undeprecate-activity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.undeprecate_activity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "undeprecate-activity-type" }, input, callbacks)
 end
 
 --- AWS swf undeprecate-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.undeprecate_domain(input)
-	return common.execute_aws_command_skeleton({ "swf", "undeprecate-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.undeprecate_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "undeprecate-domain" }, input, callbacks)
 end
 
 --- AWS swf undeprecate-workflow-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.undeprecate_workflow_type(input)
-	return common.execute_aws_command_skeleton({ "swf", "undeprecate-workflow-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.undeprecate_workflow_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "undeprecate-workflow-type" }, input, callbacks)
 end
 
 --- AWS swf untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "swf", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "swf", "untag-resource" }, input, callbacks)
 end
 
 return M

@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS snow-device-management cancel-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_task(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "cancel-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "cancel-task" }, input, callbacks)
 end
 
 --- AWS snow-device-management create-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_task(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "create-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "create-task" }, input, callbacks)
 end
 
 --- AWS snow-device-management describe-device operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_device(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-device" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_device(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-device" }, input, callbacks)
 end
 
 --- AWS snow-device-management describe-device-ec2-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_device_ec2_instances(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-device-ec2-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_device_ec2_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-device-ec2-instances" }, input, callbacks)
 end
 
 --- AWS snow-device-management describe-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_execution(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-execution" }, input, callbacks)
 end
 
 --- AWS snow-device-management describe-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_task(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "describe-task" }, input, callbacks)
 end
 
 --- AWS snow-device-management list-device-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_resources(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "list-device-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "list-device-resources" }, input, callbacks)
 end
 
 --- AWS snow-device-management list-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_devices(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "list-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "list-devices" }, input, callbacks)
 end
 
 --- AWS snow-device-management list-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_executions(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "list-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "list-executions" }, input, callbacks)
 end
 
 --- AWS snow-device-management list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS snow-device-management list-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tasks(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "list-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "list-tasks" }, input, callbacks)
 end
 
 --- AWS snow-device-management tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "tag-resource" }, input, callbacks)
 end
 
 --- AWS snow-device-management untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "snow-device-management", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "snow-device-management", "untag-resource" }, input, callbacks)
 end
 
 return M

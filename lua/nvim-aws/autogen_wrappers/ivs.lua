@@ -8,247 +8,282 @@ local M = {}
 
 --- AWS ivs batch-get-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_channel(input)
-	return common.execute_aws_command_skeleton({ "ivs", "batch-get-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "batch-get-channel" }, input, callbacks)
 end
 
 --- AWS ivs batch-get-stream-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_stream_key(input)
-	return common.execute_aws_command_skeleton({ "ivs", "batch-get-stream-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_stream_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "batch-get-stream-key" }, input, callbacks)
 end
 
 --- AWS ivs batch-start-viewer-session-revocation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_start_viewer_session_revocation(input)
-	return common.execute_aws_command_skeleton({ "ivs", "batch-start-viewer-session-revocation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_start_viewer_session_revocation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "batch-start-viewer-session-revocation" }, input, callbacks)
 end
 
 --- AWS ivs create-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_channel(input)
-	return common.execute_aws_command_skeleton({ "ivs", "create-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "create-channel" }, input, callbacks)
 end
 
 --- AWS ivs create-playback-restriction-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_playback_restriction_policy(input)
-	return common.execute_aws_command_skeleton({ "ivs", "create-playback-restriction-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_playback_restriction_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "create-playback-restriction-policy" }, input, callbacks)
 end
 
 --- AWS ivs create-recording-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_recording_configuration(input)
-	return common.execute_aws_command_skeleton({ "ivs", "create-recording-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_recording_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "create-recording-configuration" }, input, callbacks)
 end
 
 --- AWS ivs create-stream-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stream_key(input)
-	return common.execute_aws_command_skeleton({ "ivs", "create-stream-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stream_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "create-stream-key" }, input, callbacks)
 end
 
 --- AWS ivs delete-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_channel(input)
-	return common.execute_aws_command_skeleton({ "ivs", "delete-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "delete-channel" }, input, callbacks)
 end
 
 --- AWS ivs delete-playback-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_playback_key_pair(input)
-	return common.execute_aws_command_skeleton({ "ivs", "delete-playback-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_playback_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "delete-playback-key-pair" }, input, callbacks)
 end
 
 --- AWS ivs delete-playback-restriction-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_playback_restriction_policy(input)
-	return common.execute_aws_command_skeleton({ "ivs", "delete-playback-restriction-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_playback_restriction_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "delete-playback-restriction-policy" }, input, callbacks)
 end
 
 --- AWS ivs delete-recording-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_recording_configuration(input)
-	return common.execute_aws_command_skeleton({ "ivs", "delete-recording-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_recording_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "delete-recording-configuration" }, input, callbacks)
 end
 
 --- AWS ivs delete-stream-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_stream_key(input)
-	return common.execute_aws_command_skeleton({ "ivs", "delete-stream-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_stream_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "delete-stream-key" }, input, callbacks)
 end
 
 --- AWS ivs get-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_channel(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-channel" }, input, callbacks)
 end
 
 --- AWS ivs get-playback-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_playback_key_pair(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-playback-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_playback_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-playback-key-pair" }, input, callbacks)
 end
 
 --- AWS ivs get-playback-restriction-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_playback_restriction_policy(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-playback-restriction-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_playback_restriction_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-playback-restriction-policy" }, input, callbacks)
 end
 
 --- AWS ivs get-recording-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_recording_configuration(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-recording-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_recording_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-recording-configuration" }, input, callbacks)
 end
 
 --- AWS ivs get-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stream(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-stream" }, input, callbacks)
 end
 
 --- AWS ivs get-stream-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stream_key(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-stream-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stream_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-stream-key" }, input, callbacks)
 end
 
 --- AWS ivs get-stream-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stream_session(input)
-	return common.execute_aws_command_skeleton({ "ivs", "get-stream-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stream_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "get-stream-session" }, input, callbacks)
 end
 
 --- AWS ivs import-playback-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_playback_key_pair(input)
-	return common.execute_aws_command_skeleton({ "ivs", "import-playback-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_playback_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "import-playback-key-pair" }, input, callbacks)
 end
 
 --- AWS ivs list-channels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_channels(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-channels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_channels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-channels" }, input, callbacks)
 end
 
 --- AWS ivs list-playback-key-pairs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_playback_key_pairs(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-playback-key-pairs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_playback_key_pairs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-playback-key-pairs" }, input, callbacks)
 end
 
 --- AWS ivs list-playback-restriction-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_playback_restriction_policies(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-playback-restriction-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_playback_restriction_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-playback-restriction-policies" }, input, callbacks)
 end
 
 --- AWS ivs list-recording-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recording_configurations(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-recording-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recording_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-recording-configurations" }, input, callbacks)
 end
 
 --- AWS ivs list-stream-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_keys(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-stream-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-stream-keys" }, input, callbacks)
 end
 
 --- AWS ivs list-stream-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_sessions(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-stream-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-stream-sessions" }, input, callbacks)
 end
 
 --- AWS ivs list-streams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_streams(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-streams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_streams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-streams" }, input, callbacks)
 end
 
 --- AWS ivs list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ivs", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ivs put-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_metadata(input)
-	return common.execute_aws_command_skeleton({ "ivs", "put-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "put-metadata" }, input, callbacks)
 end
 
 --- AWS ivs start-viewer-session-revocation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_viewer_session_revocation(input)
-	return common.execute_aws_command_skeleton({ "ivs", "start-viewer-session-revocation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_viewer_session_revocation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "start-viewer-session-revocation" }, input, callbacks)
 end
 
 --- AWS ivs stop-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_stream(input)
-	return common.execute_aws_command_skeleton({ "ivs", "stop-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "stop-stream" }, input, callbacks)
 end
 
 --- AWS ivs tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ivs", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ivs untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ivs", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ivs update-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_channel(input)
-	return common.execute_aws_command_skeleton({ "ivs", "update-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "update-channel" }, input, callbacks)
 end
 
 --- AWS ivs update-playback-restriction-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_playback_restriction_policy(input)
-	return common.execute_aws_command_skeleton({ "ivs", "update-playback-restriction-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_playback_restriction_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ivs", "update-playback-restriction-policy" }, input, callbacks)
 end
 
 return M

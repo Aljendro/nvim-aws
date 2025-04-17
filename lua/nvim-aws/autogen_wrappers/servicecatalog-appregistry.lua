@@ -8,170 +8,194 @@ local M = {}
 
 --- AWS servicecatalog-appregistry associate-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "associate-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "associate-attribute-group" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry associate-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "associate-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "associate-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "create-application" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry create-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "create-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "create-attribute-group" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "delete-application" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry delete-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "delete-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "delete-attribute-group" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry disassociate-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "disassociate-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "disassociate-attribute-group" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry disassociate-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "disassociate-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "disassociate-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-application" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry get-associated-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_associated_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-associated-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_associated_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-associated-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry get-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-attribute-group" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry get-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "get-configuration" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-applications" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-associated-attribute-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_attribute_groups(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-associated-attribute-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_attribute_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-associated-attribute-groups" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-associated-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_resources(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-associated-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-associated-resources" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-attribute-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_attribute_groups(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-attribute-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_attribute_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-attribute-groups" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-attribute-groups-for-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_attribute_groups_for_application(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-attribute-groups-for-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_attribute_groups_for_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-attribute-groups-for-application" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry put-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_configuration(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "put-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "put-configuration" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry sync-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.sync_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "sync-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.sync_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "sync-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "tag-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "untag-resource" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "update-application" }, input, callbacks)
 end
 
 --- AWS servicecatalog-appregistry update-attribute-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_attribute_group(input)
-	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "update-attribute-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_attribute_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "servicecatalog-appregistry", "update-attribute-group" }, input, callbacks)
 end
 
 return M

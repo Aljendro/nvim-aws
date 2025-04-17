@@ -8,261 +8,298 @@ local M = {}
 
 --- AWS stepfunctions create-activity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_activity(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "create-activity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_activity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-activity" }, input, callbacks)
 end
 
 --- AWS stepfunctions create-state-machine operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_state_machine(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_state_machine(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine" }, input, callbacks)
 end
 
 --- AWS stepfunctions create-state-machine-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_state_machine_alias(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_state_machine_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine-alias" }, input, callbacks)
 end
 
 --- AWS stepfunctions delete-activity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_activity(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-activity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_activity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-activity" }, input, callbacks)
 end
 
 --- AWS stepfunctions delete-state-machine operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_state_machine(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_state_machine(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine" }, input, callbacks)
 end
 
 --- AWS stepfunctions delete-state-machine-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_state_machine_alias(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_state_machine_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-alias" }, input, callbacks)
 end
 
 --- AWS stepfunctions delete-state-machine-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_state_machine_version(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_state_machine_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-version" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-activity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_activity(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-activity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_activity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-activity" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-map-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_map_run(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-map-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_map_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-map-run" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-state-machine operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_state_machine(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_state_machine(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-state-machine-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_state_machine_alias(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_state_machine_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-alias" }, input, callbacks)
 end
 
 --- AWS stepfunctions describe-state-machine-for-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_state_machine_for_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-for-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_state_machine_for_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-for-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions get-activity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_activity_task(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "get-activity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_activity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "get-activity-task" }, input, callbacks)
 end
 
 --- AWS stepfunctions get-execution-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_execution_history(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "get-execution-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_execution_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "get-execution-history" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-activities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_activities(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-activities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_activities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-activities" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_executions(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-executions" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-map-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_map_runs(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-map-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_map_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-map-runs" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-state-machine-aliases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_state_machine_aliases(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-aliases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_state_machine_aliases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-aliases" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-state-machine-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_state_machine_versions(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_state_machine_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-versions" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-state-machines operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_state_machines(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machines" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_state_machines(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machines" }, input, callbacks)
 end
 
 --- AWS stepfunctions list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS stepfunctions publish-state-machine-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.publish_state_machine_version(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "publish-state-machine-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.publish_state_machine_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "publish-state-machine-version" }, input, callbacks)
 end
 
 --- AWS stepfunctions redrive-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.redrive_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "redrive-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.redrive_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "redrive-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions send-task-failure operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_task_failure(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-failure" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_task_failure(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-failure" }, input, callbacks)
 end
 
 --- AWS stepfunctions send-task-heartbeat operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_task_heartbeat(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-heartbeat" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_task_heartbeat(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-heartbeat" }, input, callbacks)
 end
 
 --- AWS stepfunctions send-task-success operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_task_success(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-success" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_task_success(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-success" }, input, callbacks)
 end
 
 --- AWS stepfunctions start-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "start-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "start-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions start-sync-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_sync_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "start-sync-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_sync_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "start-sync-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions stop-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_execution(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "stop-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "stop-execution" }, input, callbacks)
 end
 
 --- AWS stepfunctions tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "tag-resource" }, input, callbacks)
 end
 
 --- AWS stepfunctions test-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_state(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "test-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "test-state" }, input, callbacks)
 end
 
 --- AWS stepfunctions untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "untag-resource" }, input, callbacks)
 end
 
 --- AWS stepfunctions update-map-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_map_run(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "update-map-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_map_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-map-run" }, input, callbacks)
 end
 
 --- AWS stepfunctions update-state-machine operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_state_machine(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_state_machine(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine" }, input, callbacks)
 end
 
 --- AWS stepfunctions update-state-machine-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_state_machine_alias(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_state_machine_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine-alias" }, input, callbacks)
 end
 
 --- AWS stepfunctions validate-state-machine-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.validate_state_machine_definition(input)
-	return common.execute_aws_command_skeleton({ "stepfunctions", "validate-state-machine-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.validate_state_machine_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "validate-state-machine-definition" }, input, callbacks)
 end
 
 return M

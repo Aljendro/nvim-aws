@@ -8,128 +8,146 @@ local M = {}
 
 --- AWS pcs create-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cluster(input)
-	return common.execute_aws_command_skeleton({ "pcs", "create-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "create-cluster" }, input, callbacks)
 end
 
 --- AWS pcs create-compute-node-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_compute_node_group(input)
-	return common.execute_aws_command_skeleton({ "pcs", "create-compute-node-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_compute_node_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "create-compute-node-group" }, input, callbacks)
 end
 
 --- AWS pcs create-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue(input)
-	return common.execute_aws_command_skeleton({ "pcs", "create-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "create-queue" }, input, callbacks)
 end
 
 --- AWS pcs delete-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cluster(input)
-	return common.execute_aws_command_skeleton({ "pcs", "delete-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-cluster" }, input, callbacks)
 end
 
 --- AWS pcs delete-compute-node-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_compute_node_group(input)
-	return common.execute_aws_command_skeleton({ "pcs", "delete-compute-node-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_compute_node_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-compute-node-group" }, input, callbacks)
 end
 
 --- AWS pcs delete-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue(input)
-	return common.execute_aws_command_skeleton({ "pcs", "delete-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-queue" }, input, callbacks)
 end
 
 --- AWS pcs get-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cluster(input)
-	return common.execute_aws_command_skeleton({ "pcs", "get-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "get-cluster" }, input, callbacks)
 end
 
 --- AWS pcs get-compute-node-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_compute_node_group(input)
-	return common.execute_aws_command_skeleton({ "pcs", "get-compute-node-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_compute_node_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "get-compute-node-group" }, input, callbacks)
 end
 
 --- AWS pcs get-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_queue(input)
-	return common.execute_aws_command_skeleton({ "pcs", "get-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "get-queue" }, input, callbacks)
 end
 
 --- AWS pcs list-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_clusters(input)
-	return common.execute_aws_command_skeleton({ "pcs", "list-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "list-clusters" }, input, callbacks)
 end
 
 --- AWS pcs list-compute-node-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_compute_node_groups(input)
-	return common.execute_aws_command_skeleton({ "pcs", "list-compute-node-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_compute_node_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "list-compute-node-groups" }, input, callbacks)
 end
 
 --- AWS pcs list-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queues(input)
-	return common.execute_aws_command_skeleton({ "pcs", "list-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "list-queues" }, input, callbacks)
 end
 
 --- AWS pcs list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "pcs", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS pcs register-compute-node-group-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_compute_node_group_instance(input)
-	return common.execute_aws_command_skeleton({ "pcs", "register-compute-node-group-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_compute_node_group_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "register-compute-node-group-instance" }, input, callbacks)
 end
 
 --- AWS pcs tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "pcs", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "tag-resource" }, input, callbacks)
 end
 
 --- AWS pcs untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "pcs", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "untag-resource" }, input, callbacks)
 end
 
 --- AWS pcs update-compute-node-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_compute_node_group(input)
-	return common.execute_aws_command_skeleton({ "pcs", "update-compute-node-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_compute_node_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "update-compute-node-group" }, input, callbacks)
 end
 
 --- AWS pcs update-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue(input)
-	return common.execute_aws_command_skeleton({ "pcs", "update-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pcs", "update-queue" }, input, callbacks)
 end
 
 return M

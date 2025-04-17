@@ -8,1157 +8,1322 @@ local M = {}
 
 --- AWS rds add-option-to-option-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_option_to_option_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "add-option-to-option-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_option_to_option_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "add-option-to-option-group" }, input, callbacks)
 end
 
 --- AWS rds add-role-to-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_role_to_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "add-role-to-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_role_to_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "add-role-to-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds add-role-to-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_role_to_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "add-role-to-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_role_to_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "add-role-to-db-instance" }, input, callbacks)
 end
 
 --- AWS rds add-source-identifier-to-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_source_identifier_to_subscription(input)
-	return common.execute_aws_command_skeleton({ "rds", "add-source-identifier-to-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_source_identifier_to_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "add-source-identifier-to-subscription" }, input, callbacks)
 end
 
 --- AWS rds add-tags-to-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_tags_to_resource(input)
-	return common.execute_aws_command_skeleton({ "rds", "add-tags-to-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_tags_to_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "add-tags-to-resource" }, input, callbacks)
 end
 
 --- AWS rds apply-pending-maintenance-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.apply_pending_maintenance_action(input)
-	return common.execute_aws_command_skeleton({ "rds", "apply-pending-maintenance-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.apply_pending_maintenance_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "apply-pending-maintenance-action" }, input, callbacks)
 end
 
 --- AWS rds authorize-db-security-group-ingress operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.authorize_db_security_group_ingress(input)
-	return common.execute_aws_command_skeleton({ "rds", "authorize-db-security-group-ingress" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.authorize_db_security_group_ingress(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "authorize-db-security-group-ingress" }, input, callbacks)
 end
 
 --- AWS rds backtrack-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.backtrack_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "backtrack-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.backtrack_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "backtrack-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds cancel-export-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_export_task(input)
-	return common.execute_aws_command_skeleton({ "rds", "cancel-export-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_export_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "cancel-export-task" }, input, callbacks)
 end
 
 --- AWS rds copy-db-cluster-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_db_cluster_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "copy-db-cluster-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_db_cluster_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "copy-db-cluster-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds copy-db-cluster-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_db_cluster_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "copy-db-cluster-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_db_cluster_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "copy-db-cluster-snapshot" }, input, callbacks)
 end
 
 --- AWS rds copy-db-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_db_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "copy-db-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_db_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "copy-db-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds copy-db-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_db_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "copy-db-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_db_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "copy-db-snapshot" }, input, callbacks)
 end
 
 --- AWS rds copy-option-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_option_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "copy-option-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_option_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "copy-option-group" }, input, callbacks)
 end
 
 --- AWS rds create-blue-green-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_blue_green_deployment(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-blue-green-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_blue_green_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-blue-green-deployment" }, input, callbacks)
 end
 
 --- AWS rds create-custom-db-engine-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_db_engine_version(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-custom-db-engine-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_db_engine_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-custom-db-engine-version" }, input, callbacks)
 end
 
 --- AWS rds create-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds create-db-cluster-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_cluster_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_cluster_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-endpoint" }, input, callbacks)
 end
 
 --- AWS rds create-db-cluster-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_cluster_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_cluster_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds create-db-cluster-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_cluster_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_cluster_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-cluster-snapshot" }, input, callbacks)
 end
 
 --- AWS rds create-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-instance" }, input, callbacks)
 end
 
 --- AWS rds create-db-instance-read-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_instance_read_replica(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-instance-read-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_instance_read_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-instance-read-replica" }, input, callbacks)
 end
 
 --- AWS rds create-db-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds create-db-proxy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_proxy(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-proxy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_proxy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-proxy" }, input, callbacks)
 end
 
 --- AWS rds create-db-proxy-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_proxy_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-proxy-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_proxy_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-proxy-endpoint" }, input, callbacks)
 end
 
 --- AWS rds create-db-security-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_security_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-security-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_security_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-security-group" }, input, callbacks)
 end
 
 --- AWS rds create-db-shard-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_shard_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-shard-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_shard_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-shard-group" }, input, callbacks)
 end
 
 --- AWS rds create-db-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-snapshot" }, input, callbacks)
 end
 
 --- AWS rds create-db-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_db_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-db-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_db_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-db-subnet-group" }, input, callbacks)
 end
 
 --- AWS rds create-event-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_subscription(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-event-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-event-subscription" }, input, callbacks)
 end
 
 --- AWS rds create-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds create-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-integration" }, input, callbacks)
 end
 
 --- AWS rds create-option-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_option_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-option-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_option_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-option-group" }, input, callbacks)
 end
 
 --- AWS rds create-tenant-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tenant_database(input)
-	return common.execute_aws_command_skeleton({ "rds", "create-tenant-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tenant_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "create-tenant-database" }, input, callbacks)
 end
 
 --- AWS rds delete-blue-green-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_blue_green_deployment(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-blue-green-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_blue_green_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-blue-green-deployment" }, input, callbacks)
 end
 
 --- AWS rds delete-custom-db-engine-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_db_engine_version(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-custom-db-engine-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_db_engine_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-custom-db-engine-version" }, input, callbacks)
 end
 
 --- AWS rds delete-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds delete-db-cluster-automated-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_cluster_automated_backup(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-automated-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_cluster_automated_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-automated-backup" }, input, callbacks)
 end
 
 --- AWS rds delete-db-cluster-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_cluster_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_cluster_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-endpoint" }, input, callbacks)
 end
 
 --- AWS rds delete-db-cluster-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_cluster_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_cluster_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds delete-db-cluster-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_cluster_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_cluster_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-cluster-snapshot" }, input, callbacks)
 end
 
 --- AWS rds delete-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-instance" }, input, callbacks)
 end
 
 --- AWS rds delete-db-instance-automated-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_instance_automated_backup(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-instance-automated-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_instance_automated_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-instance-automated-backup" }, input, callbacks)
 end
 
 --- AWS rds delete-db-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds delete-db-proxy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_proxy(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-proxy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_proxy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-proxy" }, input, callbacks)
 end
 
 --- AWS rds delete-db-proxy-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_proxy_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-proxy-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_proxy_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-proxy-endpoint" }, input, callbacks)
 end
 
 --- AWS rds delete-db-security-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_security_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-security-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_security_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-security-group" }, input, callbacks)
 end
 
 --- AWS rds delete-db-shard-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_shard_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-shard-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_shard_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-shard-group" }, input, callbacks)
 end
 
 --- AWS rds delete-db-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-snapshot" }, input, callbacks)
 end
 
 --- AWS rds delete-db-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_db_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-db-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_db_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-db-subnet-group" }, input, callbacks)
 end
 
 --- AWS rds delete-event-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_subscription(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-event-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-event-subscription" }, input, callbacks)
 end
 
 --- AWS rds delete-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds delete-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-integration" }, input, callbacks)
 end
 
 --- AWS rds delete-option-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_option_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-option-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_option_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-option-group" }, input, callbacks)
 end
 
 --- AWS rds delete-tenant-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tenant_database(input)
-	return common.execute_aws_command_skeleton({ "rds", "delete-tenant-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tenant_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "delete-tenant-database" }, input, callbacks)
 end
 
 --- AWS rds deregister-db-proxy-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_db_proxy_targets(input)
-	return common.execute_aws_command_skeleton({ "rds", "deregister-db-proxy-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_db_proxy_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "deregister-db-proxy-targets" }, input, callbacks)
 end
 
 --- AWS rds describe-account-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_attributes(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-account-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-account-attributes" }, input, callbacks)
 end
 
 --- AWS rds describe-blue-green-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_blue_green_deployments(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-blue-green-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_blue_green_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-blue-green-deployments" }, input, callbacks)
 end
 
 --- AWS rds describe-certificates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_certificates(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-certificates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_certificates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-certificates" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-automated-backups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_automated_backups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-automated-backups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_automated_backups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-automated-backups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-backtracks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_backtracks(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-backtracks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_backtracks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-backtracks" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_endpoints(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-endpoints" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-parameter-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_parameter_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-parameter-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_parameter_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-parameter-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_parameters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-parameters" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-snapshot-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_snapshot_attributes(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-snapshot-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_snapshot_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-snapshot-attributes" }, input, callbacks)
 end
 
 --- AWS rds describe-db-cluster-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_cluster_snapshots(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_cluster_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-cluster-snapshots" }, input, callbacks)
 end
 
 --- AWS rds describe-db-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_clusters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-clusters" }, input, callbacks)
 end
 
 --- AWS rds describe-db-engine-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_engine_versions(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-engine-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_engine_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-engine-versions" }, input, callbacks)
 end
 
 --- AWS rds describe-db-instance-automated-backups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_instance_automated_backups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-instance-automated-backups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_instance_automated_backups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-instance-automated-backups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_instances(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-instances" }, input, callbacks)
 end
 
 --- AWS rds describe-db-log-files operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_log_files(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-log-files" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_log_files(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-log-files" }, input, callbacks)
 end
 
 --- AWS rds describe-db-parameter-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_parameter_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-parameter-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_parameter_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-parameter-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_parameters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-parameters" }, input, callbacks)
 end
 
 --- AWS rds describe-db-proxies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_proxies(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_proxies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxies" }, input, callbacks)
 end
 
 --- AWS rds describe-db-proxy-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_proxy_endpoints(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_proxy_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-endpoints" }, input, callbacks)
 end
 
 --- AWS rds describe-db-proxy-target-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_proxy_target_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-target-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_proxy_target_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-target-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-proxy-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_proxy_targets(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_proxy_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-proxy-targets" }, input, callbacks)
 end
 
 --- AWS rds describe-db-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_recommendations(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-recommendations" }, input, callbacks)
 end
 
 --- AWS rds describe-db-security-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_security_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-security-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_security_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-security-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-shard-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_shard_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-shard-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_shard_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-shard-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-db-snapshot-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_snapshot_attributes(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshot-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_snapshot_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshot-attributes" }, input, callbacks)
 end
 
 --- AWS rds describe-db-snapshot-tenant-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_snapshot_tenant_databases(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshot-tenant-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_snapshot_tenant_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshot-tenant-databases" }, input, callbacks)
 end
 
 --- AWS rds describe-db-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_snapshots(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-snapshots" }, input, callbacks)
 end
 
 --- AWS rds describe-db-subnet-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_db_subnet_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-db-subnet-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_db_subnet_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-db-subnet-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-engine-default-cluster-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_engine_default_cluster_parameters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-engine-default-cluster-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_engine_default_cluster_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-engine-default-cluster-parameters" }, input, callbacks)
 end
 
 --- AWS rds describe-engine-default-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_engine_default_parameters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-engine-default-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_engine_default_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-engine-default-parameters" }, input, callbacks)
 end
 
 --- AWS rds describe-event-categories operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_categories(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-event-categories" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_categories(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-event-categories" }, input, callbacks)
 end
 
 --- AWS rds describe-event-subscriptions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_subscriptions(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-event-subscriptions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_subscriptions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-event-subscriptions" }, input, callbacks)
 end
 
 --- AWS rds describe-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_events(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-events" }, input, callbacks)
 end
 
 --- AWS rds describe-export-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_export_tasks(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-export-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_export_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-export-tasks" }, input, callbacks)
 end
 
 --- AWS rds describe-global-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_global_clusters(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-global-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_global_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-global-clusters" }, input, callbacks)
 end
 
 --- AWS rds describe-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_integrations(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-integrations" }, input, callbacks)
 end
 
 --- AWS rds describe-option-group-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_option_group_options(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-option-group-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_option_group_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-option-group-options" }, input, callbacks)
 end
 
 --- AWS rds describe-option-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_option_groups(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-option-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_option_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-option-groups" }, input, callbacks)
 end
 
 --- AWS rds describe-orderable-db-instance-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_orderable_db_instance_options(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-orderable-db-instance-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_orderable_db_instance_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-orderable-db-instance-options" }, input, callbacks)
 end
 
 --- AWS rds describe-pending-maintenance-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_pending_maintenance_actions(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-pending-maintenance-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_pending_maintenance_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-pending-maintenance-actions" }, input, callbacks)
 end
 
 --- AWS rds describe-reserved-db-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_reserved_db_instances(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-reserved-db-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_reserved_db_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-reserved-db-instances" }, input, callbacks)
 end
 
 --- AWS rds describe-reserved-db-instances-offerings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_reserved_db_instances_offerings(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-reserved-db-instances-offerings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_reserved_db_instances_offerings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-reserved-db-instances-offerings" }, input, callbacks)
 end
 
 --- AWS rds describe-source-regions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_source_regions(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-source-regions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_source_regions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-source-regions" }, input, callbacks)
 end
 
 --- AWS rds describe-tenant-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tenant_databases(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-tenant-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tenant_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-tenant-databases" }, input, callbacks)
 end
 
 --- AWS rds describe-valid-db-instance-modifications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_valid_db_instance_modifications(input)
-	return common.execute_aws_command_skeleton({ "rds", "describe-valid-db-instance-modifications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_valid_db_instance_modifications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "describe-valid-db-instance-modifications" }, input, callbacks)
 end
 
 --- AWS rds disable-http-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_http_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "disable-http-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_http_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "disable-http-endpoint" }, input, callbacks)
 end
 
 --- AWS rds download-db-log-file-portion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.download_db_log_file_portion(input)
-	return common.execute_aws_command_skeleton({ "rds", "download-db-log-file-portion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.download_db_log_file_portion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "download-db-log-file-portion" }, input, callbacks)
 end
 
 --- AWS rds enable-http-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_http_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "enable-http-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_http_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "enable-http-endpoint" }, input, callbacks)
 end
 
 --- AWS rds failover-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.failover_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "failover-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.failover_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "failover-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds failover-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.failover_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "failover-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.failover_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "failover-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds generate-db-auth-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_db_auth_token(input)
-	return common.execute_aws_command({ "rds", "generate-db-auth-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_db_auth_token(input, callbacks)
+	return common.execute_aws_command({ "rds", "generate-db-auth-token" }, input, callbacks)
 end
 
 --- AWS rds list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "rds", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS rds modify-activity-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_activity_stream(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-activity-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_activity_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-activity-stream" }, input, callbacks)
 end
 
 --- AWS rds modify-certificates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_certificates(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-certificates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_certificates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-certificates" }, input, callbacks)
 end
 
 --- AWS rds modify-current-db-cluster-capacity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_current_db_cluster_capacity(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-current-db-cluster-capacity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_current_db_cluster_capacity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-current-db-cluster-capacity" }, input, callbacks)
 end
 
 --- AWS rds modify-custom-db-engine-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_custom_db_engine_version(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-custom-db-engine-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_custom_db_engine_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-custom-db-engine-version" }, input, callbacks)
 end
 
 --- AWS rds modify-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds modify-db-cluster-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_cluster_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_cluster_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-endpoint" }, input, callbacks)
 end
 
 --- AWS rds modify-db-cluster-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_cluster_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_cluster_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds modify-db-cluster-snapshot-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_cluster_snapshot_attribute(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-snapshot-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_cluster_snapshot_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-cluster-snapshot-attribute" }, input, callbacks)
 end
 
 --- AWS rds modify-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-instance" }, input, callbacks)
 end
 
 --- AWS rds modify-db-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds modify-db-proxy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_proxy(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_proxy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy" }, input, callbacks)
 end
 
 --- AWS rds modify-db-proxy-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_proxy_endpoint(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_proxy_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy-endpoint" }, input, callbacks)
 end
 
 --- AWS rds modify-db-proxy-target-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_proxy_target_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy-target-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_proxy_target_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-proxy-target-group" }, input, callbacks)
 end
 
 --- AWS rds modify-db-recommendation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_recommendation(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-recommendation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_recommendation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-recommendation" }, input, callbacks)
 end
 
 --- AWS rds modify-db-shard-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_shard_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-shard-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_shard_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-shard-group" }, input, callbacks)
 end
 
 --- AWS rds modify-db-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-snapshot" }, input, callbacks)
 end
 
 --- AWS rds modify-db-snapshot-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_snapshot_attribute(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-snapshot-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_snapshot_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-snapshot-attribute" }, input, callbacks)
 end
 
 --- AWS rds modify-db-subnet-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_db_subnet_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-db-subnet-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_db_subnet_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-db-subnet-group" }, input, callbacks)
 end
 
 --- AWS rds modify-event-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_event_subscription(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-event-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_event_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-event-subscription" }, input, callbacks)
 end
 
 --- AWS rds modify-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds modify-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_integration(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-integration" }, input, callbacks)
 end
 
 --- AWS rds modify-tenant-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_tenant_database(input)
-	return common.execute_aws_command_skeleton({ "rds", "modify-tenant-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_tenant_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "modify-tenant-database" }, input, callbacks)
 end
 
 --- AWS rds promote-read-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.promote_read_replica(input)
-	return common.execute_aws_command_skeleton({ "rds", "promote-read-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.promote_read_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "promote-read-replica" }, input, callbacks)
 end
 
 --- AWS rds promote-read-replica-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.promote_read_replica_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "promote-read-replica-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.promote_read_replica_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "promote-read-replica-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds purchase-reserved-db-instances-offering operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.purchase_reserved_db_instances_offering(input)
-	return common.execute_aws_command_skeleton({ "rds", "purchase-reserved-db-instances-offering" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.purchase_reserved_db_instances_offering(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "purchase-reserved-db-instances-offering" }, input, callbacks)
 end
 
 --- AWS rds reboot-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reboot_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "reboot-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reboot_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "reboot-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds reboot-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reboot_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "reboot-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reboot_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "reboot-db-instance" }, input, callbacks)
 end
 
 --- AWS rds reboot-db-shard-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reboot_db_shard_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "reboot-db-shard-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reboot_db_shard_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "reboot-db-shard-group" }, input, callbacks)
 end
 
 --- AWS rds register-db-proxy-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_db_proxy_targets(input)
-	return common.execute_aws_command_skeleton({ "rds", "register-db-proxy-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_db_proxy_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "register-db-proxy-targets" }, input, callbacks)
 end
 
 --- AWS rds remove-from-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_from_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-from-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_from_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-from-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds remove-option-from-option-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_option_from_option_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-option-from-option-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_option_from_option_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-option-from-option-group" }, input, callbacks)
 end
 
 --- AWS rds remove-role-from-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_role_from_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-role-from-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_role_from_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-role-from-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds remove-role-from-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_role_from_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-role-from-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_role_from_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-role-from-db-instance" }, input, callbacks)
 end
 
 --- AWS rds remove-source-identifier-from-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_source_identifier_from_subscription(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-source-identifier-from-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_source_identifier_from_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-source-identifier-from-subscription" }, input, callbacks)
 end
 
 --- AWS rds remove-tags-from-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_skeleton({ "rds", "remove-tags-from-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_tags_from_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "remove-tags-from-resource" }, input, callbacks)
 end
 
 --- AWS rds reset-db-cluster-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_db_cluster_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "reset-db-cluster-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_db_cluster_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "reset-db-cluster-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds reset-db-parameter-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_db_parameter_group(input)
-	return common.execute_aws_command_skeleton({ "rds", "reset-db-parameter-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_db_parameter_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "reset-db-parameter-group" }, input, callbacks)
 end
 
 --- AWS rds restore-db-cluster-from-s3 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_cluster_from_s3(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-from-s3" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_cluster_from_s3(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-from-s3" }, input, callbacks)
 end
 
 --- AWS rds restore-db-cluster-from-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_cluster_from_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-from-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_cluster_from_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-from-snapshot" }, input, callbacks)
 end
 
 --- AWS rds restore-db-cluster-to-point-in-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_cluster_to_point_in_time(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-to-point-in-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_cluster_to_point_in_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-cluster-to-point-in-time" }, input, callbacks)
 end
 
 --- AWS rds restore-db-instance-from-db-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_instance_from_db_snapshot(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-from-db-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_instance_from_db_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-from-db-snapshot" }, input, callbacks)
 end
 
 --- AWS rds restore-db-instance-from-s3 operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_instance_from_s3(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-from-s3" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_instance_from_s3(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-from-s3" }, input, callbacks)
 end
 
 --- AWS rds restore-db-instance-to-point-in-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_db_instance_to_point_in_time(input)
-	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-to-point-in-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_db_instance_to_point_in_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "restore-db-instance-to-point-in-time" }, input, callbacks)
 end
 
 --- AWS rds revoke-db-security-group-ingress operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.revoke_db_security_group_ingress(input)
-	return common.execute_aws_command_skeleton({ "rds", "revoke-db-security-group-ingress" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.revoke_db_security_group_ingress(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "revoke-db-security-group-ingress" }, input, callbacks)
 end
 
 --- AWS rds start-activity-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_activity_stream(input)
-	return common.execute_aws_command_skeleton({ "rds", "start-activity-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_activity_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "start-activity-stream" }, input, callbacks)
 end
 
 --- AWS rds start-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "start-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "start-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds start-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "start-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "start-db-instance" }, input, callbacks)
 end
 
 --- AWS rds start-db-instance-automated-backups-replication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_db_instance_automated_backups_replication(input)
-	return common.execute_aws_command_skeleton({ "rds", "start-db-instance-automated-backups-replication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_db_instance_automated_backups_replication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "start-db-instance-automated-backups-replication" }, input, callbacks)
 end
 
 --- AWS rds start-export-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_export_task(input)
-	return common.execute_aws_command_skeleton({ "rds", "start-export-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_export_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "start-export-task" }, input, callbacks)
 end
 
 --- AWS rds stop-activity-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_activity_stream(input)
-	return common.execute_aws_command_skeleton({ "rds", "stop-activity-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_activity_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "stop-activity-stream" }, input, callbacks)
 end
 
 --- AWS rds stop-db-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_db_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "stop-db-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_db_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "stop-db-cluster" }, input, callbacks)
 end
 
 --- AWS rds stop-db-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_db_instance(input)
-	return common.execute_aws_command_skeleton({ "rds", "stop-db-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_db_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "stop-db-instance" }, input, callbacks)
 end
 
 --- AWS rds stop-db-instance-automated-backups-replication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_db_instance_automated_backups_replication(input)
-	return common.execute_aws_command_skeleton({ "rds", "stop-db-instance-automated-backups-replication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_db_instance_automated_backups_replication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "stop-db-instance-automated-backups-replication" }, input, callbacks)
 end
 
 --- AWS rds switchover-blue-green-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.switchover_blue_green_deployment(input)
-	return common.execute_aws_command_skeleton({ "rds", "switchover-blue-green-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.switchover_blue_green_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "switchover-blue-green-deployment" }, input, callbacks)
 end
 
 --- AWS rds switchover-global-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.switchover_global_cluster(input)
-	return common.execute_aws_command_skeleton({ "rds", "switchover-global-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.switchover_global_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "switchover-global-cluster" }, input, callbacks)
 end
 
 --- AWS rds switchover-read-replica operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.switchover_read_replica(input)
-	return common.execute_aws_command_skeleton({ "rds", "switchover-read-replica" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.switchover_read_replica(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rds", "switchover-read-replica" }, input, callbacks)
 end
 
 --- AWS rds wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "rds", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "rds", "wait" }, input, callbacks)
 end
 
 return M

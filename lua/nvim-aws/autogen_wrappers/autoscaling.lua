@@ -8,457 +8,522 @@ local M = {}
 
 --- AWS autoscaling attach-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_instances(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "attach-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "attach-instances" }, input, callbacks)
 end
 
 --- AWS autoscaling attach-load-balancer-target-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_load_balancer_target_groups(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "attach-load-balancer-target-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_load_balancer_target_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "attach-load-balancer-target-groups" }, input, callbacks)
 end
 
 --- AWS autoscaling attach-load-balancers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_load_balancers(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "attach-load-balancers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_load_balancers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "attach-load-balancers" }, input, callbacks)
 end
 
 --- AWS autoscaling attach-traffic-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_traffic_sources(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "attach-traffic-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_traffic_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "attach-traffic-sources" }, input, callbacks)
 end
 
 --- AWS autoscaling batch-delete-scheduled-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_scheduled_action(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "batch-delete-scheduled-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_scheduled_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "batch-delete-scheduled-action" }, input, callbacks)
 end
 
 --- AWS autoscaling batch-put-scheduled-update-group-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_put_scheduled_update_group_action(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "batch-put-scheduled-update-group-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_put_scheduled_update_group_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "batch-put-scheduled-update-group-action" }, input, callbacks)
 end
 
 --- AWS autoscaling cancel-instance-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_instance_refresh(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "cancel-instance-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_instance_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "cancel-instance-refresh" }, input, callbacks)
 end
 
 --- AWS autoscaling complete-lifecycle-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.complete_lifecycle_action(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "complete-lifecycle-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.complete_lifecycle_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "complete-lifecycle-action" }, input, callbacks)
 end
 
 --- AWS autoscaling create-auto-scaling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_auto_scaling_group(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "create-auto-scaling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_auto_scaling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "create-auto-scaling-group" }, input, callbacks)
 end
 
 --- AWS autoscaling create-launch-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_launch_configuration(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "create-launch-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_launch_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "create-launch-configuration" }, input, callbacks)
 end
 
 --- AWS autoscaling create-or-update-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_or_update_tags(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "create-or-update-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_or_update_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "create-or-update-tags" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-auto-scaling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_auto_scaling_group(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-auto-scaling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_auto_scaling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-auto-scaling-group" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-launch-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_launch_configuration(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-launch-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_launch_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-launch-configuration" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-lifecycle-hook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_lifecycle_hook(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-lifecycle-hook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_lifecycle_hook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-lifecycle-hook" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-notification-configuration" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_policy(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-policy" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-scheduled-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_scheduled_action(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-scheduled-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_scheduled_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-scheduled-action" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tags(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-tags" }, input, callbacks)
 end
 
 --- AWS autoscaling delete-warm-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_warm_pool(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "delete-warm-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_warm_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "delete-warm-pool" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-account-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_limits(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-account-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-account-limits" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-adjustment-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_adjustment_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-adjustment-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_adjustment_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-adjustment-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-auto-scaling-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_auto_scaling_groups(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_auto_scaling_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-groups" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-auto-scaling-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_auto_scaling_instances(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_auto_scaling_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-instances" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-auto-scaling-notification-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_auto_scaling_notification_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-notification-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_auto_scaling_notification_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-auto-scaling-notification-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-instance-refreshes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_instance_refreshes(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-instance-refreshes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_instance_refreshes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-instance-refreshes" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-launch-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_launch_configurations(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-launch-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_launch_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-launch-configurations" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-lifecycle-hook-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_lifecycle_hook_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-lifecycle-hook-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_lifecycle_hook_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-lifecycle-hook-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-lifecycle-hooks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_lifecycle_hooks(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-lifecycle-hooks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_lifecycle_hooks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-lifecycle-hooks" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-load-balancer-target-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_load_balancer_target_groups(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-load-balancer-target-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_load_balancer_target_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-load-balancer-target-groups" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-load-balancers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_load_balancers(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-load-balancers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_load_balancers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-load-balancers" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-metric-collection-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_metric_collection_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-metric-collection-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_metric_collection_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-metric-collection-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-notification-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_notification_configurations(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-notification-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_notification_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-notification-configurations" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_policies(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-policies" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-scaling-activities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_scaling_activities(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scaling-activities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_scaling_activities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scaling-activities" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-scaling-process-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_scaling_process_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scaling-process-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_scaling_process_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scaling-process-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-scheduled-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_scheduled_actions(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scheduled-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_scheduled_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-scheduled-actions" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tags(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-tags" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-termination-policy-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_termination_policy_types(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-termination-policy-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_termination_policy_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-termination-policy-types" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-traffic-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_traffic_sources(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-traffic-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_traffic_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-traffic-sources" }, input, callbacks)
 end
 
 --- AWS autoscaling describe-warm-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_warm_pool(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "describe-warm-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_warm_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "describe-warm-pool" }, input, callbacks)
 end
 
 --- AWS autoscaling detach-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_instances(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "detach-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "detach-instances" }, input, callbacks)
 end
 
 --- AWS autoscaling detach-load-balancer-target-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_load_balancer_target_groups(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "detach-load-balancer-target-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_load_balancer_target_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "detach-load-balancer-target-groups" }, input, callbacks)
 end
 
 --- AWS autoscaling detach-load-balancers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_load_balancers(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "detach-load-balancers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_load_balancers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "detach-load-balancers" }, input, callbacks)
 end
 
 --- AWS autoscaling detach-traffic-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_traffic_sources(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "detach-traffic-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_traffic_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "detach-traffic-sources" }, input, callbacks)
 end
 
 --- AWS autoscaling disable-metrics-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_metrics_collection(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "disable-metrics-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_metrics_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "disable-metrics-collection" }, input, callbacks)
 end
 
 --- AWS autoscaling enable-metrics-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_metrics_collection(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "enable-metrics-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_metrics_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "enable-metrics-collection" }, input, callbacks)
 end
 
 --- AWS autoscaling enter-standby operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enter_standby(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "enter-standby" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enter_standby(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "enter-standby" }, input, callbacks)
 end
 
 --- AWS autoscaling execute-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.execute_policy(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "execute-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.execute_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "execute-policy" }, input, callbacks)
 end
 
 --- AWS autoscaling exit-standby operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.exit_standby(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "exit-standby" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.exit_standby(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "exit-standby" }, input, callbacks)
 end
 
 --- AWS autoscaling get-predictive-scaling-forecast operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_predictive_scaling_forecast(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "get-predictive-scaling-forecast" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_predictive_scaling_forecast(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "get-predictive-scaling-forecast" }, input, callbacks)
 end
 
 --- AWS autoscaling put-lifecycle-hook operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_lifecycle_hook(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "put-lifecycle-hook" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_lifecycle_hook(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "put-lifecycle-hook" }, input, callbacks)
 end
 
 --- AWS autoscaling put-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "put-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "put-notification-configuration" }, input, callbacks)
 end
 
 --- AWS autoscaling put-scaling-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_scaling_policy(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "put-scaling-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_scaling_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "put-scaling-policy" }, input, callbacks)
 end
 
 --- AWS autoscaling put-scheduled-update-group-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_scheduled_update_group_action(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "put-scheduled-update-group-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_scheduled_update_group_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "put-scheduled-update-group-action" }, input, callbacks)
 end
 
 --- AWS autoscaling put-warm-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_warm_pool(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "put-warm-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_warm_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "put-warm-pool" }, input, callbacks)
 end
 
 --- AWS autoscaling record-lifecycle-action-heartbeat operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.record_lifecycle_action_heartbeat(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "record-lifecycle-action-heartbeat" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.record_lifecycle_action_heartbeat(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "record-lifecycle-action-heartbeat" }, input, callbacks)
 end
 
 --- AWS autoscaling resume-processes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resume_processes(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "resume-processes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resume_processes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "resume-processes" }, input, callbacks)
 end
 
 --- AWS autoscaling rollback-instance-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rollback_instance_refresh(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "rollback-instance-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rollback_instance_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "rollback-instance-refresh" }, input, callbacks)
 end
 
 --- AWS autoscaling set-desired-capacity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_desired_capacity(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "set-desired-capacity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_desired_capacity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "set-desired-capacity" }, input, callbacks)
 end
 
 --- AWS autoscaling set-instance-health operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_instance_health(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "set-instance-health" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_instance_health(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "set-instance-health" }, input, callbacks)
 end
 
 --- AWS autoscaling set-instance-protection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_instance_protection(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "set-instance-protection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_instance_protection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "set-instance-protection" }, input, callbacks)
 end
 
 --- AWS autoscaling start-instance-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_instance_refresh(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "start-instance-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_instance_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "start-instance-refresh" }, input, callbacks)
 end
 
 --- AWS autoscaling suspend-processes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.suspend_processes(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "suspend-processes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.suspend_processes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "suspend-processes" }, input, callbacks)
 end
 
 --- AWS autoscaling terminate-instance-in-auto-scaling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.terminate_instance_in_auto_scaling_group(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "terminate-instance-in-auto-scaling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.terminate_instance_in_auto_scaling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "terminate-instance-in-auto-scaling-group" }, input, callbacks)
 end
 
 --- AWS autoscaling update-auto-scaling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_auto_scaling_group(input)
-	return common.execute_aws_command_skeleton({ "autoscaling", "update-auto-scaling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_auto_scaling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "autoscaling", "update-auto-scaling-group" }, input, callbacks)
 end
 
 return M

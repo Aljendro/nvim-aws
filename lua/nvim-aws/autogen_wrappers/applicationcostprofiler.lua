@@ -8,44 +8,50 @@ local M = {}
 
 --- AWS applicationcostprofiler delete-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_report_definition(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "delete-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "delete-report-definition" }, input, callbacks)
 end
 
 --- AWS applicationcostprofiler get-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_report_definition(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "get-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "get-report-definition" }, input, callbacks)
 end
 
 --- AWS applicationcostprofiler import-application-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_application_usage(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "import-application-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_application_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "import-application-usage" }, input, callbacks)
 end
 
 --- AWS applicationcostprofiler list-report-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_report_definitions(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "list-report-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_report_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "list-report-definitions" }, input, callbacks)
 end
 
 --- AWS applicationcostprofiler put-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_report_definition(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "put-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "put-report-definition" }, input, callbacks)
 end
 
 --- AWS applicationcostprofiler update-report-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_report_definition(input)
-	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "update-report-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_report_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "applicationcostprofiler", "update-report-definition" }, input, callbacks)
 end
 
 return M

@@ -8,240 +8,274 @@ local M = {}
 
 --- AWS chatbot associate-to-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_to_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "associate-to-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_to_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "associate-to-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot create-chime-webhook-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_chime_webhook_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "create-chime-webhook-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_chime_webhook_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "create-chime-webhook-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot create-custom-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_action(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "create-custom-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "create-custom-action" }, input, callbacks)
 end
 
 --- AWS chatbot create-microsoft-teams-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_microsoft_teams_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "create-microsoft-teams-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_microsoft_teams_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "create-microsoft-teams-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot create-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "create-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "create-slack-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot delete-chime-webhook-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_chime_webhook_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-chime-webhook-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_chime_webhook_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-chime-webhook-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot delete-custom-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_action(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-custom-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-custom-action" }, input, callbacks)
 end
 
 --- AWS chatbot delete-microsoft-teams-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_microsoft_teams_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_microsoft_teams_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot delete-microsoft-teams-configured-team operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_microsoft_teams_configured_team(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-configured-team" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_microsoft_teams_configured_team(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-configured-team" }, input, callbacks)
 end
 
 --- AWS chatbot delete-microsoft-teams-user-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_microsoft_teams_user_identity(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-user-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_microsoft_teams_user_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-microsoft-teams-user-identity" }, input, callbacks)
 end
 
 --- AWS chatbot delete-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot delete-slack-user-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slack_user_identity(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-user-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slack_user_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-user-identity" }, input, callbacks)
 end
 
 --- AWS chatbot delete-slack-workspace-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slack_workspace_authorization(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-workspace-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slack_workspace_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "delete-slack-workspace-authorization" }, input, callbacks)
 end
 
 --- AWS chatbot describe-chime-webhook-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_chime_webhook_configurations(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "describe-chime-webhook-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_chime_webhook_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "describe-chime-webhook-configurations" }, input, callbacks)
 end
 
 --- AWS chatbot describe-slack-channel-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_slack_channel_configurations(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-channel-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_slack_channel_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-channel-configurations" }, input, callbacks)
 end
 
 --- AWS chatbot describe-slack-user-identities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_slack_user_identities(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-user-identities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_slack_user_identities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-user-identities" }, input, callbacks)
 end
 
 --- AWS chatbot describe-slack-workspaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_slack_workspaces(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-workspaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_slack_workspaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "describe-slack-workspaces" }, input, callbacks)
 end
 
 --- AWS chatbot disassociate-from-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_from_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "disassociate-from-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_from_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "disassociate-from-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot get-account-preferences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_preferences(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "get-account-preferences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_preferences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "get-account-preferences" }, input, callbacks)
 end
 
 --- AWS chatbot get-custom-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_custom_action(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "get-custom-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_custom_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "get-custom-action" }, input, callbacks)
 end
 
 --- AWS chatbot get-microsoft-teams-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_microsoft_teams_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "get-microsoft-teams-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_microsoft_teams_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "get-microsoft-teams-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot list-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associations(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-associations" }, input, callbacks)
 end
 
 --- AWS chatbot list-custom-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_actions(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-custom-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-custom-actions" }, input, callbacks)
 end
 
 --- AWS chatbot list-microsoft-teams-channel-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_microsoft_teams_channel_configurations(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-channel-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_microsoft_teams_channel_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-channel-configurations" }, input, callbacks)
 end
 
 --- AWS chatbot list-microsoft-teams-configured-teams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_microsoft_teams_configured_teams(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-configured-teams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_microsoft_teams_configured_teams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-configured-teams" }, input, callbacks)
 end
 
 --- AWS chatbot list-microsoft-teams-user-identities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_microsoft_teams_user_identities(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-user-identities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_microsoft_teams_user_identities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-microsoft-teams-user-identities" }, input, callbacks)
 end
 
 --- AWS chatbot list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS chatbot tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "tag-resource" }, input, callbacks)
 end
 
 --- AWS chatbot untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "untag-resource" }, input, callbacks)
 end
 
 --- AWS chatbot update-account-preferences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_preferences(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "update-account-preferences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_preferences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "update-account-preferences" }, input, callbacks)
 end
 
 --- AWS chatbot update-chime-webhook-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_chime_webhook_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "update-chime-webhook-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_chime_webhook_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "update-chime-webhook-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot update-custom-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_custom_action(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "update-custom-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_custom_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "update-custom-action" }, input, callbacks)
 end
 
 --- AWS chatbot update-microsoft-teams-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_microsoft_teams_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "update-microsoft-teams-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_microsoft_teams_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "update-microsoft-teams-channel-configuration" }, input, callbacks)
 end
 
 --- AWS chatbot update-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "chatbot", "update-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chatbot", "update-slack-channel-configuration" }, input, callbacks)
 end
 
 return M

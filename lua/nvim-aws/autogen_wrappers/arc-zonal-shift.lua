@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS arc-zonal-shift cancel-zonal-shift operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_zonal_shift(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "cancel-zonal-shift" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_zonal_shift(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "cancel-zonal-shift" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift create-practice-run-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_practice_run_configuration(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "create-practice-run-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_practice_run_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "create-practice-run-configuration" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift delete-practice-run-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_practice_run_configuration(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "delete-practice-run-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_practice_run_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "delete-practice-run-configuration" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift get-autoshift-observer-notification-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_autoshift_observer_notification_status(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "get-autoshift-observer-notification-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_autoshift_observer_notification_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "get-autoshift-observer-notification-status" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift get-managed-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_managed_resource(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "get-managed-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_managed_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "get-managed-resource" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift list-autoshifts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_autoshifts(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-autoshifts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_autoshifts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-autoshifts" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift list-managed-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_managed_resources(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-managed-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_managed_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-managed-resources" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift list-zonal-shifts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_zonal_shifts(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-zonal-shifts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_zonal_shifts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "list-zonal-shifts" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift start-zonal-shift operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_zonal_shift(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "start-zonal-shift" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_zonal_shift(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "start-zonal-shift" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift update-autoshift-observer-notification-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_autoshift_observer_notification_status(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-autoshift-observer-notification-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_autoshift_observer_notification_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-autoshift-observer-notification-status" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift update-practice-run-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_practice_run_configuration(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-practice-run-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_practice_run_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-practice-run-configuration" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift update-zonal-autoshift-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_zonal_autoshift_configuration(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-zonal-autoshift-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_zonal_autoshift_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-zonal-autoshift-configuration" }, input, callbacks)
 end
 
 --- AWS arc-zonal-shift update-zonal-shift operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_zonal_shift(input)
-	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-zonal-shift" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_zonal_shift(input, callbacks)
+	return common.execute_aws_command_skeleton({ "arc-zonal-shift", "update-zonal-shift" }, input, callbacks)
 end
 
 return M

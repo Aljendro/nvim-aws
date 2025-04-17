@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS privatenetworks acknowledge-order-receipt operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.acknowledge_order_receipt(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "acknowledge-order-receipt" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.acknowledge_order_receipt(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "acknowledge-order-receipt" }, input, callbacks)
 end
 
 --- AWS privatenetworks activate-device-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_device_identifier(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "activate-device-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_device_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "activate-device-identifier" }, input, callbacks)
 end
 
 --- AWS privatenetworks activate-network-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_network_site(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "activate-network-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_network_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "activate-network-site" }, input, callbacks)
 end
 
 --- AWS privatenetworks configure-access-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.configure_access_point(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "configure-access-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.configure_access_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "configure-access-point" }, input, callbacks)
 end
 
 --- AWS privatenetworks create-network operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_network(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "create-network" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_network(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "create-network" }, input, callbacks)
 end
 
 --- AWS privatenetworks create-network-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_network_site(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "create-network-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_network_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "create-network-site" }, input, callbacks)
 end
 
 --- AWS privatenetworks deactivate-device-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deactivate_device_identifier(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "deactivate-device-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deactivate_device_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "deactivate-device-identifier" }, input, callbacks)
 end
 
 --- AWS privatenetworks delete-network operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_network(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "delete-network" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_network(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "delete-network" }, input, callbacks)
 end
 
 --- AWS privatenetworks delete-network-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_network_site(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "delete-network-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_network_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "delete-network-site" }, input, callbacks)
 end
 
 --- AWS privatenetworks get-device-identifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_identifier(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "get-device-identifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_identifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "get-device-identifier" }, input, callbacks)
 end
 
 --- AWS privatenetworks get-network operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_network(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_network(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network" }, input, callbacks)
 end
 
 --- AWS privatenetworks get-network-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_network_resource(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_network_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network-resource" }, input, callbacks)
 end
 
 --- AWS privatenetworks get-network-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_network_site(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_network_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "get-network-site" }, input, callbacks)
 end
 
 --- AWS privatenetworks get-order operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_order(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "get-order" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_order(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "get-order" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-device-identifiers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_identifiers(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-device-identifiers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_identifiers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-device-identifiers" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-network-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_network_resources(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-network-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_network_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-network-resources" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-network-sites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_network_sites(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-network-sites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_network_sites(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-network-sites" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-networks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_networks(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-networks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_networks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-networks" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-orders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_orders(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-orders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_orders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-orders" }, input, callbacks)
 end
 
 --- AWS privatenetworks list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS privatenetworks ping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.ping(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "ping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.ping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "ping" }, input, callbacks)
 end
 
 --- AWS privatenetworks start-network-resource-update operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_network_resource_update(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "start-network-resource-update" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_network_resource_update(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "start-network-resource-update" }, input, callbacks)
 end
 
 --- AWS privatenetworks tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "tag-resource" }, input, callbacks)
 end
 
 --- AWS privatenetworks untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "untag-resource" }, input, callbacks)
 end
 
 --- AWS privatenetworks update-network-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_network_site(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "update-network-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_network_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "update-network-site" }, input, callbacks)
 end
 
 --- AWS privatenetworks update-network-site-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_network_site_plan(input)
-	return common.execute_aws_command_skeleton({ "privatenetworks", "update-network-site-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_network_site_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "privatenetworks", "update-network-site-plan" }, input, callbacks)
 end
 
 return M

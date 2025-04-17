@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS codeguru-security batch-get-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_findings(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "batch-get-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "batch-get-findings" }, input, callbacks)
 end
 
 --- AWS codeguru-security create-scan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_scan(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "create-scan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_scan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "create-scan" }, input, callbacks)
 end
 
 --- AWS codeguru-security create-upload-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_upload_url(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "create-upload-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_upload_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "create-upload-url" }, input, callbacks)
 end
 
 --- AWS codeguru-security get-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "get-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "get-account-configuration" }, input, callbacks)
 end
 
 --- AWS codeguru-security get-findings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "get-findings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "get-findings" }, input, callbacks)
 end
 
 --- AWS codeguru-security get-metrics-summary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metrics_summary(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "get-metrics-summary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metrics_summary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "get-metrics-summary" }, input, callbacks)
 end
 
 --- AWS codeguru-security get-scan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_scan(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "get-scan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_scan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "get-scan" }, input, callbacks)
 end
 
 --- AWS codeguru-security list-findings-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings_metrics(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "list-findings-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "list-findings-metrics" }, input, callbacks)
 end
 
 --- AWS codeguru-security list-scans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_scans(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "list-scans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_scans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "list-scans" }, input, callbacks)
 end
 
 --- AWS codeguru-security list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS codeguru-security tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "tag-resource" }, input, callbacks)
 end
 
 --- AWS codeguru-security untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "untag-resource" }, input, callbacks)
 end
 
 --- AWS codeguru-security update-account-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_configuration(input)
-	return common.execute_aws_command_skeleton({ "codeguru-security", "update-account-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguru-security", "update-account-configuration" }, input, callbacks)
 end
 
 return M

@@ -8,163 +8,186 @@ local M = {}
 
 --- AWS resource-groups cancel-tag-sync-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_tag_sync_task(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "cancel-tag-sync-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_tag_sync_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "cancel-tag-sync-task" }, input, callbacks)
 end
 
 --- AWS resource-groups create-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "create-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "create-group" }, input, callbacks)
 end
 
 --- AWS resource-groups delete-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "delete-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "delete-group" }, input, callbacks)
 end
 
 --- AWS resource-groups get-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_settings(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-account-settings" }, input, callbacks)
 end
 
 --- AWS resource-groups get-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group" }, input, callbacks)
 end
 
 --- AWS resource-groups get-group-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group_configuration(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-configuration" }, input, callbacks)
 end
 
 --- AWS resource-groups get-group-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group_query(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-query" }, input, callbacks)
 end
 
 --- AWS resource-groups get-tag-sync-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tag_sync_task(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-tag-sync-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tag_sync_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-tag-sync-task" }, input, callbacks)
 end
 
 --- AWS resource-groups get-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tags(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "get-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-tags" }, input, callbacks)
 end
 
 --- AWS resource-groups group-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.group_resources(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "group-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.group_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "group-resources" }, input, callbacks)
 end
 
 --- AWS resource-groups list-group-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_group_resources(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "list-group-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_group_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-group-resources" }, input, callbacks)
 end
 
 --- AWS resource-groups list-grouping-statuses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_grouping_statuses(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "list-grouping-statuses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_grouping_statuses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-grouping-statuses" }, input, callbacks)
 end
 
 --- AWS resource-groups list-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_groups(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "list-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-groups" }, input, callbacks)
 end
 
 --- AWS resource-groups list-tag-sync-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tag_sync_tasks(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "list-tag-sync-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tag_sync_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-tag-sync-tasks" }, input, callbacks)
 end
 
 --- AWS resource-groups put-group-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_group_configuration(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "put-group-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_group_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "put-group-configuration" }, input, callbacks)
 end
 
 --- AWS resource-groups search-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_resources(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "search-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "search-resources" }, input, callbacks)
 end
 
 --- AWS resource-groups start-tag-sync-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_tag_sync_task(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "start-tag-sync-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_tag_sync_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "start-tag-sync-task" }, input, callbacks)
 end
 
 --- AWS resource-groups tag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "tag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "tag" }, input, callbacks)
 end
 
 --- AWS resource-groups ungroup-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.ungroup_resources(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "ungroup-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.ungroup_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "ungroup-resources" }, input, callbacks)
 end
 
 --- AWS resource-groups untag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "untag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "untag" }, input, callbacks)
 end
 
 --- AWS resource-groups update-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_settings(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "update-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-account-settings" }, input, callbacks)
 end
 
 --- AWS resource-groups update-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_group(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "update-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-group" }, input, callbacks)
 end
 
 --- AWS resource-groups update-group-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_group_query(input)
-	return common.execute_aws_command_skeleton({ "resource-groups", "update-group-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_group_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-group-query" }, input, callbacks)
 end
 
 return M

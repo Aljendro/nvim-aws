@@ -8,1465 +8,1674 @@ local M = {}
 
 --- AWS quicksight batch-create-topic-reviewed-answer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_create_topic_reviewed_answer(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "batch-create-topic-reviewed-answer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_create_topic_reviewed_answer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "batch-create-topic-reviewed-answer" }, input, callbacks)
 end
 
 --- AWS quicksight batch-delete-topic-reviewed-answer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_topic_reviewed_answer(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "batch-delete-topic-reviewed-answer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_topic_reviewed_answer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "batch-delete-topic-reviewed-answer" }, input, callbacks)
 end
 
 --- AWS quicksight cancel-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_ingestion(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "cancel-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "cancel-ingestion" }, input, callbacks)
 end
 
 --- AWS quicksight create-account-customization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_account_customization(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-account-customization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_account_customization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-account-customization" }, input, callbacks)
 end
 
 --- AWS quicksight create-account-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_account_subscription(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-account-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_account_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-account-subscription" }, input, callbacks)
 end
 
 --- AWS quicksight create-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_analysis(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-analysis" }, input, callbacks)
 end
 
 --- AWS quicksight create-brand operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_brand(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-brand" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_brand(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-brand" }, input, callbacks)
 end
 
 --- AWS quicksight create-custom-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-custom-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-custom-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight create-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dashboard(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-dashboard" }, input, callbacks)
 end
 
 --- AWS quicksight create-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_set(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-data-set" }, input, callbacks)
 end
 
 --- AWS quicksight create-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_source(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-data-source" }, input, callbacks)
 end
 
 --- AWS quicksight create-folder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_folder(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-folder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_folder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-folder" }, input, callbacks)
 end
 
 --- AWS quicksight create-folder-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_folder_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-folder-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_folder_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-folder-membership" }, input, callbacks)
 end
 
 --- AWS quicksight create-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-group" }, input, callbacks)
 end
 
 --- AWS quicksight create-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-group-membership" }, input, callbacks)
 end
 
 --- AWS quicksight create-iam-policy-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_iam_policy_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-iam-policy-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_iam_policy_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-iam-policy-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight create-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ingestion(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-ingestion" }, input, callbacks)
 end
 
 --- AWS quicksight create-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_namespace(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-namespace" }, input, callbacks)
 end
 
 --- AWS quicksight create-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight create-role-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_role_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-role-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_role_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-role-membership" }, input, callbacks)
 end
 
 --- AWS quicksight create-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_template(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-template" }, input, callbacks)
 end
 
 --- AWS quicksight create-template-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_template_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-template-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_template_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-template-alias" }, input, callbacks)
 end
 
 --- AWS quicksight create-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_theme(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-theme" }, input, callbacks)
 end
 
 --- AWS quicksight create-theme-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_theme_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-theme-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_theme_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-theme-alias" }, input, callbacks)
 end
 
 --- AWS quicksight create-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_topic(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-topic" }, input, callbacks)
 end
 
 --- AWS quicksight create-topic-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_topic_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-topic-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_topic_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-topic-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight create-vpc-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_vpc_connection(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "create-vpc-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_vpc_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "create-vpc-connection" }, input, callbacks)
 end
 
 --- AWS quicksight delete-account-customization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_account_customization(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-account-customization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_account_customization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-account-customization" }, input, callbacks)
 end
 
 --- AWS quicksight delete-account-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_account_subscription(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-account-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_account_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-account-subscription" }, input, callbacks)
 end
 
 --- AWS quicksight delete-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_analysis(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-analysis" }, input, callbacks)
 end
 
 --- AWS quicksight delete-brand operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_brand(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-brand" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_brand(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-brand" }, input, callbacks)
 end
 
 --- AWS quicksight delete-brand-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_brand_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-brand-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_brand_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-brand-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight delete-custom-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-custom-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-custom-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight delete-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dashboard(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-dashboard" }, input, callbacks)
 end
 
 --- AWS quicksight delete-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_set(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-set" }, input, callbacks)
 end
 
 --- AWS quicksight delete-data-set-refresh-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_set_refresh_properties(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-set-refresh-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_set_refresh_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-set-refresh-properties" }, input, callbacks)
 end
 
 --- AWS quicksight delete-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_source(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-data-source" }, input, callbacks)
 end
 
 --- AWS quicksight delete-default-q-business-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_default_q_business_application(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-default-q-business-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_default_q_business_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-default-q-business-application" }, input, callbacks)
 end
 
 --- AWS quicksight delete-folder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_folder(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-folder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_folder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-folder" }, input, callbacks)
 end
 
 --- AWS quicksight delete-folder-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_folder_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-folder-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_folder_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-folder-membership" }, input, callbacks)
 end
 
 --- AWS quicksight delete-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-group" }, input, callbacks)
 end
 
 --- AWS quicksight delete-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-group-membership" }, input, callbacks)
 end
 
 --- AWS quicksight delete-iam-policy-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_iam_policy_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-iam-policy-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_iam_policy_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-iam-policy-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight delete-identity-propagation-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_identity_propagation_config(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-identity-propagation-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_identity_propagation_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-identity-propagation-config" }, input, callbacks)
 end
 
 --- AWS quicksight delete-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_namespace(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-namespace" }, input, callbacks)
 end
 
 --- AWS quicksight delete-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight delete-role-custom-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_role_custom_permission(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-role-custom-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_role_custom_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-role-custom-permission" }, input, callbacks)
 end
 
 --- AWS quicksight delete-role-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_role_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-role-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_role_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-role-membership" }, input, callbacks)
 end
 
 --- AWS quicksight delete-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_template(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-template" }, input, callbacks)
 end
 
 --- AWS quicksight delete-template-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_template_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-template-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_template_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-template-alias" }, input, callbacks)
 end
 
 --- AWS quicksight delete-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_theme(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-theme" }, input, callbacks)
 end
 
 --- AWS quicksight delete-theme-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_theme_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-theme-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_theme_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-theme-alias" }, input, callbacks)
 end
 
 --- AWS quicksight delete-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_topic(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-topic" }, input, callbacks)
 end
 
 --- AWS quicksight delete-topic-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_topic_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-topic-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_topic_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-topic-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-user" }, input, callbacks)
 end
 
 --- AWS quicksight delete-user-by-principal-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user_by_principal_id(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-user-by-principal-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user_by_principal_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-user-by-principal-id" }, input, callbacks)
 end
 
 --- AWS quicksight delete-user-custom-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user_custom_permission(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-user-custom-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user_custom_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-user-custom-permission" }, input, callbacks)
 end
 
 --- AWS quicksight delete-vpc-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_vpc_connection(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "delete-vpc-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_vpc_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "delete-vpc-connection" }, input, callbacks)
 end
 
 --- AWS quicksight describe-account-customization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_customization(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-customization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_customization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-customization" }, input, callbacks)
 end
 
 --- AWS quicksight describe-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_settings(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-settings" }, input, callbacks)
 end
 
 --- AWS quicksight describe-account-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_subscription(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-account-subscription" }, input, callbacks)
 end
 
 --- AWS quicksight describe-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_analysis(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis" }, input, callbacks)
 end
 
 --- AWS quicksight describe-analysis-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_analysis_definition(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_analysis_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis-definition" }, input, callbacks)
 end
 
 --- AWS quicksight describe-analysis-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_analysis_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_analysis_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-analysis-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-asset-bundle-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_asset_bundle_export_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-asset-bundle-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_asset_bundle_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-asset-bundle-export-job" }, input, callbacks)
 end
 
 --- AWS quicksight describe-asset-bundle-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_asset_bundle_import_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-asset-bundle-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_asset_bundle_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-asset-bundle-import-job" }, input, callbacks)
 end
 
 --- AWS quicksight describe-brand operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_brand(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_brand(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand" }, input, callbacks)
 end
 
 --- AWS quicksight describe-brand-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_brand_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_brand_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight describe-brand-published-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_brand_published_version(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand-published-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_brand_published_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-brand-published-version" }, input, callbacks)
 end
 
 --- AWS quicksight describe-custom-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_custom_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-custom-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_custom_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-custom-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboard(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboard-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboard_definition(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboard_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-definition" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboard-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboard_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboard_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboard-snapshot-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboard_snapshot_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-snapshot-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboard_snapshot_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-snapshot-job" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboard-snapshot-job-result operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboard_snapshot_job_result(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-snapshot-job-result" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboard_snapshot_job_result(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboard-snapshot-job-result" }, input, callbacks)
 end
 
 --- AWS quicksight describe-dashboards-qa-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dashboards_qa_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboards-qa-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dashboards_qa_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-dashboards-qa-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight describe-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_set(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set" }, input, callbacks)
 end
 
 --- AWS quicksight describe-data-set-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_set_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_set_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-data-set-refresh-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_set_refresh_properties(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set-refresh-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_set_refresh_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-set-refresh-properties" }, input, callbacks)
 end
 
 --- AWS quicksight describe-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_source(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-source" }, input, callbacks)
 end
 
 --- AWS quicksight describe-data-source-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_source_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-source-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_source_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-data-source-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-default-q-business-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_default_q_business_application(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-default-q-business-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_default_q_business_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-default-q-business-application" }, input, callbacks)
 end
 
 --- AWS quicksight describe-folder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_folder(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_folder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder" }, input, callbacks)
 end
 
 --- AWS quicksight describe-folder-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_folder_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_folder_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-folder-resolved-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_folder_resolved_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder-resolved-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_folder_resolved_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-folder-resolved-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_group(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-group" }, input, callbacks)
 end
 
 --- AWS quicksight describe-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_group_membership(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-group-membership" }, input, callbacks)
 end
 
 --- AWS quicksight describe-iam-policy-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_iam_policy_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-iam-policy-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_iam_policy_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-iam-policy-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight describe-ingestion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_ingestion(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-ingestion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_ingestion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-ingestion" }, input, callbacks)
 end
 
 --- AWS quicksight describe-ip-restriction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_ip_restriction(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-ip-restriction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_ip_restriction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-ip-restriction" }, input, callbacks)
 end
 
 --- AWS quicksight describe-key-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_key_registration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-key-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_key_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-key-registration" }, input, callbacks)
 end
 
 --- AWS quicksight describe-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_namespace(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-namespace" }, input, callbacks)
 end
 
 --- AWS quicksight describe-q-personalization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_q_personalization_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-q-personalization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_q_personalization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-q-personalization-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight describe-quick-sight-q-search-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_quick_sight_q_search_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-quick-sight-q-search-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_quick_sight_q_search_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-quick-sight-q-search-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight describe-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight describe-role-custom-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_role_custom_permission(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-role-custom-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_role_custom_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-role-custom-permission" }, input, callbacks)
 end
 
 --- AWS quicksight describe-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_template(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-template" }, input, callbacks)
 end
 
 --- AWS quicksight describe-template-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_template_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_template_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-alias" }, input, callbacks)
 end
 
 --- AWS quicksight describe-template-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_template_definition(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_template_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-definition" }, input, callbacks)
 end
 
 --- AWS quicksight describe-template-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_template_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_template_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-template-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_theme(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme" }, input, callbacks)
 end
 
 --- AWS quicksight describe-theme-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_theme_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_theme_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme-alias" }, input, callbacks)
 end
 
 --- AWS quicksight describe-theme-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_theme_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_theme_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-theme-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_topic(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic" }, input, callbacks)
 end
 
 --- AWS quicksight describe-topic-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_topic_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_topic_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight describe-topic-refresh operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_topic_refresh(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-refresh" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_topic_refresh(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-refresh" }, input, callbacks)
 end
 
 --- AWS quicksight describe-topic-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_topic_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_topic_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-topic-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight describe-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-user" }, input, callbacks)
 end
 
 --- AWS quicksight describe-vpc-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_vpc_connection(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "describe-vpc-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_vpc_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "describe-vpc-connection" }, input, callbacks)
 end
 
 --- AWS quicksight generate-embed-url-for-anonymous-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_embed_url_for_anonymous_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-anonymous-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_embed_url_for_anonymous_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-anonymous-user" }, input, callbacks)
 end
 
 --- AWS quicksight generate-embed-url-for-registered-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_embed_url_for_registered_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-registered-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_embed_url_for_registered_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-registered-user" }, input, callbacks)
 end
 
 --- AWS quicksight generate-embed-url-for-registered-user-with-identity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_embed_url_for_registered_user_with_identity(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-registered-user-with-identity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_embed_url_for_registered_user_with_identity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "generate-embed-url-for-registered-user-with-identity" }, input, callbacks)
 end
 
 --- AWS quicksight get-dashboard-embed-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dashboard_embed_url(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "get-dashboard-embed-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dashboard_embed_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "get-dashboard-embed-url" }, input, callbacks)
 end
 
 --- AWS quicksight get-session-embed-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session_embed_url(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "get-session-embed-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session_embed_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "get-session-embed-url" }, input, callbacks)
 end
 
 --- AWS quicksight list-analyses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_analyses(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-analyses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_analyses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-analyses" }, input, callbacks)
 end
 
 --- AWS quicksight list-asset-bundle-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_asset_bundle_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-asset-bundle-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_asset_bundle_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-asset-bundle-export-jobs" }, input, callbacks)
 end
 
 --- AWS quicksight list-asset-bundle-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_asset_bundle_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-asset-bundle-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_asset_bundle_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-asset-bundle-import-jobs" }, input, callbacks)
 end
 
 --- AWS quicksight list-brands operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_brands(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-brands" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_brands(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-brands" }, input, callbacks)
 end
 
 --- AWS quicksight list-custom-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-custom-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-custom-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight list-dashboard-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dashboard_versions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-dashboard-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dashboard_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-dashboard-versions" }, input, callbacks)
 end
 
 --- AWS quicksight list-dashboards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dashboards(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-dashboards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dashboards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-dashboards" }, input, callbacks)
 end
 
 --- AWS quicksight list-data-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_sets(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-data-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-data-sets" }, input, callbacks)
 end
 
 --- AWS quicksight list-data-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_sources(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-data-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-data-sources" }, input, callbacks)
 end
 
 --- AWS quicksight list-folder-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_folder_members(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-folder-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_folder_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-folder-members" }, input, callbacks)
 end
 
 --- AWS quicksight list-folders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_folders(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-folders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_folders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-folders" }, input, callbacks)
 end
 
 --- AWS quicksight list-folders-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_folders_for_resource(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-folders-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_folders_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-folders-for-resource" }, input, callbacks)
 end
 
 --- AWS quicksight list-group-memberships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_group_memberships(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-group-memberships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_group_memberships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-group-memberships" }, input, callbacks)
 end
 
 --- AWS quicksight list-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_groups(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-groups" }, input, callbacks)
 end
 
 --- AWS quicksight list-iam-policy-assignments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_iam_policy_assignments(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-iam-policy-assignments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_iam_policy_assignments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-iam-policy-assignments" }, input, callbacks)
 end
 
 --- AWS quicksight list-iam-policy-assignments-for-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_iam_policy_assignments_for_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-iam-policy-assignments-for-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_iam_policy_assignments_for_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-iam-policy-assignments-for-user" }, input, callbacks)
 end
 
 --- AWS quicksight list-identity-propagation-configs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_identity_propagation_configs(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-identity-propagation-configs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_identity_propagation_configs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-identity-propagation-configs" }, input, callbacks)
 end
 
 --- AWS quicksight list-ingestions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ingestions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-ingestions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ingestions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-ingestions" }, input, callbacks)
 end
 
 --- AWS quicksight list-namespaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_namespaces(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-namespaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_namespaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-namespaces" }, input, callbacks)
 end
 
 --- AWS quicksight list-refresh-schedules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_refresh_schedules(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-refresh-schedules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_refresh_schedules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-refresh-schedules" }, input, callbacks)
 end
 
 --- AWS quicksight list-role-memberships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_role_memberships(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-role-memberships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_role_memberships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-role-memberships" }, input, callbacks)
 end
 
 --- AWS quicksight list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS quicksight list-template-aliases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_template_aliases(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-template-aliases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_template_aliases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-template-aliases" }, input, callbacks)
 end
 
 --- AWS quicksight list-template-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_template_versions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-template-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_template_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-template-versions" }, input, callbacks)
 end
 
 --- AWS quicksight list-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_templates(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-templates" }, input, callbacks)
 end
 
 --- AWS quicksight list-theme-aliases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_theme_aliases(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-theme-aliases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_theme_aliases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-theme-aliases" }, input, callbacks)
 end
 
 --- AWS quicksight list-theme-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_theme_versions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-theme-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_theme_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-theme-versions" }, input, callbacks)
 end
 
 --- AWS quicksight list-themes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_themes(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-themes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_themes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-themes" }, input, callbacks)
 end
 
 --- AWS quicksight list-topic-refresh-schedules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_topic_refresh_schedules(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-topic-refresh-schedules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_topic_refresh_schedules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-topic-refresh-schedules" }, input, callbacks)
 end
 
 --- AWS quicksight list-topic-reviewed-answers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_topic_reviewed_answers(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-topic-reviewed-answers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_topic_reviewed_answers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-topic-reviewed-answers" }, input, callbacks)
 end
 
 --- AWS quicksight list-topics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_topics(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-topics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_topics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-topics" }, input, callbacks)
 end
 
 --- AWS quicksight list-user-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_user_groups(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-user-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_user_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-user-groups" }, input, callbacks)
 end
 
 --- AWS quicksight list-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_users(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-users" }, input, callbacks)
 end
 
 --- AWS quicksight list-vpc-connections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_vpc_connections(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "list-vpc-connections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_vpc_connections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "list-vpc-connections" }, input, callbacks)
 end
 
 --- AWS quicksight predict-qa-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.predict_qa_results(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "predict-qa-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.predict_qa_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "predict-qa-results" }, input, callbacks)
 end
 
 --- AWS quicksight put-data-set-refresh-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_data_set_refresh_properties(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "put-data-set-refresh-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_data_set_refresh_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "put-data-set-refresh-properties" }, input, callbacks)
 end
 
 --- AWS quicksight register-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "register-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "register-user" }, input, callbacks)
 end
 
 --- AWS quicksight restore-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_analysis(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "restore-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "restore-analysis" }, input, callbacks)
 end
 
 --- AWS quicksight search-analyses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_analyses(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-analyses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_analyses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-analyses" }, input, callbacks)
 end
 
 --- AWS quicksight search-dashboards operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_dashboards(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-dashboards" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_dashboards(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-dashboards" }, input, callbacks)
 end
 
 --- AWS quicksight search-data-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_data_sets(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-data-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_data_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-data-sets" }, input, callbacks)
 end
 
 --- AWS quicksight search-data-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_data_sources(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-data-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_data_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-data-sources" }, input, callbacks)
 end
 
 --- AWS quicksight search-folders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_folders(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-folders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_folders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-folders" }, input, callbacks)
 end
 
 --- AWS quicksight search-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_groups(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-groups" }, input, callbacks)
 end
 
 --- AWS quicksight search-topics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_topics(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "search-topics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_topics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "search-topics" }, input, callbacks)
 end
 
 --- AWS quicksight start-asset-bundle-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_asset_bundle_export_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "start-asset-bundle-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_asset_bundle_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "start-asset-bundle-export-job" }, input, callbacks)
 end
 
 --- AWS quicksight start-asset-bundle-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_asset_bundle_import_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "start-asset-bundle-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_asset_bundle_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "start-asset-bundle-import-job" }, input, callbacks)
 end
 
 --- AWS quicksight start-dashboard-snapshot-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_dashboard_snapshot_job(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "start-dashboard-snapshot-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_dashboard_snapshot_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "start-dashboard-snapshot-job" }, input, callbacks)
 end
 
 --- AWS quicksight start-dashboard-snapshot-job-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_dashboard_snapshot_job_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "start-dashboard-snapshot-job-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_dashboard_snapshot_job_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "start-dashboard-snapshot-job-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "tag-resource" }, input, callbacks)
 end
 
 --- AWS quicksight untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "untag-resource" }, input, callbacks)
 end
 
 --- AWS quicksight update-account-customization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_customization(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-account-customization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_customization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-account-customization" }, input, callbacks)
 end
 
 --- AWS quicksight update-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_settings(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-account-settings" }, input, callbacks)
 end
 
 --- AWS quicksight update-analysis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_analysis(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-analysis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_analysis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-analysis" }, input, callbacks)
 end
 
 --- AWS quicksight update-analysis-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_analysis_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-analysis-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_analysis_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-analysis-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-application-with-token-exchange-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application_with_token_exchange_grant(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-application-with-token-exchange-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application_with_token_exchange_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-application-with-token-exchange-grant" }, input, callbacks)
 end
 
 --- AWS quicksight update-brand operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_brand(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-brand" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_brand(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-brand" }, input, callbacks)
 end
 
 --- AWS quicksight update-brand-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_brand_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-brand-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_brand_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-brand-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight update-brand-published-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_brand_published_version(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-brand-published-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_brand_published_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-brand-published-version" }, input, callbacks)
 end
 
 --- AWS quicksight update-custom-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_custom_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-custom-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_custom_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-custom-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-dashboard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboard(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboard(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard" }, input, callbacks)
 end
 
 --- AWS quicksight update-dashboard-links operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboard_links(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-links" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboard_links(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-links" }, input, callbacks)
 end
 
 --- AWS quicksight update-dashboard-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboard_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboard_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-dashboard-published-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboard_published_version(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-published-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboard_published_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboard-published-version" }, input, callbacks)
 end
 
 --- AWS quicksight update-dashboards-qa-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dashboards_qa_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboards-qa-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dashboards_qa_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-dashboards-qa-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight update-data-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_set(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-data-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-data-set" }, input, callbacks)
 end
 
 --- AWS quicksight update-data-set-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_set_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-data-set-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_set_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-data-set-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_source(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-data-source" }, input, callbacks)
 end
 
 --- AWS quicksight update-data-source-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_source_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-data-source-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_source_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-data-source-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-default-q-business-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_default_q_business_application(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-default-q-business-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_default_q_business_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-default-q-business-application" }, input, callbacks)
 end
 
 --- AWS quicksight update-folder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_folder(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-folder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_folder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-folder" }, input, callbacks)
 end
 
 --- AWS quicksight update-folder-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_folder_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-folder-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_folder_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-folder-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_group(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-group" }, input, callbacks)
 end
 
 --- AWS quicksight update-iam-policy-assignment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_iam_policy_assignment(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-iam-policy-assignment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_iam_policy_assignment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-iam-policy-assignment" }, input, callbacks)
 end
 
 --- AWS quicksight update-identity-propagation-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_identity_propagation_config(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-identity-propagation-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_identity_propagation_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-identity-propagation-config" }, input, callbacks)
 end
 
 --- AWS quicksight update-ip-restriction operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ip_restriction(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-ip-restriction" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ip_restriction(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-ip-restriction" }, input, callbacks)
 end
 
 --- AWS quicksight update-key-registration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_key_registration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-key-registration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_key_registration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-key-registration" }, input, callbacks)
 end
 
 --- AWS quicksight update-public-sharing-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_public_sharing_settings(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-public-sharing-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_public_sharing_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-public-sharing-settings" }, input, callbacks)
 end
 
 --- AWS quicksight update-q-personalization-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_q_personalization_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-q-personalization-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_q_personalization_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-q-personalization-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight update-quick-sight-q-search-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_quick_sight_q_search_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-quick-sight-q-search-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_quick_sight_q_search_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-quick-sight-q-search-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight update-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight update-role-custom-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_role_custom_permission(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-role-custom-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_role_custom_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-role-custom-permission" }, input, callbacks)
 end
 
 --- AWS quicksight update-spice-capacity-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_spice_capacity_configuration(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-spice-capacity-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_spice_capacity_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-spice-capacity-configuration" }, input, callbacks)
 end
 
 --- AWS quicksight update-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_template(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-template" }, input, callbacks)
 end
 
 --- AWS quicksight update-template-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_template_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-template-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_template_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-template-alias" }, input, callbacks)
 end
 
 --- AWS quicksight update-template-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_template_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-template-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_template_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-template-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_theme(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-theme" }, input, callbacks)
 end
 
 --- AWS quicksight update-theme-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_theme_alias(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-theme-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_theme_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-theme-alias" }, input, callbacks)
 end
 
 --- AWS quicksight update-theme-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_theme_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-theme-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_theme_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-theme-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-topic operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_topic(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-topic" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_topic(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-topic" }, input, callbacks)
 end
 
 --- AWS quicksight update-topic-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_topic_permissions(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-topic-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_topic_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-topic-permissions" }, input, callbacks)
 end
 
 --- AWS quicksight update-topic-refresh-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_topic_refresh_schedule(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-topic-refresh-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_topic_refresh_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-topic-refresh-schedule" }, input, callbacks)
 end
 
 --- AWS quicksight update-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-user" }, input, callbacks)
 end
 
 --- AWS quicksight update-user-custom-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_custom_permission(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-user-custom-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_custom_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-user-custom-permission" }, input, callbacks)
 end
 
 --- AWS quicksight update-vpc-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_vpc_connection(input)
-	return common.execute_aws_command_skeleton({ "quicksight", "update-vpc-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_vpc_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "quicksight", "update-vpc-connection" }, input, callbacks)
 end
 
 return M

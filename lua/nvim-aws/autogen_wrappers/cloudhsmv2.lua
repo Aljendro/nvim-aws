@@ -8,128 +8,146 @@ local M = {}
 
 --- AWS cloudhsmv2 copy-backup-to-region operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_backup_to_region(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "copy-backup-to-region" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_backup_to_region(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "copy-backup-to-region" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 create-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cluster(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "create-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "create-cluster" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 create-hsm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_hsm(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "create-hsm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_hsm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "create-hsm" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 delete-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_backup(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-backup" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 delete-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cluster(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-cluster" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 delete-hsm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_hsm(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-hsm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_hsm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-hsm" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 describe-backups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_backups(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "describe-backups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_backups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "describe-backups" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 describe-clusters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_clusters(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "describe-clusters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_clusters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "describe-clusters" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 get-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "get-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "get-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 initialize-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.initialize_cluster(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "initialize-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.initialize_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "initialize-cluster" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 list-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "list-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "list-tags" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 modify-backup-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_backup_attributes(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "modify-backup-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_backup_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "modify-backup-attributes" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 modify-cluster operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_cluster(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "modify-cluster" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_cluster(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "modify-cluster" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 restore-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_backup(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "restore-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "restore-backup" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "tag-resource" }, input, callbacks)
 end
 
 --- AWS cloudhsmv2 untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "cloudhsmv2", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudhsmv2", "untag-resource" }, input, callbacks)
 end
 
 return M

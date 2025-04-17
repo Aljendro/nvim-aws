@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS iot-jobs-data describe-job-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_job_execution(input)
-	return common.execute_aws_command_skeleton({ "iot-jobs-data", "describe-job-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_job_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "describe-job-execution" }, input, callbacks)
 end
 
 --- AWS iot-jobs-data get-pending-job-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_pending_job_executions(input)
-	return common.execute_aws_command_skeleton({ "iot-jobs-data", "get-pending-job-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_pending_job_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "get-pending-job-executions" }, input, callbacks)
 end
 
 --- AWS iot-jobs-data start-command-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_command_execution(input)
-	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-command-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_command_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-command-execution" }, input, callbacks)
 end
 
 --- AWS iot-jobs-data start-next-pending-job-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_next_pending_job_execution(input)
-	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-next-pending-job-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_next_pending_job_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-next-pending-job-execution" }, input, callbacks)
 end
 
 --- AWS iot-jobs-data update-job-execution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job_execution(input)
-	return common.execute_aws_command_skeleton({ "iot-jobs-data", "update-job-execution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job_execution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "update-job-execution" }, input, callbacks)
 end
 
 return M

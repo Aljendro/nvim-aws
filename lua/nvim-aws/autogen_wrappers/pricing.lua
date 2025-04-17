@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS pricing describe-services operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_services(input)
-	return common.execute_aws_command_skeleton({ "pricing", "describe-services" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_services(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pricing", "describe-services" }, input, callbacks)
 end
 
 --- AWS pricing get-attribute-values operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_attribute_values(input)
-	return common.execute_aws_command_skeleton({ "pricing", "get-attribute-values" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_attribute_values(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pricing", "get-attribute-values" }, input, callbacks)
 end
 
 --- AWS pricing get-price-list-file-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_price_list_file_url(input)
-	return common.execute_aws_command_skeleton({ "pricing", "get-price-list-file-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_price_list_file_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pricing", "get-price-list-file-url" }, input, callbacks)
 end
 
 --- AWS pricing get-products operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_products(input)
-	return common.execute_aws_command_skeleton({ "pricing", "get-products" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_products(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pricing", "get-products" }, input, callbacks)
 end
 
 --- AWS pricing list-price-lists operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_price_lists(input)
-	return common.execute_aws_command_skeleton({ "pricing", "list-price-lists" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_price_lists(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pricing", "list-price-lists" }, input, callbacks)
 end
 
 return M

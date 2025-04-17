@@ -8,44 +8,50 @@ local M = {}
 
 --- AWS bedrock-runtime apply-guardrail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.apply_guardrail(input)
-	return common.execute_aws_command_skeleton({ "bedrock-runtime", "apply-guardrail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.apply_guardrail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "apply-guardrail" }, input, callbacks)
 end
 
 --- AWS bedrock-runtime converse operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.converse(input)
-	return common.execute_aws_command_skeleton({ "bedrock-runtime", "converse" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.converse(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "converse" }, input, callbacks)
 end
 
 --- AWS bedrock-runtime get-async-invoke operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_async_invoke(input)
-	return common.execute_aws_command_skeleton({ "bedrock-runtime", "get-async-invoke" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_async_invoke(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "get-async-invoke" }, input, callbacks)
 end
 
 --- AWS bedrock-runtime invoke-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.invoke_model(input)
-	return common.execute_aws_command({ "bedrock-runtime", "invoke-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.invoke_model(input, callbacks)
+	return common.execute_aws_command({ "bedrock-runtime", "invoke-model" }, input, callbacks)
 end
 
 --- AWS bedrock-runtime list-async-invokes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_async_invokes(input)
-	return common.execute_aws_command_skeleton({ "bedrock-runtime", "list-async-invokes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_async_invokes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "list-async-invokes" }, input, callbacks)
 end
 
 --- AWS bedrock-runtime start-async-invoke operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_async_invoke(input)
-	return common.execute_aws_command_skeleton({ "bedrock-runtime", "start-async-invoke" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_async_invoke(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "start-async-invoke" }, input, callbacks)
 end
 
 return M

@@ -8,156 +8,178 @@ local M = {}
 
 --- AWS security-ir batch-get-member-account-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_member_account_details(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "batch-get-member-account-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_member_account_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "batch-get-member-account-details" }, input, callbacks)
 end
 
 --- AWS security-ir cancel-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_membership(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "cancel-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "cancel-membership" }, input, callbacks)
 end
 
 --- AWS security-ir close-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.close_case(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "close-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.close_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "close-case" }, input, callbacks)
 end
 
 --- AWS security-ir create-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_case(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "create-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "create-case" }, input, callbacks)
 end
 
 --- AWS security-ir create-case-comment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_case_comment(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "create-case-comment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_case_comment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "create-case-comment" }, input, callbacks)
 end
 
 --- AWS security-ir create-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_membership(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "create-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "create-membership" }, input, callbacks)
 end
 
 --- AWS security-ir get-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_case(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "get-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "get-case" }, input, callbacks)
 end
 
 --- AWS security-ir get-case-attachment-download-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_case_attachment_download_url(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "get-case-attachment-download-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_case_attachment_download_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "get-case-attachment-download-url" }, input, callbacks)
 end
 
 --- AWS security-ir get-case-attachment-upload-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_case_attachment_upload_url(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "get-case-attachment-upload-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_case_attachment_upload_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "get-case-attachment-upload-url" }, input, callbacks)
 end
 
 --- AWS security-ir get-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_membership(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "get-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "get-membership" }, input, callbacks)
 end
 
 --- AWS security-ir list-case-edits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_case_edits(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "list-case-edits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_case_edits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "list-case-edits" }, input, callbacks)
 end
 
 --- AWS security-ir list-cases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cases(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "list-cases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "list-cases" }, input, callbacks)
 end
 
 --- AWS security-ir list-comments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_comments(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "list-comments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_comments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "list-comments" }, input, callbacks)
 end
 
 --- AWS security-ir list-memberships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_memberships(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "list-memberships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_memberships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "list-memberships" }, input, callbacks)
 end
 
 --- AWS security-ir list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS security-ir tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "tag-resource" }, input, callbacks)
 end
 
 --- AWS security-ir untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "untag-resource" }, input, callbacks)
 end
 
 --- AWS security-ir update-case operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_case(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "update-case" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_case(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "update-case" }, input, callbacks)
 end
 
 --- AWS security-ir update-case-comment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_case_comment(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "update-case-comment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_case_comment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "update-case-comment" }, input, callbacks)
 end
 
 --- AWS security-ir update-case-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_case_status(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "update-case-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_case_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "update-case-status" }, input, callbacks)
 end
 
 --- AWS security-ir update-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_membership(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "update-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "update-membership" }, input, callbacks)
 end
 
 --- AWS security-ir update-resolver-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resolver_type(input)
-	return common.execute_aws_command_skeleton({ "security-ir", "update-resolver-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resolver_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "security-ir", "update-resolver-type" }, input, callbacks)
 end
 
 return M

@@ -8,296 +8,338 @@ local M = {}
 
 --- AWS robomaker batch-delete-worlds operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_worlds(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "batch-delete-worlds" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_worlds(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "batch-delete-worlds" }, input, callbacks)
 end
 
 --- AWS robomaker batch-describe-simulation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_describe_simulation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "batch-describe-simulation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_describe_simulation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "batch-describe-simulation-job" }, input, callbacks)
 end
 
 --- AWS robomaker cancel-simulation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_simulation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_simulation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job" }, input, callbacks)
 end
 
 --- AWS robomaker cancel-simulation-job-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_simulation_job_batch(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_simulation_job_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job-batch" }, input, callbacks)
 end
 
 --- AWS robomaker cancel-world-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_world_export_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_world_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-export-job" }, input, callbacks)
 end
 
 --- AWS robomaker cancel-world-generation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_world_generation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-generation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_world_generation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-generation-job" }, input, callbacks)
 end
 
 --- AWS robomaker create-robot-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_robot_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_robot_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application" }, input, callbacks)
 end
 
 --- AWS robomaker create-robot-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_robot_application_version(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_robot_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application-version" }, input, callbacks)
 end
 
 --- AWS robomaker create-simulation-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_simulation_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_simulation_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application" }, input, callbacks)
 end
 
 --- AWS robomaker create-simulation-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_simulation_application_version(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_simulation_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application-version" }, input, callbacks)
 end
 
 --- AWS robomaker create-simulation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_simulation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_simulation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-job" }, input, callbacks)
 end
 
 --- AWS robomaker create-world-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_world_export_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-world-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_world_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-export-job" }, input, callbacks)
 end
 
 --- AWS robomaker create-world-generation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_world_generation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-world-generation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_world_generation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-generation-job" }, input, callbacks)
 end
 
 --- AWS robomaker create-world-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_world_template(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "create-world-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_world_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-template" }, input, callbacks)
 end
 
 --- AWS robomaker delete-robot-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_robot_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "delete-robot-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_robot_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-robot-application" }, input, callbacks)
 end
 
 --- AWS robomaker delete-simulation-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_simulation_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "delete-simulation-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_simulation_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-simulation-application" }, input, callbacks)
 end
 
 --- AWS robomaker delete-world-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_world_template(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "delete-world-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_world_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-world-template" }, input, callbacks)
 end
 
 --- AWS robomaker describe-robot-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_robot_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-robot-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_robot_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-robot-application" }, input, callbacks)
 end
 
 --- AWS robomaker describe-simulation-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_simulation_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_simulation_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-application" }, input, callbacks)
 end
 
 --- AWS robomaker describe-simulation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_simulation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_simulation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job" }, input, callbacks)
 end
 
 --- AWS robomaker describe-simulation-job-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_simulation_job_batch(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_simulation_job_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job-batch" }, input, callbacks)
 end
 
 --- AWS robomaker describe-world operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_world(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-world" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_world(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world" }, input, callbacks)
 end
 
 --- AWS robomaker describe-world-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_world_export_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_world_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-export-job" }, input, callbacks)
 end
 
 --- AWS robomaker describe-world-generation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_world_generation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-generation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_world_generation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-generation-job" }, input, callbacks)
 end
 
 --- AWS robomaker describe-world-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_world_template(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_world_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-template" }, input, callbacks)
 end
 
 --- AWS robomaker get-world-template-body operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_world_template_body(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "get-world-template-body" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_world_template_body(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "get-world-template-body" }, input, callbacks)
 end
 
 --- AWS robomaker list-robot-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_robot_applications(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-robot-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_robot_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-robot-applications" }, input, callbacks)
 end
 
 --- AWS robomaker list-simulation-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_simulation_applications(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_simulation_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-applications" }, input, callbacks)
 end
 
 --- AWS robomaker list-simulation-job-batches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_simulation_job_batches(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-job-batches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_simulation_job_batches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-job-batches" }, input, callbacks)
 end
 
 --- AWS robomaker list-simulation-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_simulation_jobs(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_simulation_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-jobs" }, input, callbacks)
 end
 
 --- AWS robomaker list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS robomaker list-world-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_world_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-world-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_world_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-export-jobs" }, input, callbacks)
 end
 
 --- AWS robomaker list-world-generation-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_world_generation_jobs(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-world-generation-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_world_generation_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-generation-jobs" }, input, callbacks)
 end
 
 --- AWS robomaker list-world-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_world_templates(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-world-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_world_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-templates" }, input, callbacks)
 end
 
 --- AWS robomaker list-worlds operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_worlds(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "list-worlds" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_worlds(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-worlds" }, input, callbacks)
 end
 
 --- AWS robomaker restart-simulation-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restart_simulation_job(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "restart-simulation-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restart_simulation_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "restart-simulation-job" }, input, callbacks)
 end
 
 --- AWS robomaker start-simulation-job-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_simulation_job_batch(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "start-simulation-job-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_simulation_job_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "start-simulation-job-batch" }, input, callbacks)
 end
 
 --- AWS robomaker tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "tag-resource" }, input, callbacks)
 end
 
 --- AWS robomaker untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "untag-resource" }, input, callbacks)
 end
 
 --- AWS robomaker update-robot-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_robot_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "update-robot-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_robot_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-robot-application" }, input, callbacks)
 end
 
 --- AWS robomaker update-simulation-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_simulation_application(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "update-simulation-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_simulation_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-simulation-application" }, input, callbacks)
 end
 
 --- AWS robomaker update-world-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_world_template(input)
-	return common.execute_aws_command_skeleton({ "robomaker", "update-world-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_world_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-world-template" }, input, callbacks)
 end
 
 return M

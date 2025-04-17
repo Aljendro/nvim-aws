@@ -8,16 +8,18 @@ local M = {}
 
 --- AWS workmailmessageflow get-raw-message-content operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_raw_message_content(input)
-	return common.execute_aws_command({ "workmailmessageflow", "get-raw-message-content" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_raw_message_content(input, callbacks)
+	return common.execute_aws_command({ "workmailmessageflow", "get-raw-message-content" }, input, callbacks)
 end
 
 --- AWS workmailmessageflow put-raw-message-content operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_raw_message_content(input)
-	return common.execute_aws_command_skeleton({ "workmailmessageflow", "put-raw-message-content" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_raw_message_content(input, callbacks)
+	return common.execute_aws_command_skeleton({ "workmailmessageflow", "put-raw-message-content" }, input, callbacks)
 end
 
 return M

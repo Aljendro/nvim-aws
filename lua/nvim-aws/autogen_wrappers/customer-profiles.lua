@@ -8,492 +8,562 @@ local M = {}
 
 --- AWS customer-profiles add-profile-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_profile_key(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "add-profile-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_profile_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "add-profile-key" }, input, callbacks)
 end
 
 --- AWS customer-profiles batch-get-calculated-attribute-for-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_calculated_attribute_for_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "batch-get-calculated-attribute-for-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_calculated_attribute_for_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "batch-get-calculated-attribute-for-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles batch-get-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "batch-get-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "batch-get-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-calculated-attribute-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_calculated_attribute_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-calculated-attribute-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_calculated_attribute_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-calculated-attribute-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-domain" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-event-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_stream(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-event-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-event-stream" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-event-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_trigger(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-event-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-event-trigger" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-integration-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration_workflow(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-integration-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-integration-workflow" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-segment-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_segment_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_segment_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-segment-estimate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_segment_estimate(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-estimate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_segment_estimate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-estimate" }, input, callbacks)
 end
 
 --- AWS customer-profiles create-segment-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_segment_snapshot(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_segment_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "create-segment-snapshot" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-calculated-attribute-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_calculated_attribute_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-calculated-attribute-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_calculated_attribute_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-calculated-attribute-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-domain" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-event-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_stream(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-event-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-event-stream" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-event-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_trigger(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-event-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-event-trigger" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-integration" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-profile-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profile_key(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profile_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-key" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-profile-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profile_object(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profile_object(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-object" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-profile-object-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profile_object_type(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-object-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profile_object_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-profile-object-type" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-segment-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_segment_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-segment-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_segment_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-segment-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles delete-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workflow(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "delete-workflow" }, input, callbacks)
 end
 
 --- AWS customer-profiles detect-profile-object-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_profile_object_type(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "detect-profile-object-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_profile_object_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "detect-profile-object-type" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-auto-merging-preview operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_auto_merging_preview(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-auto-merging-preview" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_auto_merging_preview(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-auto-merging-preview" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-calculated-attribute-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_calculated_attribute_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-calculated-attribute-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_calculated_attribute_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-calculated-attribute-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-calculated-attribute-for-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_calculated_attribute_for_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-calculated-attribute-for-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_calculated_attribute_for_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-calculated-attribute-for-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-domain" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-event-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_stream(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-event-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-event-stream" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-event-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_event_trigger(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-event-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_event_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-event-trigger" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-identity-resolution-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_identity_resolution_job(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-identity-resolution-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_identity_resolution_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-identity-resolution-job" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-integration" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-matches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_matches(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-matches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_matches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-matches" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-profile-object-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_profile_object_type(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-profile-object-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_profile_object_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-profile-object-type" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-profile-object-type-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_profile_object_type_template(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-profile-object-type-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_profile_object_type_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-profile-object-type-template" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-segment-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_segment_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_segment_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-segment-estimate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_segment_estimate(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-estimate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_segment_estimate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-estimate" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-segment-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_segment_membership(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_segment_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-membership" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-segment-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_segment_snapshot(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_segment_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-segment-snapshot" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-similar-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_similar_profiles(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-similar-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_similar_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-similar-profiles" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-workflow" }, input, callbacks)
 end
 
 --- AWS customer-profiles get-workflow-steps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow_steps(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "get-workflow-steps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow_steps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "get-workflow-steps" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-account-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_account_integrations(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-account-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_account_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-account-integrations" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-calculated-attribute-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_calculated_attribute_definitions(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-calculated-attribute-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_calculated_attribute_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-calculated-attribute-definitions" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-calculated-attributes-for-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_calculated_attributes_for_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-calculated-attributes-for-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_calculated_attributes_for_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-calculated-attributes-for-profile" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-domains" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-event-streams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_streams(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-event-streams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_streams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-event-streams" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-event-triggers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_triggers(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-event-triggers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_triggers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-event-triggers" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-identity-resolution-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_identity_resolution_jobs(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-identity-resolution-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_identity_resolution_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-identity-resolution-jobs" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_integrations(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-integrations" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-object-type-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_object_type_attributes(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-object-type-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_object_type_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-object-type-attributes" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-profile-attribute-values operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profile_attribute_values(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-attribute-values" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profile_attribute_values(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-attribute-values" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-profile-object-type-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profile_object_type_templates(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-object-type-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profile_object_type_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-object-type-templates" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-profile-object-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profile_object_types(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-object-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profile_object_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-object-types" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-profile-objects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profile_objects(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-objects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profile_objects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-profile-objects" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-rule-based-matches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rule_based_matches(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-rule-based-matches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rule_based_matches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-rule-based-matches" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-segment-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_segment_definitions(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-segment-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_segment_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-segment-definitions" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS customer-profiles list-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workflows(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "list-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "list-workflows" }, input, callbacks)
 end
 
 --- AWS customer-profiles merge-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.merge_profiles(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "merge-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.merge_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "merge-profiles" }, input, callbacks)
 end
 
 --- AWS customer-profiles put-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_integration(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "put-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "put-integration" }, input, callbacks)
 end
 
 --- AWS customer-profiles put-profile-object operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_profile_object(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "put-profile-object" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_profile_object(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "put-profile-object" }, input, callbacks)
 end
 
 --- AWS customer-profiles put-profile-object-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_profile_object_type(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "put-profile-object-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_profile_object_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "put-profile-object-type" }, input, callbacks)
 end
 
 --- AWS customer-profiles search-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_profiles(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "search-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "search-profiles" }, input, callbacks)
 end
 
 --- AWS customer-profiles tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "tag-resource" }, input, callbacks)
 end
 
 --- AWS customer-profiles untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "untag-resource" }, input, callbacks)
 end
 
 --- AWS customer-profiles update-calculated-attribute-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_calculated_attribute_definition(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "update-calculated-attribute-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_calculated_attribute_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "update-calculated-attribute-definition" }, input, callbacks)
 end
 
 --- AWS customer-profiles update-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "update-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "update-domain" }, input, callbacks)
 end
 
 --- AWS customer-profiles update-event-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_trigger(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "update-event-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "update-event-trigger" }, input, callbacks)
 end
 
 --- AWS customer-profiles update-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_profile(input)
-	return common.execute_aws_command_skeleton({ "customer-profiles", "update-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "customer-profiles", "update-profile" }, input, callbacks)
 end
 
 return M

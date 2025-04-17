@@ -8,212 +8,242 @@ local M = {}
 
 --- AWS chime-sdk-identity create-app-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_instance(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity create-app-instance-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_instance_admin(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_instance_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-admin" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity create-app-instance-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_instance_bot(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_instance_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-bot" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity create-app-instance-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_instance_user(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_instance_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "create-app-instance-user" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity delete-app-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_instance(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity delete-app-instance-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_instance_admin(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_instance_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-admin" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity delete-app-instance-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_instance_bot(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_instance_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-bot" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity delete-app-instance-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_instance_user(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_instance_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "delete-app-instance-user" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity deregister-app-instance-user-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_app_instance_user_endpoint(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "deregister-app-instance-user-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_app_instance_user_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "deregister-app-instance-user-endpoint" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity describe-app-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_instance(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity describe-app-instance-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_instance_admin(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_instance_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-admin" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity describe-app-instance-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_instance_bot(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_instance_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-bot" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity describe-app-instance-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_instance_user(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_instance_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-user" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity describe-app-instance-user-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_instance_user_endpoint(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-user-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_instance_user_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "describe-app-instance-user-endpoint" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity get-app-instance-retention-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_app_instance_retention_settings(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "get-app-instance-retention-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_app_instance_retention_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "get-app-instance-retention-settings" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-app-instance-admins operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_instance_admins(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-admins" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_instance_admins(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-admins" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-app-instance-bots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_instance_bots(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-bots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_instance_bots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-bots" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-app-instance-user-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_instance_user_endpoints(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-user-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_instance_user_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-user-endpoints" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-app-instance-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_instance_users(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_instance_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instance-users" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-app-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_app_instances(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_app_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-app-instances" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity put-app-instance-retention-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_app_instance_retention_settings(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "put-app-instance-retention-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_app_instance_retention_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "put-app-instance-retention-settings" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity put-app-instance-user-expiration-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_app_instance_user_expiration_settings(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "put-app-instance-user-expiration-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_app_instance_user_expiration_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "put-app-instance-user-expiration-settings" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity register-app-instance-user-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_app_instance_user_endpoint(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "register-app-instance-user-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_app_instance_user_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "register-app-instance-user-endpoint" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "tag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "untag-resource" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity update-app-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_instance(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity update-app-instance-bot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_instance_bot(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-bot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_instance_bot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-bot" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity update-app-instance-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_instance_user(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_instance_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-user" }, input, callbacks)
 end
 
 --- AWS chime-sdk-identity update-app-instance-user-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_instance_user_endpoint(input)
-	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-user-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_instance_user_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "chime-sdk-identity", "update-app-instance-user-endpoint" }, input, callbacks)
 end
 
 return M

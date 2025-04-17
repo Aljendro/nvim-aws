@@ -8,422 +8,482 @@ local M = {}
 
 --- AWS location associate-tracker-consumer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_tracker_consumer(input)
-	return common.execute_aws_command_skeleton({ "location", "associate-tracker-consumer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_tracker_consumer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "associate-tracker-consumer" }, input, callbacks)
 end
 
 --- AWS location batch-delete-device-position-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_device_position_history(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-delete-device-position-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_device_position_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-delete-device-position-history" }, input, callbacks)
 end
 
 --- AWS location batch-delete-geofence operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_geofence(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-delete-geofence" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_geofence(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-delete-geofence" }, input, callbacks)
 end
 
 --- AWS location batch-evaluate-geofences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_evaluate_geofences(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-evaluate-geofences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_evaluate_geofences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-evaluate-geofences" }, input, callbacks)
 end
 
 --- AWS location batch-get-device-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_device_position(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-get-device-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_device_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-get-device-position" }, input, callbacks)
 end
 
 --- AWS location batch-put-geofence operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_put_geofence(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-put-geofence" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_put_geofence(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-put-geofence" }, input, callbacks)
 end
 
 --- AWS location batch-update-device-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_device_position(input)
-	return common.execute_aws_command_skeleton({ "location", "batch-update-device-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_device_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "batch-update-device-position" }, input, callbacks)
 end
 
 --- AWS location calculate-route operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.calculate_route(input)
-	return common.execute_aws_command_skeleton({ "location", "calculate-route" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.calculate_route(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "calculate-route" }, input, callbacks)
 end
 
 --- AWS location calculate-route-matrix operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.calculate_route_matrix(input)
-	return common.execute_aws_command_skeleton({ "location", "calculate-route-matrix" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.calculate_route_matrix(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "calculate-route-matrix" }, input, callbacks)
 end
 
 --- AWS location create-geofence-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_geofence_collection(input)
-	return common.execute_aws_command_skeleton({ "location", "create-geofence-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_geofence_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-geofence-collection" }, input, callbacks)
 end
 
 --- AWS location create-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_key(input)
-	return common.execute_aws_command_skeleton({ "location", "create-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-key" }, input, callbacks)
 end
 
 --- AWS location create-map operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_map(input)
-	return common.execute_aws_command_skeleton({ "location", "create-map" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_map(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-map" }, input, callbacks)
 end
 
 --- AWS location create-place-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_place_index(input)
-	return common.execute_aws_command_skeleton({ "location", "create-place-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_place_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-place-index" }, input, callbacks)
 end
 
 --- AWS location create-route-calculator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_route_calculator(input)
-	return common.execute_aws_command_skeleton({ "location", "create-route-calculator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_route_calculator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-route-calculator" }, input, callbacks)
 end
 
 --- AWS location create-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tracker(input)
-	return common.execute_aws_command_skeleton({ "location", "create-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "create-tracker" }, input, callbacks)
 end
 
 --- AWS location delete-geofence-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_geofence_collection(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-geofence-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_geofence_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-geofence-collection" }, input, callbacks)
 end
 
 --- AWS location delete-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_key(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-key" }, input, callbacks)
 end
 
 --- AWS location delete-map operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_map(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-map" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_map(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-map" }, input, callbacks)
 end
 
 --- AWS location delete-place-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_place_index(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-place-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_place_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-place-index" }, input, callbacks)
 end
 
 --- AWS location delete-route-calculator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_route_calculator(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-route-calculator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_route_calculator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-route-calculator" }, input, callbacks)
 end
 
 --- AWS location delete-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tracker(input)
-	return common.execute_aws_command_skeleton({ "location", "delete-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "delete-tracker" }, input, callbacks)
 end
 
 --- AWS location describe-geofence-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_geofence_collection(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-geofence-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_geofence_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-geofence-collection" }, input, callbacks)
 end
 
 --- AWS location describe-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_key(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-key" }, input, callbacks)
 end
 
 --- AWS location describe-map operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_map(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-map" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_map(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-map" }, input, callbacks)
 end
 
 --- AWS location describe-place-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_place_index(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-place-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_place_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-place-index" }, input, callbacks)
 end
 
 --- AWS location describe-route-calculator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_route_calculator(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-route-calculator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_route_calculator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-route-calculator" }, input, callbacks)
 end
 
 --- AWS location describe-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tracker(input)
-	return common.execute_aws_command_skeleton({ "location", "describe-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "describe-tracker" }, input, callbacks)
 end
 
 --- AWS location disassociate-tracker-consumer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_tracker_consumer(input)
-	return common.execute_aws_command_skeleton({ "location", "disassociate-tracker-consumer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_tracker_consumer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "disassociate-tracker-consumer" }, input, callbacks)
 end
 
 --- AWS location forecast-geofence-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.forecast_geofence_events(input)
-	return common.execute_aws_command_skeleton({ "location", "forecast-geofence-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.forecast_geofence_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "forecast-geofence-events" }, input, callbacks)
 end
 
 --- AWS location get-device-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_position(input)
-	return common.execute_aws_command_skeleton({ "location", "get-device-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "get-device-position" }, input, callbacks)
 end
 
 --- AWS location get-device-position-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_device_position_history(input)
-	return common.execute_aws_command_skeleton({ "location", "get-device-position-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_device_position_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "get-device-position-history" }, input, callbacks)
 end
 
 --- AWS location get-geofence operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_geofence(input)
-	return common.execute_aws_command_skeleton({ "location", "get-geofence" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_geofence(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "get-geofence" }, input, callbacks)
 end
 
 --- AWS location get-map-glyphs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_map_glyphs(input)
-	return common.execute_aws_command({ "location", "get-map-glyphs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_map_glyphs(input, callbacks)
+	return common.execute_aws_command({ "location", "get-map-glyphs" }, input, callbacks)
 end
 
 --- AWS location get-map-sprites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_map_sprites(input)
-	return common.execute_aws_command({ "location", "get-map-sprites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_map_sprites(input, callbacks)
+	return common.execute_aws_command({ "location", "get-map-sprites" }, input, callbacks)
 end
 
 --- AWS location get-map-style-descriptor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_map_style_descriptor(input)
-	return common.execute_aws_command({ "location", "get-map-style-descriptor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_map_style_descriptor(input, callbacks)
+	return common.execute_aws_command({ "location", "get-map-style-descriptor" }, input, callbacks)
 end
 
 --- AWS location get-map-tile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_map_tile(input)
-	return common.execute_aws_command({ "location", "get-map-tile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_map_tile(input, callbacks)
+	return common.execute_aws_command({ "location", "get-map-tile" }, input, callbacks)
 end
 
 --- AWS location get-place operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_place(input)
-	return common.execute_aws_command_skeleton({ "location", "get-place" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_place(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "get-place" }, input, callbacks)
 end
 
 --- AWS location list-device-positions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_device_positions(input)
-	return common.execute_aws_command_skeleton({ "location", "list-device-positions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_device_positions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-device-positions" }, input, callbacks)
 end
 
 --- AWS location list-geofence-collections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_geofence_collections(input)
-	return common.execute_aws_command_skeleton({ "location", "list-geofence-collections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_geofence_collections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-geofence-collections" }, input, callbacks)
 end
 
 --- AWS location list-geofences operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_geofences(input)
-	return common.execute_aws_command_skeleton({ "location", "list-geofences" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_geofences(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-geofences" }, input, callbacks)
 end
 
 --- AWS location list-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_keys(input)
-	return common.execute_aws_command_skeleton({ "location", "list-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-keys" }, input, callbacks)
 end
 
 --- AWS location list-maps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_maps(input)
-	return common.execute_aws_command_skeleton({ "location", "list-maps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_maps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-maps" }, input, callbacks)
 end
 
 --- AWS location list-place-indexes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_place_indexes(input)
-	return common.execute_aws_command_skeleton({ "location", "list-place-indexes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_place_indexes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-place-indexes" }, input, callbacks)
 end
 
 --- AWS location list-route-calculators operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_route_calculators(input)
-	return common.execute_aws_command_skeleton({ "location", "list-route-calculators" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_route_calculators(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-route-calculators" }, input, callbacks)
 end
 
 --- AWS location list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "location", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS location list-tracker-consumers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tracker_consumers(input)
-	return common.execute_aws_command_skeleton({ "location", "list-tracker-consumers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tracker_consumers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-tracker-consumers" }, input, callbacks)
 end
 
 --- AWS location list-trackers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_trackers(input)
-	return common.execute_aws_command_skeleton({ "location", "list-trackers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_trackers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "list-trackers" }, input, callbacks)
 end
 
 --- AWS location put-geofence operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_geofence(input)
-	return common.execute_aws_command_skeleton({ "location", "put-geofence" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_geofence(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "put-geofence" }, input, callbacks)
 end
 
 --- AWS location search-place-index-for-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_place_index_for_position(input)
-	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_place_index_for_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-position" }, input, callbacks)
 end
 
 --- AWS location search-place-index-for-suggestions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_place_index_for_suggestions(input)
-	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-suggestions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_place_index_for_suggestions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-suggestions" }, input, callbacks)
 end
 
 --- AWS location search-place-index-for-text operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_place_index_for_text(input)
-	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-text" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_place_index_for_text(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "search-place-index-for-text" }, input, callbacks)
 end
 
 --- AWS location tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "location", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "tag-resource" }, input, callbacks)
 end
 
 --- AWS location untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "location", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "untag-resource" }, input, callbacks)
 end
 
 --- AWS location update-geofence-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_geofence_collection(input)
-	return common.execute_aws_command_skeleton({ "location", "update-geofence-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_geofence_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-geofence-collection" }, input, callbacks)
 end
 
 --- AWS location update-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_key(input)
-	return common.execute_aws_command_skeleton({ "location", "update-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-key" }, input, callbacks)
 end
 
 --- AWS location update-map operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_map(input)
-	return common.execute_aws_command_skeleton({ "location", "update-map" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_map(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-map" }, input, callbacks)
 end
 
 --- AWS location update-place-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_place_index(input)
-	return common.execute_aws_command_skeleton({ "location", "update-place-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_place_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-place-index" }, input, callbacks)
 end
 
 --- AWS location update-route-calculator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_route_calculator(input)
-	return common.execute_aws_command_skeleton({ "location", "update-route-calculator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_route_calculator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-route-calculator" }, input, callbacks)
 end
 
 --- AWS location update-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_tracker(input)
-	return common.execute_aws_command_skeleton({ "location", "update-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "update-tracker" }, input, callbacks)
 end
 
 --- AWS location verify-device-position operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.verify_device_position(input)
-	return common.execute_aws_command_skeleton({ "location", "verify-device-position" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.verify_device_position(input, callbacks)
+	return common.execute_aws_command_skeleton({ "location", "verify-device-position" }, input, callbacks)
 end
 
 return M

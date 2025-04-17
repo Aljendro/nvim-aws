@@ -8,338 +8,386 @@ local M = {}
 
 --- AWS elasticbeanstalk abort-environment-update operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.abort_environment_update(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "abort-environment-update" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.abort_environment_update(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "abort-environment-update" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk apply-environment-managed-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.apply_environment_managed_action(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "apply-environment-managed-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.apply_environment_managed_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "apply-environment-managed-action" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk associate-environment-operations-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_environment_operations_role(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "associate-environment-operations-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_environment_operations_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "associate-environment-operations-role" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk check-dns-availability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.check_dns_availability(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "check-dns-availability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.check_dns_availability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "check-dns-availability" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk compose-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.compose_environments(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "compose-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.compose_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "compose-environments" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-configuration-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_template(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-configuration-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-configuration-template" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_environment(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-environment" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-platform-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_platform_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-platform-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_platform_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-platform-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk create-storage-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_storage_location(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-storage-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_storage_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-storage-location" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk delete-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk delete-configuration-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_template(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-configuration-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-configuration-template" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk delete-environment-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_environment_configuration(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-environment-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_environment_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-environment-configuration" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk delete-platform-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_platform_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-platform-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_platform_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-platform-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-account-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_attributes(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-account-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-account-attributes" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-application-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_application_versions(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-application-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_application_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-application-versions" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_applications(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-applications" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-configuration-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_configuration_options(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_configuration_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-options" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-configuration-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_configuration_settings(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_configuration_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-settings" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-environment-health operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_environment_health(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-health" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_environment_health(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-health" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-environment-managed-action-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_environment_managed_action_history(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-action-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_environment_managed_action_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-action-history" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-environment-managed-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_environment_managed_actions(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_environment_managed_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-actions" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-environment-resources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_environment_resources(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-resources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_environment_resources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-resources" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_environments(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environments" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_events(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-events" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-instances-health operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_instances_health(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-instances-health" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_instances_health(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-instances-health" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk describe-platform-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_platform_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-platform-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_platform_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-platform-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk disassociate-environment-operations-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_environment_operations_role(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_environment_operations_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk list-available-solution-stacks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_available_solution_stacks(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-available-solution-stacks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_available_solution_stacks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-available-solution-stacks" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk list-platform-branches operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_platform_branches(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-branches" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_platform_branches(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-branches" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk list-platform-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_platform_versions(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_platform_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-versions" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk rebuild-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rebuild_environment(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "rebuild-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rebuild_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "rebuild-environment" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk request-environment-info operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.request_environment_info(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "request-environment-info" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.request_environment_info(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "request-environment-info" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk restart-app-server operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restart_app_server(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "restart-app-server" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restart_app_server(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "restart-app-server" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk retrieve-environment-info operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve_environment_info(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "retrieve-environment-info" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve_environment_info(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "retrieve-environment-info" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk swap-environment-cnames operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.swap_environment_cnames(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "swap-environment-cnames" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.swap_environment_cnames(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "swap-environment-cnames" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk terminate-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.terminate_environment(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "terminate-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.terminate_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "terminate-environment" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-application-resource-lifecycle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application_resource_lifecycle(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-resource-lifecycle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application_resource_lifecycle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-resource-lifecycle" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-application-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application_version(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-version" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-configuration-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_template(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-configuration-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-configuration-template" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_environment(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-environment" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk update-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk validate-configuration-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.validate_configuration_settings(input)
-	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "validate-configuration-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.validate_configuration_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "validate-configuration-settings" }, input, callbacks)
 end
 
 --- AWS elasticbeanstalk wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "elasticbeanstalk", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "elasticbeanstalk", "wait" }, input, callbacks)
 end
 
 return M

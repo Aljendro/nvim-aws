@@ -8,310 +8,354 @@ local M = {}
 
 --- AWS appconfig create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-application" }, input, callbacks)
 end
 
 --- AWS appconfig create-configuration-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_profile(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-configuration-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-configuration-profile" }, input, callbacks)
 end
 
 --- AWS appconfig create-deployment-strategy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_deployment_strategy(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-deployment-strategy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_deployment_strategy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-deployment-strategy" }, input, callbacks)
 end
 
 --- AWS appconfig create-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_environment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-environment" }, input, callbacks)
 end
 
 --- AWS appconfig create-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_extension(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-extension" }, input, callbacks)
 end
 
 --- AWS appconfig create-extension-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_extension_association(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "create-extension-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_extension_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-extension-association" }, input, callbacks)
 end
 
 --- AWS appconfig create-hosted-configuration-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_hosted_configuration_version(input)
-	return common.execute_aws_command({ "appconfig", "create-hosted-configuration-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_hosted_configuration_version(input, callbacks)
+	return common.execute_aws_command({ "appconfig", "create-hosted-configuration-version" }, input, callbacks)
 end
 
 --- AWS appconfig delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-application" }, input, callbacks)
 end
 
 --- AWS appconfig delete-configuration-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_profile(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-configuration-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-configuration-profile" }, input, callbacks)
 end
 
 --- AWS appconfig delete-deployment-strategy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_deployment_strategy(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-deployment-strategy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_deployment_strategy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-deployment-strategy" }, input, callbacks)
 end
 
 --- AWS appconfig delete-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_environment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-environment" }, input, callbacks)
 end
 
 --- AWS appconfig delete-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_extension(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension" }, input, callbacks)
 end
 
 --- AWS appconfig delete-extension-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_extension_association(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_extension_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension-association" }, input, callbacks)
 end
 
 --- AWS appconfig delete-hosted-configuration-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_hosted_configuration_version(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "delete-hosted-configuration-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_hosted_configuration_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-hosted-configuration-version" }, input, callbacks)
 end
 
 --- AWS appconfig get-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_settings(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-account-settings" }, input, callbacks)
 end
 
 --- AWS appconfig get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-application" }, input, callbacks)
 end
 
 --- AWS appconfig get-configuration-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_profile(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-configuration-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-configuration-profile" }, input, callbacks)
 end
 
 --- AWS appconfig get-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment" }, input, callbacks)
 end
 
 --- AWS appconfig get-deployment-strategy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_deployment_strategy(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment-strategy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_deployment_strategy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment-strategy" }, input, callbacks)
 end
 
 --- AWS appconfig get-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_environment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-environment" }, input, callbacks)
 end
 
 --- AWS appconfig get-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_extension(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-extension" }, input, callbacks)
 end
 
 --- AWS appconfig get-extension-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_extension_association(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "get-extension-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_extension_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-extension-association" }, input, callbacks)
 end
 
 --- AWS appconfig get-hosted-configuration-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hosted_configuration_version(input)
-	return common.execute_aws_command({ "appconfig", "get-hosted-configuration-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hosted_configuration_version(input, callbacks)
+	return common.execute_aws_command({ "appconfig", "get-hosted-configuration-version" }, input, callbacks)
 end
 
 --- AWS appconfig list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-applications" }, input, callbacks)
 end
 
 --- AWS appconfig list-configuration-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configuration_profiles(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-configuration-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configuration_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-configuration-profiles" }, input, callbacks)
 end
 
 --- AWS appconfig list-deployment-strategies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deployment_strategies(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-deployment-strategies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deployment_strategies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-deployment-strategies" }, input, callbacks)
 end
 
 --- AWS appconfig list-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_deployments(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-deployments" }, input, callbacks)
 end
 
 --- AWS appconfig list-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_environments(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-environments" }, input, callbacks)
 end
 
 --- AWS appconfig list-extension-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_extension_associations(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-extension-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_extension_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-extension-associations" }, input, callbacks)
 end
 
 --- AWS appconfig list-extensions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_extensions(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-extensions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_extensions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-extensions" }, input, callbacks)
 end
 
 --- AWS appconfig list-hosted-configuration-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_hosted_configuration_versions(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-hosted-configuration-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_hosted_configuration_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-hosted-configuration-versions" }, input, callbacks)
 end
 
 --- AWS appconfig list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS appconfig start-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_deployment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "start-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "start-deployment" }, input, callbacks)
 end
 
 --- AWS appconfig stop-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_deployment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "stop-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "stop-deployment" }, input, callbacks)
 end
 
 --- AWS appconfig tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "tag-resource" }, input, callbacks)
 end
 
 --- AWS appconfig untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "untag-resource" }, input, callbacks)
 end
 
 --- AWS appconfig update-account-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_account_settings(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-account-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_account_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-account-settings" }, input, callbacks)
 end
 
 --- AWS appconfig update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-application" }, input, callbacks)
 end
 
 --- AWS appconfig update-configuration-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_profile(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-configuration-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-configuration-profile" }, input, callbacks)
 end
 
 --- AWS appconfig update-deployment-strategy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_deployment_strategy(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-deployment-strategy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_deployment_strategy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-deployment-strategy" }, input, callbacks)
 end
 
 --- AWS appconfig update-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_environment(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-environment" }, input, callbacks)
 end
 
 --- AWS appconfig update-extension operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_extension(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-extension" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_extension(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-extension" }, input, callbacks)
 end
 
 --- AWS appconfig update-extension-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_extension_association(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "update-extension-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_extension_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-extension-association" }, input, callbacks)
 end
 
 --- AWS appconfig validate-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.validate_configuration(input)
-	return common.execute_aws_command_skeleton({ "appconfig", "validate-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.validate_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfig", "validate-configuration" }, input, callbacks)
 end
 
 return M

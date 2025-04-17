@@ -8,212 +8,242 @@ local M = {}
 
 --- AWS lookoutmetrics activate-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "activate-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "activate-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics back-test-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.back_test_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "back-test-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.back_test_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "back-test-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics create-alert operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_alert(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-alert" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_alert(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-alert" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics create-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics create-metric-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_metric_set(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-metric-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_metric_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "create-metric-set" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics deactivate-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deactivate_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "deactivate-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deactivate_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "deactivate-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics delete-alert operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alert(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "delete-alert" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alert(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "delete-alert" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics delete-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "delete-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "delete-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics describe-alert operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_alert(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-alert" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_alert(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-alert" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics describe-anomaly-detection-executions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_anomaly_detection_executions(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-anomaly-detection-executions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_anomaly_detection_executions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-anomaly-detection-executions" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics describe-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics describe-metric-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_metric_set(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-metric-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_metric_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "describe-metric-set" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics detect-metric-set-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_metric_set_config(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "detect-metric-set-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_metric_set_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "detect-metric-set-config" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics get-anomaly-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_anomaly_group(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-anomaly-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_anomaly_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-anomaly-group" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics get-data-quality-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_metrics(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-data-quality-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-data-quality-metrics" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics get-feedback operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_feedback(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-feedback" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_feedback(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-feedback" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics get-sample-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sample_data(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-sample-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sample_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "get-sample-data" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-alerts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_alerts(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-alerts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_alerts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-alerts" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-anomaly-detectors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_anomaly_detectors(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-detectors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_anomaly_detectors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-detectors" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-anomaly-group-related-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_anomaly_group_related_metrics(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-related-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_anomaly_group_related_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-related-metrics" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-anomaly-group-summaries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_anomaly_group_summaries(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-summaries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_anomaly_group_summaries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-summaries" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-anomaly-group-time-series operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_anomaly_group_time_series(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-time-series" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_anomaly_group_time_series(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-anomaly-group-time-series" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-metric-sets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_metric_sets(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-metric-sets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_metric_sets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-metric-sets" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics put-feedback operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_feedback(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "put-feedback" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_feedback(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "put-feedback" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "tag-resource" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "untag-resource" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics update-alert operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_alert(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-alert" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_alert(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-alert" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics update-anomaly-detector operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_anomaly_detector(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-anomaly-detector" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_anomaly_detector(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS lookoutmetrics update-metric-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_metric_set(input)
-	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-metric-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_metric_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lookoutmetrics", "update-metric-set" }, input, callbacks)
 end
 
 return M

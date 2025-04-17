@@ -157,34 +157,25 @@ class AwsCliParser:
                 lua_func_name = self._to_snake_case(command)
 
                 f.write(f"--- AWS {self.service_id} {command} operation\n")
+                f.write("--- @param input table|nil input parameters\n")
+                f.write(
+                    "--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}\n"
+                )
+                f.write(
+                    "--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }\n"
+                )
+                f.write(f"function M.{lua_func_name}(input, callbacks)\n")
 
-                if command_type == OutputType.MISSING_HAS_GENERATE_CLI_SKELETON:
-                    f.write("--- @param input table|nil input parameters\n")
+                if (
+                    command_type == OutputType.MISSING_HAS_GENERATE_CLI_SKELETON
+                    or command_type == OutputType.STREAMING
+                ):
                     f.write(
-                        "--- @return {success: boolean, data: table|nil, error: string|nil}\n"
-                    )
-                    f.write(f"function M.{lua_func_name}(input)\n")
-                    f.write(
-                        f'\treturn common.execute_aws_command({{ "{self.service_id}", "{command}" }}, input)\n'
+                        f'\treturn common.execute_aws_command({{ "{self.service_id}", "{command}" }}, input, callbacks)\n'
                     )
                 elif command_type == OutputType.HAS_GENERATE_CLI_SKELETON:
-                    f.write("--- @param input table|nil input parameters\n")
                     f.write(
-                        "--- @return {success: boolean, data: table|nil, error: string|nil}\n"
-                    )
-                    f.write(f"function M.{lua_func_name}(input)\n")
-                    f.write(
-                        f'\treturn common.execute_aws_command_skeleton({{ "{self.service_id}", "{command}" }}, input)\n'
-                    )
-                elif command_type == OutputType.STREAMING:
-                    f.write("--- @param input table|nil input parameters\n")
-                    f.write(
-                        "--- @param callbacks table {on_output = function(line), on_error = function(err), on_exit = function(code)}\n"
-                    )
-                    f.write("--- @return {success: boolean, job: Job}\n")
-                    f.write(f"function M.{lua_func_name}(input, callbacks)\n")
-                    f.write(
-                        f'\treturn common.execute_aws_command_callbacks({{ "{self.service_id}", "{command}" }}, input, callbacks)\n'
+                        f'\treturn common.execute_aws_command_skeleton({{ "{self.service_id}", "{command}" }}, input, callbacks)\n'
                     )
 
                 f.write("end\n\n")

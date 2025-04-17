@@ -8,51 +8,58 @@ local M = {}
 
 --- AWS pinpoint-sms-voice create-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "create-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "create-configuration-set" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice create-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "create-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "create-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice delete-configuration-set operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "delete-configuration-set" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "delete-configuration-set" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice delete-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "delete-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "delete-configuration-set-event-destination" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice get-configuration-set-event-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_configuration_set_event_destinations(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "get-configuration-set-event-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_configuration_set_event_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "get-configuration-set-event-destinations" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice send-voice-message operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_voice_message(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "send-voice-message" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_voice_message(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "send-voice-message" }, input, callbacks)
 end
 
 --- AWS pinpoint-sms-voice update-configuration-set-event-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_configuration_set_event_destination(input)
-	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "update-configuration-set-event-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_configuration_set_event_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice", "update-configuration-set-event-destination" }, input, callbacks)
 end
 
 return M

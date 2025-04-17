@@ -8,177 +8,202 @@ local M = {}
 
 --- AWS gameliftstreams add-stream-group-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_stream_group_locations(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "add-stream-group-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_stream_group_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "add-stream-group-locations" }, input, callbacks)
 end
 
 --- AWS gameliftstreams associate-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_applications(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "associate-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "associate-applications" }, input, callbacks)
 end
 
 --- AWS gameliftstreams create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-application" }, input, callbacks)
 end
 
 --- AWS gameliftstreams create-stream-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stream_group(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-stream-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stream_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-stream-group" }, input, callbacks)
 end
 
 --- AWS gameliftstreams create-stream-session-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stream_session_connection(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-stream-session-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stream_session_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "create-stream-session-connection" }, input, callbacks)
 end
 
 --- AWS gameliftstreams delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "delete-application" }, input, callbacks)
 end
 
 --- AWS gameliftstreams delete-stream-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_stream_group(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "delete-stream-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_stream_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "delete-stream-group" }, input, callbacks)
 end
 
 --- AWS gameliftstreams disassociate-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_applications(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "disassociate-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "disassociate-applications" }, input, callbacks)
 end
 
 --- AWS gameliftstreams export-stream-session-files operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_stream_session_files(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "export-stream-session-files" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_stream_session_files(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "export-stream-session-files" }, input, callbacks)
 end
 
 --- AWS gameliftstreams get-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_application(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-application" }, input, callbacks)
 end
 
 --- AWS gameliftstreams get-stream-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stream_group(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-stream-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stream_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-stream-group" }, input, callbacks)
 end
 
 --- AWS gameliftstreams get-stream-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_stream_session(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-stream-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_stream_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "get-stream-session" }, input, callbacks)
 end
 
 --- AWS gameliftstreams list-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_applications(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-applications" }, input, callbacks)
 end
 
 --- AWS gameliftstreams list-stream-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_groups(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-groups" }, input, callbacks)
 end
 
 --- AWS gameliftstreams list-stream-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_sessions(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-sessions" }, input, callbacks)
 end
 
 --- AWS gameliftstreams list-stream-sessions-by-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_sessions_by_account(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-sessions-by-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_sessions_by_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-stream-sessions-by-account" }, input, callbacks)
 end
 
 --- AWS gameliftstreams list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS gameliftstreams remove-stream-group-locations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_stream_group_locations(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "remove-stream-group-locations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_stream_group_locations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "remove-stream-group-locations" }, input, callbacks)
 end
 
 --- AWS gameliftstreams start-stream-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_stream_session(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "start-stream-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_stream_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "start-stream-session" }, input, callbacks)
 end
 
 --- AWS gameliftstreams tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "tag-resource" }, input, callbacks)
 end
 
 --- AWS gameliftstreams terminate-stream-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.terminate_stream_session(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "terminate-stream-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.terminate_stream_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "terminate-stream-session" }, input, callbacks)
 end
 
 --- AWS gameliftstreams untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "untag-resource" }, input, callbacks)
 end
 
 --- AWS gameliftstreams update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "update-application" }, input, callbacks)
 end
 
 --- AWS gameliftstreams update-stream-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_stream_group(input)
-	return common.execute_aws_command_skeleton({ "gameliftstreams", "update-stream-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_stream_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "gameliftstreams", "update-stream-group" }, input, callbacks)
 end
 
 --- AWS gameliftstreams wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "gameliftstreams", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "gameliftstreams", "wait" }, input, callbacks)
 end
 
 return M

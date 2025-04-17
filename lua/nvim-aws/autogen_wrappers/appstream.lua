@@ -8,562 +8,642 @@ local M = {}
 
 --- AWS appstream associate-app-block-builder-app-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_app_block_builder_app_block(input)
-	return common.execute_aws_command_skeleton({ "appstream", "associate-app-block-builder-app-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_app_block_builder_app_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "associate-app-block-builder-app-block" }, input, callbacks)
 end
 
 --- AWS appstream associate-application-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_application_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "associate-application-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_application_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "associate-application-fleet" }, input, callbacks)
 end
 
 --- AWS appstream associate-application-to-entitlement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_application_to_entitlement(input)
-	return common.execute_aws_command_skeleton({ "appstream", "associate-application-to-entitlement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_application_to_entitlement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "associate-application-to-entitlement" }, input, callbacks)
 end
 
 --- AWS appstream associate-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "associate-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "associate-fleet" }, input, callbacks)
 end
 
 --- AWS appstream batch-associate-user-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_associate_user_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "batch-associate-user-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_associate_user_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "batch-associate-user-stack" }, input, callbacks)
 end
 
 --- AWS appstream batch-disassociate-user-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_disassociate_user_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "batch-disassociate-user-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_disassociate_user_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "batch-disassociate-user-stack" }, input, callbacks)
 end
 
 --- AWS appstream copy-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_image(input)
-	return common.execute_aws_command_skeleton({ "appstream", "copy-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "copy-image" }, input, callbacks)
 end
 
 --- AWS appstream create-app-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_block(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-app-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-app-block" }, input, callbacks)
 end
 
 --- AWS appstream create-app-block-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_block_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-app-block-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_block_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-app-block-builder" }, input, callbacks)
 end
 
 --- AWS appstream create-app-block-builder-streaming-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_app_block_builder_streaming_url(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-app-block-builder-streaming-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_app_block_builder_streaming_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-app-block-builder-streaming-url" }, input, callbacks)
 end
 
 --- AWS appstream create-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_application(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-application" }, input, callbacks)
 end
 
 --- AWS appstream create-directory-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_directory_config(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-directory-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_directory_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-directory-config" }, input, callbacks)
 end
 
 --- AWS appstream create-entitlement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_entitlement(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-entitlement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_entitlement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-entitlement" }, input, callbacks)
 end
 
 --- AWS appstream create-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-fleet" }, input, callbacks)
 end
 
 --- AWS appstream create-image-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_image_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-image-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_image_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-image-builder" }, input, callbacks)
 end
 
 --- AWS appstream create-image-builder-streaming-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_image_builder_streaming_url(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-image-builder-streaming-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_image_builder_streaming_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-image-builder-streaming-url" }, input, callbacks)
 end
 
 --- AWS appstream create-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-stack" }, input, callbacks)
 end
 
 --- AWS appstream create-streaming-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_streaming_url(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-streaming-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_streaming_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-streaming-url" }, input, callbacks)
 end
 
 --- AWS appstream create-theme-for-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_theme_for_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-theme-for-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_theme_for_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-theme-for-stack" }, input, callbacks)
 end
 
 --- AWS appstream create-updated-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_updated_image(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-updated-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_updated_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-updated-image" }, input, callbacks)
 end
 
 --- AWS appstream create-usage-report-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_usage_report_subscription(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-usage-report-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_usage_report_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-usage-report-subscription" }, input, callbacks)
 end
 
 --- AWS appstream create-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user(input)
-	return common.execute_aws_command_skeleton({ "appstream", "create-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "create-user" }, input, callbacks)
 end
 
 --- AWS appstream delete-app-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_block(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-app-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-app-block" }, input, callbacks)
 end
 
 --- AWS appstream delete-app-block-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_app_block_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-app-block-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_app_block_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-app-block-builder" }, input, callbacks)
 end
 
 --- AWS appstream delete-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_application(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-application" }, input, callbacks)
 end
 
 --- AWS appstream delete-directory-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_directory_config(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-directory-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_directory_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-directory-config" }, input, callbacks)
 end
 
 --- AWS appstream delete-entitlement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_entitlement(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-entitlement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_entitlement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-entitlement" }, input, callbacks)
 end
 
 --- AWS appstream delete-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-fleet" }, input, callbacks)
 end
 
 --- AWS appstream delete-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_image(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-image" }, input, callbacks)
 end
 
 --- AWS appstream delete-image-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_image_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-image-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_image_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-image-builder" }, input, callbacks)
 end
 
 --- AWS appstream delete-image-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_image_permissions(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-image-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_image_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-image-permissions" }, input, callbacks)
 end
 
 --- AWS appstream delete-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-stack" }, input, callbacks)
 end
 
 --- AWS appstream delete-theme-for-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_theme_for_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-theme-for-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_theme_for_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-theme-for-stack" }, input, callbacks)
 end
 
 --- AWS appstream delete-usage-report-subscription operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_usage_report_subscription(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-usage-report-subscription" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_usage_report_subscription(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-usage-report-subscription" }, input, callbacks)
 end
 
 --- AWS appstream delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "appstream", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "delete-user" }, input, callbacks)
 end
 
 --- AWS appstream describe-app-block-builder-app-block-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_block_builder_app_block_associations(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-app-block-builder-app-block-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_block_builder_app_block_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-app-block-builder-app-block-associations" }, input, callbacks)
 end
 
 --- AWS appstream describe-app-block-builders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_block_builders(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-app-block-builders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_block_builders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-app-block-builders" }, input, callbacks)
 end
 
 --- AWS appstream describe-app-blocks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_app_blocks(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-app-blocks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_app_blocks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-app-blocks" }, input, callbacks)
 end
 
 --- AWS appstream describe-application-fleet-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_application_fleet_associations(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-application-fleet-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_application_fleet_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-application-fleet-associations" }, input, callbacks)
 end
 
 --- AWS appstream describe-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_applications(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-applications" }, input, callbacks)
 end
 
 --- AWS appstream describe-directory-configs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_directory_configs(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-directory-configs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_directory_configs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-directory-configs" }, input, callbacks)
 end
 
 --- AWS appstream describe-entitlements operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_entitlements(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-entitlements" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_entitlements(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-entitlements" }, input, callbacks)
 end
 
 --- AWS appstream describe-fleets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_fleets(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-fleets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_fleets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-fleets" }, input, callbacks)
 end
 
 --- AWS appstream describe-image-builders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_image_builders(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-image-builders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_image_builders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-image-builders" }, input, callbacks)
 end
 
 --- AWS appstream describe-image-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_image_permissions(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-image-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_image_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-image-permissions" }, input, callbacks)
 end
 
 --- AWS appstream describe-images operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_images(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-images" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_images(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-images" }, input, callbacks)
 end
 
 --- AWS appstream describe-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_sessions(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-sessions" }, input, callbacks)
 end
 
 --- AWS appstream describe-stacks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_stacks(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-stacks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_stacks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-stacks" }, input, callbacks)
 end
 
 --- AWS appstream describe-theme-for-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_theme_for_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-theme-for-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_theme_for_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-theme-for-stack" }, input, callbacks)
 end
 
 --- AWS appstream describe-usage-report-subscriptions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_usage_report_subscriptions(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-usage-report-subscriptions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_usage_report_subscriptions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-usage-report-subscriptions" }, input, callbacks)
 end
 
 --- AWS appstream describe-user-stack-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user_stack_associations(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-user-stack-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user_stack_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-user-stack-associations" }, input, callbacks)
 end
 
 --- AWS appstream describe-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_users(input)
-	return common.execute_aws_command_skeleton({ "appstream", "describe-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "describe-users" }, input, callbacks)
 end
 
 --- AWS appstream disable-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_user(input)
-	return common.execute_aws_command_skeleton({ "appstream", "disable-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "disable-user" }, input, callbacks)
 end
 
 --- AWS appstream disassociate-app-block-builder-app-block operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_app_block_builder_app_block(input)
-	return common.execute_aws_command_skeleton({ "appstream", "disassociate-app-block-builder-app-block" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_app_block_builder_app_block(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "disassociate-app-block-builder-app-block" }, input, callbacks)
 end
 
 --- AWS appstream disassociate-application-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_application_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "disassociate-application-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_application_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "disassociate-application-fleet" }, input, callbacks)
 end
 
 --- AWS appstream disassociate-application-from-entitlement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_application_from_entitlement(input)
-	return common.execute_aws_command_skeleton({ "appstream", "disassociate-application-from-entitlement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_application_from_entitlement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "disassociate-application-from-entitlement" }, input, callbacks)
 end
 
 --- AWS appstream disassociate-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "disassociate-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "disassociate-fleet" }, input, callbacks)
 end
 
 --- AWS appstream enable-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_user(input)
-	return common.execute_aws_command_skeleton({ "appstream", "enable-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "enable-user" }, input, callbacks)
 end
 
 --- AWS appstream expire-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.expire_session(input)
-	return common.execute_aws_command_skeleton({ "appstream", "expire-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.expire_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "expire-session" }, input, callbacks)
 end
 
 --- AWS appstream list-associated-fleets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_fleets(input)
-	return common.execute_aws_command_skeleton({ "appstream", "list-associated-fleets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_fleets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "list-associated-fleets" }, input, callbacks)
 end
 
 --- AWS appstream list-associated-stacks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associated_stacks(input)
-	return common.execute_aws_command_skeleton({ "appstream", "list-associated-stacks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associated_stacks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "list-associated-stacks" }, input, callbacks)
 end
 
 --- AWS appstream list-entitled-applications operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_entitled_applications(input)
-	return common.execute_aws_command_skeleton({ "appstream", "list-entitled-applications" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_entitled_applications(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "list-entitled-applications" }, input, callbacks)
 end
 
 --- AWS appstream list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "appstream", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS appstream start-app-block-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_app_block_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "start-app-block-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_app_block_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "start-app-block-builder" }, input, callbacks)
 end
 
 --- AWS appstream start-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "start-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "start-fleet" }, input, callbacks)
 end
 
 --- AWS appstream start-image-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_image_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "start-image-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_image_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "start-image-builder" }, input, callbacks)
 end
 
 --- AWS appstream stop-app-block-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_app_block_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "stop-app-block-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_app_block_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "stop-app-block-builder" }, input, callbacks)
 end
 
 --- AWS appstream stop-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "stop-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "stop-fleet" }, input, callbacks)
 end
 
 --- AWS appstream stop-image-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_image_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "stop-image-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_image_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "stop-image-builder" }, input, callbacks)
 end
 
 --- AWS appstream tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "appstream", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "tag-resource" }, input, callbacks)
 end
 
 --- AWS appstream untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "appstream", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "untag-resource" }, input, callbacks)
 end
 
 --- AWS appstream update-app-block-builder operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_app_block_builder(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-app-block-builder" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_app_block_builder(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-app-block-builder" }, input, callbacks)
 end
 
 --- AWS appstream update-application operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_application(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-application" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_application(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-application" }, input, callbacks)
 end
 
 --- AWS appstream update-directory-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_directory_config(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-directory-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_directory_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-directory-config" }, input, callbacks)
 end
 
 --- AWS appstream update-entitlement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_entitlement(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-entitlement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_entitlement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-entitlement" }, input, callbacks)
 end
 
 --- AWS appstream update-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_fleet(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-fleet" }, input, callbacks)
 end
 
 --- AWS appstream update-image-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_image_permissions(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-image-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_image_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-image-permissions" }, input, callbacks)
 end
 
 --- AWS appstream update-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-stack" }, input, callbacks)
 end
 
 --- AWS appstream update-theme-for-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_theme_for_stack(input)
-	return common.execute_aws_command_skeleton({ "appstream", "update-theme-for-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_theme_for_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appstream", "update-theme-for-stack" }, input, callbacks)
 end
 
 --- AWS appstream wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "appstream", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "appstream", "wait" }, input, callbacks)
 end
 
 return M

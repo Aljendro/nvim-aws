@@ -8,177 +8,202 @@ local M = {}
 
 --- AWS grafana associate-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_license(input)
-	return common.execute_aws_command_skeleton({ "grafana", "associate-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "associate-license" }, input, callbacks)
 end
 
 --- AWS grafana create-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workspace(input)
-	return common.execute_aws_command_skeleton({ "grafana", "create-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace" }, input, callbacks)
 end
 
 --- AWS grafana create-workspace-api-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workspace_api_key(input)
-	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-api-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workspace_api_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-api-key" }, input, callbacks)
 end
 
 --- AWS grafana create-workspace-service-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workspace_service_account(input)
-	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workspace_service_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account" }, input, callbacks)
 end
 
 --- AWS grafana create-workspace-service-account-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workspace_service_account_token(input)
-	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workspace_service_account_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account-token" }, input, callbacks)
 end
 
 --- AWS grafana delete-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workspace(input)
-	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace" }, input, callbacks)
 end
 
 --- AWS grafana delete-workspace-api-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workspace_api_key(input)
-	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-api-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workspace_api_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-api-key" }, input, callbacks)
 end
 
 --- AWS grafana delete-workspace-service-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workspace_service_account(input)
-	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workspace_service_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account" }, input, callbacks)
 end
 
 --- AWS grafana delete-workspace-service-account-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workspace_service_account_token(input)
-	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workspace_service_account_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account-token" }, input, callbacks)
 end
 
 --- AWS grafana describe-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workspace(input)
-	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace" }, input, callbacks)
 end
 
 --- AWS grafana describe-workspace-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workspace_authentication(input)
-	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workspace_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-authentication" }, input, callbacks)
 end
 
 --- AWS grafana describe-workspace-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_workspace_configuration(input)
-	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_workspace_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-configuration" }, input, callbacks)
 end
 
 --- AWS grafana disassociate-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_license(input)
-	return common.execute_aws_command_skeleton({ "grafana", "disassociate-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "disassociate-license" }, input, callbacks)
 end
 
 --- AWS grafana list-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_permissions(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-permissions" }, input, callbacks)
 end
 
 --- AWS grafana list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS grafana list-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_versions(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-versions" }, input, callbacks)
 end
 
 --- AWS grafana list-workspace-service-account-tokens operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workspace_service_account_tokens(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-account-tokens" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workspace_service_account_tokens(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-account-tokens" }, input, callbacks)
 end
 
 --- AWS grafana list-workspace-service-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workspace_service_accounts(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workspace_service_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-accounts" }, input, callbacks)
 end
 
 --- AWS grafana list-workspaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workspaces(input)
-	return common.execute_aws_command_skeleton({ "grafana", "list-workspaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workspaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspaces" }, input, callbacks)
 end
 
 --- AWS grafana tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "grafana", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "tag-resource" }, input, callbacks)
 end
 
 --- AWS grafana untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "grafana", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "untag-resource" }, input, callbacks)
 end
 
 --- AWS grafana update-permissions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_permissions(input)
-	return common.execute_aws_command_skeleton({ "grafana", "update-permissions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_permissions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "update-permissions" }, input, callbacks)
 end
 
 --- AWS grafana update-workspace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workspace(input)
-	return common.execute_aws_command_skeleton({ "grafana", "update-workspace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workspace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace" }, input, callbacks)
 end
 
 --- AWS grafana update-workspace-authentication operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workspace_authentication(input)
-	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-authentication" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workspace_authentication(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-authentication" }, input, callbacks)
 end
 
 --- AWS grafana update-workspace-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workspace_configuration(input)
-	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workspace_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-configuration" }, input, callbacks)
 end
 
 return M

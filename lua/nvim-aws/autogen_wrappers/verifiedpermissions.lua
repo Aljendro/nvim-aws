@@ -8,191 +8,218 @@ local M = {}
 
 --- AWS verifiedpermissions batch-get-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_policy(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-get-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-get-policy" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions batch-is-authorized operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_is_authorized(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-is-authorized" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_is_authorized(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-is-authorized" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions batch-is-authorized-with-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_is_authorized_with_token(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-is-authorized-with-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_is_authorized_with_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "batch-is-authorized-with-token" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions create-identity-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_identity_source(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-identity-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_identity_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-identity-source" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions create-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_policy(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions create-policy-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_policy_store(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_policy_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy-store" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions create-policy-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_policy_template(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_policy_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "create-policy-template" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions delete-identity-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_identity_source(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-identity-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_identity_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-identity-source" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions delete-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_policy(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions delete-policy-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_policy_store(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_policy_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy-store" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions delete-policy-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_policy_template(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_policy_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "delete-policy-template" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions get-identity-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_identity_source(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-identity-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_identity_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-identity-source" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions get-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_policy(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions get-policy-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_policy_store(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_policy_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy-store" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions get-policy-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_policy_template(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_policy_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-policy-template" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions get-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "get-schema" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions is-authorized operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.is_authorized(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "is-authorized" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.is_authorized(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "is-authorized" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions is-authorized-with-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.is_authorized_with_token(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "is-authorized-with-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.is_authorized_with_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "is-authorized-with-token" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions list-identity-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_identity_sources(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-identity-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_identity_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-identity-sources" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions list-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_policies(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policies" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions list-policy-stores operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_policy_stores(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policy-stores" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_policy_stores(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policy-stores" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions list-policy-templates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_policy_templates(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policy-templates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_policy_templates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "list-policy-templates" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions put-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_schema(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "put-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "put-schema" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions update-identity-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_identity_source(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-identity-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_identity_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-identity-source" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions update-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_policy(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions update-policy-store operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_policy_store(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy-store" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_policy_store(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy-store" }, input, callbacks)
 end
 
 --- AWS verifiedpermissions update-policy-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_policy_template(input)
-	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_policy_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "verifiedpermissions", "update-policy-template" }, input, callbacks)
 end
 
 return M

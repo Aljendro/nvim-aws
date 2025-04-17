@@ -8,674 +8,770 @@ local M = {}
 
 --- AWS storagegateway activate-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_gateway(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "activate-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "activate-gateway" }, input, callbacks)
 end
 
 --- AWS storagegateway add-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_cache(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "add-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "add-cache" }, input, callbacks)
 end
 
 --- AWS storagegateway add-tags-to-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_tags_to_resource(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "add-tags-to-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_tags_to_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "add-tags-to-resource" }, input, callbacks)
 end
 
 --- AWS storagegateway add-upload-buffer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_upload_buffer(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "add-upload-buffer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_upload_buffer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "add-upload-buffer" }, input, callbacks)
 end
 
 --- AWS storagegateway add-working-storage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_working_storage(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "add-working-storage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_working_storage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "add-working-storage" }, input, callbacks)
 end
 
 --- AWS storagegateway assign-tape-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assign_tape_pool(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "assign-tape-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assign_tape_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "assign-tape-pool" }, input, callbacks)
 end
 
 --- AWS storagegateway associate-file-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_file_system(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "associate-file-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_file_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "associate-file-system" }, input, callbacks)
 end
 
 --- AWS storagegateway attach-volume operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_volume(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "attach-volume" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_volume(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "attach-volume" }, input, callbacks)
 end
 
 --- AWS storagegateway cancel-archival operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_archival(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-archival" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_archival(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-archival" }, input, callbacks)
 end
 
 --- AWS storagegateway cancel-cache-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_cache_report(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-cache-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_cache_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-cache-report" }, input, callbacks)
 end
 
 --- AWS storagegateway cancel-retrieval operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_retrieval(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-retrieval" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_retrieval(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "cancel-retrieval" }, input, callbacks)
 end
 
 --- AWS storagegateway create-cached-iscsi-volume operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cached_iscsi_volume(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-cached-iscsi-volume" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cached_iscsi_volume(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-cached-iscsi-volume" }, input, callbacks)
 end
 
 --- AWS storagegateway create-nfs-file-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_nfs_file_share(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-nfs-file-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_nfs_file_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-nfs-file-share" }, input, callbacks)
 end
 
 --- AWS storagegateway create-smb-file-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_smb_file_share(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-smb-file-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_smb_file_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-smb-file-share" }, input, callbacks)
 end
 
 --- AWS storagegateway create-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_snapshot(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-snapshot" }, input, callbacks)
 end
 
 --- AWS storagegateway create-snapshot-from-volume-recovery-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_snapshot_from_volume_recovery_point(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-snapshot-from-volume-recovery-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_snapshot_from_volume_recovery_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-snapshot-from-volume-recovery-point" }, input, callbacks)
 end
 
 --- AWS storagegateway create-stored-iscsi-volume operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stored_iscsi_volume(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-stored-iscsi-volume" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stored_iscsi_volume(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-stored-iscsi-volume" }, input, callbacks)
 end
 
 --- AWS storagegateway create-tape-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tape_pool(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-tape-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tape_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-tape-pool" }, input, callbacks)
 end
 
 --- AWS storagegateway create-tape-with-barcode operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tape_with_barcode(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-tape-with-barcode" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tape_with_barcode(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-tape-with-barcode" }, input, callbacks)
 end
 
 --- AWS storagegateway create-tapes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_tapes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "create-tapes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_tapes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "create-tapes" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-automatic-tape-creation-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_automatic_tape_creation_policy(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-automatic-tape-creation-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_automatic_tape_creation_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-automatic-tape-creation-policy" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-bandwidth-rate-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bandwidth_rate_limit(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-bandwidth-rate-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bandwidth_rate_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-bandwidth-rate-limit" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-cache-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_cache_report(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-cache-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_cache_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-cache-report" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-chap-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_chap_credentials(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-chap-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_chap_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-chap-credentials" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-file-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_file_share(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-file-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_file_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-file-share" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_gateway(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-gateway" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-snapshot-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_snapshot_schedule(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-snapshot-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_snapshot_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-snapshot-schedule" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-tape operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tape(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tape(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-tape-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tape_archive(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tape_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape-archive" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-tape-pool operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tape_pool(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape-pool" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tape_pool(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-tape-pool" }, input, callbacks)
 end
 
 --- AWS storagegateway delete-volume operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_volume(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "delete-volume" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_volume(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "delete-volume" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-availability-monitor-test operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_availability_monitor_test(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-availability-monitor-test" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_availability_monitor_test(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-availability-monitor-test" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-bandwidth-rate-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bandwidth_rate_limit(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-bandwidth-rate-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bandwidth_rate_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-bandwidth-rate-limit" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-bandwidth-rate-limit-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_bandwidth_rate_limit_schedule(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-bandwidth-rate-limit-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_bandwidth_rate_limit_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-bandwidth-rate-limit-schedule" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cache(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cache" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-cache-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cache_report(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cache-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cache_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cache-report" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-cached-iscsi-volumes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_cached_iscsi_volumes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cached-iscsi-volumes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_cached_iscsi_volumes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-cached-iscsi-volumes" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-chap-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_chap_credentials(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-chap-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_chap_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-chap-credentials" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-file-system-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_file_system_associations(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-file-system-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_file_system_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-file-system-associations" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-gateway-information operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_gateway_information(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-gateway-information" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_gateway_information(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-gateway-information" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-maintenance-start-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_maintenance_start_time(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-maintenance-start-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_maintenance_start_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-maintenance-start-time" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-nfs-file-shares operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_nfs_file_shares(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-nfs-file-shares" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_nfs_file_shares(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-nfs-file-shares" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-smb-file-shares operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_smb_file_shares(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-smb-file-shares" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_smb_file_shares(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-smb-file-shares" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-smb-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_smb_settings(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-smb-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_smb_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-smb-settings" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-snapshot-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_snapshot_schedule(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-snapshot-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_snapshot_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-snapshot-schedule" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-stored-iscsi-volumes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_stored_iscsi_volumes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-stored-iscsi-volumes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_stored_iscsi_volumes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-stored-iscsi-volumes" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-tape-archives operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tape_archives(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tape-archives" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tape_archives(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tape-archives" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-tape-recovery-points operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tape_recovery_points(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tape-recovery-points" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tape_recovery_points(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tape-recovery-points" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-tapes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_tapes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tapes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_tapes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-tapes" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-upload-buffer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_upload_buffer(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-upload-buffer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_upload_buffer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-upload-buffer" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-vtl-devices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_vtl_devices(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-vtl-devices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_vtl_devices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-vtl-devices" }, input, callbacks)
 end
 
 --- AWS storagegateway describe-working-storage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_working_storage(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "describe-working-storage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_working_storage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "describe-working-storage" }, input, callbacks)
 end
 
 --- AWS storagegateway detach-volume operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_volume(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "detach-volume" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_volume(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "detach-volume" }, input, callbacks)
 end
 
 --- AWS storagegateway disable-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_gateway(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "disable-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "disable-gateway" }, input, callbacks)
 end
 
 --- AWS storagegateway disassociate-file-system operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_file_system(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "disassociate-file-system" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_file_system(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "disassociate-file-system" }, input, callbacks)
 end
 
 --- AWS storagegateway evict-files-failing-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.evict_files_failing_upload(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "evict-files-failing-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.evict_files_failing_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "evict-files-failing-upload" }, input, callbacks)
 end
 
 --- AWS storagegateway join-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.join_domain(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "join-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.join_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "join-domain" }, input, callbacks)
 end
 
 --- AWS storagegateway list-automatic-tape-creation-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_automatic_tape_creation_policies(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-automatic-tape-creation-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_automatic_tape_creation_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-automatic-tape-creation-policies" }, input, callbacks)
 end
 
 --- AWS storagegateway list-cache-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_cache_reports(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-cache-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_cache_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-cache-reports" }, input, callbacks)
 end
 
 --- AWS storagegateway list-file-shares operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_file_shares(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-file-shares" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_file_shares(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-file-shares" }, input, callbacks)
 end
 
 --- AWS storagegateway list-file-system-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_file_system_associations(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-file-system-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_file_system_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-file-system-associations" }, input, callbacks)
 end
 
 --- AWS storagegateway list-gateways operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_gateways(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-gateways" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_gateways(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-gateways" }, input, callbacks)
 end
 
 --- AWS storagegateway list-local-disks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_local_disks(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-local-disks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_local_disks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-local-disks" }, input, callbacks)
 end
 
 --- AWS storagegateway list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS storagegateway list-tape-pools operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tape_pools(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-tape-pools" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tape_pools(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-tape-pools" }, input, callbacks)
 end
 
 --- AWS storagegateway list-tapes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tapes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-tapes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tapes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-tapes" }, input, callbacks)
 end
 
 --- AWS storagegateway list-volume-initiators operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_volume_initiators(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-volume-initiators" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_volume_initiators(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-volume-initiators" }, input, callbacks)
 end
 
 --- AWS storagegateway list-volume-recovery-points operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_volume_recovery_points(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-volume-recovery-points" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_volume_recovery_points(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-volume-recovery-points" }, input, callbacks)
 end
 
 --- AWS storagegateway list-volumes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_volumes(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "list-volumes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_volumes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "list-volumes" }, input, callbacks)
 end
 
 --- AWS storagegateway notify-when-uploaded operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.notify_when_uploaded(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "notify-when-uploaded" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.notify_when_uploaded(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "notify-when-uploaded" }, input, callbacks)
 end
 
 --- AWS storagegateway refresh-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.refresh_cache(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "refresh-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.refresh_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "refresh-cache" }, input, callbacks)
 end
 
 --- AWS storagegateway remove-tags-from-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "remove-tags-from-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_tags_from_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "remove-tags-from-resource" }, input, callbacks)
 end
 
 --- AWS storagegateway reset-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_cache(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "reset-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "reset-cache" }, input, callbacks)
 end
 
 --- AWS storagegateway retrieve-tape-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve_tape_archive(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "retrieve-tape-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve_tape_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "retrieve-tape-archive" }, input, callbacks)
 end
 
 --- AWS storagegateway retrieve-tape-recovery-point operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve_tape_recovery_point(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "retrieve-tape-recovery-point" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve_tape_recovery_point(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "retrieve-tape-recovery-point" }, input, callbacks)
 end
 
 --- AWS storagegateway set-local-console-password operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_local_console_password(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "set-local-console-password" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_local_console_password(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "set-local-console-password" }, input, callbacks)
 end
 
 --- AWS storagegateway set-smb-guest-password operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_smb_guest_password(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "set-smb-guest-password" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_smb_guest_password(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "set-smb-guest-password" }, input, callbacks)
 end
 
 --- AWS storagegateway shutdown-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.shutdown_gateway(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "shutdown-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.shutdown_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "shutdown-gateway" }, input, callbacks)
 end
 
 --- AWS storagegateway start-availability-monitor-test operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_availability_monitor_test(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "start-availability-monitor-test" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_availability_monitor_test(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "start-availability-monitor-test" }, input, callbacks)
 end
 
 --- AWS storagegateway start-cache-report operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_cache_report(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "start-cache-report" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_cache_report(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "start-cache-report" }, input, callbacks)
 end
 
 --- AWS storagegateway start-gateway operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_gateway(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "start-gateway" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_gateway(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "start-gateway" }, input, callbacks)
 end
 
 --- AWS storagegateway update-automatic-tape-creation-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_automatic_tape_creation_policy(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-automatic-tape-creation-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_automatic_tape_creation_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-automatic-tape-creation-policy" }, input, callbacks)
 end
 
 --- AWS storagegateway update-bandwidth-rate-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bandwidth_rate_limit(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-bandwidth-rate-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bandwidth_rate_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-bandwidth-rate-limit" }, input, callbacks)
 end
 
 --- AWS storagegateway update-bandwidth-rate-limit-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bandwidth_rate_limit_schedule(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-bandwidth-rate-limit-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bandwidth_rate_limit_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-bandwidth-rate-limit-schedule" }, input, callbacks)
 end
 
 --- AWS storagegateway update-chap-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_chap_credentials(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-chap-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_chap_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-chap-credentials" }, input, callbacks)
 end
 
 --- AWS storagegateway update-file-system-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_file_system_association(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-file-system-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_file_system_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-file-system-association" }, input, callbacks)
 end
 
 --- AWS storagegateway update-gateway-information operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_gateway_information(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-gateway-information" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_gateway_information(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-gateway-information" }, input, callbacks)
 end
 
 --- AWS storagegateway update-gateway-software-now operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_gateway_software_now(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-gateway-software-now" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_gateway_software_now(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-gateway-software-now" }, input, callbacks)
 end
 
 --- AWS storagegateway update-maintenance-start-time operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_maintenance_start_time(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-maintenance-start-time" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_maintenance_start_time(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-maintenance-start-time" }, input, callbacks)
 end
 
 --- AWS storagegateway update-nfs-file-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_nfs_file_share(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-nfs-file-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_nfs_file_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-nfs-file-share" }, input, callbacks)
 end
 
 --- AWS storagegateway update-smb-file-share operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_smb_file_share(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-file-share" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_smb_file_share(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-file-share" }, input, callbacks)
 end
 
 --- AWS storagegateway update-smb-file-share-visibility operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_smb_file_share_visibility(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-file-share-visibility" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_smb_file_share_visibility(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-file-share-visibility" }, input, callbacks)
 end
 
 --- AWS storagegateway update-smb-local-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_smb_local_groups(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-local-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_smb_local_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-local-groups" }, input, callbacks)
 end
 
 --- AWS storagegateway update-smb-security-strategy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_smb_security_strategy(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-security-strategy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_smb_security_strategy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-smb-security-strategy" }, input, callbacks)
 end
 
 --- AWS storagegateway update-snapshot-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_snapshot_schedule(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-snapshot-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_snapshot_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-snapshot-schedule" }, input, callbacks)
 end
 
 --- AWS storagegateway update-vtl-device-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_vtl_device_type(input)
-	return common.execute_aws_command_skeleton({ "storagegateway", "update-vtl-device-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_vtl_device_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "storagegateway", "update-vtl-device-type" }, input, callbacks)
 end
 
 return M

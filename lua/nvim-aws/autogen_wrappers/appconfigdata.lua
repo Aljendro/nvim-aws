@@ -8,16 +8,18 @@ local M = {}
 
 --- AWS appconfigdata get-latest-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_latest_configuration(input)
-	return common.execute_aws_command({ "appconfigdata", "get-latest-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_latest_configuration(input, callbacks)
+	return common.execute_aws_command({ "appconfigdata", "get-latest-configuration" }, input, callbacks)
 end
 
 --- AWS appconfigdata start-configuration-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_configuration_session(input)
-	return common.execute_aws_command_skeleton({ "appconfigdata", "start-configuration-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_configuration_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appconfigdata", "start-configuration-session" }, input, callbacks)
 end
 
 return M

@@ -8,240 +8,274 @@ local M = {}
 
 --- AWS groundstation cancel-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_contact(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "cancel-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "cancel-contact" }, input, callbacks)
 end
 
 --- AWS groundstation create-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_config(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "create-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-config" }, input, callbacks)
 end
 
 --- AWS groundstation create-dataflow-endpoint-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataflow_endpoint_group(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "create-dataflow-endpoint-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataflow_endpoint_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-dataflow-endpoint-group" }, input, callbacks)
 end
 
 --- AWS groundstation create-ephemeris operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ephemeris(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "create-ephemeris" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ephemeris(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-ephemeris" }, input, callbacks)
 end
 
 --- AWS groundstation create-mission-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_mission_profile(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "create-mission-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_mission_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-mission-profile" }, input, callbacks)
 end
 
 --- AWS groundstation delete-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_config(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "delete-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-config" }, input, callbacks)
 end
 
 --- AWS groundstation delete-dataflow-endpoint-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataflow_endpoint_group(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "delete-dataflow-endpoint-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataflow_endpoint_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-dataflow-endpoint-group" }, input, callbacks)
 end
 
 --- AWS groundstation delete-ephemeris operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ephemeris(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "delete-ephemeris" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ephemeris(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-ephemeris" }, input, callbacks)
 end
 
 --- AWS groundstation delete-mission-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_mission_profile(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "delete-mission-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_mission_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-mission-profile" }, input, callbacks)
 end
 
 --- AWS groundstation describe-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_contact(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "describe-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "describe-contact" }, input, callbacks)
 end
 
 --- AWS groundstation describe-ephemeris operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_ephemeris(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "describe-ephemeris" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_ephemeris(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "describe-ephemeris" }, input, callbacks)
 end
 
 --- AWS groundstation get-agent-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_agent_configuration(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-agent-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_agent_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-agent-configuration" }, input, callbacks)
 end
 
 --- AWS groundstation get-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_config(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-config" }, input, callbacks)
 end
 
 --- AWS groundstation get-dataflow-endpoint-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dataflow_endpoint_group(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-dataflow-endpoint-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dataflow_endpoint_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-dataflow-endpoint-group" }, input, callbacks)
 end
 
 --- AWS groundstation get-minute-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_minute_usage(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-minute-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_minute_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-minute-usage" }, input, callbacks)
 end
 
 --- AWS groundstation get-mission-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_mission_profile(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-mission-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_mission_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-mission-profile" }, input, callbacks)
 end
 
 --- AWS groundstation get-satellite operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_satellite(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "get-satellite" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_satellite(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-satellite" }, input, callbacks)
 end
 
 --- AWS groundstation list-configs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_configs(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-configs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_configs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-configs" }, input, callbacks)
 end
 
 --- AWS groundstation list-contacts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_contacts(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-contacts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_contacts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-contacts" }, input, callbacks)
 end
 
 --- AWS groundstation list-dataflow-endpoint-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataflow_endpoint_groups(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-dataflow-endpoint-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataflow_endpoint_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-dataflow-endpoint-groups" }, input, callbacks)
 end
 
 --- AWS groundstation list-ephemerides operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ephemerides(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-ephemerides" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ephemerides(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-ephemerides" }, input, callbacks)
 end
 
 --- AWS groundstation list-ground-stations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ground_stations(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-ground-stations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ground_stations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-ground-stations" }, input, callbacks)
 end
 
 --- AWS groundstation list-mission-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_mission_profiles(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-mission-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_mission_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-mission-profiles" }, input, callbacks)
 end
 
 --- AWS groundstation list-satellites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_satellites(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-satellites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_satellites(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-satellites" }, input, callbacks)
 end
 
 --- AWS groundstation list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS groundstation register-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_agent(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "register-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "register-agent" }, input, callbacks)
 end
 
 --- AWS groundstation reserve-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reserve_contact(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "reserve-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reserve_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "reserve-contact" }, input, callbacks)
 end
 
 --- AWS groundstation tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "tag-resource" }, input, callbacks)
 end
 
 --- AWS groundstation untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "untag-resource" }, input, callbacks)
 end
 
 --- AWS groundstation update-agent-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_agent_status(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "update-agent-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_agent_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-agent-status" }, input, callbacks)
 end
 
 --- AWS groundstation update-config operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_config(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "update-config" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_config(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-config" }, input, callbacks)
 end
 
 --- AWS groundstation update-ephemeris operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ephemeris(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "update-ephemeris" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ephemeris(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-ephemeris" }, input, callbacks)
 end
 
 --- AWS groundstation update-mission-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_mission_profile(input)
-	return common.execute_aws_command_skeleton({ "groundstation", "update-mission-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_mission_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-mission-profile" }, input, callbacks)
 end
 
 --- AWS groundstation wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "groundstation", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "groundstation", "wait" }, input, callbacks)
 end
 
 return M

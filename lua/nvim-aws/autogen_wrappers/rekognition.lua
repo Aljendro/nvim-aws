@@ -8,534 +8,610 @@ local M = {}
 
 --- AWS rekognition associate-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "associate-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "associate-faces" }, input, callbacks)
 end
 
 --- AWS rekognition compare-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.compare_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "compare-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.compare_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "compare-faces" }, input, callbacks)
 end
 
 --- AWS rekognition copy-project-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_project_version(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "copy-project-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_project_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "copy-project-version" }, input, callbacks)
 end
 
 --- AWS rekognition create-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_collection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-collection" }, input, callbacks)
 end
 
 --- AWS rekognition create-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-dataset" }, input, callbacks)
 end
 
 --- AWS rekognition create-face-liveness-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_face_liveness_session(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-face-liveness-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_face_liveness_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-face-liveness-session" }, input, callbacks)
 end
 
 --- AWS rekognition create-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_project(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-project" }, input, callbacks)
 end
 
 --- AWS rekognition create-project-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_project_version(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-project-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_project_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-project-version" }, input, callbacks)
 end
 
 --- AWS rekognition create-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition create-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "create-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "create-user" }, input, callbacks)
 end
 
 --- AWS rekognition delete-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_collection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-collection" }, input, callbacks)
 end
 
 --- AWS rekognition delete-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataset(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-dataset" }, input, callbacks)
 end
 
 --- AWS rekognition delete-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-faces" }, input, callbacks)
 end
 
 --- AWS rekognition delete-project operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-project" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-project" }, input, callbacks)
 end
 
 --- AWS rekognition delete-project-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project_policy(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-project-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-project-policy" }, input, callbacks)
 end
 
 --- AWS rekognition delete-project-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_project_version(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-project-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_project_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-project-version" }, input, callbacks)
 end
 
 --- AWS rekognition delete-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "delete-user" }, input, callbacks)
 end
 
 --- AWS rekognition describe-collection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_collection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "describe-collection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_collection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "describe-collection" }, input, callbacks)
 end
 
 --- AWS rekognition describe-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "describe-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "describe-dataset" }, input, callbacks)
 end
 
 --- AWS rekognition describe-project-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_project_versions(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "describe-project-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_project_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "describe-project-versions" }, input, callbacks)
 end
 
 --- AWS rekognition describe-projects operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_projects(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "describe-projects" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_projects(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "describe-projects" }, input, callbacks)
 end
 
 --- AWS rekognition describe-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "describe-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "describe-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition detect-custom-labels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_custom_labels(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-custom-labels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_custom_labels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-custom-labels" }, input, callbacks)
 end
 
 --- AWS rekognition detect-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-faces" }, input, callbacks)
 end
 
 --- AWS rekognition detect-labels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_labels(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-labels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_labels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-labels" }, input, callbacks)
 end
 
 --- AWS rekognition detect-moderation-labels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_moderation_labels(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-moderation-labels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_moderation_labels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-moderation-labels" }, input, callbacks)
 end
 
 --- AWS rekognition detect-protective-equipment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_protective_equipment(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-protective-equipment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_protective_equipment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-protective-equipment" }, input, callbacks)
 end
 
 --- AWS rekognition detect-text operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detect_text(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "detect-text" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detect_text(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "detect-text" }, input, callbacks)
 end
 
 --- AWS rekognition disassociate-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "disassociate-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "disassociate-faces" }, input, callbacks)
 end
 
 --- AWS rekognition distribute-dataset-entries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.distribute_dataset_entries(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "distribute-dataset-entries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.distribute_dataset_entries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "distribute-dataset-entries" }, input, callbacks)
 end
 
 --- AWS rekognition get-celebrity-info operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_celebrity_info(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-celebrity-info" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_celebrity_info(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-celebrity-info" }, input, callbacks)
 end
 
 --- AWS rekognition get-celebrity-recognition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_celebrity_recognition(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-celebrity-recognition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_celebrity_recognition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-celebrity-recognition" }, input, callbacks)
 end
 
 --- AWS rekognition get-content-moderation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_content_moderation(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-content-moderation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_content_moderation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-content-moderation" }, input, callbacks)
 end
 
 --- AWS rekognition get-face-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_face_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-face-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_face_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-face-detection" }, input, callbacks)
 end
 
 --- AWS rekognition get-face-liveness-session-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_face_liveness_session_results(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-face-liveness-session-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_face_liveness_session_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-face-liveness-session-results" }, input, callbacks)
 end
 
 --- AWS rekognition get-face-search operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_face_search(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-face-search" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_face_search(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-face-search" }, input, callbacks)
 end
 
 --- AWS rekognition get-label-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_label_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-label-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_label_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-label-detection" }, input, callbacks)
 end
 
 --- AWS rekognition get-media-analysis-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_analysis_job(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-media-analysis-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_analysis_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-media-analysis-job" }, input, callbacks)
 end
 
 --- AWS rekognition get-person-tracking operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_person_tracking(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-person-tracking" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_person_tracking(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-person-tracking" }, input, callbacks)
 end
 
 --- AWS rekognition get-segment-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_segment_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-segment-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_segment_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-segment-detection" }, input, callbacks)
 end
 
 --- AWS rekognition get-text-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_text_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "get-text-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_text_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "get-text-detection" }, input, callbacks)
 end
 
 --- AWS rekognition index-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.index_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "index-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.index_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "index-faces" }, input, callbacks)
 end
 
 --- AWS rekognition list-collections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_collections(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-collections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_collections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-collections" }, input, callbacks)
 end
 
 --- AWS rekognition list-dataset-entries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_entries(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-dataset-entries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_entries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-dataset-entries" }, input, callbacks)
 end
 
 --- AWS rekognition list-dataset-labels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_labels(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-dataset-labels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_labels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-dataset-labels" }, input, callbacks)
 end
 
 --- AWS rekognition list-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-faces" }, input, callbacks)
 end
 
 --- AWS rekognition list-media-analysis-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_media_analysis_jobs(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-media-analysis-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_media_analysis_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-media-analysis-jobs" }, input, callbacks)
 end
 
 --- AWS rekognition list-project-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_project_policies(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-project-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_project_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-project-policies" }, input, callbacks)
 end
 
 --- AWS rekognition list-stream-processors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_stream_processors(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-stream-processors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_stream_processors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-stream-processors" }, input, callbacks)
 end
 
 --- AWS rekognition list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS rekognition list-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_users(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "list-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "list-users" }, input, callbacks)
 end
 
 --- AWS rekognition put-project-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_project_policy(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "put-project-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_project_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "put-project-policy" }, input, callbacks)
 end
 
 --- AWS rekognition recognize-celebrities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.recognize_celebrities(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "recognize-celebrities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.recognize_celebrities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "recognize-celebrities" }, input, callbacks)
 end
 
 --- AWS rekognition search-faces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_faces(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "search-faces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_faces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "search-faces" }, input, callbacks)
 end
 
 --- AWS rekognition search-faces-by-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_faces_by_image(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "search-faces-by-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_faces_by_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "search-faces-by-image" }, input, callbacks)
 end
 
 --- AWS rekognition search-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_users(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "search-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "search-users" }, input, callbacks)
 end
 
 --- AWS rekognition search-users-by-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_users_by_image(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "search-users-by-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_users_by_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "search-users-by-image" }, input, callbacks)
 end
 
 --- AWS rekognition start-celebrity-recognition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_celebrity_recognition(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-celebrity-recognition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_celebrity_recognition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-celebrity-recognition" }, input, callbacks)
 end
 
 --- AWS rekognition start-content-moderation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_content_moderation(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-content-moderation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_content_moderation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-content-moderation" }, input, callbacks)
 end
 
 --- AWS rekognition start-face-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_face_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-face-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_face_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-face-detection" }, input, callbacks)
 end
 
 --- AWS rekognition start-face-search operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_face_search(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-face-search" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_face_search(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-face-search" }, input, callbacks)
 end
 
 --- AWS rekognition start-label-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_label_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-label-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_label_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-label-detection" }, input, callbacks)
 end
 
 --- AWS rekognition start-media-analysis-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_media_analysis_job(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-media-analysis-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_media_analysis_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-media-analysis-job" }, input, callbacks)
 end
 
 --- AWS rekognition start-person-tracking operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_person_tracking(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-person-tracking" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_person_tracking(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-person-tracking" }, input, callbacks)
 end
 
 --- AWS rekognition start-project-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_project_version(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-project-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_project_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-project-version" }, input, callbacks)
 end
 
 --- AWS rekognition start-segment-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_segment_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-segment-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_segment_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-segment-detection" }, input, callbacks)
 end
 
 --- AWS rekognition start-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition start-text-detection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_text_detection(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "start-text-detection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_text_detection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "start-text-detection" }, input, callbacks)
 end
 
 --- AWS rekognition stop-project-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_project_version(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "stop-project-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_project_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "stop-project-version" }, input, callbacks)
 end
 
 --- AWS rekognition stop-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "stop-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "stop-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "tag-resource" }, input, callbacks)
 end
 
 --- AWS rekognition untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "untag-resource" }, input, callbacks)
 end
 
 --- AWS rekognition update-dataset-entries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dataset_entries(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "update-dataset-entries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dataset_entries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "update-dataset-entries" }, input, callbacks)
 end
 
 --- AWS rekognition update-stream-processor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_stream_processor(input)
-	return common.execute_aws_command_skeleton({ "rekognition", "update-stream-processor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_stream_processor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rekognition", "update-stream-processor" }, input, callbacks)
 end
 
 --- AWS rekognition wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "rekognition", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "rekognition", "wait" }, input, callbacks)
 end
 
 return M

@@ -8,72 +8,82 @@ local M = {}
 
 --- AWS savingsplans create-savings-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_savings_plan(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "create-savings-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_savings_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "create-savings-plan" }, input, callbacks)
 end
 
 --- AWS savingsplans delete-queued-savings-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queued_savings_plan(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "delete-queued-savings-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queued_savings_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "delete-queued-savings-plan" }, input, callbacks)
 end
 
 --- AWS savingsplans describe-savings-plan-rates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_savings_plan_rates(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plan-rates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_savings_plan_rates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plan-rates" }, input, callbacks)
 end
 
 --- AWS savingsplans describe-savings-plans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_savings_plans(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_savings_plans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans" }, input, callbacks)
 end
 
 --- AWS savingsplans describe-savings-plans-offering-rates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_savings_plans_offering_rates(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans-offering-rates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_savings_plans_offering_rates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans-offering-rates" }, input, callbacks)
 end
 
 --- AWS savingsplans describe-savings-plans-offerings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_savings_plans_offerings(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans-offerings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_savings_plans_offerings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "describe-savings-plans-offerings" }, input, callbacks)
 end
 
 --- AWS savingsplans list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS savingsplans return-savings-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.return_savings_plan(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "return-savings-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.return_savings_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "return-savings-plan" }, input, callbacks)
 end
 
 --- AWS savingsplans tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "tag-resource" }, input, callbacks)
 end
 
 --- AWS savingsplans untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "savingsplans", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "savingsplans", "untag-resource" }, input, callbacks)
 end
 
 return M

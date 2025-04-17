@@ -8,86 +8,98 @@ local M = {}
 
 --- AWS firehose create-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "create-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "create-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose delete-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "delete-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "delete-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose describe-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "describe-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "describe-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose list-delivery-streams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_delivery_streams(input)
-	return common.execute_aws_command_skeleton({ "firehose", "list-delivery-streams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_delivery_streams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "list-delivery-streams" }, input, callbacks)
 end
 
 --- AWS firehose list-tags-for-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "list-tags-for-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "list-tags-for-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose put-record operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_record(input)
-	return common.execute_aws_command_skeleton({ "firehose", "put-record" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_record(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "put-record" }, input, callbacks)
 end
 
 --- AWS firehose put-record-batch operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_record_batch(input)
-	return common.execute_aws_command_skeleton({ "firehose", "put-record-batch" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_record_batch(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "put-record-batch" }, input, callbacks)
 end
 
 --- AWS firehose start-delivery-stream-encryption operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_delivery_stream_encryption(input)
-	return common.execute_aws_command_skeleton({ "firehose", "start-delivery-stream-encryption" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_delivery_stream_encryption(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "start-delivery-stream-encryption" }, input, callbacks)
 end
 
 --- AWS firehose stop-delivery-stream-encryption operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_delivery_stream_encryption(input)
-	return common.execute_aws_command_skeleton({ "firehose", "stop-delivery-stream-encryption" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_delivery_stream_encryption(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "stop-delivery-stream-encryption" }, input, callbacks)
 end
 
 --- AWS firehose tag-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "tag-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "tag-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose untag-delivery-stream operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_delivery_stream(input)
-	return common.execute_aws_command_skeleton({ "firehose", "untag-delivery-stream" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_delivery_stream(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "untag-delivery-stream" }, input, callbacks)
 end
 
 --- AWS firehose update-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_destination(input)
-	return common.execute_aws_command_skeleton({ "firehose", "update-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "firehose", "update-destination" }, input, callbacks)
 end
 
 return M

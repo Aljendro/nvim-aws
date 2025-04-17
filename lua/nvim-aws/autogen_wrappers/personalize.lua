@@ -8,499 +8,570 @@ local M = {}
 
 --- AWS personalize create-batch-inference-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_batch_inference_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-batch-inference-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_batch_inference_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-batch-inference-job" }, input, callbacks)
 end
 
 --- AWS personalize create-batch-segment-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_batch_segment_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-batch-segment-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_batch_segment_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-batch-segment-job" }, input, callbacks)
 end
 
 --- AWS personalize create-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_campaign(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-campaign" }, input, callbacks)
 end
 
 --- AWS personalize create-data-deletion-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_deletion_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-data-deletion-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_deletion_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-data-deletion-job" }, input, callbacks)
 end
 
 --- AWS personalize create-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-dataset" }, input, callbacks)
 end
 
 --- AWS personalize create-dataset-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset_export_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-export-job" }, input, callbacks)
 end
 
 --- AWS personalize create-dataset-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset_group(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-group" }, input, callbacks)
 end
 
 --- AWS personalize create-dataset-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dataset_import_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dataset_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-dataset-import-job" }, input, callbacks)
 end
 
 --- AWS personalize create-event-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_tracker(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-event-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-event-tracker" }, input, callbacks)
 end
 
 --- AWS personalize create-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_filter(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-filter" }, input, callbacks)
 end
 
 --- AWS personalize create-metric-attribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_metric_attribution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-metric-attribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_metric_attribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-metric-attribution" }, input, callbacks)
 end
 
 --- AWS personalize create-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-recommender" }, input, callbacks)
 end
 
 --- AWS personalize create-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_schema(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-schema" }, input, callbacks)
 end
 
 --- AWS personalize create-solution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_solution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-solution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_solution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-solution" }, input, callbacks)
 end
 
 --- AWS personalize create-solution-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_solution_version(input)
-	return common.execute_aws_command_skeleton({ "personalize", "create-solution-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_solution_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "create-solution-version" }, input, callbacks)
 end
 
 --- AWS personalize delete-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_campaign(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-campaign" }, input, callbacks)
 end
 
 --- AWS personalize delete-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataset(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-dataset" }, input, callbacks)
 end
 
 --- AWS personalize delete-dataset-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dataset_group(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-dataset-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dataset_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-dataset-group" }, input, callbacks)
 end
 
 --- AWS personalize delete-event-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_tracker(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-event-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-event-tracker" }, input, callbacks)
 end
 
 --- AWS personalize delete-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_filter(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-filter" }, input, callbacks)
 end
 
 --- AWS personalize delete-metric-attribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_metric_attribution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-metric-attribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_metric_attribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-metric-attribution" }, input, callbacks)
 end
 
 --- AWS personalize delete-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-recommender" }, input, callbacks)
 end
 
 --- AWS personalize delete-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schema(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-schema" }, input, callbacks)
 end
 
 --- AWS personalize delete-solution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_solution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "delete-solution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_solution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "delete-solution" }, input, callbacks)
 end
 
 --- AWS personalize describe-algorithm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_algorithm(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-algorithm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_algorithm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-algorithm" }, input, callbacks)
 end
 
 --- AWS personalize describe-batch-inference-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_batch_inference_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-batch-inference-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_batch_inference_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-batch-inference-job" }, input, callbacks)
 end
 
 --- AWS personalize describe-batch-segment-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_batch_segment_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-batch-segment-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_batch_segment_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-batch-segment-job" }, input, callbacks)
 end
 
 --- AWS personalize describe-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_campaign(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-campaign" }, input, callbacks)
 end
 
 --- AWS personalize describe-data-deletion-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_data_deletion_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-data-deletion-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_data_deletion_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-data-deletion-job" }, input, callbacks)
 end
 
 --- AWS personalize describe-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset" }, input, callbacks)
 end
 
 --- AWS personalize describe-dataset-export-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset_export_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-export-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset_export_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-export-job" }, input, callbacks)
 end
 
 --- AWS personalize describe-dataset-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset_group(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-group" }, input, callbacks)
 end
 
 --- AWS personalize describe-dataset-import-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_dataset_import_job(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-import-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_dataset_import_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-dataset-import-job" }, input, callbacks)
 end
 
 --- AWS personalize describe-event-tracker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_tracker(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-event-tracker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_tracker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-event-tracker" }, input, callbacks)
 end
 
 --- AWS personalize describe-feature-transformation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_feature_transformation(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-feature-transformation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_feature_transformation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-feature-transformation" }, input, callbacks)
 end
 
 --- AWS personalize describe-filter operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_filter(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-filter" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_filter(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-filter" }, input, callbacks)
 end
 
 --- AWS personalize describe-metric-attribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_metric_attribution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-metric-attribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_metric_attribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-metric-attribution" }, input, callbacks)
 end
 
 --- AWS personalize describe-recipe operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_recipe(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-recipe" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_recipe(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-recipe" }, input, callbacks)
 end
 
 --- AWS personalize describe-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-recommender" }, input, callbacks)
 end
 
 --- AWS personalize describe-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_schema(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-schema" }, input, callbacks)
 end
 
 --- AWS personalize describe-solution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_solution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-solution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_solution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-solution" }, input, callbacks)
 end
 
 --- AWS personalize describe-solution-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_solution_version(input)
-	return common.execute_aws_command_skeleton({ "personalize", "describe-solution-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_solution_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "describe-solution-version" }, input, callbacks)
 end
 
 --- AWS personalize get-solution-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_solution_metrics(input)
-	return common.execute_aws_command_skeleton({ "personalize", "get-solution-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_solution_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "get-solution-metrics" }, input, callbacks)
 end
 
 --- AWS personalize list-batch-inference-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_batch_inference_jobs(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-batch-inference-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_batch_inference_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-batch-inference-jobs" }, input, callbacks)
 end
 
 --- AWS personalize list-batch-segment-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_batch_segment_jobs(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-batch-segment-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_batch_segment_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-batch-segment-jobs" }, input, callbacks)
 end
 
 --- AWS personalize list-campaigns operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_campaigns(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-campaigns" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_campaigns(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-campaigns" }, input, callbacks)
 end
 
 --- AWS personalize list-data-deletion-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_deletion_jobs(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-data-deletion-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_deletion_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-data-deletion-jobs" }, input, callbacks)
 end
 
 --- AWS personalize list-dataset-export-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_export_jobs(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-export-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_export_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-export-jobs" }, input, callbacks)
 end
 
 --- AWS personalize list-dataset-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_groups(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-groups" }, input, callbacks)
 end
 
 --- AWS personalize list-dataset-import-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dataset_import_jobs(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-import-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dataset_import_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-dataset-import-jobs" }, input, callbacks)
 end
 
 --- AWS personalize list-datasets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_datasets(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-datasets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_datasets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-datasets" }, input, callbacks)
 end
 
 --- AWS personalize list-event-trackers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_trackers(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-event-trackers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_trackers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-event-trackers" }, input, callbacks)
 end
 
 --- AWS personalize list-filters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_filters(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-filters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_filters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-filters" }, input, callbacks)
 end
 
 --- AWS personalize list-metric-attribution-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_metric_attribution_metrics(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-metric-attribution-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_metric_attribution_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-metric-attribution-metrics" }, input, callbacks)
 end
 
 --- AWS personalize list-metric-attributions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_metric_attributions(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-metric-attributions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_metric_attributions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-metric-attributions" }, input, callbacks)
 end
 
 --- AWS personalize list-recipes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recipes(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-recipes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recipes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-recipes" }, input, callbacks)
 end
 
 --- AWS personalize list-recommenders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_recommenders(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-recommenders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_recommenders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-recommenders" }, input, callbacks)
 end
 
 --- AWS personalize list-schemas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schemas(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-schemas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schemas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-schemas" }, input, callbacks)
 end
 
 --- AWS personalize list-solution-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_solution_versions(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-solution-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_solution_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-solution-versions" }, input, callbacks)
 end
 
 --- AWS personalize list-solutions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_solutions(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-solutions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_solutions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-solutions" }, input, callbacks)
 end
 
 --- AWS personalize list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "personalize", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS personalize start-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "start-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "start-recommender" }, input, callbacks)
 end
 
 --- AWS personalize stop-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "stop-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "stop-recommender" }, input, callbacks)
 end
 
 --- AWS personalize stop-solution-version-creation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_solution_version_creation(input)
-	return common.execute_aws_command_skeleton({ "personalize", "stop-solution-version-creation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_solution_version_creation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "stop-solution-version-creation" }, input, callbacks)
 end
 
 --- AWS personalize tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "personalize", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "tag-resource" }, input, callbacks)
 end
 
 --- AWS personalize untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "personalize", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "untag-resource" }, input, callbacks)
 end
 
 --- AWS personalize update-campaign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_campaign(input)
-	return common.execute_aws_command_skeleton({ "personalize", "update-campaign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_campaign(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "update-campaign" }, input, callbacks)
 end
 
 --- AWS personalize update-dataset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dataset(input)
-	return common.execute_aws_command_skeleton({ "personalize", "update-dataset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dataset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "update-dataset" }, input, callbacks)
 end
 
 --- AWS personalize update-metric-attribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_metric_attribution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "update-metric-attribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_metric_attribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "update-metric-attribution" }, input, callbacks)
 end
 
 --- AWS personalize update-recommender operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_recommender(input)
-	return common.execute_aws_command_skeleton({ "personalize", "update-recommender" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_recommender(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "update-recommender" }, input, callbacks)
 end
 
 --- AWS personalize update-solution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_solution(input)
-	return common.execute_aws_command_skeleton({ "personalize", "update-solution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_solution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize", "update-solution" }, input, callbacks)
 end
 
 return M

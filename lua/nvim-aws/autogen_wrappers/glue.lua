@@ -8,1773 +8,2026 @@ local M = {}
 
 --- AWS glue batch-create-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_create_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-create-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_create_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-create-partition" }, input, callbacks)
 end
 
 --- AWS glue batch-delete-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-delete-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-delete-connection" }, input, callbacks)
 end
 
 --- AWS glue batch-delete-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-delete-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-delete-partition" }, input, callbacks)
 end
 
 --- AWS glue batch-delete-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-delete-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-delete-table" }, input, callbacks)
 end
 
 --- AWS glue batch-delete-table-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_table_version(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-delete-table-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_table_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-delete-table-version" }, input, callbacks)
 end
 
 --- AWS glue batch-get-blueprints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_blueprints(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-blueprints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_blueprints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-blueprints" }, input, callbacks)
 end
 
 --- AWS glue batch-get-crawlers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_crawlers(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-crawlers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_crawlers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-crawlers" }, input, callbacks)
 end
 
 --- AWS glue batch-get-custom-entity-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_custom_entity_types(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-custom-entity-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_custom_entity_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-custom-entity-types" }, input, callbacks)
 end
 
 --- AWS glue batch-get-data-quality-result operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_data_quality_result(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-data-quality-result" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_data_quality_result(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-data-quality-result" }, input, callbacks)
 end
 
 --- AWS glue batch-get-dev-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_dev_endpoints(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-dev-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_dev_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-dev-endpoints" }, input, callbacks)
 end
 
 --- AWS glue batch-get-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_jobs(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-jobs" }, input, callbacks)
 end
 
 --- AWS glue batch-get-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-partition" }, input, callbacks)
 end
 
 --- AWS glue batch-get-table-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_table_optimizer(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-table-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_table_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-table-optimizer" }, input, callbacks)
 end
 
 --- AWS glue batch-get-triggers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_triggers(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-triggers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_triggers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-triggers" }, input, callbacks)
 end
 
 --- AWS glue batch-get-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_workflows(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-get-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-get-workflows" }, input, callbacks)
 end
 
 --- AWS glue batch-put-data-quality-statistic-annotation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_put_data_quality_statistic_annotation(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-put-data-quality-statistic-annotation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_put_data_quality_statistic_annotation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-put-data-quality-statistic-annotation" }, input, callbacks)
 end
 
 --- AWS glue batch-stop-job-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_stop_job_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-stop-job-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_stop_job_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-stop-job-run" }, input, callbacks)
 end
 
 --- AWS glue batch-update-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_update_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "batch-update-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_update_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "batch-update-partition" }, input, callbacks)
 end
 
 --- AWS glue cancel-data-quality-rule-recommendation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_data_quality_rule_recommendation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "cancel-data-quality-rule-recommendation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_data_quality_rule_recommendation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "cancel-data-quality-rule-recommendation-run" }, input, callbacks)
 end
 
 --- AWS glue cancel-data-quality-ruleset-evaluation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_data_quality_ruleset_evaluation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "cancel-data-quality-ruleset-evaluation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_data_quality_ruleset_evaluation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "cancel-data-quality-ruleset-evaluation-run" }, input, callbacks)
 end
 
 --- AWS glue cancel-ml-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_ml_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "cancel-ml-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_ml_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "cancel-ml-task-run" }, input, callbacks)
 end
 
 --- AWS glue cancel-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_statement(input)
-	return common.execute_aws_command_skeleton({ "glue", "cancel-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "cancel-statement" }, input, callbacks)
 end
 
 --- AWS glue check-schema-version-validity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.check_schema_version_validity(input)
-	return common.execute_aws_command_skeleton({ "glue", "check-schema-version-validity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.check_schema_version_validity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "check-schema-version-validity" }, input, callbacks)
 end
 
 --- AWS glue create-blueprint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_blueprint(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-blueprint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_blueprint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-blueprint" }, input, callbacks)
 end
 
 --- AWS glue create-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_catalog(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-catalog" }, input, callbacks)
 end
 
 --- AWS glue create-classifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_classifier(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-classifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_classifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-classifier" }, input, callbacks)
 end
 
 --- AWS glue create-column-statistics-task-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_column_statistics_task_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-column-statistics-task-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_column_statistics_task_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-column-statistics-task-settings" }, input, callbacks)
 end
 
 --- AWS glue create-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-connection" }, input, callbacks)
 end
 
 --- AWS glue create-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-crawler" }, input, callbacks)
 end
 
 --- AWS glue create-custom-entity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_custom_entity_type(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-custom-entity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_custom_entity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-custom-entity-type" }, input, callbacks)
 end
 
 --- AWS glue create-data-quality-ruleset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_quality_ruleset(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-data-quality-ruleset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_quality_ruleset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-data-quality-ruleset" }, input, callbacks)
 end
 
 --- AWS glue create-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_database(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-database" }, input, callbacks)
 end
 
 --- AWS glue create-dev-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_dev_endpoint(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-dev-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_dev_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-dev-endpoint" }, input, callbacks)
 end
 
 --- AWS glue create-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-integration" }, input, callbacks)
 end
 
 --- AWS glue create-integration-resource-property operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration_resource_property(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-integration-resource-property" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration_resource_property(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-integration-resource-property" }, input, callbacks)
 end
 
 --- AWS glue create-integration-table-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_integration_table_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-integration-table-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_integration_table_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-integration-table-properties" }, input, callbacks)
 end
 
 --- AWS glue create-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-job" }, input, callbacks)
 end
 
 --- AWS glue create-ml-transform operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_ml_transform(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-ml-transform" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_ml_transform(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-ml-transform" }, input, callbacks)
 end
 
 --- AWS glue create-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-partition" }, input, callbacks)
 end
 
 --- AWS glue create-partition-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_partition_index(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-partition-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_partition_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-partition-index" }, input, callbacks)
 end
 
 --- AWS glue create-registry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_registry(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-registry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_registry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-registry" }, input, callbacks)
 end
 
 --- AWS glue create-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_schema(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-schema" }, input, callbacks)
 end
 
 --- AWS glue create-script operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_script(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-script" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_script(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-script" }, input, callbacks)
 end
 
 --- AWS glue create-security-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_security_configuration(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-security-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_security_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-security-configuration" }, input, callbacks)
 end
 
 --- AWS glue create-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_session(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-session" }, input, callbacks)
 end
 
 --- AWS glue create-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-table" }, input, callbacks)
 end
 
 --- AWS glue create-table-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_table_optimizer(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-table-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_table_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-table-optimizer" }, input, callbacks)
 end
 
 --- AWS glue create-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-trigger" }, input, callbacks)
 end
 
 --- AWS glue create-usage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_usage_profile(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-usage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_usage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-usage-profile" }, input, callbacks)
 end
 
 --- AWS glue create-user-defined-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user_defined_function(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-user-defined-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user_defined_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-user-defined-function" }, input, callbacks)
 end
 
 --- AWS glue create-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_workflow(input)
-	return common.execute_aws_command_skeleton({ "glue", "create-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "create-workflow" }, input, callbacks)
 end
 
 --- AWS glue delete-blueprint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_blueprint(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-blueprint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_blueprint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-blueprint" }, input, callbacks)
 end
 
 --- AWS glue delete-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_catalog(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-catalog" }, input, callbacks)
 end
 
 --- AWS glue delete-classifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_classifier(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-classifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_classifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-classifier" }, input, callbacks)
 end
 
 --- AWS glue delete-column-statistics-for-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_column_statistics_for_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-for-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_column_statistics_for_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-for-partition" }, input, callbacks)
 end
 
 --- AWS glue delete-column-statistics-for-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_column_statistics_for_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-for-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_column_statistics_for_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-for-table" }, input, callbacks)
 end
 
 --- AWS glue delete-column-statistics-task-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_column_statistics_task_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-task-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_column_statistics_task_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-column-statistics-task-settings" }, input, callbacks)
 end
 
 --- AWS glue delete-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-connection" }, input, callbacks)
 end
 
 --- AWS glue delete-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-crawler" }, input, callbacks)
 end
 
 --- AWS glue delete-custom-entity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_custom_entity_type(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-custom-entity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_custom_entity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-custom-entity-type" }, input, callbacks)
 end
 
 --- AWS glue delete-data-quality-ruleset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_quality_ruleset(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-data-quality-ruleset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_quality_ruleset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-data-quality-ruleset" }, input, callbacks)
 end
 
 --- AWS glue delete-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_database(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-database" }, input, callbacks)
 end
 
 --- AWS glue delete-dev-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_dev_endpoint(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-dev-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_dev_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-dev-endpoint" }, input, callbacks)
 end
 
 --- AWS glue delete-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-integration" }, input, callbacks)
 end
 
 --- AWS glue delete-integration-table-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_integration_table_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-integration-table-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_integration_table_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-integration-table-properties" }, input, callbacks)
 end
 
 --- AWS glue delete-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_job(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-job" }, input, callbacks)
 end
 
 --- AWS glue delete-ml-transform operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_ml_transform(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-ml-transform" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_ml_transform(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-ml-transform" }, input, callbacks)
 end
 
 --- AWS glue delete-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-partition" }, input, callbacks)
 end
 
 --- AWS glue delete-partition-index operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_partition_index(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-partition-index" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_partition_index(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-partition-index" }, input, callbacks)
 end
 
 --- AWS glue delete-registry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_registry(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-registry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_registry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-registry" }, input, callbacks)
 end
 
 --- AWS glue delete-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS glue delete-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schema(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-schema" }, input, callbacks)
 end
 
 --- AWS glue delete-schema-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_schema_versions(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-schema-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_schema_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-schema-versions" }, input, callbacks)
 end
 
 --- AWS glue delete-security-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_security_configuration(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-security-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_security_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-security-configuration" }, input, callbacks)
 end
 
 --- AWS glue delete-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_session(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-session" }, input, callbacks)
 end
 
 --- AWS glue delete-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-table" }, input, callbacks)
 end
 
 --- AWS glue delete-table-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table_optimizer(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-table-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-table-optimizer" }, input, callbacks)
 end
 
 --- AWS glue delete-table-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table_version(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-table-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-table-version" }, input, callbacks)
 end
 
 --- AWS glue delete-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-trigger" }, input, callbacks)
 end
 
 --- AWS glue delete-usage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_usage_profile(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-usage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_usage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-usage-profile" }, input, callbacks)
 end
 
 --- AWS glue delete-user-defined-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user_defined_function(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-user-defined-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user_defined_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-user-defined-function" }, input, callbacks)
 end
 
 --- AWS glue delete-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_workflow(input)
-	return common.execute_aws_command_skeleton({ "glue", "delete-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "delete-workflow" }, input, callbacks)
 end
 
 --- AWS glue describe-connection-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connection_type(input)
-	return common.execute_aws_command_skeleton({ "glue", "describe-connection-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connection_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "describe-connection-type" }, input, callbacks)
 end
 
 --- AWS glue describe-entity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_entity(input)
-	return common.execute_aws_command_skeleton({ "glue", "describe-entity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_entity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "describe-entity" }, input, callbacks)
 end
 
 --- AWS glue describe-inbound-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_inbound_integrations(input)
-	return common.execute_aws_command_skeleton({ "glue", "describe-inbound-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_inbound_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "describe-inbound-integrations" }, input, callbacks)
 end
 
 --- AWS glue describe-integrations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_integrations(input)
-	return common.execute_aws_command_skeleton({ "glue", "describe-integrations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_integrations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "describe-integrations" }, input, callbacks)
 end
 
 --- AWS glue get-blueprint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blueprint(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-blueprint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blueprint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-blueprint" }, input, callbacks)
 end
 
 --- AWS glue get-blueprint-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blueprint_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-blueprint-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blueprint_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-blueprint-run" }, input, callbacks)
 end
 
 --- AWS glue get-blueprint-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blueprint_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-blueprint-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blueprint_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-blueprint-runs" }, input, callbacks)
 end
 
 --- AWS glue get-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_catalog(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-catalog" }, input, callbacks)
 end
 
 --- AWS glue get-catalog-import-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_catalog_import_status(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-catalog-import-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_catalog_import_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-catalog-import-status" }, input, callbacks)
 end
 
 --- AWS glue get-catalogs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_catalogs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-catalogs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_catalogs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-catalogs" }, input, callbacks)
 end
 
 --- AWS glue get-classifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_classifier(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-classifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_classifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-classifier" }, input, callbacks)
 end
 
 --- AWS glue get-classifiers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_classifiers(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-classifiers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_classifiers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-classifiers" }, input, callbacks)
 end
 
 --- AWS glue get-column-statistics-for-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_column_statistics_for_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-for-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_column_statistics_for_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-for-partition" }, input, callbacks)
 end
 
 --- AWS glue get-column-statistics-for-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_column_statistics_for_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-for-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_column_statistics_for_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-for-table" }, input, callbacks)
 end
 
 --- AWS glue get-column-statistics-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_column_statistics_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_column_statistics_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-run" }, input, callbacks)
 end
 
 --- AWS glue get-column-statistics-task-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_column_statistics_task_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_column_statistics_task_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-runs" }, input, callbacks)
 end
 
 --- AWS glue get-column-statistics-task-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_column_statistics_task_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_column_statistics_task_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-column-statistics-task-settings" }, input, callbacks)
 end
 
 --- AWS glue get-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-connection" }, input, callbacks)
 end
 
 --- AWS glue get-connections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_connections(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-connections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_connections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-connections" }, input, callbacks)
 end
 
 --- AWS glue get-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-crawler" }, input, callbacks)
 end
 
 --- AWS glue get-crawler-metrics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_crawler_metrics(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-crawler-metrics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_crawler_metrics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-crawler-metrics" }, input, callbacks)
 end
 
 --- AWS glue get-crawlers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_crawlers(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-crawlers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_crawlers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-crawlers" }, input, callbacks)
 end
 
 --- AWS glue get-custom-entity-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_custom_entity_type(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-custom-entity-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_custom_entity_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-custom-entity-type" }, input, callbacks)
 end
 
 --- AWS glue get-data-catalog-encryption-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_catalog_encryption_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-catalog-encryption-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_catalog_encryption_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-catalog-encryption-settings" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-model operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_model(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-model" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_model(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-model" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-model-result operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_model_result(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-model-result" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_model_result(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-model-result" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-result operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_result(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-result" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_result(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-result" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-rule-recommendation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_rule_recommendation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-rule-recommendation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_rule_recommendation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-rule-recommendation-run" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-ruleset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_ruleset(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-ruleset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_ruleset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-ruleset" }, input, callbacks)
 end
 
 --- AWS glue get-data-quality-ruleset-evaluation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_quality_ruleset_evaluation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-ruleset-evaluation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_quality_ruleset_evaluation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-data-quality-ruleset-evaluation-run" }, input, callbacks)
 end
 
 --- AWS glue get-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_database(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-database" }, input, callbacks)
 end
 
 --- AWS glue get-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_databases(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-databases" }, input, callbacks)
 end
 
 --- AWS glue get-dataflow-graph operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dataflow_graph(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-dataflow-graph" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dataflow_graph(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-dataflow-graph" }, input, callbacks)
 end
 
 --- AWS glue get-dev-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dev_endpoint(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-dev-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dev_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-dev-endpoint" }, input, callbacks)
 end
 
 --- AWS glue get-dev-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dev_endpoints(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-dev-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dev_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-dev-endpoints" }, input, callbacks)
 end
 
 --- AWS glue get-entity-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_entity_records(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-entity-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_entity_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-entity-records" }, input, callbacks)
 end
 
 --- AWS glue get-integration-resource-property operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration_resource_property(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-integration-resource-property" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration_resource_property(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-integration-resource-property" }, input, callbacks)
 end
 
 --- AWS glue get-integration-table-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_integration_table_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-integration-table-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_integration_table_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-integration-table-properties" }, input, callbacks)
 end
 
 --- AWS glue get-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-job" }, input, callbacks)
 end
 
 --- AWS glue get-job-bookmark operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job_bookmark(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-job-bookmark" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job_bookmark(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-job-bookmark" }, input, callbacks)
 end
 
 --- AWS glue get-job-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-job-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-job-run" }, input, callbacks)
 end
 
 --- AWS glue get-job-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-job-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-job-runs" }, input, callbacks)
 end
 
 --- AWS glue get-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_jobs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-jobs" }, input, callbacks)
 end
 
 --- AWS glue get-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_mapping(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-mapping" }, input, callbacks)
 end
 
 --- AWS glue get-ml-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ml_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-ml-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ml_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-ml-task-run" }, input, callbacks)
 end
 
 --- AWS glue get-ml-task-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ml_task_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-ml-task-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ml_task_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-ml-task-runs" }, input, callbacks)
 end
 
 --- AWS glue get-ml-transform operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ml_transform(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-ml-transform" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ml_transform(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-ml-transform" }, input, callbacks)
 end
 
 --- AWS glue get-ml-transforms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_ml_transforms(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-ml-transforms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_ml_transforms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-ml-transforms" }, input, callbacks)
 end
 
 --- AWS glue get-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-partition" }, input, callbacks)
 end
 
 --- AWS glue get-partition-indexes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_partition_indexes(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-partition-indexes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_partition_indexes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-partition-indexes" }, input, callbacks)
 end
 
 --- AWS glue get-partitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_partitions(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-partitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_partitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-partitions" }, input, callbacks)
 end
 
 --- AWS glue get-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_plan(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-plan" }, input, callbacks)
 end
 
 --- AWS glue get-registry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_registry(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-registry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_registry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-registry" }, input, callbacks)
 end
 
 --- AWS glue get-resource-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policies(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-resource-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-resource-policies" }, input, callbacks)
 end
 
 --- AWS glue get-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-resource-policy" }, input, callbacks)
 end
 
 --- AWS glue get-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-schema" }, input, callbacks)
 end
 
 --- AWS glue get-schema-by-definition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_by_definition(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-schema-by-definition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_by_definition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-schema-by-definition" }, input, callbacks)
 end
 
 --- AWS glue get-schema-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_version(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-schema-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-schema-version" }, input, callbacks)
 end
 
 --- AWS glue get-schema-versions-diff operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_versions_diff(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-schema-versions-diff" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_versions_diff(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-schema-versions-diff" }, input, callbacks)
 end
 
 --- AWS glue get-security-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_security_configuration(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-security-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_security_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-security-configuration" }, input, callbacks)
 end
 
 --- AWS glue get-security-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_security_configurations(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-security-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_security_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-security-configurations" }, input, callbacks)
 end
 
 --- AWS glue get-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-session" }, input, callbacks)
 end
 
 --- AWS glue get-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_statement(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-statement" }, input, callbacks)
 end
 
 --- AWS glue get-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-table" }, input, callbacks)
 end
 
 --- AWS glue get-table-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_optimizer(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-table-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-table-optimizer" }, input, callbacks)
 end
 
 --- AWS glue get-table-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_version(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-table-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-table-version" }, input, callbacks)
 end
 
 --- AWS glue get-table-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_versions(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-table-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-table-versions" }, input, callbacks)
 end
 
 --- AWS glue get-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tables(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-tables" }, input, callbacks)
 end
 
 --- AWS glue get-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_tags(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-tags" }, input, callbacks)
 end
 
 --- AWS glue get-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-trigger" }, input, callbacks)
 end
 
 --- AWS glue get-triggers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_triggers(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-triggers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_triggers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-triggers" }, input, callbacks)
 end
 
 --- AWS glue get-unfiltered-partition-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_unfiltered_partition_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-partition-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_unfiltered_partition_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-partition-metadata" }, input, callbacks)
 end
 
 --- AWS glue get-unfiltered-partitions-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_unfiltered_partitions_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-partitions-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_unfiltered_partitions_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-partitions-metadata" }, input, callbacks)
 end
 
 --- AWS glue get-unfiltered-table-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_unfiltered_table_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-table-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_unfiltered_table_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-unfiltered-table-metadata" }, input, callbacks)
 end
 
 --- AWS glue get-usage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_usage_profile(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-usage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_usage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-usage-profile" }, input, callbacks)
 end
 
 --- AWS glue get-user-defined-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_user_defined_function(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-user-defined-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_user_defined_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-user-defined-function" }, input, callbacks)
 end
 
 --- AWS glue get-user-defined-functions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_user_defined_functions(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-user-defined-functions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_user_defined_functions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-user-defined-functions" }, input, callbacks)
 end
 
 --- AWS glue get-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-workflow" }, input, callbacks)
 end
 
 --- AWS glue get-workflow-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-workflow-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-workflow-run" }, input, callbacks)
 end
 
 --- AWS glue get-workflow-run-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow_run_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-workflow-run-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow_run_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-workflow-run-properties" }, input, callbacks)
 end
 
 --- AWS glue get-workflow-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_workflow_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "get-workflow-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_workflow_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "get-workflow-runs" }, input, callbacks)
 end
 
 --- AWS glue import-catalog-to-glue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_catalog_to_glue(input)
-	return common.execute_aws_command_skeleton({ "glue", "import-catalog-to-glue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_catalog_to_glue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "import-catalog-to-glue" }, input, callbacks)
 end
 
 --- AWS glue list-blueprints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_blueprints(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-blueprints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_blueprints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-blueprints" }, input, callbacks)
 end
 
 --- AWS glue list-column-statistics-task-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_column_statistics_task_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-column-statistics-task-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_column_statistics_task_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-column-statistics-task-runs" }, input, callbacks)
 end
 
 --- AWS glue list-connection-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_connection_types(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-connection-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_connection_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-connection-types" }, input, callbacks)
 end
 
 --- AWS glue list-crawlers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_crawlers(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-crawlers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_crawlers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-crawlers" }, input, callbacks)
 end
 
 --- AWS glue list-crawls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_crawls(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-crawls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_crawls(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-crawls" }, input, callbacks)
 end
 
 --- AWS glue list-custom-entity-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_custom_entity_types(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-custom-entity-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_custom_entity_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-custom-entity-types" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-results operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_results(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-results" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_results(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-results" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-rule-recommendation-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_rule_recommendation_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-rule-recommendation-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_rule_recommendation_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-rule-recommendation-runs" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-ruleset-evaluation-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_ruleset_evaluation_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-ruleset-evaluation-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_ruleset_evaluation_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-ruleset-evaluation-runs" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-rulesets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_rulesets(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-rulesets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_rulesets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-rulesets" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-statistic-annotations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_statistic_annotations(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-statistic-annotations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_statistic_annotations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-statistic-annotations" }, input, callbacks)
 end
 
 --- AWS glue list-data-quality-statistics operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_quality_statistics(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-statistics" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_quality_statistics(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-data-quality-statistics" }, input, callbacks)
 end
 
 --- AWS glue list-dev-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_dev_endpoints(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-dev-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_dev_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-dev-endpoints" }, input, callbacks)
 end
 
 --- AWS glue list-entities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_entities(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-entities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_entities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-entities" }, input, callbacks)
 end
 
 --- AWS glue list-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-jobs" }, input, callbacks)
 end
 
 --- AWS glue list-ml-transforms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_ml_transforms(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-ml-transforms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_ml_transforms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-ml-transforms" }, input, callbacks)
 end
 
 --- AWS glue list-registries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_registries(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-registries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_registries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-registries" }, input, callbacks)
 end
 
 --- AWS glue list-schema-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schema_versions(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-schema-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schema_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-schema-versions" }, input, callbacks)
 end
 
 --- AWS glue list-schemas operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_schemas(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-schemas" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_schemas(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-schemas" }, input, callbacks)
 end
 
 --- AWS glue list-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sessions(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-sessions" }, input, callbacks)
 end
 
 --- AWS glue list-statements operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_statements(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-statements" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_statements(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-statements" }, input, callbacks)
 end
 
 --- AWS glue list-table-optimizer-runs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_table_optimizer_runs(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-table-optimizer-runs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_table_optimizer_runs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-table-optimizer-runs" }, input, callbacks)
 end
 
 --- AWS glue list-triggers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_triggers(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-triggers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_triggers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-triggers" }, input, callbacks)
 end
 
 --- AWS glue list-usage-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_usage_profiles(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-usage-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_usage_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-usage-profiles" }, input, callbacks)
 end
 
 --- AWS glue list-workflows operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workflows(input)
-	return common.execute_aws_command_skeleton({ "glue", "list-workflows" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workflows(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "list-workflows" }, input, callbacks)
 end
 
 --- AWS glue modify-integration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.modify_integration(input)
-	return common.execute_aws_command_skeleton({ "glue", "modify-integration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.modify_integration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "modify-integration" }, input, callbacks)
 end
 
 --- AWS glue put-data-catalog-encryption-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_data_catalog_encryption_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "put-data-catalog-encryption-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_data_catalog_encryption_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "put-data-catalog-encryption-settings" }, input, callbacks)
 end
 
 --- AWS glue put-data-quality-profile-annotation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_data_quality_profile_annotation(input)
-	return common.execute_aws_command_skeleton({ "glue", "put-data-quality-profile-annotation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_data_quality_profile_annotation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "put-data-quality-profile-annotation" }, input, callbacks)
 end
 
 --- AWS glue put-resource-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_resource_policy(input)
-	return common.execute_aws_command_skeleton({ "glue", "put-resource-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_resource_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS glue put-schema-version-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_schema_version_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "put-schema-version-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_schema_version_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "put-schema-version-metadata" }, input, callbacks)
 end
 
 --- AWS glue put-workflow-run-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_workflow_run_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "put-workflow-run-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_workflow_run_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "put-workflow-run-properties" }, input, callbacks)
 end
 
 --- AWS glue query-schema-version-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.query_schema_version_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "query-schema-version-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.query_schema_version_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "query-schema-version-metadata" }, input, callbacks)
 end
 
 --- AWS glue register-schema-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_schema_version(input)
-	return common.execute_aws_command_skeleton({ "glue", "register-schema-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_schema_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "register-schema-version" }, input, callbacks)
 end
 
 --- AWS glue remove-schema-version-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_schema_version_metadata(input)
-	return common.execute_aws_command_skeleton({ "glue", "remove-schema-version-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_schema_version_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "remove-schema-version-metadata" }, input, callbacks)
 end
 
 --- AWS glue reset-job-bookmark operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_job_bookmark(input)
-	return common.execute_aws_command_skeleton({ "glue", "reset-job-bookmark" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_job_bookmark(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "reset-job-bookmark" }, input, callbacks)
 end
 
 --- AWS glue resume-workflow-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resume_workflow_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "resume-workflow-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resume_workflow_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "resume-workflow-run" }, input, callbacks)
 end
 
 --- AWS glue run-statement operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.run_statement(input)
-	return common.execute_aws_command_skeleton({ "glue", "run-statement" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.run_statement(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "run-statement" }, input, callbacks)
 end
 
 --- AWS glue search-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_tables(input)
-	return common.execute_aws_command_skeleton({ "glue", "search-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "search-tables" }, input, callbacks)
 end
 
 --- AWS glue start-blueprint-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_blueprint_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-blueprint-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_blueprint_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-blueprint-run" }, input, callbacks)
 end
 
 --- AWS glue start-column-statistics-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_column_statistics_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-column-statistics-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_column_statistics_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-column-statistics-task-run" }, input, callbacks)
 end
 
 --- AWS glue start-column-statistics-task-run-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_column_statistics_task_run_schedule(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-column-statistics-task-run-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_column_statistics_task_run_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-column-statistics-task-run-schedule" }, input, callbacks)
 end
 
 --- AWS glue start-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-crawler" }, input, callbacks)
 end
 
 --- AWS glue start-crawler-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_crawler_schedule(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-crawler-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_crawler_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-crawler-schedule" }, input, callbacks)
 end
 
 --- AWS glue start-data-quality-rule-recommendation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_data_quality_rule_recommendation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-data-quality-rule-recommendation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_data_quality_rule_recommendation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-data-quality-rule-recommendation-run" }, input, callbacks)
 end
 
 --- AWS glue start-data-quality-ruleset-evaluation-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_data_quality_ruleset_evaluation_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-data-quality-ruleset-evaluation-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_data_quality_ruleset_evaluation_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-data-quality-ruleset-evaluation-run" }, input, callbacks)
 end
 
 --- AWS glue start-export-labels-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_export_labels_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-export-labels-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_export_labels_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-export-labels-task-run" }, input, callbacks)
 end
 
 --- AWS glue start-import-labels-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_import_labels_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-import-labels-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_import_labels_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-import-labels-task-run" }, input, callbacks)
 end
 
 --- AWS glue start-job-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_job_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-job-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_job_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-job-run" }, input, callbacks)
 end
 
 --- AWS glue start-ml-evaluation-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_ml_evaluation_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-ml-evaluation-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_ml_evaluation_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-ml-evaluation-task-run" }, input, callbacks)
 end
 
 --- AWS glue start-ml-labeling-set-generation-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_ml_labeling_set_generation_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-ml-labeling-set-generation-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_ml_labeling_set_generation_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-ml-labeling-set-generation-task-run" }, input, callbacks)
 end
 
 --- AWS glue start-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-trigger" }, input, callbacks)
 end
 
 --- AWS glue start-workflow-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_workflow_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "start-workflow-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_workflow_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "start-workflow-run" }, input, callbacks)
 end
 
 --- AWS glue stop-column-statistics-task-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_column_statistics_task_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-column-statistics-task-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_column_statistics_task_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-column-statistics-task-run" }, input, callbacks)
 end
 
 --- AWS glue stop-column-statistics-task-run-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_column_statistics_task_run_schedule(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-column-statistics-task-run-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_column_statistics_task_run_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-column-statistics-task-run-schedule" }, input, callbacks)
 end
 
 --- AWS glue stop-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-crawler" }, input, callbacks)
 end
 
 --- AWS glue stop-crawler-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_crawler_schedule(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-crawler-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_crawler_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-crawler-schedule" }, input, callbacks)
 end
 
 --- AWS glue stop-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_session(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-session" }, input, callbacks)
 end
 
 --- AWS glue stop-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-trigger" }, input, callbacks)
 end
 
 --- AWS glue stop-workflow-run operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_workflow_run(input)
-	return common.execute_aws_command_skeleton({ "glue", "stop-workflow-run" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_workflow_run(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "stop-workflow-run" }, input, callbacks)
 end
 
 --- AWS glue tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "glue", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "tag-resource" }, input, callbacks)
 end
 
 --- AWS glue test-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "test-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "test-connection" }, input, callbacks)
 end
 
 --- AWS glue untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "glue", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "untag-resource" }, input, callbacks)
 end
 
 --- AWS glue update-blueprint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_blueprint(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-blueprint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_blueprint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-blueprint" }, input, callbacks)
 end
 
 --- AWS glue update-catalog operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_catalog(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-catalog" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_catalog(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-catalog" }, input, callbacks)
 end
 
 --- AWS glue update-classifier operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_classifier(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-classifier" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_classifier(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-classifier" }, input, callbacks)
 end
 
 --- AWS glue update-column-statistics-for-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_column_statistics_for_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-for-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_column_statistics_for_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-for-partition" }, input, callbacks)
 end
 
 --- AWS glue update-column-statistics-for-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_column_statistics_for_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-for-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_column_statistics_for_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-for-table" }, input, callbacks)
 end
 
 --- AWS glue update-column-statistics-task-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_column_statistics_task_settings(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-task-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_column_statistics_task_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-column-statistics-task-settings" }, input, callbacks)
 end
 
 --- AWS glue update-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_connection(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-connection" }, input, callbacks)
 end
 
 --- AWS glue update-crawler operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_crawler(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-crawler" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_crawler(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-crawler" }, input, callbacks)
 end
 
 --- AWS glue update-crawler-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_crawler_schedule(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-crawler-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_crawler_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-crawler-schedule" }, input, callbacks)
 end
 
 --- AWS glue update-data-quality-ruleset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_quality_ruleset(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-data-quality-ruleset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_quality_ruleset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-data-quality-ruleset" }, input, callbacks)
 end
 
 --- AWS glue update-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_database(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-database" }, input, callbacks)
 end
 
 --- AWS glue update-dev-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_dev_endpoint(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-dev-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_dev_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-dev-endpoint" }, input, callbacks)
 end
 
 --- AWS glue update-integration-resource-property operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_integration_resource_property(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-integration-resource-property" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_integration_resource_property(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-integration-resource-property" }, input, callbacks)
 end
 
 --- AWS glue update-integration-table-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_integration_table_properties(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-integration-table-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_integration_table_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-integration-table-properties" }, input, callbacks)
 end
 
 --- AWS glue update-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-job" }, input, callbacks)
 end
 
 --- AWS glue update-job-from-source-control operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job_from_source_control(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-job-from-source-control" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job_from_source_control(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-job-from-source-control" }, input, callbacks)
 end
 
 --- AWS glue update-ml-transform operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_ml_transform(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-ml-transform" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_ml_transform(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-ml-transform" }, input, callbacks)
 end
 
 --- AWS glue update-partition operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_partition(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-partition" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_partition(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-partition" }, input, callbacks)
 end
 
 --- AWS glue update-registry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_registry(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-registry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_registry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-registry" }, input, callbacks)
 end
 
 --- AWS glue update-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_schema(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_schema(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-schema" }, input, callbacks)
 end
 
 --- AWS glue update-source-control-from-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_source_control_from_job(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-source-control-from-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_source_control_from_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-source-control-from-job" }, input, callbacks)
 end
 
 --- AWS glue update-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_table(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-table" }, input, callbacks)
 end
 
 --- AWS glue update-table-optimizer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_table_optimizer(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-table-optimizer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_table_optimizer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-table-optimizer" }, input, callbacks)
 end
 
 --- AWS glue update-trigger operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_trigger(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-trigger" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_trigger(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-trigger" }, input, callbacks)
 end
 
 --- AWS glue update-usage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_usage_profile(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-usage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_usage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-usage-profile" }, input, callbacks)
 end
 
 --- AWS glue update-user-defined-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user_defined_function(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-user-defined-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user_defined_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-user-defined-function" }, input, callbacks)
 end
 
 --- AWS glue update-workflow operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_workflow(input)
-	return common.execute_aws_command_skeleton({ "glue", "update-workflow" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_workflow(input, callbacks)
+	return common.execute_aws_command_skeleton({ "glue", "update-workflow" }, input, callbacks)
 end
 
 return M

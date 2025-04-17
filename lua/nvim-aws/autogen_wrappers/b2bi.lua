@@ -8,212 +8,242 @@ local M = {}
 
 --- AWS b2bi create-capability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_capability(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "create-capability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_capability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-capability" }, input, callbacks)
 end
 
 --- AWS b2bi create-partnership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_partnership(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "create-partnership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_partnership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-partnership" }, input, callbacks)
 end
 
 --- AWS b2bi create-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_profile(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "create-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-profile" }, input, callbacks)
 end
 
 --- AWS b2bi create-starter-mapping-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_starter_mapping_template(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "create-starter-mapping-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_starter_mapping_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-starter-mapping-template" }, input, callbacks)
 end
 
 --- AWS b2bi create-transformer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_transformer(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "create-transformer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_transformer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-transformer" }, input, callbacks)
 end
 
 --- AWS b2bi delete-capability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_capability(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "delete-capability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_capability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-capability" }, input, callbacks)
 end
 
 --- AWS b2bi delete-partnership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_partnership(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "delete-partnership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_partnership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-partnership" }, input, callbacks)
 end
 
 --- AWS b2bi delete-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profile(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "delete-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-profile" }, input, callbacks)
 end
 
 --- AWS b2bi delete-transformer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_transformer(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "delete-transformer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_transformer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-transformer" }, input, callbacks)
 end
 
 --- AWS b2bi generate-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_mapping(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "generate-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "generate-mapping" }, input, callbacks)
 end
 
 --- AWS b2bi get-capability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_capability(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "get-capability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_capability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-capability" }, input, callbacks)
 end
 
 --- AWS b2bi get-partnership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_partnership(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "get-partnership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_partnership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-partnership" }, input, callbacks)
 end
 
 --- AWS b2bi get-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_profile(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "get-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-profile" }, input, callbacks)
 end
 
 --- AWS b2bi get-transformer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_transformer(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_transformer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer" }, input, callbacks)
 end
 
 --- AWS b2bi get-transformer-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_transformer_job(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_transformer_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer-job" }, input, callbacks)
 end
 
 --- AWS b2bi list-capabilities operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_capabilities(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "list-capabilities" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_capabilities(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-capabilities" }, input, callbacks)
 end
 
 --- AWS b2bi list-partnerships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_partnerships(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "list-partnerships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_partnerships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-partnerships" }, input, callbacks)
 end
 
 --- AWS b2bi list-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profiles(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "list-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-profiles" }, input, callbacks)
 end
 
 --- AWS b2bi list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS b2bi list-transformers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_transformers(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "list-transformers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_transformers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-transformers" }, input, callbacks)
 end
 
 --- AWS b2bi start-transformer-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_transformer_job(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "start-transformer-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_transformer_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "start-transformer-job" }, input, callbacks)
 end
 
 --- AWS b2bi tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "tag-resource" }, input, callbacks)
 end
 
 --- AWS b2bi test-conversion operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_conversion(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "test-conversion" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_conversion(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-conversion" }, input, callbacks)
 end
 
 --- AWS b2bi test-mapping operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_mapping(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "test-mapping" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_mapping(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-mapping" }, input, callbacks)
 end
 
 --- AWS b2bi test-parsing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_parsing(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "test-parsing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_parsing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-parsing" }, input, callbacks)
 end
 
 --- AWS b2bi untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "untag-resource" }, input, callbacks)
 end
 
 --- AWS b2bi update-capability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_capability(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "update-capability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_capability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-capability" }, input, callbacks)
 end
 
 --- AWS b2bi update-partnership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_partnership(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "update-partnership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_partnership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-partnership" }, input, callbacks)
 end
 
 --- AWS b2bi update-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_profile(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "update-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-profile" }, input, callbacks)
 end
 
 --- AWS b2bi update-transformer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_transformer(input)
-	return common.execute_aws_command_skeleton({ "b2bi", "update-transformer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_transformer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-transformer" }, input, callbacks)
 end
 
 return M

@@ -8,72 +8,82 @@ local M = {}
 
 --- AWS support-app create-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "support-app", "create-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "create-slack-channel-configuration" }, input, callbacks)
 end
 
 --- AWS support-app delete-account-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_account_alias(input)
-	return common.execute_aws_command_skeleton({ "support-app", "delete-account-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_account_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "delete-account-alias" }, input, callbacks)
 end
 
 --- AWS support-app delete-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "support-app", "delete-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "delete-slack-channel-configuration" }, input, callbacks)
 end
 
 --- AWS support-app delete-slack-workspace-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_slack_workspace_configuration(input)
-	return common.execute_aws_command_skeleton({ "support-app", "delete-slack-workspace-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_slack_workspace_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "delete-slack-workspace-configuration" }, input, callbacks)
 end
 
 --- AWS support-app get-account-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_account_alias(input)
-	return common.execute_aws_command_skeleton({ "support-app", "get-account-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_account_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "get-account-alias" }, input, callbacks)
 end
 
 --- AWS support-app list-slack-channel-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_slack_channel_configurations(input)
-	return common.execute_aws_command_skeleton({ "support-app", "list-slack-channel-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_slack_channel_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "list-slack-channel-configurations" }, input, callbacks)
 end
 
 --- AWS support-app list-slack-workspace-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_slack_workspace_configurations(input)
-	return common.execute_aws_command_skeleton({ "support-app", "list-slack-workspace-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_slack_workspace_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "list-slack-workspace-configurations" }, input, callbacks)
 end
 
 --- AWS support-app put-account-alias operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_account_alias(input)
-	return common.execute_aws_command_skeleton({ "support-app", "put-account-alias" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_account_alias(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "put-account-alias" }, input, callbacks)
 end
 
 --- AWS support-app register-slack-workspace-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_slack_workspace_for_organization(input)
-	return common.execute_aws_command_skeleton({ "support-app", "register-slack-workspace-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_slack_workspace_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "register-slack-workspace-for-organization" }, input, callbacks)
 end
 
 --- AWS support-app update-slack-channel-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_slack_channel_configuration(input)
-	return common.execute_aws_command_skeleton({ "support-app", "update-slack-channel-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_slack_channel_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "support-app", "update-slack-channel-configuration" }, input, callbacks)
 end
 
 return M

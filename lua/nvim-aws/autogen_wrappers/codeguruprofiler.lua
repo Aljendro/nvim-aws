@@ -8,163 +8,186 @@ local M = {}
 
 --- AWS codeguruprofiler add-notification-channels operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.add_notification_channels(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "add-notification-channels" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.add_notification_channels(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "add-notification-channels" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler batch-get-frame-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_frame_metric_data(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "batch-get-frame-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_frame_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "batch-get-frame-metric-data" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler configure-agent operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.configure_agent(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "configure-agent" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.configure_agent(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "configure-agent" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler create-profiling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_profiling_group(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "create-profiling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_profiling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "create-profiling-group" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler delete-profiling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_profiling_group(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "delete-profiling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_profiling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "delete-profiling-group" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler describe-profiling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_profiling_group(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "describe-profiling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_profiling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "describe-profiling-group" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler get-findings-report-account-summary operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_findings_report_account_summary(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-findings-report-account-summary" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_findings_report_account_summary(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-findings-report-account-summary" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler get-notification-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_notification_configuration(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-notification-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_notification_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-notification-configuration" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler get-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_policy(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-policy" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler get-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_profile(input)
-	return common.execute_aws_command({ "codeguruprofiler", "get-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_profile(input, callbacks)
+	return common.execute_aws_command({ "codeguruprofiler", "get-profile" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler get-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_recommendations(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "get-recommendations" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler list-findings-reports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_findings_reports(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-findings-reports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_findings_reports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-findings-reports" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler list-profile-times operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profile_times(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-profile-times" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profile_times(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-profile-times" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler list-profiling-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_profiling_groups(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-profiling-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_profiling_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-profiling-groups" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler post-agent-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.post_agent_profile(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "post-agent-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.post_agent_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "post-agent-profile" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler put-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_permission(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "put-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "put-permission" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler remove-notification-channel operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_notification_channel(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "remove-notification-channel" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_notification_channel(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "remove-notification-channel" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler remove-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_permission(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "remove-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "remove-permission" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler submit-feedback operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.submit_feedback(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "submit-feedback" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.submit_feedback(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "submit-feedback" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "tag-resource" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "untag-resource" }, input, callbacks)
 end
 
 --- AWS codeguruprofiler update-profiling-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_profiling_group(input)
-	return common.execute_aws_command_skeleton({ "codeguruprofiler", "update-profiling-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_profiling_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "codeguruprofiler", "update-profiling-group" }, input, callbacks)
 end
 
 return M

@@ -8,233 +8,266 @@ local M = {}
 
 --- AWS outposts cancel-capacity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_capacity_task(input)
-	return common.execute_aws_command_skeleton({ "outposts", "cancel-capacity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_capacity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "cancel-capacity-task" }, input, callbacks)
 end
 
 --- AWS outposts cancel-order operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_order(input)
-	return common.execute_aws_command_skeleton({ "outposts", "cancel-order" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_order(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "cancel-order" }, input, callbacks)
 end
 
 --- AWS outposts create-order operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_order(input)
-	return common.execute_aws_command_skeleton({ "outposts", "create-order" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_order(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "create-order" }, input, callbacks)
 end
 
 --- AWS outposts create-outpost operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_outpost(input)
-	return common.execute_aws_command_skeleton({ "outposts", "create-outpost" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_outpost(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "create-outpost" }, input, callbacks)
 end
 
 --- AWS outposts create-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_site(input)
-	return common.execute_aws_command_skeleton({ "outposts", "create-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "create-site" }, input, callbacks)
 end
 
 --- AWS outposts delete-outpost operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_outpost(input)
-	return common.execute_aws_command_skeleton({ "outposts", "delete-outpost" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_outpost(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "delete-outpost" }, input, callbacks)
 end
 
 --- AWS outposts delete-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_site(input)
-	return common.execute_aws_command_skeleton({ "outposts", "delete-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "delete-site" }, input, callbacks)
 end
 
 --- AWS outposts get-capacity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_capacity_task(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-capacity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_capacity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-capacity-task" }, input, callbacks)
 end
 
 --- AWS outposts get-catalog-item operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_catalog_item(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-catalog-item" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_catalog_item(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-catalog-item" }, input, callbacks)
 end
 
 --- AWS outposts get-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_connection(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-connection" }, input, callbacks)
 end
 
 --- AWS outposts get-order operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_order(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-order" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_order(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-order" }, input, callbacks)
 end
 
 --- AWS outposts get-outpost operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_outpost(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-outpost" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_outpost(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost" }, input, callbacks)
 end
 
 --- AWS outposts get-outpost-instance-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_outpost_instance_types(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-instance-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_outpost_instance_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-instance-types" }, input, callbacks)
 end
 
 --- AWS outposts get-outpost-supported-instance-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_outpost_supported_instance_types(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-supported-instance-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_outpost_supported_instance_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-supported-instance-types" }, input, callbacks)
 end
 
 --- AWS outposts get-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_site(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-site" }, input, callbacks)
 end
 
 --- AWS outposts get-site-address operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_site_address(input)
-	return common.execute_aws_command_skeleton({ "outposts", "get-site-address" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_site_address(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "get-site-address" }, input, callbacks)
 end
 
 --- AWS outposts list-asset-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_asset_instances(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-asset-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_asset_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-asset-instances" }, input, callbacks)
 end
 
 --- AWS outposts list-assets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_assets(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-assets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_assets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-assets" }, input, callbacks)
 end
 
 --- AWS outposts list-blocking-instances-for-capacity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_blocking_instances_for_capacity_task(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-blocking-instances-for-capacity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_blocking_instances_for_capacity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-blocking-instances-for-capacity-task" }, input, callbacks)
 end
 
 --- AWS outposts list-capacity-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_capacity_tasks(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-capacity-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_capacity_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-capacity-tasks" }, input, callbacks)
 end
 
 --- AWS outposts list-catalog-items operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_catalog_items(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-catalog-items" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_catalog_items(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-catalog-items" }, input, callbacks)
 end
 
 --- AWS outposts list-orders operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_orders(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-orders" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_orders(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-orders" }, input, callbacks)
 end
 
 --- AWS outposts list-outposts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_outposts(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-outposts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_outposts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-outposts" }, input, callbacks)
 end
 
 --- AWS outposts list-sites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sites(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-sites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sites(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-sites" }, input, callbacks)
 end
 
 --- AWS outposts list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "outposts", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS outposts start-capacity-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_capacity_task(input)
-	return common.execute_aws_command_skeleton({ "outposts", "start-capacity-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_capacity_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "start-capacity-task" }, input, callbacks)
 end
 
 --- AWS outposts start-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_connection(input)
-	return common.execute_aws_command_skeleton({ "outposts", "start-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "start-connection" }, input, callbacks)
 end
 
 --- AWS outposts tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "outposts", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "tag-resource" }, input, callbacks)
 end
 
 --- AWS outposts untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "outposts", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "untag-resource" }, input, callbacks)
 end
 
 --- AWS outposts update-outpost operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_outpost(input)
-	return common.execute_aws_command_skeleton({ "outposts", "update-outpost" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_outpost(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "update-outpost" }, input, callbacks)
 end
 
 --- AWS outposts update-site operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_site(input)
-	return common.execute_aws_command_skeleton({ "outposts", "update-site" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_site(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site" }, input, callbacks)
 end
 
 --- AWS outposts update-site-address operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_site_address(input)
-	return common.execute_aws_command_skeleton({ "outposts", "update-site-address" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_site_address(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site-address" }, input, callbacks)
 end
 
 --- AWS outposts update-site-rack-physical-properties operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_site_rack_physical_properties(input)
-	return common.execute_aws_command_skeleton({ "outposts", "update-site-rack-physical-properties" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_site_rack_physical_properties(input, callbacks)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site-rack-physical-properties" }, input, callbacks)
 end
 
 return M

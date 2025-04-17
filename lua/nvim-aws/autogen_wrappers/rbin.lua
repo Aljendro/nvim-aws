@@ -8,72 +8,82 @@ local M = {}
 
 --- AWS rbin create-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "create-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "create-rule" }, input, callbacks)
 end
 
 --- AWS rbin delete-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "delete-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "delete-rule" }, input, callbacks)
 end
 
 --- AWS rbin get-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "get-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "get-rule" }, input, callbacks)
 end
 
 --- AWS rbin list-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rules(input)
-	return common.execute_aws_command_skeleton({ "rbin", "list-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "list-rules" }, input, callbacks)
 end
 
 --- AWS rbin list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "rbin", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS rbin lock-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.lock_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "lock-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.lock_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "lock-rule" }, input, callbacks)
 end
 
 --- AWS rbin tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "rbin", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "tag-resource" }, input, callbacks)
 end
 
 --- AWS rbin unlock-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unlock_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "unlock-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unlock_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "unlock-rule" }, input, callbacks)
 end
 
 --- AWS rbin untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "rbin", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "untag-resource" }, input, callbacks)
 end
 
 --- AWS rbin update-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_rule(input)
-	return common.execute_aws_command_skeleton({ "rbin", "update-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "rbin", "update-rule" }, input, callbacks)
 end
 
 return M

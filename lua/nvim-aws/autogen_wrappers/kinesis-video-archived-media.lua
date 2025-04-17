@@ -8,44 +8,50 @@ local M = {}
 
 --- AWS kinesis-video-archived-media get-clip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_clip(input)
-	return common.execute_aws_command({ "kinesis-video-archived-media", "get-clip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_clip(input, callbacks)
+	return common.execute_aws_command({ "kinesis-video-archived-media", "get-clip" }, input, callbacks)
 end
 
 --- AWS kinesis-video-archived-media get-dash-streaming-session-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_dash_streaming_session_url(input)
-	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-dash-streaming-session-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_dash_streaming_session_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-dash-streaming-session-url" }, input, callbacks)
 end
 
 --- AWS kinesis-video-archived-media get-hls-streaming-session-url operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_hls_streaming_session_url(input)
-	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-hls-streaming-session-url" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_hls_streaming_session_url(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-hls-streaming-session-url" }, input, callbacks)
 end
 
 --- AWS kinesis-video-archived-media get-images operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_images(input)
-	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-images" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_images(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-images" }, input, callbacks)
 end
 
 --- AWS kinesis-video-archived-media get-media-for-fragment-list operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_media_for_fragment_list(input)
-	return common.execute_aws_command({ "kinesis-video-archived-media", "get-media-for-fragment-list" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_media_for_fragment_list(input, callbacks)
+	return common.execute_aws_command({ "kinesis-video-archived-media", "get-media-for-fragment-list" }, input, callbacks)
 end
 
 --- AWS kinesis-video-archived-media list-fragments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fragments(input)
-	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "list-fragments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fragments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "list-fragments" }, input, callbacks)
 end
 
 return M

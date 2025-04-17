@@ -8,65 +8,74 @@ local M = {}
 
 --- AWS kendra-ranking create-rescore-execution-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_rescore_execution_plan(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "create-rescore-execution-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_rescore_execution_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "create-rescore-execution-plan" }, input, callbacks)
 end
 
 --- AWS kendra-ranking delete-rescore-execution-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rescore_execution_plan(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "delete-rescore-execution-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rescore_execution_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "delete-rescore-execution-plan" }, input, callbacks)
 end
 
 --- AWS kendra-ranking describe-rescore-execution-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_rescore_execution_plan(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "describe-rescore-execution-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_rescore_execution_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "describe-rescore-execution-plan" }, input, callbacks)
 end
 
 --- AWS kendra-ranking list-rescore-execution-plans operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rescore_execution_plans(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-rescore-execution-plans" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rescore_execution_plans(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-rescore-execution-plans" }, input, callbacks)
 end
 
 --- AWS kendra-ranking list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS kendra-ranking rescore operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rescore(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "rescore" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rescore(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "rescore" }, input, callbacks)
 end
 
 --- AWS kendra-ranking tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "tag-resource" }, input, callbacks)
 end
 
 --- AWS kendra-ranking untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "untag-resource" }, input, callbacks)
 end
 
 --- AWS kendra-ranking update-rescore-execution-plan operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_rescore_execution_plan(input)
-	return common.execute_aws_command_skeleton({ "kendra-ranking", "update-rescore-execution-plan" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_rescore_execution_plan(input, callbacks)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "update-rescore-execution-plan" }, input, callbacks)
 end
 
 return M

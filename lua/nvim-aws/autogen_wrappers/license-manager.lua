@@ -8,352 +8,402 @@ local M = {}
 
 --- AWS license-manager accept-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_grant(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "accept-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "accept-grant" }, input, callbacks)
 end
 
 --- AWS license-manager check-in-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.check_in_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "check-in-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.check_in_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "check-in-license" }, input, callbacks)
 end
 
 --- AWS license-manager checkout-borrow-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.checkout_borrow_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "checkout-borrow-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.checkout_borrow_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "checkout-borrow-license" }, input, callbacks)
 end
 
 --- AWS license-manager checkout-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.checkout_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "checkout-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.checkout_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "checkout-license" }, input, callbacks)
 end
 
 --- AWS license-manager create-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_grant(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-grant" }, input, callbacks)
 end
 
 --- AWS license-manager create-grant-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_grant_version(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-grant-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_grant_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-grant-version" }, input, callbacks)
 end
 
 --- AWS license-manager create-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-license" }, input, callbacks)
 end
 
 --- AWS license-manager create-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager create-license-conversion-task-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license_conversion_task_for_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-license-conversion-task-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license_conversion_task_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-license-conversion-task-for-resource" }, input, callbacks)
 end
 
 --- AWS license-manager create-license-manager-report-generator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license_manager_report_generator(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-license-manager-report-generator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license_manager_report_generator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-license-manager-report-generator" }, input, callbacks)
 end
 
 --- AWS license-manager create-license-version operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license_version(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-license-version" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license_version(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-license-version" }, input, callbacks)
 end
 
 --- AWS license-manager create-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_token(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "create-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "create-token" }, input, callbacks)
 end
 
 --- AWS license-manager delete-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_grant(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "delete-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "delete-grant" }, input, callbacks)
 end
 
 --- AWS license-manager delete-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "delete-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "delete-license" }, input, callbacks)
 end
 
 --- AWS license-manager delete-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "delete-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "delete-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager delete-license-manager-report-generator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_license_manager_report_generator(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "delete-license-manager-report-generator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_license_manager_report_generator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "delete-license-manager-report-generator" }, input, callbacks)
 end
 
 --- AWS license-manager delete-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_token(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "delete-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "delete-token" }, input, callbacks)
 end
 
 --- AWS license-manager extend-license-consumption operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.extend_license_consumption(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "extend-license-consumption" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.extend_license_consumption(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "extend-license-consumption" }, input, callbacks)
 end
 
 --- AWS license-manager get-access-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_access_token(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-access-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_access_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-access-token" }, input, callbacks)
 end
 
 --- AWS license-manager get-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_grant(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-grant" }, input, callbacks)
 end
 
 --- AWS license-manager get-license operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-license" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-license" }, input, callbacks)
 end
 
 --- AWS license-manager get-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager get-license-conversion-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license_conversion_task(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-license-conversion-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license_conversion_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-license-conversion-task" }, input, callbacks)
 end
 
 --- AWS license-manager get-license-manager-report-generator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license_manager_report_generator(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-license-manager-report-generator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license_manager_report_generator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-license-manager-report-generator" }, input, callbacks)
 end
 
 --- AWS license-manager get-license-usage operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license_usage(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-license-usage" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license_usage(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-license-usage" }, input, callbacks)
 end
 
 --- AWS license-manager get-service-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_service_settings(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "get-service-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_service_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "get-service-settings" }, input, callbacks)
 end
 
 --- AWS license-manager list-associations-for-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_associations_for_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-associations-for-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_associations_for_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-associations-for-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager list-distributed-grants operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_distributed_grants(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-distributed-grants" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_distributed_grants(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-distributed-grants" }, input, callbacks)
 end
 
 --- AWS license-manager list-failures-for-license-configuration-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_failures_for_license_configuration_operations(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-failures-for-license-configuration-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_failures_for_license_configuration_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-failures-for-license-configuration-operations" }, input, callbacks)
 end
 
 --- AWS license-manager list-license-configurations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_configurations(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-license-configurations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_configurations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-license-configurations" }, input, callbacks)
 end
 
 --- AWS license-manager list-license-conversion-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_conversion_tasks(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-license-conversion-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_conversion_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-license-conversion-tasks" }, input, callbacks)
 end
 
 --- AWS license-manager list-license-manager-report-generators operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_manager_report_generators(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-license-manager-report-generators" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_manager_report_generators(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-license-manager-report-generators" }, input, callbacks)
 end
 
 --- AWS license-manager list-license-specifications-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_specifications_for_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-license-specifications-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_specifications_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-license-specifications-for-resource" }, input, callbacks)
 end
 
 --- AWS license-manager list-license-versions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_versions(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-license-versions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_versions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-license-versions" }, input, callbacks)
 end
 
 --- AWS license-manager list-licenses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_licenses(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-licenses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_licenses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-licenses" }, input, callbacks)
 end
 
 --- AWS license-manager list-received-grants operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_received_grants(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-received-grants" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_received_grants(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-received-grants" }, input, callbacks)
 end
 
 --- AWS license-manager list-received-grants-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_received_grants_for_organization(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-received-grants-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_received_grants_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-received-grants-for-organization" }, input, callbacks)
 end
 
 --- AWS license-manager list-received-licenses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_received_licenses(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-received-licenses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_received_licenses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-received-licenses" }, input, callbacks)
 end
 
 --- AWS license-manager list-received-licenses-for-organization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_received_licenses_for_organization(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-received-licenses-for-organization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_received_licenses_for_organization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-received-licenses-for-organization" }, input, callbacks)
 end
 
 --- AWS license-manager list-resource-inventory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resource_inventory(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-resource-inventory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resource_inventory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-resource-inventory" }, input, callbacks)
 end
 
 --- AWS license-manager list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS license-manager list-tokens operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tokens(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-tokens" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tokens(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-tokens" }, input, callbacks)
 end
 
 --- AWS license-manager list-usage-for-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_usage_for_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "list-usage-for-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_usage_for_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "list-usage-for-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager reject-grant operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reject_grant(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "reject-grant" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reject_grant(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "reject-grant" }, input, callbacks)
 end
 
 --- AWS license-manager tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "tag-resource" }, input, callbacks)
 end
 
 --- AWS license-manager untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "untag-resource" }, input, callbacks)
 end
 
 --- AWS license-manager update-license-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_license_configuration(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "update-license-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_license_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "update-license-configuration" }, input, callbacks)
 end
 
 --- AWS license-manager update-license-manager-report-generator operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_license_manager_report_generator(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "update-license-manager-report-generator" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_license_manager_report_generator(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "update-license-manager-report-generator" }, input, callbacks)
 end
 
 --- AWS license-manager update-license-specifications-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_license_specifications_for_resource(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "update-license-specifications-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_license_specifications_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "update-license-specifications-for-resource" }, input, callbacks)
 end
 
 --- AWS license-manager update-service-settings operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_service_settings(input)
-	return common.execute_aws_command_skeleton({ "license-manager", "update-service-settings" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_service_settings(input, callbacks)
+	return common.execute_aws_command_skeleton({ "license-manager", "update-service-settings" }, input, callbacks)
 end
 
 return M

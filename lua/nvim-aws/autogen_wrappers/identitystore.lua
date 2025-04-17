@@ -8,135 +8,154 @@ local M = {}
 
 --- AWS identitystore create-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "create-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "create-group" }, input, callbacks)
 end
 
 --- AWS identitystore create-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_group_membership(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "create-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "create-group-membership" }, input, callbacks)
 end
 
 --- AWS identitystore create-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_user(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "create-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "create-user" }, input, callbacks)
 end
 
 --- AWS identitystore delete-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "delete-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "delete-group" }, input, callbacks)
 end
 
 --- AWS identitystore delete-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_group_membership(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "delete-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "delete-group-membership" }, input, callbacks)
 end
 
 --- AWS identitystore delete-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_user(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "delete-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "delete-user" }, input, callbacks)
 end
 
 --- AWS identitystore describe-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_group(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "describe-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "describe-group" }, input, callbacks)
 end
 
 --- AWS identitystore describe-group-membership operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_group_membership(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "describe-group-membership" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_group_membership(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "describe-group-membership" }, input, callbacks)
 end
 
 --- AWS identitystore describe-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_user(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "describe-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "describe-user" }, input, callbacks)
 end
 
 --- AWS identitystore get-group-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group_id(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "get-group-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "get-group-id" }, input, callbacks)
 end
 
 --- AWS identitystore get-group-membership-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_group_membership_id(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "get-group-membership-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_group_membership_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "get-group-membership-id" }, input, callbacks)
 end
 
 --- AWS identitystore get-user-id operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_user_id(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "get-user-id" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_user_id(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "get-user-id" }, input, callbacks)
 end
 
 --- AWS identitystore is-member-in-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.is_member_in_groups(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "is-member-in-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.is_member_in_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "is-member-in-groups" }, input, callbacks)
 end
 
 --- AWS identitystore list-group-memberships operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_group_memberships(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "list-group-memberships" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_group_memberships(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "list-group-memberships" }, input, callbacks)
 end
 
 --- AWS identitystore list-group-memberships-for-member operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_group_memberships_for_member(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "list-group-memberships-for-member" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_group_memberships_for_member(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "list-group-memberships-for-member" }, input, callbacks)
 end
 
 --- AWS identitystore list-groups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_groups(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "list-groups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "list-groups" }, input, callbacks)
 end
 
 --- AWS identitystore list-users operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_users(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "list-users" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_users(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "list-users" }, input, callbacks)
 end
 
 --- AWS identitystore update-group operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_group(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "update-group" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_group(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "update-group" }, input, callbacks)
 end
 
 --- AWS identitystore update-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_user(input)
-	return common.execute_aws_command_skeleton({ "identitystore", "update-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "identitystore", "update-user" }, input, callbacks)
 end
 
 return M

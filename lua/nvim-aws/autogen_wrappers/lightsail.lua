@@ -8,1136 +8,1298 @@ local M = {}
 
 --- AWS lightsail allocate-static-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.allocate_static_ip(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "allocate-static-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.allocate_static_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "allocate-static-ip" }, input, callbacks)
 end
 
 --- AWS lightsail attach-certificate-to-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_certificate_to_distribution(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "attach-certificate-to-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_certificate_to_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "attach-certificate-to-distribution" }, input, callbacks)
 end
 
 --- AWS lightsail attach-disk operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_disk(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "attach-disk" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_disk(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "attach-disk" }, input, callbacks)
 end
 
 --- AWS lightsail attach-instances-to-load-balancer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_instances_to_load_balancer(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "attach-instances-to-load-balancer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_instances_to_load_balancer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "attach-instances-to-load-balancer" }, input, callbacks)
 end
 
 --- AWS lightsail attach-load-balancer-tls-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_load_balancer_tls_certificate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "attach-load-balancer-tls-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_load_balancer_tls_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "attach-load-balancer-tls-certificate" }, input, callbacks)
 end
 
 --- AWS lightsail attach-static-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.attach_static_ip(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "attach-static-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.attach_static_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "attach-static-ip" }, input, callbacks)
 end
 
 --- AWS lightsail close-instance-public-ports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.close_instance_public_ports(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "close-instance-public-ports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.close_instance_public_ports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "close-instance-public-ports" }, input, callbacks)
 end
 
 --- AWS lightsail copy-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "copy-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "copy-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bucket(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-bucket" }, input, callbacks)
 end
 
 --- AWS lightsail create-bucket-access-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_bucket_access_key(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-bucket-access-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_bucket_access_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-bucket-access-key" }, input, callbacks)
 end
 
 --- AWS lightsail create-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_certificate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-certificate" }, input, callbacks)
 end
 
 --- AWS lightsail create-cloud-formation-stack operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_cloud_formation_stack(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-cloud-formation-stack" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_cloud_formation_stack(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-cloud-formation-stack" }, input, callbacks)
 end
 
 --- AWS lightsail create-contact-method operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_contact_method(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-contact-method" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_contact_method(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-contact-method" }, input, callbacks)
 end
 
 --- AWS lightsail create-container-service operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_container_service(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_container_service(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service" }, input, callbacks)
 end
 
 --- AWS lightsail create-container-service-deployment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_container_service_deployment(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service-deployment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_container_service_deployment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service-deployment" }, input, callbacks)
 end
 
 --- AWS lightsail create-container-service-registry-login operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_container_service_registry_login(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service-registry-login" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_container_service_registry_login(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-container-service-registry-login" }, input, callbacks)
 end
 
 --- AWS lightsail create-disk operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_disk(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-disk" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_disk(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-disk" }, input, callbacks)
 end
 
 --- AWS lightsail create-disk-from-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_disk_from_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-disk-from-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_disk_from_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-disk-from-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-disk-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_disk_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-disk-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_disk_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-disk-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_distribution(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-distribution" }, input, callbacks)
 end
 
 --- AWS lightsail create-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-domain" }, input, callbacks)
 end
 
 --- AWS lightsail create-domain-entry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain_entry(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-domain-entry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain_entry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-domain-entry" }, input, callbacks)
 end
 
 --- AWS lightsail create-gui-session-access-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_gui_session_access_details(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-gui-session-access-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_gui_session_access_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-gui-session-access-details" }, input, callbacks)
 end
 
 --- AWS lightsail create-instance-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_instance_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-instance-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_instance_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-instance-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_instances(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-instances" }, input, callbacks)
 end
 
 --- AWS lightsail create-instances-from-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_instances_from_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-instances-from-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_instances_from_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-instances-from-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_key_pair(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-key-pair" }, input, callbacks)
 end
 
 --- AWS lightsail create-load-balancer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_load_balancer(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-load-balancer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_load_balancer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-load-balancer" }, input, callbacks)
 end
 
 --- AWS lightsail create-load-balancer-tls-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_load_balancer_tls_certificate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-load-balancer-tls-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_load_balancer_tls_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-load-balancer-tls-certificate" }, input, callbacks)
 end
 
 --- AWS lightsail create-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail create-relational-database-from-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_relational_database_from_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database-from-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_relational_database_from_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database-from-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail create-relational-database-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_relational_database_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_relational_database_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "create-relational-database-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail delete-alarm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_alarm(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-alarm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_alarm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-alarm" }, input, callbacks)
 end
 
 --- AWS lightsail delete-auto-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_auto_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-auto-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_auto_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-auto-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail delete-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-bucket" }, input, callbacks)
 end
 
 --- AWS lightsail delete-bucket-access-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_bucket_access_key(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-bucket-access-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_bucket_access_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-bucket-access-key" }, input, callbacks)
 end
 
 --- AWS lightsail delete-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_certificate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-certificate" }, input, callbacks)
 end
 
 --- AWS lightsail delete-contact-method operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_contact_method(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-contact-method" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_contact_method(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-contact-method" }, input, callbacks)
 end
 
 --- AWS lightsail delete-container-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_container_image(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-container-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_container_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-container-image" }, input, callbacks)
 end
 
 --- AWS lightsail delete-container-service operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_container_service(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-container-service" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_container_service(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-container-service" }, input, callbacks)
 end
 
 --- AWS lightsail delete-disk operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_disk(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-disk" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_disk(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-disk" }, input, callbacks)
 end
 
 --- AWS lightsail delete-disk-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_disk_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-disk-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_disk_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-disk-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail delete-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_distribution(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-distribution" }, input, callbacks)
 end
 
 --- AWS lightsail delete-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-domain" }, input, callbacks)
 end
 
 --- AWS lightsail delete-domain-entry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain_entry(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-domain-entry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain_entry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-domain-entry" }, input, callbacks)
 end
 
 --- AWS lightsail delete-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_instance(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-instance" }, input, callbacks)
 end
 
 --- AWS lightsail delete-instance-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_instance_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-instance-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_instance_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-instance-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail delete-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_key_pair(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-key-pair" }, input, callbacks)
 end
 
 --- AWS lightsail delete-known-host-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_known_host_keys(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-known-host-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_known_host_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-known-host-keys" }, input, callbacks)
 end
 
 --- AWS lightsail delete-load-balancer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_load_balancer(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-load-balancer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_load_balancer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-load-balancer" }, input, callbacks)
 end
 
 --- AWS lightsail delete-load-balancer-tls-certificate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_load_balancer_tls_certificate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-load-balancer-tls-certificate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_load_balancer_tls_certificate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-load-balancer-tls-certificate" }, input, callbacks)
 end
 
 --- AWS lightsail delete-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail delete-relational-database-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_relational_database_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "delete-relational-database-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_relational_database_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "delete-relational-database-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail detach-certificate-from-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_certificate_from_distribution(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "detach-certificate-from-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_certificate_from_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "detach-certificate-from-distribution" }, input, callbacks)
 end
 
 --- AWS lightsail detach-disk operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_disk(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "detach-disk" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_disk(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "detach-disk" }, input, callbacks)
 end
 
 --- AWS lightsail detach-instances-from-load-balancer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_instances_from_load_balancer(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "detach-instances-from-load-balancer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_instances_from_load_balancer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "detach-instances-from-load-balancer" }, input, callbacks)
 end
 
 --- AWS lightsail detach-static-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.detach_static_ip(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "detach-static-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.detach_static_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "detach-static-ip" }, input, callbacks)
 end
 
 --- AWS lightsail disable-add-on operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_add_on(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "disable-add-on" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_add_on(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "disable-add-on" }, input, callbacks)
 end
 
 --- AWS lightsail download-default-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.download_default_key_pair(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "download-default-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.download_default_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "download-default-key-pair" }, input, callbacks)
 end
 
 --- AWS lightsail enable-add-on operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_add_on(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "enable-add-on" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_add_on(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "enable-add-on" }, input, callbacks)
 end
 
 --- AWS lightsail export-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "export-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "export-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail get-active-names operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_active_names(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-active-names" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_active_names(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-active-names" }, input, callbacks)
 end
 
 --- AWS lightsail get-alarms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_alarms(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-alarms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_alarms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-alarms" }, input, callbacks)
 end
 
 --- AWS lightsail get-auto-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_auto_snapshots(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-auto-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_auto_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-auto-snapshots" }, input, callbacks)
 end
 
 --- AWS lightsail get-blueprints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_blueprints(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-blueprints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_blueprints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-blueprints" }, input, callbacks)
 end
 
 --- AWS lightsail get-bucket-access-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_access_keys(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-access-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_access_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-access-keys" }, input, callbacks)
 end
 
 --- AWS lightsail get-bucket-bundles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_bundles(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-bundles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_bundles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-bundles" }, input, callbacks)
 end
 
 --- AWS lightsail get-bucket-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bucket_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bucket_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-bucket-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-buckets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_buckets(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-buckets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_buckets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-buckets" }, input, callbacks)
 end
 
 --- AWS lightsail get-bundles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_bundles(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-bundles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_bundles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-bundles" }, input, callbacks)
 end
 
 --- AWS lightsail get-certificates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_certificates(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-certificates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_certificates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-certificates" }, input, callbacks)
 end
 
 --- AWS lightsail get-cloud-formation-stack-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cloud_formation_stack_records(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-cloud-formation-stack-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cloud_formation_stack_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-cloud-formation-stack-records" }, input, callbacks)
 end
 
 --- AWS lightsail get-contact-methods operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact_methods(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-contact-methods" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact_methods(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-contact-methods" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-api-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_api_metadata(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-api-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_api_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-api-metadata" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-images operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_images(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-images" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_images(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-images" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-log operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_log(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-log" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_log(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-log" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-service-deployments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_service_deployments(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-deployments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_service_deployments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-deployments" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-service-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_service_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_service_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-service-powers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_service_powers(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-powers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_service_powers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-service-powers" }, input, callbacks)
 end
 
 --- AWS lightsail get-container-services operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_container_services(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-container-services" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_container_services(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-container-services" }, input, callbacks)
 end
 
 --- AWS lightsail get-cost-estimate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_cost_estimate(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-cost-estimate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_cost_estimate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-cost-estimate" }, input, callbacks)
 end
 
 --- AWS lightsail get-disk operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_disk(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-disk" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_disk(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-disk" }, input, callbacks)
 end
 
 --- AWS lightsail get-disk-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_disk_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-disk-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_disk_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-disk-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail get-disk-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_disk_snapshots(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-disk-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_disk_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-disk-snapshots" }, input, callbacks)
 end
 
 --- AWS lightsail get-disks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_disks(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-disks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_disks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-disks" }, input, callbacks)
 end
 
 --- AWS lightsail get-distribution-bundles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_distribution_bundles(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-bundles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_distribution_bundles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-bundles" }, input, callbacks)
 end
 
 --- AWS lightsail get-distribution-latest-cache-reset operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_distribution_latest_cache_reset(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-latest-cache-reset" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_distribution_latest_cache_reset(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-latest-cache-reset" }, input, callbacks)
 end
 
 --- AWS lightsail get-distribution-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_distribution_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_distribution_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-distribution-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-distributions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_distributions(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-distributions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_distributions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-distributions" }, input, callbacks)
 end
 
 --- AWS lightsail get-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-domain" }, input, callbacks)
 end
 
 --- AWS lightsail get-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domains(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-domains" }, input, callbacks)
 end
 
 --- AWS lightsail get-export-snapshot-records operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_export_snapshot_records(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-export-snapshot-records" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_export_snapshot_records(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-export-snapshot-records" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-access-details operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_access_details(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-access-details" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_access_details(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-access-details" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-port-states operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_port_states(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-port-states" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_port_states(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-port-states" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_snapshots(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-snapshots" }, input, callbacks)
 end
 
 --- AWS lightsail get-instance-state operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instance_state(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-state" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instance_state(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instance-state" }, input, callbacks)
 end
 
 --- AWS lightsail get-instances operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_instances(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-instances" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_instances(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-instances" }, input, callbacks)
 end
 
 --- AWS lightsail get-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_key_pair(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-key-pair" }, input, callbacks)
 end
 
 --- AWS lightsail get-key-pairs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_key_pairs(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-key-pairs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_key_pairs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-key-pairs" }, input, callbacks)
 end
 
 --- AWS lightsail get-load-balancer operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_load_balancer(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_load_balancer(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer" }, input, callbacks)
 end
 
 --- AWS lightsail get-load-balancer-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_load_balancer_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_load_balancer_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-load-balancer-tls-certificates operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_load_balancer_tls_certificates(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-tls-certificates" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_load_balancer_tls_certificates(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-tls-certificates" }, input, callbacks)
 end
 
 --- AWS lightsail get-load-balancer-tls-policies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_load_balancer_tls_policies(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-tls-policies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_load_balancer_tls_policies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancer-tls-policies" }, input, callbacks)
 end
 
 --- AWS lightsail get-load-balancers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_load_balancers(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_load_balancers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-load-balancers" }, input, callbacks)
 end
 
 --- AWS lightsail get-operation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_operation(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-operation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_operation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-operation" }, input, callbacks)
 end
 
 --- AWS lightsail get-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_operations(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-operations" }, input, callbacks)
 end
 
 --- AWS lightsail get-operations-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_operations_for_resource(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-operations-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_operations_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-operations-for-resource" }, input, callbacks)
 end
 
 --- AWS lightsail get-regions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_regions(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-regions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_regions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-regions" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-blueprints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_blueprints(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-blueprints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_blueprints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-blueprints" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-bundles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_bundles(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-bundles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_bundles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-bundles" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_events(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-events" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-log-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_log_events(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-log-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_log_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-log-events" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-log-streams operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_log_streams(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-log-streams" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_log_streams(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-log-streams" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-master-user-password operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_master_user_password(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-master-user-password" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_master_user_password(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-master-user-password" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-metric-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_metric_data(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-metric-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_metric_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-metric-data" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_parameters(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-parameters" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-snapshot operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_snapshot(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-snapshot" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_snapshot(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-snapshot" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-database-snapshots operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_database_snapshots(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-snapshots" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_database_snapshots(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-database-snapshots" }, input, callbacks)
 end
 
 --- AWS lightsail get-relational-databases operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_relational_databases(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-databases" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_relational_databases(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-relational-databases" }, input, callbacks)
 end
 
 --- AWS lightsail get-setup-history operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_setup_history(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-setup-history" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_setup_history(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-setup-history" }, input, callbacks)
 end
 
 --- AWS lightsail get-static-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_static_ip(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-static-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_static_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-static-ip" }, input, callbacks)
 end
 
 --- AWS lightsail get-static-ips operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_static_ips(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "get-static-ips" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_static_ips(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "get-static-ips" }, input, callbacks)
 end
 
 --- AWS lightsail import-key-pair operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.import_key_pair(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "import-key-pair" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.import_key_pair(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "import-key-pair" }, input, callbacks)
 end
 
 --- AWS lightsail is-vpc-peered operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.is_vpc_peered(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "is-vpc-peered" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.is_vpc_peered(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "is-vpc-peered" }, input, callbacks)
 end
 
 --- AWS lightsail open-instance-public-ports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.open_instance_public_ports(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "open-instance-public-ports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.open_instance_public_ports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "open-instance-public-ports" }, input, callbacks)
 end
 
 --- AWS lightsail peer-vpc operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.peer_vpc(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "peer-vpc" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.peer_vpc(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "peer-vpc" }, input, callbacks)
 end
 
 --- AWS lightsail push-container-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.push_container_image(input)
-	return common.execute_aws_command({ "lightsail", "push-container-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.push_container_image(input, callbacks)
+	return common.execute_aws_command({ "lightsail", "push-container-image" }, input, callbacks)
 end
 
 --- AWS lightsail put-alarm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_alarm(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "put-alarm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_alarm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "put-alarm" }, input, callbacks)
 end
 
 --- AWS lightsail put-instance-public-ports operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_instance_public_ports(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "put-instance-public-ports" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_instance_public_ports(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "put-instance-public-ports" }, input, callbacks)
 end
 
 --- AWS lightsail reboot-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reboot_instance(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "reboot-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reboot_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "reboot-instance" }, input, callbacks)
 end
 
 --- AWS lightsail reboot-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reboot_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "reboot-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reboot_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "reboot-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail register-container-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_container_image(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "register-container-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_container_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "register-container-image" }, input, callbacks)
 end
 
 --- AWS lightsail release-static-ip operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.release_static_ip(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "release-static-ip" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.release_static_ip(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "release-static-ip" }, input, callbacks)
 end
 
 --- AWS lightsail reset-distribution-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reset_distribution_cache(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "reset-distribution-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reset_distribution_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "reset-distribution-cache" }, input, callbacks)
 end
 
 --- AWS lightsail send-contact-method-verification operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_contact_method_verification(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "send-contact-method-verification" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_contact_method_verification(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "send-contact-method-verification" }, input, callbacks)
 end
 
 --- AWS lightsail set-ip-address-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_ip_address_type(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "set-ip-address-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_ip_address_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "set-ip-address-type" }, input, callbacks)
 end
 
 --- AWS lightsail set-resource-access-for-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_resource_access_for_bucket(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "set-resource-access-for-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_resource_access_for_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "set-resource-access-for-bucket" }, input, callbacks)
 end
 
 --- AWS lightsail setup-instance-https operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.setup_instance_https(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "setup-instance-https" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.setup_instance_https(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "setup-instance-https" }, input, callbacks)
 end
 
 --- AWS lightsail start-gui-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_gui_session(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "start-gui-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_gui_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "start-gui-session" }, input, callbacks)
 end
 
 --- AWS lightsail start-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_instance(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "start-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "start-instance" }, input, callbacks)
 end
 
 --- AWS lightsail start-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "start-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "start-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail stop-gui-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_gui_session(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "stop-gui-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_gui_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "stop-gui-session" }, input, callbacks)
 end
 
 --- AWS lightsail stop-instance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_instance(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "stop-instance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_instance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "stop-instance" }, input, callbacks)
 end
 
 --- AWS lightsail stop-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.stop_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "stop-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.stop_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "stop-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "tag-resource" }, input, callbacks)
 end
 
 --- AWS lightsail test-alarm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_alarm(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "test-alarm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_alarm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "test-alarm" }, input, callbacks)
 end
 
 --- AWS lightsail unpeer-vpc operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.unpeer_vpc(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "unpeer-vpc" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.unpeer_vpc(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "unpeer-vpc" }, input, callbacks)
 end
 
 --- AWS lightsail untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "untag-resource" }, input, callbacks)
 end
 
 --- AWS lightsail update-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bucket(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-bucket" }, input, callbacks)
 end
 
 --- AWS lightsail update-bucket-bundle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_bucket_bundle(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-bucket-bundle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_bucket_bundle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-bucket-bundle" }, input, callbacks)
 end
 
 --- AWS lightsail update-container-service operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_container_service(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-container-service" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_container_service(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-container-service" }, input, callbacks)
 end
 
 --- AWS lightsail update-distribution operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_distribution(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-distribution" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_distribution(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-distribution" }, input, callbacks)
 end
 
 --- AWS lightsail update-distribution-bundle operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_distribution_bundle(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-distribution-bundle" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_distribution_bundle(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-distribution-bundle" }, input, callbacks)
 end
 
 --- AWS lightsail update-domain-entry operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_entry(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-domain-entry" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_entry(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-domain-entry" }, input, callbacks)
 end
 
 --- AWS lightsail update-instance-metadata-options operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_instance_metadata_options(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-instance-metadata-options" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_instance_metadata_options(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-instance-metadata-options" }, input, callbacks)
 end
 
 --- AWS lightsail update-load-balancer-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_load_balancer_attribute(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-load-balancer-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_load_balancer_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-load-balancer-attribute" }, input, callbacks)
 end
 
 --- AWS lightsail update-relational-database operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_relational_database(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-relational-database" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_relational_database(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-relational-database" }, input, callbacks)
 end
 
 --- AWS lightsail update-relational-database-parameters operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_relational_database_parameters(input)
-	return common.execute_aws_command_skeleton({ "lightsail", "update-relational-database-parameters" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_relational_database_parameters(input, callbacks)
+	return common.execute_aws_command_skeleton({ "lightsail", "update-relational-database-parameters" }, input, callbacks)
 end
 
 return M

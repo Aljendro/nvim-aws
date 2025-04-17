@@ -8,23 +8,26 @@ local M = {}
 
 --- AWS personalize-runtime get-action-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_action_recommendations(input)
-	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-action-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_action_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-action-recommendations" }, input, callbacks)
 end
 
 --- AWS personalize-runtime get-personalized-ranking operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_personalized_ranking(input)
-	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-personalized-ranking" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_personalized_ranking(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-personalized-ranking" }, input, callbacks)
 end
 
 --- AWS personalize-runtime get-recommendations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_recommendations(input)
-	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-recommendations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_recommendations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-recommendations" }, input, callbacks)
 end
 
 return M

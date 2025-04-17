@@ -8,142 +8,162 @@ local M = {}
 
 --- AWS bedrock-agent-runtime create-invocation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_invocation(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "create-invocation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_invocation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "create-invocation" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime create-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_session(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "create-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "create-session" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime delete-agent-memory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_agent_memory(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "delete-agent-memory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_agent_memory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "delete-agent-memory" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime delete-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_session(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "delete-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "delete-session" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime end-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.end_session(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "end-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.end_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "end-session" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime generate-query operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.generate_query(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "generate-query" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.generate_query(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "generate-query" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime get-agent-memory operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_agent_memory(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-agent-memory" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_agent_memory(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-agent-memory" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime get-invocation-step operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_invocation_step(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-invocation-step" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_invocation_step(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-invocation-step" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime get-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "get-session" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime list-invocation-steps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invocation_steps(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-invocation-steps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invocation_steps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-invocation-steps" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime list-invocations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_invocations(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-invocations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_invocations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-invocations" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime list-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sessions(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-sessions" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime put-invocation-step operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_invocation_step(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "put-invocation-step" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_invocation_step(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "put-invocation-step" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime rerank operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rerank(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "rerank" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rerank(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "rerank" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime retrieve operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "retrieve" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "retrieve" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime retrieve-and-generate operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve_and_generate(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "retrieve-and-generate" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve_and_generate(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "retrieve-and-generate" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "tag-resource" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "untag-resource" }, input, callbacks)
 end
 
 --- AWS bedrock-agent-runtime update-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_session(input)
-	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "update-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "bedrock-agent-runtime", "update-session" }, input, callbacks)
 end
 
 return M

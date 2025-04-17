@@ -8,93 +8,106 @@ local M = {}
 
 --- AWS repostspace batch-add-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_add_role(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "batch-add-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_add_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "batch-add-role" }, input, callbacks)
 end
 
 --- AWS repostspace batch-remove-role operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_remove_role(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "batch-remove-role" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_remove_role(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "batch-remove-role" }, input, callbacks)
 end
 
 --- AWS repostspace create-space operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_space(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "create-space" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_space(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "create-space" }, input, callbacks)
 end
 
 --- AWS repostspace delete-space operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_space(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "delete-space" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_space(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "delete-space" }, input, callbacks)
 end
 
 --- AWS repostspace deregister-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deregister_admin(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "deregister-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deregister_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "deregister-admin" }, input, callbacks)
 end
 
 --- AWS repostspace get-space operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_space(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "get-space" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_space(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "get-space" }, input, callbacks)
 end
 
 --- AWS repostspace list-spaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_spaces(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "list-spaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_spaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "list-spaces" }, input, callbacks)
 end
 
 --- AWS repostspace list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS repostspace register-admin operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_admin(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "register-admin" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_admin(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "register-admin" }, input, callbacks)
 end
 
 --- AWS repostspace send-invites operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_invites(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "send-invites" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_invites(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "send-invites" }, input, callbacks)
 end
 
 --- AWS repostspace tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "tag-resource" }, input, callbacks)
 end
 
 --- AWS repostspace untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "untag-resource" }, input, callbacks)
 end
 
 --- AWS repostspace update-space operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_space(input)
-	return common.execute_aws_command_skeleton({ "repostspace", "update-space" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_space(input, callbacks)
+	return common.execute_aws_command_skeleton({ "repostspace", "update-space" }, input, callbacks)
 end
 
 return M

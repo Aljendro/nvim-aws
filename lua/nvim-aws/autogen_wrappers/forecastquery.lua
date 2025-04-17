@@ -8,16 +8,18 @@ local M = {}
 
 --- AWS forecastquery query-forecast operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.query_forecast(input)
-	return common.execute_aws_command_skeleton({ "forecastquery", "query-forecast" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.query_forecast(input, callbacks)
+	return common.execute_aws_command_skeleton({ "forecastquery", "query-forecast" }, input, callbacks)
 end
 
 --- AWS forecastquery query-what-if-forecast operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.query_what_if_forecast(input)
-	return common.execute_aws_command_skeleton({ "forecastquery", "query-what-if-forecast" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.query_what_if_forecast(input, callbacks)
+	return common.execute_aws_command_skeleton({ "forecastquery", "query-what-if-forecast" }, input, callbacks)
 end
 
 return M

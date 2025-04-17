@@ -8,9 +8,10 @@ local M = {}
 
 --- AWS qldb-session send-command operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.send_command(input)
-	return common.execute_aws_command_skeleton({ "qldb-session", "send-command" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.send_command(input, callbacks)
+	return common.execute_aws_command_skeleton({ "qldb-session", "send-command" }, input, callbacks)
 end
 
 return M

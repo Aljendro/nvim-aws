@@ -8,23 +8,26 @@ local M = {}
 
 --- AWS cloudsearchdomain search operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search(input)
-	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "search" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "search" }, input, callbacks)
 end
 
 --- AWS cloudsearchdomain suggest operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.suggest(input)
-	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "suggest" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.suggest(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "suggest" }, input, callbacks)
 end
 
 --- AWS cloudsearchdomain upload-documents operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.upload_documents(input)
-	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "upload-documents" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.upload_documents(input, callbacks)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "upload-documents" }, input, callbacks)
 end
 
 return M

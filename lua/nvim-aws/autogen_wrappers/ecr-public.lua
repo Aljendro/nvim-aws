@@ -8,170 +8,194 @@ local M = {}
 
 --- AWS ecr-public batch-check-layer-availability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_check_layer_availability(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "batch-check-layer-availability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_check_layer_availability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "batch-check-layer-availability" }, input, callbacks)
 end
 
 --- AWS ecr-public batch-delete-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_delete_image(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "batch-delete-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_delete_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "batch-delete-image" }, input, callbacks)
 end
 
 --- AWS ecr-public complete-layer-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.complete_layer_upload(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "complete-layer-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.complete_layer_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "complete-layer-upload" }, input, callbacks)
 end
 
 --- AWS ecr-public create-repository operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_repository(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "create-repository" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_repository(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "create-repository" }, input, callbacks)
 end
 
 --- AWS ecr-public delete-repository operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_repository(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_repository(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository" }, input, callbacks)
 end
 
 --- AWS ecr-public delete-repository-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_repository_policy(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_repository_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository-policy" }, input, callbacks)
 end
 
 --- AWS ecr-public describe-image-tags operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_image_tags(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "describe-image-tags" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_image_tags(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-image-tags" }, input, callbacks)
 end
 
 --- AWS ecr-public describe-images operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_images(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "describe-images" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_images(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-images" }, input, callbacks)
 end
 
 --- AWS ecr-public describe-registries operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_registries(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "describe-registries" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_registries(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-registries" }, input, callbacks)
 end
 
 --- AWS ecr-public describe-repositories operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_repositories(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "describe-repositories" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_repositories(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-repositories" }, input, callbacks)
 end
 
 --- AWS ecr-public get-authorization-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_authorization_token(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "get-authorization-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_authorization_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-authorization-token" }, input, callbacks)
 end
 
 --- AWS ecr-public get-login-password operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_login_password(input)
-	return common.execute_aws_command({ "ecr-public", "get-login-password" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_login_password(input, callbacks)
+	return common.execute_aws_command({ "ecr-public", "get-login-password" }, input, callbacks)
 end
 
 --- AWS ecr-public get-registry-catalog-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_registry_catalog_data(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "get-registry-catalog-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_registry_catalog_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-registry-catalog-data" }, input, callbacks)
 end
 
 --- AWS ecr-public get-repository-catalog-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_repository_catalog_data(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-catalog-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_repository_catalog_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-catalog-data" }, input, callbacks)
 end
 
 --- AWS ecr-public get-repository-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_repository_policy(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_repository_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-policy" }, input, callbacks)
 end
 
 --- AWS ecr-public initiate-layer-upload operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.initiate_layer_upload(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "initiate-layer-upload" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.initiate_layer_upload(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "initiate-layer-upload" }, input, callbacks)
 end
 
 --- AWS ecr-public list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS ecr-public put-image operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_image(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "put-image" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_image(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-image" }, input, callbacks)
 end
 
 --- AWS ecr-public put-registry-catalog-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_registry_catalog_data(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "put-registry-catalog-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_registry_catalog_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-registry-catalog-data" }, input, callbacks)
 end
 
 --- AWS ecr-public put-repository-catalog-data operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_repository_catalog_data(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "put-repository-catalog-data" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_repository_catalog_data(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-repository-catalog-data" }, input, callbacks)
 end
 
 --- AWS ecr-public set-repository-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.set_repository_policy(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "set-repository-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.set_repository_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "set-repository-policy" }, input, callbacks)
 end
 
 --- AWS ecr-public tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "tag-resource" }, input, callbacks)
 end
 
 --- AWS ecr-public untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "untag-resource" }, input, callbacks)
 end
 
 --- AWS ecr-public upload-layer-part operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.upload_layer_part(input)
-	return common.execute_aws_command_skeleton({ "ecr-public", "upload-layer-part" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.upload_layer_part(input, callbacks)
+	return common.execute_aws_command_skeleton({ "ecr-public", "upload-layer-part" }, input, callbacks)
 end
 
 return M

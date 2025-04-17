@@ -8,198 +8,226 @@ local M = {}
 
 --- AWS amplifyuibuilder create-component operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_component(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-component" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_component(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-component" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder create-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_form(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-form" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder create-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_theme(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "create-theme" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder delete-component operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_component(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-component" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_component(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-component" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder delete-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_form(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-form" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder delete-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_theme(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "delete-theme" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder exchange-code-for-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.exchange_code_for_token(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "exchange-code-for-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.exchange_code_for_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "exchange-code-for-token" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder export-components operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_components(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-components" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_components(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-components" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder export-forms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_forms(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-forms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_forms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-forms" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder export-themes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_themes(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-themes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_themes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "export-themes" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder get-codegen-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_codegen_job(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-codegen-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_codegen_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-codegen-job" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder get-component operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_component(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-component" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_component(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-component" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder get-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_form(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-form" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder get-metadata operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_metadata(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-metadata" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_metadata(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-metadata" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder get-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_theme(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "get-theme" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder list-codegen-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_codegen_jobs(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-codegen-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_codegen_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-codegen-jobs" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder list-components operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_components(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-components" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_components(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-components" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder list-forms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_forms(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-forms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_forms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-forms" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder list-themes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_themes(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-themes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_themes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "list-themes" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder put-metadata-flag operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_metadata_flag(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "put-metadata-flag" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_metadata_flag(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "put-metadata-flag" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder refresh-token operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.refresh_token(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "refresh-token" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.refresh_token(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "refresh-token" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder start-codegen-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_codegen_job(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "start-codegen-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_codegen_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "start-codegen-job" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "tag-resource" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "untag-resource" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder update-component operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_component(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-component" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_component(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-component" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder update-form operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_form(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-form" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_form(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-form" }, input, callbacks)
 end
 
 --- AWS amplifyuibuilder update-theme operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_theme(input)
-	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-theme" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_theme(input, callbacks)
+	return common.execute_aws_command_skeleton({ "amplifyuibuilder", "update-theme" }, input, callbacks)
 end
 
 return M

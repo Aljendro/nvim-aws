@@ -8,37 +8,42 @@ local M = {}
 
 --- AWS sso get-role-credentials operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_role_credentials(input)
-	return common.execute_aws_command_skeleton({ "sso", "get-role-credentials" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_role_credentials(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso", "get-role-credentials" }, input, callbacks)
 end
 
 --- AWS sso list-account-roles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_account_roles(input)
-	return common.execute_aws_command_skeleton({ "sso", "list-account-roles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_account_roles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso", "list-account-roles" }, input, callbacks)
 end
 
 --- AWS sso list-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_accounts(input)
-	return common.execute_aws_command_skeleton({ "sso", "list-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "sso", "list-accounts" }, input, callbacks)
 end
 
 --- AWS sso login operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.login(input)
-	return common.execute_aws_command({ "sso", "login" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.login(input, callbacks)
+	return common.execute_aws_command({ "sso", "login" }, input, callbacks)
 end
 
 --- AWS sso logout operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.logout(input)
-	return common.execute_aws_command({ "sso", "logout" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.logout(input, callbacks)
+	return common.execute_aws_command({ "sso", "logout" }, input, callbacks)
 end
 
 return M

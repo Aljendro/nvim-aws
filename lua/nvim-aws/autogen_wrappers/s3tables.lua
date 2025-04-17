@@ -8,184 +8,210 @@ local M = {}
 
 --- AWS s3tables create-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_namespace(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "create-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "create-namespace" }, input, callbacks)
 end
 
 --- AWS s3tables create-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_table(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "create-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "create-table" }, input, callbacks)
 end
 
 --- AWS s3tables create-table-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_table_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "create-table-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_table_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "create-table-bucket" }, input, callbacks)
 end
 
 --- AWS s3tables delete-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_namespace(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "delete-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "delete-namespace" }, input, callbacks)
 end
 
 --- AWS s3tables delete-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "delete-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "delete-table" }, input, callbacks)
 end
 
 --- AWS s3tables delete-table-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-bucket" }, input, callbacks)
 end
 
 --- AWS s3tables delete-table-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3tables delete-table-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_table_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_table_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "delete-table-policy" }, input, callbacks)
 end
 
 --- AWS s3tables get-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_namespace(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-namespace" }, input, callbacks)
 end
 
 --- AWS s3tables get-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-bucket operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_bucket(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_bucket(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-bucket-maintenance-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_bucket_maintenance_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket-maintenance-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_bucket_maintenance_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket-maintenance-configuration" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-maintenance-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_maintenance_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-maintenance-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_maintenance_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-maintenance-configuration" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-maintenance-job-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_maintenance_job_status(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-maintenance-job-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_maintenance_job_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-maintenance-job-status" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-metadata-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_metadata_location(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-metadata-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_metadata_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-metadata-location" }, input, callbacks)
 end
 
 --- AWS s3tables get-table-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_table_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "get-table-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_table_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "get-table-policy" }, input, callbacks)
 end
 
 --- AWS s3tables list-namespaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_namespaces(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "list-namespaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_namespaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "list-namespaces" }, input, callbacks)
 end
 
 --- AWS s3tables list-table-buckets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_table_buckets(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "list-table-buckets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_table_buckets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "list-table-buckets" }, input, callbacks)
 end
 
 --- AWS s3tables list-tables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tables(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "list-tables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "list-tables" }, input, callbacks)
 end
 
 --- AWS s3tables put-table-bucket-maintenance-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_table_bucket_maintenance_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "put-table-bucket-maintenance-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_table_bucket_maintenance_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "put-table-bucket-maintenance-configuration" }, input, callbacks)
 end
 
 --- AWS s3tables put-table-bucket-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_table_bucket_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "put-table-bucket-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_table_bucket_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "put-table-bucket-policy" }, input, callbacks)
 end
 
 --- AWS s3tables put-table-maintenance-configuration operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_table_maintenance_configuration(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "put-table-maintenance-configuration" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_table_maintenance_configuration(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "put-table-maintenance-configuration" }, input, callbacks)
 end
 
 --- AWS s3tables put-table-policy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_table_policy(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "put-table-policy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_table_policy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "put-table-policy" }, input, callbacks)
 end
 
 --- AWS s3tables rename-table operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rename_table(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "rename-table" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rename_table(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "rename-table" }, input, callbacks)
 end
 
 --- AWS s3tables update-table-metadata-location operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_table_metadata_location(input)
-	return common.execute_aws_command_skeleton({ "s3tables", "update-table-metadata-location" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_table_metadata_location(input, callbacks)
+	return common.execute_aws_command_skeleton({ "s3tables", "update-table-metadata-location" }, input, callbacks)
 end
 
 return M

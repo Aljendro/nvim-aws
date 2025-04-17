@@ -8,142 +8,162 @@ local M = {}
 
 --- AWS opsworks-cm associate-node operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_node(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "associate-node" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_node(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "associate-node" }, input, callbacks)
 end
 
 --- AWS opsworks-cm create-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_backup(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "create-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "create-backup" }, input, callbacks)
 end
 
 --- AWS opsworks-cm create-server operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_server(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "create-server" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_server(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "create-server" }, input, callbacks)
 end
 
 --- AWS opsworks-cm delete-backup operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_backup(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "delete-backup" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_backup(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "delete-backup" }, input, callbacks)
 end
 
 --- AWS opsworks-cm delete-server operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_server(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "delete-server" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_server(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "delete-server" }, input, callbacks)
 end
 
 --- AWS opsworks-cm describe-account-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_account_attributes(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-account-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_account_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-account-attributes" }, input, callbacks)
 end
 
 --- AWS opsworks-cm describe-backups operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_backups(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-backups" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_backups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-backups" }, input, callbacks)
 end
 
 --- AWS opsworks-cm describe-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_events(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-events" }, input, callbacks)
 end
 
 --- AWS opsworks-cm describe-node-association-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_node_association_status(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-node-association-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_node_association_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-node-association-status" }, input, callbacks)
 end
 
 --- AWS opsworks-cm describe-servers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_servers(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-servers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_servers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "describe-servers" }, input, callbacks)
 end
 
 --- AWS opsworks-cm disassociate-node operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_node(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "disassociate-node" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_node(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "disassociate-node" }, input, callbacks)
 end
 
 --- AWS opsworks-cm export-server-engine-attribute operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.export_server_engine_attribute(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "export-server-engine-attribute" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.export_server_engine_attribute(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "export-server-engine-attribute" }, input, callbacks)
 end
 
 --- AWS opsworks-cm list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS opsworks-cm restore-server operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.restore_server(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "restore-server" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.restore_server(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "restore-server" }, input, callbacks)
 end
 
 --- AWS opsworks-cm start-maintenance operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_maintenance(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "start-maintenance" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_maintenance(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "start-maintenance" }, input, callbacks)
 end
 
 --- AWS opsworks-cm tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "tag-resource" }, input, callbacks)
 end
 
 --- AWS opsworks-cm untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "untag-resource" }, input, callbacks)
 end
 
 --- AWS opsworks-cm update-server operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_server(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "update-server" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_server(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "update-server" }, input, callbacks)
 end
 
 --- AWS opsworks-cm update-server-engine-attributes operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_server_engine_attributes(input)
-	return common.execute_aws_command_skeleton({ "opsworks-cm", "update-server-engine-attributes" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_server_engine_attributes(input, callbacks)
+	return common.execute_aws_command_skeleton({ "opsworks-cm", "update-server-engine-attributes" }, input, callbacks)
 end
 
 --- AWS opsworks-cm wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "opsworks-cm", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "opsworks-cm", "wait" }, input, callbacks)
 end
 
 return M

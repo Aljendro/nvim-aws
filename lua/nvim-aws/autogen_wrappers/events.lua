@@ -8,408 +8,466 @@ local M = {}
 
 --- AWS events activate-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.activate_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "activate-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.activate_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "activate-event-source" }, input, callbacks)
 end
 
 --- AWS events cancel-replay operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_replay(input)
-	return common.execute_aws_command_skeleton({ "events", "cancel-replay" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_replay(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "cancel-replay" }, input, callbacks)
 end
 
 --- AWS events create-api-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api_destination(input)
-	return common.execute_aws_command_skeleton({ "events", "create-api-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-api-destination" }, input, callbacks)
 end
 
 --- AWS events create-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_archive(input)
-	return common.execute_aws_command_skeleton({ "events", "create-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-archive" }, input, callbacks)
 end
 
 --- AWS events create-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_connection(input)
-	return common.execute_aws_command_skeleton({ "events", "create-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-connection" }, input, callbacks)
 end
 
 --- AWS events create-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_endpoint(input)
-	return common.execute_aws_command_skeleton({ "events", "create-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-endpoint" }, input, callbacks)
 end
 
 --- AWS events create-event-bus operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_event_bus(input)
-	return common.execute_aws_command_skeleton({ "events", "create-event-bus" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_event_bus(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-event-bus" }, input, callbacks)
 end
 
 --- AWS events create-partner-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_partner_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "create-partner-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_partner_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "create-partner-event-source" }, input, callbacks)
 end
 
 --- AWS events deactivate-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deactivate_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "deactivate-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deactivate_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "deactivate-event-source" }, input, callbacks)
 end
 
 --- AWS events deauthorize-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.deauthorize_connection(input)
-	return common.execute_aws_command_skeleton({ "events", "deauthorize-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.deauthorize_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "deauthorize-connection" }, input, callbacks)
 end
 
 --- AWS events delete-api-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api_destination(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-api-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-api-destination" }, input, callbacks)
 end
 
 --- AWS events delete-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_archive(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-archive" }, input, callbacks)
 end
 
 --- AWS events delete-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_connection(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-connection" }, input, callbacks)
 end
 
 --- AWS events delete-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_endpoint(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-endpoint" }, input, callbacks)
 end
 
 --- AWS events delete-event-bus operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_event_bus(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-event-bus" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_event_bus(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-event-bus" }, input, callbacks)
 end
 
 --- AWS events delete-partner-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_partner_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-partner-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_partner_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-partner-event-source" }, input, callbacks)
 end
 
 --- AWS events delete-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "delete-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "delete-rule" }, input, callbacks)
 end
 
 --- AWS events describe-api-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_api_destination(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-api-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_api_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-api-destination" }, input, callbacks)
 end
 
 --- AWS events describe-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_archive(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-archive" }, input, callbacks)
 end
 
 --- AWS events describe-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_connection(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-connection" }, input, callbacks)
 end
 
 --- AWS events describe-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_endpoint(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-endpoint" }, input, callbacks)
 end
 
 --- AWS events describe-event-bus operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_bus(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-event-bus" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_bus(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-event-bus" }, input, callbacks)
 end
 
 --- AWS events describe-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-event-source" }, input, callbacks)
 end
 
 --- AWS events describe-partner-event-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_partner_event_source(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-partner-event-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_partner_event_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-partner-event-source" }, input, callbacks)
 end
 
 --- AWS events describe-replay operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_replay(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-replay" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_replay(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-replay" }, input, callbacks)
 end
 
 --- AWS events describe-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.describe_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "describe-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.describe_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "describe-rule" }, input, callbacks)
 end
 
 --- AWS events disable-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "disable-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "disable-rule" }, input, callbacks)
 end
 
 --- AWS events enable-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "enable-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "enable-rule" }, input, callbacks)
 end
 
 --- AWS events list-api-destinations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_api_destinations(input)
-	return common.execute_aws_command_skeleton({ "events", "list-api-destinations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_api_destinations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-api-destinations" }, input, callbacks)
 end
 
 --- AWS events list-archives operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_archives(input)
-	return common.execute_aws_command_skeleton({ "events", "list-archives" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_archives(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-archives" }, input, callbacks)
 end
 
 --- AWS events list-connections operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_connections(input)
-	return common.execute_aws_command_skeleton({ "events", "list-connections" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_connections(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-connections" }, input, callbacks)
 end
 
 --- AWS events list-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_endpoints(input)
-	return common.execute_aws_command_skeleton({ "events", "list-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-endpoints" }, input, callbacks)
 end
 
 --- AWS events list-event-buses operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_buses(input)
-	return common.execute_aws_command_skeleton({ "events", "list-event-buses" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_buses(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-event-buses" }, input, callbacks)
 end
 
 --- AWS events list-event-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_event_sources(input)
-	return common.execute_aws_command_skeleton({ "events", "list-event-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_event_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-event-sources" }, input, callbacks)
 end
 
 --- AWS events list-partner-event-source-accounts operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_partner_event_source_accounts(input)
-	return common.execute_aws_command_skeleton({ "events", "list-partner-event-source-accounts" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_partner_event_source_accounts(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-partner-event-source-accounts" }, input, callbacks)
 end
 
 --- AWS events list-partner-event-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_partner_event_sources(input)
-	return common.execute_aws_command_skeleton({ "events", "list-partner-event-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_partner_event_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-partner-event-sources" }, input, callbacks)
 end
 
 --- AWS events list-replays operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_replays(input)
-	return common.execute_aws_command_skeleton({ "events", "list-replays" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_replays(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-replays" }, input, callbacks)
 end
 
 --- AWS events list-rule-names-by-target operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rule_names_by_target(input)
-	return common.execute_aws_command_skeleton({ "events", "list-rule-names-by-target" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rule_names_by_target(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-rule-names-by-target" }, input, callbacks)
 end
 
 --- AWS events list-rules operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_rules(input)
-	return common.execute_aws_command_skeleton({ "events", "list-rules" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_rules(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-rules" }, input, callbacks)
 end
 
 --- AWS events list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "events", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS events list-targets-by-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_targets_by_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "list-targets-by-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_targets_by_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "list-targets-by-rule" }, input, callbacks)
 end
 
 --- AWS events put-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_events(input)
-	return common.execute_aws_command_skeleton({ "events", "put-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "put-events" }, input, callbacks)
 end
 
 --- AWS events put-partner-events operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_partner_events(input)
-	return common.execute_aws_command_skeleton({ "events", "put-partner-events" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_partner_events(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "put-partner-events" }, input, callbacks)
 end
 
 --- AWS events put-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_permission(input)
-	return common.execute_aws_command_skeleton({ "events", "put-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "put-permission" }, input, callbacks)
 end
 
 --- AWS events put-rule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_rule(input)
-	return common.execute_aws_command_skeleton({ "events", "put-rule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_rule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "put-rule" }, input, callbacks)
 end
 
 --- AWS events put-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_targets(input)
-	return common.execute_aws_command_skeleton({ "events", "put-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "put-targets" }, input, callbacks)
 end
 
 --- AWS events remove-permission operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_permission(input)
-	return common.execute_aws_command_skeleton({ "events", "remove-permission" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_permission(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "remove-permission" }, input, callbacks)
 end
 
 --- AWS events remove-targets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.remove_targets(input)
-	return common.execute_aws_command_skeleton({ "events", "remove-targets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.remove_targets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "remove-targets" }, input, callbacks)
 end
 
 --- AWS events start-replay operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_replay(input)
-	return common.execute_aws_command_skeleton({ "events", "start-replay" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_replay(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "start-replay" }, input, callbacks)
 end
 
 --- AWS events tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "events", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "tag-resource" }, input, callbacks)
 end
 
 --- AWS events test-event-pattern operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.test_event_pattern(input)
-	return common.execute_aws_command_skeleton({ "events", "test-event-pattern" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.test_event_pattern(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "test-event-pattern" }, input, callbacks)
 end
 
 --- AWS events untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "events", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "untag-resource" }, input, callbacks)
 end
 
 --- AWS events update-api-destination operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api_destination(input)
-	return common.execute_aws_command_skeleton({ "events", "update-api-destination" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api_destination(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "update-api-destination" }, input, callbacks)
 end
 
 --- AWS events update-archive operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_archive(input)
-	return common.execute_aws_command_skeleton({ "events", "update-archive" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_archive(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "update-archive" }, input, callbacks)
 end
 
 --- AWS events update-connection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_connection(input)
-	return common.execute_aws_command_skeleton({ "events", "update-connection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_connection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "update-connection" }, input, callbacks)
 end
 
 --- AWS events update-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_endpoint(input)
-	return common.execute_aws_command_skeleton({ "events", "update-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "update-endpoint" }, input, callbacks)
 end
 
 --- AWS events update-event-bus operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_event_bus(input)
-	return common.execute_aws_command_skeleton({ "events", "update-event-bus" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_event_bus(input, callbacks)
+	return common.execute_aws_command_skeleton({ "events", "update-event-bus" }, input, callbacks)
 end
 
 --- AWS events wizard operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wizard(input)
-	return common.execute_aws_command({ "events", "wizard" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wizard(input, callbacks)
+	return common.execute_aws_command({ "events", "wizard" }, input, callbacks)
 end
 
 return M

@@ -8,240 +8,274 @@ local M = {}
 
 --- AWS route53domains accept-domain-transfer-from-another-aws-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.accept_domain_transfer_from_another_aws_account(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "accept-domain-transfer-from-another-aws-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.accept_domain_transfer_from_another_aws_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "accept-domain-transfer-from-another-aws-account" }, input, callbacks)
 end
 
 --- AWS route53domains associate-delegation-signer-to-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_delegation_signer_to_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "associate-delegation-signer-to-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_delegation_signer_to_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "associate-delegation-signer-to-domain" }, input, callbacks)
 end
 
 --- AWS route53domains cancel-domain-transfer-to-another-aws-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cancel_domain_transfer_to_another_aws_account(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "cancel-domain-transfer-to-another-aws-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cancel_domain_transfer_to_another_aws_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "cancel-domain-transfer-to-another-aws-account" }, input, callbacks)
 end
 
 --- AWS route53domains check-domain-availability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.check_domain_availability(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "check-domain-availability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.check_domain_availability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "check-domain-availability" }, input, callbacks)
 end
 
 --- AWS route53domains check-domain-transferability operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.check_domain_transferability(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "check-domain-transferability" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.check_domain_transferability(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "check-domain-transferability" }, input, callbacks)
 end
 
 --- AWS route53domains delete-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "delete-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "delete-domain" }, input, callbacks)
 end
 
 --- AWS route53domains delete-tags-for-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_tags_for_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "delete-tags-for-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_tags_for_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "delete-tags-for-domain" }, input, callbacks)
 end
 
 --- AWS route53domains disable-domain-auto-renew operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_domain_auto_renew(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "disable-domain-auto-renew" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_domain_auto_renew(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "disable-domain-auto-renew" }, input, callbacks)
 end
 
 --- AWS route53domains disable-domain-transfer-lock operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disable_domain_transfer_lock(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "disable-domain-transfer-lock" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disable_domain_transfer_lock(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "disable-domain-transfer-lock" }, input, callbacks)
 end
 
 --- AWS route53domains disassociate-delegation-signer-from-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_delegation_signer_from_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "disassociate-delegation-signer-from-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_delegation_signer_from_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "disassociate-delegation-signer-from-domain" }, input, callbacks)
 end
 
 --- AWS route53domains enable-domain-auto-renew operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_domain_auto_renew(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "enable-domain-auto-renew" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_domain_auto_renew(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "enable-domain-auto-renew" }, input, callbacks)
 end
 
 --- AWS route53domains enable-domain-transfer-lock operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.enable_domain_transfer_lock(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "enable-domain-transfer-lock" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.enable_domain_transfer_lock(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "enable-domain-transfer-lock" }, input, callbacks)
 end
 
 --- AWS route53domains get-contact-reachability-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_contact_reachability_status(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "get-contact-reachability-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_contact_reachability_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "get-contact-reachability-status" }, input, callbacks)
 end
 
 --- AWS route53domains get-domain-detail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_detail(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "get-domain-detail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_detail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "get-domain-detail" }, input, callbacks)
 end
 
 --- AWS route53domains get-domain-suggestions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_suggestions(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "get-domain-suggestions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_suggestions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "get-domain-suggestions" }, input, callbacks)
 end
 
 --- AWS route53domains get-operation-detail operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_operation_detail(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "get-operation-detail" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_operation_detail(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "get-operation-detail" }, input, callbacks)
 end
 
 --- AWS route53domains list-domains operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domains(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "list-domains" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domains(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "list-domains" }, input, callbacks)
 end
 
 --- AWS route53domains list-operations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_operations(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "list-operations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_operations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "list-operations" }, input, callbacks)
 end
 
 --- AWS route53domains list-prices operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_prices(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "list-prices" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_prices(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "list-prices" }, input, callbacks)
 end
 
 --- AWS route53domains list-tags-for-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "list-tags-for-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "list-tags-for-domain" }, input, callbacks)
 end
 
 --- AWS route53domains push-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.push_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "push-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.push_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "push-domain" }, input, callbacks)
 end
 
 --- AWS route53domains register-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.register_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "register-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.register_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "register-domain" }, input, callbacks)
 end
 
 --- AWS route53domains reject-domain-transfer-from-another-aws-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.reject_domain_transfer_from_another_aws_account(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "reject-domain-transfer-from-another-aws-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.reject_domain_transfer_from_another_aws_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "reject-domain-transfer-from-another-aws-account" }, input, callbacks)
 end
 
 --- AWS route53domains renew-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.renew_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "renew-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.renew_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "renew-domain" }, input, callbacks)
 end
 
 --- AWS route53domains resend-contact-reachability-email operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resend_contact_reachability_email(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "resend-contact-reachability-email" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resend_contact_reachability_email(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "resend-contact-reachability-email" }, input, callbacks)
 end
 
 --- AWS route53domains resend-operation-authorization operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.resend_operation_authorization(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "resend-operation-authorization" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.resend_operation_authorization(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "resend-operation-authorization" }, input, callbacks)
 end
 
 --- AWS route53domains retrieve-domain-auth-code operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.retrieve_domain_auth_code(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "retrieve-domain-auth-code" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.retrieve_domain_auth_code(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "retrieve-domain-auth-code" }, input, callbacks)
 end
 
 --- AWS route53domains transfer-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.transfer_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "transfer-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.transfer_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "transfer-domain" }, input, callbacks)
 end
 
 --- AWS route53domains transfer-domain-to-another-aws-account operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.transfer_domain_to_another_aws_account(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "transfer-domain-to-another-aws-account" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.transfer_domain_to_another_aws_account(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "transfer-domain-to-another-aws-account" }, input, callbacks)
 end
 
 --- AWS route53domains update-domain-contact operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_contact(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-contact" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_contact(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-contact" }, input, callbacks)
 end
 
 --- AWS route53domains update-domain-contact-privacy operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_contact_privacy(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-contact-privacy" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_contact_privacy(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-contact-privacy" }, input, callbacks)
 end
 
 --- AWS route53domains update-domain-nameservers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_nameservers(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-nameservers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_nameservers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "update-domain-nameservers" }, input, callbacks)
 end
 
 --- AWS route53domains update-tags-for-domain operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_tags_for_domain(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "update-tags-for-domain" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_tags_for_domain(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "update-tags-for-domain" }, input, callbacks)
 end
 
 --- AWS route53domains view-billing operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.view_billing(input)
-	return common.execute_aws_command_skeleton({ "route53domains", "view-billing" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.view_billing(input, callbacks)
+	return common.execute_aws_command_skeleton({ "route53domains", "view-billing" }, input, callbacks)
 end
 
 return M

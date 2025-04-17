@@ -8,65 +8,74 @@ local M = {}
 
 --- AWS s3 cp operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.cp(input)
-	return common.execute_aws_command({ "s3", "cp" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.cp(input, callbacks)
+	return common.execute_aws_command({ "s3", "cp" }, input, callbacks)
 end
 
 --- AWS s3 ls operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.ls(input)
-	return common.execute_aws_command({ "s3", "ls" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.ls(input, callbacks)
+	return common.execute_aws_command({ "s3", "ls" }, input, callbacks)
 end
 
 --- AWS s3 mb operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.mb(input)
-	return common.execute_aws_command({ "s3", "mb" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.mb(input, callbacks)
+	return common.execute_aws_command({ "s3", "mb" }, input, callbacks)
 end
 
 --- AWS s3 mv operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.mv(input)
-	return common.execute_aws_command({ "s3", "mv" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.mv(input, callbacks)
+	return common.execute_aws_command({ "s3", "mv" }, input, callbacks)
 end
 
 --- AWS s3 presign operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.presign(input)
-	return common.execute_aws_command({ "s3", "presign" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.presign(input, callbacks)
+	return common.execute_aws_command({ "s3", "presign" }, input, callbacks)
 end
 
 --- AWS s3 rb operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rb(input)
-	return common.execute_aws_command({ "s3", "rb" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rb(input, callbacks)
+	return common.execute_aws_command({ "s3", "rb" }, input, callbacks)
 end
 
 --- AWS s3 rm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.rm(input)
-	return common.execute_aws_command({ "s3", "rm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.rm(input, callbacks)
+	return common.execute_aws_command({ "s3", "rm" }, input, callbacks)
 end
 
 --- AWS s3 sync operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.sync(input)
-	return common.execute_aws_command({ "s3", "sync" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.sync(input, callbacks)
+	return common.execute_aws_command({ "s3", "sync" }, input, callbacks)
 end
 
 --- AWS s3 website operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.website(input)
-	return common.execute_aws_command({ "s3", "website" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.website(input, callbacks)
+	return common.execute_aws_command({ "s3", "website" }, input, callbacks)
 end
 
 return M

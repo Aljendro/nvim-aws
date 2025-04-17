@@ -8,800 +8,914 @@ local M = {}
 
 --- AWS deadline associate-member-to-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_member_to_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_member_to_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-farm" }, input, callbacks)
 end
 
 --- AWS deadline associate-member-to-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_member_to_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_member_to_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-fleet" }, input, callbacks)
 end
 
 --- AWS deadline associate-member-to-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_member_to_job(input)
-	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_member_to_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-job" }, input, callbacks)
 end
 
 --- AWS deadline associate-member-to-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_member_to_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_member_to_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "associate-member-to-queue" }, input, callbacks)
 end
 
 --- AWS deadline assume-fleet-role-for-read operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_fleet_role_for_read(input)
-	return common.execute_aws_command_skeleton({ "deadline", "assume-fleet-role-for-read" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_fleet_role_for_read(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "assume-fleet-role-for-read" }, input, callbacks)
 end
 
 --- AWS deadline assume-fleet-role-for-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_fleet_role_for_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "assume-fleet-role-for-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_fleet_role_for_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "assume-fleet-role-for-worker" }, input, callbacks)
 end
 
 --- AWS deadline assume-queue-role-for-read operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_queue_role_for_read(input)
-	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-read" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_queue_role_for_read(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-read" }, input, callbacks)
 end
 
 --- AWS deadline assume-queue-role-for-user operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_queue_role_for_user(input)
-	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-user" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_queue_role_for_user(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-user" }, input, callbacks)
 end
 
 --- AWS deadline assume-queue-role-for-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.assume_queue_role_for_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.assume_queue_role_for_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "assume-queue-role-for-worker" }, input, callbacks)
 end
 
 --- AWS deadline batch-get-job-entity operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.batch_get_job_entity(input)
-	return common.execute_aws_command_skeleton({ "deadline", "batch-get-job-entity" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.batch_get_job_entity(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "batch-get-job-entity" }, input, callbacks)
 end
 
 --- AWS deadline copy-job-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.copy_job_template(input)
-	return common.execute_aws_command_skeleton({ "deadline", "copy-job-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.copy_job_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "copy-job-template" }, input, callbacks)
 end
 
 --- AWS deadline create-budget operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_budget(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-budget" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_budget(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-budget" }, input, callbacks)
 end
 
 --- AWS deadline create-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-farm" }, input, callbacks)
 end
 
 --- AWS deadline create-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-fleet" }, input, callbacks)
 end
 
 --- AWS deadline create-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_job(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-job" }, input, callbacks)
 end
 
 --- AWS deadline create-license-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_license_endpoint(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-license-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_license_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-license-endpoint" }, input, callbacks)
 end
 
 --- AWS deadline create-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_limit(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-limit" }, input, callbacks)
 end
 
 --- AWS deadline create-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_monitor(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-monitor" }, input, callbacks)
 end
 
 --- AWS deadline create-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-queue" }, input, callbacks)
 end
 
 --- AWS deadline create-queue-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue_environment(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-queue-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-queue-environment" }, input, callbacks)
 end
 
 --- AWS deadline create-queue-fleet-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue_fleet_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-queue-fleet-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue_fleet_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-queue-fleet-association" }, input, callbacks)
 end
 
 --- AWS deadline create-queue-limit-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_queue_limit_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-queue-limit-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_queue_limit_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-queue-limit-association" }, input, callbacks)
 end
 
 --- AWS deadline create-storage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_storage_profile(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-storage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_storage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-storage-profile" }, input, callbacks)
 end
 
 --- AWS deadline create-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "create-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "create-worker" }, input, callbacks)
 end
 
 --- AWS deadline delete-budget operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_budget(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-budget" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_budget(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-budget" }, input, callbacks)
 end
 
 --- AWS deadline delete-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-farm" }, input, callbacks)
 end
 
 --- AWS deadline delete-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-fleet" }, input, callbacks)
 end
 
 --- AWS deadline delete-license-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_license_endpoint(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-license-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_license_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-license-endpoint" }, input, callbacks)
 end
 
 --- AWS deadline delete-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_limit(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-limit" }, input, callbacks)
 end
 
 --- AWS deadline delete-metered-product operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_metered_product(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-metered-product" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_metered_product(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-metered-product" }, input, callbacks)
 end
 
 --- AWS deadline delete-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_monitor(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-monitor" }, input, callbacks)
 end
 
 --- AWS deadline delete-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-queue" }, input, callbacks)
 end
 
 --- AWS deadline delete-queue-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue_environment(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-environment" }, input, callbacks)
 end
 
 --- AWS deadline delete-queue-fleet-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue_fleet_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-fleet-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue_fleet_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-fleet-association" }, input, callbacks)
 end
 
 --- AWS deadline delete-queue-limit-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_queue_limit_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-limit-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_queue_limit_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-queue-limit-association" }, input, callbacks)
 end
 
 --- AWS deadline delete-storage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_storage_profile(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-storage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_storage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-storage-profile" }, input, callbacks)
 end
 
 --- AWS deadline delete-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "delete-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "delete-worker" }, input, callbacks)
 end
 
 --- AWS deadline disassociate-member-from-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member_from_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member_from_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-farm" }, input, callbacks)
 end
 
 --- AWS deadline disassociate-member-from-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member_from_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member_from_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-fleet" }, input, callbacks)
 end
 
 --- AWS deadline disassociate-member-from-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member_from_job(input)
-	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member_from_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-job" }, input, callbacks)
 end
 
 --- AWS deadline disassociate-member-from-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_member_from_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_member_from_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "disassociate-member-from-queue" }, input, callbacks)
 end
 
 --- AWS deadline get-budget operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_budget(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-budget" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_budget(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-budget" }, input, callbacks)
 end
 
 --- AWS deadline get-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-farm" }, input, callbacks)
 end
 
 --- AWS deadline get-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-fleet" }, input, callbacks)
 end
 
 --- AWS deadline get-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_job(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-job" }, input, callbacks)
 end
 
 --- AWS deadline get-license-endpoint operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_license_endpoint(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-license-endpoint" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_license_endpoint(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-license-endpoint" }, input, callbacks)
 end
 
 --- AWS deadline get-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_limit(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-limit" }, input, callbacks)
 end
 
 --- AWS deadline get-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_monitor(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-monitor" }, input, callbacks)
 end
 
 --- AWS deadline get-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-queue" }, input, callbacks)
 end
 
 --- AWS deadline get-queue-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_queue_environment(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-queue-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_queue_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-queue-environment" }, input, callbacks)
 end
 
 --- AWS deadline get-queue-fleet-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_queue_fleet_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-queue-fleet-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_queue_fleet_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-queue-fleet-association" }, input, callbacks)
 end
 
 --- AWS deadline get-queue-limit-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_queue_limit_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-queue-limit-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_queue_limit_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-queue-limit-association" }, input, callbacks)
 end
 
 --- AWS deadline get-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-session" }, input, callbacks)
 end
 
 --- AWS deadline get-session-action operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_session_action(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-session-action" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_session_action(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-session-action" }, input, callbacks)
 end
 
 --- AWS deadline get-sessions-statistics-aggregation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_sessions_statistics_aggregation(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-sessions-statistics-aggregation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_sessions_statistics_aggregation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-sessions-statistics-aggregation" }, input, callbacks)
 end
 
 --- AWS deadline get-step operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_step(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-step" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_step(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-step" }, input, callbacks)
 end
 
 --- AWS deadline get-storage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_storage_profile(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-storage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_storage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-storage-profile" }, input, callbacks)
 end
 
 --- AWS deadline get-storage-profile-for-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_storage_profile_for_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-storage-profile-for-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_storage_profile_for_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-storage-profile-for-queue" }, input, callbacks)
 end
 
 --- AWS deadline get-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_task(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-task" }, input, callbacks)
 end
 
 --- AWS deadline get-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "get-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "get-worker" }, input, callbacks)
 end
 
 --- AWS deadline list-available-metered-products operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_available_metered_products(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-available-metered-products" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_available_metered_products(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-available-metered-products" }, input, callbacks)
 end
 
 --- AWS deadline list-budgets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_budgets(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-budgets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_budgets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-budgets" }, input, callbacks)
 end
 
 --- AWS deadline list-farm-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_farm_members(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-farm-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_farm_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-farm-members" }, input, callbacks)
 end
 
 --- AWS deadline list-farms operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_farms(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-farms" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_farms(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-farms" }, input, callbacks)
 end
 
 --- AWS deadline list-fleet-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fleet_members(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-fleet-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fleet_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-fleet-members" }, input, callbacks)
 end
 
 --- AWS deadline list-fleets operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_fleets(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-fleets" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_fleets(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-fleets" }, input, callbacks)
 end
 
 --- AWS deadline list-job-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_job_members(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-job-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_job_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-job-members" }, input, callbacks)
 end
 
 --- AWS deadline list-job-parameter-definitions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_job_parameter_definitions(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-job-parameter-definitions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_job_parameter_definitions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-job-parameter-definitions" }, input, callbacks)
 end
 
 --- AWS deadline list-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_jobs(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-jobs" }, input, callbacks)
 end
 
 --- AWS deadline list-license-endpoints operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_license_endpoints(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-license-endpoints" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_license_endpoints(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-license-endpoints" }, input, callbacks)
 end
 
 --- AWS deadline list-limits operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_limits(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-limits" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_limits(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-limits" }, input, callbacks)
 end
 
 --- AWS deadline list-metered-products operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_metered_products(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-metered-products" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_metered_products(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-metered-products" }, input, callbacks)
 end
 
 --- AWS deadline list-monitors operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_monitors(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-monitors" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_monitors(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-monitors" }, input, callbacks)
 end
 
 --- AWS deadline list-queue-environments operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queue_environments(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-queue-environments" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queue_environments(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-queue-environments" }, input, callbacks)
 end
 
 --- AWS deadline list-queue-fleet-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queue_fleet_associations(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-queue-fleet-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queue_fleet_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-queue-fleet-associations" }, input, callbacks)
 end
 
 --- AWS deadline list-queue-limit-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queue_limit_associations(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-queue-limit-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queue_limit_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-queue-limit-associations" }, input, callbacks)
 end
 
 --- AWS deadline list-queue-members operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queue_members(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-queue-members" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queue_members(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-queue-members" }, input, callbacks)
 end
 
 --- AWS deadline list-queues operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_queues(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-queues" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_queues(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-queues" }, input, callbacks)
 end
 
 --- AWS deadline list-session-actions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_session_actions(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-session-actions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_session_actions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-session-actions" }, input, callbacks)
 end
 
 --- AWS deadline list-sessions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sessions(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-sessions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sessions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-sessions" }, input, callbacks)
 end
 
 --- AWS deadline list-sessions-for-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_sessions_for_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-sessions-for-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_sessions_for_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-sessions-for-worker" }, input, callbacks)
 end
 
 --- AWS deadline list-step-consumers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_step_consumers(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-step-consumers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_step_consumers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-step-consumers" }, input, callbacks)
 end
 
 --- AWS deadline list-step-dependencies operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_step_dependencies(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-step-dependencies" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_step_dependencies(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-step-dependencies" }, input, callbacks)
 end
 
 --- AWS deadline list-steps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_steps(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-steps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_steps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-steps" }, input, callbacks)
 end
 
 --- AWS deadline list-storage-profiles operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_storage_profiles(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-storage-profiles" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_storage_profiles(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-storage-profiles" }, input, callbacks)
 end
 
 --- AWS deadline list-storage-profiles-for-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_storage_profiles_for_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-storage-profiles-for-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_storage_profiles_for_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-storage-profiles-for-queue" }, input, callbacks)
 end
 
 --- AWS deadline list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS deadline list-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tasks(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-tasks" }, input, callbacks)
 end
 
 --- AWS deadline list-workers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_workers(input)
-	return common.execute_aws_command_skeleton({ "deadline", "list-workers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_workers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "list-workers" }, input, callbacks)
 end
 
 --- AWS deadline put-metered-product operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_metered_product(input)
-	return common.execute_aws_command_skeleton({ "deadline", "put-metered-product" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_metered_product(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "put-metered-product" }, input, callbacks)
 end
 
 --- AWS deadline search-jobs operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_jobs(input)
-	return common.execute_aws_command_skeleton({ "deadline", "search-jobs" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_jobs(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "search-jobs" }, input, callbacks)
 end
 
 --- AWS deadline search-steps operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_steps(input)
-	return common.execute_aws_command_skeleton({ "deadline", "search-steps" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_steps(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "search-steps" }, input, callbacks)
 end
 
 --- AWS deadline search-tasks operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_tasks(input)
-	return common.execute_aws_command_skeleton({ "deadline", "search-tasks" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_tasks(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "search-tasks" }, input, callbacks)
 end
 
 --- AWS deadline search-workers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.search_workers(input)
-	return common.execute_aws_command_skeleton({ "deadline", "search-workers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.search_workers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "search-workers" }, input, callbacks)
 end
 
 --- AWS deadline start-sessions-statistics-aggregation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_sessions_statistics_aggregation(input)
-	return common.execute_aws_command_skeleton({ "deadline", "start-sessions-statistics-aggregation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_sessions_statistics_aggregation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "start-sessions-statistics-aggregation" }, input, callbacks)
 end
 
 --- AWS deadline tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "deadline", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "tag-resource" }, input, callbacks)
 end
 
 --- AWS deadline untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "deadline", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "untag-resource" }, input, callbacks)
 end
 
 --- AWS deadline update-budget operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_budget(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-budget" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_budget(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-budget" }, input, callbacks)
 end
 
 --- AWS deadline update-farm operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_farm(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-farm" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_farm(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-farm" }, input, callbacks)
 end
 
 --- AWS deadline update-fleet operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_fleet(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-fleet" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_fleet(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-fleet" }, input, callbacks)
 end
 
 --- AWS deadline update-job operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_job(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-job" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_job(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-job" }, input, callbacks)
 end
 
 --- AWS deadline update-limit operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_limit(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-limit" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_limit(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-limit" }, input, callbacks)
 end
 
 --- AWS deadline update-monitor operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_monitor(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-monitor" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_monitor(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-monitor" }, input, callbacks)
 end
 
 --- AWS deadline update-queue operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-queue" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-queue" }, input, callbacks)
 end
 
 --- AWS deadline update-queue-environment operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_environment(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-queue-environment" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_environment(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-queue-environment" }, input, callbacks)
 end
 
 --- AWS deadline update-queue-fleet-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_fleet_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-queue-fleet-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_fleet_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-queue-fleet-association" }, input, callbacks)
 end
 
 --- AWS deadline update-queue-limit-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_queue_limit_association(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-queue-limit-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_queue_limit_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-queue-limit-association" }, input, callbacks)
 end
 
 --- AWS deadline update-session operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_session(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-session" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_session(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-session" }, input, callbacks)
 end
 
 --- AWS deadline update-step operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_step(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-step" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_step(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-step" }, input, callbacks)
 end
 
 --- AWS deadline update-storage-profile operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_storage_profile(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-storage-profile" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_storage_profile(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-storage-profile" }, input, callbacks)
 end
 
 --- AWS deadline update-task operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_task(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-task" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_task(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-task" }, input, callbacks)
 end
 
 --- AWS deadline update-worker operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_worker(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-worker" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_worker(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-worker" }, input, callbacks)
 end
 
 --- AWS deadline update-worker-schedule operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_worker_schedule(input)
-	return common.execute_aws_command_skeleton({ "deadline", "update-worker-schedule" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_worker_schedule(input, callbacks)
+	return common.execute_aws_command_skeleton({ "deadline", "update-worker-schedule" }, input, callbacks)
 end
 
 --- AWS deadline wait operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.wait(input)
-	return common.execute_aws_command({ "deadline", "wait" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.wait(input, callbacks)
+	return common.execute_aws_command({ "deadline", "wait" }, input, callbacks)
 end
 
 return M

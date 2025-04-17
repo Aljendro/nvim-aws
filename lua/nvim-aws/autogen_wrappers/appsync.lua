@@ -8,520 +8,594 @@ local M = {}
 
 --- AWS appsync associate-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "associate-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "associate-api" }, input, callbacks)
 end
 
 --- AWS appsync associate-merged-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_merged_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "associate-merged-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_merged_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "associate-merged-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync associate-source-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.associate_source_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "associate-source-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.associate_source_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "associate-source-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync create-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-api" }, input, callbacks)
 end
 
 --- AWS appsync create-api-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api_cache(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-api-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-api-cache" }, input, callbacks)
 end
 
 --- AWS appsync create-api-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_api_key(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-api-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_api_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-api-key" }, input, callbacks)
 end
 
 --- AWS appsync create-channel-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_channel_namespace(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-channel-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_channel_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-channel-namespace" }, input, callbacks)
 end
 
 --- AWS appsync create-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_data_source(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-data-source" }, input, callbacks)
 end
 
 --- AWS appsync create-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_domain_name(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-domain-name" }, input, callbacks)
 end
 
 --- AWS appsync create-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_function(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-function" }, input, callbacks)
 end
 
 --- AWS appsync create-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync create-resolver operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_resolver(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-resolver" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_resolver(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-resolver" }, input, callbacks)
 end
 
 --- AWS appsync create-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.create_type(input)
-	return common.execute_aws_command_skeleton({ "appsync", "create-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.create_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "create-type" }, input, callbacks)
 end
 
 --- AWS appsync delete-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-api" }, input, callbacks)
 end
 
 --- AWS appsync delete-api-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api_cache(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-api-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-api-cache" }, input, callbacks)
 end
 
 --- AWS appsync delete-api-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_api_key(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-api-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_api_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-api-key" }, input, callbacks)
 end
 
 --- AWS appsync delete-channel-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_channel_namespace(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-channel-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_channel_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-channel-namespace" }, input, callbacks)
 end
 
 --- AWS appsync delete-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_data_source(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-data-source" }, input, callbacks)
 end
 
 --- AWS appsync delete-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_domain_name(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-domain-name" }, input, callbacks)
 end
 
 --- AWS appsync delete-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_function(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-function" }, input, callbacks)
 end
 
 --- AWS appsync delete-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync delete-resolver operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_resolver(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-resolver" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_resolver(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-resolver" }, input, callbacks)
 end
 
 --- AWS appsync delete-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.delete_type(input)
-	return common.execute_aws_command_skeleton({ "appsync", "delete-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.delete_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "delete-type" }, input, callbacks)
 end
 
 --- AWS appsync disassociate-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "disassociate-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "disassociate-api" }, input, callbacks)
 end
 
 --- AWS appsync disassociate-merged-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_merged_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "disassociate-merged-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_merged_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "disassociate-merged-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync disassociate-source-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.disassociate_source_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "disassociate-source-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.disassociate_source_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "disassociate-source-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync evaluate-code operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.evaluate_code(input)
-	return common.execute_aws_command_skeleton({ "appsync", "evaluate-code" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.evaluate_code(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "evaluate-code" }, input, callbacks)
 end
 
 --- AWS appsync evaluate-mapping-template operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.evaluate_mapping_template(input)
-	return common.execute_aws_command_skeleton({ "appsync", "evaluate-mapping-template" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.evaluate_mapping_template(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "evaluate-mapping-template" }, input, callbacks)
 end
 
 --- AWS appsync flush-api-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.flush_api_cache(input)
-	return common.execute_aws_command_skeleton({ "appsync", "flush-api-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.flush_api_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "flush-api-cache" }, input, callbacks)
 end
 
 --- AWS appsync get-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-api" }, input, callbacks)
 end
 
 --- AWS appsync get-api-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api_association(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-api-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-api-association" }, input, callbacks)
 end
 
 --- AWS appsync get-api-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_api_cache(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-api-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_api_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-api-cache" }, input, callbacks)
 end
 
 --- AWS appsync get-channel-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_channel_namespace(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-channel-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_channel_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-channel-namespace" }, input, callbacks)
 end
 
 --- AWS appsync get-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_source(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-data-source" }, input, callbacks)
 end
 
 --- AWS appsync get-data-source-introspection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_data_source_introspection(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-data-source-introspection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_data_source_introspection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-data-source-introspection" }, input, callbacks)
 end
 
 --- AWS appsync get-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_domain_name(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-domain-name" }, input, callbacks)
 end
 
 --- AWS appsync get-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_function(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-function" }, input, callbacks)
 end
 
 --- AWS appsync get-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync get-graphql-api-environment-variables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_graphql_api_environment_variables(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-graphql-api-environment-variables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_graphql_api_environment_variables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-graphql-api-environment-variables" }, input, callbacks)
 end
 
 --- AWS appsync get-introspection-schema operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_introspection_schema(input)
-	return common.execute_aws_command({ "appsync", "get-introspection-schema" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_introspection_schema(input, callbacks)
+	return common.execute_aws_command({ "appsync", "get-introspection-schema" }, input, callbacks)
 end
 
 --- AWS appsync get-resolver operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_resolver(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-resolver" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_resolver(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-resolver" }, input, callbacks)
 end
 
 --- AWS appsync get-schema-creation-status operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_schema_creation_status(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-schema-creation-status" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_schema_creation_status(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-schema-creation-status" }, input, callbacks)
 end
 
 --- AWS appsync get-source-api-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_source_api_association(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-source-api-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_source_api_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-source-api-association" }, input, callbacks)
 end
 
 --- AWS appsync get-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.get_type(input)
-	return common.execute_aws_command_skeleton({ "appsync", "get-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.get_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "get-type" }, input, callbacks)
 end
 
 --- AWS appsync list-api-keys operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_api_keys(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-api-keys" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_api_keys(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-api-keys" }, input, callbacks)
 end
 
 --- AWS appsync list-apis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_apis(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-apis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_apis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-apis" }, input, callbacks)
 end
 
 --- AWS appsync list-channel-namespaces operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_channel_namespaces(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-channel-namespaces" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_channel_namespaces(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-channel-namespaces" }, input, callbacks)
 end
 
 --- AWS appsync list-data-sources operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_data_sources(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-data-sources" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_data_sources(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-data-sources" }, input, callbacks)
 end
 
 --- AWS appsync list-domain-names operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_domain_names(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-domain-names" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_domain_names(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-domain-names" }, input, callbacks)
 end
 
 --- AWS appsync list-functions operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_functions(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-functions" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_functions(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-functions" }, input, callbacks)
 end
 
 --- AWS appsync list-graphql-apis operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_graphql_apis(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-graphql-apis" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_graphql_apis(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-graphql-apis" }, input, callbacks)
 end
 
 --- AWS appsync list-resolvers operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resolvers(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-resolvers" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resolvers(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-resolvers" }, input, callbacks)
 end
 
 --- AWS appsync list-resolvers-by-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_resolvers_by_function(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-resolvers-by-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_resolvers_by_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-resolvers-by-function" }, input, callbacks)
 end
 
 --- AWS appsync list-source-api-associations operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_source_api_associations(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-source-api-associations" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_source_api_associations(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-source-api-associations" }, input, callbacks)
 end
 
 --- AWS appsync list-tags-for-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-tags-for-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_tags_for_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS appsync list-types operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_types(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-types" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_types(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-types" }, input, callbacks)
 end
 
 --- AWS appsync list-types-by-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.list_types_by_association(input)
-	return common.execute_aws_command_skeleton({ "appsync", "list-types-by-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.list_types_by_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "list-types-by-association" }, input, callbacks)
 end
 
 --- AWS appsync put-graphql-api-environment-variables operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.put_graphql_api_environment_variables(input)
-	return common.execute_aws_command_skeleton({ "appsync", "put-graphql-api-environment-variables" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.put_graphql_api_environment_variables(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "put-graphql-api-environment-variables" }, input, callbacks)
 end
 
 --- AWS appsync start-data-source-introspection operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_data_source_introspection(input)
-	return common.execute_aws_command_skeleton({ "appsync", "start-data-source-introspection" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_data_source_introspection(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "start-data-source-introspection" }, input, callbacks)
 end
 
 --- AWS appsync start-schema-creation operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_schema_creation(input)
-	return common.execute_aws_command_skeleton({ "appsync", "start-schema-creation" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_schema_creation(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "start-schema-creation" }, input, callbacks)
 end
 
 --- AWS appsync start-schema-merge operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.start_schema_merge(input)
-	return common.execute_aws_command_skeleton({ "appsync", "start-schema-merge" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.start_schema_merge(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "start-schema-merge" }, input, callbacks)
 end
 
 --- AWS appsync tag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.tag_resource(input)
-	return common.execute_aws_command_skeleton({ "appsync", "tag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.tag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "tag-resource" }, input, callbacks)
 end
 
 --- AWS appsync untag-resource operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.untag_resource(input)
-	return common.execute_aws_command_skeleton({ "appsync", "untag-resource" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.untag_resource(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "untag-resource" }, input, callbacks)
 end
 
 --- AWS appsync update-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-api" }, input, callbacks)
 end
 
 --- AWS appsync update-api-cache operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api_cache(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-api-cache" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api_cache(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-api-cache" }, input, callbacks)
 end
 
 --- AWS appsync update-api-key operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_api_key(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-api-key" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_api_key(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-api-key" }, input, callbacks)
 end
 
 --- AWS appsync update-channel-namespace operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_channel_namespace(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-channel-namespace" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_channel_namespace(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-channel-namespace" }, input, callbacks)
 end
 
 --- AWS appsync update-data-source operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_data_source(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-data-source" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_data_source(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-data-source" }, input, callbacks)
 end
 
 --- AWS appsync update-domain-name operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_domain_name(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-domain-name" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_domain_name(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-domain-name" }, input, callbacks)
 end
 
 --- AWS appsync update-function operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_function(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-function" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_function(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-function" }, input, callbacks)
 end
 
 --- AWS appsync update-graphql-api operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_graphql_api(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-graphql-api" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_graphql_api(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-graphql-api" }, input, callbacks)
 end
 
 --- AWS appsync update-resolver operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_resolver(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-resolver" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_resolver(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-resolver" }, input, callbacks)
 end
 
 --- AWS appsync update-source-api-association operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_source_api_association(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-source-api-association" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_source_api_association(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-source-api-association" }, input, callbacks)
 end
 
 --- AWS appsync update-type operation
 --- @param input table|nil input parameters
---- @return {success: boolean, data: table|nil, error: string|nil}
-function M.update_type(input)
-	return common.execute_aws_command_skeleton({ "appsync", "update-type" }, input)
+--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
+--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+function M.update_type(input, callbacks)
+	return common.execute_aws_command_skeleton({ "appsync", "update-type" }, input, callbacks)
 end
 
 return M
